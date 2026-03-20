@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T01:20:00.823Z",
+  "generatedAt": "2026-03-20T03:20:37.345Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 144,
     "title": "Add MPK 8x384 10-minute submission record",
     "state": "open",
-    "updatedAt": "2026-03-20T01:12:58Z",
-    "headSha": "f31b4bef938fe7b94c3d37383818c9bb9ebb703a",
+    "updatedAt": "2026-03-20T03:02:26Z",
+    "headSha": "62b31b1b97da4117b0e57dd391f23f69524a05a1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/144",
     "authorLogin": "DJLougen"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Timed MPK multi-path LM (8x384, KV4) uses strided MPK passes and tuned tied-embedding LRs on FineWeb shards before int8+zlib rounding.",
+    "summary": "MPK multi-path causal LM with 8 layers, width 384, KV4 GQA, MPK strides 2/4, tied embeddings, and tuned low learning rates on FineWeb SP-1024 shards.",
     "tags": [
       "architecture",
-      "training-schedule",
+      "attention",
       "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MPK with k=2, m=4 strides in an 8-layer KV4 setup",
-      "Tied embeddings with lowered matrix/scalar learning rates",
-      "80 FineWeb SP-1024 shards under 10-minute cap"
+      "MPK multi-path architecture",
+      "GQA KV4 attention heads",
+      "Tied embeddings with tuned LR"
     ]
   },
   "compatibility": {

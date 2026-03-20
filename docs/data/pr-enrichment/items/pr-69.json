@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T02:50:37.865Z",
+  "generatedAt": "2026-03-20T03:20:52.692Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 69,
     "title": "SubSixteen: Sliding Window + FP16 Embed + 10L Flat + Muon WD + Overtone Init (val_bpb 1.1764)",
     "state": "open",
-    "updatedAt": "2026-03-20T02:47:07Z",
-    "headSha": "7977ed06ebfbb32ec478ef95d0e73e2c9618de5a",
+    "updatedAt": "2026-03-20T03:03:00Z",
+    "headSha": "ee2466a2bc24e1c6e2bebd54cf80dce15a222550",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/69",
     "authorLogin": "TevBenji"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Flat 10-layer GPT with U-Net skips, FP16 tied embeddings, and Muon-optimized int8+zlib pipeline plus sliding-window eval for <16MB artifacts.",
+    "summary": "Flat 10-layer GPT with U-Net skips, sliding-window eval, overtone init, Muon weight decay, and FP16-tied embeddings before int8+zlib quantization.",
     "tags": [
       "architecture",
-      "sliding-window-eval",
+      "evaluation",
       "quantization",
-      "optimizer"
+      "mixed-precision"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "10-layer flat GPT with U-Net skips replacing depth recurrence",
-      "Stride-64 sliding-window eval scoring every token",
-      "Per-row int8+zlib quant with FP16 tied embeddings and Muon-decoupled weight decay"
+      "Flat 10-layer GPT with U-Net skip connections",
+      "Stride-64 sliding-window eval for dense context scoring",
+      "FP16 tied embeddings plus int8+zlib quantization pipeline"
     ]
   },
   "compatibility": {

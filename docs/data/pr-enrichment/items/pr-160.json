@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T03:20:24.136Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 160,
+    "title": "Record: MLP3x + Int8 Tok Emb + Grouped LZMA + Sliding Window (val_bpb=1.1623)",
+    "state": "open",
+    "updatedAt": "2026-03-20T03:11:57Z",
+    "headSha": "9c4146af4b677f92bffa83282b4d3584a91b2d3b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/160",
+    "authorLogin": "ChaseWNorton"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_ChaseNorton/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "9L GQA transformer with 3x MLP trained at seq_len=2048, quantized to int6 (asset int8 token emb) and exported via grouped QGv3+LZMA for sliding-window eval.",
+    "tags": [
+      "sliding-window-eval",
+      "quantization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "3x MLP on GQA backbone",
+      "int6 quantization with int8 token embeddings",
+      "grouped QGv3 serialization with LZMA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

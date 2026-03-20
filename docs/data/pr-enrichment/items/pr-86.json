@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T19:07:03.480Z",
+  "generatedAt": "2026-03-20T03:20:47.344Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 86,
-    "title": "10L Mixed Precision: val_bpb=1.2129 (lower LR + fp16 embed + int6 middle)",
+    "title": "Update:  MLP 3x + QAT + Int6 + Sliding Window (val_bpb 1.1652)",
     "state": "open",
-    "updatedAt": "2026-03-19T18:41:21Z",
+    "updatedAt": "2026-03-20T02:59:52Z",
     "headSha": "8e4f5d15ba6a82e8589a11d297c98a8b1de1c005",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/86",
     "authorLogin": "aruniyer"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Wider 9-layer transformer uses ReLU² MLP, int6 QAT, and fp16 tied embeddings with sliding-window eval for compressed-model robustness.",
+    "summary": "Wider MLP (3× hidden) with int6 QAT weights, fp16 tied embeddings, and sliding-window stride-64 eval for the compressed 10m/16MB track.",
     "tags": [
       "quantization",
-      "mixed-precision",
       "architecture",
-      "evaluation"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 quantization-aware training for all block weights",
-      "FP16 export for tied embeddings paired with lower LRs",
-      "Sliding-window evaluation (stride 64) to boost scoring context"
+      "MLP 3× hidden expansion with ReLU² layers",
+      "QAT int6 weights via STE in CastedLinear",
+      "Sliding-window eval stride 64 with fp16 tied embeddings"
     ]
   },
   "compatibility": {
