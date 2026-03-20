@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T05:21:39.826Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 170,
+    "title": "Record: Int6 QAT + SmearGate + Muon WD (val_bpb=1.1669)",
+    "state": "open",
+    "updatedAt": "2026-03-20T04:59:14Z",
+    "headSha": "164befc42095a324c76654bea1cff6939a60546e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/170",
+    "authorLogin": "baudrillardsgh0st"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6QAT_SmearGate_MuonWD/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int6 QAT with fp16 embedding passthrough, zstd22-friendly int6-in-int8 storage, SmearGate bigram gate, and Muon WD to keep 9L/512d model tiny yet robust.",
+    "tags": [
+      "quantization",
+      "compression",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Straight-through Int6 QAT with fp16 tied embeddings to limit quantization drift",
+      "zstd22-friendly int6-in-int8 storage keeping artifact under 16MB",
+      "Muon optimizer with decoupled weight decay plus SmearGate bigram gating"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

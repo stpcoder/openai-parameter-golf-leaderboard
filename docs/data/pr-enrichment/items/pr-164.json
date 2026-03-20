@@ -1,38 +1,36 @@
 {
-  "generatedAt": "2026-03-20T04:21:29.128Z",
+  "generatedAt": "2026-03-20T05:21:56.852Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 164,
     "title": "Submission: OrthoInit + Int6 MLP3x + SmearGate + BigramHash (val_bpb: 1.1524)",
     "state": "open",
-    "updatedAt": "2026-03-20T03:58:45Z",
-    "headSha": "7c44af135b0b314f78758460c3132cadcd480ddd",
+    "updatedAt": "2026-03-20T05:11:32Z",
+    "headSha": "37e6f39834561bc81cb2c4daf32402f93e2ae655",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/164",
     "authorLogin": "jfprincz"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_OrthoInit_Muon_Int6_MLP3x_SmearBigram_1.1524/README.md",
-      "records/track_10min_16mb/2026-03-19_WiderMLP_Int6_SlidingWindow_1.1666/README.md"
+      "records/track_10min_16mb/2026-03-20_OrthoInit_Muon_Int6_MLP3x_SmearBigram_1.1524/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Combines orthogonal muP init, tuned Muon, longer context, and SmearGate+Bigram hashing with Int6 quant to boost a 3x MLP Transformer within 16MB.",
+    "summary": "Orthogonal muP init, Muon tuning, Int6-mixed MLP expansion with SmearGate+BigramHash and FlashAttention 3 for 2048-token sliding eval.",
     "tags": [
-      "architecture",
       "quantization",
       "optimizer",
-      "evaluation"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Orthogonal muP init with tuned Muon schedule",
-      "Int6/int8 mixed quant plus SmearGate and Bigram hash embeddings",
-      "Sliding-window eval at 2048 tokens"
+      "Orthogonal + muP init with tuned Muon lr/momentum schedule and warmdown",
+      "Int6 mixed-precision MLP3x with SmearGate gating and BigramHash augmentations",
+      "FlashAttention 3 plus 2048-token sliding eval with NTK-aware RoPE"
     ]
   },
   "compatibility": {

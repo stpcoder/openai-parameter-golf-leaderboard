@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T05:21:31.000Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 173,
+    "title": "Record submission : Int6 + MLP 3x + Flash Attention 3 + NorMuon, val_bpb = 1.1532",
+    "state": "open",
+    "updatedAt": "2026-03-20T05:13:05Z",
+    "headSha": "152b1616f7d1ff8739af2c5f5d46cc93494d6d04",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/173",
+    "authorLogin": "tamoghnokandar"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6MLP3x_NorMuon_FA3/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Int6-quantized 9-layer model triples MLP dim while using NorMuon and FlashAttention3 to streamline training/runtime with sliding-window evaluation.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 per-row quantization with 3× MLP hidden dimension",
+      "NorMuon optimizer paired with FlashAttention3 kernels",
+      "Sliding-window eval stride=256 at seq_len=2048"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

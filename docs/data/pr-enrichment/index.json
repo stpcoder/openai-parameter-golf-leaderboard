@@ -1,21 +1,116 @@
 {
-  "generatedAt": "2026-03-20T04:51:41.458Z",
+  "generatedAt": "2026-03-20T05:22:12.196Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 174,
+      "title": "Add ContextFuse-2048-BigramSmear submission",
+      "status": "open",
+      "updatedAt": "2026-03-20T05:17:45Z",
+      "headSha": "0f75a5fae7bde12ac89b81a0237fc8df15a34a1a",
+      "generatedAt": "2026-03-20T05:21:26.317Z",
+      "summary": "Extends ContextFuse-2048 via BigramHash+SmearGate inputs, mixed int6 export, Muon+SWA tuning, and safe sliding-window eval for BPB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "muon",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-174.json"
+    },
+    {
+      "prNumber": 173,
+      "title": "Record submission : Int6 + MLP 3x + Flash Attention 3 + NorMuon, val_bpb = 1.1532",
+      "status": "open",
+      "updatedAt": "2026-03-20T05:13:05Z",
+      "headSha": "152b1616f7d1ff8739af2c5f5d46cc93494d6d04",
+      "generatedAt": "2026-03-20T05:21:31.000Z",
+      "summary": "Int6-quantized 9-layer model triples MLP dim while using NorMuon and FlashAttention3 to streamline training/runtime with sliding-window evaluation.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-173.json"
+    },
+    {
+      "prNumber": 172,
+      "title": "Add 3xMLP + Mixed Quant + Blockade/Sigma submission (val_bpb: 1.1812)",
+      "status": "open",
+      "updatedAt": "2026-03-20T05:12:18Z",
+      "headSha": "4371a15b4f919428f7f127b502378cc7b04633b0",
+      "generatedAt": "2026-03-20T05:21:34.923Z",
+      "summary": "3x MLP expansion with blockade/diverse attention and uncertainty-gated residuals, combined with mixed INT8/INT6 quantization to stay under 16MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "attention",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-172.json"
+    },
+    {
+      "prNumber": 170,
+      "title": "Record: Int6 QAT + SmearGate + Muon WD (val_bpb=1.1669)",
+      "status": "open",
+      "updatedAt": "2026-03-20T04:59:14Z",
+      "headSha": "164befc42095a324c76654bea1cff6939a60546e",
+      "generatedAt": "2026-03-20T05:21:39.826Z",
+      "summary": "Int6 QAT with fp16 embedding passthrough, zstd22-friendly int6-in-int8 storage, SmearGate bigram gate, and Muon WD to keep 9L/512d model tiny yet robust.",
+      "tags": [
+        "quantization",
+        "compression",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-170.json"
+    },
+    {
       "prNumber": 169,
       "title": "Sliding Window Eval + Muon6 (val_bpb 1.1973)",
       "status": "open",
-      "updatedAt": "2026-03-20T04:50:52Z",
-      "headSha": "ccf183ec4e40eccfe3966b531727281eaf3ba9d2",
-      "generatedAt": "2026-03-20T04:51:20.093Z",
-      "summary": "Sliding-window evaluation (stride 256) with forward_logits plus Muon6 Newton-Schulz orthogonalization and longer warmup/warmdown schedules for steadier training.",
+      "updatedAt": "2026-03-20T04:58:46Z",
+      "headSha": "afdc3d5693b50ceac789fc8c880bf72906dd9f91",
+      "generatedAt": "2026-03-20T05:21:46.019Z",
+      "summary": "Combines sliding-window stride-256 eval with a 6-step Muon optimizer and tuned warmup/warmdown to stabilize training before the 10min eval cap.",
       "tags": [
         "sliding-window-eval",
         "muon",
-        "training-schedule",
-        "evaluation"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -54,10 +149,10 @@
       "prNumber": 167,
       "title": "Depth Recurrence via Layer Sharing (3 shared blocks → 1/3 params, matched BPB)",
       "status": "open",
-      "updatedAt": "2026-03-20T04:15:43Z",
+      "updatedAt": "2026-03-20T04:57:36Z",
       "headSha": "4e760acb67091d65aa637dc2cfbe84fbf0002c31",
-      "generatedAt": "2026-03-20T04:21:19.275Z",
-      "summary": "ALBERT-style weight sharing cycles 3 unique transformer blocks over 9 virtual layers, trimming unique params, freeing artifact budget, and enabling extra eval recurrence.",
+      "generatedAt": "2026-03-20T05:21:50.521Z",
+      "summary": "Cycle three distinct transformer blocks over nine virtual layers to match depth with 1/3 unique params, enabling extra recurrence and smaller artifacts.",
       "tags": [
         "architecture",
         "compression",
@@ -102,15 +197,14 @@
       "prNumber": 164,
       "title": "Submission: OrthoInit + Int6 MLP3x + SmearGate + BigramHash (val_bpb: 1.1524)",
       "status": "open",
-      "updatedAt": "2026-03-20T03:58:45Z",
-      "headSha": "7c44af135b0b314f78758460c3132cadcd480ddd",
-      "generatedAt": "2026-03-20T04:21:29.128Z",
-      "summary": "Combines orthogonal muP init, tuned Muon, longer context, and SmearGate+Bigram hashing with Int6 quant to boost a 3x MLP Transformer within 16MB.",
+      "updatedAt": "2026-03-20T05:11:32Z",
+      "headSha": "37e6f39834561bc81cb2c4daf32402f93e2ae655",
+      "generatedAt": "2026-03-20T05:21:56.852Z",
+      "summary": "Orthogonal muP init, Muon tuning, Int6-mixed MLP expansion with SmearGate+BigramHash and FlashAttention 3 for 2048-token sliding eval.",
       "tags": [
-        "architecture",
         "quantization",
         "optimizer",
-        "evaluation"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -292,13 +386,14 @@
       "prNumber": 152,
       "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
       "status": "open",
-      "updatedAt": "2026-03-20T04:50:55Z",
+      "updatedAt": "2026-03-20T05:04:46Z",
       "headSha": "d5762bac5f7ce4ec928c0849280f554ff3c67e69",
-      "generatedAt": "2026-03-20T04:51:29.884Z",
-      "summary": "Full-model SGD test-time training on the validation shard reclaims eval time before sliding-window scoring without altering the base 9x512 architecture.",
+      "generatedAt": "2026-03-20T05:22:03.663Z",
+      "summary": "Reclaim eval budget by running full-model SGD adaptation on validation data before sliding-window scoring on a 9-layer, 512-dim KV4 GPT baseline.",
       "tags": [
         "val-only",
         "evaluation",
+        "sliding-window-eval",
         "optimizer"
       ],
       "flags": {
@@ -1039,14 +1134,15 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T04:38:27Z",
-      "headSha": "ca769a26552098af174f4961e07681fc25e983e6",
-      "generatedAt": "2026-03-20T04:51:35.251Z",
-      "summary": "Depth-recurrent 3×3 GPT reuses three unique blocks over three loops with AdaLN conditioning and GQA, trained on Apple M3 via MLX before planned H100 validation.",
+      "updatedAt": "2026-03-20T05:20:55Z",
+      "headSha": "c5f48f03a72acfe9ffa70b8c9f04541a5b66076d",
+      "generatedAt": "2026-03-20T05:22:07.259Z",
+      "summary": "Depth-recurrent GPT reuses 3 unique blocks across 3 loops with AdaLN/FiLM gating and GQA, exploring compression-aware sparsity and test-time attention adaptation on Apple Silicon.",
       "tags": [
         "architecture",
-        "evaluation",
-        "non-record"
+        "regularization",
+        "compression",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1686,6 +1782,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-71.json"
+    },
+    {
+      "prNumber": 70,
+      "title": "Submission: Wider MLP 3x + int6 quant + sliding window eval, val_bpb=1.1659",
+      "status": "open",
+      "updatedAt": "2026-03-19T17:03:07Z",
+      "headSha": "2790ac088cd3da716664fb6047990745f24e6c4f",
+      "generatedAt": "2026-03-20T05:22:12.188Z",
+      "summary": "Wider 3x MLP with int6 per-row quantization on projections plus sliding-window eval keeps more context while staying under the artifact cap.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-70.json"
     },
     {
       "prNumber": 69,

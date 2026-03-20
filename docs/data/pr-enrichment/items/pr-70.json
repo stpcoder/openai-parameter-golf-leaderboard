@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-19T17:27:22.075Z",
+  "generatedAt": "2026-03-20T05:22:12.188Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Widened MLP (3x) plus per-row int6 quantized weights and sliding-window scoring keep artifacts small while boosting contextual evaluation.",
+    "summary": "Wider 3x MLP with int6 per-row quantization on projections plus sliding-window eval keeps more context while staying under the artifact cap.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Wider MLP (MLP_MULT=3.0) expansion",
+      "Wider MLP (hidden=1536) expansion",
       "int6 per-row quantization on MLP and attention weights",
-      "Sliding-window eval with stride=256 and batched forward_logits"
+      "Sliding-window eval stride=256 with batched logits"
     ]
   },
   "compatibility": {

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T05:21:34.923Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 172,
+    "title": "Add 3xMLP + Mixed Quant + Blockade/Sigma submission (val_bpb: 1.1812)",
+    "state": "open",
+    "updatedAt": "2026-03-20T05:12:18Z",
+    "headSha": "4371a15b4f919428f7f127b502378cc7b04633b0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/172",
+    "authorLogin": "GMaN1911"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_3xMLP_MixedQuant_BlockadeSigma/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "3x MLP expansion with blockade/diverse attention and uncertainty-gated residuals, combined with mixed INT8/INT6 quantization to stay under 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "attention",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "3xMLP expansion with blockade attention diversity",
+      "Mixed INT8 attention + INT6 MLP quantization",
+      "Sigma uncertainty-gated residual scaling"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

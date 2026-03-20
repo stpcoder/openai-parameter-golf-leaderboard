@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T04:51:20.093Z",
+  "generatedAt": "2026-03-20T05:21:46.019Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 169,
     "title": "Sliding Window Eval + Muon6 (val_bpb 1.1973)",
     "state": "open",
-    "updatedAt": "2026-03-20T04:50:52Z",
-    "headSha": "ccf183ec4e40eccfe3966b531727281eaf3ba9d2",
+    "updatedAt": "2026-03-20T04:58:46Z",
+    "headSha": "afdc3d5693b50ceac789fc8c880bf72906dd9f91",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/169",
     "authorLogin": "beee003"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Sliding-window evaluation (stride 256) with forward_logits plus Muon6 Newton-Schulz orthogonalization and longer warmup/warmdown schedules for steadier training.",
+    "summary": "Combines sliding-window stride-256 eval with a 6-step Muon optimizer and tuned warmup/warmdown to stabilize training before the 10min eval cap.",
     "tags": [
       "sliding-window-eval",
       "muon",
-      "training-schedule",
-      "evaluation"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Sliding window scoring via forward_logits stride=256",
-      "Muon optimizer with 6-step Newton-Schulz orthogonalization",
-      "Longer momentum warmup and warmdown schedules"
+      "Sliding-window stride-256 scoring via forward_logits for ~768-context token evaluation",
+      "Muon optimizer with 6-step Newton-Schulz orthogonalization for sharper gradients",
+      "Extended 1k-step momentum warmup and 1.5k-step warmdown for smoother LR trajectory"
     ]
   },
   "compatibility": {

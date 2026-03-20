@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T04:21:19.275Z",
+  "generatedAt": "2026-03-20T05:21:50.521Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 167,
     "title": "Depth Recurrence via Layer Sharing (3 shared blocks → 1/3 params, matched BPB)",
     "state": "open",
-    "updatedAt": "2026-03-20T04:15:43Z",
+    "updatedAt": "2026-03-20T04:57:36Z",
     "headSha": "4e760acb67091d65aa637dc2cfbe84fbf0002c31",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/167",
     "authorLogin": "SkywardSyntax"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "ALBERT-style weight sharing cycles 3 unique transformer blocks over 9 virtual layers, trimming unique params, freeing artifact budget, and enabling extra eval recurrence.",
+    "summary": "Cycle three distinct transformer blocks over nine virtual layers to match depth with 1/3 unique params, enabling extra recurrence and smaller artifacts.",
     "tags": [
       "architecture",
       "compression",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "ALBERT-style shared-layer recurrence",
-      "int8+zlib serialization of unique params",
-      "extra eval cycles on shared blocks"
+      "ALBERT-style shared blocks via NUM_UNIQUE_LAYERS",
+      "int8+zlib serialization of only unique params",
+      "Extra recurrence cycles at eval time"
     ]
   },
   "compatibility": {
