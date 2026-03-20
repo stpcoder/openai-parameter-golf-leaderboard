@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T19:54:25.914Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 259,
+    "title": "submission: QK Gain Init 1.2 + Sliding Window Eval (stride=64)",
+    "state": "open",
+    "updatedAt": "2026-03-20T19:37:10Z",
+    "headSha": "e808e2f8bc812d385297df2e4c4f24e0ccc7625f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/259",
+    "authorLogin": "outsourc-e"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_QKGain12_SlidingWindowEval/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines a lower QK gain init for short-run stability with sliding-window evaluation giving 960+ context per token.",
+    "tags": [
+      "evaluation",
+      "sliding-window-eval",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Lowered QK gain init to 1.2 for more stable attention",
+      "Sliding-window eval stride=64 for 960+ token context",
+      "Added forward_logits and eval_val_sliding helpers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

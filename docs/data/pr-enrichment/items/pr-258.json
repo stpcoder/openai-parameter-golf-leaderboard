@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T19:54:32.110Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 258,
+    "title": "Non-record: local RTX 4070 SP1024 7x512 KV4 500-step run",
+    "state": "open",
+    "updatedAt": "2026-03-20T19:34:39Z",
+    "headSha": "f98375ec012af0026cb798b895d9dd061e30591c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/258",
+    "authorLogin": "riatzukiza"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_7x512_KV4_500steps/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Local non-record RTX 4070 run explores a 7-layer KV4 configuration with 512d, 1024 seq, int8+zlib serialization under the 16MB cap.",
+    "tags": [
+      "architecture",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "7-layer KV4 layout with tied embeddings",
+      "int8+zlib serialization targeting sub-16MB artifacts",
+      "local search-driven config on 1×RTX 4070"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

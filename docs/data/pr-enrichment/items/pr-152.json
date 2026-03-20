@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T05:51:55.876Z",
+  "generatedAt": "2026-03-20T19:55:03.155Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 152,
     "title": "Add TTT (Test-Time Training) submission: 1.1767 BPB",
     "state": "open",
-    "updatedAt": "2026-03-20T05:40:55Z",
+    "updatedAt": "2026-03-20T19:39:26Z",
     "headSha": "d5762bac5f7ce4ec928c0849280f554ff3c67e69",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/152",
     "authorLogin": "timowhite88"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Full-model SGD adapts to validation data during eval, reclaiming the unused 10-min budget before sliding-window scoring.",
+    "summary": "Full-model SGD test-time training adapts all weights on validation data before sliding-window scoring, using the eval budget as adaptive compression.",
     "tags": [
       "val-only",
-      "optimizer",
       "sliding-window-eval",
-      "evaluation"
+      "optimizer",
+      "compression"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT runs SGD adaptation solely on the validation shard during the eval window before scoring.",
+    "valOnlyReasoning": "The eval phase runs full-model SGD adaptation directly on the validation data before scoring, so the only training occurs on the validation shard.",
     "techniques": [
       "Full-model SGD adaptation on validation data",
-      "Aggressive momentum SGD schedule during evaluation",
-      "Sliding-window scoring after adaptation"
+      "Sliding-window scoring after adaptation",
+      "Eval budget reused as online compression"
     ]
   },
   "compatibility": {

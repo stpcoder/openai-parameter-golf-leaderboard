@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T19:54:36.663Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 256,
+    "title": "DenseContextQuantTrim 8xH100: 1.1779 val_bpb",
+    "state": "open",
+    "updatedAt": "2026-03-20T19:25:23Z",
+    "headSha": "0406102a5cacb934c9fb96cb611e0e2fb2c6dd69",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/256",
+    "authorLogin": "IvGolovach"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_DenseContextQuantTrim_sp1024_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Dense 9-layer transformer uses clip-search PTQ plus hybrid fp16/int8 embeddings with sliding-window 2048 validation across 8xH100 training.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "clip-search PTQ calibration",
+      "hybrid fp16/int8 token embedding export",
+      "sliding-window eval with 2048 context/512 stride"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
