@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T15:54:02.008Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 222,
+    "title": "Non-record: WiderMLP + FP16 Embed + Stride-32 (val_bpb=1.1601)",
+    "state": "open",
+    "updatedAt": "2026-03-20T15:32:35Z",
+    "headSha": "596027247e5397c88c99ff460c37b46dbfb1ef5d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/222",
+    "authorLogin": "ansh-deriv"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_WiderMLP_FP16Embed_Stride32/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer GPT ups FFN width (MLP_MULT=3) plus fp16 tied embedding and mixed int6/int8 quantization with stride-32 sliding eval.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Wider FFN (MLP_MULT=3) with fp16 tied embedding passthrough",
+      "Mixed int6/int8 quantization per layer for compression",
+      "Stride-32 sliding window evaluation for long context"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

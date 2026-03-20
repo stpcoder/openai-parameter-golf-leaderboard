@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T15:53:57.055Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 223,
+    "title": "Draft: AllInOne SmearGate + Int6 QAT + Sliding Window (pending H100 run)",
+    "state": "open",
+    "updatedAt": "2026-03-20T15:41:27Z",
+    "headSha": "90f5575f9e369f950a29f26a5f35c741848692ae",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/223",
+    "authorLogin": "0xjaishy"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_AllInOne_SmearGate_Int6QAT_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stacked int6 STE QAT with SmearGate bigram gating, orthogonal init, and Muon-optimized 10L transformer plus sliding-window evaluation.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 STE QAT with fp16 tied embeddings",
+      "SmearGate bigram gating and orthogonal init",
+      "Sliding-window eval stride=64 with Muon optimizer"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T07:52:11.520Z",
+  "generatedAt": "2026-03-20T15:54:16.765Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 187,
-    "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1855)",
+    "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1709)",
     "state": "open",
-    "updatedAt": "2026-03-20T07:23:51Z",
-    "headSha": "6ee7458daf1f509b495958b46240e927514805c7",
+    "updatedAt": "2026-03-20T15:47:59Z",
+    "headSha": "c1bde37a62073fbb15c57d338dc59659dd303950",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/187",
     "authorLogin": "Idan3011"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GELU-based pre-enrichment and 2× encoder recurrence deliver 15 effective layers from 10 blocks with sliding-window eval.",
+    "summary": "Adds GELU pre-enrichment and 2× encoder recurrence for 15 effective layers, paired with int6 QAT and stride-64 sliding-window evaluation.",
     "tags": [
       "architecture",
-      "depth-width",
-      "sliding-window-eval"
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GELU pre-enrichment block before the transformer stack",
-      "2× encoder-only recurrence with RMS norm stabilization between passes",
-      "Overtone init plus Muon weight decay with stride-64 sliding-window eval"
+      "GELU pre-enrichment block",
+      "2× encoder recurrence with RMS norm",
+      "Int6 QAT + sliding-window eval"
     ]
   },
   "compatibility": {

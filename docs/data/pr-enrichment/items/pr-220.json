@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T15:23:49.475Z",
+  "generatedAt": "2026-03-20T15:54:12.016Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 220,
     "title": "[WIP] SSM LRU Baseline — First State Space Model Submission",
     "state": "open",
-    "updatedAt": "2026-03-20T15:09:53Z",
-    "headSha": "52bbb352ac1a5c8b773a149ff1c7966cdd847786",
+    "updatedAt": "2026-03-20T15:40:30Z",
+    "headSha": "c60b5a892e38278d78a932291a7e3faedc27adb3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/220",
     "authorLogin": "timothywangdev"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Replaces transformer blocks with an LRU-based SSM using complex diagonal recurrence, gated projections, and MuonAdamW with SSM-specific param groups.",
+    "summary": "Replaces attention with LRU-based SSM blocks using complex diagonal recurrence, gated projections, and MuonAdamW tuning for 16MB non-transformer models.",
     "tags": [
       "architecture",
       "optimizer",
+      "sliding-window-eval",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LRU SSM with complex diagonal recurrence",
-      "parallel scan via cumulative-sum trick",
-      "MuonAdamW with SSM-aware groups"
+      "LRU SSM blocks with complex diagonal recurrence and gated projection",
+      "Parallel scan via cumulative sums for torch.compile compatibility",
+      "MuonAdamW with SSM-aware parameter groups"
     ]
   },
   "compatibility": {

@@ -1,19 +1,114 @@
 {
-  "generatedAt": "2026-03-20T15:24:18.224Z",
+  "generatedAt": "2026-03-20T15:54:21.126Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 221,
-      "title": "10L + Sliding Window eval (mean val_bpb=1.1899)",
+      "prNumber": 225,
+      "title": "Non-record: Int6 QAT + 11L 512d + Sliding Window, val_bpb=1.2089",
       "status": "open",
-      "updatedAt": "2026-03-20T15:18:51Z",
-      "headSha": "15f88066637ca0945ff484fa1ef36588d5af4c5b",
-      "generatedAt": "2026-03-20T15:23:45.887Z",
-      "summary": "Train a 10-layer model on 4096-token sequences with sliding-window eval (stride 64) to expose longer context within the 10min/16MB regime.",
+      "updatedAt": "2026-03-20T15:47:36Z",
+      "headSha": "518817e842c3db63f2830b22aade05524e1c33de",
+      "generatedAt": "2026-03-20T15:53:46.122Z",
+      "summary": "Flat-packed int6 STE QAT with 11L/512d and tuned Muon plus sliding-window eval to keep the artifact under 15MB.",
       "tags": [
+        "quantization",
         "sliding-window-eval",
+        "muon",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-225.json"
+    },
+    {
+      "prNumber": 224,
+      "title": "Complexity MoE + PID Dynamics (Token-Routed I64)",
+      "status": "open",
+      "updatedAt": "2026-03-20T15:53:22Z",
+      "headSha": "2fcb9269b09efa026cb6268672ab279b3ca8a0f2",
+      "generatedAt": "2026-03-20T15:53:51.229Z",
+      "summary": "Deterministic token-routed MoE pairs with PID-style hidden dynamics, SwiGLU experts, and SGDR cosine restarts across 9 layers.",
+      "tags": [
+        "architecture",
         "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-224.json"
+    },
+    {
+      "prNumber": 223,
+      "title": "Draft: AllInOne SmearGate + Int6 QAT + Sliding Window (pending H100 run)",
+      "status": "open",
+      "updatedAt": "2026-03-20T15:41:27Z",
+      "headSha": "90f5575f9e369f950a29f26a5f35c741848692ae",
+      "generatedAt": "2026-03-20T15:53:57.055Z",
+      "summary": "Stacked int6 STE QAT with SmearGate bigram gating, orthogonal init, and Muon-optimized 10L transformer plus sliding-window evaluation.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-223.json"
+    },
+    {
+      "prNumber": 222,
+      "title": "Non-record: WiderMLP + FP16 Embed + Stride-32 (val_bpb=1.1601)",
+      "status": "open",
+      "updatedAt": "2026-03-20T15:32:35Z",
+      "headSha": "596027247e5397c88c99ff460c37b46dbfb1ef5d",
+      "generatedAt": "2026-03-20T15:54:02.008Z",
+      "summary": "10-layer GPT ups FFN width (MLP_MULT=3) plus fp16 tied embedding and mixed int6/int8 quantization with stride-32 sliding eval.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-222.json"
+    },
+    {
+      "prNumber": 221,
+      "title": "Submission: 10L + Sliding Window eval (mean val_bpb=1.1899)",
+      "status": "open",
+      "updatedAt": "2026-03-20T15:44:20Z",
+      "headSha": "15f88066637ca0945ff484fa1ef36588d5af4c5b",
+      "generatedAt": "2026-03-20T15:54:07.271Z",
+      "summary": "Raised train_seq_len to 4096 for the 10-layer model and scored across stride-64 sliding windows so evaluation mirrors long-context training.",
+      "tags": [
+        "training-schedule",
+        "sliding-window-eval",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -29,13 +124,14 @@
       "prNumber": 220,
       "title": "[WIP] SSM LRU Baseline — First State Space Model Submission",
       "status": "open",
-      "updatedAt": "2026-03-20T15:09:53Z",
-      "headSha": "52bbb352ac1a5c8b773a149ff1c7966cdd847786",
-      "generatedAt": "2026-03-20T15:23:49.475Z",
-      "summary": "Replaces transformer blocks with an LRU-based SSM using complex diagonal recurrence, gated projections, and MuonAdamW with SSM-specific param groups.",
+      "updatedAt": "2026-03-20T15:40:30Z",
+      "headSha": "c60b5a892e38278d78a932291a7e3faedc27adb3",
+      "generatedAt": "2026-03-20T15:54:12.016Z",
+      "summary": "Replaces attention with LRU-based SSM blocks using complex diagonal recurrence, gated projections, and MuonAdamW tuning for 16MB non-transformer models.",
       "tags": [
         "architecture",
         "optimizer",
+        "sliding-window-eval",
         "non-record"
       ],
       "flags": {
@@ -542,16 +638,16 @@
     },
     {
       "prNumber": 187,
-      "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1855)",
+      "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1709)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:23:51Z",
-      "headSha": "6ee7458daf1f509b495958b46240e927514805c7",
-      "generatedAt": "2026-03-20T07:52:11.520Z",
-      "summary": "GELU-based pre-enrichment and 2× encoder recurrence deliver 15 effective layers from 10 blocks with sliding-window eval.",
+      "updatedAt": "2026-03-20T15:47:59Z",
+      "headSha": "c1bde37a62073fbb15c57d338dc59659dd303950",
+      "generatedAt": "2026-03-20T15:54:16.765Z",
+      "summary": "Adds GELU pre-enrichment and 2× encoder recurrence for 15 effective layers, paired with int6 QAT and stride-64 sliding-window evaluation.",
       "tags": [
         "architecture",
-        "depth-width",
-        "sliding-window-eval"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1927,12 +2023,13 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T14:28:19Z",
-      "headSha": "bdd81a008dfb41a7c89b85761d0afce222e51675",
-      "generatedAt": "2026-03-20T14:54:03.069Z",
-      "summary": "Depth-recurrent GPT reuses 3 unique blocks over 3 loops with AdaLN conditioning and GQA on Apple M3 via MLX, keeping the model under 10MB.",
+      "updatedAt": "2026-03-20T15:31:11Z",
+      "headSha": "947a4be6e6d41eb9636235cc5ee47ecde8ab2338",
+      "generatedAt": "2026-03-20T15:54:21.113Z",
+      "summary": "Depth-recurrent GPT stacks three unique 3×3 Transformer blocks over three loops with AdaLN conditioning and GQA, plus transient attention-only test-time adaptation.",
       "tags": [
         "architecture",
+        "evaluation",
         "compression",
         "non-record"
       ],

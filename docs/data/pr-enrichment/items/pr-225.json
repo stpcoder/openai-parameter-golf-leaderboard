@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T15:53:46.122Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 225,
+    "title": "Non-record: Int6 QAT + 11L 512d + Sliding Window, val_bpb=1.2089",
+    "state": "open",
+    "updatedAt": "2026-03-20T15:47:36Z",
+    "headSha": "518817e842c3db63f2830b22aade05524e1c33de",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/225",
+    "authorLogin": "dibdabo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_Int6QAT_11L_SlidingWindow/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Flat-packed int6 STE QAT with 11L/512d and tuned Muon plus sliding-window eval to keep the artifact under 15MB.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "muon",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Flat-packed int6 per-row storage for better zlib compression",
+      "STE QAT that restores fp32 weights before weight updates",
+      "Sliding-window eval with ctx=4096 aligned to training sequence length"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

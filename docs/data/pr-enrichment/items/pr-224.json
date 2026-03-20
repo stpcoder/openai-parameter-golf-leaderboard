@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T15:53:51.229Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 224,
+    "title": "Complexity MoE + PID Dynamics (Token-Routed I64)",
+    "state": "open",
+    "updatedAt": "2026-03-20T15:53:22Z",
+    "headSha": "2fcb9269b09efa026cb6268672ab279b3ca8a0f2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/224",
+    "authorLogin": "Complexity-ML"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Deterministic token-routed MoE pairs with PID-style hidden dynamics, SwiGLU experts, and SGDR cosine restarts across 9 layers.",
+    "tags": [
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "token_id % 4 deterministic MoE routing",
+      "mu/velocity PID dynamics per layer",
+      "cosine warm restarts LR schedule with SwiGLU experts"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

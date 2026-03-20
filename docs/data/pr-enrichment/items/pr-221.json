@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T15:23:45.887Z",
+  "generatedAt": "2026-03-20T15:54:07.271Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 221,
-    "title": "10L + Sliding Window eval (mean val_bpb=1.1899)",
+    "title": "Submission: 10L + Sliding Window eval (mean val_bpb=1.1899)",
     "state": "open",
-    "updatedAt": "2026-03-20T15:18:51Z",
+    "updatedAt": "2026-03-20T15:44:20Z",
     "headSha": "15f88066637ca0945ff484fa1ef36588d5af4c5b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/221",
     "authorLogin": "shajalahamedcse"
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Train a 10-layer model on 4096-token sequences with sliding-window eval (stride 64) to expose longer context within the 10min/16MB regime.",
+    "summary": "Raised train_seq_len to 4096 for the 10-layer model and scored across stride-64 sliding windows so evaluation mirrors long-context training.",
     "tags": [
+      "training-schedule",
       "sliding-window-eval",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Long-context training on 4096-token sequences",
-      "Sliding-window eval with stride 64",
-      "10-layer baseline with Muon/FP16 config"
+      "Longer 4096-token training contexts",
+      "Stride-64 sliding-window scoring"
     ]
   },
   "compatibility": {
