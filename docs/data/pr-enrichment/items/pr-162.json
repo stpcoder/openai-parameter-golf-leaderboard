@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T05:51:45.402Z",
+  "generatedAt": "2026-03-20T18:55:14.210Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 162,
     "title": "Record: Int6 MLP3x + SmearGate + BigramHash + MuonWD + SWA (mean val_bpb=1.1483)",
-    "state": "open",
-    "updatedAt": "2026-03-20T05:46:32Z",
+    "state": "closed",
+    "updatedAt": "2026-03-20T18:48:27Z",
     "headSha": "3c458dcdd4c32353ad714d275a653da1597a3979",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/162",
     "authorLogin": "raahilshah"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Per-row int6 quantization enables a 3× widened MLP with SmearGate+BigramHash context while muon WD/SWA stabilize weights.",
+    "summary": "Int6 quantization lets a 9-layer GPT scale to 3× MLP width while SmearGate/BigramHash embeddings and muP-informed Muon+SWA refine training.",
     "tags": [
       "quantization",
       "architecture",
-      "optimizer",
-      "training-schedule"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-row int6 + zstd-22 compression",
-      "3× MLP width with SmearGate and BigramHash context",
-      "Muon WD optimizer with SWA smoothing"
+      "Per-row int6 quantization frees budget for 3× MLP expansion",
+      "SmearGate and BigramHash embeddings inject learned bigram context",
+      "Muon WD with orthogonal init plus SWA smooths quantized weights"
     ]
   },
   "compatibility": {

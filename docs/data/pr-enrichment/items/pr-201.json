@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T17:54:16.714Z",
+  "generatedAt": "2026-03-20T18:54:53.882Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 201,
     "title": "Staging: LAWA-EMA frontier fork (pr162 base, SWA→LAWA)",
     "state": "open",
-    "updatedAt": "2026-03-20T17:49:31Z",
-    "headSha": "9deb4af94cca9cb2ea3dc43483c9bddf77fd459e",
+    "updatedAt": "2026-03-20T18:27:52Z",
+    "headSha": "3693d956c8811155caaae8d9a8fdc595338d9741",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/201",
     "authorLogin": "machdragon"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "STAGING_PROFILE forks PR162, swapping SWA for LAWA-EMA with stepwise float32 shadow averages plus sliding-window eval for profile validation.",
+    "summary": "Forks PR162 baseline to swap SWA for LAWA-EMA shadow averaging with configurable decay and sliding-window staging profile validation.",
     "tags": [
-      "regularization",
+      "optimizer",
       "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LAWA-EMA shadow weights updated per step before quantization",
-      "Sliding-window evaluation under staging profile",
-      "Env-configurable decay for LAWA averaging"
+      "LAWA float32 shadow EMA replaces SWA",
+      "Env-configurable decay sweep via LAWA_ENABLED",
+      "Sliding-window staging profile evaluation"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:26:20.583Z",
+  "generatedAt": "2026-03-20T18:55:34.536Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 85,
     "title": "Record (pending): 92-experiment autoresearch + sliding window eval, pre-quant val_bpb=1.2156",
     "state": "open",
-    "updatedAt": "2026-03-19T17:07:10Z",
+    "updatedAt": "2026-03-20T18:43:37Z",
     "headSha": "b4489ef09187a2ea0a8bcb643f842652edc784fd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/85",
     "authorLogin": "hydeh3r3"
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Autoresearch-tuned 9L/512d model uses sliding-window RoPE eval and relu²+RMSNorm with Muon/AdamW to keep int8 quantization clean on 8xH100.",
+    "summary": "Auto-researched 92 configs, ported winner to 8×H100 with sliding-window eval, RoPE extrapolation, relu²+RMSNorm for int8, and Muon+AdamW mix.",
     "tags": [
-      "val-only",
       "architecture",
       "optimizer",
-      "evaluation"
+      "evaluation",
+      "quantization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TRAIN_ON_VAL=1 purposely incorporates the validation shard into training.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Autoresearch loop to find the winning config",
-      "Sliding-window eval with stride 64 and RoPE extrapolation",
-      "relu²+RMSNorm combination for clean int8 quantization"
+      "autoresearch hyperparam loop",
+      "sliding-window eval with RoPE extrapolation",
+      "relu²+RMSNorm for int8-friendly quant"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

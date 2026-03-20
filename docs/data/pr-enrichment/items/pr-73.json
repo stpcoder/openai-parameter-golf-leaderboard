@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:27:15.648Z",
+  "generatedAt": "2026-03-20T18:55:49.311Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 73,
     "title": "Non-record: SwiGLU + warmdown fix + quarter batch (1x5090, 1.3281 bpb)",
-    "state": "open",
-    "updatedAt": "2026-03-19T17:03:08Z",
+    "state": "closed",
+    "updatedAt": "2026-03-20T18:42:15Z",
     "headSha": "b8a1426d0f4a4e3a6cd3aaa9071eb5a4904dbb58",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/73",
     "authorLogin": "NishantDahal"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SwiGLU with a time-fraction warmdown and quarter-batch plus gradient accumulation pack more optimizer steps under the 16MB cap on 1×RTX5090.",
+    "summary": "SwiGLU MLPs, a time-fraction warmdown fix, and quarter-batch plus gradient accumulation boost optimizer steps on single RTX 5090 under the 16MB cap.",
     "tags": [
       "architecture",
       "training-schedule",
+      "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU gating replaces ReLU² in the MLP",
-      "Time-fraction warmdown prevents LR decay from step one",
-      "Quarter-batch size with 2× gradient accumulation boosts optimizer steps"
+      "SwiGLU replacing ReLU²",
+      "Time-fraction warmdown decay",
+      "Quarter batch with grad accumulation"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T05:22:12.188Z",
+  "generatedAt": "2026-03-20T18:55:53.503Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 70,
     "title": "Submission: Wider MLP 3x + int6 quant + sliding window eval, val_bpb=1.1659",
     "state": "open",
-    "updatedAt": "2026-03-19T17:03:07Z",
+    "updatedAt": "2026-03-20T18:42:51Z",
     "headSha": "2790ac088cd3da716664fb6047990745f24e6c4f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/70",
     "authorLogin": "jfprincz"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Wider 3x MLP with int6 per-row quantization on projections plus sliding-window eval keeps more context while staying under the artifact cap.",
+    "summary": "Wider 3x MLP, int6 per-row weight quantization with zstd-22, and sliding-window stride-256 eval combine to boost validation signal while staying under 16MB.",
     "tags": [
       "architecture",
       "quantization",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Wider MLP (hidden=1536) expansion",
-      "int6 per-row quantization on MLP and attention weights",
-      "Sliding-window eval stride=256 with batched logits"
+      "3x MLP expansion",
+      "int6 per-row quant + zstd-22 compression",
+      "Sliding-window stride-256 evaluation"
     ]
   },
   "compatibility": {

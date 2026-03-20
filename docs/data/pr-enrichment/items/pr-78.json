@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:26:46.296Z",
+  "generatedAt": "2026-03-20T18:55:39.870Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 78,
     "title": "Record: 8192 Vocab Size, NorMuon, Selective Quantization; 1.186 val_bpb",
     "state": "open",
-    "updatedAt": "2026-03-19T17:07:10Z",
+    "updatedAt": "2026-03-20T18:43:19Z",
     "headSha": "42de8368cdb5617293f98614caa98f594b7f50bd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/78",
     "authorLogin": "mtybadger"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Uses an 8192-token sp BPE tokenizer plus NorMuon blocks with selective int6 weight/int8 embedding quantization to retool the baseline architecture.",
+    "summary": "Pairs an 8192-token BPE tokenizer with NorMuon and selective int6 weight/int8 embedding quantization to explore precision trade-offs.",
     "tags": [
-      "quantization",
+      "tokenization",
       "architecture",
-      "tokenization"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "8192-token sp BPE tokenizer",
-      "NorMuon blocks instead of Muon",
-      "Selective int6 weight / int8 embedding quantization"
+      "8192-vocab BPE tokenizer training",
+      "NorMuon replacing Muon core",
+      "Selective int6 weight + int8 embedding quantization"
     ]
   },
   "compatibility": {

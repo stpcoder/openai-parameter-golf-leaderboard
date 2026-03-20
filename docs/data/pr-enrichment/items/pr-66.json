@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-19T17:27:36.722Z",
+  "generatedAt": "2026-03-20T18:55:58.047Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 66,
     "title": "ArjunAutoResearch: MLP 3x + STE int6 QAT + seq4096 + sliding window. val_bpb 1.1632",
     "state": "open",
-    "updatedAt": "2026-03-19T17:03:06Z",
+    "updatedAt": "2026-03-20T18:40:39Z",
     "headSha": "3d1780d86d240318b336475bff1fbdbc4d64b0e1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/66",
     "authorLogin": "arjun-krishna1"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "AutoResearch agent stacks widened MLP, seq4096, STE int6 QAT, int6 storage, and sliding-window eval within the 16MB budget.",
+    "summary": "Auto-research agent stacks wider MLP, 4k context, tuned Muon optimizer, STE int6 QAT, fp16 tied embedding passthrough, per-row int6 quant, sliding-window eval.",
     "tags": [
-      "architecture",
       "quantization",
       "optimizer",
-      "evaluation"
+      "sliding-window-eval",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Agent composes high-impact PR techniques into one config",
-      "STE fake int6 QAT with fp16 tied embedding passthrough",
-      "Sliding-window eval over 4096-token contexts"
+      "STE fake int6 QAT on CastedLinear weights",
+      "int6 per-row quantized MLP+attention with fp16 tied embedding passthrough",
+      "AutoResearch agent composing high-impact PR techniques"
     ]
   },
   "compatibility": {

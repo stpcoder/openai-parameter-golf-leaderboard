@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T07:22:46.316Z",
+  "generatedAt": "2026-03-20T18:55:05.781Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 179,
     "title": "Record: 11L, int6+zstd, decoupled WD (val_bpb = 1.1472)",
     "state": "open",
-    "updatedAt": "2026-03-20T07:15:40Z",
+    "updatedAt": "2026-03-20T18:50:56Z",
     "headSha": "e25aee67b22361b15da1480e394f554d52c6d2fc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/179",
     "authorLogin": "devin-cog"
@@ -20,25 +20,25 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "11-layer GQA GPT with decoupled Muon WD fits under 16MB via int6+zstd quantization and sliding-window eval for the 10min/16MB submission.",
+    "summary": "11-layer GQA GPT with Muon decoupled weight decay, int6+zstd compression, and sliding-window eval to fit 16MB while boosting non-val BPB.",
     "tags": [
       "val-only",
-      "architecture",
       "quantization",
-      "optimizer"
+      "optimizer",
+      "attention"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "Main record trains on standard shards; val-only run is a non-record aside.",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Includes a non-record val-only run trained on fineweb_val_*.bin to showcase that regime.",
     "techniques": [
-      "11L GQA GPT with 4 KV heads",
-      "Decoupled Muon weight decay + higher LR to shrink quant gap",
-      "Int6 per-row quant + zstd compression with sliding-window eval"
+      "11-layer GQA + Muon decoupled WD to shrink quantization gap",
+      "Int6 per-row quantization plus zstd-22 compression for size budget",
+      "Sliding-window stride=64 evaluation for max context"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": true,
-    "aiUsesValOnly": false,
+    "aiUsesValOnly": true,
     "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "valOnlyMatchesCollector": true
   }
 }

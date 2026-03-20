@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T14:54:08.469Z",
+  "generatedAt": "2026-03-20T18:55:28.879Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 86,
     "title": "Update: 11L MLP3x + WD=0.04 + zstd-22 (val_bpb 1.1502)",
-    "state": "open",
-    "updatedAt": "2026-03-20T14:28:49Z",
+    "state": "closed",
+    "updatedAt": "2026-03-20T18:44:49Z",
     "headSha": "1641a23486b3a5675c8fcc51f734b394b525105f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/86",
     "authorLogin": "aruniyer"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer FNet with 3x MLPs, int6 QAT, decoupled weight decay, zstd-22 compression, and sliding-window eval to hit 16MB under the 10min track.",
+    "summary": "11-layer MLP3x transformer with int6 QAT, tied embeddings, Muon/AdamW decay, zstd-22 compression, and sliding-window eval to fit 16MB.",
     "tags": [
       "quantization",
-      "architecture",
+      "sliding-window-eval",
       "compression",
-      "evaluation"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 quantization-aware training",
-      "zstd-22 compressed artifact",
-      "sliding-window stride=64 evaluation"
+      "Int6 QAT on all block weights with FP16 tied embedding export",
+      "Decoupled Muon+AdamW weight decay (0.04) plus momentum warmup to 0.99",
+      "zstd-22 compression and stride-64 sliding-window evaluation to hold ~15.4MB artifacts"
     ]
   },
   "compatibility": {

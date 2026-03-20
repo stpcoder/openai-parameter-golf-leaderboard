@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T03:51:34.960Z",
+  "generatedAt": "2026-03-20T18:56:02.797Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 65,
     "title": "Record: Mixed Quant Int6/FP16 + SmearGate + OrthoInit + MLP 3x + Sliding Window, val_bpb=1.1556",
-    "state": "open",
-    "updatedAt": "2026-03-20T03:30:53Z",
+    "state": "closed",
+    "updatedAt": "2026-03-20T18:40:28Z",
     "headSha": "3aface5c0bcc40ca2e74918977d05c07ae8fa634",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/65",
     "authorLogin": "aquariouseworkman"
@@ -20,19 +20,19 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Combines SmearGate bigram gating, orthogonal init, Muon’s orthogonalized weight decay, and int6 STE quantization with a 3× MLP plus sliding-window eval.",
+    "summary": "Combined SmearGate bigram gating, orthogonal init/Muon optimizer, and int6 STE QAT with sliding-window eval on a 9-layer transformer.",
     "tags": [
+      "quantization",
       "architecture",
       "optimizer",
-      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SmearGate bigram gating blended into embeddings before RMS",
-      "Muon optimizer with orthogonal projections plus decoupled weight decay",
-      "Int6 STE QAT on widened MLP with sliding-window scoring"
+      "SmearGate bigram gate mixing current and previous embeddings",
+      "Orthogonal init plus Muon optimizer with decoupled weight decay",
+      "Int6 STE quantization-aware training paired with stride-64 sliding-window evaluation"
     ]
   },
   "compatibility": {

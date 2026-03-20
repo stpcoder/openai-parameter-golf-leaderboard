@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T18:24:43.162Z",
+  "generatedAt": "2026-03-20T18:54:48.795Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 236,
-    "title": "Record: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
+    "title": "4 the Leaderboard: 11L Int6 + SmearGate + Batch Optimization (val_bpb=1.1400)",
     "state": "open",
-    "updatedAt": "2026-03-20T18:13:18Z",
+    "updatedAt": "2026-03-20T18:40:36Z",
     "headSha": "0d23304124424ca9bd4c159bc66002b83940d921",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/236",
     "authorLogin": "saml212"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GPT uses int6 attention/MLP, int8 embeddings, SmearGate+BigramHash, SWA, and tighter WD while shrinking batch size to pack more updates in 10m.",
+    "summary": "11L int6 model with SmearGate/BigramHash widens MLP, cuts batch tokens to squeeze more steps in 10‑min training while batched sliding eval keeps stride=64 viable.",
     "tags": [
       "quantization",
       "architecture",
       "training-schedule",
-      "sliding-window-eval"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 attention/MLP + int8 tied embedding",
-      "SmearGate + BigramHash features with SWA",
-      "smaller batch size to maximize steps in fixed-time training"
+      "Int6 per-row quantized attention/MLP with int8 embedding",
+      "SmearGate + BigramHash on OrthoInit base with SWA checkpoints",
+      "Smaller 524K-token batches to maximize steps in fixed-time training"
     ]
   },
   "compatibility": {

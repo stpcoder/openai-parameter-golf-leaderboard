@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-20T18:54:43.715Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 247,
+    "title": "Non-record: local RTX 4070 SP1024 8x512 KV4 seq768 500-step run",
+    "state": "open",
+    "updatedAt": "2026-03-20T18:26:05Z",
+    "headSha": "c739b4ae8a4c7cb6e4a1d3b1fa5182c17c7b4304",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/247",
+    "authorLogin": "riatzukiza"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_8x512_KV4_SEQ768_500steps/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Throughput-oriented search produced an 8-layer, 512-dim KV4 model with tied embeddings and boosted LR trained on one shard and re-evaluated on full validation.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Throughput-focused search for compact 8-layer KV4 layout",
+      "Higher tied-embed and matrix learning rates",
+      "Single-shard training with full published validation re-evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

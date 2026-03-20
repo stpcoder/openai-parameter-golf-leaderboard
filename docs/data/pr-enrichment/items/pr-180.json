@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T16:54:37.817Z",
+  "generatedAt": "2026-03-20T18:54:59.861Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 180,
     "title": "Record: 10L Int5-MLP + BigramHash(10240) + SWA(0.4) + WD=0.04 (val_bpb=1.1428, mean 3 seeds)",
-    "state": "open",
-    "updatedAt": "2026-03-20T16:44:50Z",
+    "state": "closed",
+    "updatedAt": "2026-03-20T18:51:12Z",
     "headSha": "1a8be36c17e20b1fb53dbf4975e1d67f5b8a63e9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/180",
     "authorLogin": "thwu1"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer model pairs int5 MLP with int6 attention plus SWA/BigramHash to squeeze extra depth inside the size cap.",
+    "summary": "Mixed int5 MLP/int6 attention quantization buys space for a 10-layer GPT with MuonWD regularization, SWA late averaging, and BigramHash.",
     "tags": [
       "quantization",
       "architecture",
+      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5 MLP / int6 attention quantization",
-      "SWA averaging starting at frac=0.4",
-      "BigramHash(10240)+SmearGate architecture stack"
+      "Mixed int5 MLP / int6 attention quantization to shrink artifact size",
+      "Muon optimizer with WD=0.04 plus SmearGate/BigramHash architectural tweaks",
+      "SWA averaging from final 40% of warmdown checkpoints"
     ]
   },
   "compatibility": {
