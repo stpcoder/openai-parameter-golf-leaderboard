@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-20T20:24:55.815Z",
+  "generatedAt": "2026-03-20T20:55:03.375Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Apply test-time training over an 11-layer MLP3x Int6 model with SmearGate/BigramHash, Muon+SWA, NTK-RoPE, and sliding-window eval.",
+    "summary": "Stacks test-time SGD adaptation onto an 11-layer Int6 MLP3x with FlashAttention, NTK-RoPE, and Muon/SWA before sliding-window eval.",
     "tags": [
       "val-only",
+      "architecture",
       "quantization",
-      "muon",
-      "sliding-window-eval"
+      "optimizer"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT adapts all weights via SGD on the validation shard before sliding-window evaluation.",
+    "valOnlyReasoning": "Runs full-weight SGD test-time training on the validation shard before sliding-window scoring.",
     "techniques": [
-      "Test-time training on validation shard",
-      "Int6 MLP3x with SmearGate and BigramHash features",
-      "Muon optimizer + SWA with sliding-window eval and NTK-RoPE"
+      "Test-time SGD adaptation on val data",
+      "11-layer Int6 MLP3x with ReLU², FlashAttention, and NTK-RoPE",
+      "Muon optimizer with SWA, GQA heads, and stride-64 sliding eval"
     ]
   },
   "compatibility": {

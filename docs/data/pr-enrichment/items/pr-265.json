@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T20:54:56.273Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 265,
+    "title": "Record: 11L + Efficient Partial XSA (val_bpb: 1.1307) ",
+    "state": "open",
+    "updatedAt": "2026-03-20T20:54:32Z",
+    "headSha": "a81f85bd7f632e3e48ef6b1da0017b81d25998a7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/265",
+    "authorLogin": "unnir"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_11L_EfficientPartialXSA_FA3_SWA120/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies Efficient Partial Exclusive Self Attention only to the deepest three layers via GQA-aware reshape on an 11-layer GPT with U-Net skips.",
+    "tags": [
+      "attention",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Partial XSA on final layers",
+      "GQA-aware reshape avoids repeat_interleave",
+      "Int6 per-row quantization on MLP/attention weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T20:25:00.751Z",
+  "generatedAt": "2026-03-20T20:55:07.635Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 250,
     "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
     "state": "open",
-    "updatedAt": "2026-03-20T20:14:41Z",
-    "headSha": "f5352509620ea0da20600703144adcab24832ce7",
+    "updatedAt": "2026-03-20T20:53:44Z",
+    "headSha": "4f213d5a6075288fecb03cd0f5fbcc9559cd8b27",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/250",
     "authorLogin": "Complexity-ML"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Token-routed 4-expert SwiGLU MoE with PID-layer dynamics, CUDA scatter dispatch, cosine warm restarts, SWA, and int6+zstd compression.",
+    "summary": "Token-routed 4-expert SwiGLU MoE with PID dynamics across layers, CUDA scatter dispatch, int6+zstd compression, and SGDR scheduling.",
     "tags": [
       "architecture",
       "quantization",
-      "training-schedule"
+      "training-schedule",
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
       "Token-routed 4-expert SwiGLU MoE",
-      "PID mu dynamics across layers",
-      "Int6 quantization + zstd compression with CUDA scatter dispatch"
+      "PID dynamics with clamped mu/velocity across layers",
+      "Cosine warm restarts (SGDR) LR schedule"
     ]
   },
   "compatibility": {
