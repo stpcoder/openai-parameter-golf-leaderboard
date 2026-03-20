@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T21:25:29.683Z",
+  "generatedAt": "2026-03-20T21:55:16.575Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 250,
     "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
     "state": "open",
-    "updatedAt": "2026-03-20T21:11:01Z",
-    "headSha": "ab04df9d44d410a53a166657dfb644ac56779a18",
+    "updatedAt": "2026-03-20T21:49:26Z",
+    "headSha": "cd397a2ded421fd05c4ee85b8e2af8f01d18b3f2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/250",
     "authorLogin": "Complexity-ML"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Token-routed 4-expert MoE with PID-style INL dynamics, cosine warm restarts, and Int6+zstd compression for a full-stack Complexity Framework stack.",
+    "summary": "Deploys token-routed 4-expert MoE with PID dynamics, SGDR schedule, and Int6+zstd compression for a compact 26.5M-parameter model.",
     "tags": [
       "architecture",
       "training-schedule",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Deterministic token routing over 4 SwiGLU experts",
-      "PID-inspired INL mu/velocity traversing all layers",
-      "Cosine warm restarts with SWA checkpoint averaging under Int6+zstd"
+      "Deterministic token-routed SwiGLU MoE dispatch",
+      "Layerwise PID dynamics (mu clamped [0.5,1.5])",
+      "Cosine warm restarts with Int6+zstd compression"
     ]
   },
   "compatibility": {

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T21:55:00.951Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 273,
+    "title": "Non-record: 10L Int6 QAT + SmearGate + SWA (val_bpb=1.1575)",
+    "state": "open",
+    "updatedAt": "2026-03-20T21:38:53Z",
+    "headSha": "d7f459c077d280918698ff4bd0425e9fabd4343f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/273",
+    "authorLogin": "dentity007"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_10L_SmearGate_SWA_NathanMaine/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer model swaps depth for throughput, pairing int6 QAT, per-dimension SmearGate, SWA, and sliding-window eval to maximize 10-min/16MB training.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 QAT with STE",
+      "Per-dimension SmearGate + SWA over last half",
+      "Sliding-window eval stride=64"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

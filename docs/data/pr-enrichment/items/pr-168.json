@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T04:51:25.715Z",
+  "generatedAt": "2026-03-20T21:55:33.062Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 168,
     "title": "SOTA Attempt: Paid prefix (val_bpb=1.0238)",
-    "state": "open",
-    "updatedAt": "2026-03-20T04:29:46Z",
+    "state": "closed",
+    "updatedAt": "2026-03-20T21:26:39Z",
     "headSha": "83aee2852eb3375309580957f7d3ae6934488428",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/168",
     "authorLogin": "spokane-way"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Store 12.9M val targets in an 8.75MB paid prefix blob and train a 7-layer 384d transformer on fineweb train data to cover the rest.",
+    "summary": "Stores 12.9M val targets in an 8.75MB paid prefix and uses the remaining 7.12MB for a 7-layer 384d model trained only on train split to cover other tokens.",
     "tags": [
-      "compression",
       "architecture",
-      "optimizer"
+      "compression",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "lzma-compressed paid prefix storing 12.9M val tokens",
-      "7-layer 384d transformer trained with Muon on fineweb train split",
-      "int8+zlib quantization to keep model under 7.2MB"
+      "Paid prefix of validation targets for zero-loss coverage",
+      "Compact 7-layer 384d transformer trained on fineweb train split",
+      "Int8+zlib quantization with Muon optimizer"
     ]
   },
   "compatibility": {

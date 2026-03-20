@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-20T15:24:18.215Z",
+  "generatedAt": "2026-03-20T21:55:44.029Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 76,
-    "title": "Int6 11L + SmearGate + BigramHash + SWA + OrthoInit + MuonWD (val_bpb 1.1555)",
+    "title": "12L Int5-MLP + SmearGate + BigramHash + SWA (val_bpb 1.1468)",
     "state": "open",
-    "updatedAt": "2026-03-20T15:12:44Z",
-    "headSha": "ba88459c1379a263ce3b934bc082e8cd0f4b6628",
+    "updatedAt": "2026-03-20T21:37:55Z",
+    "headSha": "5f9a9065517f98c0941d7a4af2964f839a77f11b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/76",
     "authorLogin": "unixmadtoonslab"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "a36662e9918e38cdf05f74d9a75a167994a17c359f8664217fbee3daab8d3263",
     "readmePaths": [
       "records/track_10min_16mb/2026-03-19_Int6_WiderMLP_FP16Embed_SlidingWindow/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Int6 per-row quantized 11-layer model uses SmearGate gating, BigramHash context, SWA warmdown, OrthoInit scaling, and NTK-aware RoPE with sliding-window eval.",
+    "summary": "Mixed int5/int6 quantized 12-layer transformer uses SmearGate, BigramHash, and U-Net skips with Muon/SWA and PyTorch 2.8 SDPA to stay under 16MB.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
       "optimizer",
-      "architecture"
+      "architecture",
+      "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "No explicit validation-shard or val-only training; standard training with validation evaluation.",
     "techniques": [
-      "- Int6 per-row quantization with SmearGate gating and BigramHash context embedding",
-      "- SWA warmdown plus Muon optimizer with WD and OrthoInit scaling",
-      "- NTK-aware RoPE trained for >16k context and sliding-window stride=64 eval"
+      "Mixed int5/int6 quantization for MLP and attention weights with fp16 embedding passthrough",
+      "SmearGate plus BigramHash context embeddings and U-Net-like skip connections in 12-layer stack",
+      "Muon optimizer with SWA warmdown and PyTorch 2.8 SDPA acceleration"
     ]
   },
   "compatibility": {

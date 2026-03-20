@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T19:24:36.356Z",
+  "generatedAt": "2026-03-20T21:55:24.489Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 230,
     "title": "Record: Int6 + MLP 3x + NorMuon + SmearGate + BigramHash + OrthoInit + Sliding Window, val_bpb=1.1541",
     "state": "open",
-    "updatedAt": "2026-03-20T19:01:45Z",
-    "headSha": "c166d4c0f4c4ecd092d0fda18e5f71727715f953",
+    "updatedAt": "2026-03-20T21:40:43Z",
+    "headSha": "f0ab434a41a6b89b1a72f18763ec135fb1e57136",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/230",
     "authorLogin": "MatthewHRockwell"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks int6 quantization, 3x MLP, NorMuon+weight decay, SmearGate/bigram context, and orthogonal muP init before sliding-window eval.",
+    "summary": "Int6 quantization funds a 3x MLP with orthogonal muP init, NorMuon, SmearGate, and BigramHash token-pair context, evaluated via stride-256 sliding windows.",
     "tags": [
       "quantization",
       "architecture",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 per-row quantization with fp16 scales and tied embeddings",
-      "3x-expanded MLP plus NorMuon with decoupled weight decay",
-      "SmearGate+BigramHash gating and orthogonal muP init before sliding-window scoring"
+      "Int6 per-row quantization enabling a larger MLP",
+      "NorMuon with decoupled weight decay plus orthogonal muP init",
+      "SmearGate+BigramHash token-pair context and sliding-window eval"
     ]
   },
   "compatibility": {

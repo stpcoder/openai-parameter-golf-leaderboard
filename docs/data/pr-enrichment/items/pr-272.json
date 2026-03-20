@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T21:55:05.596Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 272,
+    "title": "Non-record: 10L mixed int5/int6 export reaches ~10.4MB with strong throughput",
+    "state": "open",
+    "updatedAt": "2026-03-20T21:32:33Z",
+    "headSha": "a217105d80a20205f63f47d069e18ff864a7d7d2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/272",
+    "authorLogin": "simon-marcus"
+  },
+  "inputs": {
+    "hash": "5575eee4c07d53e41c0efdbf64c8811a6809c20acf3e5d2691f5f27cd6b129e6",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-19_CorePromotion13/README.md",
+      "records/track_10min_16mb/2026-03-20_LeaderCore10L_MixedQuant_MicroTTT/README.md"
+    ],
+    "submissionCount": 5
+  },
+  "output": {
+    "summary": "Valid 10L core run tests subsystem-specific int5/int6/int8 export plus tiny eval-time SGD on control knobs to probe aggressive compression.",
+    "tags": [
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "subsystem mixed int5/int6/int8 export",
+      "micro eval-time SGD on control params"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-20T21:25:29.721Z",
+  "generatedAt": "2026-03-20T21:55:44.038Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 273,
+      "title": "Non-record: 10L Int6 QAT + SmearGate + SWA (val_bpb=1.1575)",
+      "status": "open",
+      "updatedAt": "2026-03-20T21:38:53Z",
+      "headSha": "d7f459c077d280918698ff4bd0425e9fabd4343f",
+      "generatedAt": "2026-03-20T21:55:00.951Z",
+      "summary": "10-layer model swaps depth for throughput, pairing int6 QAT, per-dimension SmearGate, SWA, and sliding-window eval to maximize 10-min/16MB training.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-273.json"
+    },
+    {
+      "prNumber": 272,
+      "title": "Non-record: 10L mixed int5/int6 export reaches ~10.4MB with strong throughput",
+      "status": "open",
+      "updatedAt": "2026-03-20T21:32:33Z",
+      "headSha": "a217105d80a20205f63f47d069e18ff864a7d7d2",
+      "generatedAt": "2026-03-20T21:55:05.596Z",
+      "summary": "Valid 10L core run tests subsystem-specific int5/int6/int8 export plus tiny eval-time SGD on control knobs to probe aggressive compression.",
+      "tags": [
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-272.json"
+    },
     {
       "prNumber": 271,
       "title": "Non-record: HyperparamTuned KV2 + FP16 Embed",
@@ -75,12 +121,13 @@
       "prNumber": 266,
       "title": "Non-record: Mixture of Softmax K=2 R=64 (1xH100, 10min, 1.3932 bpb)",
       "status": "open",
-      "updatedAt": "2026-03-20T21:09:16Z",
+      "updatedAt": "2026-03-20T21:28:50Z",
       "headSha": "9478af843422d11cbcf67d79924a73150d86f8ee",
-      "generatedAt": "2026-03-20T21:25:19.102Z",
-      "summary": "Baseline 9×512 swaps tied softmax for a K=2 low-rank mixture that raises output rank closer to vocab size with minimal extra params.",
+      "generatedAt": "2026-03-20T21:55:10.350Z",
+      "summary": "Adds K=2, rank-64 Mixture of Softmax head to baseline 9×512 GPT to raise output matrix rank with little parameter overhead.",
       "tags": [
         "architecture",
+        "quantization",
         "non-record"
       ],
       "flags": {
@@ -329,10 +376,10 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-20T21:11:01Z",
-      "headSha": "ab04df9d44d410a53a166657dfb644ac56779a18",
-      "generatedAt": "2026-03-20T21:25:29.683Z",
-      "summary": "Token-routed 4-expert MoE with PID-style INL dynamics, cosine warm restarts, and Int6+zstd compression for a full-stack Complexity Framework stack.",
+      "updatedAt": "2026-03-20T21:49:26Z",
+      "headSha": "cd397a2ded421fd05c4ee85b8e2af8f01d18b3f2",
+      "generatedAt": "2026-03-20T21:55:16.575Z",
+      "summary": "Deploys token-routed 4-expert MoE with PID dynamics, SGDR schedule, and Int6+zstd compression for a compact 26.5M-parameter model.",
       "tags": [
         "architecture",
         "training-schedule",
@@ -612,10 +659,10 @@
       "prNumber": 230,
       "title": "Record: Int6 + MLP 3x + NorMuon + SmearGate + BigramHash + OrthoInit + Sliding Window, val_bpb=1.1541",
       "status": "open",
-      "updatedAt": "2026-03-20T19:01:45Z",
-      "headSha": "c166d4c0f4c4ecd092d0fda18e5f71727715f953",
-      "generatedAt": "2026-03-20T19:24:36.356Z",
-      "summary": "Stacks int6 quantization, 3x MLP, NorMuon+weight decay, SmearGate/bigram context, and orthogonal muP init before sliding-window eval.",
+      "updatedAt": "2026-03-20T21:40:43Z",
+      "headSha": "f0ab434a41a6b89b1a72f18763ec135fb1e57136",
+      "generatedAt": "2026-03-20T21:55:24.489Z",
+      "summary": "Int6 quantization funds a 3x MLP with orthogonal muP init, NorMuon, SmearGate, and BigramHash token-pair context, evaluated via stride-256 sliding windows.",
       "tags": [
         "quantization",
         "architecture",
@@ -1693,15 +1740,15 @@
     {
       "prNumber": 168,
       "title": "SOTA Attempt: Paid prefix (val_bpb=1.0238)",
-      "status": "open",
-      "updatedAt": "2026-03-20T04:29:46Z",
+      "status": "closed",
+      "updatedAt": "2026-03-20T21:26:39Z",
       "headSha": "83aee2852eb3375309580957f7d3ae6934488428",
-      "generatedAt": "2026-03-20T04:51:25.715Z",
-      "summary": "Store 12.9M val targets in an 8.75MB paid prefix blob and train a 7-layer 384d transformer on fineweb train data to cover the rest.",
+      "generatedAt": "2026-03-20T21:55:33.062Z",
+      "summary": "Stores 12.9M val targets in an 8.75MB paid prefix and uses the remaining 7.12MB for a 7-layer 384d model trained only on train split to cover other tokens.",
       "tags": [
-        "compression",
         "architecture",
-        "optimizer"
+        "compression",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1717,14 +1764,13 @@
       "prNumber": 167,
       "title": "Depth Recurrence via Layer Sharing (3 shared blocks → 1/3 params, matched BPB)",
       "status": "open",
-      "updatedAt": "2026-03-20T20:04:01Z",
-      "headSha": "4e760acb67091d65aa637dc2cfbe84fbf0002c31",
-      "generatedAt": "2026-03-20T20:25:14.980Z",
-      "summary": "ALBERT-style shared blocks cycle three unique transformers over nine virtual layers so depth stays while unique params and artifact size fall.",
+      "updatedAt": "2026-03-20T21:50:25Z",
+      "headSha": "ad482ec54d71e64fa828be1de4821dacec2add39",
+      "generatedAt": "2026-03-20T21:55:37.867Z",
+      "summary": "Weight-sharing cycles three unique blocks over nine virtual layers, cutting unique parameters while letting extra recurrence cycles boost eval without new blocks.",
       "tags": [
         "architecture",
         "compression",
-        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -3262,17 +3308,17 @@
     },
     {
       "prNumber": 76,
-      "title": "Int6 11L + SmearGate + BigramHash + SWA + OrthoInit + MuonWD (val_bpb 1.1555)",
+      "title": "12L Int5-MLP + SmearGate + BigramHash + SWA (val_bpb 1.1468)",
       "status": "open",
-      "updatedAt": "2026-03-20T15:12:44Z",
-      "headSha": "ba88459c1379a263ce3b934bc082e8cd0f4b6628",
-      "generatedAt": "2026-03-20T15:24:18.215Z",
-      "summary": "Int6 per-row quantized 11-layer model uses SmearGate gating, BigramHash context, SWA warmdown, OrthoInit scaling, and NTK-aware RoPE with sliding-window eval.",
+      "updatedAt": "2026-03-20T21:37:55Z",
+      "headSha": "5f9a9065517f98c0941d7a4af2964f839a77f11b",
+      "generatedAt": "2026-03-20T21:55:44.029Z",
+      "summary": "Mixed int5/int6 quantized 12-layer transformer uses SmearGate, BigramHash, and U-Net skips with Muon/SWA and PyTorch 2.8 SDPA to stay under 16MB.",
       "tags": [
         "quantization",
-        "sliding-window-eval",
         "optimizer",
-        "architecture"
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
