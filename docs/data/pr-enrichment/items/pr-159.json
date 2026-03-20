@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T02:50:16.896Z",
+  "generatedAt": "2026-03-20T07:52:27.084Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 159,
     "title": "Record:Add TTT-LoRA 512d submission (val_bpb=1.1957)",
-    "state": "open",
-    "updatedAt": "2026-03-20T02:49:32Z",
+    "state": "closed",
+    "updatedAt": "2026-03-20T03:20:10Z",
     "headSha": "2f556296e47d76022b9594ecf1072637ca1c5a5b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/159",
     "authorLogin": "santosh5541"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "9-layer 512d transformer run uses int8+zlib compression and TTT-LoRA adaptation within a 10-minute limit for leaderboard eval.",
+    "summary": "Baseline 512d/9-layer (8-head, 4-KV) transformer with int8+zlib compression leans on test-time LoRA adaptation for its best 10-minute score.",
     "tags": [
       "architecture",
       "quantization",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
+      "512d/9-layer transformer with 8 heads and 4 KV heads",
       "Per-row int8 quantization with zlib compression",
-      "TTT-LoRA test-time adaptation after warmdown",
-      "Efficient 10-minute capped training on 8×H100"
+      "Test-time LoRA adaptation during evaluation"
     ]
   },
   "compatibility": {

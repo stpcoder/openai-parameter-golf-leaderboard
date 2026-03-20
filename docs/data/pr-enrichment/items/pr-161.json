@@ -1,37 +1,36 @@
 {
-  "generatedAt": "2026-03-20T07:22:51.109Z",
+  "generatedAt": "2026-03-20T07:52:20.853Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 161,
     "title": "Record:Add TTT-LoRA 512d submission (val_bpb=1.1957)",
     "state": "open",
-    "updatedAt": "2026-03-20T07:16:40Z",
-    "headSha": "2f556296e47d76022b9594ecf1072637ca1c5a5b",
+    "updatedAt": "2026-03-20T07:46:27Z",
+    "headSha": "4f6750742803b7f905f58aa6d83ac0e5d1754563",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/161",
     "authorLogin": "santosh5541"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-19_TTT-LoRA_512d_8h_4kv_warmdown3000/README.md"
+      "records/track_10min_16mb/2026-03-20_TTT-LoRA_512d_8h_4kv_warmdown3000/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Baseline 512d/8h/4kv transformer with int8+zlib artifact plus TTT-LoRA test-time adaptation to reclaim quantization loss under the 10min/16MB cap.",
+    "summary": "Baseline 512d/9-layer transformer uses per-row int8+zlib compression with LoRA-based test-time training (TTT-LoRA) within the 10min limit.",
     "tags": [
       "architecture",
       "quantization",
-      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "TTT-LoRA adaptation over int8 artifact",
-      "Per-row int8 quantization with zlib compression",
-      "9-layer 512d transformer with 3000 warmdown steps"
+      "per-row int8 + zlib compression",
+      "LoRA test-time training on int8 path",
+      "10min warmdown-capped training"
     ]
   },
   "compatibility": {

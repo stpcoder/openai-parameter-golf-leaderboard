@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T07:52:04.559Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 190,
+    "title": "The Stinky Frost Recipe — 1.1725 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-20T07:51:19Z",
+    "headSha": "0d8b3f0911bb1a463b325d1f83c2dbc1cec7b574",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/190",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_StinkyFrostRecipe/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "9-layer GQA model leans on int6 QAT from 25% training, FP16 tied embeddings, SmearGate bigram blending, BigramHash context, Muon WD, and stride-64 sliding eval.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "attention",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 QAT with FP16 tied embeddings",
+      "SmearGate bigram blending plus BigramHash",
+      "Sliding-window eval stride 64"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

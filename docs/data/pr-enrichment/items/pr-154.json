@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T02:20:13.888Z",
+  "generatedAt": "2026-03-20T07:52:31.807Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 154,
     "title": "Non-record: Cross-layer parameter sharing + 4-bit QAT (RecurrentGPT)",
     "state": "open",
-    "updatedAt": "2026-03-20T02:00:02Z",
-    "headSha": "a58305d38030b8a678b53ff2f4c2f4a721b9add9",
+    "updatedAt": "2026-03-20T07:33:21Z",
+    "headSha": "6d8eb28a1c3877660f35fe98b0cef461aeaf7fa3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/154",
     "authorLogin": "evnkm"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Prelude-recurrent-coda depth recurrence with per-iteration gating plus 4-bit quantization-aware training tightens 16MB artifacts in RecurrentGPT.",
+    "summary": "RecurrentGPT packs 14-layer behavior into a 2-1-2 shared prelude/recurrent/coda stack with per-iteration gates plus 4-bit QAT under the 16MB cap.",
     "tags": [
       "architecture",
       "quantization",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Prelude→recurrent→coda shared depth recurrence",
-      "Per-iteration gating to differentiate shared blocks",
-      "4-bit QAT with STE in CastedLinear"
+      "Depth-recursive parameter sharing",
+      "Per-iteration gating for the recurrent block",
+      "STE-based 4-bit quantization-aware training"
     ]
   },
   "compatibility": {

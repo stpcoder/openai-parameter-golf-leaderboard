@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-20T07:23:02.502Z",
+  "generatedAt": "2026-03-20T07:52:44.143Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 191,
+      "title": "Record: Compression-Funded MLP3x (val_bpb=1.1598)",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:51:33Z",
+      "headSha": "3cd74c78ce0dce37c46869a9c802929151defed3",
+      "generatedAt": "2026-03-20T07:51:59.567Z",
+      "summary": "Int6 block-weight compression funds a 3x MLP with fp16-safe embeddings during seq2048 training and stride-256 sliding-window eval.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "sliding-window-eval",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-191.json"
+    },
+    {
+      "prNumber": 190,
+      "title": "The Stinky Frost Recipe — 1.1725 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:51:19Z",
+      "headSha": "0d8b3f0911bb1a463b325d1f83c2dbc1cec7b574",
+      "generatedAt": "2026-03-20T07:52:04.559Z",
+      "summary": "9-layer GQA model leans on int6 QAT from 25% training, FP16 tied embeddings, SmearGate bigram blending, BigramHash context, Muon WD, and stride-64 sliding eval.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "attention",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-190.json"
+    },
+    {
+      "prNumber": 187,
+      "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1855)",
+      "status": "open",
+      "updatedAt": "2026-03-20T07:23:51Z",
+      "headSha": "6ee7458daf1f509b495958b46240e927514805c7",
+      "generatedAt": "2026-03-20T07:52:11.520Z",
+      "summary": "GELU-based pre-enrichment and 2× encoder recurrence deliver 15 effective layers from 10 blocks with sliding-window eval.",
+      "tags": [
+        "architecture",
+        "depth-width",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-187.json"
+    },
     {
       "prNumber": 186,
       "title": "Combined SOTA: INT6 + SmearGate + BigramHash + SWA (val_bpb=1.1754)",
@@ -50,28 +121,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-185.json"
-    },
-    {
-      "prNumber": 184,
-      "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1855)",
-      "status": "closed",
-      "updatedAt": "2026-03-20T07:17:21Z",
-      "headSha": "c2e9b1e48d0d380b0e2a04105edd534c1b4daac7",
-      "generatedAt": "2026-03-20T07:22:15.936Z",
-      "summary": "GELU pre-enrichment plus 2× encoder recurrence with RMS stabilization doubles encoder depth before sliding-window evaluation.",
-      "tags": [
-        "architecture",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-184.json"
     },
     {
       "prNumber": 183,
@@ -146,15 +195,14 @@
       "prNumber": 180,
       "title": "Record: 10L Int5-MLP + MuonWD=0.04 + SWA/50 (val_bpb=1.1453)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:02:47Z",
-      "headSha": "ab9ecb2f693a9490828b7833bbd08ac3cc9f9d21",
-      "generatedAt": "2026-03-20T07:22:40.776Z",
-      "summary": "Funds a 10th layer by quantizing MLPs to int5 while keeping attention int6, pairing MuonWD=0.04 with SWA/50 over SmearGate+BigramHash.",
+      "updatedAt": "2026-03-20T07:22:48Z",
+      "headSha": "a320f7cc175331ffe30f6c53982c9dfd329a6ecf",
+      "generatedAt": "2026-03-20T07:52:15.799Z",
+      "summary": "Mixed int5 MLP/int6 attention quantization frees 1.86MB to add a 10th transformer layer while training with MuonWD=0.04 and SWA/50.",
       "tags": [
         "quantization",
-        "architecture",
         "optimizer",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -525,14 +573,13 @@
       "prNumber": 161,
       "title": "Record:Add TTT-LoRA 512d submission (val_bpb=1.1957)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:16:40Z",
-      "headSha": "2f556296e47d76022b9594ecf1072637ca1c5a5b",
-      "generatedAt": "2026-03-20T07:22:51.109Z",
-      "summary": "Baseline 512d/8h/4kv transformer with int8+zlib artifact plus TTT-LoRA test-time adaptation to reclaim quantization loss under the 10min/16MB cap.",
+      "updatedAt": "2026-03-20T07:46:27Z",
+      "headSha": "4f6750742803b7f905f58aa6d83ac0e5d1754563",
+      "generatedAt": "2026-03-20T07:52:20.853Z",
+      "summary": "Baseline 512d/9-layer transformer uses per-row int8+zlib compression with LoRA-based test-time training (TTT-LoRA) within the 10min limit.",
       "tags": [
         "architecture",
         "quantization",
-        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -567,6 +614,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-160.json"
+    },
+    {
+      "prNumber": 159,
+      "title": "Record:Add TTT-LoRA 512d submission (val_bpb=1.1957)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T03:20:10Z",
+      "headSha": "2f556296e47d76022b9594ecf1072637ca1c5a5b",
+      "generatedAt": "2026-03-20T07:52:27.084Z",
+      "summary": "Baseline 512d/9-layer (8-head, 4-KV) transformer with int8+zlib compression leans on test-time LoRA adaptation for its best 10-minute score.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-159.json"
     },
     {
       "prNumber": 156,
@@ -620,10 +690,10 @@
       "prNumber": 154,
       "title": "Non-record: Cross-layer parameter sharing + 4-bit QAT (RecurrentGPT)",
       "status": "open",
-      "updatedAt": "2026-03-20T02:00:02Z",
-      "headSha": "a58305d38030b8a678b53ff2f4c2f4a721b9add9",
-      "generatedAt": "2026-03-20T02:20:13.888Z",
-      "summary": "Prelude-recurrent-coda depth recurrence with per-iteration gating plus 4-bit quantization-aware training tightens 16MB artifacts in RecurrentGPT.",
+      "updatedAt": "2026-03-20T07:33:21Z",
+      "headSha": "6d8eb28a1c3877660f35fe98b0cef461aeaf7fa3",
+      "generatedAt": "2026-03-20T07:52:31.807Z",
+      "summary": "RecurrentGPT packs 14-layer behavior into a 2-1-2 shared prelude/recurrent/coda stack with per-iteration gates plus 4-bit QAT under the 16MB cap.",
       "tags": [
         "architecture",
         "quantization",
@@ -1391,14 +1461,13 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T06:01:06Z",
-      "headSha": "ce7da9f3ab164464c7ddf960f527d8c86325a820",
-      "generatedAt": "2026-03-20T06:21:57.397Z",
-      "summary": "Depth-recurrent GPT with 3 unique blocks iterated thrice plus AdaLN conditioning and GQA, trained on MLX Apple M3 Max.",
+      "updatedAt": "2026-03-20T07:43:53Z",
+      "headSha": "eb887142fd494e455606089f21231435618caf3c",
+      "generatedAt": "2026-03-20T07:52:37.981Z",
+      "summary": "Recurrent depth architecture cycles 3 unique Transformer blocks thrice with AdaLN/FiLM conditioning, GQA, and int8+zlib compression for 16MB.",
       "tags": [
         "architecture",
-        "attention",
-        "evaluation",
+        "compression",
         "non-record"
       ],
       "flags": {
@@ -1811,23 +1880,23 @@
       "prNumber": 81,
       "title": "Record: SwiGLU + MLP 3x + Int6 + LoRA TTT, val_bpb=1.1670 (8xH100)",
       "status": "open",
-      "updatedAt": "2026-03-20T05:49:45Z",
-      "headSha": "5ea687e97e2e0d73aa228dd501be1f4bd569b809",
-      "generatedAt": "2026-03-20T05:52:07.951Z",
-      "summary": "Stacks 3x MLP expansion, SwiGLU, int6 quantization with QAT, and LoRA test-time training per validation document.",
+      "updatedAt": "2026-03-20T07:36:10Z",
+      "headSha": "9c4a57866d2903b7446f941e4d77c5852154ae7e",
+      "generatedAt": "2026-03-20T07:52:44.132Z",
+      "summary": "Combines wider SwiGLU MLP, int6+QAT quant, and LoRA-based test-time training on a 10-layer transformer to squeeze more capacity under the artifact cap.",
       "tags": [
-        "val-only",
         "architecture",
         "quantization",
+        "optimizer",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-81.json"
     },

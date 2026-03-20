@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T07:22:40.776Z",
+  "generatedAt": "2026-03-20T07:52:15.799Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 180,
     "title": "Record: 10L Int5-MLP + MuonWD=0.04 + SWA/50 (val_bpb=1.1453)",
     "state": "open",
-    "updatedAt": "2026-03-20T07:02:47Z",
-    "headSha": "ab9ecb2f693a9490828b7833bbd08ac3cc9f9d21",
+    "updatedAt": "2026-03-20T07:22:48Z",
+    "headSha": "a320f7cc175331ffe30f6c53982c9dfd329a6ecf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/180",
     "authorLogin": "thwu1"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Funds a 10th layer by quantizing MLPs to int5 while keeping attention int6, pairing MuonWD=0.04 with SWA/50 over SmearGate+BigramHash.",
+    "summary": "Mixed int5 MLP/int6 attention quantization frees 1.86MB to add a 10th transformer layer while training with MuonWD=0.04 and SWA/50.",
     "tags": [
       "quantization",
-      "architecture",
       "optimizer",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5 MLP / int6 attention quantization to shrink artifacts",
-      "MuonWD=0.04 paired with SWA/50 warmdown for quant-friendly training",
-      "Sliding-window stride=64 eval with SmearGate+BigramHash"
+      "Mixed int5 MLP/int6 attention quantization",
+      "MuonWD=0.04 AdamW with GQA architecture",
+      "SWA averaging every 50 steps during warmdown"
     ]
   },
   "compatibility": {

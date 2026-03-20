@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T05:52:07.951Z",
+  "generatedAt": "2026-03-20T07:52:44.132Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 81,
     "title": "Record: SwiGLU + MLP 3x + Int6 + LoRA TTT, val_bpb=1.1670 (8xH100)",
     "state": "open",
-    "updatedAt": "2026-03-20T05:49:45Z",
-    "headSha": "5ea687e97e2e0d73aa228dd501be1f4bd569b809",
+    "updatedAt": "2026-03-20T07:36:10Z",
+    "headSha": "9c4a57866d2903b7446f941e4d77c5852154ae7e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/81",
     "authorLogin": "polarizedfortnite-cpu"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks 3x MLP expansion, SwiGLU, int6 quantization with QAT, and LoRA test-time training per validation document.",
+    "summary": "Combines wider SwiGLU MLP, int6+QAT quant, and LoRA-based test-time training on a 10-layer transformer to squeeze more capacity under the artifact cap.",
     "tags": [
-      "val-only",
       "architecture",
       "quantization",
+      "optimizer",
       "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "LoRA adapters are trained anew on each validation document during test-time training.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "3x MLP + SwiGLU with matched dims",
-      "int6 quantization with end-phase QAT",
-      "LoRA adapters trained per validation document"
+      "3x SwiGLU MLP expansion + extra layer for more capacity",
+      "Int6 quantization with QAT and zstd packing to fit model in cap",
+      "LoRA test-time training updates per-document during eval"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
