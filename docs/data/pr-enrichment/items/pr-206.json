@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T12:23:30.692Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 206,
+    "title": "Record: Int6 STE + SmearGate + Seq2048 + OrthoInit + RoPE50K + SWA/100 (mean val_bpb=1.1507)",
+    "state": "open",
+    "updatedAt": "2026-03-20T11:56:13Z",
+    "headSha": "12f3d7bde62c258e75cee764b9782f08ae32e5eb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/206",
+    "authorLogin": "dexhunter"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6STE_SmearGate_Seq2048_OrthoInit_RoPE50K_SWA100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Int6 STE quant-aware training with NorMuon optimization, SmearGate/U-Net context gating, RoPE50K, and frequent SWA in a 9-layer 16MB model.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 STE quantization-aware training with FP16 tied embeddings",
+      "NorMuon optimizer with SWA/100 warmdown averaging",
+      "SmearGate/U-Net skip gating plus RoPE50K for 2048-context"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

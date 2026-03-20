@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T12:23:17.947Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 209,
+    "title": "Add non-record 11L int6 challenger 8xH100 attempt",
+    "state": "open",
+    "updatedAt": "2026-03-20T12:16:03Z",
+    "headSha": "b83e82ec88bf5f77be3c6d357fb7068e662a35d7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/209",
+    "authorLogin": "JWLBOYCE"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_11LInt6Challenger_8xH100_Preroundtrip/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer int6 challenger run on 8xH100 copies muon optimizer + zstd quantization build while capping training to the 600s main-track window.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11L int6 + zstd quantized weights",
+      "muon optimizer with tuned lr/wd split",
+      "600s cap main-track-style training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,80 @@
 {
-  "generatedAt": "2026-03-20T11:53:00.704Z",
+  "generatedAt": "2026-03-20T12:23:35.252Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 209,
+      "title": "Add non-record 11L int6 challenger 8xH100 attempt",
+      "status": "open",
+      "updatedAt": "2026-03-20T12:16:03Z",
+      "headSha": "b83e82ec88bf5f77be3c6d357fb7068e662a35d7",
+      "generatedAt": "2026-03-20T12:23:17.947Z",
+      "summary": "11-layer int6 challenger run on 8xH100 copies muon optimizer + zstd quantization build while capping training to the 600s main-track window.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-209.json"
+    },
+    {
+      "prNumber": 208,
+      "title": "Staging: Int6 MLP3x 11L + SmearGate + BigramHash4096x128 + MuonWD038 + SWA50 + DocSliding (single-run val_bpb=1.1568)",
+      "status": "open",
+      "updatedAt": "2026-03-20T12:13:21Z",
+      "headSha": "11d2794d7c9fa8f1c632467fa64a02117ecde424",
+      "generatedAt": "2026-03-20T12:23:25.449Z",
+      "summary": "Dense 11x512 KV4 int6 model uses SmearGate, BigramHash, Muon WD, and SWA with doc-sliding int6_zstd_core export for leaderboard eval.",
+      "tags": [
+        "quantization",
+        "sliding-window-eval",
+        "training-schedule",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-208.json"
+    },
+    {
+      "prNumber": 206,
+      "title": "Record: Int6 STE + SmearGate + Seq2048 + OrthoInit + RoPE50K + SWA/100 (mean val_bpb=1.1507)",
+      "status": "open",
+      "updatedAt": "2026-03-20T11:56:13Z",
+      "headSha": "12f3d7bde62c258e75cee764b9782f08ae32e5eb",
+      "generatedAt": "2026-03-20T12:23:30.692Z",
+      "summary": "Combines Int6 STE quant-aware training with NorMuon optimization, SmearGate/U-Net context gating, RoPE50K, and frequent SWA in a 9-layer 16MB model.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-206.json"
+    },
     {
       "prNumber": 205,
       "title": "MetaStack v3: 1.1792 sliding bpb, 10L BigramHash SmearGate OrthoInit SWA",
@@ -336,15 +408,15 @@
       "prNumber": 185,
       "title": "Non-record: Wider-shallower 4x768 + QAT (1xH100, 1.3043 bpb)",
       "status": "open",
-      "updatedAt": "2026-03-20T07:20:30Z",
-      "headSha": "6ac12eea82a02f224d8ba7a89137a589cf3dc460",
-      "generatedAt": "2026-03-20T07:22:11.378Z",
-      "summary": "Wider-shallower 4x768 model with GQA, boosted QK gain, Muon tuning, and STE-based QAT to close the int8 gap on 1xH100.",
+      "updatedAt": "2026-03-20T12:04:17Z",
+      "headSha": "bdaa22a14366916994fcc4c49b0e1302e12c9d8b",
+      "generatedAt": "2026-03-20T12:23:35.226Z",
+      "summary": "Wider 4-layer 768-dim GQA model trained with aggressive Muon tuning and post-warmup STE-based QAT to concentrate compute per step and keep int8 gap tiny.",
       "tags": [
         "architecture",
-        "attention",
         "optimizer",
-        "quantization"
+        "quantization",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,

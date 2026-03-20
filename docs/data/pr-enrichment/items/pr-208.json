@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T12:23:25.449Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 208,
+    "title": "Staging: Int6 MLP3x 11L + SmearGate + BigramHash4096x128 + MuonWD038 + SWA50 + DocSliding (single-run val_bpb=1.1568)",
+    "state": "open",
+    "updatedAt": "2026-03-20T12:13:21Z",
+    "headSha": "11d2794d7c9fa8f1c632467fa64a02117ecde424",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/208",
+    "authorLogin": "ajkpersonal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_Int6MLP3x_11L_SmearGate_Bigram4096x128_MuonWD038_SWA50_DocSliding/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Dense 11x512 KV4 int6 model uses SmearGate, BigramHash, Muon WD, and SWA with doc-sliding int6_zstd_core export for leaderboard eval.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "training-schedule",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Dense 11x512 KV4 with SmearGate and MLP3x",
+      "BigramHash(4096x128)+Muon WD 0.038 with ADAM WD 0.01 and SWA50 schedule",
+      "Doc-sliding 2048/256 int6_zstd_core export"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
