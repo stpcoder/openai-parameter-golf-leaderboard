@@ -1,43 +1,43 @@
 {
-  "generatedAt": "2026-03-20T15:53:57.055Z",
+  "generatedAt": "2026-03-20T16:23:59.694Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 223,
-    "title": "Draft: AllInOne SmearGate + Int6 QAT + Sliding Window (pending H100 run)",
+    "title": "Draft: SOTA+ TTT + RoPE50K + EMA + Curriculum (pending H100 run)",
     "state": "open",
-    "updatedAt": "2026-03-20T15:41:27Z",
-    "headSha": "90f5575f9e369f950a29f26a5f35c741848692ae",
+    "updatedAt": "2026-03-20T16:11:12Z",
+    "headSha": "5f95a5854dd1a65194b2a619e4de8322e730f113",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/223",
     "authorLogin": "0xjaishy"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_AllInOne_SmearGate_Int6QAT_SlidingWindow/README.md"
+      "records/track_10min_16mb/2026-03-20_SOTA_TTT_RoPE50K_EMA_Curriculum/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacked int6 STE QAT with SmearGate bigram gating, orthogonal init, and Muon-optimized 10L transformer plus sliding-window evaluation.",
+    "summary": "Builds on PR198 stack by adding RoPE50K, LAWA-EMA, context curriculum, and val-set SGD TTT to refine weights before final scoring.",
     "tags": [
-      "quantization",
-      "architecture",
+      "val-only",
+      "training-schedule",
       "optimizer",
-      "evaluation"
+      "architecture"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Full-model SGD test-time training runs one epoch on the validation shard before evaluation.",
     "techniques": [
-      "Int6 STE QAT with fp16 tied embeddings",
-      "SmearGate bigram gating and orthogonal init",
-      "Sliding-window eval stride=64 with Muon optimizer"
+      "RoPE base 50K for smoother long-range interpolation",
+      "LAWA-EMA warmdown replacing periodic SWA",
+      "Context curriculum followed by val-set SGD TTT adaptation"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-20T16:23:49.477Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 226,
+    "title": "Submission: Low-Rank All-Attention (1.3446 bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-20T16:19:02Z",
+    "headSha": "714530f059018fb971bcf26fcafbb4aae1470a40",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/226",
+    "authorLogin": "CRouvroy"
+  },
+  "inputs": {
+    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
+    "readmePaths": [],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Replaces transformer feed-forward layers with persistent-memory modules plus low-rank routing while INT8-quantizing tensors above 16K elements.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Persistent-memory feed-forward replacement",
+      "Low-rank matrix factorization routing",
+      "INT8 quantization for large tensors"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

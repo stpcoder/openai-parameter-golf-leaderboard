@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-20T15:54:21.126Z",
+  "generatedAt": "2026-03-20T16:24:19.210Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 226,
+      "title": "Submission: Low-Rank All-Attention (1.3446 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-20T16:19:02Z",
+      "headSha": "714530f059018fb971bcf26fcafbb4aae1470a40",
+      "generatedAt": "2026-03-20T16:23:49.477Z",
+      "summary": "Replaces transformer feed-forward layers with persistent-memory modules plus low-rank routing while INT8-quantizing tensors above 16K elements.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-226.json"
+    },
     {
       "prNumber": 225,
       "title": "Non-record: Int6 QAT + 11L 512d + Sliding Window, val_bpb=1.2089",
@@ -31,10 +54,10 @@
       "prNumber": 224,
       "title": "Complexity MoE + PID Dynamics (Token-Routed I64)",
       "status": "open",
-      "updatedAt": "2026-03-20T15:53:22Z",
-      "headSha": "2fcb9269b09efa026cb6268672ab279b3ca8a0f2",
-      "generatedAt": "2026-03-20T15:53:51.229Z",
-      "summary": "Deterministic token-routed MoE pairs with PID-style hidden dynamics, SwiGLU experts, and SGDR cosine restarts across 9 layers.",
+      "updatedAt": "2026-03-20T16:23:05Z",
+      "headSha": "6f483d8886957ffe8a97ad4254e7514a0e28819c",
+      "generatedAt": "2026-03-20T16:23:53.894Z",
+      "summary": "Deterministic token-routed MoE with PID-informed dynamics, SwiGLU experts, and SGDR cosine restarts for a 14.7M-LM under the 16MB cap.",
       "tags": [
         "architecture",
         "training-schedule"
@@ -51,25 +74,25 @@
     },
     {
       "prNumber": 223,
-      "title": "Draft: AllInOne SmearGate + Int6 QAT + Sliding Window (pending H100 run)",
+      "title": "Draft: SOTA+ TTT + RoPE50K + EMA + Curriculum (pending H100 run)",
       "status": "open",
-      "updatedAt": "2026-03-20T15:41:27Z",
-      "headSha": "90f5575f9e369f950a29f26a5f35c741848692ae",
-      "generatedAt": "2026-03-20T15:53:57.055Z",
-      "summary": "Stacked int6 STE QAT with SmearGate bigram gating, orthogonal init, and Muon-optimized 10L transformer plus sliding-window evaluation.",
+      "updatedAt": "2026-03-20T16:11:12Z",
+      "headSha": "5f95a5854dd1a65194b2a619e4de8322e730f113",
+      "generatedAt": "2026-03-20T16:23:59.694Z",
+      "summary": "Builds on PR198 stack by adding RoPE50K, LAWA-EMA, context curriculum, and val-set SGD TTT to refine weights before final scoring.",
       "tags": [
-        "quantization",
-        "architecture",
+        "val-only",
+        "training-schedule",
         "optimizer",
-        "evaluation"
+        "architecture"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-223.json"
     },
@@ -263,13 +286,14 @@
       "prNumber": 212,
       "title": "Record: Int6 + 3x MLP + sliding window (val_bpb=1.1708) + 9 ablations",
       "status": "open",
-      "updatedAt": "2026-03-20T13:06:35Z",
-      "headSha": "41c503f7c7c37bc77815a3a07e5a639597971a4a",
-      "generatedAt": "2026-03-20T13:23:21.372Z",
-      "summary": "Combines int6 per-row quantization with zstd compression and a 3×MLP expansion plus sliding-window eval, backed by ablations on shared hardware.",
+      "updatedAt": "2026-03-20T16:08:10Z",
+      "headSha": "3e2e4627b13852386b066da3a95a51ed25aefb53",
+      "generatedAt": "2026-03-20T16:24:07.565Z",
+      "summary": "Int6 per-row quantization plus zstd frees artifact budget to widen to a 3× MLP while sliding-window eval and ablations probe interactions.",
       "tags": [
         "quantization",
         "architecture",
+        "sliding-window-eval",
         "evaluation"
       ],
       "flags": {
@@ -1322,15 +1346,15 @@
       "prNumber": 150,
       "title": "[WIP] Record: Int6 QAT + BigramHash + MLP 1344 (val_bpb 1.1593)",
       "status": "open",
-      "updatedAt": "2026-03-20T01:44:31Z",
-      "headSha": "5930991ebde94544128e3f27e50f13f91b015969",
-      "generatedAt": "2026-03-20T01:50:09.072Z",
-      "summary": "STE int6 QAT model adds a 4096-bucket BigramHash embedding with oversized MLP and Muon momentum, using sliding-window eval for dense context.",
+      "updatedAt": "2026-03-20T16:21:10Z",
+      "headSha": "0aad0982206790b679f1dee9e5cfee7d58f646ac",
+      "generatedAt": "2026-03-20T16:24:14.679Z",
+      "summary": "10-layer int6 QAT adds a BigramHash token-pair embedding and 1344-hidden MLP while keeping full-range quantization with zstd-22 compression.",
       "tags": [
         "quantization",
-        "sliding-window-eval",
-        "optimizer",
-        "architecture"
+        "tokenization",
+        "architecture",
+        "mixed-precision"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2023,14 +2047,14 @@
       "prNumber": 108,
       "title": "[Non-record] Depth-Recurrent 3×3 MLX — dev submission (Apple Silicon)",
       "status": "open",
-      "updatedAt": "2026-03-20T15:31:11Z",
-      "headSha": "947a4be6e6d41eb9636235cc5ee47ecde8ab2338",
-      "generatedAt": "2026-03-20T15:54:21.113Z",
-      "summary": "Depth-recurrent GPT stacks three unique 3×3 Transformer blocks over three loops with AdaLN conditioning and GQA, plus transient attention-only test-time adaptation.",
+      "updatedAt": "2026-03-20T15:54:27Z",
+      "headSha": "c6ad6cccc6c1be94e912669f9817b7697d0e94dd",
+      "generatedAt": "2026-03-20T16:24:19.196Z",
+      "summary": "Depth-recurrent 3×3 GPT stacks AdaLN-conditioned loops with GQA on Apple M3 via MLX, fitting the 16MB budget through int8+zlib compression.",
       "tags": [
         "architecture",
-        "evaluation",
         "compression",
+        "evaluation",
         "non-record"
       ],
       "flags": {

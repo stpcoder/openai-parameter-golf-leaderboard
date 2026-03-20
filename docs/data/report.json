@@ -1,20 +1,31 @@
 {
-  "generatedAt": "2026-03-20T15:53:20.626Z",
+  "generatedAt": "2026-03-20T16:23:23.582Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [],
+  "skipped": [
+    {
+      "pr": 227,
+      "reason": "no-record-submission-json"
+    },
+    {
+      "stage": "pull-request-readme",
+      "pr": 226,
+      "submissionPath": "records/CRouvroy_LowRankAllAttention/submission.json",
+      "reason": "missing-or-unreadable-readme"
+    }
+  ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-20T15:18:51Z",
+    "cutoffUpdatedAt": "2026-03-20T15:53:22Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 8,
-    "prsReused": 192,
+    "prsRefreshed": 7,
+    "prsReused": 193,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 206,
+    "cacheEntries": 208,
     "retryWindowRetained": false
   }
 }

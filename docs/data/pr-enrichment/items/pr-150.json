@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-20T01:50:09.072Z",
+  "generatedAt": "2026-03-20T16:24:14.679Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 150,
     "title": "[WIP] Record: Int6 QAT + BigramHash + MLP 1344 (val_bpb 1.1593)",
     "state": "open",
-    "updatedAt": "2026-03-20T01:44:31Z",
-    "headSha": "5930991ebde94544128e3f27e50f13f91b015969",
+    "updatedAt": "2026-03-20T16:21:10Z",
+    "headSha": "0aad0982206790b679f1dee9e5cfee7d58f646ac",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/150",
     "authorLogin": "yahya010"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_Int6QAT_BigramHash_MLP1344/README.md"
+      "records/track_10min_16mb/2026-03-20_Int6QAT_BigramHash_MLP1344/README.md",
+      "records/track_10min_16mb/2026-03-20_Int6QAT_BigramHash_WD/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "STE int6 QAT model adds a 4096-bucket BigramHash embedding with oversized MLP and Muon momentum, using sliding-window eval for dense context.",
+    "summary": "10-layer int6 QAT adds a BigramHash token-pair embedding and 1344-hidden MLP while keeping full-range quantization with zstd-22 compression.",
     "tags": [
       "quantization",
-      "sliding-window-eval",
-      "optimizer",
-      "architecture"
+      "tokenization",
+      "architecture",
+      "mixed-precision"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE int6 QAT with Zstd compression",
-      "BigramHash token-pair embedding added before RMSNorm",
-      "Muon 0.99 plus MLP hidden=1344"
+      "BigramHash 4096-bucket embedding adds token-pair context before RMSNorm",
+      "STE int6 QAT with full [-31,31] range plus zstd-22 compression",
+      "Expanded MLP to 1344 with sliding-window eval stride 64 under Muon 0.99"
     ]
   },
   "compatibility": {

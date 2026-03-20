@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T13:23:21.372Z",
+  "generatedAt": "2026-03-20T16:24:07.565Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 212,
     "title": "Record: Int6 + 3x MLP + sliding window (val_bpb=1.1708) + 9 ablations",
     "state": "open",
-    "updatedAt": "2026-03-20T13:06:35Z",
-    "headSha": "41c503f7c7c37bc77815a3a07e5a639597971a4a",
+    "updatedAt": "2026-03-20T16:08:10Z",
+    "headSha": "3e2e4627b13852386b066da3a95a51ed25aefb53",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/212",
     "authorLogin": "mrdavtan"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines int6 per-row quantization with zstd compression and a 3×MLP expansion plus sliding-window eval, backed by ablations on shared hardware.",
+    "summary": "Int6 per-row quantization plus zstd frees artifact budget to widen to a 3× MLP while sliding-window eval and ablations probe interactions.",
     "tags": [
       "quantization",
       "architecture",
+      "sliding-window-eval",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 per-row quantization with zstd-22 compression to free artifact budget",
-      "3×MLP expansion (hidden=1536) with FP16 tied embeddings for added capacity",
-      "Sliding-window eval (stride=64) alongside nine controlled ablations"
+      "Int6 per-row quantization with zstd compression",
+      "3× MLP width expansion with FP16 tied embeddings",
+      "stride-64 sliding-window evaluation with ablations"
     ]
   },
   "compatibility": {
