@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-20T21:24:57.656Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 271,
+    "title": "Non-record: HyperparamTuned KV2 + FP16 Embed",
+    "state": "open",
+    "updatedAt": "2026-03-20T21:24:35Z",
+    "headSha": "3c3e5572450b3959c2c918533bf09d7ac0116ebf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/271",
+    "authorLogin": "xexyz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_HyperparamTuned_KV2/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Halved KV heads, retuned Muon/Adam LR+momentum with shorter warmdown, and exported FP16 tied embeddings to keep throughput neutral.",
+    "tags": [
+      "optimizer",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GQA 8:2 KV head halving",
+      "High Muon LR with shorter warmdown and lower scalar LR",
+      "FP16 tied embedding export"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T21:25:11.029Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 267,
+    "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
+    "state": "open",
+    "updatedAt": "2026-03-20T21:20:08Z",
+    "headSha": "78a2c049df1789577a8644a5e07a67044de6ccdd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/267",
+    "authorLogin": "andrewgcodes"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_CausalTTT_Int5MLP_BigramHash_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Causal chunk-wise test-time training evaluates each validation chunk before updating a 10-layer GPT with int5/int6 quantization, BigramHash embeddings, and SWA.",
+    "tags": [
+      "val-only",
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "TTT explicitly trains on each validation chunk after scoring it, so the run performs validation-shard training during evaluation.",
+    "techniques": [
+      "Causal chunk-wise TTT: evaluate chunk, then train on it (no re-eval)",
+      "Mixed int5/int6 quantization with FP16 embeddings and BigramHash(16384)",
+      "SWA averaging late checkpoints for inference stability"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

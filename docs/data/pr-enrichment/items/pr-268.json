@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-20T21:25:03.924Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 268,
+    "title": "Record: 11L Int6 + SmearGate + BigramHash + Depth Recurrence",
+    "state": "open",
+    "updatedAt": "2026-03-20T21:15:20Z",
+    "headSha": "0db1160f2ec64c3088e9b8a79abfcfc3b8dad814",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/268",
+    "authorLogin": "brn-mwai"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_BrnMwai_DepthRecurrence/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Depth recurrence loops a shared block via per-iteration embeddings so an int6-quantized Transformer can afford wider dims within 16MB.",
+    "tags": [
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence loops shared transformer block with per-iteration embeddings",
+      "Vectorized int6+zstd-22 packing for 27M parameters"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

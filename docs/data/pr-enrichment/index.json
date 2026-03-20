@@ -1,8 +1,98 @@
 {
-  "generatedAt": "2026-03-20T20:55:15.710Z",
+  "generatedAt": "2026-03-20T21:25:29.721Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 271,
+      "title": "Non-record: HyperparamTuned KV2 + FP16 Embed",
+      "status": "open",
+      "updatedAt": "2026-03-20T21:24:35Z",
+      "headSha": "3c3e5572450b3959c2c918533bf09d7ac0116ebf",
+      "generatedAt": "2026-03-20T21:24:57.656Z",
+      "summary": "Halved KV heads, retuned Muon/Adam LR+momentum with shorter warmdown, and exported FP16 tied embeddings to keep throughput neutral.",
+      "tags": [
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-271.json"
+    },
+    {
+      "prNumber": 268,
+      "title": "Record: 11L Int6 + SmearGate + BigramHash + Depth Recurrence",
+      "status": "open",
+      "updatedAt": "2026-03-20T21:15:20Z",
+      "headSha": "0db1160f2ec64c3088e9b8a79abfcfc3b8dad814",
+      "generatedAt": "2026-03-20T21:25:03.924Z",
+      "summary": "Depth recurrence loops a shared block via per-iteration embeddings so an int6-quantized Transformer can afford wider dims within 16MB.",
+      "tags": [
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-268.json"
+    },
+    {
+      "prNumber": 267,
+      "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
+      "status": "open",
+      "updatedAt": "2026-03-20T21:20:08Z",
+      "headSha": "78a2c049df1789577a8644a5e07a67044de6ccdd",
+      "generatedAt": "2026-03-20T21:25:11.029Z",
+      "summary": "Causal chunk-wise test-time training evaluates each validation chunk before updating a 10-layer GPT with int5/int6 quantization, BigramHash embeddings, and SWA.",
+      "tags": [
+        "val-only",
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-267.json"
+    },
+    {
+      "prNumber": 266,
+      "title": "Non-record: Mixture of Softmax K=2 R=64 (1xH100, 10min, 1.3932 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-20T21:09:16Z",
+      "headSha": "9478af843422d11cbcf67d79924a73150d86f8ee",
+      "generatedAt": "2026-03-20T21:25:19.102Z",
+      "summary": "Baseline 9×512 swaps tied softmax for a K=2 low-rank mixture that raises output rank closer to vocab size with minimal extra params.",
+      "tags": [
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-266.json"
+    },
     {
       "prNumber": 265,
       "title": "Record: 11L + Efficient Partial XSA (val_bpb: 1.1307) ",
@@ -75,15 +165,15 @@
     {
       "prNumber": 262,
       "title": "Record: 8L Paid Prefix + SmearGate + Int6 (val_bpb=1.0539)",
-      "status": "open",
-      "updatedAt": "2026-03-20T20:01:20Z",
-      "headSha": "ff039576dcb411563636e2afde6d780f0be2fed1",
-      "generatedAt": "2026-03-20T20:24:48.041Z",
-      "summary": "Combines 8-layer SmearGate transformer with paid-prefix coverage and int6+zstd compression to squeeze validation scoring budget.",
+      "status": "closed",
+      "updatedAt": "2026-03-20T21:23:09Z",
+      "headSha": "1319ba71dd8de4d53ef2a81c384e1642a9f643c0",
+      "generatedAt": "2026-03-20T21:25:24.057Z",
+      "summary": "8-layer SmearGate+BigramHash transformer with int6+zstd pairs a 10% LZMA-paid validation prefix to zero-out those targets for compression.",
       "tags": [
+        "quantization",
         "architecture",
-        "compression",
-        "quantization"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -239,15 +329,15 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-20T20:53:44Z",
-      "headSha": "4f213d5a6075288fecb03cd0f5fbcc9559cd8b27",
-      "generatedAt": "2026-03-20T20:55:07.635Z",
-      "summary": "Token-routed 4-expert SwiGLU MoE with PID dynamics across layers, CUDA scatter dispatch, int6+zstd compression, and SGDR scheduling.",
+      "updatedAt": "2026-03-20T21:11:01Z",
+      "headSha": "ab04df9d44d410a53a166657dfb644ac56779a18",
+      "generatedAt": "2026-03-20T21:25:29.683Z",
+      "summary": "Token-routed 4-expert MoE with PID-style INL dynamics, cosine warm restarts, and Int6+zstd compression for a full-stack Complexity Framework stack.",
       "tags": [
         "architecture",
-        "quantization",
         "training-schedule",
-        "attention"
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
