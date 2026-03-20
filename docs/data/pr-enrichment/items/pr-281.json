@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-20T22:55:29.239Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 281,
+    "title": "Record: val_bpb=1.1374 (3-seed mean 1.1381), FA2+SWA+WD0.042",
+    "state": "open",
+    "updatedAt": "2026-03-20T22:50:29Z",
+    "headSha": "4d12c598caeb01a3e72a6d6703fdc1b3e092ebda",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/281",
+    "authorLogin": "charmquark1984"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-20_FA2_SWA_WD042/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Farnsworth-derived 11L INT6 transformer with SmearGate+BigramHash, FlashAttention2, Muon+SWA, and weight-decay tuning to target ~15.5MB artifacts.",
+    "tags": [
+      "architecture",
+      "attention",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SmearGate and BigramHash blended features",
+      "Muon optimizer with SWA and precise WD targeting",
+      "FlashAttention 2 fallback atop INT6 quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

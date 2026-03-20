@@ -1,36 +1,38 @@
 {
-  "generatedAt": "2026-03-20T22:25:49.289Z",
+  "generatedAt": "2026-03-20T22:55:49.742Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 274,
     "title": "[Non-record] Seq2048 + EMA + Council-Optimized Warmdown",
     "state": "open",
-    "updatedAt": "2026-03-20T21:55:13Z",
-    "headSha": "04c1413c9d636deaa0cccb0d9c2adab1060a4f54",
+    "updatedAt": "2026-03-20T22:52:57Z",
+    "headSha": "ca8c5eca380d0f6faa75de9ce595b84927616a81",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/274",
     "authorLogin": "haikosys"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_LoRATTT_Stride32_on_SOTA1/README.md",
       "records/track_10min_16mb/2026-03-20_Seq2048_EMA_CouncilOptimized/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Combines EMA averaging with seq2048 steps, extended council-optimized warmdown, and reduced Muon LR/momentum for smoother int8-ready training.",
+    "summary": "Seq2048 training with EMA averaging, council-tuned 5k warmdown, and Muon momentum tweaks to boost context efficiency within the 10L base architecture.",
     "tags": [
-      "optimizer",
+      "regularization",
       "training-schedule",
-      "quantization"
+      "optimizer",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA weight averaging for smoother checkpoints",
-      "Seq2048 training with council-informed warmdown",
-      "Lower LR plus Muon momentum for quantization robustness"
+      "EMA weight averaging",
+      "Seq2048 with council-optimized warmdown",
+      "Muon momentum 0.95 with lower LRs"
     ]
   },
   "compatibility": {

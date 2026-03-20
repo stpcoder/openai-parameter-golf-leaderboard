@@ -1,20 +1,68 @@
 {
-  "generatedAt": "2026-03-20T22:26:11.287Z",
+  "generatedAt": "2026-03-20T22:55:59.683Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 278,
-      "title": "Record: 8L Paid Prefix + Sparse Hard Blocks (1.0365)",
+      "prNumber": 281,
+      "title": "Record: val_bpb=1.1374 (3-seed mean 1.1381), FA2+SWA+WD0.042",
       "status": "open",
-      "updatedAt": "2026-03-20T22:23:06Z",
-      "headSha": "944352afa8dd40faa2c00bf17ad7b777f8bdf206",
-      "generatedAt": "2026-03-20T22:25:27.547Z",
-      "summary": "Replaces the contiguous paid prefix with an inline-built sparse hard-block cache selected by sliding-window NLL to focus bytes on high-loss validation regions.",
+      "updatedAt": "2026-03-20T22:50:29Z",
+      "headSha": "4d12c598caeb01a3e72a6d6703fdc1b3e092ebda",
+      "generatedAt": "2026-03-20T22:55:29.239Z",
+      "summary": "Farnsworth-derived 11L INT6 transformer with SmearGate+BigramHash, FlashAttention2, Muon+SWA, and weight-decay tuning to target ~15.5MB artifacts.",
       "tags": [
         "architecture",
-        "evaluation",
-        "compression"
+        "attention",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-281.json"
+    },
+    {
+      "prNumber": 279,
+      "title": "Title: AtomLogic v3.2 Universal SOTA - 1.15 BPB Target",
+      "status": "open",
+      "updatedAt": "2026-03-20T22:27:27Z",
+      "headSha": "311e5c0540802a1282197b858df44ddbb878f7c8",
+      "generatedAt": "2026-03-20T22:55:39.494Z",
+      "summary": "Shares one Universal Transformer block over 20 iterations with value-only MoE binary-mask experts, VeRA zero-leakage TTT, and Muon optimizer.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-279.json"
+    },
+    {
+      "prNumber": 278,
+      "title": "Record: 8L Paid Prefix + Sparse Hard Blocks (1.0365)",
+      "status": "closed",
+      "updatedAt": "2026-03-20T22:26:31Z",
+      "headSha": "944352afa8dd40faa2c00bf17ad7b777f8bdf206",
+      "generatedAt": "2026-03-20T22:55:45.386Z",
+      "summary": "Inline builds a sparse hard-block paid prefix by ranking sliding-window NLL and caching top 256-token losses for the 8L SmearGate/BigramHash model.",
+      "tags": [
+        "architecture",
+        "compression",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -101,14 +149,15 @@
       "prNumber": 274,
       "title": "[Non-record] Seq2048 + EMA + Council-Optimized Warmdown",
       "status": "open",
-      "updatedAt": "2026-03-20T21:55:13Z",
-      "headSha": "04c1413c9d636deaa0cccb0d9c2adab1060a4f54",
-      "generatedAt": "2026-03-20T22:25:49.289Z",
-      "summary": "Combines EMA averaging with seq2048 steps, extended council-optimized warmdown, and reduced Muon LR/momentum for smoother int8-ready training.",
+      "updatedAt": "2026-03-20T22:52:57Z",
+      "headSha": "ca8c5eca380d0f6faa75de9ce595b84927616a81",
+      "generatedAt": "2026-03-20T22:55:49.742Z",
+      "summary": "Seq2048 training with EMA averaging, council-tuned 5k warmdown, and Muon momentum tweaks to boost context efficiency within the 10L base architecture.",
       "tags": [
-        "optimizer",
+        "regularization",
         "training-schedule",
-        "quantization"
+        "optimizer",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -493,15 +542,15 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-20T22:24:57Z",
-      "headSha": "7e11a9c0ab144d1655b1cebbc088d9de44097f98",
-      "generatedAt": "2026-03-20T22:26:06.025Z",
-      "summary": "Token-routed 4-expert SwiGLU MoE with PID dynamics, CUDA scatter dispatch, SGDR, and int6+zstd compression to meet the 16MB budget.",
+      "updatedAt": "2026-03-20T22:52:07Z",
+      "headSha": "f53a4514167a57dd034802a5131bf025e73c343b",
+      "generatedAt": "2026-03-20T22:55:54.869Z",
+      "summary": "Token-routed 4-expert SwiGLU MoE with PID mu dynamics, SGDR warm restarts, and CUDA-native Int6 scatter/gather with sliding-window evaluation.",
       "tags": [
         "architecture",
-        "quantization",
         "training-schedule",
-        "sliding-window-eval"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1597,15 +1646,14 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-20T08:34:03Z",
-      "headSha": "7549fee12b415f1a279baaa1729ddd0ab53a2f27",
-      "generatedAt": "2026-03-20T08:52:07.835Z",
-      "summary": "Adds closed-form Titans-style neural memory per block via cumsum-driven causal linear attention gated before the MLP, plus LoRA TTT eval and int6/FP16 tweaks.",
+      "updatedAt": "2026-03-20T22:35:55Z",
+      "headSha": "089a2ea3762673f56af1014dccd69de901e1ff28",
+      "generatedAt": "2026-03-20T22:55:59.658Z",
+      "summary": "Adds closed-form Titans-style neural memory per block plus LoRA TTT, overtone init, quant tricks, and Muon WD for a 10-layer run.",
       "tags": [
-        "non-record",
         "architecture",
-        "quantization",
-        "attention"
+        "attention",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

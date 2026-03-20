@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-20T22:25:20.645Z",
+  "generatedAt": "2026-03-20T22:55:21.701Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 202,
-    "official": 2,
-    "openPr": 160,
+    "submissions": 205,
+    "official": 1,
+    "openPr": 163,
     "mergedPr": 12,
-    "closedPr": 28,
-    "prBacked": 200,
+    "closedPr": 29,
+    "prBacked": 204,
     "readmeListed": 15,
     "collectorErrors": 0
   },
@@ -159,69 +159,6 @@
         "listedInReadme": false
       }
     },
-    "officialNonRecord": {
-      "id": "record-records-track_non_record_16mb-2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3",
-      "source": "official",
-      "status": "official",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3",
-        "folderPath": "records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3",
-        "submissionPath": "records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/train_gpt.py"
-      },
-      "submission": {
-        "author": "Will DePue",
-        "githubId": "williamd",
-        "name": "4-Hour Quasi-10B SP1024",
-        "blurb": "Unlimited compute track: SP-1024 9x512 KV4 run on pgut3 for 4 hours against the quasi10Bfrom50B 50k-eval export; pre-quant reached 1.1749 BPB at wallclock stop and final int8+zlib roundtrip scored 1.2074 under the 16,000,000-byte cap.",
-        "date": "2026-03-18T11:53:00Z"
-      },
-      "metrics": {
-        "valBpb": 1.20737944,
-        "valLoss": 2.03860961,
-        "preQuantValBpb": 1.1749,
-        "preQuantValLoss": 1.9837,
-        "stepStop": 329430,
-        "wallclockSeconds": 14400.039,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 15810161,
-        "bytesCode": 47642,
-        "bytesModelInt8Zlib": 15762519
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": null,
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/main/records/track_non_record_16mb/2026-03-18_Quasi10Bfrom50B_SP1024_9x512_KV4_4h_pgut3",
-        "pr": null,
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": true,
-        "hasPullRequest": false,
-        "listedInReadme": true
-      }
-    }
+    "officialNonRecord": null
   }
 }
