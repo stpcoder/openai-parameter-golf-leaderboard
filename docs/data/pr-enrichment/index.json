@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-21T02:57:35.981Z",
+  "generatedAt": "2026-03-21T03:27:53.914Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 305,
+      "title": "[WIP] 10L MLP3x BigramHash(4096) + SWA + LateQAT + WD=0.04 — val_bpb=1.87, 14.77MB",
+      "status": "open",
+      "updatedAt": "2026-03-21T03:21:14Z",
+      "headSha": "b7e4165db584d809994f9427903ffe010a756084",
+      "generatedAt": "2026-03-21T03:27:33.169Z",
+      "summary": "10-layer transformer widens MLPs 3×, prepends BigramHash pairs, and uses SWA plus late QAT timing to stabilize int8+zlib quantized weights.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-305.json"
+    },
+    {
+      "prNumber": 304,
+      "title": "Non-record: QAT + Neural Cache + LoRA TTT",
+      "status": "open",
+      "updatedAt": "2026-03-21T03:10:47Z",
+      "headSha": "0667a5b342c5415abd8827632f31c891a6d24c83",
+      "generatedAt": "2026-03-21T03:27:38.974Z",
+      "summary": "Stacks QAT, neural cache, and entropy-gated per-document LoRA TTT atop the Int5-MLP+BigramHash+SWA recipe for eval-time robustness.",
+      "tags": [
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-304.json"
+    },
+    {
+      "prNumber": 303,
+      "title": "[Non-record] XSA + EMA + TTT: Negative interaction study (val_bpb=1.1436)",
+      "status": "open",
+      "updatedAt": "2026-03-21T03:00:56Z",
+      "headSha": "9227d8ed39663e0547e930a41ddb8d43b8a877c4",
+      "generatedAt": "2026-03-21T03:27:48.244Z",
+      "summary": "TTT's SGD adaptation on the XSA+EMA base confirms their local-context redundancy and EMA disruption, so stacking them worsens eval behavior.",
+      "tags": [
+        "val-only",
+        "evaluation",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-303.json"
+    },
     {
       "prNumber": 302,
       "title": "Non-record: 11L int5/int6 + XSA + online TTT w/ decay prior (single-run val_bpb=1.1520)",
@@ -4084,17 +4154,17 @@
     },
     {
       "prNumber": 64,
-      "title": "Record: 11L Int6 + Per-dim SmearGate + RoPE50K (mean val_bpb=1.1391)",
+      "title": "Record: 11L XSA + EMA + TTT (mean val_bpb=1.1377)",
       "status": "open",
-      "updatedAt": "2026-03-21T00:25:17Z",
-      "headSha": "20eff8994ca6475e0b8d323bc32dd3339600c3b1",
-      "generatedAt": "2026-03-21T00:28:44.537Z",
-      "summary": "11-layer 512-dim MLP-3x with BigramHash/U-Net skips, RoPE50K, per-dim SmearGate, and int6 quantization plus Muon+SWA training.",
+      "updatedAt": "2026-03-21T03:10:54Z",
+      "headSha": "9827669914021e71ad1d7509d0b205ae47284793",
+      "generatedAt": "2026-03-21T03:27:53.907Z",
+      "summary": "11-layer Muon-optimized GPT with XSA on the final layers, EMA smoothing, test-time SGD on pregraded tokens, BigramHash context, and int6/int8 quantization.",
       "tags": [
-        "quantization",
+        "attention",
         "optimizer",
-        "architecture",
-        "sliding-window-eval"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

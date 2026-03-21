@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-21T00:28:44.537Z",
+  "generatedAt": "2026-03-21T03:27:53.907Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
-    "title": "Record: 11L Int6 + Per-dim SmearGate + RoPE50K (mean val_bpb=1.1391)",
+    "title": "Record: 11L XSA + EMA + TTT (mean val_bpb=1.1377)",
     "state": "open",
-    "updatedAt": "2026-03-21T00:25:17Z",
-    "headSha": "20eff8994ca6475e0b8d323bc32dd3339600c3b1",
+    "updatedAt": "2026-03-21T03:10:54Z",
+    "headSha": "9827669914021e71ad1d7509d0b205ae47284793",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-20_DominationV1/README.md"
+      "records/track_10min_16mb/2026-03-21_DominationV2/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer 512-dim MLP-3x with BigramHash/U-Net skips, RoPE50K, per-dim SmearGate, and int6 quantization plus Muon+SWA training.",
+    "summary": "11-layer Muon-optimized GPT with XSA on the final layers, EMA smoothing, test-time SGD on pregraded tokens, BigramHash context, and int6/int8 quantization.",
     "tags": [
-      "quantization",
+      "attention",
       "optimizer",
-      "architecture",
-      "sliding-window-eval"
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-dim SmearGate blending with RoPE base 50K",
-      "11-layer MLP-3x w/ BigramHash context and U-Net skips",
-      "Int6/8 quant + Muon SGD with SWA averaging"
+      "XSA last-4-layer orthogonal projection plus EMA smoothing",
+      "TTT micro-SGD on already-evaluated tokens during eval",
+      "Int6 per-row quantization with BigramHash context"
     ]
   },
   "compatibility": {
