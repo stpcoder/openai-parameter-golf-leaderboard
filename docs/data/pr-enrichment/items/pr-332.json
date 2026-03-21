@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T09:30:11.108Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 332,
+    "title": "Record: 12L Gradient-Guided Quant + Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1320)",
+    "state": "open",
+    "updatedAt": "2026-03-21T09:27:03Z",
+    "headSha": "1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/332",
+    "authorLogin": "saml212"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Gradient-guided per-tensor int5/int6/int7 quantization frees room for a 12th layer while keeping Partial RoPE, LN scale, XSA4, and EMA with a 524K-token batch.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Gradient-guided adaptive per-tensor int5/6/7 quantization",
+      "12-layer Transformer with narrower MLP plus Partial RoPE, LN scale, XSA4, EMA",
+      "Large 524K-token batch for faster steps"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

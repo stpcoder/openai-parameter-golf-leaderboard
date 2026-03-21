@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T09:30:18.320Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 331,
+    "title": "10L MLP3x + BigramHash(2048) + SWA + Stride-32: 1.1487 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-21T09:16:51Z",
+    "headSha": "395a485a6e723c710cd888619bb1122f81a520e0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/331",
+    "authorLogin": "Rhodrium"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_10L_MLP3x_BigramHash_SWA_Stride32/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer relu² MLP3x with BigramHash/SmearGate, mixed int5/int6 quant, SWA, and dense stride-32 sliding eval for fuller context.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BigramHash+SmearGate n-gram fusion",
+      "Mixed int5/int6 quantization + zstd-22 compression",
+      "SWA with stride-32 dense sliding eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,20 +1,89 @@
 {
-  "generatedAt": "2026-03-21T09:00:26.130Z",
+  "generatedAt": "2026-03-21T09:30:33.389Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 332,
+      "title": "Record: 12L Gradient-Guided Quant + Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1320)",
+      "status": "open",
+      "updatedAt": "2026-03-21T09:27:03Z",
+      "headSha": "1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505",
+      "generatedAt": "2026-03-21T09:30:11.108Z",
+      "summary": "Gradient-guided per-tensor int5/int6/int7 quantization frees room for a 12th layer while keeping Partial RoPE, LN scale, XSA4, and EMA with a 524K-token batch.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-332.json"
+    },
+    {
+      "prNumber": 331,
+      "title": "10L MLP3x + BigramHash(2048) + SWA + Stride-32: 1.1487 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-21T09:16:51Z",
+      "headSha": "395a485a6e723c710cd888619bb1122f81a520e0",
+      "generatedAt": "2026-03-21T09:30:18.320Z",
+      "summary": "10-layer relu² MLP3x with BigramHash/SmearGate, mixed int5/int6 quant, SWA, and dense stride-32 sliding eval for fuller context.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-331.json"
+    },
+    {
+      "prNumber": 330,
+      "title": "Non-record: 11L Int6 + Online Logit Bias (val_bpb=1.1609)",
+      "status": "open",
+      "updatedAt": "2026-03-21T09:09:45Z",
+      "headSha": "809785e72f792e28ed20922a4c69de3626305c90",
+      "generatedAt": "2026-03-21T09:30:22.321Z",
+      "summary": "11-layer int6 GPT uses a muon-style stack and eval-time online logit-bias updates during sliding-window scoring.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "sliding-window-eval",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-330.json"
+    },
+    {
       "prNumber": 329,
       "title": "Add lzma6 submission (1.172 bpb, 10min_16mb)",
       "status": "open",
-      "updatedAt": "2026-03-21T08:59:32Z",
+      "updatedAt": "2026-03-21T09:05:14Z",
       "headSha": "be1edf065b031620497ea1a38dbc947042caa2c3",
-      "generatedAt": "2026-03-21T09:00:00.318Z",
-      "summary": "INT8 quantized model packaged with an LZMA6-compressed artifact for the 10min_16mb track on Stdlib hardware.",
+      "generatedAt": "2026-03-21T09:30:27.004Z",
+      "summary": "INT8 model optimized with stdlib-only artifact-size ablation and LZMA preset 6 compression for the 10min_16mb run.",
       "tags": [
         "quantization",
-        "compression",
-        "evaluation"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -54,14 +123,14 @@
       "prNumber": 327,
       "title": "Submission TrigramHash + PartialRoPE + HeadTemp + stride32 (val_bpb: 1.1450)and ",
       "status": "open",
-      "updatedAt": "2026-03-21T08:59:41Z",
-      "headSha": "656a6f3a661b1313bf2a58a6fd15e74df21ebc39",
-      "generatedAt": "2026-03-21T09:00:09.718Z",
-      "summary": "Builds on Int5-MLP with trigram-hash embeddings, partial RoPE+per-head temperatures, and stride-32 evaluation for richer context modeling.",
+      "updatedAt": "2026-03-21T09:14:19Z",
+      "headSha": "2681caeecbc6b35ec40ef905696b7a6e59c03954",
+      "generatedAt": "2026-03-21T09:30:33.340Z",
+      "summary": "Builds on the quantized Int5-MLP base by combining TrigramHash embeddings, partial RoPE with per-head temperature, stride-32 eval, and LoRA TTT hooks.",
       "tags": [
         "architecture",
-        "tokenization",
-        "positional-encoding",
+        "attention",
+        "quantization",
         "evaluation"
       ],
       "flags": {

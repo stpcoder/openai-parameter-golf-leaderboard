@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T09:00:09.718Z",
+  "generatedAt": "2026-03-21T09:30:33.340Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 327,
     "title": "Submission TrigramHash + PartialRoPE + HeadTemp + stride32 (val_bpb: 1.1450)and ",
     "state": "open",
-    "updatedAt": "2026-03-21T08:59:41Z",
-    "headSha": "656a6f3a661b1313bf2a58a6fd15e74df21ebc39",
+    "updatedAt": "2026-03-21T09:14:19Z",
+    "headSha": "2681caeecbc6b35ec40ef905696b7a6e59c03954",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/327",
     "authorLogin": "Ananddna"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Builds on Int5-MLP with trigram-hash embeddings, partial RoPE+per-head temperatures, and stride-32 evaluation for richer context modeling.",
+    "summary": "Builds on the quantized Int5-MLP base by combining TrigramHash embeddings, partial RoPE with per-head temperature, stride-32 eval, and LoRA TTT hooks.",
     "tags": [
       "architecture",
-      "tokenization",
-      "positional-encoding",
+      "attention",
+      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Trigram hash embeddings for token triplets",
-      "Partial RoPE with positional-free dims and head temperatures",
-      "Stride-32 sliding-window evaluation"
+      "TrigramHashEmbedding capturing triplet patterns alongside BigramHash",
+      "Partial RoPE plus per-head temperature mixing positional and position-free dims",
+      "Stride-32 sliding evaI and LoRA TTT hooks atop Int5/Int6 quantized 10-layer model"
     ]
   },
   "compatibility": {
