@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-21T13:32:31.418Z",
+  "generatedAt": "2026-03-21T14:33:29.808Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 342,
+      "title": "Non-record: MLX-Optimized 12L 416d with SmearGate + BigramHash (val_bpb=1.9011, Mac)",
+      "status": "open",
+      "updatedAt": "2026-03-21T14:15:48Z",
+      "headSha": "a8822aef56eed8b0018bf4748a52bae2ce5ae125",
+      "generatedAt": "2026-03-21T14:33:08.263Z",
+      "summary": "MLX-optimized 12-layer encoder-decoder blends SmearGate, BigramHash, FP16 tied embeddings, and Muon-weight-decay training on a Mac M4 Pro.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-342.json"
+    },
     {
       "prNumber": 341,
       "title": "Add Hybrid Depth-Recurrent Transformer submission",
@@ -1342,10 +1366,10 @@
       "prNumber": 272,
       "title": "Non-record: 10L mixed int5/int6 export reaches ~10.4MB with strong throughput",
       "status": "open",
-      "updatedAt": "2026-03-20T21:32:33Z",
-      "headSha": "a217105d80a20205f63f47d069e18ff864a7d7d2",
-      "generatedAt": "2026-03-20T21:55:05.596Z",
-      "summary": "Valid 10L core run tests subsystem-specific int5/int6/int8 export plus tiny eval-time SGD on control knobs to probe aggressive compression.",
+      "updatedAt": "2026-03-21T14:14:58Z",
+      "headSha": "14786248863a7c785334e68da6c174ec25e2235e",
+      "generatedAt": "2026-03-21T14:33:14.978Z",
+      "summary": "Subsystem-mixed int5/int6 export plus tiny eval-time control-parameter SGD trims 10L artifacts to ~10MB while tracking the quality drop.",
       "tags": [
         "quantization",
         "evaluation"
@@ -1409,14 +1433,14 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T08:31:51Z",
-      "headSha": "3b5763e7e0cbd63a75803a0f087bce078ac42634",
-      "generatedAt": "2026-03-21T09:00:19.016Z",
-      "summary": "11-layer Int5 model uses EMA, XSA, and causal chunk-wise test-time training to adapt after scoring each validation chunk.",
+      "updatedAt": "2026-03-21T14:21:35Z",
+      "headSha": "c712f5aad7ea6ecfbaf9c8e707369e49dcf8c576",
+      "generatedAt": "2026-03-21T14:33:21.019Z",
+      "summary": "Chunked eval-then-train causal TTT on validation with Int5-all 11-layer model, EMA, and exclusive self-attention to stay under 16MB.",
       "tags": [
         "val-only",
         "quantization",
-        "architecture",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -2767,22 +2791,22 @@
       "prNumber": 181,
       "title": "Aweb Optimized Baseline — 1.2194 BPB",
       "status": "open",
-      "updatedAt": "2026-03-21T12:52:49Z",
-      "headSha": "72c826b3bc9f819be76698d9a0e307dac4f955ae",
-      "generatedAt": "2026-03-21T13:32:31.392Z",
-      "summary": "Baseline GPT trained via env-var optimizer tuning (Muon 0.99, halved LRs, grad clip 0.3) plus wider MLP/2048 seq and organizer-approved train-on-val.",
+      "updatedAt": "2026-03-21T14:13:16Z",
+      "headSha": "bb34f95624c2dd78396ec295b814f0147fc54fd6",
+      "generatedAt": "2026-03-21T14:33:29.782Z",
+      "summary": "Baseline transformer with env-var Muon tuning (higher momentum, lower LR, longer warmdown, grad clip) plus 3× MLP and 2048-token context.",
       "tags": [
-        "val-only",
         "optimizer",
-        "training-schedule"
+        "training-schedule",
+        "regularization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-181.json"
     },

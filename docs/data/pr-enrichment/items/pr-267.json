@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T09:00:19.016Z",
+  "generatedAt": "2026-03-21T14:33:21.019Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 267,
     "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
     "state": "open",
-    "updatedAt": "2026-03-21T08:31:51Z",
-    "headSha": "3b5763e7e0cbd63a75803a0f087bce078ac42634",
+    "updatedAt": "2026-03-21T14:21:35Z",
+    "headSha": "c712f5aad7ea6ecfbaf9c8e707369e49dcf8c576",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/267",
     "authorLogin": "andrewgcodes"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer Int5 model uses EMA, XSA, and causal chunk-wise test-time training to adapt after scoring each validation chunk.",
+    "summary": "Chunked eval-then-train causal TTT on validation with Int5-all 11-layer model, EMA, and exclusive self-attention to stay under 16MB.",
     "tags": [
       "val-only",
       "quantization",
-      "architecture",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Legal causal test-time training adapts model weights chunk-by-chunk on validation data immediately after each chunk’s evaluation.",
+    "valOnlyReasoning": "Applies causal test-time training by adapting parameters on each validation chunk after scoring it.",
     "techniques": [
-      "Int5-All quantization with FP16 embeddings to fit the 11L model under 16MB",
-      "EMA plus XSA on final layers with Muon optimizer, SmearGate, and orthogonal init for stable convergence",
-      "Causal chunk-wise test-time training: evaluate each chunk, then run SGD epochs on those scored tokens"
+      "Chunked causal TTT: evaluate a chunk then train to keep compliance",
+      "Int5-All quantization plus EMA for compact model averaging",
+      "Exclusive self-attention in final layers for quality boost"
     ]
   },
   "compatibility": {

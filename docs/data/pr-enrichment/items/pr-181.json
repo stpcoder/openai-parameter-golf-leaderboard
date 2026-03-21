@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T13:32:31.392Z",
+  "generatedAt": "2026-03-21T14:33:29.782Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 181,
     "title": "Aweb Optimized Baseline — 1.2194 BPB",
     "state": "open",
-    "updatedAt": "2026-03-21T12:52:49Z",
-    "headSha": "72c826b3bc9f819be76698d9a0e307dac4f955ae",
+    "updatedAt": "2026-03-21T14:13:16Z",
+    "headSha": "bb34f95624c2dd78396ec295b814f0147fc54fd6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
     "authorLogin": "manfromnowhere143"
   },
@@ -22,24 +22,24 @@
     "submissionCount": 4
   },
   "output": {
-    "summary": "Baseline GPT trained via env-var optimizer tuning (Muon 0.99, halved LRs, grad clip 0.3) plus wider MLP/2048 seq and organizer-approved train-on-val.",
+    "summary": "Baseline transformer with env-var Muon tuning (higher momentum, lower LR, longer warmdown, grad clip) plus 3× MLP and 2048-token context.",
     "tags": [
-      "val-only",
       "optimizer",
-      "training-schedule"
+      "training-schedule",
+      "regularization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Organizer-approved TRAIN_ON_VAL=1 enabled validation-shard data to be included during training.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Muon momentum 0.99 with extended warmup/warmdown",
-      "Halved matrix/scalar LRs to smooth quantization gap",
-      "MLP×3, seq_len=2048, grad_clip 0.3 within baseline architecture"
+      "Muon optimizer tuning (momentum 0.99, halved LRs, extended warmdown)",
+      "Longer 2048-token training with grad clipping for stability",
+      "MLP width scaled to 3× via environment variables"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

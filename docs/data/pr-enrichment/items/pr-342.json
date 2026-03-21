@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T14:33:08.263Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 342,
+    "title": "Non-record: MLX-Optimized 12L 416d with SmearGate + BigramHash (val_bpb=1.9011, Mac)",
+    "state": "open",
+    "updatedAt": "2026-03-21T14:15:48Z",
+    "headSha": "a8822aef56eed8b0018bf4748a52bae2ce5ae125",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/342",
+    "authorLogin": "adhyaay-karnwal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_MLX_Optimized_12L_416d_SmearGate_BigramHash/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "MLX-optimized 12-layer encoder-decoder blends SmearGate, BigramHash, FP16 tied embeddings, and Muon-weight-decay training on a Mac M4 Pro.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SmearGate+BigramHash blended embeddings",
+      "FP16 tied embed passthrough with Muon weight decay",
+      "12-layer encoder-decoder with U-Net skip connections"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
