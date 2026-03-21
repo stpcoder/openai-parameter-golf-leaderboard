@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T23:05:29.386Z",
+  "generatedAt": "2026-03-21T23:35:35.660Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 377,
-    "title": "Hybrid INL + Sort-Split MoE (1.45 bpb, 14.6MB, 1xH100)",
+    "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
     "state": "open",
-    "updatedAt": "2026-03-21T23:03:08Z",
-    "headSha": "22a096b9d72b800dc987ba450e37ed63e8701ab2",
+    "updatedAt": "2026-03-21T23:32:56Z",
+    "headSha": "2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/377",
     "authorLogin": "Complexity-ML"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pairs GQA+RoPE early layers with INL BetaMu O(n) attention later, and Sort-Split MoE routing to keep experts busy while staying under 16MB.",
+    "summary": "Stacks GQA+RoPE attention layers then INL BetaMu layers, each using Sort-and-Split MoE routing with ALiBi slopes for efficient hybrid processing.",
     "tags": [
       "architecture",
       "attention",
-      "compression"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid GQA+RoPE front layers with INL BetaMu O(n) back layers",
-      "Sort-and-split MoE routing keeps all experts busy without auxiliary loss",
-      "ALiBi learned slopes for positional encoding"
+      "Hybrid GQA early + INL BetaMu later",
+      "Sort-and-Split MoE routing",
+      "ALiBi slopes in INL layers"
     ]
   },
   "compatibility": {

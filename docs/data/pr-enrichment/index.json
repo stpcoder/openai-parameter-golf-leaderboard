@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-21T23:05:51.634Z",
+  "generatedAt": "2026-03-21T23:35:40.682Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
       "prNumber": 377,
-      "title": "Hybrid INL + Sort-Split MoE (1.45 bpb, 14.6MB, 1xH100)",
+      "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-21T23:03:08Z",
-      "headSha": "22a096b9d72b800dc987ba450e37ed63e8701ab2",
-      "generatedAt": "2026-03-21T23:05:29.386Z",
-      "summary": "Pairs GQA+RoPE early layers with INL BetaMu O(n) attention later, and Sort-Split MoE routing to keep experts busy while staying under 16MB.",
+      "updatedAt": "2026-03-21T23:32:56Z",
+      "headSha": "2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e",
+      "generatedAt": "2026-03-21T23:35:35.660Z",
+      "summary": "Stacks GQA+RoPE attention layers then INL BetaMu layers, each using Sort-and-Split MoE routing with ALiBi slopes for efficient hybrid processing.",
       "tags": [
         "architecture",
         "attention",
-        "compression"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -30,15 +30,15 @@
       "prNumber": 376,
       "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
       "status": "open",
-      "updatedAt": "2026-03-21T23:02:50Z",
-      "headSha": "5fba7a8448f3be9d7b4b627214853c6b52aaa3f8",
-      "generatedAt": "2026-03-21T23:05:34.273Z",
-      "summary": "9-layer GQA transformer uses SmearGate+BigramHash embeddings, Muon+NTK-RoPE scaling, and custom Triton fusion kernels to squeeze more steps in 10 minutes.",
+      "updatedAt": "2026-03-21T23:26:42Z",
+      "headSha": "2aa218d3594e32c75e092caece40c414bafa1f1a",
+      "generatedAt": "2026-03-21T23:35:40.628Z",
+      "summary": "9-layer GQA transformer with MLP3x, NTK-RoPE, SmearGate+BigramHash, Muon+SWA tuning, and custom kernel pipeline for fused ops plus int6+zstd compression.",
       "tags": [
         "architecture",
         "optimizer",
-        "attention",
-        "compression"
+        "compression",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

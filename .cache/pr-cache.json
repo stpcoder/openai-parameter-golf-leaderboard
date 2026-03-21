@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-21T23:05:20.512Z",
-  "lastSeenUpdatedAt": "2026-03-21T23:04:11Z",
+  "generatedAt": "2026-03-21T23:35:27.116Z",
+  "lastSeenUpdatedAt": "2026-03-21T23:32:56Z",
   "prs": {
     "1": {
       "number": 1,
@@ -9162,7 +9162,7 @@
     },
     "133": {
       "number": 133,
-      "updatedAt": "2026-03-19T22:16:58Z",
+      "updatedAt": "2026-03-21T23:29:39Z",
       "pr": {
         "number": 133,
         "title": "Add MLX heavy-share research harness for Parameter Golf",
@@ -9173,8 +9173,8 @@
         "authorLogin": "SoumilRathi",
         "authorName": null,
         "createdAt": "2026-03-19T22:11:01Z",
-        "updatedAt": "2026-03-19T22:16:58Z",
-        "headSha": "09217fe7821d5d6cfb944af400984d52307fb8e2",
+        "updatedAt": "2026-03-21T23:29:39Z",
+        "headSha": "85e453d65f269ef51583263d7e0b101191ea0f68",
         "headRepo": "SoumilRathi/parameter-golf"
       },
       "submissions": []
@@ -30586,7 +30586,7 @@
     },
     "376": {
       "number": 376,
-      "updatedAt": "2026-03-21T23:02:50Z",
+      "updatedAt": "2026-03-21T23:26:42Z",
       "pr": {
         "number": 376,
         "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
@@ -30597,8 +30597,8 @@
         "authorLogin": "anthony-maio",
         "authorName": null,
         "createdAt": "2026-03-21T22:58:17Z",
-        "updatedAt": "2026-03-21T23:02:50Z",
-        "headSha": "5fba7a8448f3be9d7b4b627214853c6b52aaa3f8",
+        "updatedAt": "2026-03-21T23:26:42Z",
+        "headSha": "2aa218d3594e32c75e092caece40c414bafa1f1a",
         "headRepo": "anthony-maio/parameter-golf"
       },
       "submissions": [
@@ -30660,16 +30660,16 @@
             "authorLogin": "anthony-maio",
             "authorName": null,
             "createdAt": "2026-03-21T22:58:17Z",
-            "updatedAt": "2026-03-21T23:02:50Z",
-            "headSha": "5fba7a8448f3be9d7b4b627214853c6b52aaa3f8",
+            "updatedAt": "2026-03-21T23:26:42Z",
+            "headSha": "2aa218d3594e32c75e092caece40c414bafa1f1a",
             "headRepo": "anthony-maio/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5fba7a8448f3be9d7b4b627214853c6b52aaa3f8/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/5fba7a8448f3be9d7b4b627214853c6b52aaa3f8/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/5fba7a8448f3be9d7b4b627214853c6b52aaa3f8/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/5fba7a8448f3be9d7b4b627214853c6b52aaa3f8/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/5fba7a8448f3be9d7b4b627214853c6b52aaa3f8/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2aa218d3594e32c75e092caece40c414bafa1f1a/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/2aa218d3594e32c75e092caece40c414bafa1f1a/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/2aa218d3594e32c75e092caece40c414bafa1f1a/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/2aa218d3594e32c75e092caece40c414bafa1f1a/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/2aa218d3594e32c75e092caece40c414bafa1f1a/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT",
             "pr": "https://github.com/openai/parameter-golf/pull/376"
           }
         }
@@ -30677,10 +30677,10 @@
     },
     "377": {
       "number": 377,
-      "updatedAt": "2026-03-21T23:03:08Z",
+      "updatedAt": "2026-03-21T23:32:56Z",
       "pr": {
         "number": 377,
-        "title": "Hybrid INL + Sort-Split MoE (1.45 bpb, 14.6MB, 1xH100)",
+        "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
         "state": "open",
         "draft": true,
         "mergedAt": null,
@@ -30688,8 +30688,8 @@
         "authorLogin": "Complexity-ML",
         "authorName": null,
         "createdAt": "2026-03-21T23:02:46Z",
-        "updatedAt": "2026-03-21T23:03:08Z",
-        "headSha": "22a096b9d72b800dc987ba450e37ed63e8701ab2",
+        "updatedAt": "2026-03-21T23:32:56Z",
+        "headSha": "2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e",
         "headRepo": "Complexity-ML/parameter-golf"
       },
       "submissions": [
@@ -30743,7 +30743,7 @@
           },
           "pr": {
             "number": 377,
-            "title": "Hybrid INL + Sort-Split MoE (1.45 bpb, 14.6MB, 1xH100)",
+            "title": "Hybrid INL + Sort-Split MoE (1.41/1.46 bpb TTT, 15.5MB, 1xH100)",
             "state": "open",
             "draft": true,
             "mergedAt": null,
@@ -30751,20 +30751,39 @@
             "authorLogin": "Complexity-ML",
             "authorName": null,
             "createdAt": "2026-03-21T23:02:46Z",
-            "updatedAt": "2026-03-21T23:03:08Z",
-            "headSha": "22a096b9d72b800dc987ba450e37ed63e8701ab2",
+            "updatedAt": "2026-03-21T23:32:56Z",
+            "headSha": "2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e",
             "headRepo": "Complexity-ML/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/22a096b9d72b800dc987ba450e37ed63e8701ab2/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/22a096b9d72b800dc987ba450e37ed63e8701ab2/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/22a096b9d72b800dc987ba450e37ed63e8701ab2/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/22a096b9d72b800dc987ba450e37ed63e8701ab2/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/22a096b9d72b800dc987ba450e37ed63e8701ab2/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/2cc2b04c895d3f77b720aa90d92b5f5c8ec08a2e/records/track_10min_16mb/2026-03-20_ComplexityMoE_PID",
             "pr": "https://github.com/openai/parameter-golf/pull/377"
           }
         }
       ]
+    },
+    "378": {
+      "number": 378,
+      "updatedAt": "2026-03-21T23:27:52Z",
+      "pr": {
+        "number": 378,
+        "title": "Add automated record-chase training and submission pipeline",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/378",
+        "authorLogin": "benogeorge",
+        "authorName": null,
+        "createdAt": "2026-03-21T23:23:33Z",
+        "updatedAt": "2026-03-21T23:27:52Z",
+        "headSha": "32f97d034bc7ebc7ab0112dadbabc017fa588576",
+        "headRepo": "benogeorge/parameter-golf"
+      },
+      "submissions": []
     }
   }
 }
