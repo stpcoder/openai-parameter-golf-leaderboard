@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T11:01:18.933Z",
+  "generatedAt": "2026-03-21T16:34:06.978Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 334,
-    "title": "Non-record: 11L PartialRoPE + LNScale + EMA + SWA + TTT (1xH100 80min, val_bpb=1.2108)",
+    "title": "Non-record: 11L PartialRoPE + LNScale + EMA + SWA + TTT (1xH100 107min, val_bpb=1.2207, 15.4MB)",
     "state": "open",
-    "updatedAt": "2026-03-21T10:42:02Z",
-    "headSha": "dc22ba87e0a36967b64e6646e92ba6760690b2a2",
+    "updatedAt": "2026-03-21T16:31:56Z",
+    "headSha": "0499c9acf4d46a3369697398fed0d6e307809aec",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/334",
     "authorLogin": "nathon-lee"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GPT pairs U-Net skips, PartialRoPE+LNScale+SmearGate, and BigramHash with Muon/Adam + EMA+SWA, int5/int6 quantization, sliding-window eval, and TTT.",
+    "summary": "11L GPT uses PartialRoPE/LNScale, SmearGate and U-Net skips with BigramHash, muon+Adam with EMA/SWA, uniform int5 quant, sliding-window eval plus SGD TTT.",
     "tags": [
       "architecture",
       "optimizer",
-      "quantization",
-      "sliding-window-eval"
+      "compression",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "PartialRoPE+LNScale+SmearGate with U-Net skip fusion",
-      "Muon optimizer + EMA/SWA wallclock-aware schedule",
-      "Mixed int5/6 quantization plus sliding-window eval and TTT"
+      "PartialRoPE with LNScale, SmearGate, and learnable U-Net skip connections",
+      "Muon optimizer + Adam for scalars with EMA and SWA",
+      "Uniform int5 quantization paired with sliding-window eval and SGD test-time training"
     ]
   },
   "compatibility": {

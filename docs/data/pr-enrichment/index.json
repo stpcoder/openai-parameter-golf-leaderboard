@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-21T15:34:06.912Z",
+  "generatedAt": "2026-03-21T16:34:21.056Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 349,
+      "title": "Record: 11L XSA + EMA + Int5-MLP (val_bpb=1.1399)",
+      "status": "open",
+      "updatedAt": "2026-03-21T16:14:09Z",
+      "headSha": "918867cc4330863fa80dc51d886296bf12b4e915",
+      "generatedAt": "2026-03-21T16:34:03.181Z",
+      "summary": "Compact 11-layer model with XSA on final layers, continuous GPU EMA, mixed int5/int6 quantization, pruning + zstd for sub-16MB footprint.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-349.json"
+    },
     {
       "prNumber": 348,
       "title": "Submission/qat bigram12k stride32",
@@ -213,17 +237,17 @@
     },
     {
       "prNumber": 334,
-      "title": "Non-record: 11L PartialRoPE + LNScale + EMA + SWA + TTT (1xH100 80min, val_bpb=1.2108)",
+      "title": "Non-record: 11L PartialRoPE + LNScale + EMA + SWA + TTT (1xH100 107min, val_bpb=1.2207, 15.4MB)",
       "status": "open",
-      "updatedAt": "2026-03-21T10:42:02Z",
-      "headSha": "dc22ba87e0a36967b64e6646e92ba6760690b2a2",
-      "generatedAt": "2026-03-21T11:01:18.933Z",
-      "summary": "11-layer GPT pairs U-Net skips, PartialRoPE+LNScale+SmearGate, and BigramHash with Muon/Adam + EMA+SWA, int5/int6 quantization, sliding-window eval, and TTT.",
+      "updatedAt": "2026-03-21T16:31:56Z",
+      "headSha": "0499c9acf4d46a3369697398fed0d6e307809aec",
+      "generatedAt": "2026-03-21T16:34:06.978Z",
+      "summary": "11L GPT uses PartialRoPE/LNScale, SmearGate and U-Net skips with BigramHash, muon+Adam with EMA/SWA, uniform int5 quant, sliding-window eval plus SGD TTT.",
       "tags": [
         "architecture",
         "optimizer",
-        "quantization",
-        "sliding-window-eval"
+        "compression",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -798,17 +822,16 @@
     },
     {
       "prNumber": 305,
-      "title": "9L dim=512 + U-Net Skips + ResidMix + XSA + BigramHash + SWA + LateQAT — val_bpb=1.2390, 16.1MB",
+      "title": "12L Group-INT4 MLP + INT6 Attn + BigramHash(10240) — val_bpb 1.1449 pre-quant",
       "status": "open",
-      "updatedAt": "2026-03-21T07:32:17Z",
-      "headSha": "466d08c7183d679f902d97c86e30ac30b5436cb4",
-      "generatedAt": "2026-03-21T07:59:32.938Z",
-      "summary": "U-Net skips, resid-mix, and XSA enrich a 9-layer transformer using BigramHash tokens, with SWA and late QAT prepping it for int8.",
+      "updatedAt": "2026-03-21T16:28:58Z",
+      "headSha": "d56c73c2cee3845e7fe5ea724af0efe45ee0bee8",
+      "generatedAt": "2026-03-21T16:34:11.179Z",
+      "summary": "Group INT4 nibble packing for per-64-column MLP weights with fp16 scales halves storage, freeing room for a 12-layer INT6-attention transformer plus BigramHash features.",
       "tags": [
+        "quantization",
         "architecture",
-        "attention",
-        "training-schedule",
-        "quantization"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1150,13 +1173,13 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-21T08:22:29Z",
-      "headSha": "65f30a5c5825cf995bfc1274de05b9471a465748",
-      "generatedAt": "2026-03-21T08:29:53.348Z",
-      "summary": "Content-dependent SmearGate modulates the learned blend gate using the dot-product similarity between adjacent embeddings plus one learned scale to adaptively fuse tokens.",
+      "updatedAt": "2026-03-21T16:33:53Z",
+      "headSha": "5cf4f6522c1aa3b998b047df9e2c3ef6d34b2f70",
+      "generatedAt": "2026-03-21T16:34:15.718Z",
+      "summary": "Modulates SmearGate blending with dot-product similarity between neighboring embeddings to adaptively merge related tokens.",
       "tags": [
-        "attention",
         "architecture",
+        "attention",
         "non-record"
       ],
       "flags": {
@@ -4690,15 +4713,15 @@
       "prNumber": 76,
       "title": "12L Int5-MLP + SmearGate + BigramHash + SWA (val_bpb 1.1433)",
       "status": "open",
-      "updatedAt": "2026-03-21T00:21:45Z",
+      "updatedAt": "2026-03-21T16:34:10Z",
       "headSha": "65d19d20857b3f72a57549e4d12915559ebd6f67",
-      "generatedAt": "2026-03-21T00:28:40.026Z",
-      "summary": "Mixed int5/int6 per-row quantization plus SmearGate, BigramHash, and U-Net skips on a 12-layer transformer trained with Muon and SWA warmdown for compact 16MB artifacts.",
+      "generatedAt": "2026-03-21T16:34:21.047Z",
+      "summary": "12-layer transformer couples mixed int5/int6 quantization with SmearGate, BigramHash, U-Net skips, SWA, and Muon tuning for a compact model.",
       "tags": [
         "quantization",
-        "muon",
-        "training-schedule",
-        "architecture"
+        "architecture",
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

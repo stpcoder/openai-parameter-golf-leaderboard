@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-21T07:59:32.938Z",
+  "generatedAt": "2026-03-21T16:34:11.179Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 305,
-    "title": "9L dim=512 + U-Net Skips + ResidMix + XSA + BigramHash + SWA + LateQAT — val_bpb=1.2390, 16.1MB",
+    "title": "12L Group-INT4 MLP + INT6 Attn + BigramHash(10240) — val_bpb 1.1449 pre-quant",
     "state": "open",
-    "updatedAt": "2026-03-21T07:32:17Z",
-    "headSha": "466d08c7183d679f902d97c86e30ac30b5436cb4",
+    "updatedAt": "2026-03-21T16:28:58Z",
+    "headSha": "d56c73c2cee3845e7fe5ea724af0efe45ee0bee8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/305",
     "authorLogin": "Naazimsnh02"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_12L_Int4MLP_Int6Attn/README.md",
       "records/track_10min_16mb/2026-03-21_Standard10L_Int6_BigramHash/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "U-Net skips, resid-mix, and XSA enrich a 9-layer transformer using BigramHash tokens, with SWA and late QAT prepping it for int8.",
+    "summary": "Group INT4 nibble packing for per-64-column MLP weights with fp16 scales halves storage, freeing room for a 12-layer INT6-attention transformer plus BigramHash features.",
     "tags": [
+      "quantization",
       "architecture",
-      "attention",
-      "training-schedule",
-      "quantization"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "U-Net skip connections with learned per-dim weights",
-      "ResMix blending plus BigramHash pair embeddings before the encoder",
-      "Late-start QAT with SWA averaging for int8 readiness"
+      "Group INT4 nibble packing (2 values/byte) with per-group fp16 scales",
+      "12-layer transformer enabled by reduced MLP footprint",
+      "INT6 attention with BigramHash embeddings and SWA"
     ]
   },
   "compatibility": {

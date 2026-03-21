@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T08:29:53.348Z",
+  "generatedAt": "2026-03-21T16:34:15.718Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 288,
     "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
     "state": "open",
-    "updatedAt": "2026-03-21T08:22:29Z",
-    "headSha": "65f30a5c5825cf995bfc1274de05b9471a465748",
+    "updatedAt": "2026-03-21T16:33:53Z",
+    "headSha": "5cf4f6522c1aa3b998b047df9e2c3ef6d34b2f70",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/288",
     "authorLogin": "trasnake87"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Content-dependent SmearGate modulates the learned blend gate using the dot-product similarity between adjacent embeddings plus one learned scale to adaptively fuse tokens.",
+    "summary": "Modulates SmearGate blending with dot-product similarity between neighboring embeddings to adaptively merge related tokens.",
     "tags": [
-      "attention",
       "architecture",
+      "attention",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dot-product modulated gating per token pair",
-      "Single scalar content scale adds negligible params",
-      "Smooth sigmoid interpolation controls blend"
+      "dot-product similarity scales per-token gate blending",
+      "learned content_scale tunes sensitivity to adjacency"
     ]
   },
   "compatibility": {

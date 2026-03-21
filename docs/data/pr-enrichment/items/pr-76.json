@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T00:28:40.026Z",
+  "generatedAt": "2026-03-21T16:34:21.047Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 76,
     "title": "12L Int5-MLP + SmearGate + BigramHash + SWA (val_bpb 1.1433)",
     "state": "open",
-    "updatedAt": "2026-03-21T00:21:45Z",
+    "updatedAt": "2026-03-21T16:34:10Z",
     "headSha": "65d19d20857b3f72a57549e4d12915559ebd6f67",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/76",
     "authorLogin": "unixmadtoonslab"
@@ -19,19 +19,19 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Mixed int5/int6 per-row quantization plus SmearGate, BigramHash, and U-Net skips on a 12-layer transformer trained with Muon and SWA warmdown for compact 16MB artifacts.",
+    "summary": "12-layer transformer couples mixed int5/int6 quantization with SmearGate, BigramHash, U-Net skips, SWA, and Muon tuning for a compact model.",
     "tags": [
       "quantization",
-      "muon",
-      "training-schedule",
-      "architecture"
+      "architecture",
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
       "Mixed int5/int6 per-row quantization with fp16 embedding passthrough",
-      "SmearGate blending and BigramHash context embeddings",
-      "U-Net-style skips with SWA warmdown under Muon optimizer"
+      "SmearGate gating plus BigramHash context and U-Net skip blending",
+      "SWA warmdown averaging paired with Muon optimizer scheduling"
     ]
   },
   "compatibility": {

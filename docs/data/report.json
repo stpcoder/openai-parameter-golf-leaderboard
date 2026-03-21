@@ -1,20 +1,37 @@
 {
-  "generatedAt": "2026-03-21T16:03:31.985Z",
+  "generatedAt": "2026-03-21T16:33:34.268Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [],
+  "skipped": [
+    {
+      "stage": "pull-request-readme",
+      "pr": 76,
+      "submissionPath": "records/track_10min_16mb/2026-03-20_12L_Int5MLP_SmearBigram_SWA/submission.json",
+      "reason": "missing-or-unreadable-readme"
+    },
+    {
+      "stage": "pull-request-readme",
+      "pr": 76,
+      "submissionPath": "records/track_10min_16mb/2026-03-21_12L_Int5MLP_Mom098_SWA/submission.json",
+      "reason": "missing-or-unreadable-readme"
+    },
+    {
+      "pr": 350,
+      "reason": "no-record-submission-json"
+    }
+  ],
   "errors": [],
   "incremental": {
     "mode": "incremental",
     "cutoffUpdatedAt": "2026-03-21T15:28:28Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 0,
-    "prsReused": 200,
+    "prsRefreshed": 6,
+    "prsReused": 194,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 326,
+    "cacheEntries": 328,
     "retryWindowRetained": false
   }
 }

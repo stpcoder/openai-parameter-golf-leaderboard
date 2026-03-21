@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T16:34:03.181Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 349,
+    "title": "Record: 11L XSA + EMA + Int5-MLP (val_bpb=1.1399)",
+    "state": "open",
+    "updatedAt": "2026-03-21T16:14:09Z",
+    "headSha": "918867cc4330863fa80dc51d886296bf12b4e915",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/349",
+    "authorLogin": "Mapika"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_XSA_EMA_Int5MLP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Compact 11-layer model with XSA on final layers, continuous GPU EMA, mixed int5/int6 quantization, pruning + zstd for sub-16MB footprint.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA on last 4 of 11 layers",
+      "continuous GPU EMA (decay 0.997) per step",
+      "int5/int6 quantization with 8% pruning + zstd"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
