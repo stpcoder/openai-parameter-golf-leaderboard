@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-21T20:35:19.026Z",
+  "generatedAt": "2026-03-21T21:05:33.384Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 372,
+      "title": "11L + XSA4 + EMA(0.997) + seq2048 + Int5-MLP + MuonWD=0.04 + LateK-FP16 | val_bpb=1.1361",
+      "status": "open",
+      "updatedAt": "2026-03-21T21:02:55Z",
+      "headSha": "b45297b658958af70a5635110551d1b2f2ec6903",
+      "generatedAt": "2026-03-21T21:04:58.997Z",
+      "summary": "Muon+EMA training at seq2048 paired with Int5/Int6 QAT and Late-K FP16 lets an 11-layer U-Net transformer stay within 16MB while compressing with zstd22.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-372.json"
+    },
+    {
+      "prNumber": 370,
+      "title": "Add submission: Mixed Quantization + BigramHash + SWA (val_bpb 1.2421)",
+      "status": "open",
+      "updatedAt": "2026-03-21T20:43:26Z",
+      "headSha": "3b714bc75630767daafaf387a30fbbda1e0a36f6",
+      "generatedAt": "2026-03-21T21:05:03.228Z",
+      "summary": "10-layer Transformer with U-Net skips, ReLU² MLP, BigramHash inputs, and mixed INT6/INT8 quantization trained with Muon + SWA and zstd-22 compression.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-370.json"
+    },
+    {
+      "prNumber": 369,
+      "title": "Submission: 11L NTK-RoPE + FA3 + Batch524K + XSA4 + EMA (val_bpb=1.1328)",
+      "status": "open",
+      "updatedAt": "2026-03-21T20:45:25Z",
+      "headSha": "c36b705dc801f19a821698f6dc9e96c3d4a2d28f",
+      "generatedAt": "2026-03-21T21:05:11.371Z",
+      "summary": "11L transformer taps NTK-aware RoPE scaling, FlashAttention 3, EMA, XSA on upper layers, and adaptive pruning to hit many steps within the 16MB budget.",
+      "tags": [
+        "architecture",
+        "attention",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-369.json"
+    },
     {
       "prNumber": 368,
       "title": "PROTEUS v4 — non-record submission (val_bpb: 1.2037)",
@@ -290,14 +360,14 @@
       "prNumber": 352,
       "title": "Memory Tokens + Mixed Quantization (val_bpb: 1.1659)",
       "status": "open",
-      "updatedAt": "2026-03-21T16:38:23Z",
+      "updatedAt": "2026-03-21T20:51:32Z",
       "headSha": "34302988ff67b7b740502ed03e25be326b3804ad",
-      "generatedAt": "2026-03-21T17:34:50.582Z",
-      "summary": "Prepend 64 learned memory tokens as a shared scratchpad while using late-QAT mixed int5/int6 quantization plus sliding-window evaluation.",
+      "generatedAt": "2026-03-21T21:05:14.257Z",
+      "summary": "Prepends 64 learnable global memory tokens to every sequence and pairs a 10-layer transformer with mixed int5/int6 quantization plus sliding-window eval.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -965,17 +1035,17 @@
     },
     {
       "prNumber": 315,
-      "title": "Record: 11L Partial RoPE + LN Scale + EMA + Late QAT + XSA4 (val_bpb: 1.1248)",
+      "title": "Record: 11L Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1248)",
       "status": "open",
-      "updatedAt": "2026-03-21T18:47:50Z",
-      "headSha": "dfb05a5d6cfe7ccfb5def2ab129d69740c1bcd76",
-      "generatedAt": "2026-03-21T19:05:08.658Z",
-      "summary": "11-layer Muon/EMA stack adds 16-dim partial RoPE, RMSNorm scaling, and late-triggered int6 QAT atop the XSA/SmearGate architecture.",
+      "updatedAt": "2026-03-21T21:03:29Z",
+      "headSha": "2951651bf36173538cfb3af07b309514a2bd9855",
+      "generatedAt": "2026-03-21T21:05:18.244Z",
+      "summary": "Builds on the XSA4/EMA stack by applying Partial RoPE to 25% of head dims and scaling RMSNorm outputs by 1/√(layer_idx+1) for deeper-layer stability.",
       "tags": [
-        "positional-encoding",
+        "architecture",
+        "attention",
         "regularization",
-        "quantization",
-        "training-schedule"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1852,15 +1922,15 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T18:43:59Z",
-      "headSha": "736c142d86ea957fb69d7011f519148d0304ced0",
-      "generatedAt": "2026-03-21T19:05:23.190Z",
-      "summary": "11-layer Int5-fit model pairs XSA/EMA/pruning with muon optimizer tweaks and compliant chunked eval-then-train test-time adaptation.",
+      "updatedAt": "2026-03-21T20:47:03Z",
+      "headSha": "ded600fa98b754b34ec0ce83e4a81164fc2aab8b",
+      "generatedAt": "2026-03-21T21:05:22.444Z",
+      "summary": "11-layer Muon GPT pairs Int5-All quantization with causal chunked TTT that evals-before-training each validation chunk to stay sub-16MB.",
       "tags": [
         "val-only",
         "quantization",
-        "architecture",
-        "training-schedule"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,
@@ -2717,16 +2787,16 @@
     },
     {
       "prNumber": 212,
-      "title": "Record: Int6 + 3x MLP + sliding window (val_bpb=1.1708) + 9 ablations",
-      "status": "closed",
-      "updatedAt": "2026-03-21T17:53:41Z",
-      "headSha": "d3a4ebc54fd3ba5605306fe52b527b8f3f2d53b1",
-      "generatedAt": "2026-03-21T18:04:35.106Z",
-      "summary": "Per-row Int6 quantization + zstd frees budget for 3× MLP expansion with FP16 embeddings and sliding-window eval for a compact 21.8M model.",
+      "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
+      "status": "open",
+      "updatedAt": "2026-03-21T20:53:15Z",
+      "headSha": "7c3e33a7a41ebcc78176b0d04ac07a4890e97c2c",
+      "generatedAt": "2026-03-21T21:05:27.539Z",
+      "summary": "11-layer transformer pairs exclusive self-attn on top layers with EMA+TTT, U-Net skips, partial RoPE/LN scaling, SmearGate+BigramHash, and late int6 QAT.",
       "tags": [
-        "quantization",
+        "attention",
         "architecture",
-        "sliding-window-eval",
+        "quantization",
         "training-schedule"
       ],
       "flags": {
@@ -3753,15 +3823,15 @@
       "prNumber": 149,
       "title": "Add Combined Int6 + QAT + Sliding Window submission",
       "status": "open",
-      "updatedAt": "2026-03-21T20:06:15Z",
-      "headSha": "bbd83c2fea1098460431b95833b18457ad72b747",
-      "generatedAt": "2026-03-21T20:35:19.008Z",
-      "summary": "Combines Int6 quant with late-stage STE-based QAT, FP16 tied embeddings, Muon weight decay splits, and batched sliding-window eval.",
+      "updatedAt": "2026-03-21T20:37:40Z",
+      "headSha": "edd990b4d7c3c3aad635b25a97a1155acdfd5c23",
+      "generatedAt": "2026-03-21T21:05:33.367Z",
+      "summary": "Combines Int6 quantization with late-stage QAT via STE, FP16 tied embeddings, batched sliding-window eval, and muon optimizer/cosine warmdown tweaks.",
       "tags": [
         "quantization",
-        "optimizer",
         "sliding-window-eval",
-        "evaluation"
+        "muon",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

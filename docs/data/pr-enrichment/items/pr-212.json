@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-21T18:04:35.106Z",
+  "generatedAt": "2026-03-21T21:05:27.539Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 212,
-    "title": "Record: Int6 + 3x MLP + sliding window (val_bpb=1.1708) + 9 ablations",
-    "state": "closed",
-    "updatedAt": "2026-03-21T17:53:41Z",
-    "headSha": "d3a4ebc54fd3ba5605306fe52b527b8f3f2d53b1",
+    "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
+    "state": "open",
+    "updatedAt": "2026-03-21T20:53:15Z",
+    "headSha": "7c3e33a7a41ebcc78176b0d04ac07a4890e97c2c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/212",
     "authorLogin": "mrdavtan"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_XSA_EMA_TTT/README.md",
       "records/track_10min_16mb/2026-03-20_Int6_3xMLP/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Per-row Int6 quantization + zstd frees budget for 3× MLP expansion with FP16 embeddings and sliding-window eval for a compact 21.8M model.",
+    "summary": "11-layer transformer pairs exclusive self-attn on top layers with EMA+TTT, U-Net skips, partial RoPE/LN scaling, SmearGate+BigramHash, and late int6 QAT.",
     "tags": [
-      "quantization",
+      "attention",
       "architecture",
-      "sliding-window-eval",
+      "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int6 per-row quantization with zstd-22 compression",
-      "3× MLP hidden expansion (1536) staying within artifact limit",
-      "Sliding-window eval (stride 64) with FP16 tied embeddings"
+      "Exclusive self-attention plus EMA weight averaging with TTT on validation",
+      "U-Net-style skips with Partial RoPE and layer-scaled LN for stabilized depth",
+      "SmearGate/BigramHash embeddings and late absmax int6 QAT rollout"
     ]
   },
   "compatibility": {

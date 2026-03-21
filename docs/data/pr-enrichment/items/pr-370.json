@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T21:05:03.228Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 370,
+    "title": "Add submission: Mixed Quantization + BigramHash + SWA (val_bpb 1.2421)",
+    "state": "open",
+    "updatedAt": "2026-03-21T20:43:26Z",
+    "headSha": "3b714bc75630767daafaf387a30fbbda1e0a36f6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/370",
+    "authorLogin": "SergheiBrinza"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_MixedQuant_BigramHash_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer Transformer with U-Net skips, ReLU² MLP, BigramHash inputs, and mixed INT6/INT8 quantization trained with Muon + SWA and zstd-22 compression.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BigramHash embeddings for token context",
+      "Mixed INT6/INT8 quantization with STE",
+      "Muon optimizer plus SWA and momentum warmup"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

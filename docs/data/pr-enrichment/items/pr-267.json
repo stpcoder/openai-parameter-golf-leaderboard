@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T19:05:23.190Z",
+  "generatedAt": "2026-03-21T21:05:22.444Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 267,
     "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
     "state": "open",
-    "updatedAt": "2026-03-21T18:43:59Z",
-    "headSha": "736c142d86ea957fb69d7011f519148d0304ced0",
+    "updatedAt": "2026-03-21T20:47:03Z",
+    "headSha": "ded600fa98b754b34ec0ce83e4a81164fc2aab8b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/267",
     "authorLogin": "andrewgcodes"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer Int5-fit model pairs XSA/EMA/pruning with muon optimizer tweaks and compliant chunked eval-then-train test-time adaptation.",
+    "summary": "11-layer Muon GPT pairs Int5-All quantization with causal chunked TTT that evals-before-training each validation chunk to stay sub-16MB.",
     "tags": [
       "val-only",
       "quantization",
-      "architecture",
-      "training-schedule"
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Causal TTT sequentially trains on each validation chunk after scoring it, so the adaptation happens solely on validation data.",
+    "valOnlyReasoning": "Implements legal causal TTT by evaluating each validation chunk first, logging loss, then training on that chunk without revisiting scored tokens.",
     "techniques": [
-      "Chunked eval-then-train causal TTT over 64 validation chunks",
-      "Int5-All quantization plus EMA and adaptive pruning to stay under 16MB",
-      "XSA on final layers with muon optimizer and SmearGate-initialized weights"
+      "Int5-All quantization for all weights",
+      "Causal chunked test-time training with eval-before-train order",
+      "Muon optimizer + EMA + pruning stack"
     ]
   },
   "compatibility": {

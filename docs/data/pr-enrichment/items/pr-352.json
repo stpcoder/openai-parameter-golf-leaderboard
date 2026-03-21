@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T17:34:50.582Z",
+  "generatedAt": "2026-03-21T21:05:14.257Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 352,
     "title": "Memory Tokens + Mixed Quantization (val_bpb: 1.1659)",
     "state": "open",
-    "updatedAt": "2026-03-21T16:38:23Z",
+    "updatedAt": "2026-03-21T20:51:32Z",
     "headSha": "34302988ff67b7b740502ed03e25be326b3804ad",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/352",
     "authorLogin": "sp00mm"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Prepend 64 learned memory tokens as a shared scratchpad while using late-QAT mixed int5/int6 quantization plus sliding-window evaluation.",
+    "summary": "Prepends 64 learnable global memory tokens to every sequence and pairs a 10-layer transformer with mixed int5/int6 quantization plus sliding-window eval.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Memory tokens as global context scratchpad",
-      "Mixed int5/int6 quantization with zstd compression",
-      "Batched sliding-window evaluation"
+      "learned memory token scratchpad preprends",
+      "mixed int5 MLP/int6 attention quantization with zstd",
+      "batched sliding-window eval (stride=128)"
     ]
   },
   "compatibility": {
