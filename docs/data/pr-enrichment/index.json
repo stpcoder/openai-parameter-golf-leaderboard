@@ -1,20 +1,42 @@
 {
-  "generatedAt": "2026-03-21T05:29:05.627Z",
+  "generatedAt": "2026-03-21T05:59:25.553Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 313,
+      "title": "non-record: LR warmdown on 1x A40 (1.723 bpb, 8.40MB)",
+      "status": "open",
+      "updatedAt": "2026-03-21T05:30:29Z",
+      "headSha": "d6dc8647a5b30ef6d2166a76f41c8542702ceefd",
+      "generatedAt": "2026-03-21T05:59:03.109Z",
+      "summary": "Tune the learning schedule with a prolonged warmdown and elevated matrix LR on the baseline architecture to squeeze gains under 16MB.",
+      "tags": [
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-313.json"
+    },
+    {
       "prNumber": 310,
       "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
       "status": "open",
-      "updatedAt": "2026-03-21T05:19:39Z",
-      "headSha": "918d34b13faef796aa67f14961bae10e75f6f10c",
-      "generatedAt": "2026-03-21T05:29:01.049Z",
-      "summary": "10-layer, 2048-token Transformer tightens weights via long warmdown for int8 readiness while using test-time LoRA on Q/V/LM for eval-time tuning.",
+      "updatedAt": "2026-03-21T05:44:42Z",
+      "headSha": "d280bf00a78d44a5d71a442de80095a68b997279",
+      "generatedAt": "2026-03-21T05:59:10.144Z",
+      "summary": "10-layer, 2048-context transformer leans on warmdown-tightened weights plus TTT LoRA adapters to ease int8 quantization.",
       "tags": [
+        "architecture",
         "training-schedule",
         "quantization",
-        "muon"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -333,15 +355,15 @@
       "prNumber": 295,
       "title": "[Record Submission] QAT Int5/Int6 + Backout + U-Net Skips + BigramHash(10240) + SWA50 — val_bpb=1.1477",
       "status": "open",
-      "updatedAt": "2026-03-21T04:18:42Z",
+      "updatedAt": "2026-03-21T05:30:16Z",
       "headSha": "f96f6de179f942123341045e0d74f1adfa9daeee",
-      "generatedAt": "2026-03-21T04:28:48.125Z",
-      "summary": "Combines int5/int6 QAT with U-Net skips, backout residual, and SWA warmdown to stabilize a quantized transformer.",
+      "generatedAt": "2026-03-21T05:59:15.212Z",
+      "summary": "Combines STE int5/int6 QAT with U-Net skip/backout modules, BigramHash embeddings, and SWA50 warmdown for quant-friendly weights.",
       "tags": [
         "quantization",
         "architecture",
-        "muon",
-        "training-schedule"
+        "training-schedule",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -823,15 +845,15 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-21T05:11:30Z",
-      "headSha": "945287b3955e46fba86f8bbb3c25a37e9cf861f4",
-      "generatedAt": "2026-03-21T05:29:05.587Z",
-      "summary": "Causal chunk-wise eval-first TTT on an 11L Muon + int5 model augmented with EMA and exclusive self-attention for the last layers.",
+      "updatedAt": "2026-03-21T05:44:20Z",
+      "headSha": "dfd2bbb0c22d1c19efe038e623e35781c8bb0788",
+      "generatedAt": "2026-03-21T05:59:20.004Z",
+      "summary": "Int5-quantized 11L Muon/GQA model runs causal chunked eval-first test-time training with EMA and XSA on last layers.",
       "tags": [
         "val-only",
         "quantization",
-        "optimizer",
-        "attention"
+        "muon",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": true,
@@ -2111,16 +2133,16 @@
     },
     {
       "prNumber": 187,
-      "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1709)",
+      "title": "Record: Pre-Enrichment + Encoder Recurrence + SmearGate + BigramHash (val_bpb=1.1668)",
       "status": "open",
-      "updatedAt": "2026-03-20T15:47:59Z",
-      "headSha": "c1bde37a62073fbb15c57d338dc59659dd303950",
-      "generatedAt": "2026-03-20T15:54:16.765Z",
-      "summary": "Adds GELU pre-enrichment and 2× encoder recurrence for 15 effective layers, paired with int6 QAT and stride-64 sliding-window evaluation.",
+      "updatedAt": "2026-03-21T05:58:05Z",
+      "headSha": "9f17c55d25902f4baeab1354f3a46ff44c3a16e1",
+      "generatedAt": "2026-03-21T05:59:25.528Z",
+      "summary": "Combines GELU pre-enrichment, SmearGate+BigramHash context, and encoder-only recurrence in a compact U-Net to deepen processing with zero extra layers.",
       "tags": [
         "architecture",
-        "quantization",
-        "evaluation"
+        "attention",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

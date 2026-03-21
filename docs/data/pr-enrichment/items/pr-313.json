@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-21T05:59:03.109Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 313,
+    "title": "non-record: LR warmdown on 1x A40 (1.723 bpb, 8.40MB)",
+    "state": "open",
+    "updatedAt": "2026-03-21T05:30:29Z",
+    "headSha": "d6dc8647a5b30ef6d2166a76f41c8542702ceefd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/313",
+    "authorLogin": "my-sonicase"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_LRWarmdownA40/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Tune the learning schedule with a prolonged warmdown and elevated matrix LR on the baseline architecture to squeeze gains under 16MB.",
+    "tags": [
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "extended warmdown iterations",
+      "increased matrix learning rate"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

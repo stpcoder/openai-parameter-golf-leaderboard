@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T05:29:01.049Z",
+  "generatedAt": "2026-03-21T05:59:10.144Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 310,
     "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
     "state": "open",
-    "updatedAt": "2026-03-21T05:19:39Z",
-    "headSha": "918d34b13faef796aa67f14961bae10e75f6f10c",
+    "updatedAt": "2026-03-21T05:44:42Z",
+    "headSha": "d280bf00a78d44a5d71a442de80095a68b997279",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/310",
     "authorLogin": "vishesh9131"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer, 2048-token Transformer tightens weights via long warmdown for int8 readiness while using test-time LoRA on Q/V/LM for eval-time tuning.",
+    "summary": "10-layer, 2048-context transformer leans on warmdown-tightened weights plus TTT LoRA adapters to ease int8 quantization.",
     "tags": [
+      "architecture",
       "training-schedule",
       "quantization",
-      "muon"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "10-layer, 2048-token architecture with overtone spectral init and phase-transition residual mixing",
-      "Always-decaying warmdown to constrain weights before int8 quantization",
-      "Batched test-time LoRA adapters on Q, V, and LM head"
+      "Always-decaying warmdown (15000 iters) for tighter weights before quantization",
+      "Test-time training with batched rank-8 LoRA on Q/V projections and LM head",
+      "Int8 per-row quantization with zlib plus FP16 tied embeddings"
     ]
   },
   "compatibility": {

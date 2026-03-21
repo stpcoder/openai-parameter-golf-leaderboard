@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-20T15:54:16.765Z",
+  "generatedAt": "2026-03-21T05:59:25.528Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 187,
-    "title": "Record: Pre-Enrichment + Encoder Recurrence (val_bpb=1.1709)",
+    "title": "Record: Pre-Enrichment + Encoder Recurrence + SmearGate + BigramHash (val_bpb=1.1668)",
     "state": "open",
-    "updatedAt": "2026-03-20T15:47:59Z",
-    "headSha": "c1bde37a62073fbb15c57d338dc59659dd303950",
+    "updatedAt": "2026-03-21T05:58:05Z",
+    "headSha": "9f17c55d25902f4baeab1354f3a46ff44c3a16e1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/187",
     "authorLogin": "Idan3011"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds GELU pre-enrichment and 2× encoder recurrence for 15 effective layers, paired with int6 QAT and stride-64 sliding-window evaluation.",
+    "summary": "Combines GELU pre-enrichment, SmearGate+BigramHash context, and encoder-only recurrence in a compact U-Net to deepen processing with zero extra layers.",
     "tags": [
       "architecture",
-      "quantization",
-      "evaluation"
+      "attention",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GELU pre-enrichment block",
-      "2× encoder recurrence with RMS norm",
-      "Int6 QAT + sliding-window eval"
+      "GELU pre-enrichment bottleneck on embeddings",
+      "Encoder-only 2× recurrence with RMS norm stabilization",
+      "SmearGate plus BigramHash for bigram-aware tokens"
     ]
   },
   "compatibility": {
