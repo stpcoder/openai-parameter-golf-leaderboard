@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T09:30:04.841Z",
+  "generatedAt": "2026-03-21T10:00:15.440Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -889,7 +889,7 @@
         "date": "2026-03-21"
       },
       "metrics": {
-        "valBpb": 1.132,
+        "valBpb": 1.1321,
         "valLoss": 1.9116,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
@@ -919,16 +919,16 @@
         "authorLogin": "saml212",
         "authorName": null,
         "createdAt": "2026-03-21T09:25:25Z",
-        "updatedAt": "2026-03-21T09:27:03Z",
-        "headSha": "1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505",
+        "updatedAt": "2026-03-21T09:45:02Z",
+        "headSha": "4b062e0a63a913fe9185156b2013f8b18972591b",
         "headRepo": "saml212/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4b062e0a63a913fe9185156b2013f8b18972591b/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4b062e0a63a913fe9185156b2013f8b18972591b/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4b062e0a63a913fe9185156b2013f8b18972591b/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4b062e0a63a913fe9185156b2013f8b18972591b/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4b062e0a63a913fe9185156b2013f8b18972591b/records/track_10min_16mb/2026-03-21_12L_GradQuant_PartialRoPE_EMA",
         "pr": "https://github.com/openai/parameter-golf/pull/332",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -17090,8 +17090,8 @@
         "authorLogin": "Complexity-ML",
         "authorName": null,
         "createdAt": "2026-03-20T18:48:09Z",
-        "updatedAt": "2026-03-20T23:33:31Z",
-        "headSha": "f4eea7d66c7ef8c411542706a9dfd7b71df04ec5",
+        "updatedAt": "2026-03-21T09:53:24Z",
+        "headSha": "67604ef0dd24dc65cb2a6dc567d5529b977fad60",
         "headRepo": "Complexity-ML/parameter-golf"
       },
       "links": {

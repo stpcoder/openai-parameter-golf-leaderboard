@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T09:30:11.108Z",
+  "generatedAt": "2026-03-21T10:00:20.928Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 332,
     "title": "Record: 12L Gradient-Guided Quant + Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1320)",
     "state": "open",
-    "updatedAt": "2026-03-21T09:27:03Z",
-    "headSha": "1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505",
+    "updatedAt": "2026-03-21T09:45:02Z",
+    "headSha": "4b062e0a63a913fe9185156b2013f8b18972591b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/332",
     "authorLogin": "saml212"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Gradient-guided per-tensor int5/int6/int7 quantization frees room for a 12th layer while keeping Partial RoPE, LN scale, XSA4, and EMA with a 524K-token batch.",
+    "summary": "Per-tensor gradient-guided adaptive quantization freed budget for a 12-layer stack with partial RoPE, LN scaling, XSA head tweaks, and EMA smoothing under 16 MB.",
     "tags": [
       "quantization",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Gradient-guided adaptive per-tensor int5/6/7 quantization",
-      "12-layer Transformer with narrower MLP plus Partial RoPE, LN scale, XSA4, EMA",
-      "Large 524K-token batch for faster steps"
+      "Gradient-guided int5/int6/int7 quant allocation",
+      "Partial RoPE + LN scale + XSA in upper layers",
+      "EMA every step instead of SWA"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-21T09:30:33.389Z",
+  "generatedAt": "2026-03-21T10:00:25.766Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,10 +7,10 @@
       "prNumber": 332,
       "title": "Record: 12L Gradient-Guided Quant + Partial RoPE + LN Scale + EMA + XSA4 (val_bpb: 1.1320)",
       "status": "open",
-      "updatedAt": "2026-03-21T09:27:03Z",
-      "headSha": "1707fb6f5aa3f9ead4ed66cee20bdac5ffce9505",
-      "generatedAt": "2026-03-21T09:30:11.108Z",
-      "summary": "Gradient-guided per-tensor int5/int6/int7 quantization frees room for a 12th layer while keeping Partial RoPE, LN scale, XSA4, and EMA with a 524K-token batch.",
+      "updatedAt": "2026-03-21T09:45:02Z",
+      "headSha": "4b062e0a63a913fe9185156b2013f8b18972591b",
+      "generatedAt": "2026-03-21T10:00:20.928Z",
+      "summary": "Per-tensor gradient-guided adaptive quantization freed budget for a 12-layer stack with partial RoPE, LN scaling, XSA head tweaks, and EMA smoothing under 16 MB.",
       "tags": [
         "quantization",
         "architecture",
@@ -1547,15 +1547,14 @@
       "prNumber": 250,
       "title": "Complexity MoE v4: Token-Routed I64 + PID + CUDA Scatter + Int6 (26.5M params)",
       "status": "open",
-      "updatedAt": "2026-03-20T23:33:31Z",
-      "headSha": "f4eea7d66c7ef8c411542706a9dfd7b71df04ec5",
-      "generatedAt": "2026-03-20T23:56:21.960Z",
-      "summary": "Token-routed SwiGLU MoE with PID-like layer dynamics, cosine warm-restart schedule, and int6+zstd dispatch compression.",
+      "updatedAt": "2026-03-21T09:53:24Z",
+      "headSha": "67604ef0dd24dc65cb2a6dc567d5529b977fad60",
+      "generatedAt": "2026-03-21T10:00:25.731Z",
+      "summary": "Token-routed MoE with PID dynamics, CUDA scatter dispatch, int6+zstd compression, and SGDR cosine restarts for compact efficiency.",
       "tags": [
         "architecture",
-        "training-schedule",
         "quantization",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
