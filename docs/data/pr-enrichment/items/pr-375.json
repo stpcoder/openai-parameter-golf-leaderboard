@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-21T23:05:39.673Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 375,
+    "title": "Non-record: Negative results & insights from 24hrs on 8xH100",
+    "state": "open",
+    "updatedAt": "2026-03-21T22:51:16Z",
+    "headSha": "7e2c8fd0127d7867fd13d8d9615f6e598218ae35",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/375",
+    "authorLogin": "charmquark1984"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_Negative_Results_24hr_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Catalogs 13 failed tweaks on the PR315 base while highlighting EMA, weight-decay, batch-scaling, and FA3 Hopper throughput lessons from 24h 8xH100 runs.",
+    "tags": [
+      "non-record",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Systematic negative-result cataloging",
+      "Throughput-sensitive validation of tweaks",
+      "Positive insights on EMA, weight decay, batch size, and FA3 Hopper"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

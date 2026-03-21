@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T00:27:16.053Z",
+  "generatedAt": "2026-03-21T23:05:47.718Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 281,
     "title": "Non-record: val_bpb=1.1374, FA2+SWA adaptation of Farnsworth",
-    "state": "open",
-    "updatedAt": "2026-03-21T00:00:20Z",
+    "state": "closed",
+    "updatedAt": "2026-03-21T23:01:17Z",
     "headSha": "4d12c598caeb01a3e72a6d6703fdc1b3e092ebda",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/281",
     "authorLogin": "charmquark1984"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "FarnsworthEngine adapts to FA2 with Muon WD tuning, SWA, INT6 quant, SmearGate/BigramHash, and TTT sliding-window eval for artifact control.",
+    "summary": "Adapted FarnsworthEngine using FA2/INT6, SmearGate+BigramHash, muon+SWA/WD tuning, and TTT sliding-window eval to meet 16MB artifacts.",
     "tags": [
+      "architecture",
       "quantization",
       "optimizer",
-      "attention",
-      "training-schedule"
+      "regularization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "FA2+Muon WD0.042+SWA warmdown for artifact-size control",
-      "INT6 quantization with SmearGate/BigramHash and U-Net skips",
-      "TTT sliding-window eval after SGD adaptation"
+      "SmearGate+BigramHash 11L MLP3x INT6 model with FA2 attention",
+      "Muon optimizer with tuned WD and SWA warmdown for artifact-size control",
+      "TTT sliding-window evaluation on validation data for post-quant adaptation"
     ]
   },
   "compatibility": {
