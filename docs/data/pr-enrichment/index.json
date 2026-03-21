@@ -1,8 +1,75 @@
 {
-  "generatedAt": "2026-03-21T15:03:27.532Z",
+  "generatedAt": "2026-03-21T15:34:06.912Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 348,
+      "title": "Submission/qat bigram12k stride32",
+      "status": "open",
+      "updatedAt": "2026-03-21T15:28:28Z",
+      "headSha": "a3b1212811b5da329dc44921f66238e46ae85efc",
+      "generatedAt": "2026-03-21T15:33:57.714Z",
+      "summary": "QAT with int5 MLP/int6 attention plus bigger BigramHash and stride-32 evaluation, backed by pruning and SWA warmdown.",
+      "tags": [
+        "quantization",
+        "sliding-window-eval",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-348.json"
+    },
+    {
+      "prNumber": 347,
+      "title": "LongContext 4096 + Full SOTA Stack & QAT Int4 → 16 Layers",
+      "status": "open",
+      "updatedAt": "2026-03-21T15:22:07Z",
+      "headSha": "cc6a63eeb02f9b8fd6c54fbd601af7d54947f7ee",
+      "generatedAt": "2026-03-21T15:34:04.027Z",
+      "summary": "Applies long-context training with the full SOTA stack and int4 QAT to fit 16 transformer layers within the 16MB track budget.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-347.json"
+    },
+    {
+      "prNumber": 346,
+      "title": "Add local baseline reproduction record",
+      "status": "open",
+      "updatedAt": "2026-03-21T15:27:37Z",
+      "headSha": "c4dfdfe39e9582635771849d0a5a99fed0ca5c70",
+      "generatedAt": "2026-03-21T15:34:06.853Z",
+      "summary": "Local single-GPU reproduction of the NaiveBaseline training configuration (seq_len 1024, grad_accum 8) for record keeping.",
+      "tags": [
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-346.json"
+    },
     {
       "prNumber": 344,
       "title": "Non-record: Autoresearch Heads4 + Step-based LR + Sliding Window (1xH100)",

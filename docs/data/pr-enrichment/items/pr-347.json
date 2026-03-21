@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-21T15:34:04.027Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 347,
+    "title": "LongContext 4096 + Full SOTA Stack & QAT Int4 → 16 Layers",
+    "state": "open",
+    "updatedAt": "2026-03-21T15:22:07Z",
+    "headSha": "cc6a63eeb02f9b8fd6c54fbd601af7d54947f7ee",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
+    "authorLogin": "FlashyFlash3011"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_LongContext4096_FullStack/README.md",
+      "records/track_10min_16mb/2026-03-21_QAT_Int4_16L/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Applies long-context training with the full SOTA stack and int4 QAT to fit 16 transformer layers within the 16MB track budget.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Seq_len=4096 training + stride-256 sliding-window eval with NTK-aware RoPE",
+      "Maintain FP16 tied embeddings, Muon WD/momentum tweaks, U-Net skips, and Overtone init",
+      "Int4 QAT with STE and nibble packing to export 16 layers in 16MB"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-03-21T15:34:06.853Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 346,
+    "title": "Add local baseline reproduction record",
+    "state": "open",
+    "updatedAt": "2026-03-21T15:27:37Z",
+    "headSha": "c4dfdfe39e9582635771849d0a5a99fed0ca5c70",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/346",
+    "authorLogin": "bjbjbjbjbjbj"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_local_baseline_bj/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Local single-GPU reproduction of the NaiveBaseline training configuration (seq_len 1024, grad_accum 8) for record keeping.",
+    "tags": [
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "local single-GPU baseline run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

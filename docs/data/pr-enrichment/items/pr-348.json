@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-21T15:33:57.714Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 348,
+    "title": "Submission/qat bigram12k stride32",
+    "state": "open",
+    "updatedAt": "2026-03-21T15:28:28Z",
+    "headSha": "a3b1212811b5da329dc44921f66238e46ae85efc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/348",
+    "authorLogin": "fbedev"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "QAT with int5 MLP/int6 attention plus bigger BigramHash and stride-32 evaluation, backed by pruning and SWA warmdown.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "STE-based QAT (int5 MLP, int6 attention)",
+      "BigramHash expanded to 12,288 buckets",
+      "Stride-32 eval with 5% pruning and SWA warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,25 +1,27 @@
 {
-  "generatedAt": "2026-03-21T15:02:59.341Z",
+  "generatedAt": "2026-03-21T15:33:30.220Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
+  "skipped": [],
+  "errors": [
     {
-      "pr": 343,
-      "reason": "no-record-submission-json"
+      "stage": "pull-request-file",
+      "pr": 345,
+      "filename": "records/track_non_record_16mb/2026-03-20_DART_DiffAttn_Recurrent/submission.json",
+      "message": "Unexpected non-whitespace character after JSON at position 852 (line 22 column 1)"
     }
   ],
-  "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-21T14:21:35Z",
+    "cutoffUpdatedAt": "2026-03-21T15:00:52Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 3,
-    "prsReused": 197,
+    "prsRefreshed": 4,
+    "prsReused": 196,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 322,
+    "cacheEntries": 326,
     "retryWindowRetained": false
   }
 }
