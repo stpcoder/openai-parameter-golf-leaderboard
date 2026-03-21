@@ -1,37 +1,38 @@
 {
-  "generatedAt": "2026-03-20T10:52:57.079Z",
+  "generatedAt": "2026-03-21T04:58:57.235Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 196,
-    "title": "Add non-record submission: Structured-Memory FineWeb Smoke",
+    "title": "Add non-record submission: 8xH100 FineWeb baseline + TTT eval (val_bpb 1.3825)",
     "state": "open",
-    "updatedAt": "2026-03-20T10:27:44Z",
-    "headSha": "80065c1c8efd2b6a151d475011dea5edbaa4522a",
+    "updatedAt": "2026-03-21T04:42:06Z",
+    "headSha": "d8435b80a3488cad86d32452c32e0aab8e3ca316",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/196",
     "authorLogin": "sicauzxl"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/README.md",
       "records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Adapted a minimal structured-memory LM into the official train_gpt.py workflow to validate FineWeb/val_bpb evaluation, quantized export, and artifact-size accounting.",
+    "summary": "8xH100 FineWeb baseline runs QAT-enabled training with LoRA TTT eval inside train_gpt while keeping submissions under the 16MB cap.",
     "tags": [
-      "architecture",
-      "evaluation",
-      "compression",
+      "quantization",
+      "optimizer",
+      "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Structured-memory branch in official train_gpt path",
-      "Single-H100 FineWeb smoke via final_int8_zlib_roundtrip_exact",
-      "Int8+zlib export kept under 16MB"
+      "QAT-enabled training feeding LoRA TTT eval metrics",
+      "Muon optimizer with warmup-high momentum tuning",
+      "Single-shard FineWeb training on official path under 16MB cap"
     ]
   },
   "compatibility": {

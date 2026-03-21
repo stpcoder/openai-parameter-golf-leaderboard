@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-21T04:28:23.219Z",
-  "lastSeenUpdatedAt": "2026-03-21T04:27:58Z",
+  "generatedAt": "2026-03-21T04:58:49.265Z",
+  "lastSeenUpdatedAt": "2026-03-21T04:57:44Z",
   "prs": {
     "1": {
       "number": 1,
@@ -14622,10 +14622,10 @@
     },
     "196": {
       "number": 196,
-      "updatedAt": "2026-03-20T10:27:44Z",
+      "updatedAt": "2026-03-21T04:42:06Z",
       "pr": {
         "number": 196,
-        "title": "Add non-record submission: Structured-Memory FineWeb Smoke",
+        "title": "Add non-record submission: 8xH100 FineWeb baseline + TTT eval (val_bpb 1.3825)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -14633,8 +14633,8 @@
         "authorLogin": "sicauzxl",
         "authorName": null,
         "createdAt": "2026-03-20T09:02:44Z",
-        "updatedAt": "2026-03-20T10:27:44Z",
-        "headSha": "80065c1c8efd2b6a151d475011dea5edbaa4522a",
+        "updatedAt": "2026-03-21T04:42:06Z",
+        "headSha": "d8435b80a3488cad86d32452c32e0aab8e3ca316",
         "headRepo": "sicauzxl/parameter-golf"
       },
       "submissions": [
@@ -14688,7 +14688,7 @@
           },
           "pr": {
             "number": 196,
-            "title": "Add non-record submission: Structured-Memory FineWeb Smoke",
+            "title": "Add non-record submission: 8xH100 FineWeb baseline + TTT eval (val_bpb 1.3825)",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -14696,16 +14696,87 @@
             "authorLogin": "sicauzxl",
             "authorName": null,
             "createdAt": "2026-03-20T09:02:44Z",
-            "updatedAt": "2026-03-20T10:27:44Z",
-            "headSha": "80065c1c8efd2b6a151d475011dea5edbaa4522a",
+            "updatedAt": "2026-03-21T04:42:06Z",
+            "headSha": "d8435b80a3488cad86d32452c32e0aab8e3ca316",
             "headRepo": "sicauzxl/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/80065c1c8efd2b6a151d475011dea5edbaa4522a/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/80065c1c8efd2b6a151d475011dea5edbaa4522a/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/80065c1c8efd2b6a151d475011dea5edbaa4522a/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/80065c1c8efd2b6a151d475011dea5edbaa4522a/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/80065c1c8efd2b6a151d475011dea5edbaa4522a/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-20_SMM_FineWeb_Smoke",
+            "pr": "https://github.com/openai/parameter-golf/pull/196"
+          }
+        },
+        {
+          "id": "pr-196-records-track_non_record_16mb-2026-03-21_Baseline_FineWeb_8GPU_Best-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-21_Baseline_FineWeb_8GPU_Best",
+            "folderPath": "records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best",
+            "submissionPath": "records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/train_gpt.py"
+          },
+          "submission": {
+            "author": "XilongZhu",
+            "githubId": "sicauzxl",
+            "name": "Baseline FineWeb 8GPU TTT Best",
+            "blurb": "8xH100 non-record FineWeb baseline candidate obtained through official-path recipe tuning, QAT, and TTT-style evaluation while staying under the 16MB artifact cap.",
+            "date": "2026-03-21T12:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.3825,
+            "valLoss": 2.3343,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15818566,
+            "bytesCode": 67679,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 196,
+            "title": "Add non-record submission: 8xH100 FineWeb baseline + TTT eval (val_bpb 1.3825)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/196",
+            "authorLogin": "sicauzxl",
+            "authorName": null,
+            "createdAt": "2026-03-20T09:02:44Z",
+            "updatedAt": "2026-03-21T04:42:06Z",
+            "headSha": "d8435b80a3488cad86d32452c32e0aab8e3ca316",
+            "headRepo": "sicauzxl/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/d8435b80a3488cad86d32452c32e0aab8e3ca316/records/track_non_record_16mb/2026-03-21_Baseline_FineWeb_8GPU_Best",
             "pr": "https://github.com/openai/parameter-golf/pull/196"
           }
         }
@@ -23666,6 +23737,25 @@
           }
         }
       ]
+    },
+    "310": {
+      "number": 310,
+      "updatedAt": "2026-03-21T04:57:44Z",
+      "pr": {
+        "number": 310,
+        "title": "Record: 10L Seq2048 TTT LoRA WarmdownQuant (val_bpb=1.1787)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/310",
+        "authorLogin": "vishesh9131",
+        "authorName": null,
+        "createdAt": "2026-03-21T04:52:27Z",
+        "updatedAt": "2026-03-21T04:57:44Z",
+        "headSha": "c7343f1f34b5c55ff339dfbf2e51ff7a33900bb3",
+        "headRepo": "vishesh9131/parameter-golf-vishesh"
+      },
+      "submissions": []
     }
   }
 }
