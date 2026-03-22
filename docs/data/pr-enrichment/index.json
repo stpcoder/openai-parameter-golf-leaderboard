@@ -1,19 +1,112 @@
 {
-  "generatedAt": "2026-03-22T17:11:53.611Z",
+  "generatedAt": "2026-03-22T17:42:09.919Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 447,
+      "title": "Bigram-Aware Context Modeling with Mixed-Precision Quantization (val_bpb: 1.1431)",
+      "status": "open",
+      "updatedAt": "2026-03-22T17:39:18Z",
+      "headSha": "2107e74514f4e4c22423ec2c5a629c104ee81e4d",
+      "generatedAt": "2026-03-22T17:41:18.278Z",
+      "summary": "10-layer transformer injects bigram context via hash embeddings and SmearGate while using mixed int5/int6 quantization to fund extra depth.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-447.json"
+    },
+    {
+      "prNumber": 446,
+      "title": "Record: 7L MLP3x 4kSeq LR-Tuned (val_bpb=1.1933)",
+      "status": "open",
+      "updatedAt": "2026-03-22T17:39:04Z",
+      "headSha": "c37175e7c93475808d8abc9994895914eec85c0e",
+      "generatedAt": "2026-03-22T17:41:23.110Z",
+      "summary": "7-layer 512d transformer uses 3× MLP width, 4k context, and lower tuned LRs plus warmdown to smooth weights for quantization.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-446.json"
+    },
+    {
+      "prNumber": 445,
+      "title": "Tiny bump: 11L TTT Burst + EMA + GPTQ-lite (val_bpb=1.1232)",
+      "status": "open",
+      "updatedAt": "2026-03-22T17:36:07Z",
+      "headSha": "d9eb0497a9091a9e1021993afb2df14233138b24",
+      "generatedAt": "2026-03-22T17:41:28.344Z",
+      "summary": "Before EMA finalization, two epochs of 100-batch TTT burst replay at 10% LR sharpen the model prior to GPTQ-lite quantization.",
+      "tags": [
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-445.json"
+    },
+    {
+      "prNumber": 444,
+      "title": "[Non-Record] MLP3x + WD0.04 + OrthoInit + Sliding Eval — 1.4536 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-22T17:23:20Z",
+      "headSha": "89c0cee2790da03e9af56372a2fa337ece953d83",
+      "generatedAt": "2026-03-22T17:41:36.703Z",
+      "summary": "Combines 3× MLP width, Muon decoupled weight decay, orthogonal init, and sliding-window eval to keep int8+zlib quant gap minimal while staying <16MB.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-444.json"
+    },
+    {
       "prNumber": 442,
       "title": "Record: 11L EMA + AdamW TTT 10ep (mean val_bpb=1.1027)",
       "status": "open",
-      "updatedAt": "2026-03-22T17:07:13Z",
+      "updatedAt": "2026-03-22T17:23:00Z",
       "headSha": "aef01ee4b91efc3f9ef0164b713b13551db91bf2",
-      "generatedAt": "2026-03-22T17:11:06.522Z",
-      "summary": "Replaces SGD with AdamW and a 10-epoch TTT schedule atop the existing 11L EMA model for faster test-time fine-tuning.",
+      "generatedAt": "2026-03-22T17:41:43.395Z",
+      "summary": "Swapping SGD for AdamW in test-time training cuts epochs/time in half while reusing the previous 11-layer EMA model and sliding-window eval.",
       "tags": [
         "optimizer",
-        "training-schedule"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -52,15 +145,14 @@
       "prNumber": 439,
       "title": "feat: AETHER block-sparse attention with Lyapunov-stable governor (12L)",
       "status": "open",
-      "updatedAt": "2026-03-22T17:07:12Z",
+      "updatedAt": "2026-03-22T17:24:22Z",
       "headSha": "9b33fecbe29d90a1b4b82aa9fa825b2727fbc79a",
-      "generatedAt": "2026-03-22T17:11:15.987Z",
-      "summary": "Adds AETHER block-sparse SDPA with Cauchy-Schwarz pruning plus a Lyapunov PD governor to fit a 12-layer GPT within the same budget.",
+      "generatedAt": "2026-03-22T17:41:48.346Z",
+      "summary": "Integrates AETHER block-sparse attention with a Lyapunov governor to fit a 12-layer GPT in the 10m/16MB budget.",
       "tags": [
         "attention",
         "architecture",
-        "training-schedule",
-        "regularization"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -170,15 +262,15 @@
       "prNumber": 434,
       "title": "10L XSA + LeakyReLU² + Partial RoPE (val_bpb=1.1370)",
       "status": "open",
-      "updatedAt": "2026-03-22T16:09:20Z",
-      "headSha": "46a2b51228803bd0a0bb2719c5618b844b4691bc",
-      "generatedAt": "2026-03-22T16:10:45.664Z",
-      "summary": "Baseline GPT adds XSA on last 4 layers, leaky_relu², partial RoPE on 25% dims, and higher LR before int5/int6+zstd quantization.",
+      "updatedAt": "2026-03-22T17:29:35Z",
+      "headSha": "eeef2a0fc183477c8104aa32642aa300799c3ab0",
+      "generatedAt": "2026-03-22T17:41:53.761Z",
+      "summary": "10-layer model pairs XSA on last layers with LeakyReLU², partial RoPE, higher LR, and stronger pruning to fit quantized <16MB artifacts.",
       "tags": [
         "attention",
-        "positional-encoding",
+        "quantization",
         "optimizer",
-        "quantization"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -732,13 +824,14 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T17:11:14Z",
-      "headSha": "0ee493d2f12aba42cef047582bf2f499a4b11839",
-      "generatedAt": "2026-03-22T17:11:48.608Z",
-      "summary": "EMA stacked with Tight SWA, earlier late-stage int6 QAT, and longer warmdown on the 11-layer FlashAttention U-Net-like model with VE, partial RoPE, and LN scaling.",
+      "updatedAt": "2026-03-22T17:27:06Z",
+      "headSha": "0e6fd680fdc7fba8bc654b08ba51361ca14f54e1",
+      "generatedAt": "2026-03-22T17:42:01.587Z",
+      "summary": "Stacks EMA with tight SWA plus earlier late QAT on a quantized 11-layer Transformer with VE128/Partial RoPE and longer warmdown.",
       "tags": [
         "quantization",
         "optimizer",
+        "training-schedule",
         "architecture"
       ],
       "flags": {
@@ -5653,14 +5746,14 @@
     {
       "prNumber": 112,
       "title": "Depth Recurrence 5x3 d672 SwiGLU",
-      "status": "open",
-      "updatedAt": "2026-03-21T19:08:58Z",
+      "status": "closed",
+      "updatedAt": "2026-03-22T17:11:32Z",
       "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
-      "generatedAt": "2026-03-21T19:35:04.039Z",
-      "summary": "Parameter-sharing depth recurrence reuses five transformer blocks thrice at width 672 with SwiGLU MLPs to stretch a 16.5M budget for longer context.",
+      "generatedAt": "2026-03-22T17:42:09.902Z",
+      "summary": "Parameter-sharing depth recurrence reuses five unique blocks thrice to deliver a 15-layer-equivalent, 672-width Transformer with SwiGLU and 2048-length context.",
       "tags": [
         "architecture",
-        "training-schedule"
+        "depth-width"
       ],
       "flags": {
         "usesValOnly": false,

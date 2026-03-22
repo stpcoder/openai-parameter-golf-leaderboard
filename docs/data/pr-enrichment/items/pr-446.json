@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T17:41:23.110Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 446,
+    "title": "Record: 7L MLP3x 4kSeq LR-Tuned (val_bpb=1.1933)",
+    "state": "open",
+    "updatedAt": "2026-03-22T17:39:04Z",
+    "headSha": "c37175e7c93475808d8abc9994895914eec85c0e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/446",
+    "authorLogin": "sofiabod"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_7L_MLP3x_4kSeq_LRTuned/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "7-layer 512d transformer uses 3× MLP width, 4k context, and lower tuned LRs plus warmdown to smooth weights for quantization.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "3× MLP width with extra RMSNorm before projections",
+      "4k context and extended warmdown schedule",
+      "Low tied-embed/matrix LRs plus logit softcap for smoother quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

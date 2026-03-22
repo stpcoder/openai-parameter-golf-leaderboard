@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T17:41:18.278Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 447,
+    "title": "Bigram-Aware Context Modeling with Mixed-Precision Quantization (val_bpb: 1.1431)",
+    "state": "open",
+    "updatedAt": "2026-03-22T17:39:18Z",
+    "headSha": "2107e74514f4e4c22423ec2c5a629c104ee81e4d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/447",
+    "authorLogin": "CREVIOS"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_BigramContext_MixedQuant_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer transformer injects bigram context via hash embeddings and SmearGate while using mixed int5/int6 quantization to fund extra depth.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not val-only; standard training on training data.",
+    "techniques": [
+      "BigramHash + SmearGate bigram context injection",
+      "Mixed int5/int6 quantization by layer sensitivity",
+      "Muon optimizer with SWA and warmdown schedule"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

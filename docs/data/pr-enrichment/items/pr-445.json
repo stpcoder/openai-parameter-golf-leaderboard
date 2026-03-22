@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-22T17:41:28.344Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 445,
+    "title": "Tiny bump: 11L TTT Burst + EMA + GPTQ-lite (val_bpb=1.1232)",
+    "state": "open",
+    "updatedAt": "2026-03-22T17:36:07Z",
+    "headSha": "d9eb0497a9091a9e1021993afb2df14233138b24",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/445",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_11L_TTTburst_GPTQ15_EMA_QAT_1.1232/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Before EMA finalization, two epochs of 100-batch TTT burst replay at 10% LR sharpen the model prior to GPTQ-lite quantization.",
+    "tags": [
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "TTT burst replay of final 100 batches twice at 10% LR with EMA updates",
+      "Late QAT plus GPTQ-lite int6+zstd-22 quantization pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

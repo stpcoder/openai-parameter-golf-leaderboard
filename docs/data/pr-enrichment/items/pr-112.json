@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T19:35:04.039Z",
+  "generatedAt": "2026-03-22T17:42:09.902Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 112,
     "title": "Depth Recurrence 5x3 d672 SwiGLU",
-    "state": "open",
-    "updatedAt": "2026-03-21T19:08:58Z",
+    "state": "closed",
+    "updatedAt": "2026-03-22T17:11:32Z",
     "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/112",
     "authorLogin": "eb1386"
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Parameter-sharing depth recurrence reuses five transformer blocks thrice at width 672 with SwiGLU MLPs to stretch a 16.5M budget for longer context.",
+    "summary": "Parameter-sharing depth recurrence reuses five unique blocks thrice to deliver a 15-layer-equivalent, 672-width Transformer with SwiGLU and 2048-length context.",
     "tags": [
       "architecture",
-      "training-schedule"
+      "depth-width"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Depth recurrence block reuse",
-      "- Wider SwiGLU MLPs on shared layers",
-      "- Warmdown and momentum tuning for short budget"
+      "Five-block depth recurrence for 15-layer-effective modeling",
+      "SwiGLU MLP at 672 width within ~16.5M params",
+      "Evaluation extended to 2048-token context"
     ]
   },
   "compatibility": {

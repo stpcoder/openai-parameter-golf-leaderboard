@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T17:11:06.522Z",
+  "generatedAt": "2026-03-22T17:41:43.395Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 442,
     "title": "Record: 11L EMA + AdamW TTT 10ep (mean val_bpb=1.1027)",
     "state": "open",
-    "updatedAt": "2026-03-22T17:07:13Z",
+    "updatedAt": "2026-03-22T17:23:00Z",
     "headSha": "aef01ee4b91efc3f9ef0164b713b13551db91bf2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/442",
     "authorLogin": "sjp611"
@@ -19,16 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Replaces SGD with AdamW and a 10-epoch TTT schedule atop the existing 11L EMA model for faster test-time fine-tuning.",
+    "summary": "Swapping SGD for AdamW in test-time training cuts epochs/time in half while reusing the previous 11-layer EMA model and sliding-window eval.",
     "tags": [
       "optimizer",
-      "training-schedule"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "AdamW-based test-time fine-tuning (lr0.0005, wd0)",
-      "10-epoch TTT schedule to cut runtime while retaining EMA 0.997 setup"
+      "AdamW test-time training (lr0.0005, wd0)",
+      "10-epoch 11-layer EMA adaptation",
+      "sliding-window stride-64 evaluation"
     ]
   },
   "compatibility": {

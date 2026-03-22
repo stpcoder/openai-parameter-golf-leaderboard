@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T16:10:45.664Z",
+  "generatedAt": "2026-03-22T17:41:53.761Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 434,
     "title": "10L XSA + LeakyReLU² + Partial RoPE (val_bpb=1.1370)",
     "state": "open",
-    "updatedAt": "2026-03-22T16:09:20Z",
-    "headSha": "46a2b51228803bd0a0bb2719c5618b844b4691bc",
+    "updatedAt": "2026-03-22T17:29:35Z",
+    "headSha": "eeef2a0fc183477c8104aa32642aa300799c3ab0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/434",
     "authorLogin": "parinzee"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Baseline GPT adds XSA on last 4 layers, leaky_relu², partial RoPE on 25% dims, and higher LR before int5/int6+zstd quantization.",
+    "summary": "10-layer model pairs XSA on last layers with LeakyReLU², partial RoPE, higher LR, and stronger pruning to fit quantized <16MB artifacts.",
     "tags": [
       "attention",
-      "positional-encoding",
+      "quantization",
       "optimizer",
-      "quantization"
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA on last four layers",
-      "LeakyReLU² with partial RoPE (25% dims)",
-      "Higher matrix/scalar/tied embedding learning rates"
+      "XSA on final layers to omit self-value projections",
+      "LeakyReLU(0.5)² plus partial RoPE for mixed positional bias",
+      "Higher LR with 8% pruning to control quantized artifact size"
     ]
   },
   "compatibility": {
