@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-22T03:06:15.196Z",
-  "lastSeenUpdatedAt": "2026-03-22T03:05:18Z",
+  "generatedAt": "2026-03-22T03:36:20.322Z",
+  "lastSeenUpdatedAt": "2026-03-22T03:36:01Z",
   "prs": {
     "1": {
       "number": 1,
@@ -27333,7 +27333,7 @@
     },
     "348": {
       "number": 348,
-      "updatedAt": "2026-03-22T03:05:07Z",
+      "updatedAt": "2026-03-22T03:29:55Z",
       "pr": {
         "number": 348,
         "title": "Submission/qat bigram12k stride32",
@@ -27344,8 +27344,8 @@
         "authorLogin": "fbedev",
         "authorName": null,
         "createdAt": "2026-03-21T15:22:55Z",
-        "updatedAt": "2026-03-22T03:05:07Z",
-        "headSha": "308ed62a160fe8dde0aa35ebd20a8f2270b85211",
+        "updatedAt": "2026-03-22T03:29:55Z",
+        "headSha": "e83a2778a4b5ec947f213ea8ad59f0754f70b8db",
         "headRepo": "fbedev/parameter-golf"
       },
       "submissions": [
@@ -27407,16 +27407,16 @@
             "authorLogin": "fbedev",
             "authorName": null,
             "createdAt": "2026-03-21T15:22:55Z",
-            "updatedAt": "2026-03-22T03:05:07Z",
-            "headSha": "308ed62a160fe8dde0aa35ebd20a8f2270b85211",
+            "updatedAt": "2026-03-22T03:29:55Z",
+            "headSha": "e83a2778a4b5ec947f213ea8ad59f0754f70b8db",
             "headRepo": "fbedev/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/308ed62a160fe8dde0aa35ebd20a8f2270b85211/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/308ed62a160fe8dde0aa35ebd20a8f2270b85211/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/308ed62a160fe8dde0aa35ebd20a8f2270b85211/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/308ed62a160fe8dde0aa35ebd20a8f2270b85211/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/308ed62a160fe8dde0aa35ebd20a8f2270b85211/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32",
             "pr": "https://github.com/openai/parameter-golf/pull/348"
           }
         }
@@ -30657,7 +30657,7 @@
     },
     "376": {
       "number": 376,
-      "updatedAt": "2026-03-22T03:05:18Z",
+      "updatedAt": "2026-03-22T03:27:59Z",
       "pr": {
         "number": 376,
         "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
@@ -30668,8 +30668,8 @@
         "authorLogin": "anthony-maio",
         "authorName": null,
         "createdAt": "2026-03-21T22:58:17Z",
-        "updatedAt": "2026-03-22T03:05:18Z",
-        "headSha": "9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b",
+        "updatedAt": "2026-03-22T03:27:59Z",
+        "headSha": "9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478",
         "headRepo": "anthony-maio/parameter-golf"
       },
       "submissions": [
@@ -30731,16 +30731,16 @@
             "authorLogin": "anthony-maio",
             "authorName": null,
             "createdAt": "2026-03-21T22:58:17Z",
-            "updatedAt": "2026-03-22T03:05:18Z",
-            "headSha": "9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b",
+            "updatedAt": "2026-03-22T03:27:59Z",
+            "headSha": "9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478",
             "headRepo": "anthony-maio/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478/records/track_10min_16mb/2026-03-21_MatchSOTA_TTT",
             "pr": "https://github.com/openai/parameter-golf/pull/376"
           }
         }
@@ -31819,6 +31819,188 @@
             "script": "https://github.com/openai/parameter-golf/blob/fbc55702466f4caef3fa212174ee89157fabe4ee/records/track_non_record_16mb/2026-03-22_MaxParams6L_120/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/fbc55702466f4caef3fa212174ee89157fabe4ee/records/track_non_record_16mb/2026-03-22_MaxParams6L_120",
             "pr": "https://github.com/openai/parameter-golf/pull/391"
+          }
+        }
+      ]
+    },
+    "392": {
+      "number": 392,
+      "updatedAt": "2026-03-22T03:30:47Z",
+      "pr": {
+        "number": 392,
+        "title": "WIP: Record: Copy Network + Dict Residual (LZ77 + Brotli compression-inspired)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/392",
+        "authorLogin": "pinnerwt",
+        "authorName": null,
+        "createdAt": "2026-03-22T03:30:47Z",
+        "updatedAt": "2026-03-22T03:30:47Z",
+        "headSha": "1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd",
+        "headRepo": "pinnerwt/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-392-records-track_10min_16mb-2026-03-22_CopyNet_DictResidual-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-22_CopyNet_DictResidual",
+            "folderPath": "records/track_10min_16mb/2026-03-22_CopyNet_DictResidual",
+            "submissionPath": "records/track_10min_16mb/2026-03-22_CopyNet_DictResidual/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-22_CopyNet_DictResidual/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-22_CopyNet_DictResidual/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-22_CopyNet_DictResidual/train_gpt.py"
+          },
+          "submission": {
+            "author": "pinnerwt",
+            "githubId": "pinnerwt",
+            "name": "Copy Network + Dict Residual (LZ77 + Brotli inspired)",
+            "blurb": "Compression-theory-inspired architecture: LZ77 pointer mechanism for copying repeated tokens + frozen n-gram dictionary with neural residual correction. dim=640, 11 layers, tied embeddings.",
+            "date": "2026-03-22"
+          },
+          "metrics": {
+            "valBpb": 0,
+            "valLoss": 0,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 0,
+            "bytesCode": 0,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 392,
+            "title": "WIP: Record: Copy Network + Dict Residual (LZ77 + Brotli compression-inspired)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/392",
+            "authorLogin": "pinnerwt",
+            "authorName": null,
+            "createdAt": "2026-03-22T03:30:47Z",
+            "updatedAt": "2026-03-22T03:30:47Z",
+            "headSha": "1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd",
+            "headRepo": "pinnerwt/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd/records/track_10min_16mb/2026-03-22_CopyNet_DictResidual/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd/records/track_10min_16mb/2026-03-22_CopyNet_DictResidual/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd/records/track_10min_16mb/2026-03-22_CopyNet_DictResidual/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd/records/track_10min_16mb/2026-03-22_CopyNet_DictResidual/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd/records/track_10min_16mb/2026-03-22_CopyNet_DictResidual",
+            "pr": "https://github.com/openai/parameter-golf/pull/392"
+          }
+        }
+      ]
+    },
+    "393": {
+      "number": 393,
+      "updatedAt": "2026-03-22T03:36:01Z",
+      "pr": {
+        "number": 393,
+        "title": "Non-record: 7L + BigramHash Projection + Batch Scaling (val_bpb=1.2417, 1xH100)",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/393",
+        "authorLogin": "CrimsonSithria",
+        "authorName": null,
+        "createdAt": "2026-03-22T03:35:12Z",
+        "updatedAt": "2026-03-22T03:36:01Z",
+        "headSha": "d765f631c5c6b0f4f1e5f48a095d18c7971074aa",
+        "headRepo": "CrimsonSithria/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-393-records-track_non_record_16mb-2026-03-22_1xH100_HyperOpt_BigramProj-submission-json",
+          "source": "pull_request",
+          "status": "closed",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-22_1xH100_HyperOpt_BigramProj",
+            "folderPath": "records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj",
+            "submissionPath": "records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/train_gpt.py"
+          },
+          "submission": {
+            "author": "CrimsonSithira",
+            "githubId": "CrimsonSithria",
+            "name": "7L + BigramHash Projection + Batch Scaling + Systematic HyperOpt (1xH100)",
+            "blurb": "7 layers, 4x MLP (relu^2), BigramHash 8192 with dim=128 projection. Key insight: batch size scaling (131K tokens) on H100 trades steps for quality per step. Systematic LR/WD scaling with step count across 111 experiments. 1x H100 SXM, 10min. Artifact: 15.5MB.",
+            "date": "2026-03-22"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": 1.2417,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15502420,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 393,
+            "title": "Non-record: 7L + BigramHash Projection + Batch Scaling (val_bpb=1.2417, 1xH100)",
+            "state": "closed",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/393",
+            "authorLogin": "CrimsonSithria",
+            "authorName": null,
+            "createdAt": "2026-03-22T03:35:12Z",
+            "updatedAt": "2026-03-22T03:36:01Z",
+            "headSha": "d765f631c5c6b0f4f1e5f48a095d18c7971074aa",
+            "headRepo": "CrimsonSithria/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d765f631c5c6b0f4f1e5f48a095d18c7971074aa/records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/d765f631c5c6b0f4f1e5f48a095d18c7971074aa/records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/d765f631c5c6b0f4f1e5f48a095d18c7971074aa/records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/d765f631c5c6b0f4f1e5f48a095d18c7971074aa/records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/d765f631c5c6b0f4f1e5f48a095d18c7971074aa/records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj",
+            "pr": "https://github.com/openai/parameter-golf/pull/393"
           }
         }
       ]

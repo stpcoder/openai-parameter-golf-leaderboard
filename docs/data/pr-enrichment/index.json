@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-22T03:06:31.477Z",
+  "generatedAt": "2026-03-22T03:36:41.364Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 393,
+      "title": "Non-record: 7L + BigramHash Projection + Batch Scaling (val_bpb=1.2417, 1xH100)",
+      "status": "closed",
+      "updatedAt": "2026-03-22T03:36:01Z",
+      "headSha": "d765f631c5c6b0f4f1e5f48a095d18c7971074aa",
+      "generatedAt": "2026-03-22T03:36:27.670Z",
+      "summary": "Scaled batch size, learning rate, and decay to match single-H100 throughput while using BigramHash projection to keep a 7L/4xMLP model within 16MB.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-393.json"
+    },
+    {
+      "prNumber": 392,
+      "title": "WIP: Record: Copy Network + Dict Residual (LZ77 + Brotli compression-inspired)",
+      "status": "open",
+      "updatedAt": "2026-03-22T03:30:47Z",
+      "headSha": "1c54e9d6ea9cbfca1a3d7c4631ceadc0ad77b8fd",
+      "generatedAt": "2026-03-22T03:36:31.415Z",
+      "summary": "Frozen n-gram dictionary logits mix with transformer correction and a copy-pointer head to offload predictable/repetitive tokens before neural refinement.",
+      "tags": [
+        "architecture",
+        "compression",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-392.json"
+    },
     {
       "prNumber": 391,
       "title": "Add MaxParams6L_120 submission (1.2374 BPB) to track_non_record_16mb",
@@ -265,15 +312,15 @@
       "prNumber": 376,
       "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
       "status": "open",
-      "updatedAt": "2026-03-22T03:05:18Z",
-      "headSha": "9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b",
-      "generatedAt": "2026-03-22T03:06:27.125Z",
-      "summary": "9-layer GQA transformer with MLP3x, SmearGate+BigramHash, muon+SWA, int6+zstd, NTK-RoPE, and custom Triton kernels speeding training.",
+      "updatedAt": "2026-03-22T03:27:59Z",
+      "headSha": "9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478",
+      "generatedAt": "2026-03-22T03:36:38.205Z",
+      "summary": "9-layer GQA transformer with SmearGate+BigramHash, NTK-RoPE, Muon+SWA training, and custom Triton kernels fusing attention/MLP ops for efficiency.",
       "tags": [
         "architecture",
+        "attention",
         "optimizer",
-        "quantization",
-        "compression"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -762,14 +809,15 @@
       "prNumber": 348,
       "title": "Submission/qat bigram12k stride32",
       "status": "open",
-      "updatedAt": "2026-03-22T03:05:07Z",
-      "headSha": "308ed62a160fe8dde0aa35ebd20a8f2270b85211",
-      "generatedAt": "2026-03-22T03:06:31.429Z",
-      "summary": "Extends the 10L SOTA with STE-based QAT (int5 MLP, int6 attn), larger BigramHash, tighter stride, and pruning/SWA to stabilize quantized eval.",
+      "updatedAt": "2026-03-22T03:29:55Z",
+      "headSha": "e83a2778a4b5ec947f213ea8ad59f0754f70b8db",
+      "generatedAt": "2026-03-22T03:36:41.314Z",
+      "summary": "QAT with STE fake-quant applied int5 to MLP and int6 to attention, paired with 12288-bucket BigramHash and stride-32 eval windows plus pruning/SWA tweaks.",
       "tags": [
         "quantization",
-        "evaluation",
-        "compression"
+        "tokenization",
+        "training-schedule",
+        "mixed-precision"
       ],
       "flags": {
         "usesValOnly": false,

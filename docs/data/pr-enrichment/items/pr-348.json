@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T03:06:31.429Z",
+  "generatedAt": "2026-03-22T03:36:41.314Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 348,
     "title": "Submission/qat bigram12k stride32",
     "state": "open",
-    "updatedAt": "2026-03-22T03:05:07Z",
-    "headSha": "308ed62a160fe8dde0aa35ebd20a8f2270b85211",
+    "updatedAt": "2026-03-22T03:29:55Z",
+    "headSha": "e83a2778a4b5ec947f213ea8ad59f0754f70b8db",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/348",
     "authorLogin": "fbedev"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends the 10L SOTA with STE-based QAT (int5 MLP, int6 attn), larger BigramHash, tighter stride, and pruning/SWA to stabilize quantized eval.",
+    "summary": "QAT with STE fake-quant applied int5 to MLP and int6 to attention, paired with 12288-bucket BigramHash and stride-32 eval windows plus pruning/SWA tweaks.",
     "tags": [
       "quantization",
-      "evaluation",
-      "compression"
+      "tokenization",
+      "training-schedule",
+      "mixed-precision"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "STE-based QAT (int5 MLP / int6 attention)",
-      "BigramHash 12288 with stride-32 evaluation",
-      "5% magnitude pruning plus frequent SWA averaging"
+      "QAT with STE int5 MLP/int6 attention",
+      "BigramHash(12288) with stride-32 evaluation",
+      "5% magnitude pruning and SWA every 50 steps"
     ]
   },
   "compatibility": {

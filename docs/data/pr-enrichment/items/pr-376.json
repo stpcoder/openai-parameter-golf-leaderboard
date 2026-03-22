@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T03:06:27.125Z",
+  "generatedAt": "2026-03-22T03:36:38.205Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 376,
     "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
     "state": "open",
-    "updatedAt": "2026-03-22T03:05:18Z",
-    "headSha": "9d0e9ce1cb4dbf21bc3fc5ccf6f85748cbd0003b",
+    "updatedAt": "2026-03-22T03:27:59Z",
+    "headSha": "9cd4f9e08e92ed19325dc8c04ae7ad91c47ea478",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/376",
     "authorLogin": "anthony-maio"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "9-layer GQA transformer with MLP3x, SmearGate+BigramHash, muon+SWA, int6+zstd, NTK-RoPE, and custom Triton kernels speeding training.",
+    "summary": "9-layer GQA transformer with SmearGate+BigramHash, NTK-RoPE, Muon+SWA training, and custom Triton kernels fusing attention/MLP ops for efficiency.",
     "tags": [
       "architecture",
+      "attention",
       "optimizer",
-      "quantization",
-      "compression"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "MLP3x GQA stack with NTK-RoPE positional encoding",
-      "Muon optimizer warmdown with SWA",
-      "Custom Triton kernels plus int6+zstd compression"
+      "GQA transformer with SmearGate+BigramHash and NTK-RoPE",
+      "Muon optimizer + SWA warmdown with muP scaling",
+      "Custom Triton kernels fusing RMSNorm/QKV/MLP ops"
     ]
   },
   "compatibility": {

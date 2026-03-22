@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T03:36:27.670Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 393,
+    "title": "Non-record: 7L + BigramHash Projection + Batch Scaling (val_bpb=1.2417, 1xH100)",
+    "state": "closed",
+    "updatedAt": "2026-03-22T03:36:01Z",
+    "headSha": "d765f631c5c6b0f4f1e5f48a095d18c7971074aa",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/393",
+    "authorLogin": "CrimsonSithria"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_1xH100_HyperOpt_BigramProj/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Scaled batch size, learning rate, and decay to match single-H100 throughput while using BigramHash projection to keep a 7L/4xMLP model within 16MB.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "batch-size scaling tied to step count",
+      "BigramHash dim=128 projection",
+      "Muon optimizer with tuned WD"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
