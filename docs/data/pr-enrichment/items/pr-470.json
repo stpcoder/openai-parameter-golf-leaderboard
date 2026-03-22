@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T22:42:41.252Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 470,
+    "title": "Non-record: Shared-weight transformer with extended warmdown (1.1454 val_bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-22T22:33:49Z",
+    "headSha": "9f968280aed9fb9b3e9da820e100167c25902e40",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/470",
+    "authorLogin": "leofeasby"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_SharedCore_Seq2048_Warmdown/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shared-core transformer reuses one block across nine passes with U-Net skip feedback and per-layer scaling while probing long warmdown schedules via step-based decay.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared-core recurrent transformer with U-Net skip connections",
+      "Per-layer scaling to break symmetry across passes",
+      "Step-based warmdown schedule decoupling from wallclock time"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

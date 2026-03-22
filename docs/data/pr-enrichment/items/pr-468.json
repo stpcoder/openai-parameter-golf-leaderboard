@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T22:42:51.572Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 468,
+    "title": "[track_10min_16mb] utkuaydiin 10L Muon — 15.46 MB",
+    "state": "open",
+    "updatedAt": "2026-03-22T22:23:14Z",
+    "headSha": "1158c33e3c053b9d20c21bbde38f5ddfbf2b74e9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/468",
+    "authorLogin": "utkuaydiin"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_utkuaydiin_10L_Muon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer 448-dim Muon/AdamW hybrid uses BigramHash+SmearGate, SWA, pruning, and Int5/Int6 PTQ to hit ~15.5MB after zstd-22.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training on real FineWeb data, no validation-only scheme.",
+    "techniques": [
+      "Hybrid Muon+AdamW optimizer with SWA",
+      "BigramHash token mix with SmearGate gating",
+      "Global 5.5% prune before Int5/Int6 PTQ"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

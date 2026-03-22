@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T15:24:00.600Z",
+  "generatedAt": "2026-03-22T22:43:02.940Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 215,
     "title": "Record: 11L Low-Rank Q192 (val_bpb=1.1548)",
     "state": "open",
-    "updatedAt": "2026-03-20T15:01:45Z",
+    "updatedAt": "2026-03-22T22:34:10Z",
     "headSha": "2dbf8aa64a0910aedcfa916d441f509139203920",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/215",
     "authorLogin": "JayCheng113"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Factorized the Q projection to rank 192, add 11-layer encoder-decoder skips, and pair int6 per-row quantization with zstd to fit the 16MB budget while using sliding-window eval.",
+    "summary": "Factoring each Q projection into rank-192 down/up matrices lets an 11-layer model fit 16MB while boosting int6 quantization and sliding-window eval.",
     "tags": [
-      "quantization",
       "architecture",
+      "quantization",
       "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Low-rank rank-192 factorized Q projection",
-      "11-layer encoder-decoder skip layout",
-      "Int6 per-row quantization with zstd compression"
+      "low-rank Q projection (512→192→512) to save params and aid int6 quantization",
+      "11-layer encoder-decoder style transformer enabled by parameter savings",
+      "per-row int6 quantization plus zstd-22 compression for weights"
     ]
   },
   "compatibility": {

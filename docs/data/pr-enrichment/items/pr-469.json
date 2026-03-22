@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T22:42:47.017Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 469,
+    "title": "Non-record: 27M params at Int5 QAT / train larger, quantize harder (val_bpb=1.1418)",
+    "state": "open",
+    "updatedAt": "2026-03-22T22:22:46Z",
+    "headSha": "6187b185304c18010c2fd90ca533b9a03a5ab795",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/469",
+    "authorLogin": "cmcdnd"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_d576_Int5_QAT_WiderModel/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Train a wider 27M model with 9-head GQA and XSA then apply early int5 QAT for longer adaptation before aggressive per-row quantization.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule",
+      "muon"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "27M-param, 9-head partial RoPE architecture with XSA & GQA",
+      "early int5 QAT activation (threshold 0.50) for ~1,700 adaptation steps",
+      "SWA plus int5 per-row quantization compression pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

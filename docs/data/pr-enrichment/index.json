@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-03-22T22:13:06.297Z",
+  "generatedAt": "2026-03-22T22:43:02.970Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 467,
-      "title": "[track_10min_16mb] LoRA TTT + SOTA Int5/Int6 (10L, BigramHash, SWA) — Atharva Date (ADIITJ)",
+      "prNumber": 470,
+      "title": "Non-record: Shared-weight transformer with extended warmdown (1.1454 val_bpb)",
       "status": "open",
-      "updatedAt": "2026-03-22T22:09:27Z",
-      "headSha": "b8d53d4917af449fd6892d3ddcb7922724a7063c",
-      "generatedAt": "2026-03-22T22:12:33.680Z",
-      "summary": "Document-isolated LoRA test-time training atop the SOTA Int5/Int6 10-layer model, scoring each chunk before adapter updates to keep artifacts untouched.",
+      "updatedAt": "2026-03-22T22:33:49Z",
+      "headSha": "9f968280aed9fb9b3e9da820e100167c25902e40",
+      "generatedAt": "2026-03-22T22:42:41.252Z",
+      "summary": "Shared-core transformer reuses one block across nine passes with U-Net skip feedback and per-layer scaling while probing long warmdown schedules via step-based decay.",
       "tags": [
-        "quantization",
+        "architecture",
         "training-schedule",
-        "evaluation"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -23,6 +23,77 @@
       },
       "compatibility": {
         "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-470.json"
+    },
+    {
+      "prNumber": 469,
+      "title": "Non-record: 27M params at Int5 QAT / train larger, quantize harder (val_bpb=1.1418)",
+      "status": "open",
+      "updatedAt": "2026-03-22T22:22:46Z",
+      "headSha": "6187b185304c18010c2fd90ca533b9a03a5ab795",
+      "generatedAt": "2026-03-22T22:42:47.017Z",
+      "summary": "Train a wider 27M model with 9-head GQA and XSA then apply early int5 QAT for longer adaptation before aggressive per-row quantization.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "muon"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-469.json"
+    },
+    {
+      "prNumber": 468,
+      "title": "[track_10min_16mb] utkuaydiin 10L Muon — 15.46 MB",
+      "status": "open",
+      "updatedAt": "2026-03-22T22:23:14Z",
+      "headSha": "1158c33e3c053b9d20c21bbde38f5ddfbf2b74e9",
+      "generatedAt": "2026-03-22T22:42:51.572Z",
+      "summary": "10-layer 448-dim Muon/AdamW hybrid uses BigramHash+SmearGate, SWA, pruning, and Int5/Int6 PTQ to hit ~15.5MB after zstd-22.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-468.json"
+    },
+    {
+      "prNumber": 467,
+      "title": "[track_10min_16mb] LoRA TTT + SOTA Int5/Int6 (10L, BigramHash, SWA) — Atharva Date (ADIITJ)",
+      "status": "open",
+      "updatedAt": "2026-03-22T22:13:23Z",
+      "headSha": "b8d53d4917af449fd6892d3ddcb7922724a7063c",
+      "generatedAt": "2026-03-22T22:42:58.679Z",
+      "summary": "SOTA 10-layer Int5/Int6 stack adds document-isolated LoRA TTT at eval, resetting rank-8 Q/V adapters per doc while keeping the artifact unchanged.",
+      "tags": [
+        "evaluation",
+        "non-record",
+        "val-only"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-467.json"
     },
@@ -942,29 +1013,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-421.json"
-    },
-    {
-      "prNumber": 420,
-      "title": "WIP: Shared-transformer + warmdown-aligned training (not final submis…",
-      "status": "open",
-      "updatedAt": "2026-03-22T22:09:18Z",
-      "headSha": "bc275be80c1808869b89238027aee5c91730d13a",
-      "generatedAt": "2026-03-22T22:13:00.250Z",
-      "summary": "Shared-core transformer reuses one block with learned U-Net skips and per-pass scaling while a step-triggered warmdown aligns the late-phase transition with runtime.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-420.json"
     },
     {
       "prNumber": 419,
@@ -4437,13 +4485,13 @@
       "prNumber": 215,
       "title": "Record: 11L Low-Rank Q192 (val_bpb=1.1548)",
       "status": "open",
-      "updatedAt": "2026-03-20T15:01:45Z",
+      "updatedAt": "2026-03-22T22:34:10Z",
       "headSha": "2dbf8aa64a0910aedcfa916d441f509139203920",
-      "generatedAt": "2026-03-20T15:24:00.600Z",
-      "summary": "Factorized the Q projection to rank 192, add 11-layer encoder-decoder skips, and pair int6 per-row quantization with zstd to fit the 16MB budget while using sliding-window eval.",
+      "generatedAt": "2026-03-22T22:43:02.940Z",
+      "summary": "Factoring each Q projection into rank-192 down/up matrices lets an 11-layer model fit 16MB while boosting int6 quantization and sliding-window eval.",
       "tags": [
-        "quantization",
         "architecture",
+        "quantization",
         "compression"
       ],
       "flags": {
