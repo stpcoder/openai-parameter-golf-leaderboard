@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T12:09:18.803Z",
+  "generatedAt": "2026-03-22T14:40:07.988Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 399,
-    "title": "Record: Parallel Muon + Parameter Banking — 82.14ms/step (3.1% faster than PR #315)",
+    "title": "Record: Parallel Muon + Parameter Banking — 82.08ms/step (3.2% faster than PR #315)",
     "state": "open",
-    "updatedAt": "2026-03-22T11:40:08Z",
-    "headSha": "4db00576f082f77a8e36104e354952d8702c7a8e",
+    "updatedAt": "2026-03-22T14:20:43Z",
+    "headSha": "f7d7d566abadc57c4d0fc4f2faf31bf0feef470e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/399",
     "authorLogin": "abaybektursun"
   },
@@ -19,18 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Parameter banking plus Parallel Muon’s async comms and Polar Express polynomials redefine the optimizer step to speed training without changing the base model.",
+    "summary": "Optimizer rework banks projections into four large tensors and uses Parallel Muon async reduce-scatter/all-gather to overlap updates without DDP.",
     "tags": [
       "optimizer",
-      "muon",
-      "training-schedule"
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "banked 3D parameter tensors replacing 66 separate linears",
-      "Polar Express minimax polynomial orthogonalization in BF16",
-      "Parallel Muon optimizer ordering with async reduce-scatter, local PE, and all-gather"
+      "Parameter banking for batched F.linear projections",
+      "Parallel Muon orchestrates async reduce-scatter/all-gather without DDP"
     ]
   },
   "compatibility": {

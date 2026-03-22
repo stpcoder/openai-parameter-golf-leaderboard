@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T14:39:56.816Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 427,
+    "title": "AnAI: BigramHash(12288) + TrigramHash + int5/int6 QAT",
+    "state": "open",
+    "updatedAt": "2026-03-22T14:34:36Z",
+    "headSha": "13292b4b7e61d759025ce690dd76d5c32d76f0ed",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/427",
+    "authorLogin": "VeerGosai"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/AnAI/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "AnAI mixes int4/5/6 quantization with expanded bigram/trigram hash embeddings, aggressive SWA, and pruning in a 10-layer GQA model for tight compression.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "mixed int4/5/6 quantization for MLP and attention",
+      "expanded bigram (12,288) plus trigram hash embeddings",
+      "aggressive SWA schedule with 5% magnitude pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

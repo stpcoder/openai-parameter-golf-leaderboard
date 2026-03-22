@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-22T14:09:53.277Z",
+  "generatedAt": "2026-03-22T14:40:15.548Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 427,
+      "title": "AnAI: BigramHash(12288) + TrigramHash + int5/int6 QAT",
+      "status": "open",
+      "updatedAt": "2026-03-22T14:34:36Z",
+      "headSha": "13292b4b7e61d759025ce690dd76d5c32d76f0ed",
+      "generatedAt": "2026-03-22T14:39:56.816Z",
+      "summary": "AnAI mixes int4/5/6 quantization with expanded bigram/trigram hash embeddings, aggressive SWA, and pruning in a 10-layer GQA model for tight compression.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-427.json"
+    },
     {
       "prNumber": 426,
       "title": "Record: 10L Int5-MLP + Mixed Quant + GradClip + Warmdown3k (mean val_bpb=1.20262)",
@@ -31,14 +55,13 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-22T13:51:16Z",
-      "headSha": "981cd8e39a0fe33cb304626ae685565775342ab0",
-      "generatedAt": "2026-03-22T14:09:53.206Z",
-      "summary": "Single-H100 ablation splits eval lengths (2048 vs 1024) and tunes ATTN_TWICE alpha plus LoRA TTT settings to align roundtrip and TTT metrics in a 600s run.",
+      "updatedAt": "2026-03-22T14:39:47Z",
+      "headSha": "d9eb32443c53cc7279c7c47eb9c2c3bb6cb45dbb",
+      "generatedAt": "2026-03-22T14:40:02.613Z",
+      "summary": "1xH100 ablation tuned ATTN_TWICE=0.05 with split EVAL/TTT lengths and LoRA-TTT to balance roundtrip and TTT profiles under the 16MB cap.",
       "tags": [
         "attention",
         "evaluation",
-        "regularization",
         "non-record"
       ],
       "flags": {
@@ -428,16 +451,15 @@
     },
     {
       "prNumber": 399,
-      "title": "Record: Parallel Muon + Parameter Banking — 82.14ms/step (3.1% faster than PR #315)",
+      "title": "Record: Parallel Muon + Parameter Banking — 82.08ms/step (3.2% faster than PR #315)",
       "status": "open",
-      "updatedAt": "2026-03-22T11:40:08Z",
-      "headSha": "4db00576f082f77a8e36104e354952d8702c7a8e",
-      "generatedAt": "2026-03-22T12:09:18.803Z",
-      "summary": "Parameter banking plus Parallel Muon’s async comms and Polar Express polynomials redefine the optimizer step to speed training without changing the base model.",
+      "updatedAt": "2026-03-22T14:20:43Z",
+      "headSha": "f7d7d566abadc57c4d0fc4f2faf31bf0feef470e",
+      "generatedAt": "2026-03-22T14:40:07.988Z",
+      "summary": "Optimizer rework banks projections into four large tensors and uses Parallel Muon async reduce-scatter/all-gather to overlap updates without DDP.",
       "tags": [
         "optimizer",
-        "muon",
-        "training-schedule"
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2817,14 +2839,14 @@
       "prNumber": 267,
       "title": "Record: val_bpb: 1.14020 [tested 3x on 8xh100]",
       "status": "open",
-      "updatedAt": "2026-03-22T13:27:33Z",
-      "headSha": "d10493b30aa94cfce852af8b34690fa011ce629b",
-      "generatedAt": "2026-03-22T13:40:23.651Z",
-      "summary": "Legal chunk-wise causal test-time training on validation data paired with an int5-quantized 11-layer net using EMA, pruning, and exclusive self-attention.",
+      "updatedAt": "2026-03-22T14:25:53Z",
+      "headSha": "7940226c952cf4fb30ea80309975108d868e4962",
+      "generatedAt": "2026-03-22T14:40:15.510Z",
+      "summary": "11-layer int5 model fits under 16MB, then applies per-chunk causal test-time training (eval-before-train) with EMA, XSA, and Muon tweaks on validation data.",
       "tags": [
         "val-only",
         "quantization",
-        "attention",
+        "evaluation",
         "optimizer"
       ],
       "flags": {

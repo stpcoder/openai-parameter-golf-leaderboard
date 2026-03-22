@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T14:09:53.206Z",
+  "generatedAt": "2026-03-22T14:40:02.613Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 425,
     "title": "Codex/runpod 2026 03 20 checkpoint",
     "state": "open",
-    "updatedAt": "2026-03-22T13:51:16Z",
-    "headSha": "981cd8e39a0fe33cb304626ae685565775342ab0",
+    "updatedAt": "2026-03-22T14:39:47Z",
+    "headSha": "d9eb32443c53cc7279c7c47eb9c2c3bb6cb45dbb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
     "authorLogin": "DeividasMat"
   },
@@ -20,19 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Single-H100 ablation splits eval lengths (2048 vs 1024) and tunes ATTN_TWICE alpha plus LoRA TTT settings to align roundtrip and TTT metrics in a 600s run.",
+    "summary": "1xH100 ablation tuned ATTN_TWICE=0.05 with split EVAL/TTT lengths and LoRA-TTT to balance roundtrip and TTT profiles under the 16MB cap.",
     "tags": [
       "attention",
       "evaluation",
-      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "ATTN_TWICE alpha with split eval lengths for roundtrip vs TTT",
-      "LoRA TTT chunked eval using shorter eval seq and chunk size",
-      "Short 600s single-shard tuning run"
+      "Repeated attention via ATTN_TWICE tuning",
+      "Split EVAL/T T sequences for roundtrip vs TTT",
+      "LoRA-TTT conditioning within artifact cap"
     ]
   },
   "compatibility": {
