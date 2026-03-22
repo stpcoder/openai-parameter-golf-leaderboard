@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T04:06:26.098Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 395,
+    "title": "Add MaxParams6L_120 submission (1.2374 BPB) to track_non_record_16mb",
+    "state": "open",
+    "updatedAt": "2026-03-22T03:51:23Z",
+    "headSha": "ba2c0f7f47355c096dbd659e755069799514feef",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/395",
+    "authorLogin": "NishantDahal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_MaxParams6L_120/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "6-layer encoder-decoder (3+3) with learned skips, SwiGLU, untied embed lr0.6, full MHA, and per-dim scales tuned for INT8 compression.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "6-layer encoder-decoder with learned encoder-decoder skips",
+      "SwiGLU MLP plus untied embeddings at lr 0.6 for aggressive embedding learning",
+      "Full MHA and per-dimension controls coupled with weight decay to aid INT8 quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T04:06:39.335Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 394,
+    "title": "Non-record: 11L PR315 Backout + Native FA3 RunPod (val_bpb=1.1247)",
+    "state": "open",
+    "updatedAt": "2026-03-22T03:48:56Z",
+    "headSha": "6b4acf9082ee3ac18a9dc8bde3d6d4a093bcdac8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/394",
+    "authorLogin": "greqone"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_11L_PR315_Backout_FA3_RunPod/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "PR315-style 11-layer Partial-RoPE GPT with LN-scale, EMA, XSA4, Backout residual, native Hopper FlashAttention, and torch.compile on 8×H100 SXM.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "PR315-style 11-layer Partial-RoPE Transformer with LN-scale, EMA, and XSA4",
+      "Backout residual plus late QAT int6 training using native FA3 and torch.compile on 8×H100 SXM",
+      "Inline FlashAttention helper to keep train_gpt.py self-contained"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
