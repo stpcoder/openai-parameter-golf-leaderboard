@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-22T02:06:16.285Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 388,
+    "title": "Record: 11L + Tight SWA + VE128 + Partial RoPE + LN Scale + TTT (val_bpb: 1.1231)",
+    "state": "open",
+    "updatedAt": "2026-03-22T01:58:34Z",
+    "headSha": "e776ef0c11b33b2aabaeb5253a65025ecae53da7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/388",
+    "authorLogin": "ElliotSlusky"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_TightSWA_VE_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer transformer pairs Tight SWA, shared value embeddings, partial RoPE, and LN scaling with post-quantization Test-Time Training on the validation shard.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Performs Test-Time Training fine-tuning on the validation shard for 25 epochs to recover quantization loss.",
+    "techniques": [
+      "Tight SWA averaging of recent low-scale checkpoints",
+      "Shared 128-d value embeddings plus partial RoPE & LN scaling in upper layers",
+      "Quantized model adapted via 25-epoch Test-Time Training on validation data"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

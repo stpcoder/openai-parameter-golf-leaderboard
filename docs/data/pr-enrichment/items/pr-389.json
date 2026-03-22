@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-22T02:06:08.461Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 389,
+    "title": "Record: 11L Int5-All + XSA5 + EMA + 10% Pruning (val_bpb=1.1466)",
+    "state": "open",
+    "updatedAt": "2026-03-22T02:05:15Z",
+    "headSha": "2a18890025a7a710f18f2dc6c87f05ce74b44326",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/389",
+    "authorLogin": "trasnake87"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_11L_Int5All_XSA5_EMA_Prune10/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds uniform int5 quantization across attention and MLP plus post-EMA 10% magnitude pruning to the XSA+EMA stack for a smaller artifact.",
+    "tags": [
+      "quantization",
+      "compression",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Not a val-only training run.",
+    "techniques": [
+      "uniform int5 quantization for attention and MLP",
+      "post-EMA 10% magnitude pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

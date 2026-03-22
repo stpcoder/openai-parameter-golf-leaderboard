@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-22T01:36:20.301Z",
+  "generatedAt": "2026-03-22T02:06:35.350Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 389,
+      "title": "Record: 11L Int5-All + XSA5 + EMA + 10% Pruning (val_bpb=1.1466)",
+      "status": "open",
+      "updatedAt": "2026-03-22T02:05:15Z",
+      "headSha": "2a18890025a7a710f18f2dc6c87f05ce74b44326",
+      "generatedAt": "2026-03-22T02:06:08.461Z",
+      "summary": "Adds uniform int5 quantization across attention and MLP plus post-EMA 10% magnitude pruning to the XSA+EMA stack for a smaller artifact.",
+      "tags": [
+        "quantization",
+        "compression",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-389.json"
+    },
+    {
+      "prNumber": 388,
+      "title": "Record: 11L + Tight SWA + VE128 + Partial RoPE + LN Scale + TTT (val_bpb: 1.1231)",
+      "status": "open",
+      "updatedAt": "2026-03-22T01:58:34Z",
+      "headSha": "e776ef0c11b33b2aabaeb5253a65025ecae53da7",
+      "generatedAt": "2026-03-22T02:06:16.285Z",
+      "summary": "11-layer transformer pairs Tight SWA, shared value embeddings, partial RoPE, and LN scaling with post-quantization Test-Time Training on the validation shard.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-388.json"
+    },
     {
       "prNumber": 385,
       "title": "Non-record: 11L Int6 QAT + SmearGate + SWA(0.4) + WD=0.04 (3-seed mean val_bpb=1.1488)",
@@ -171,15 +217,15 @@
       "prNumber": 376,
       "title": "Record: 9L MLP3x Full Stack + Custom Kernel Pipeline, val_bpb=1.1401",
       "status": "open",
-      "updatedAt": "2026-03-22T01:27:56Z",
-      "headSha": "6596aed95fcd8414088fe2f3d5e2416581a3c726",
-      "generatedAt": "2026-03-22T01:36:08.334Z",
-      "summary": "9-layer 512-d GQA transformer pairs SmearGate+BigramHash token blending, int6 quantization, and Muon+SWA training with a custom Triton kernel pipeline for fused ops.",
+      "updatedAt": "2026-03-22T02:02:36Z",
+      "headSha": "333843d00f260af793d5abaebb1cb0f3ab3a9df3",
+      "generatedAt": "2026-03-22T02:06:22.143Z",
+      "summary": "9-layer GQA transformer pairs SmearGate+BigramHash int6+zstd compression with Muon+SWA, NTK-RoPE, and custom Triton kernels to squeeze more steps in ten minutes.",
       "tags": [
         "architecture",
         "optimizer",
         "quantization",
-        "attention"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1810,10 +1856,10 @@
       "prNumber": 288,
       "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
       "status": "open",
-      "updatedAt": "2026-03-22T01:01:41Z",
-      "headSha": "4a015310924ac8927739e396c33b4fec4cfe2a26",
-      "generatedAt": "2026-03-22T01:05:55.654Z",
-      "summary": "Modulates SmearGate blend by adjacent-token similarity so similar tokens merge more, adding just one scale parameter and a dot product per position.",
+      "updatedAt": "2026-03-22T01:36:34Z",
+      "headSha": "0593404dcbc8474a92ca17d3bacf41da31bfe9a9",
+      "generatedAt": "2026-03-22T02:06:25.721Z",
+      "summary": "Replaces static SmearGate with a content-dependent gate that modulates token blending via adjacent-token similarity dot products.",
       "tags": [
         "architecture",
         "non-record"
@@ -3026,23 +3072,23 @@
       "prNumber": 212,
       "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1375",
       "status": "open",
-      "updatedAt": "2026-03-22T01:05:15Z",
-      "headSha": "b621f7ffe4b3b965ac88c8a3ab279155d51b8d27",
-      "generatedAt": "2026-03-22T01:06:00.860Z",
-      "summary": "11-layer transformer pairs last-layer exclusive self-attention, EMA, TTT, U-Net skips, partial RoPE, LN scale, and late int6 QAT to hit the 10m/16MB budget.",
+      "updatedAt": "2026-03-22T01:48:26Z",
+      "headSha": "a5fd524607960ce2db2e07c43002e5e6c922a7de",
+      "generatedAt": "2026-03-22T02:06:35.324Z",
+      "summary": "11-layer transformer pairs XSA in final layers with EMA, validation TTT, U-Net skips, partial RoPE/LN scaling, SmearGate+BigramHash, and late int6 QAT.",
       "tags": [
+        "val-only",
         "architecture",
-        "quantization",
-        "training-schedule",
-        "evaluation"
+        "attention",
+        "training-schedule"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-212.json"
     },
