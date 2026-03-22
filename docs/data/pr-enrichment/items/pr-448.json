@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-22T18:11:37.284Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 448,
+    "title": "Add SmearGate+BigramHash context-repair submission (1.2006 BPB, 15.0MB)",
+    "state": "open",
+    "updatedAt": "2026-03-22T17:50:43Z",
+    "headSha": "af7cee2155dfe3745767ba08429d0b1f7a210e2c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/448",
+    "authorLogin": "handemanai"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-20_ContextRepair_SmearGate_BigramHash_SP1024_9x512_MLP3_int6zstd/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Dense 9-layer GQA adds SmearGate gating plus BigramHash context features to fix carried-context penalties flagged by sliding diagnostics.",
+    "tags": [
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SmearGate gating over shifted inputs",
+      "BigramHash tokens for explicit local context",
+      "Sliding diagnostic isolating carried-context decay"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

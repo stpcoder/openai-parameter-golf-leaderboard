@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T18:11:29.207Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 449,
+    "title": "11L Gated XSA + Cosine LN Scale + Int6",
+    "state": "open",
+    "updatedAt": "2026-03-22T18:08:29Z",
+    "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/449",
+    "authorLogin": "eb1386"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer int6 model uses gated XSA gating, cosine layer-norm scaling, and bigram/belted RoPE tweaks to let each layer tune its dynamics before sliding-window eval.",
+    "tags": [
+      "attention",
+      "positional-encoding",
+      "quantization",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "sigmoid-gated XSA residual removal",
+      "cosine decay for layer-norm scale",
+      "late-stage int6 QAT with EMA smoothing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

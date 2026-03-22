@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-22T17:42:09.919Z",
+  "generatedAt": "2026-03-22T18:12:11.191Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 449,
+      "title": "11L Gated XSA + Cosine LN Scale + Int6",
+      "status": "open",
+      "updatedAt": "2026-03-22T18:08:29Z",
+      "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
+      "generatedAt": "2026-03-22T18:11:29.207Z",
+      "summary": "11-layer int6 model uses gated XSA gating, cosine layer-norm scaling, and bigram/belted RoPE tweaks to let each layer tune its dynamics before sliding-window eval.",
+      "tags": [
+        "attention",
+        "positional-encoding",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-449.json"
+    },
+    {
+      "prNumber": 448,
+      "title": "Add SmearGate+BigramHash context-repair submission (1.2006 BPB, 15.0MB)",
+      "status": "open",
+      "updatedAt": "2026-03-22T17:50:43Z",
+      "headSha": "af7cee2155dfe3745767ba08429d0b1f7a210e2c",
+      "generatedAt": "2026-03-22T18:11:37.284Z",
+      "summary": "Dense 9-layer GQA adds SmearGate gating plus BigramHash context features to fix carried-context penalties flagged by sliding diagnostics.",
+      "tags": [
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-448.json"
+    },
     {
       "prNumber": 447,
       "title": "Bigram-Aware Context Modeling with Mixed-Precision Quantization (val_bpb: 1.1431)",
@@ -54,13 +100,14 @@
       "prNumber": 445,
       "title": "Tiny bump: 11L TTT Burst + EMA + GPTQ-lite (val_bpb=1.1232)",
       "status": "open",
-      "updatedAt": "2026-03-22T17:36:07Z",
-      "headSha": "d9eb0497a9091a9e1021993afb2df14233138b24",
-      "generatedAt": "2026-03-22T17:41:28.344Z",
-      "summary": "Before EMA finalization, two epochs of 100-batch TTT burst replay at 10% LR sharpen the model prior to GPTQ-lite quantization.",
+      "updatedAt": "2026-03-22T17:48:45Z",
+      "headSha": "ad9f7bea3407282ad482d7329dae1b88833658bc",
+      "generatedAt": "2026-03-22T18:11:42.576Z",
+      "summary": "Augments the late-stage schedule with a TTT burst replay of recent batches before EMA to sharpen weights for the GPTQ-lite quantized run.",
       "tags": [
         "training-schedule",
-        "quantization"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -76,15 +123,15 @@
       "prNumber": 444,
       "title": "[Non-Record] MLP3x + WD0.04 + OrthoInit + Sliding Eval — 1.4536 BPB",
       "status": "open",
-      "updatedAt": "2026-03-22T17:23:20Z",
-      "headSha": "89c0cee2790da03e9af56372a2fa337ece953d83",
-      "generatedAt": "2026-03-22T17:41:36.703Z",
-      "summary": "Combines 3× MLP width, Muon decoupled weight decay, orthogonal init, and sliding-window eval to keep int8+zlib quant gap minimal while staying <16MB.",
+      "updatedAt": "2026-03-22T18:05:33Z",
+      "headSha": "99ada831aa15a83949d4221a812c3b0e8b156c52",
+      "generatedAt": "2026-03-22T18:11:48.408Z",
+      "summary": "Combines 3× FFN width, decoupled weight decay, orthogonal init, and sliding-window eval to tighten post-quant BPB on int8 artifacts.",
       "tags": [
         "architecture",
         "optimizer",
         "evaluation",
-        "quantization"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -168,10 +215,10 @@
       "prNumber": 438,
       "title": "Non-Record: Replace Muon optimizer with NorMuon for baseline (1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-22T16:58:48Z",
+      "updatedAt": "2026-03-22T18:02:05Z",
       "headSha": "c7bb443d0ee226bfa268c99b6a40d06fea9e5ee4",
-      "generatedAt": "2026-03-22T17:11:21.105Z",
-      "summary": "Integrates NorMuon per-neuron normalized updates into the Muon baseline around the Newton-Schulz step to keep update norms consistent with a beta2 EMA.",
+      "generatedAt": "2026-03-22T18:11:52.559Z",
+      "summary": "Substitutes Muon optimizer with NorMuon by normalizing per-neuron update norms after the Newton-Schulz step in the baseline run.",
       "tags": [
         "optimizer",
         "non-record"
@@ -310,14 +357,14 @@
       "prNumber": 432,
       "title": "Add non-record 1x5090 autoresearch submission with two-campaign analysis",
       "status": "open",
-      "updatedAt": "2026-03-22T15:50:45Z",
+      "updatedAt": "2026-03-22T17:45:23Z",
       "headSha": "34e14808c1b8168d4056e6462c46af7a0569b9ad",
-      "generatedAt": "2026-03-22T16:11:01.808Z",
-      "summary": "Git-native autoresearch on one 5090 rebalances recurrence, widens unique tail MLPs, and levers low-rank Q plus precise quant spends.",
+      "generatedAt": "2026-03-22T18:11:57.156Z",
+      "summary": "Git-native autoresearch on a 5090 iteratively rebalanced tail capacity, low-rank q_proj, and targeted quantization/precision scheduling to squeeze BLEU.",
       "tags": [
         "architecture",
-        "attention",
         "quantization",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -824,13 +871,13 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T17:27:06Z",
-      "headSha": "0e6fd680fdc7fba8bc654b08ba51361ca14f54e1",
-      "generatedAt": "2026-03-22T17:42:01.587Z",
-      "summary": "Stacks EMA with tight SWA plus earlier late QAT on a quantized 11-layer Transformer with VE128/Partial RoPE and longer warmdown.",
+      "updatedAt": "2026-03-22T18:05:29Z",
+      "headSha": "1f65df5252fbcdc60731d4068b1c429364c153e6",
+      "generatedAt": "2026-03-22T18:12:03.559Z",
+      "summary": "Stacks EMA with tight SWA checkpoints on an 11-layer GQA model while moving up Late QAT and warmdown to shrink the quant gap.",
       "tags": [
-        "quantization",
         "optimizer",
+        "quantization",
         "training-schedule",
         "architecture"
       ],
@@ -4360,16 +4407,17 @@
     },
     {
       "prNumber": 194,
-      "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1480 BPB (3-seed mean)",
+      "title": "Record: 11L Int6 QAT + SmearGate + SWA + SAM: 1.1480 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-20T20:27:25Z",
+      "updatedAt": "2026-03-22T17:52:50Z",
       "headSha": "343081c57bb3430a136db09100f708838a235177",
-      "generatedAt": "2026-03-20T20:55:15.682Z",
-      "summary": "11-layer int6 QAT model adds per-dim SmearGate, SWA, and strong Muon decay to stabilize weights for quantization-friendly inference.",
+      "generatedAt": "2026-03-22T18:12:11.164Z",
+      "summary": "11-layer 512d model combines int6 QAT, per-dim SmearGate, SAM, SWA, and Muon weight decay to stay quantization-friendly under 16MB.",
       "tags": [
         "quantization",
-        "optimizer",
-        "architecture"
+        "architecture",
+        "training-schedule",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5742,28 +5790,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-114.json"
-    },
-    {
-      "prNumber": 112,
-      "title": "Depth Recurrence 5x3 d672 SwiGLU",
-      "status": "closed",
-      "updatedAt": "2026-03-22T17:11:32Z",
-      "headSha": "34c73d8c0a847fa9a661f6b167d7406d547c4814",
-      "generatedAt": "2026-03-22T17:42:09.902Z",
-      "summary": "Parameter-sharing depth recurrence reuses five unique blocks thrice to deliver a 15-layer-equivalent, 672-width Transformer with SwiGLU and 2048-length context.",
-      "tags": [
-        "architecture",
-        "depth-width"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-112.json"
     },
     {
       "prNumber": 111,

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-20T20:55:15.682Z",
+  "generatedAt": "2026-03-22T18:12:11.164Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 194,
-    "title": "11L Int6 QAT + Per-Dim SmearGate + SWA: 1.1480 BPB (3-seed mean)",
+    "title": "Record: 11L Int6 QAT + SmearGate + SWA + SAM: 1.1480 BPB (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-20T20:27:25Z",
+    "updatedAt": "2026-03-22T17:52:50Z",
     "headSha": "343081c57bb3430a136db09100f708838a235177",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/194",
     "authorLogin": "baudrillardsgh0st"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer int6 QAT model adds per-dim SmearGate, SWA, and strong Muon decay to stabilize weights for quantization-friendly inference.",
+    "summary": "11-layer 512d model combines int6 QAT, per-dim SmearGate, SAM, SWA, and Muon weight decay to stay quantization-friendly under 16MB.",
     "tags": [
       "quantization",
-      "optimizer",
-      "architecture"
+      "architecture",
+      "training-schedule",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-dim SmearGate blending current and previous embeddings",
-      "Int6 QAT with SWA-averaged Muon weights for quantization fidelity",
-      "High Muon weight decay plus fp16 tied-embedding passthrough"
+      "Per-dimension SmearGate + SAM flatten the loss for robust int6 activations",
+      "SWA averaging with high Muon weight decay smooths weights before quantization",
+      "Sliding-window eval (stride 64) scores every token with full 2048 context"
     ]
   },
   "compatibility": {

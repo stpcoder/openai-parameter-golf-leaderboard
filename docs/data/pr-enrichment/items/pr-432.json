@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T16:11:01.808Z",
+  "generatedAt": "2026-03-22T18:11:57.156Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 432,
     "title": "Add non-record 1x5090 autoresearch submission with two-campaign analysis",
     "state": "open",
-    "updatedAt": "2026-03-22T15:50:45Z",
+    "updatedAt": "2026-03-22T17:45:23Z",
     "headSha": "34e14808c1b8168d4056e6462c46af7a0569b9ad",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/432",
     "authorLogin": "jadechip"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Git-native autoresearch on one 5090 rebalances recurrence, widens unique tail MLPs, and levers low-rank Q plus precise quant spends.",
+    "summary": "Git-native autoresearch on a 5090 iteratively rebalanced tail capacity, low-rank q_proj, and targeted quantization/precision scheduling to squeeze BLEU.",
     "tags": [
       "architecture",
-      "attention",
       "quantization",
+      "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Git-native autoresearch loop using commit history as search memory",
-      "Low-rank q_proj with final-tail full-rank Q and fp16 tied embeddings",
-      "Targeted precision spends via attention-QAT toggles and warmup"
+      "compact carrier plus fatter tail blocks",
+      "low-rank q_proj with final-tail full-rank exception",
+      "targeted fake-quant scheduling with attention QAT off"
     ]
   },
   "compatibility": {

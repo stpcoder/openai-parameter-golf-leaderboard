@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T17:11:21.105Z",
+  "generatedAt": "2026-03-22T18:11:52.559Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 438,
     "title": "Non-Record: Replace Muon optimizer with NorMuon for baseline (1xH100)",
     "state": "open",
-    "updatedAt": "2026-03-22T16:58:48Z",
+    "updatedAt": "2026-03-22T18:02:05Z",
     "headSha": "c7bb443d0ee226bfa268c99b6a40d06fea9e5ee4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/438",
     "authorLogin": "stevenshinechen"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Integrates NorMuon per-neuron normalized updates into the Muon baseline around the Newton-Schulz step to keep update norms consistent with a beta2 EMA.",
+    "summary": "Substitutes Muon optimizer with NorMuon by normalizing per-neuron update norms after the Newton-Schulz step in the baseline run.",
     "tags": [
       "optimizer",
       "non-record"
@@ -27,8 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "per-neuron update normalization post-Newton-Schulz",
-      "second-order EMA norm buffer (beta2=0.95)"
+      "Second-order EMA per-neuron norm scaling",
+      "Newton-Schulz orthogonalization before Muon correction",
+      "Bfloat16-friendly buffer and clamp tweaks"
     ]
   },
   "compatibility": {
