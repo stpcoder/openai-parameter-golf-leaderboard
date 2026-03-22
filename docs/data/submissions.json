@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T10:38:13.043Z",
+  "generatedAt": "2026-03-22T11:08:50.897Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -622,6 +622,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/15776db61ed3450a37bb5727628ae0f7bdd77f1b/records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/15776db61ed3450a37bb5727628ae0f7bdd77f1b/records/track_10min_16mb/2026-03-22_11L_EMA_GPTQ-lite_warmdown3500_QAT015_1.1233",
         "pr": "https://github.com/openai/parameter-golf/pull/414",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-22_11L_XSA4_EMA_Modal_1-12296_Over16MB",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB",
+        "folderPath": "records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB",
+        "submissionPath": "records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/train_gpt.py"
+      },
+      "submission": {
+        "author": "Kshitiz",
+        "githubId": "kshitizz36",
+        "name": "11L XSA4 EMA Modal Run (Over 16MB)",
+        "blurb": "Non-record reference run from Modal app logs. Strong sliding-window BPB (1.12296159) but invalid for 16MB leaderboard due to oversized int6+zstd artifact (20,906,280 bytes).",
+        "date": "2026-03-21T18:45:44Z"
+      },
+      "metrics": {
+        "valBpb": 1.12296159,
+        "valLoss": 1.89606859,
+        "preQuantValBpb": 1.1454,
+        "preQuantValLoss": 1.934,
+        "stepStop": 6900,
+        "wallclockSeconds": 600.027,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 20906280,
+        "bytesCode": 75697,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 416,
+        "title": "Add non-record 11L XSA4 EMA run (val_bpb 1.12296, over 16MB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/416",
+        "authorLogin": "kshitizz36",
+        "authorName": null,
+        "createdAt": "2026-03-22T10:39:59Z",
+        "updatedAt": "2026-03-22T10:39:59Z",
+        "headSha": "c156b369189207a4e5fe6c62fa035aeddd52084c",
+        "headRepo": "kshitizz36/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c156b369189207a4e5fe6c62fa035aeddd52084c/records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/c156b369189207a4e5fe6c62fa035aeddd52084c/records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/c156b369189207a4e5fe6c62fa035aeddd52084c/records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/c156b369189207a4e5fe6c62fa035aeddd52084c/records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/c156b369189207a4e5fe6c62fa035aeddd52084c/records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB",
+        "pr": "https://github.com/openai/parameter-golf/pull/416",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -18779,17 +18856,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 415,
-        "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (val_bpb=1.1216)",
+        "number": 417,
+        "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (3-seed mean val_bpb=1.1227)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/415",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/417",
         "authorLogin": "fbedev",
         "authorName": null,
-        "createdAt": "2026-03-22T09:08:03Z",
-        "updatedAt": "2026-03-22T09:12:05Z",
-        "headSha": "358a426ed9bf621a6814ece8d4901e4127633af4",
+        "createdAt": "2026-03-22T10:40:40Z",
+        "updatedAt": "2026-03-22T10:44:18Z",
+        "headSha": "550a5db6cda3e7c95b9ccb269a0399104eb193ff",
         "headRepo": "fbedev/parameter-golf"
       },
       "links": {
@@ -18798,7 +18875,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/358a426ed9bf621a6814ece8d4901e4127633af4/records/track_10min_16mb/2026-03-22_TwoPhase_TTT_NormRepair/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/358a426ed9bf621a6814ece8d4901e4127633af4/records/track_10min_16mb/2026-03-22_TwoPhase_TTT_NormRepair/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/358a426ed9bf621a6814ece8d4901e4127633af4/records/track_10min_16mb/2026-03-22_TwoPhase_TTT_NormRepair",
-        "pr": "https://github.com/openai/parameter-golf/pull/415",
+        "pr": "https://github.com/openai/parameter-golf/pull/417",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -20088,17 +20165,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 415,
-        "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (val_bpb=1.1216)",
+        "number": 417,
+        "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (3-seed mean val_bpb=1.1227)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/415",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/417",
         "authorLogin": "fbedev",
         "authorName": null,
-        "createdAt": "2026-03-22T09:08:03Z",
-        "updatedAt": "2026-03-22T09:12:05Z",
-        "headSha": "358a426ed9bf621a6814ece8d4901e4127633af4",
+        "createdAt": "2026-03-22T10:40:40Z",
+        "updatedAt": "2026-03-22T10:44:18Z",
+        "headSha": "550a5db6cda3e7c95b9ccb269a0399104eb193ff",
         "headRepo": "fbedev/parameter-golf"
       },
       "links": {
@@ -20107,7 +20184,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/e83a2778a4b5ec947f213ea8ad59f0754f70b8db/records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32",
-        "pr": "https://github.com/openai/parameter-golf/pull/415",
+        "pr": "https://github.com/openai/parameter-golf/pull/417",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

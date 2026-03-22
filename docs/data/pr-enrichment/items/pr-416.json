@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-22T11:09:05.713Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 416,
+    "title": "Add non-record 11L XSA4 EMA run (val_bpb 1.12296, over 16MB)",
+    "state": "open",
+    "updatedAt": "2026-03-22T10:39:59Z",
+    "headSha": "c156b369189207a4e5fe6c62fa035aeddd52084c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/416",
+    "authorLogin": "kshitizz36"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_11L_XSA4_EMA_Modal_1.12296_Over16MB/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-leaderboard 11L XSA4 EMA Modal run focused on int6 quantization with sliding-window evaluation despite exceeding size limit.",
+    "tags": [
+      "non-record",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer XSA4 with EMA training",
+      "int6 quantization with sliding-window evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

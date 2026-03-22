@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T11:08:58.835Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 417,
+    "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (3-seed mean val_bpb=1.1227)",
+    "state": "open",
+    "updatedAt": "2026-03-22T10:44:18Z",
+    "headSha": "550a5db6cda3e7c95b9ccb269a0399104eb193ff",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/417",
+    "authorLogin": "fbedev"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_TwoPhase_TTT_NormRepair/README.md",
+      "records/track_10min_16mb/2026-03-21_QAT_BigramHash12K_Stride32/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "11-layer XSA model uses FA3 Hopper plus two-phase TTT (norm recalibration then selective-block adaptation) atop tight SWA/int6 quantization.",
+    "tags": [
+      "attention",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "FA3 Hopper attention to speed 11L XSA base",
+      "Two-phase TTT: norm recalibration followed by selective-block adaptation",
+      "Tight SWA with late int6 quantization and pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

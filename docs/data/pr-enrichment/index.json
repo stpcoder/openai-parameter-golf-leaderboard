@@ -1,31 +1,52 @@
 {
-  "generatedAt": "2026-03-22T10:08:54.642Z",
+  "generatedAt": "2026-03-22T11:09:05.779Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 415,
-      "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (val_bpb=1.1216)",
+      "prNumber": 417,
+      "title": "Record: 11L XSA4 + Tight SWA + FA3 + Two-Phase TTT (3-seed mean val_bpb=1.1227)",
       "status": "open",
-      "updatedAt": "2026-03-22T09:12:05Z",
-      "headSha": "358a426ed9bf621a6814ece8d4901e4127633af4",
-      "generatedAt": "2026-03-22T10:08:27.190Z",
-      "summary": "FA3 Hopper base with int6-quantized 11L+SWA model, then two-phase TTT (norm-only recalibration followed by selective last-block adaptation).",
+      "updatedAt": "2026-03-22T10:44:18Z",
+      "headSha": "550a5db6cda3e7c95b9ccb269a0399104eb193ff",
+      "generatedAt": "2026-03-22T11:08:58.835Z",
+      "summary": "11-layer XSA model uses FA3 Hopper plus two-phase TTT (norm recalibration then selective-block adaptation) atop tight SWA/int6 quantization.",
       "tags": [
-        "val-only",
-        "architecture",
+        "attention",
         "quantization",
         "training-schedule"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
-      "file": "items/pr-415.json"
+      "file": "items/pr-417.json"
+    },
+    {
+      "prNumber": 416,
+      "title": "Add non-record 11L XSA4 EMA run (val_bpb 1.12296, over 16MB)",
+      "status": "open",
+      "updatedAt": "2026-03-22T10:39:59Z",
+      "headSha": "c156b369189207a4e5fe6c62fa035aeddd52084c",
+      "generatedAt": "2026-03-22T11:09:05.713Z",
+      "summary": "Non-leaderboard 11L XSA4 EMA Modal run focused on int6 quantization with sliding-window evaluation despite exceeding size limit.",
+      "tags": [
+        "non-record",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-416.json"
     },
     {
       "prNumber": 414,
