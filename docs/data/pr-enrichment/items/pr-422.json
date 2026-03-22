@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T16:11:13.180Z",
+  "generatedAt": "2026-03-22T17:11:42.407Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 422,
     "title": "Record: 11L GradQuant + EMA + Sliding Eval (val_bpb=1.1416)",
     "state": "open",
-    "updatedAt": "2026-03-22T16:02:02Z",
-    "headSha": "acddb9d59de4cf809952d43debadfcec44a6f426",
+    "updatedAt": "2026-03-22T16:56:27Z",
+    "headSha": "a979c5cfd212bf8a236796a3b6a17788c65b2f81",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/422",
     "authorLogin": "albertorkive"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Muon-trained 11L model uses EMA, SmearGate/NTK-aware RoPE, and gradient-guided per-tensor int5–7 quantization with sliding-window eval for compact inference.",
+    "summary": "Adaptive per-tensor int5/6/7 quantization with EMA, SmearGate+NTK-RoPE+XSA 11-layer model, and sliding-window eval for full validation coverage.",
     "tags": [
       "quantization",
-      "optimizer",
       "attention",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Gradient-guided per-tensor int5/int6/int7 quantization",
-      "Muon optimizer + EMA with SmearGate/NTK-aware RoPE",
-      "Sliding-window evaluation covering full validation set"
+      "Gradient-guided per-tensor int5/6/7 quantization",
+      "SmearGate residual mixing with NTK-aware RoPE and XSA on 11 layers",
+      "EMA from init plus sliding-window eval stride=64 for full coverage"
     ]
   },
   "compatibility": {

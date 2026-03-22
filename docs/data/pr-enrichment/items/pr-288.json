@@ -1,35 +1,38 @@
 {
-  "generatedAt": "2026-03-22T16:41:04.445Z",
+  "generatedAt": "2026-03-22T17:11:53.570Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 288,
-    "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
+    "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
     "state": "open",
-    "updatedAt": "2026-03-22T16:19:00Z",
-    "headSha": "35dd5bf9e90f6b4a795a3af15ed93a06600e2bc7",
+    "updatedAt": "2026-03-22T16:54:58Z",
+    "headSha": "a4b92e770c96c1310562b3807c5c14d8cc003650",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/288",
     "authorLogin": "trasnake87"
   },
   "inputs": {
-    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
     "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_HybridLoopedTransformer_8xH100/README.md",
       "records/track_non_record_16mb/2026-03-20_ContentSmearGate_RTX4070/README.md"
     ],
-    "submissionCount": 1
+    "submissionCount": 2
   },
   "output": {
-    "summary": "Modulate SmearGate blend ratios with dot-product similarity between adjacent embeddings so similar tokens blend more while dissimilar ones stay independent.",
+    "summary": "Hybrid depth-recurrent transformer loops 8 layers twice with int6 entry/exit plus int8 shared depth to stop quantization compounding and adds novel word/copy/frequency inputs.",
     "tags": [
       "architecture",
+      "depth-width",
+      "quantization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "content-dependent gating via adjacent similarity",
-      "dot-product modulation of learned gate",
-      "sigmoid blend between current and previous embeddings"
+      "Int6 entry/exit with int8 shared looped layers",
+      "Zero-cost word-position/copy/unigram frequency input features",
+      "Block-level torch.compile for looped depth recurrence"
     ]
   },
   "compatibility": {

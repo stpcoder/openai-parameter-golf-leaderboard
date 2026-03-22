@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-22T17:11:06.522Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 442,
+    "title": "Record: 11L EMA + AdamW TTT 10ep (mean val_bpb=1.1027)",
+    "state": "open",
+    "updatedAt": "2026-03-22T17:07:13Z",
+    "headSha": "aef01ee4b91efc3f9ef0164b713b13551db91bf2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/442",
+    "authorLogin": "sjp611"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_11L_EMA_AdamWTTT10ep_1.1027/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Replaces SGD with AdamW and a 10-epoch TTT schedule atop the existing 11L EMA model for faster test-time fine-tuning.",
+    "tags": [
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "AdamW-based test-time fine-tuning (lr0.0005, wd0)",
+      "10-epoch TTT schedule to cut runtime while retaining EMA 0.997 setup"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

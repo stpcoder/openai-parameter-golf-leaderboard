@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T17:11:31.185Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 436,
+    "title": "Non-Record: 8L + BigramHash(12288) + Systematic HyperOpt (val_bpb=1.2392, 1xH100, 129 experiments)",
+    "state": "open",
+    "updatedAt": "2026-03-22T16:50:05Z",
+    "headSha": "b57868f96947df6e529755cd6fc4392bde117d91",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/436",
+    "authorLogin": "CrimsonSithria"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_1xH100_Systematic_HyperOpt_129exp/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "8-layer 512d GQA stack with Muon tuning, BigramHash projection, and throughput-aware hyperparameter scaling on 1×H100.",
+    "tags": [
+      "non-record",
+      "architecture",
+      "training-schedule",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BigramHash dim=128 projection to shrink artifacts",
+      "Systematic LR/WD/batch scaling for throughput-bound single-GPU training",
+      "Muon optimizer on 4×MLP relu^2 architecture"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

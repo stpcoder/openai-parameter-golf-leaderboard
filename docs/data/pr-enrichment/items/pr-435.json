@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T16:40:50.446Z",
+  "generatedAt": "2026-03-22T17:11:35.864Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
     "title": "Radial bitnet submission",
     "state": "open",
-    "updatedAt": "2026-03-22T16:31:21Z",
+    "updatedAt": "2026-03-22T16:44:16Z",
     "headSha": "277c34c0853d0e6786b61cfd8a22b9128535ca2f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Ternary BitNet architecture injects radial positional math and a fractal optimizer to squeeze 15.6M params under 16MB.",
+    "summary": "Ternary BitNet projections with RadialEncoding positional injection and FRO optimization pack 15.6M params into the 16MB parameter-golf limit.",
     "tags": [
       "quantization",
-      "optimizer",
-      "positional-encoding"
+      "architecture",
+      "positional-encoding",
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "strict ternary BitNet weight matrices across all projections",
-      "analytical radial encoding replaces learned positional embeddings",
-      "Fractal Resonant Optimization tailored for quantized convergence"
+      "Ternary BitNet projections",
+      "RadialEncoding positional injection",
+      "FRO Fractal Resonant Optimization"
     ]
   },
   "compatibility": {

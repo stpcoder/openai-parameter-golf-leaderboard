@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T17:11:15.987Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 439,
+    "title": "feat: AETHER block-sparse attention with Lyapunov-stable governor (12L)",
+    "state": "open",
+    "updatedAt": "2026-03-22T17:07:12Z",
+    "headSha": "9b33fecbe29d90a1b4b82aa9fa825b2727fbc79a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/439",
+    "authorLogin": "teerthsharma"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_AETHER_SparseSDP_Governor/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds AETHER block-sparse SDPA with Cauchy-Schwarz pruning plus a Lyapunov PD governor to fit a 12-layer GPT within the same budget.",
+    "tags": [
+      "attention",
+      "architecture",
+      "training-schedule",
+      "regularization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Block-sparse SDPA with Cauchy-Schwarz block pruning",
+      "Lyapunov-stable PD governor adapts sparsity target",
+      "Chebyshev guard bounds false reclamations"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

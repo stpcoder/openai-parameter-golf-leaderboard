@@ -1,20 +1,160 @@
 {
-  "generatedAt": "2026-03-22T16:41:04.488Z",
+  "generatedAt": "2026-03-22T17:11:53.611Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 442,
+      "title": "Record: 11L EMA + AdamW TTT 10ep (mean val_bpb=1.1027)",
+      "status": "open",
+      "updatedAt": "2026-03-22T17:07:13Z",
+      "headSha": "aef01ee4b91efc3f9ef0164b713b13551db91bf2",
+      "generatedAt": "2026-03-22T17:11:06.522Z",
+      "summary": "Replaces SGD with AdamW and a 10-epoch TTT schedule atop the existing 11L EMA model for faster test-time fine-tuning.",
+      "tags": [
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-442.json"
+    },
+    {
+      "prNumber": 440,
+      "title": "[10min/16MB] TrigramHash + EMA-SWA + Int4 QAT — val_bpb 1.2219",
+      "status": "open",
+      "updatedAt": "2026-03-22T16:54:44Z",
+      "headSha": "f7ff56b58723b1e5926eb585f07b25cfea3057f1",
+      "generatedAt": "2026-03-22T17:11:11.739Z",
+      "summary": "Combines trigram-hash embeddings, EMA-weighted SWA, and int4 MLP QAT to squeeze in an 11th layer within the 16MB budget.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-440.json"
+    },
+    {
+      "prNumber": 439,
+      "title": "feat: AETHER block-sparse attention with Lyapunov-stable governor (12L)",
+      "status": "open",
+      "updatedAt": "2026-03-22T17:07:12Z",
+      "headSha": "9b33fecbe29d90a1b4b82aa9fa825b2727fbc79a",
+      "generatedAt": "2026-03-22T17:11:15.987Z",
+      "summary": "Adds AETHER block-sparse SDPA with Cauchy-Schwarz pruning plus a Lyapunov PD governor to fit a 12-layer GPT within the same budget.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-439.json"
+    },
+    {
+      "prNumber": 438,
+      "title": "Non-Record: Replace Muon optimizer with NorMuon for baseline (1xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-22T16:58:48Z",
+      "headSha": "c7bb443d0ee226bfa268c99b6a40d06fea9e5ee4",
+      "generatedAt": "2026-03-22T17:11:21.105Z",
+      "summary": "Integrates NorMuon per-neuron normalized updates into the Muon baseline around the Newton-Schulz step to keep update norms consistent with a beta2 EMA.",
+      "tags": [
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-438.json"
+    },
+    {
+      "prNumber": 437,
+      "title": "commit non-record",
+      "status": "open",
+      "updatedAt": "2026-03-22T16:54:09Z",
+      "headSha": "10652297740fd79c9969bbcf65729d2503cf884e",
+      "generatedAt": "2026-03-22T17:11:25.860Z",
+      "summary": "Tiny auxiliary network predicts next-token leading-space signal and injects low-rank residual logit edits via the tied embeddings while keeping the base LM fixed.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "tokenization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-437.json"
+    },
+    {
+      "prNumber": 436,
+      "title": "Non-Record: 8L + BigramHash(12288) + Systematic HyperOpt (val_bpb=1.2392, 1xH100, 129 experiments)",
+      "status": "open",
+      "updatedAt": "2026-03-22T16:50:05Z",
+      "headSha": "b57868f96947df6e529755cd6fc4392bde117d91",
+      "generatedAt": "2026-03-22T17:11:31.185Z",
+      "summary": "8-layer 512d GQA stack with Muon tuning, BigramHash projection, and throughput-aware hyperparameter scaling on 1×H100.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "training-schedule",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-436.json"
+    },
+    {
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-22T16:31:21Z",
+      "updatedAt": "2026-03-22T16:44:16Z",
       "headSha": "277c34c0853d0e6786b61cfd8a22b9128535ca2f",
-      "generatedAt": "2026-03-22T16:40:50.446Z",
-      "summary": "Ternary BitNet architecture injects radial positional math and a fractal optimizer to squeeze 15.6M params under 16MB.",
+      "generatedAt": "2026-03-22T17:11:35.864Z",
+      "summary": "Ternary BitNet projections with RadialEncoding positional injection and FRO optimization pack 15.6M params into the 16MB parameter-golf limit.",
       "tags": [
         "quantization",
-        "optimizer",
-        "positional-encoding"
+        "architecture",
+        "positional-encoding",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -266,13 +406,12 @@
       "prNumber": 422,
       "title": "Record: 11L GradQuant + EMA + Sliding Eval (val_bpb=1.1416)",
       "status": "open",
-      "updatedAt": "2026-03-22T16:02:02Z",
-      "headSha": "acddb9d59de4cf809952d43debadfcec44a6f426",
-      "generatedAt": "2026-03-22T16:11:13.180Z",
-      "summary": "Muon-trained 11L model uses EMA, SmearGate/NTK-aware RoPE, and gradient-guided per-tensor int5–7 quantization with sliding-window eval for compact inference.",
+      "updatedAt": "2026-03-22T16:56:27Z",
+      "headSha": "a979c5cfd212bf8a236796a3b6a17788c65b2f81",
+      "generatedAt": "2026-03-22T17:11:42.407Z",
+      "summary": "Adaptive per-tensor int5/6/7 quantization with EMA, SmearGate+NTK-RoPE+XSA 11-layer model, and sliding-window eval for full validation coverage.",
       "tags": [
         "quantization",
-        "optimizer",
         "attention",
         "evaluation"
       ],
@@ -593,14 +732,14 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-22T16:36:51Z",
-      "headSha": "b8914a5ec4f5e753380415819a6d031ca5112097",
-      "generatedAt": "2026-03-22T16:40:54.334Z",
-      "summary": "Stack EMA with tight SWA, extend the warmdown tail, and trigger late int6 QAT earlier on the 11-layer VE128+Partial RoPE model with LN scaling.",
+      "updatedAt": "2026-03-22T17:11:14Z",
+      "headSha": "0ee493d2f12aba42cef047582bf2f499a4b11839",
+      "generatedAt": "2026-03-22T17:11:48.608Z",
+      "summary": "EMA stacked with Tight SWA, earlier late-stage int6 QAT, and longer warmdown on the 11-layer FlashAttention U-Net-like model with VE, partial RoPE, and LN scaling.",
       "tags": [
-        "architecture",
-        "training-schedule",
-        "quantization"
+        "quantization",
+        "optimizer",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2628,14 +2767,16 @@
     },
     {
       "prNumber": 288,
-      "title": "Non-record: Content-Dependent SmearGate (1.6795 BPB, RTX 4070)",
+      "title": "Non-record: Hybrid Depth-Recurrent Transformer + Int5 Quantization Studies",
       "status": "open",
-      "updatedAt": "2026-03-22T16:19:00Z",
-      "headSha": "35dd5bf9e90f6b4a795a3af15ed93a06600e2bc7",
-      "generatedAt": "2026-03-22T16:41:04.445Z",
-      "summary": "Modulate SmearGate blend ratios with dot-product similarity between adjacent embeddings so similar tokens blend more while dissimilar ones stay independent.",
+      "updatedAt": "2026-03-22T16:54:58Z",
+      "headSha": "a4b92e770c96c1310562b3807c5c14d8cc003650",
+      "generatedAt": "2026-03-22T17:11:53.570Z",
+      "summary": "Hybrid depth-recurrent transformer loops 8 layers twice with int6 entry/exit plus int8 shared depth to stop quantization compounding and adds novel word/copy/frequency inputs.",
       "tags": [
         "architecture",
+        "depth-width",
+        "quantization",
         "non-record"
       ],
       "flags": {
