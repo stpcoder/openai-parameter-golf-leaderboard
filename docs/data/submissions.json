@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-22T12:39:13.703Z",
+  "generatedAt": "2026-03-22T13:09:30.909Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3471,6 +3471,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/b1f08746a4a958b2b0c2029cedbc94c134292eab/records/track_non_record_16mb/2026-03-21_LoopedTransformerDesign_1.1462/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/b1f08746a4a958b2b0c2029cedbc94c134292eab/records/track_non_record_16mb/2026-03-21_LoopedTransformerDesign_1.1462",
         "pr": "https://github.com/openai/parameter-golf/pull/325",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-22_11L_MixedInt56_QAT_TTT_1-1466",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-22_11L_MixedInt56_QAT_TTT_1.1466",
+        "folderPath": "records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466",
+        "submissionPath": "records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466/train_gpt.py"
+      },
+      "submission": {
+        "author": "Vytautas Bunevicius",
+        "githubId": "vytautas-bunevicius",
+        "name": "11L mixed int5/int6 + working QAT + TTT",
+        "blurb": "Non-record submission stacking 8 techniques on PR #315: working QAT (fixed dead code), mixed int5/int6 quantization, test-time training, BigramHash(10240), memory tokens, backout connection, per-head temperature, eval stride 32. Ran with PyTorch SDPA (no FA3), 5129 steps at 110ms/step.",
+        "date": "2026-03-22T12:20:51Z"
+      },
+      "metrics": {
+        "valBpb": 1.14657797,
+        "valLoss": 1.93594245,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14706424,
+        "bytesCode": 75257,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 421,
+        "title": "Non-record: 11L mixed int5/int6 + working QAT + TTT (val_bpb=1.1466)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/421",
+        "authorLogin": "vytautas-bunevicius",
+        "authorName": null,
+        "createdAt": "2026-03-22T12:48:33Z",
+        "updatedAt": "2026-03-22T12:51:19Z",
+        "headSha": "fca68ed408e27161537c59f5fe2e157db07caddb",
+        "headRepo": "vytautas-bunevicius/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fca68ed408e27161537c59f5fe2e157db07caddb/records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/fca68ed408e27161537c59f5fe2e157db07caddb/records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/fca68ed408e27161537c59f5fe2e157db07caddb/records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/fca68ed408e27161537c59f5fe2e157db07caddb/records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/fca68ed408e27161537c59f5fe2e157db07caddb/records/track_10min_16mb/2026-03-22_11L_MixedInt56_QAT_TTT_1.1466",
+        "pr": "https://github.com/openai/parameter-golf/pull/421",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
