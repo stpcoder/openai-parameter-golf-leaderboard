@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T13:09:42.153Z",
+  "generatedAt": "2026-03-22T13:40:08.560Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 421,
     "title": "Non-record: 11L mixed int5/int6 + working QAT + TTT (val_bpb=1.1466)",
     "state": "open",
-    "updatedAt": "2026-03-22T12:51:19Z",
-    "headSha": "fca68ed408e27161537c59f5fe2e157db07caddb",
+    "updatedAt": "2026-03-22T13:21:15Z",
+    "headSha": "c4d2bef540c7efba779e9130ee3640dfc26f9011",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/421",
     "authorLogin": "vytautas-bunevicius"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mixed int5/int6 QAT with post-quant SGD (TTT), BigramHash + memory tokens, and per-head temps shrink the 11L model while keeping stride 32.",
+    "summary": "Fixes QAT compilation, uses mixed int5/int6 quant with pruning, then adds test-time training plus memory tokens, BigramHash, per-head temps, and a backout.",
     "tags": [
       "quantization",
-      "training-schedule",
-      "attention",
-      "evaluation"
+      "evaluation",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5/int6 QAT quantization",
-      "Post-quant SGD test-time training",
-      "BigramHash + memory tokens with per-head temperature"
+      "Working QAT + mixed int5/int6 quant with magnitude pruning",
+      "Post-quant test-time training on validation tokens",
+      "BigramHash 10240 with memory tokens, backout connection, and per-head temperatures"
     ]
   },
   "compatibility": {

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T13:39:51.922Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 424,
+    "title": "Add non-record EMA and adaptive export exploration",
+    "state": "open",
+    "updatedAt": "2026-03-22T13:39:13Z",
+    "headSha": "94aeda35513990af3d2854bf3fa57b4006f0b399",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/424",
+    "authorLogin": "someone114514"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_Baseline_EMA_AdaptiveExport/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends Int6 MLP3x+SmearGate+BigramHash+Muon baseline with late-stage EMA smoothing and budget-aware export pruning to explore sub-16MB feasibility.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Late-stage EMA smoothing (β=0.9998, start at 80%) to refine final weights.",
+      "Adaptive export-time pruning search over 0–5% ratios targeting a 15.95MB artifact budget.",
+      "Retains the quantized MLP3x backbone with SmearGate, BigramHash, and Muon infrastructure."
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

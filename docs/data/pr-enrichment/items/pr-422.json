@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-22T13:39:59.732Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 422,
+    "title": "Record: 11L GradQuant + EMA + Sliding Eval (val_bpb=1.1416)",
+    "state": "open",
+    "updatedAt": "2026-03-22T13:28:06Z",
+    "headSha": "93389ce54e7127e46545ec1cfeee157bb877d074",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/422",
+    "authorLogin": "albertorkive"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_11L_GradQuant_EMA_SlidingEval/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GPT with SmearGate+XSA residuals, NTK-aware RoPE, Muon+EMA training, and gradient-guided int5-7 quantization plus sliding eval stride 64.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Gradient-guided adaptive int5/int6/int7 quantization based on gradient sensitivity",
+      "SmearGate+XSA residual mixing with NTK-aware RoPE positional encoding",
+      "Muon optimizer with EMA paired with sliding-window stride-64 evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

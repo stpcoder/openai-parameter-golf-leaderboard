@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-21T18:34:52.502Z",
+  "generatedAt": "2026-03-22T13:40:15.541Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 356,
     "title": "Non-record: PR315 repro on 1xH100 PCIe, int6+zstd (val_bpb=1.8338)",
     "state": "open",
-    "updatedAt": "2026-03-21T18:19:12Z",
-    "headSha": "bd4300452ada4ba791b244a1b93e426b4e294943",
+    "updatedAt": "2026-03-22T13:36:23Z",
+    "headSha": "fbaecc717f5de045c2d81316447d61ecd67f038c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/356",
     "authorLogin": "sjp611"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Reproduced PR315 pipeline on one H100 PCIe using FlashAttention2 and Muon with shortened warmup/warmdown for int6+zstd QAT.",
+    "summary": "Reproduces PR315 XSA+EMA+PartialRoPE+LateQAT flow on 1×H100 PCIe using FlashAttention2 plus 1GPU warmdown/momentum tweaks and int6+zstd compression.",
     "tags": [
+      "sliding-window-eval",
       "quantization",
       "training-schedule",
-      "optimizer",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "PR315 recipe (XSA+EMA+PartialRoPE+LateQAT) adapted for single-GPU constraints",
-      "FlashAttention2 swap with Muon optimizer and tightened warmup/warmdown schedule",
-      "Sliding-window evaluation after int6+zstd quantization"
+      "FlashAttention2 replacing FA3",
+      "Warmdown/momentum schedule tuned for single GPU budget",
+      "LateQAT int6+zstd artifact"
     ]
   },
   "compatibility": {
