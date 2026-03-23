@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T04:44:25.544Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 499,
+    "title": "The Frugendorff: Recursive Weight Sharing + MLP 4x (1.1478 BPB, 15.19MB)",
+    "state": "open",
+    "updatedAt": "2026-03-23T04:31:05Z",
+    "headSha": "5305a17cb19ec97c0d0b2afa09fb65f466911592",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/499",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_Frugendorff_Squared_6x2_640d_MLP4/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Fractal weight sharing loops 6 unique transformer blocks twice to afford a 4x MLP expansion within the 16MB limit.",
+    "tags": [
+      "architecture",
+      "compression",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Fractal looping of 6 shared transformer blocks for 12 effective layers",
+      "MLP 4x expansion with relu-squared activations",
+      "Muon+SWA+Late QAT+Replay+Self-distillation+EMA training pipeline"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T04:14:11.634Z",
+  "generatedAt": "2026-03-23T04:44:30.405Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 401,
     "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
     "state": "open",
-    "updatedAt": "2026-03-23T03:51:28Z",
-    "headSha": "cb4f8790421a20bbedae8f5a5b7d5e4e3fe1527f",
+    "updatedAt": "2026-03-23T04:29:05Z",
+    "headSha": "8e0a01f7ee8f359dce060946cf45de42433c3221",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/401",
     "authorLogin": "newjordan"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks EMA+Tight SWA averaging with longer warmdown and earlier late QAT on an 11-layer VE128 transformer with Partial RoPE and LN scaling.",
+    "summary": "Stacks EMA into Tight SWA, extends warmdown, and kicks off int6 QAT early on an 11-layer Partial RoPE + VE128 transformer with U-Net skips.",
     "tags": [
-      "quantization",
+      "architecture",
       "training-schedule",
-      "optimizer",
-      "architecture"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA feeding Tight SWA checkpoints",
-      "Late-stage int6 fake-quantization at LR scale<0.15",
-      "Extended warmdown on 11L VE128 Partial RoPE U-Net"
+      "EMA-fed Tight SWA averaging",
+      "Late int6 QAT with longer warmdown",
+      "Partial RoPE + VE128 U-Net transformer"
     ]
   },
   "compatibility": {

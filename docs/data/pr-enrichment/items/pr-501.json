@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-23T04:44:15.644Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 501,
+    "title": "Non-record: 1xH100 warmdown100 30m scaling run",
+    "state": "open",
+    "updatedAt": "2026-03-23T04:37:08Z",
+    "headSha": "f5a3ade9b43928e008e78cc27f2640a1f6d79829",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/501",
+    "authorLogin": "aamodbhatt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_1xH100_Warmdown100_30m/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "30-min non-record 1xH100 run keeps the baseline script but extends WARMDOWN_ITERS=100 warmdown to gather stronger signal before larger 8x grants.",
+    "tags": [
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "WARMDOWN_ITERS=100 warmdown extension",
+      "30m 1xH100 baseline script run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

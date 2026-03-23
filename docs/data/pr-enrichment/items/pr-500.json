@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T04:44:19.836Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 500,
+    "title": "Submission/2026 03 22 Sliding Window + WARMDOWN + AttnRes + PhiSimple (mean 1.1925 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-23T04:25:10Z",
+    "headSha": "6d557c3e5ab9cb44721e498ac609c5d3cbc95ff6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/500",
+    "authorLogin": "ikermoel"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_SlidingWindow_WARMDOWN_AttnRes_PhiSimple/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines sliding-window scoring, warmdown LR decay, block-wise AttnRes, and learnable PhiAlpha scaling atop LoRA to tighten weights for better quantized eval.",
+    "tags": [
+      "training-schedule",
+      "attention",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "always-decaying warmdown LR for int8 readiness",
+      "sliding-window scoring with stride 64",
+      "block-wise AttnRes + per-layer PhiAlpha scaling"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
