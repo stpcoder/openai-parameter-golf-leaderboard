@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T22:19:06.394Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 579,
+    "title": "The Frugendorff: Recursive Weight Sharing for Transformer Compression (1.1478 BPB, 15.19MB)",
+    "state": "open",
+    "updatedAt": "2026-03-23T22:14:38Z",
+    "headSha": "d0c4271d9134cfbacb008d7a66899cec228c964d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/579",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_Frugendorff_Squared_6x2_640d_MLP4/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Recursive weight sharing reuses 6 distinct transformer blocks twice, freeing budget for 4× wider MLPs and loop-conditioned embeddings inside a 16 MB artifact.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "recursive weight sharing with loop-position embeddings",
+      "MLP 4× expansion funded by shared parameters",
+      "stabilization stack via Muon/AdamW split with EMA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

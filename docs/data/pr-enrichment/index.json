@@ -1,16 +1,62 @@
 {
-  "generatedAt": "2026-03-23T21:49:01.232Z",
+  "generatedAt": "2026-03-23T22:19:26.561Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 576,
-      "title": "Record: Train Larger, Quantize Harder - 33.6M params / int5 GPTQ / (val_bpb: 1.1164)",
+      "prNumber": 579,
+      "title": "The Frugendorff: Recursive Weight Sharing for Transformer Compression (1.1478 BPB, 15.19MB)",
       "status": "open",
-      "updatedAt": "2026-03-23T21:43:38Z",
+      "updatedAt": "2026-03-23T22:14:38Z",
+      "headSha": "d0c4271d9134cfbacb008d7a66899cec228c964d",
+      "generatedAt": "2026-03-23T22:19:06.394Z",
+      "summary": "Recursive weight sharing reuses 6 distinct transformer blocks twice, freeing budget for 4× wider MLPs and loop-conditioned embeddings inside a 16 MB artifact.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-579.json"
+    },
+    {
+      "prNumber": 578,
+      "title": "GPTQ + Early QAT + Legal TTT — 3-seed mean val_bpb 1.1215",
+      "status": "open",
+      "updatedAt": "2026-03-23T22:13:56Z",
+      "headSha": "e605d1c53f892d235e9cfbb521e93c9548b031d5",
+      "generatedAt": "2026-03-23T22:19:11.155Z",
+      "summary": "Combines GPTQ-aware int6 quantization with longer QAT adaptation and EMA-scored Legal TTT on the 11L/512d stack to shrink quant tax before TTT evaluation.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-578.json"
+    },
+    {
+      "prNumber": 576,
+      "title": "Record: Train Larger, Quantize Harder - 33.6M params + int5 GPTQ / (val_bpb: 1.1164)",
+      "status": "open",
+      "updatedAt": "2026-03-23T21:51:04Z",
       "headSha": "011a09946e9f789c688caeac4a10ee0eb136d605",
-      "generatedAt": "2026-03-23T21:48:46.745Z",
-      "summary": "Deploys a 33.6M-parameter 11-layer Transformer quantized via GPTQ+QAT and counters score-first TTT overconfidence with a T=0.98 re-score.",
+      "generatedAt": "2026-03-23T22:19:16.264Z",
+      "summary": "Int5 QAT-trained 33.6M model uses Hessian GPTQ with pruning plus a post-TTT temperature rescore to squeeze more capacity while correcting overconfidence.",
       "tags": [
         "quantization",
         "architecture",
@@ -747,29 +793,6 @@
       "file": "items/pr-535.json"
     },
     {
-      "prNumber": 533,
-      "title": "GPTQ + Short TTT — val_bpb 1.1207 (seed 1337)",
-      "status": "closed",
-      "updatedAt": "2026-03-23T18:40:45Z",
-      "headSha": "9fd191d5cf7937e1e59eabbc6cbcd44b9d64f147",
-      "generatedAt": "2026-03-23T18:47:33.338Z",
-      "summary": "Base GPTQ pipeline with short 50-chunk SGD-only TTT plus int6+zstd-22 compression to avoid late-chunk degradation while keeping architecture unchanged.",
-      "tags": [
-        "quantization",
-        "evaluation",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-533.json"
-    },
-    {
       "prNumber": 532,
       "title": "Record: pcloadloveletter v6 — Novel Codebook+Huffman Compression + AdamW TTT (val_bpb=1.0487)",
       "status": "closed",
@@ -1164,29 +1187,6 @@
       "file": "items/pr-509.json"
     },
     {
-      "prNumber": 508,
-      "title": "GPTQ + Early QAT + Legal TTT — 3-seed mean val_bpb 1.1215",
-      "status": "closed",
-      "updatedAt": "2026-03-23T18:40:46Z",
-      "headSha": "464f85912d1aa14ca0e1343f5d289cfc1b9c6218",
-      "generatedAt": "2026-03-23T18:47:39.093Z",
-      "summary": "Combines GPTQ int6 per-row tuning, longer percentile-clipped QAT, and EMA-scored legal TTT on the 11L architecture.",
-      "tags": [
-        "quantization",
-        "training-schedule",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-508.json"
-    },
-    {
       "prNumber": 507,
       "title": "Record: 1.1558 BPB — 11L U-Net + Catalytic + SwiGLU + SW64",
       "status": "open",
@@ -1490,16 +1490,17 @@
     },
     {
       "prNumber": 490,
-      "title": "Record: 11L Value Residual + Gated Attention + AdamW TTT (val_bpb=1.0891)",
+      "title": "Record: 11L VR + GA + LeakyReLU² + Legal Score-First TTT (val_bpb=pending)",
       "status": "open",
-      "updatedAt": "2026-03-23T01:48:57Z",
-      "headSha": "515f6e8749a34099008230aaad6ea7eadeeda49c",
-      "generatedAt": "2026-03-23T02:13:54.144Z",
-      "summary": "Adds ResFormer-style value residual blending and gated attention atop the 11L AdamW TTT stack to reuse block-0 V while gating per-head outputs.",
+      "updatedAt": "2026-03-23T22:16:14Z",
+      "headSha": "05075423dddbc7d5055b77c8dec4435d772e35f3",
+      "generatedAt": "2026-03-23T22:19:20.415Z",
+      "summary": "11-layer stack adds Value Residual, Gated Attention, LeakyReLU², and legal score-first TTT scoring-before-training regime.",
       "tags": [
         "architecture",
         "attention",
-        "optimizer"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -8808,14 +8809,14 @@
       "prNumber": 64,
       "title": "Record: DominationV3 + GPTQ-lite + TTT25 (mean val_bpb=1.1250, 3 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-23T02:55:53Z",
-      "headSha": "fc21ea04121a3f0d4c5c8403bd9130e944e3040b",
-      "generatedAt": "2026-03-23T03:14:39.242Z",
-      "summary": "Combines partial RoPE/LN scale in an 11L GPT with GPTQ-lite int6 quant and 25-epoch SGD TTT on graded tokens to extend training/eval cycles.",
+      "updatedAt": "2026-03-23T22:16:34Z",
+      "headSha": "741fc5537562b03e95611e142d0dee602da3c0ce",
+      "generatedAt": "2026-03-23T22:19:26.553Z",
+      "summary": "11-layer DominationV3 uses Partial RoPE+LN scale with GPTQ-lite per-row clipping and 25-epoch SGD TTT on scored tokens alongside sliding-window eval.",
       "tags": [
         "quantization",
-        "optimizer",
         "attention",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {

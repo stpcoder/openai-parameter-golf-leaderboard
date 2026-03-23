@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T02:13:54.144Z",
+  "generatedAt": "2026-03-23T22:19:20.415Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 490,
-    "title": "Record: 11L Value Residual + Gated Attention + AdamW TTT (val_bpb=1.0891)",
+    "title": "Record: 11L VR + GA + LeakyReLU² + Legal Score-First TTT (val_bpb=pending)",
     "state": "open",
-    "updatedAt": "2026-03-23T01:48:57Z",
-    "headSha": "515f6e8749a34099008230aaad6ea7eadeeda49c",
+    "updatedAt": "2026-03-23T22:16:14Z",
+    "headSha": "05075423dddbc7d5055b77c8dec4435d772e35f3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/490",
     "authorLogin": "amaljithkuttamath"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds ResFormer-style value residual blending and gated attention atop the 11L AdamW TTT stack to reuse block-0 V while gating per-head outputs.",
+    "summary": "11-layer stack adds Value Residual, Gated Attention, LeakyReLU², and legal score-first TTT scoring-before-training regime.",
     "tags": [
       "architecture",
       "attention",
-      "optimizer"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Value residual blending from block 0",
-      "Per-head sigmoid gating on attention",
-      "AdamW TTT fine-tune regimen"
+      "Value Residual + Gated Attention blending across layers",
+      "LeakyReLU(0.5)² replacement in MLPs",
+      "Legal score-first TTT with scoring before training"
     ]
   },
   "compatibility": {

@@ -1,38 +1,37 @@
 {
-  "generatedAt": "2026-03-23T03:14:39.242Z",
+  "generatedAt": "2026-03-23T22:19:26.553Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 64,
     "title": "Record: DominationV3 + GPTQ-lite + TTT25 (mean val_bpb=1.1250, 3 seeds)",
     "state": "open",
-    "updatedAt": "2026-03-23T02:55:53Z",
-    "headSha": "fc21ea04121a3f0d4c5c8403bd9130e944e3040b",
+    "updatedAt": "2026-03-23T22:16:34Z",
+    "headSha": "741fc5537562b03e95611e142d0dee602da3c0ce",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/64",
     "authorLogin": "yesbhautik"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-21_DominationV3/README.md",
-      "records/track_10min_16mb/2026-03-21_DominationV2/README.md"
+      "records/track_10min_16mb/2026-03-21_DominationV3/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Combines partial RoPE/LN scale in an 11L GPT with GPTQ-lite int6 quant and 25-epoch SGD TTT on graded tokens to extend training/eval cycles.",
+    "summary": "11-layer DominationV3 uses Partial RoPE+LN scale with GPTQ-lite per-row clipping and 25-epoch SGD TTT on scored tokens alongside sliding-window eval.",
     "tags": [
       "quantization",
-      "optimizer",
       "attention",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Partial RoPE plus LN scale damping in 11-layer GPT",
-      "GPTQ-lite per-row clip search enabling int6 quant",
-      "25-epoch aggressive SGD TTT on already-graded tokens"
+      "Partial RoPE + LN scale to reduce positional overhead",
+      "GPTQ-lite per-row clip search for mixed int6 quantization",
+      "25-epoch SGD TTT on scored tokens with sliding-window eval"
     ]
   },
   "compatibility": {
