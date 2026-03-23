@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T20:17:50.276Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 572,
+    "title": "SOTA + LoRA TTT: 10L Int5/Int6 + test-time training",
+    "state": "open",
+    "updatedAt": "2026-03-23T20:13:48Z",
+    "headSha": "410fbbec48dc032b691f791a76a96884a275bc5c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/572",
+    "authorLogin": "ritikmahy5"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_SOTA_LoRA_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Builds on 10L int5/int6+BigramHash SOTA training and adds per-document LoRA adapters during eval to reuse spare compute.",
+    "tags": [
+      "val-only",
+      "quantization",
+      "muon",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Applies per-document LoRA test-time training on validation documents, leveraging unused eval budget.",
+    "techniques": [
+      "Mixed int5/int6 quantization with BigramHash and SmearGate",
+      "Muon optimizer + SWA training base",
+      "Per-document LoRA TTT during evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

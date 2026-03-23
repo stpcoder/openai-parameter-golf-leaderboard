@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-23T20:18:01.109Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 570,
+    "title": "(Non record) 11L Frontier MixedQuant Trigram",
+    "state": "open",
+    "updatedAt": "2026-03-23T20:02:50Z",
+    "headSha": "cb0b1b0968bf7d26ade452d4d0be5f5c7723bbe3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/570",
+    "authorLogin": "armmer016"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_10L_XSA_EMA_MixedQuant/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Scaled to 11 layers with TrigramHash/BigramHash embeddings, U-Net skip gates, Star-ReLU, and dense mixed-precision weights sans pruning.",
+    "tags": [
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer transformer with TrigramHash+BigramHash embeddings",
+      "U-Net skip gates and Star-ReLU activations",
+      "Dense Int6/Int8 weights without magnitude pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

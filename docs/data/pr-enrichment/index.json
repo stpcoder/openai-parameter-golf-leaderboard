@@ -1,21 +1,114 @@
 {
-  "generatedAt": "2026-03-23T19:48:05.360Z",
+  "generatedAt": "2026-03-23T20:18:19.915Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 572,
+      "title": "SOTA + LoRA TTT: 10L Int5/Int6 + test-time training",
+      "status": "open",
+      "updatedAt": "2026-03-23T20:13:48Z",
+      "headSha": "410fbbec48dc032b691f791a76a96884a275bc5c",
+      "generatedAt": "2026-03-23T20:17:50.276Z",
+      "summary": "Builds on 10L int5/int6+BigramHash SOTA training and adds per-document LoRA adapters during eval to reuse spare compute.",
+      "tags": [
+        "val-only",
+        "quantization",
+        "muon",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-572.json"
+    },
+    {
+      "prNumber": 571,
+      "title": "Non-record: trigram phrase-memory ablation on 1×H100: negative result (1.2791 BPB best)",
+      "status": "open",
+      "updatedAt": "2026-03-23T20:07:34Z",
+      "headSha": "f6f83b31514b10e3415017faa8eb2204a9046003",
+      "generatedAt": "2026-03-23T20:17:56.393Z",
+      "summary": "Ablated TrigramHash lookup tables on a tuned 16MB 1×H100 backbone and found plain backbone capacity outperforms the static trigram embeddings.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-571.json"
+    },
+    {
+      "prNumber": 570,
+      "title": "(Non record) 11L Frontier MixedQuant Trigram",
+      "status": "open",
+      "updatedAt": "2026-03-23T20:02:50Z",
+      "headSha": "cb0b1b0968bf7d26ade452d4d0be5f5c7723bbe3",
+      "generatedAt": "2026-03-23T20:18:01.109Z",
+      "summary": "Scaled to 11 layers with TrigramHash/BigramHash embeddings, U-Net skip gates, Star-ReLU, and dense mixed-precision weights sans pruning.",
+      "tags": [
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-570.json"
+    },
+    {
+      "prNumber": 569,
+      "title": "Record: 11L VRL + LeakyReLU² + Full GPTQ (3-seed mean val_bpb=1.1175)",
+      "status": "open",
+      "updatedAt": "2026-03-23T20:02:30Z",
+      "headSha": "1a4f3aaf4c125882705386d26e2bb271b4907243",
+      "generatedAt": "2026-03-23T20:18:08.929Z",
+      "summary": "Value Residual Learning plus LeakyReLU(0.5)² MLPs and Muon optimizer warmup feed int6 Full GPTQ with pruning for <16MB output.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-569.json"
+    },
+    {
       "prNumber": 568,
       "title": "Record: PROTEUS v8 — 11L INT6 + LoRA TTT 5ep cosine (mean val_bpb=0.7853, 4 seeds)",
       "status": "open",
-      "updatedAt": "2026-03-23T19:43:44Z",
-      "headSha": "0a263b7dbf0813d1767d1392ac127aea6173bc78",
-      "generatedAt": "2026-03-23T19:47:37.128Z",
-      "summary": "Depth-scaled 11-layer INT6 transformer runs LoRA TTT over five cosine-scheduled epochs with per-epoch scoring on sequential chunks.",
+      "updatedAt": "2026-03-23T19:48:32Z",
+      "headSha": "6b59f5e9e2c286ed655666b236e796e08163c8b4",
+      "generatedAt": "2026-03-23T20:18:13.638Z",
+      "summary": "PROTEUS v8 adds 5-epoch cosine-scheduled LoRA TTT scoring each chunk/epoch to the same 11L INT6 model for clearer, compliant evaluation.",
       "tags": [
-        "quantization",
-        "training-schedule",
         "evaluation",
-        "architecture"
+        "training-schedule",
+        "quantization",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -818,14 +911,14 @@
     {
       "prNumber": 517,
       "title": "Record*: val_bpb=0.978 BPB — Goldfish ML Autonomous Research (100ep Cosine *leaky* TTT)",
-      "status": "open",
-      "updatedAt": "2026-03-23T15:33:05Z",
+      "status": "closed",
+      "updatedAt": "2026-03-23T20:14:25Z",
       "headSha": "5c2901a63a73adceae10f2a6f492d86427a6e4a8",
-      "generatedAt": "2026-03-23T15:47:18.846Z",
-      "summary": "Autonomous Goldfish ML agent orchestrates cosine-annealed 100-epoch AdamW TTT to tame position overfitting during extensive test-time training.",
+      "generatedAt": "2026-03-23T20:18:19.840Z",
+      "summary": "Autonomous Goldfish ML agent ran cosine-annealing AdamW TTT for 100 epochs, orchestrating every experiment loop while maintaining provenance.",
       "tags": [
-        "optimizer",
         "training-schedule",
+        "optimizer",
         "evaluation"
       ],
       "flags": {

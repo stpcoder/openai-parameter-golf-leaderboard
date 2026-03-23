@@ -1,32 +1,20 @@
 {
-  "generatedAt": "2026-03-23T19:46:59.345Z",
+  "generatedAt": "2026-03-23T20:17:16.996Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
-  "skipped": [
-    {
-      "pr": 189,
-      "reason": "no-record-submission-json"
-    }
-  ],
-  "errors": [
-    {
-      "stage": "pull-request-file",
-      "pr": 567,
-      "filename": "records/track_non_record_16mb/2026-03-23_14L_MLP1.5_SmearGate_MuonWD02/submission.json",
-      "message": "Expected ',' or '}' after property value in JSON at position 533 (line 14 column 1)"
-    }
-  ],
+  "skipped": [],
+  "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-03-23T19:16:53Z",
+    "cutoffUpdatedAt": "2026-03-23T19:46:36Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 8,
-    "prsReused": 192,
+    "prsRefreshed": 6,
+    "prsReused": 194,
     "stoppedEarly": true,
     "refreshFailures": 0,
-    "cacheEntries": 543,
+    "cacheEntries": 547,
     "retryWindowRetained": false
   }
 }

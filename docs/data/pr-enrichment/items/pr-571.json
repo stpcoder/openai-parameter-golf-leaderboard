@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-23T20:17:56.393Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 571,
+    "title": "Non-record: trigram phrase-memory ablation on 1×H100: negative result (1.2791 BPB best)",
+    "state": "open",
+    "updatedAt": "2026-03-23T20:07:34Z",
+    "headSha": "f6f83b31514b10e3415017faa8eb2204a9046003",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/571",
+    "authorLogin": "maxwellcipher"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_PhraseMemory1xH100GrantAttempt/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Ablated TrigramHash lookup tables on a tuned 16MB 1×H100 backbone and found plain backbone capacity outperforms the static trigram embeddings.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Controlled trigram ablation while keeping the slim backbone constant",
+      "Shared clean negative result to favor backbone capacity over static phrase tables"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

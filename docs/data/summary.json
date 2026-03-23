@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-03-23T19:47:28.497Z",
+  "generatedAt": "2026-03-23T20:17:39.499Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 447,
+    "submissions": 451,
     "official": 1,
-    "openPr": 368,
+    "openPr": 371,
     "mergedPr": 20,
-    "closedPr": 58,
-    "prBacked": 447,
+    "closedPr": 59,
+    "prBacked": 451,
     "readmeListed": 19,
-    "collectorErrors": 1
+    "collectorErrors": 0
   },
   "best": {
     "officialMainTrack": {
@@ -111,10 +111,10 @@
         "scriptPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v8/train_gpt.py"
       },
       "submission": {
-        "author": "Mato (LightSpeedUp)",
+        "author": "Mato (Light Speed Up)",
         "githubId": "MatoTeziTanka",
         "name": "PROTEUS v8",
-        "blurb": "11L INT6 uniform, depth-scaled residual, backward-looking LoRA TTT (5 epochs, cosine LR, score-every-epoch). Built with PROTEUS by LightSpeedUp — lightspeedup.com",
+        "blurb": "11L INT6 uniform, depth-scaled residual, backward-looking LoRA TTT (5 epochs, cosine LR, score-every-epoch). Built with PROTEUS by Light Speed Up — lightspeedup.com",
         "date": "2026-03-23T19:00:00Z"
       },
       "metrics": {
@@ -148,16 +148,16 @@
         "authorLogin": "MatoTeziTanka",
         "authorName": null,
         "createdAt": "2026-03-23T19:43:44Z",
-        "updatedAt": "2026-03-23T19:43:44Z",
-        "headSha": "0a263b7dbf0813d1767d1392ac127aea6173bc78",
+        "updatedAt": "2026-03-23T19:48:32Z",
+        "headSha": "6b59f5e9e2c286ed655666b236e796e08163c8b4",
         "headRepo": "MatoTeziTanka/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0a263b7dbf0813d1767d1392ac127aea6173bc78/records/track_10min_16mb/2026-03-23_PROTEUS_v8/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/0a263b7dbf0813d1767d1392ac127aea6173bc78/records/track_10min_16mb/2026-03-23_PROTEUS_v8/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/0a263b7dbf0813d1767d1392ac127aea6173bc78/records/track_10min_16mb/2026-03-23_PROTEUS_v8/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/0a263b7dbf0813d1767d1392ac127aea6173bc78/records/track_10min_16mb/2026-03-23_PROTEUS_v8/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/0a263b7dbf0813d1767d1392ac127aea6173bc78/records/track_10min_16mb/2026-03-23_PROTEUS_v8",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6b59f5e9e2c286ed655666b236e796e08163c8b4/records/track_10min_16mb/2026-03-23_PROTEUS_v8/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/6b59f5e9e2c286ed655666b236e796e08163c8b4/records/track_10min_16mb/2026-03-23_PROTEUS_v8/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/6b59f5e9e2c286ed655666b236e796e08163c8b4/records/track_10min_16mb/2026-03-23_PROTEUS_v8/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/6b59f5e9e2c286ed655666b236e796e08163c8b4/records/track_10min_16mb/2026-03-23_PROTEUS_v8/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/6b59f5e9e2c286ed655666b236e796e08163c8b4/records/track_10min_16mb/2026-03-23_PROTEUS_v8",
         "pr": "https://github.com/openai/parameter-golf/pull/568",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
