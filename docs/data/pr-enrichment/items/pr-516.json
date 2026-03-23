@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T09:15:15.993Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 516,
+    "title": "Record: 11L NonTTT VR+GA MixedInt5/6: val_bpb=1.1428 (3-seed, 8xH100)",
+    "state": "open",
+    "updatedAt": "2026-03-23T08:53:25Z",
+    "headSha": "cf0db784ce0b05165b64497ee0b96cf0bdae232f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/516",
+    "authorLogin": "Asukabot0"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_NonTTT_VR_GA_MixedInt5Int6/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Non-TTT run mixes cached value residuals with gated attention and selective Int5/Int6 quantization for a compact sliding-window eval pipeline.",
+    "tags": [
+      "quantization",
+      "attention",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Value-residual ResFormer mix via cached layer-0 V with learnable λ",
+      "Per-head sigmoid gated attention outputs to tame sinks",
+      "Mixed Int5/Int6 quantization with zstd-22 compression"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

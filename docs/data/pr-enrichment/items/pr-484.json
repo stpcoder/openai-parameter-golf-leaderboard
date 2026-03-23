@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T06:14:52.000Z",
+  "generatedAt": "2026-03-23T09:15:41.909Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 484,
-    "title": "Non-record: SwiGLU + EMA + AdamW TTT + EBLS Findings (val_bpb=1.1746 on H100 NVL)",
+    "title": "Non-record: Sequential TTT + Memorization Analysis (val_bpb=1.0476, 8xH100 SXM)",
     "state": "open",
-    "updatedAt": "2026-03-23T06:01:25Z",
-    "headSha": "911252edd8e2d2a01f63048e2469ef90a2261d1f",
+    "updatedAt": "2026-03-23T08:52:20Z",
+    "headSha": "281d59e14eb8a05a1efa38836423f40bb1c48676",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/484",
     "authorLogin": "Robby955"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Uses SwiGLU+EMA GPT with int5 quantization while probing EBLS sharing and eval-time AdamW TTT behavior to highlight depth-recurrent specialization limits.",
+    "summary": "Uses SwiGLU+EMA quantized weights with sequential score-then-train TTT and sliding-window diagnostics to isolate adaptation vs memorization.",
     "tags": [
-      "architecture",
-      "quantization",
-      "optimizer",
-      "evaluation"
+      "val-only",
+      "evaluation",
+      "training-schedule",
+      "quantization"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Trains/updates weights via sequential test-time training on validation chunks.",
     "techniques": [
-      "SwiGLU MLP + EMA warmdown",
-      "Int5 quantization with 5% magnitude pruning",
-      "EBLS probing of shared-depth gamma specialization"
+      "Sequential score-then-train TTT on non-overlapping val chunks",
+      "Sliding-window eval on adapted weights for memorization analysis",
+      "Int5 quantization plus EMA on SwiGLU architecture"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-23T09:15:21.633Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 515,
+    "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
+    "state": "open",
+    "updatedAt": "2026-03-23T09:05:30Z",
+    "headSha": "b40f038c23beb62d1365bed630d37e02b8680380",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/515",
+    "authorLogin": "keshav55"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_AtrisLabs_v8/README.md",
+      "records/track_10min_16mb/2026-03-19_AtrisLabs/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Atris Labs stacks a 10-layer GQA transformer with BigramHash+SmearGate mixing and Int5/Int6 quantized weights, pairing SWA warmdown, pruning, and Muon/AdamW tuning.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BigramHash with SmearGate per-token blending",
+      "Int5 MLP + Int6 attention quantization with pruning",
+      "Muon+AdamW training with SWA warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

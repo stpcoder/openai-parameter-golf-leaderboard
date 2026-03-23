@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-23T08:45:18.335Z",
+  "generatedAt": "2026-03-23T09:15:53.296Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 517,
+      "title": "Record: 0.978 BPB — Goldfish ML Autonomous Research (100ep Cosine TTT)",
+      "status": "open",
+      "updatedAt": "2026-03-23T09:13:28Z",
+      "headSha": "5c2901a63a73adceae10f2a6f492d86427a6e4a8",
+      "generatedAt": "2026-03-23T09:15:11.117Z",
+      "summary": "Agent-run Goldfish/Meerkat experiments found that 100-epoch CosineAnnealingLR test-time training with per-layer LR tuning delivers the record BPB.",
+      "tags": [
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-517.json"
+    },
+    {
+      "prNumber": 516,
+      "title": "Record: 11L NonTTT VR+GA MixedInt5/6: val_bpb=1.1428 (3-seed, 8xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-23T08:53:25Z",
+      "headSha": "cf0db784ce0b05165b64497ee0b96cf0bdae232f",
+      "generatedAt": "2026-03-23T09:15:15.993Z",
+      "summary": "Non-TTT run mixes cached value residuals with gated attention and selective Int5/Int6 quantization for a compact sliding-window eval pipeline.",
+      "tags": [
+        "quantization",
+        "attention",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-516.json"
+    },
+    {
+      "prNumber": 515,
+      "title": "Record: Atris Labs — val_bpb=1.2015, 10L MLP3x Int5/Int6 BigramHash SmearGate SWA",
+      "status": "open",
+      "updatedAt": "2026-03-23T09:05:30Z",
+      "headSha": "b40f038c23beb62d1365bed630d37e02b8680380",
+      "generatedAt": "2026-03-23T09:15:21.633Z",
+      "summary": "Atris Labs stacks a 10-layer GQA transformer with BigramHash+SmearGate mixing and Int5/Int6 quantized weights, pairing SWA warmdown, pruning, and Muon/AdamW tuning.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-515.json"
+    },
     {
       "prNumber": 514,
       "title": "[Non-record] ParGolf-Zero v2 — 6-layer joint optimization + BigramHash + SWA + zstd",
@@ -31,23 +101,23 @@
       "prNumber": 512,
       "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
       "status": "open",
-      "updatedAt": "2026-03-23T08:21:38Z",
-      "headSha": "6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6",
-      "generatedAt": "2026-03-23T08:45:13.312Z",
-      "summary": "11-layer PROTEUS uses depth-scaled residuals, INT6 quant, and backward-looking multi-epoch LoRA TTT per document.",
+      "updatedAt": "2026-03-23T08:52:02Z",
+      "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
+      "generatedAt": "2026-03-23T09:15:29.424Z",
+      "summary": "11-layer INT6 transformer uses depth-scaled residuals plus backward-looking multi-epoch per-document LoRA TTT.",
       "tags": [
-        "val-only",
         "quantization",
         "architecture",
+        "optimizer",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-512.json"
     },
@@ -562,25 +632,25 @@
     },
     {
       "prNumber": 484,
-      "title": "Non-record: SwiGLU + EMA + AdamW TTT + EBLS Findings (val_bpb=1.1746 on H100 NVL)",
+      "title": "Non-record: Sequential TTT + Memorization Analysis (val_bpb=1.0476, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-23T06:01:25Z",
-      "headSha": "911252edd8e2d2a01f63048e2469ef90a2261d1f",
-      "generatedAt": "2026-03-23T06:14:52.000Z",
-      "summary": "Uses SwiGLU+EMA GPT with int5 quantization while probing EBLS sharing and eval-time AdamW TTT behavior to highlight depth-recurrent specialization limits.",
+      "updatedAt": "2026-03-23T08:52:20Z",
+      "headSha": "281d59e14eb8a05a1efa38836423f40bb1c48676",
+      "generatedAt": "2026-03-23T09:15:41.909Z",
+      "summary": "Uses SwiGLU+EMA quantized weights with sequential score-then-train TTT and sliding-window diagnostics to isolate adaptation vs memorization.",
       "tags": [
-        "architecture",
-        "quantization",
-        "optimizer",
-        "evaluation"
+        "val-only",
+        "evaluation",
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-484.json"
     },
@@ -1500,15 +1570,14 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-22T16:44:16Z",
-      "headSha": "277c34c0853d0e6786b61cfd8a22b9128535ca2f",
-      "generatedAt": "2026-03-22T17:11:35.864Z",
-      "summary": "Ternary BitNet projections with RadialEncoding positional injection and FRO optimization pack 15.6M params into the 16MB parameter-golf limit.",
+      "updatedAt": "2026-03-23T09:11:07Z",
+      "headSha": "ccf913cc5c165ead49783c24cc1638aa1d871aca",
+      "generatedAt": "2026-03-23T09:15:47.208Z",
+      "summary": "Radial-BitNet fits ~15.6M params in 16MB via ternary BitNet projections, radial positional encoding, and the custom FRO optimizer in a 10-minute run.",
       "tags": [
         "quantization",
-        "architecture",
-        "positional-encoding",
-        "optimizer"
+        "optimizer",
+        "positional-encoding"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1619,15 +1688,15 @@
       "prNumber": 430,
       "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
       "status": "open",
-      "updatedAt": "2026-03-23T08:32:46Z",
-      "headSha": "929062066d0a6ad0f07e7892a9ae7ff206797d92",
-      "generatedAt": "2026-03-23T08:45:18.270Z",
-      "summary": "Enhances 10-layer Int5-MLP with SwiGLU, per-block value residuals, gated attention, XSA, EMA, and AdamW test-time training on validation.",
+      "updatedAt": "2026-03-23T09:02:53Z",
+      "headSha": "8acadd01d9c685ac3fbbc0c9571c44caecafc806",
+      "generatedAt": "2026-03-23T09:15:53.234Z",
+      "summary": "Pairs SwiGLU + value-residual + gated-attention layers with Exclusive Self-Attn, EMA weights, and AdamW test-time tuning on thwu1’s base stack.",
       "tags": [
-        "attention",
         "architecture",
-        "optimizer",
-        "training-schedule"
+        "attention",
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,

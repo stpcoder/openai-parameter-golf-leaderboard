@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T08:45:18.270Z",
+  "generatedAt": "2026-03-23T09:15:53.234Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 430,
     "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
     "state": "open",
-    "updatedAt": "2026-03-23T08:32:46Z",
-    "headSha": "929062066d0a6ad0f07e7892a9ae7ff206797d92",
+    "updatedAt": "2026-03-23T09:02:53Z",
+    "headSha": "8acadd01d9c685ac3fbbc0c9571c44caecafc806",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/430",
     "authorLogin": "sahiee-dev"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Enhances 10-layer Int5-MLP with SwiGLU, per-block value residuals, gated attention, XSA, EMA, and AdamW test-time training on validation.",
+    "summary": "Pairs SwiGLU + value-residual + gated-attention layers with Exclusive Self-Attn, EMA weights, and AdamW test-time tuning on thwu1’s base stack.",
     "tags": [
-      "attention",
       "architecture",
-      "optimizer",
-      "training-schedule"
+      "attention",
+      "training-schedule",
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU + value-residual + gated-attention stack",
-      "XSA in final layers with EMA shadow weights",
-      "AdamW test-time training on validation before eval"
+      "SwiGLU MLP with residual/gated attention blending",
+      "Exclusive Self-Attention in top layers to remove self-value bias",
+      "EMA-weight evaluation paired with AdamW test-time tuning"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T08:45:13.312Z",
+  "generatedAt": "2026-03-23T09:15:29.424Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 512,
     "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9968)",
     "state": "open",
-    "updatedAt": "2026-03-23T08:21:38Z",
-    "headSha": "6d5a32a51f6f9f13a0fcd9b478c902750f11e3a6",
+    "updatedAt": "2026-03-23T08:52:02Z",
+    "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/512",
     "authorLogin": "MatoTeziTanka"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer PROTEUS uses depth-scaled residuals, INT6 quant, and backward-looking multi-epoch LoRA TTT per document.",
+    "summary": "11-layer INT6 transformer uses depth-scaled residuals plus backward-looking multi-epoch per-document LoRA TTT.",
     "tags": [
-      "val-only",
       "quantization",
       "architecture",
+      "optimizer",
       "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "LoRA adapters are trained on validation documents chunk-by-chunk during TTT evaluation, without touching training data.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "INT6 uniform quantization across weights",
-      "Depth-scaled residuals per block for 11-layer stability",
-      "Backward-looking per-document multi-epoch LoRA TTT"
+      "INT6 uniform quantization for every weight matrix",
+      "Depth-scaled residuals (1/√(layer+1)) for stable 11-layer training",
+      "Backward-looking per-document multi-epoch LoRA TTT adaptation"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
