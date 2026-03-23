@@ -1,20 +1,66 @@
 {
-  "generatedAt": "2026-03-23T01:14:10.942Z",
+  "generatedAt": "2026-03-23T01:43:42.656Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 486,
-      "title": "Record: 11L TrigramHash + ValueResidual + GradQuant + AdamW TTT (mean val_bpb=1.1132, best 1.1101)",
+      "prNumber": 489,
+      "title": "Record: 7L MLP3x + BigramHash + SmearGate + TTT 5ep (mean val_bpb=1.1327)",
       "status": "open",
-      "updatedAt": "2026-03-23T01:05:38Z",
-      "headSha": "e2ead99b501f1ab68d8d7b3830a18ff0f073b9f9",
-      "generatedAt": "2026-03-23T01:13:33.588Z",
-      "summary": "Adds trigram-hash embeddings, value-residual blending, and gradient-guided adaptive quantization to the 11L baseline for higher quality per step.",
+      "updatedAt": "2026-03-23T01:26:45Z",
+      "headSha": "ea8f7c42cf101698457d92fedfb14236917a65ad",
+      "generatedAt": "2026-03-23T01:43:28.464Z",
+      "summary": "7-layer MLP3x uses BigramHash+SmearGate, partial RoPE, depth damping, Muon optimization, and 5-epoch TTT with sliding-window eval.",
       "tags": [
         "architecture",
         "quantization",
-        "attention"
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-489.json"
+    },
+    {
+      "prNumber": 487,
+      "title": "Non-record: Value Residual (-0.015 BPB) + Gated Attention (-0.003 BPB) on 11L Production Stack",
+      "status": "open",
+      "updatedAt": "2026-03-23T01:13:29Z",
+      "headSha": "be5355d73fb98b6dbc15b32bfddcc9983110c059",
+      "generatedAt": "2026-03-23T01:43:32.569Z",
+      "summary": "Stacked Value Residual highways and per-head gated attention over the 11L MLP3x community stack to steady deeper representations and suppress bad heads.",
+      "tags": [
+        "architecture",
+        "attention",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-487.json"
+    },
+    {
+      "prNumber": 486,
+      "title": "Record: 11L TrigramHash + ValueResidual + GradQuant + AdamW TTT (mean val_bpb=1.1132, best 1.1101)",
+      "status": "open",
+      "updatedAt": "2026-03-23T01:14:27Z",
+      "headSha": "b39ce05e18ff6fd26f83f661ccc75806fcca1001",
+      "generatedAt": "2026-03-23T01:43:37.962Z",
+      "summary": "Adds trigram hash embeddings, value-residual blending, and gradient-guided adaptive quantization to the 11-layer TTT stack for better quality-per-step.",
+      "tags": [
+        "architecture",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -124,14 +170,15 @@
       "prNumber": 480,
       "title": "Non-record: MoE exploration + multi-bit quantization analysis",
       "status": "open",
-      "updatedAt": "2026-03-23T00:25:02Z",
-      "headSha": "d7da25668eecae5de92a5e6210c1dfb81659c3d4",
-      "generatedAt": "2026-03-23T00:44:02.700Z",
-      "summary": "Documented that a 2-expert soft-gated MoE underperforms dense and that int4/int5/int6 quant trades off MB savings vs deformation, closing MoE expansion headroom under 16MB.",
+      "updatedAt": "2026-03-23T01:25:23Z",
+      "headSha": "85f3399ec31efa246cbba6b2f96b780f6ae1695b",
+      "generatedAt": "2026-03-23T01:43:42.579Z",
+      "summary": "Under 16MB, the dense baseline probes 2-expert soft-routing MoE vs multi-bit PTQ, showing MoE lags while int5/int4 MLP quantization hurts accuracy.",
       "tags": [
-        "non-record",
         "quantization",
-        "architecture"
+        "architecture",
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,

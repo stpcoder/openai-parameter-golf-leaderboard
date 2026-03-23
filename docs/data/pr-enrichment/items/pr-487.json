@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-23T01:43:32.569Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 487,
+    "title": "Non-record: Value Residual (-0.015 BPB) + Gated Attention (-0.003 BPB) on 11L Production Stack",
+    "state": "open",
+    "updatedAt": "2026-03-23T01:13:29Z",
+    "headSha": "be5355d73fb98b6dbc15b32bfddcc9983110c059",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/487",
+    "authorLogin": "anantdgoel"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-22_ValueResidual_GatedAttn_11L_Production_anantdgoel/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stacked Value Residual highways and per-head gated attention over the 11L MLP3x community stack to steady deeper representations and suppress bad heads.",
+    "tags": [
+      "architecture",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Reuse layer-0 V vectors via learnable scalar mixing",
+      "Apply per-head sigmoid gating after scaled dot-product attention"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

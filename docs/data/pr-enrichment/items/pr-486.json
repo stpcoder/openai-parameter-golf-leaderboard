@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T01:13:33.588Z",
+  "generatedAt": "2026-03-23T01:43:37.962Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 486,
     "title": "Record: 11L TrigramHash + ValueResidual + GradQuant + AdamW TTT (mean val_bpb=1.1132, best 1.1101)",
     "state": "open",
-    "updatedAt": "2026-03-23T01:05:38Z",
-    "headSha": "e2ead99b501f1ab68d8d7b3830a18ff0f073b9f9",
+    "updatedAt": "2026-03-23T01:14:27Z",
+    "headSha": "b39ce05e18ff6fd26f83f661ccc75806fcca1001",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/486",
     "authorLogin": "ndokutovich"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds trigram-hash embeddings, value-residual blending, and gradient-guided adaptive quantization to the 11L baseline for higher quality per step.",
+    "summary": "Adds trigram hash embeddings, value-residual blending, and gradient-guided adaptive quantization to the 11-layer TTT stack for better quality-per-step.",
     "tags": [
       "architecture",
-      "quantization",
-      "attention"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Trigram Hash embeddings extending BigramHash to 3-token contexts",
-      "Value residuals reusing first-layer V vectors across layers",
-      "Gradient sensitivity-driven per-tensor Int5/6/7 quantization"
+      "TrigramHash adds 3-token hashed embeddings before transformer blocks",
+      "Value Residual blends first-layer V vectors into every layer via learned scalars",
+      "Gradient-guided quantization ranks tensors by sensitivity for Int5/6/7 allocation"
     ]
   },
   "compatibility": {
