@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-22T21:12:39.825Z",
+  "generatedAt": "2026-03-23T01:14:02.457Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 401,
     "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
     "state": "open",
-    "updatedAt": "2026-03-22T21:03:26Z",
-    "headSha": "bd37700e65e63636ebdbbb7367543608ebd72654",
+    "updatedAt": "2026-03-23T00:55:02Z",
+    "headSha": "dec4594275469588ee937ff1cd231a61b75e36a3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/401",
     "authorLogin": "newjordan"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stack EMA-fed weights into Tight SWA, extend late int6 QAT warmdown, and run the 11-layer partial RoPE U-Net with LN scaling for record codex.",
+    "summary": "EMA+tight SWA stacking with earlier late int6 QAT on an 11-layer SmearGate/Bigram transformer using VE embeddings and partial RoPE.",
     "tags": [
+      "architecture",
       "quantization",
-      "optimizer",
-      "training-schedule",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA-fed Tight SWA stacking",
-      "Extended late int6 QAT warmdown",
-      "Partial RoPE + LN-scaled U-Net"
+      "EMA-tailed tight SWA averaging",
+      "Earlier late-stage int6 fake quantization",
+      "Extended warmdown with VE128 and partial RoPE"
     ]
   },
   "compatibility": {

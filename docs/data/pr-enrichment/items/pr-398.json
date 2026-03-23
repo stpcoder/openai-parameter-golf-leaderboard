@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T04:36:28.783Z",
+  "generatedAt": "2026-03-23T01:14:06.428Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 398,
-    "title": "Record: 11L EMA + TTT(20ep,freeze=0) — val_bpb=1.1213 (3-seed mean 1.1221)",
+    "title": "Non-record: 11L EMA + TTT(20ep,freeze=0) + 15-run ablation study — val_bpb=1.1213 (3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-22T04:15:33Z",
+    "updatedAt": "2026-03-23T01:02:11Z",
     "headSha": "db2c5796c53928ec165aa3421c926e634f954aa7",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/398",
     "authorLogin": "felipe-parodi"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "EMA(0.997) averaging plus 20-epoch test-time SGD with all blocks unfrozen, dropping XSA/Late QAT for the int6-compressed 11L model.",
+    "summary": "EMA weight averaging plus 20-epoch all-unfrozen test-time training on the int6 11L model, stripping XSA/LateQAT to stay within the 16MB budget.",
     "tags": [
+      "quantization",
       "training-schedule",
-      "architecture",
-      "quantization"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA(0.997) weight averaging with muon/AdamW mix",
-      "Aggressive 20-epoch test-time SGD keeping all blocks unfrozen",
-      "Int6 quantization and compression after removing XSA"
+      "EMA(0.997) weight averaging",
+      "20-epoch full-weight TTT with freeze_blocks=0",
+      "Muon/AdamW optimizer mix without Late QAT"
     ]
   },
   "compatibility": {

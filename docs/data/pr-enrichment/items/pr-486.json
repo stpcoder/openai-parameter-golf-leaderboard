@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T01:13:33.588Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 486,
+    "title": "Record: 11L TrigramHash + ValueResidual + GradQuant + AdamW TTT (mean val_bpb=1.1132, best 1.1101)",
+    "state": "open",
+    "updatedAt": "2026-03-23T01:05:38Z",
+    "headSha": "e2ead99b501f1ab68d8d7b3830a18ff0f073b9f9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/486",
+    "authorLogin": "ndokutovich"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_11L_TrigramHash_ValueResidual_GradQuant_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds trigram-hash embeddings, value-residual blending, and gradient-guided adaptive quantization to the 11L baseline for higher quality per step.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Trigram Hash embeddings extending BigramHash to 3-token contexts",
+      "Value residuals reusing first-layer V vectors across layers",
+      "Gradient sensitivity-driven per-tensor Int5/6/7 quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

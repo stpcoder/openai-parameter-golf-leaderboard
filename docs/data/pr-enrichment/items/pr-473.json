@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T00:44:34.277Z",
+  "generatedAt": "2026-03-23T01:13:44.534Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 473,
-    "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1218 (2-seed mean)",
+    "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1219 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-23T00:25:43Z",
-    "headSha": "a33f0751feb12a2e01748bd5799fc68557d0cd3e",
+    "updatedAt": "2026-03-23T00:46:55Z",
+    "headSha": "f337da20e4f2a7988d618789e734cec9a692c80f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/473",
     "authorLogin": "abaybektursun"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Runs legal score-first TTT (SGD+momentum with frozen early blocks) atop the #414 quantized stack while Parameter Banking and Parallel Muon accelerate the optimizer.",
+    "summary": "Combines legal score-first TTT chunking with Parameter Banking and Parallel Muon optimizer for fast adaptation on a PR #414–derived stack.",
     "tags": [
       "optimizer",
-      "training-schedule",
       "evaluation",
-      "quantization"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Legal score-first scoring before updates with frozen early blocks",
-      "Parameter Banking plus Parallel Muon optimizer flow",
-      "GPTQ-lite stack with VE128, Tight SWA, XSA4, Partial RoPE"
+      "score-first TTT with inference_mode chunk scoring",
+      "Parameter Banking enables batched Newton-Schulz orthogonalization",
+      "Parallel Muon skips DDP for bank params during async reduce-scatter"
     ]
   },
   "compatibility": {

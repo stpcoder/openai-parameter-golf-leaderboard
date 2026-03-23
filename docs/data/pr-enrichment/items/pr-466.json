@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T00:44:46.590Z",
+  "generatedAt": "2026-03-23T01:13:49.065Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 466,
     "title": "Record: 11L EMA + BigramHash(12288) + Mixed Int5 + FA3 (1.1354)",
     "state": "open",
-    "updatedAt": "2026-03-23T00:14:04Z",
+    "updatedAt": "2026-03-23T00:59:25Z",
     "headSha": "bdd21c4d03295c37032ecf8fe97ae74f961f2cad",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/466",
     "authorLogin": "simonbissonnette"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer 512-dim GQA uses EMA, BigramHash hashing, mixed int5 quantization, and FA3-backed stride-64 sliding evaluation.",
+    "summary": "11-layer 512-dim GQA uses EMA, BigramHash-12288, mixed Int5 quant, FP16 keep, and stride-64 sliding eval with FlashAttention-3 support.",
     "tags": [
       "architecture",
       "quantization",
+      "attention",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA(0.997)+BigramHash(12288) on GQA backbone",
-      "Mixed int5 quantization with FA3 attention kernel",
-      "Stride-64 sliding-window evaluation"
+      "EMA regularization",
+      "BigramHash embedding expansion",
+      "mixed Int5 quantization"
     ]
   },
   "compatibility": {
