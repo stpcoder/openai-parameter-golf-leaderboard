@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-23T02:14:14.558Z",
+  "generatedAt": "2026-03-23T02:44:41.707Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 493,
+      "title": "Record: 11L EMA + Int6 + XSA + LeakyReLU² + Partial RoPE (val_bpb: 1.1309)",
+      "status": "open",
+      "updatedAt": "2026-03-23T02:34:50Z",
+      "headSha": "739a729f6b4ab2dcd5ff41cfc9f129670ab2749d",
+      "generatedAt": "2026-03-23T02:44:00.379Z",
+      "summary": "11-layer GQA stack adds XSA, squared LeakyReLU, partial RoPE, EMA, Int6 quant, and a warmdown-heavy high-LR schedule for the 16MB track.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-493.json"
+    },
+    {
+      "prNumber": 492,
+      "title": "Record: 11L XSA4 + EMA + Partial RoPE + Rank-8 TTT Hooks (1.1591 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-23T02:22:21Z",
+      "headSha": "676138eaa41cbed32ba18f3add048511dc3c011b",
+      "generatedAt": "2026-03-23T02:44:06.659Z",
+      "summary": "11-layer PR315-derived stack uses last-4-layer XSA, EMA, Partial RoPE, LN scaling, mixed int6/int8 export, and embedded long-document LoRA TTT hooks.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "mixed-precision"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-492.json"
+    },
+    {
+      "prNumber": 491,
+      "title": "Value Residual + DenseFormer DWA + TTT",
+      "status": "open",
+      "updatedAt": "2026-03-23T02:15:48Z",
+      "headSha": "89a7210bf837c05346cd685d0bd85f502781ccfa",
+      "generatedAt": "2026-03-23T02:44:15.790Z",
+      "summary": "Blend ResFormer value residuals, DenseFormer depth-weighted averaging, and test-time AdamW tuning across scored validation windows atop the current SOTA.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-491.json"
+    },
     {
       "prNumber": 490,
       "title": "Record: 11L Value Residual + Gated Attention + AdamW TTT (val_bpb=1.0891)",
@@ -310,16 +381,15 @@
     },
     {
       "prNumber": 473,
-      "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1219 (3-seed mean)",
+      "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1220 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-23T02:07:18Z",
-      "headSha": "f54a5964560cb6fc0fd0a5fe677093a97f56de0d",
-      "generatedAt": "2026-03-23T02:14:02.275Z",
-      "summary": "Combines PR#414 stack with Parameter Banking + Parallel Muon optimizer and inference_mode score-first TTT that adapts only after scoring each val chunk.",
+      "updatedAt": "2026-03-23T02:31:06Z",
+      "headSha": "ffe7c40dff3f0fdd78e8a5dd3ce9f6f7ab90230b",
+      "generatedAt": "2026-03-23T02:44:23.721Z",
+      "summary": "Combines Parameter Banking + Parallel Muon optimizer with legal score-first chunked TTT that adapts only on already-scored validation chunks.",
       "tags": [
         "val-only",
         "optimizer",
-        "muon",
         "evaluation"
       ],
       "flags": {
@@ -964,12 +1034,12 @@
     },
     {
       "prNumber": 439,
-      "title": "Non-Record Submission: AETHER block-sparse attention with Lyapunov-stable governor (12L) ",
+      "title": "Non-record: AETHER block-sparse attention with Lyapunov-stable governor (12L) ",
       "status": "open",
-      "updatedAt": "2026-03-23T02:09:12Z",
+      "updatedAt": "2026-03-23T02:16:43Z",
       "headSha": "9b33fecbe29d90a1b4b82aa9fa825b2727fbc79a",
-      "generatedAt": "2026-03-23T02:14:06.980Z",
-      "summary": "AETHER adds block-sparse attention over 64-token blocks with a Lyapunov-stable governor so a 12-layer GPT fits the 10-minute budget.",
+      "generatedAt": "2026-03-23T02:44:29.855Z",
+      "summary": "Integrates AETHER block-sparse attention and a Lyapunov governor to fit a 12-layer GPT within the 10-minute 16MB run budget.",
       "tags": [
         "attention",
         "architecture",
@@ -1178,22 +1248,22 @@
       "prNumber": 430,
       "title": "TrigramHash + XSA + TTT on thwu1 SOTA stack - val_bpb pending H100",
       "status": "open",
-      "updatedAt": "2026-03-22T15:12:58Z",
-      "headSha": "6b40382ee7f73fce400b039bb0c220e8d763b6da",
-      "generatedAt": "2026-03-22T15:40:33.034Z",
-      "summary": "Combines trigram hashed embeddings, final-layer exclusive self-attention, and validation-only test-time SGD on frozen layers to boost the thwu1 stack.",
+      "updatedAt": "2026-03-23T02:41:15Z",
+      "headSha": "95afb69858b96213d7faaefb3da0e1729eff5587",
+      "generatedAt": "2026-03-23T02:44:34.675Z",
+      "summary": "Combines trigram hash embeddings with bigram budget rebalancing, last-layer exclusive self-attention, EMA, and test-time SGD tuning before eval.",
       "tags": [
         "architecture",
         "attention",
-        "val-only"
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-430.json"
     },
@@ -1647,14 +1717,15 @@
       "prNumber": 401,
       "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
       "status": "open",
-      "updatedAt": "2026-03-23T02:10:04Z",
-      "headSha": "6d68de38e797a5847ffeccd572a03f8b0a058380",
-      "generatedAt": "2026-03-23T02:14:14.498Z",
-      "summary": "Stacks EMA with tight SWA checkpoints and extended late QAT on an 11-layer GQA transformer with VE128 and Partial RoPE scaling.",
+      "updatedAt": "2026-03-23T02:40:56Z",
+      "headSha": "bd1e51d76d515816983870e4eb4306496128005e",
+      "generatedAt": "2026-03-23T02:44:41.648Z",
+      "summary": "Stacks EMA-fed tight SWA on an 11-layer GQA transformer with U-Net skips, partial RoPE, LN scaling, and late int6 QAT plus longer warmdown.",
       "tags": [
-        "training-schedule",
+        "architecture",
+        "optimizer",
         "quantization",
-        "architecture"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

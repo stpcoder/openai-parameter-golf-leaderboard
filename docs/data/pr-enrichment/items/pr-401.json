@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T02:14:14.498Z",
+  "generatedAt": "2026-03-23T02:44:41.648Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 401,
     "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
     "state": "open",
-    "updatedAt": "2026-03-23T02:10:04Z",
-    "headSha": "6d68de38e797a5847ffeccd572a03f8b0a058380",
+    "updatedAt": "2026-03-23T02:40:56Z",
+    "headSha": "bd1e51d76d515816983870e4eb4306496128005e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/401",
     "authorLogin": "newjordan"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Stacks EMA with tight SWA checkpoints and extended late QAT on an 11-layer GQA transformer with VE128 and Partial RoPE scaling.",
+    "summary": "Stacks EMA-fed tight SWA on an 11-layer GQA transformer with U-Net skips, partial RoPE, LN scaling, and late int6 QAT plus longer warmdown.",
     "tags": [
-      "training-schedule",
+      "architecture",
+      "optimizer",
       "quantization",
-      "architecture"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "EMA stacked with tight SWA checkpoints",
-      "Extended late QAT and warmdown under int6",
-      "11-layer GQA transformer with VE128 and Partial RoPE scaling"
+      "EMA stacking feeding tight SWA checkpoints",
+      "Late STE int6 QAT span with extended warmdown",
+      "11-layer U-Net skip layout with partial RoPE and LN scaling"
     ]
   },
   "compatibility": {

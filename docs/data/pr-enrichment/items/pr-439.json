@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T02:14:06.980Z",
+  "generatedAt": "2026-03-23T02:44:29.855Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 439,
-    "title": "Non-Record Submission: AETHER block-sparse attention with Lyapunov-stable governor (12L) ",
+    "title": "Non-record: AETHER block-sparse attention with Lyapunov-stable governor (12L) ",
     "state": "open",
-    "updatedAt": "2026-03-23T02:09:12Z",
+    "updatedAt": "2026-03-23T02:16:43Z",
     "headSha": "9b33fecbe29d90a1b4b82aa9fa825b2727fbc79a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/439",
     "authorLogin": "teerthsharma"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "AETHER adds block-sparse attention over 64-token blocks with a Lyapunov-stable governor so a 12-layer GPT fits the 10-minute budget.",
+    "summary": "Integrates AETHER block-sparse attention and a Lyapunov governor to fit a 12-layer GPT within the 10-minute 16MB run budget.",
     "tags": [
       "attention",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- Cauchy-Schwarz block pruning with dense fallback",
-      "- Lyapunov PD governor adaptively controls sparsity",
-      "- Lean4-verified pruning and governor safety"
+      "Cauchy-Schwarz block pruning for KV sparsity",
+      "Lyapunov-stable PD governor adapts block selection",
+      "Chebyshev GC guard plus dense fallback to limit false reclamation"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T02:14:02.275Z",
+  "generatedAt": "2026-03-23T02:44:23.721Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 473,
-    "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1219 (3-seed mean)",
+    "title": "Record: Legal Score-First TTT + Parallel Muon — val_bpb 1.1220 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-23T02:07:18Z",
-    "headSha": "f54a5964560cb6fc0fd0a5fe677093a97f56de0d",
+    "updatedAt": "2026-03-23T02:31:06Z",
+    "headSha": "ffe7c40dff3f0fdd78e8a5dd3ce9f6f7ab90230b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/473",
     "authorLogin": "abaybektursun"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines PR#414 stack with Parameter Banking + Parallel Muon optimizer and inference_mode score-first TTT that adapts only after scoring each val chunk.",
+    "summary": "Combines Parameter Banking + Parallel Muon optimizer with legal score-first chunked TTT that adapts only on already-scored validation chunks.",
     "tags": [
       "val-only",
       "optimizer",
-      "muon",
       "evaluation"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "TTT explicitly trains on validation token chunks during evaluation, so all adaptation happens on the validation shard.",
+    "valOnlyReasoning": "TTT adaptation trains on validation chunks after scoring them, so the eval phase includes explicit val-only training before each scored chunk.",
     "techniques": [
-      "Legal score-first TTT under inference_mode scoring",
-      "Parameter Banking with Parallel Muon optimizer",
-      "SGD/momentum TTT that freezes early blocks and updates per 32K chunk"
+      "Parameter Banking + Parallel Muon optimizer",
+      "Legal score-first chunked TTT under inference_mode",
+      "GPTQ-lite stack with VE128, XSA4, Tight SWA"
     ]
   },
   "compatibility": {

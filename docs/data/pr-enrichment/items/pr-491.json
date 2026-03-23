@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T02:44:15.790Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 491,
+    "title": "Value Residual + DenseFormer DWA + TTT",
+    "state": "open",
+    "updatedAt": "2026-03-23T02:15:48Z",
+    "headSha": "89a7210bf837c05346cd685d0bd85f502781ccfa",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/491",
+    "authorLogin": "ahmettrkck"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_ValueResid_DWA_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Blend ResFormer value residuals, DenseFormer depth-weighted averaging, and test-time AdamW tuning across scored validation windows atop the current SOTA.",
+    "tags": [
+      "val-only",
+      "architecture",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": true,
+    "valOnlyReasoning": "Test-time training fine-tunes via AdamW on already-scored validation windows before reporting.",
+    "techniques": [
+      "Value residual blending of first-layer V vectors",
+      "DenseFormer depth-weighted averaging of all prior layers",
+      "Test-time AdamW updates on scored validation tokens"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
+  }
+}

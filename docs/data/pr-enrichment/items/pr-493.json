@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-23T02:44:00.379Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 493,
+    "title": "Record: 11L EMA + Int6 + XSA + LeakyReLU² + Partial RoPE (val_bpb: 1.1309)",
+    "state": "open",
+    "updatedAt": "2026-03-23T02:34:50Z",
+    "headSha": "739a729f6b4ab2dcd5ff41cfc9f129670ab2749d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/493",
+    "authorLogin": "parinzee"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_11L_EMA_Int6_XSA_LeakyReLU_PartialRoPE/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GQA stack adds XSA, squared LeakyReLU, partial RoPE, EMA, Int6 quant, and a warmdown-heavy high-LR schedule for the 16MB track.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA on final layers with GQA heads",
+      "LeakyReLU² plus partial RoPE for compact nonlinear and positional coverage",
+      "Int6 quant plus EMA & warmdown-focused schedule adjustments"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

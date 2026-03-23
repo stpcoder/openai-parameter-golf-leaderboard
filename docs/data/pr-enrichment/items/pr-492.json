@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-23T02:44:06.659Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 492,
+    "title": "Record: 11L XSA4 + EMA + Partial RoPE + Rank-8 TTT Hooks (1.1591 bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-23T02:22:21Z",
+    "headSha": "676138eaa41cbed32ba18f3add048511dc3c011b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/492",
+    "authorLogin": "Divyesh-Thirukonda"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_11L_XSA4_EMA_PartialRoPE_LNScale_Entropy_LongDocTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer PR315-derived stack uses last-4-layer XSA, EMA, Partial RoPE, LN scaling, mixed int6/int8 export, and embedded long-document LoRA TTT hooks.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "mixed-precision"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA applied only on final four layers with layerwise normalization scaling",
+      "Partial RoPE on a subset of heads plus EMA smoothing for stability",
+      "Mixed int6/int8 export through zstd combined with integrated long-document LoRA TTT hooks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
