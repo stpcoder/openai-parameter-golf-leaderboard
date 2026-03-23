@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-23T20:17:39.499Z",
+  "generatedAt": "2026-03-23T20:47:49.187Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -462,6 +462,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/6379f921c22a322c322463e5768433f33bde488f/records/track_10min_16mb/2026-03-22_pcloadloveletter_v6/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/6379f921c22a322c322463e5768433f33bde488f/records/track_10min_16mb/2026-03-22_pcloadloveletter_v6",
         "pr": "https://github.com/openai/parameter-golf/pull/532",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-23_MultiPass_StreamingLegalTTT",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-23_MultiPass_StreamingLegalTTT",
+        "folderPath": "records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT",
+        "submissionPath": "records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT/train_gpt.py"
+      },
+      "submission": {
+        "author": "Sarim Chaudhry",
+        "githubId": "Sarimsaljook",
+        "name": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT",
+        "blurb": "Novel multi-pass streaming score-first TTT: 3 independent adaptation trajectories with shifted data orderings, min NLL per token. Every token scored under torch.inference_mode before training. Built on PR#518/#414 stack (11L, XSA4, LeakyReLU(0.5)², Partial RoPE 16/64, LN Scale, VE128, EMA(0.997), Late QAT@0.15, Tight SWA, SmearGate, BigramHash, GPTQ-lite, int6+zstd-22). Includes Rotary cache clone fix enabling TTT backprop through partial RoPE.",
+        "date": "2026-03-23T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.05229749,
+        "valLoss": 1.77670043,
+        "preQuantValBpb": 1.1611,
+        "preQuantValLoss": 1.9605,
+        "stepStop": 4197,
+        "wallclockSeconds": 601.087,
+        "evalTimeSeconds": 88.649
+      },
+      "artifact": {
+        "bytesTotal": 15933972,
+        "bytesCode": 72076,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 573,
+        "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/573",
+        "authorLogin": "Sarimsaljook",
+        "authorName": null,
+        "createdAt": "2026-03-23T20:39:48Z",
+        "updatedAt": "2026-03-23T20:39:48Z",
+        "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
+        "headRepo": "Sarimsaljook/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/45a4408c7005a812af8a2a0cb4f99b26e533860a/records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/45a4408c7005a812af8a2a0cb4f99b26e533860a/records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/45a4408c7005a812af8a2a0cb4f99b26e533860a/records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/45a4408c7005a812af8a2a0cb4f99b26e533860a/records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/45a4408c7005a812af8a2a0cb4f99b26e533860a/records/track_10min_16mb/2026-03-23_MultiPass_StreamingLegalTTT",
+        "pr": "https://github.com/openai/parameter-golf/pull/573",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
