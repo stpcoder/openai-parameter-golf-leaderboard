@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T18:26:14.803Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 636,
+    "title": "Add non-record 10min submission: 11L XSA4 + EMA + GPTQ + FA3 (1.12336724)",
+    "state": "open",
+    "updatedAt": "2026-03-24T18:20:23Z",
+    "headSha": "34494eb6d1cae616587dfa404ab2c8ed8e83ba5a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/636",
+    "authorLogin": "NewyorkDev"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_11L_XSA4_EMA_GPTQ_FA3_1.1234/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stack pairs an 11-layer GQA with BigramHash/SmearGate mixing, late XSA+VE modules, and EMA plus late-QAT before FlashAttention/GPTQ int6 export.",
+    "tags": [
+      "quantization",
+      "attention",
+      "architecture",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11L GQA with tied embeddings, BigramHash+SmearGate mixing, and VE/XSA on final layers",
+      "EMA plus late QAT trigger ahead of GPTQ int6 export compressed via zstd",
+      "Muon/Adam-style split optimizer with FlashAttention-3 on Hopper fallback to SDPA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

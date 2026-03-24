@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T17:56:23.985Z",
+  "generatedAt": "2026-03-24T18:26:26.592Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 609,
-    "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
+    "title": "Non-record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-24T17:43:05Z",
+    "updatedAt": "2026-03-24T18:12:03Z",
     "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/609",
     "authorLogin": "saml212"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends the Parallel Muon stack by applying XSA on every layer and using selective ±1 post-GPTQ pruning before artifact serialization.",
+    "summary": "Extends the Parallel Muon stack by applying XSA across every layer and selective ±1 pruning after full GPTQ to tighten cross-layer mixing and compression.",
     "tags": [
       "attention",
       "quantization",
-      "compression"
+      "muon"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA on every layer",
-      "Full Hessian GPTQ int6",
-      "Selective ±1 magnitude pruning"
+      "XSA on all 11 layers for earlier cross-position mixing",
+      "Full Hessian GPTQ int6 with selective ±1 pruning to drop low-impact quantized entries",
+      "Parameter Banking + Parallel Muon pipeline with BigramHash and EMA/SWA stack"
     ]
   },
   "compatibility": {
