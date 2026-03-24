@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T13:25:07.158Z",
+  "generatedAt": "2026-03-24T15:55:38.776Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 614,
     "title": "Record: 0.6864 BPB — K-LoRA + Min-NLL + FlashAttention-3",
-    "state": "open",
-    "updatedAt": "2026-03-24T13:23:20Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T15:25:51Z",
     "headSha": "3ada155b7c9d84e66b80bd088d282197858c16f6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/614",
     "authorLogin": "bigbag"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "K-LoRA extends Chimera TTT by tuning K projections and per-layer LRs, using min-NLL epoch selection plus FlashAttention-3 causal fusion for faster eval.",
+    "summary": "Adds K-projection LoRA, min-NLL epoch pick, and FlashAttention-3 with Rotary cache fixes to the Chimera TTT stack for faster per-document adaptation.",
     "tags": [
-      "architecture",
       "attention",
-      "training-schedule"
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "K-projection LoRA with biased LR multipliers",
-      "Min-NLL epoch selection to avoid overfit",
-      "FlashAttention-3 causal attention compatibility fix"
+      "K-projection LoRA with per-layer LR multipliers for Q/K/V and LM-head",
+      "Min-NLL selection to pick the best TTT epoch without overfitting",
+      "FlashAttention-3 plus Rotary cache fix for faster causal attention"
     ]
   },
   "compatibility": {

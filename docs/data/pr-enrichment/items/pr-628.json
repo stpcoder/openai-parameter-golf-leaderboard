@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T15:55:17.532Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 628,
+    "title": "Non-record: 11L GEPA + 20k Steps + Pure Int6 + Legal TTT (val_bpb=1.0983): unlimited compute: 4×A100-40GB, ~2.8 hours",
+    "state": "open",
+    "updatedAt": "2026-03-24T15:53:26Z",
+    "headSha": "3427ad1b66b9433722872e1f83f1e481d533e55b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/628",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_11L_GEPA_20kSteps_PureInt6_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends 11L GEPA to 20k steps with an 8k warmdown, pure int6 GPTQ-lite quant, and legal score-first TTT for a compact artifact.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Long 8k-step cosine warmdown after 12k peak LR",
+      "Pure int6 per-row GPTQ-lite quant + zstd-22 compression",
+      "Legal score-first SGD TTT with momentum 0.9"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

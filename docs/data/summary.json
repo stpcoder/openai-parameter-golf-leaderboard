@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-24T15:24:59.320Z",
+  "generatedAt": "2026-03-24T15:55:08.837Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 485,
+    "submissions": 488,
     "official": 1,
-    "openPr": 389,
+    "openPr": 388,
     "mergedPr": 21,
-    "closedPr": 74,
-    "prBacked": 485,
+    "closedPr": 78,
+    "prBacked": 488,
     "readmeListed": 20,
     "collectorErrors": 0
   },
@@ -91,7 +91,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-chimera_submission",
+      "id": "record-records-track_10min_16mb-2026-03-23_PROTEUS_v7",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -103,32 +103,32 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "chimera_submission",
-        "folderPath": "records/track_10min_16mb/chimera_submission",
-        "submissionPath": "records/track_10min_16mb/chimera_submission/submission.json",
-        "readmePath": "records/track_10min_16mb/chimera_submission/README.md",
-        "trainLogPath": "records/track_10min_16mb/chimera_submission/train.log",
-        "scriptPath": "records/track_10min_16mb/chimera_submission/train_gpt.py"
+        "folderName": "2026-03-23_PROTEUS_v7",
+        "folderPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7",
+        "submissionPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-23_PROTEUS_v7/train_gpt.py"
       },
       "submission": {
-        "author": "chimera",
-        "githubId": "chimera",
-        "name": "Chimera TTT",
-        "blurb": null,
-        "date": "2026-03-24T11:19:24Z"
+        "author": "Mato (LightSpeedUp)",
+        "githubId": "MatoTeziTanka",
+        "name": "PROTEUS v7",
+        "blurb": "11L, INT6 uniform, depth-scaled residual, backward-looking LoRA TTT (batch=64, multi-epoch). Built with PROTEUS by LightSpeedUp — lightspeedup.com",
+        "date": "2026-03-23T08:00:00Z"
       },
       "metrics": {
-        "valBpb": 0.5601,
-        "valLoss": null,
+        "valBpb": 0.9512,
+        "valLoss": 1.6032,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
         "wallclockSeconds": null,
-        "evalTimeSeconds": 780
+        "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
+        "bytesTotal": 15429458,
+        "bytesCode": 67148,
         "bytesModelInt8Zlib": null
       },
       "flags": {
@@ -139,26 +139,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 611,
-        "title": "Record: Chimera TTT — K-Projection LoRA + Min-NLL (0.5601 BPB, 3-seed mean)",
+        "number": 512,
+        "title": "Record: PROTEUS v7 — 11L INT6 + LoRA TTT (mean val_bpb=0.9512, 3 seeds)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/611",
-        "authorLogin": "teddyoweh",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/512",
+        "authorLogin": "MatoTeziTanka",
         "authorName": null,
-        "createdAt": "2026-03-24T11:19:24Z",
-        "updatedAt": "2026-03-24T11:19:24Z",
-        "headSha": "c24037678d5bbacb9f7b0aa0ac1a43e25ed87e72",
-        "headRepo": "teddyoweh/parameter-golf"
+        "createdAt": "2026-03-23T07:58:41Z",
+        "updatedAt": "2026-03-23T23:45:03Z",
+        "headSha": "502a29f01510b50a872a8b3737dfe874a3478e2d",
+        "headRepo": "MatoTeziTanka/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c24037678d5bbacb9f7b0aa0ac1a43e25ed87e72/records/track_10min_16mb/chimera_submission/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/c24037678d5bbacb9f7b0aa0ac1a43e25ed87e72/records/track_10min_16mb/chimera_submission/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/c24037678d5bbacb9f7b0aa0ac1a43e25ed87e72/records/track_10min_16mb/chimera_submission/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/c24037678d5bbacb9f7b0aa0ac1a43e25ed87e72/records/track_10min_16mb/chimera_submission/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/c24037678d5bbacb9f7b0aa0ac1a43e25ed87e72/records/track_10min_16mb/chimera_submission",
-        "pr": "https://github.com/openai/parameter-golf/pull/611",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/502a29f01510b50a872a8b3737dfe874a3478e2d/records/track_10min_16mb/2026-03-23_PROTEUS_v7/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/502a29f01510b50a872a8b3737dfe874a3478e2d/records/track_10min_16mb/2026-03-23_PROTEUS_v7/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/502a29f01510b50a872a8b3737dfe874a3478e2d/records/track_10min_16mb/2026-03-23_PROTEUS_v7/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/502a29f01510b50a872a8b3737dfe874a3478e2d/records/track_10min_16mb/2026-03-23_PROTEUS_v7/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/502a29f01510b50a872a8b3737dfe874a3478e2d/records/track_10min_16mb/2026-03-23_PROTEUS_v7",
+        "pr": "https://github.com/openai/parameter-golf/pull/512",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T11:23:59.144Z",
+  "generatedAt": "2026-03-24T15:55:47.135Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 611,
     "title": "Record: Chimera TTT — K-Projection LoRA + Min-NLL (0.5601 BPB, 3-seed mean)",
-    "state": "open",
-    "updatedAt": "2026-03-24T11:19:24Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T15:25:09Z",
     "headSha": "c24037678d5bbacb9f7b0aa0ac1a43e25ed87e72",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/611",
     "authorLogin": "teddyoweh"
@@ -19,17 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds K-projection LoRA plus min-NLL per-document epoch selection so Chimera TTT adapts keys and safely extends LoRA tuning without late-epoch overfitting.",
+    "summary": "Adds K-projection LoRA and min-NLL per-document epoch selection so LoRA TTT can safely run eight epochs without per-doc overfitting.",
     "tags": [
-      "architecture",
-      "training-schedule",
-      "evaluation"
+      "attention",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LoRA adapters on key projections with conservative LR multiplier",
-      "Track per-document minimum NLL across epochs to pick best TTT scores"
+      "LoRA on key projections",
+      "Min-NLL per-document epoch tracking"
     ]
   },
   "compatibility": {

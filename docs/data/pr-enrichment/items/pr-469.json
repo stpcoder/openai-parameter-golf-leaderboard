@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T00:44:39.747Z",
+  "generatedAt": "2026-03-24T15:56:32.606Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 469,
     "title": "Non-record: 27M params at Int5 QAT / train larger, quantize harder (val_bpb=1.1418)",
-    "state": "open",
-    "updatedAt": "2026-03-23T00:23:03Z",
+    "state": "closed",
+    "updatedAt": "2026-03-24T15:25:56Z",
     "headSha": "6187b185304c18010c2fd90ca533b9a03a5ab795",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/469",
     "authorLogin": "cmcdnd"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Train a wider 27M-param (d=576) transformer and use early int5 QAT activation to keep aggressive compression tight within the 16MB artifact budget.",
+    "summary": "Train a wider 27M-param d=576 model and apply int5 QAT early to let the larger net adapt to harsher quantization within the size budget.",
     "tags": [
       "quantization",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "27M-param GQA transformer (d=576, 11 layers)",
-      "Int5 per-row quantization with early QAT start",
-      "Muon optimizer + SWA schedule with warmdown"
+      "int5 QAT activated at lr_scale<0.5 for ~1,700 adaptation steps",
+      "GQA 9-head (3 KV) architecture with relu², SmearGate, BigramHash",
+      "Muon optimizer with SWA and warmdown"
     ]
   },
   "compatibility": {

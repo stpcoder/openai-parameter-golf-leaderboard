@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-24T15:25:14.697Z",
+  "generatedAt": "2026-03-24T15:56:44.924Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 628,
+      "title": "Non-record: 11L GEPA + 20k Steps + Pure Int6 + Legal TTT (val_bpb=1.0983): unlimited compute: 4×A100-40GB, ~2.8 hours",
+      "status": "open",
+      "updatedAt": "2026-03-24T15:53:26Z",
+      "headSha": "3427ad1b66b9433722872e1f83f1e481d533e55b",
+      "generatedAt": "2026-03-24T15:55:17.532Z",
+      "summary": "Extends 11L GEPA to 20k steps with an 8k warmdown, pure int6 GPTQ-lite quant, and legal score-first TTT for a compact artifact.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-628.json"
+    },
+    {
+      "prNumber": 626,
+      "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon (3-seed mean 1.1180)",
+      "status": "open",
+      "updatedAt": "2026-03-24T15:36:34Z",
+      "headSha": "ff8f2c5b1b98c9faeea37e18f9a50ea4780bf5e4",
+      "generatedAt": "2026-03-24T15:55:24.234Z",
+      "summary": "Combines full GPTQ quantization with LeakyReLU² activations, Parallel Muon depth, and BigramHash to maximize 16MB track performance.",
+      "tags": [
+        "quantization",
+        "muon",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-626.json"
+    },
+    {
+      "prNumber": 625,
+      "title": "Add_Maestro_Solar_Protocol_Joeavaib",
+      "status": "open",
+      "updatedAt": "2026-03-24T15:30:53Z",
+      "headSha": "15aa8816a3ec308b698cdf93284d949488259c90",
+      "generatedAt": "2026-03-24T15:55:30.372Z",
+      "summary": "Maestro OS stacks a 1+7+1 reasoning/completion/validation pipeline with SolarShield gating, LeakyReLU² MLPs, Legal TTT, and Parallel Muon optimizer.",
+      "tags": [
+        "architecture",
+        "attention",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-625.json"
+    },
     {
       "prNumber": 624,
       "title": "Rajat submission",
@@ -170,15 +241,15 @@
     {
       "prNumber": 614,
       "title": "Record: 0.6864 BPB — K-LoRA + Min-NLL + FlashAttention-3",
-      "status": "open",
-      "updatedAt": "2026-03-24T13:23:20Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T15:25:51Z",
       "headSha": "3ada155b7c9d84e66b80bd088d282197858c16f6",
-      "generatedAt": "2026-03-24T13:25:07.158Z",
-      "summary": "K-LoRA extends Chimera TTT by tuning K projections and per-layer LRs, using min-NLL epoch selection plus FlashAttention-3 causal fusion for faster eval.",
+      "generatedAt": "2026-03-24T15:55:38.776Z",
+      "summary": "Adds K-projection LoRA, min-NLL epoch pick, and FlashAttention-3 with Rotary cache fixes to the Chimera TTT stack for faster per-document adaptation.",
       "tags": [
-        "architecture",
         "attention",
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -217,15 +288,14 @@
     {
       "prNumber": 611,
       "title": "Record: Chimera TTT — K-Projection LoRA + Min-NLL (0.5601 BPB, 3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-03-24T11:19:24Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T15:25:09Z",
       "headSha": "c24037678d5bbacb9f7b0aa0ac1a43e25ed87e72",
-      "generatedAt": "2026-03-24T11:23:59.144Z",
-      "summary": "Adds K-projection LoRA plus min-NLL per-document epoch selection so Chimera TTT adapts keys and safely extends LoRA tuning without late-epoch overfitting.",
+      "generatedAt": "2026-03-24T15:55:47.135Z",
+      "summary": "Adds K-projection LoRA and min-NLL per-document epoch selection so LoRA TTT can safely run eight epochs without per-doc overfitting.",
       "tags": [
-        "architecture",
-        "training-schedule",
-        "evaluation"
+        "attention",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -265,14 +335,14 @@
       "prNumber": 609,
       "title": "Record: 11L XSA-all + Full GPTQ + Selective Pruning (val_bpb=1.1154, 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-24T12:40:40Z",
+      "updatedAt": "2026-03-24T15:31:01Z",
       "headSha": "e2868b319e4e1d2db4bf03703d686ccec4f6e94a",
-      "generatedAt": "2026-03-24T12:54:59.155Z",
-      "summary": "Extends the Parallel Muon stack with XSA on all 11 layers plus selective post-GPTQ ±1 pruning to keep cross-position mixing while trimming low-impact quantized values.",
+      "generatedAt": "2026-03-24T15:55:58.562Z",
+      "summary": "Extends Parallel Muon stack by applying XSA on every layer and combining Full Hessian GPTQ with selective ±1 pruning for tighter quantized compression.",
       "tags": [
-        "architecture",
         "attention",
-        "quantization"
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -334,16 +404,16 @@
     {
       "prNumber": 605,
       "title": "Record: 0.7227 BPB — 10L LoRA TTT 6ep + FlashAttention-3",
-      "status": "open",
-      "updatedAt": "2026-03-24T07:58:10Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T15:27:05Z",
       "headSha": "10bc6fc3a0b928ce76c8892dae900d87befb8893",
-      "generatedAt": "2026-03-24T08:22:35.763Z",
-      "summary": "Per-document LoRA TTT on a 10L GQA model with FlashAttention-3, compiled Muon, and late int6 quantization for faster eval-adapted scoring.",
+      "generatedAt": "2026-03-24T15:56:04.374Z",
+      "summary": "10L GQA base using batched LoRA TTT per-document adaptation, FlashAttention-3, and late int6 quantization with EMA/SWA tuning for the 16MB track.",
       "tags": [
         "architecture",
         "attention",
-        "training-schedule",
-        "quantization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -549,23 +619,23 @@
       "prNumber": 595,
       "title": "Record: Loqui Auris — 10L + SWA + Standard TTT (val_bpb=1.1100)",
       "status": "closed",
-      "updatedAt": "2026-03-24T14:50:13Z",
+      "updatedAt": "2026-03-24T15:55:46Z",
       "headSha": "7868f1244e333c7b7af2af2a51c67ea00a427f86",
-      "generatedAt": "2026-03-24T14:55:47.606Z",
-      "summary": "10L GQA model with SmearGate/BigramHash + SWA, then quantize and run standard AdamW TTT on validation data.",
+      "generatedAt": "2026-03-24T15:56:11.398Z",
+      "summary": "10-layer RoPE transformer with GQA, SWA checkpoint averaging, and Int5/6 quantization, followed by standard AdamW TTT on validation data.",
       "tags": [
-        "val-only",
         "architecture",
-        "optimizer",
-        "quantization"
+        "quantization",
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-595.json"
     },
@@ -943,14 +1013,14 @@
       "prNumber": 569,
       "title": "Record: 11L VRL + LeakyReLU² + Full GPTQ (3-seed mean val_bpb=1.1175)",
       "status": "open",
-      "updatedAt": "2026-03-24T15:08:22Z",
+      "updatedAt": "2026-03-24T15:31:31Z",
       "headSha": "1a4f3aaf4c125882705386d26e2bb271b4907243",
-      "generatedAt": "2026-03-24T15:25:14.615Z",
-      "summary": "Adds layer-0 value residual learning gates to LeakyReLU² MLPs and leverages full GPTQ+pruning to shrink the 11-layer model within the 16MB budget.",
+      "generatedAt": "2026-03-24T15:56:19.813Z",
+      "summary": "Combines sigmoid-gated Value Residual Learning, LeakyReLU(0.5)² MLPs, and Full GPTQ-aware quantization within an 11-layer model with EMA/SWA.",
       "tags": [
         "architecture",
         "quantization",
-        "compression"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2613,11 +2683,11 @@
     {
       "prNumber": 469,
       "title": "Non-record: 27M params at Int5 QAT / train larger, quantize harder (val_bpb=1.1418)",
-      "status": "open",
-      "updatedAt": "2026-03-23T00:23:03Z",
+      "status": "closed",
+      "updatedAt": "2026-03-24T15:25:56Z",
       "headSha": "6187b185304c18010c2fd90ca533b9a03a5ab795",
-      "generatedAt": "2026-03-23T00:44:39.747Z",
-      "summary": "Train a wider 27M-param (d=576) transformer and use early int5 QAT activation to keep aggressive compression tight within the 16MB artifact budget.",
+      "generatedAt": "2026-03-24T15:56:32.606Z",
+      "summary": "Train a wider 27M-param d=576 model and apply int5 QAT early to let the larger net adapt to harsher quantization within the size budget.",
       "tags": [
         "quantization",
         "architecture",
@@ -3880,13 +3950,13 @@
       "prNumber": 399,
       "title": "Record: Parallel Muon + Parameter Banking — 81.87ms/step, val_bpb 1.1247 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-22T15:55:18Z",
+      "updatedAt": "2026-03-24T15:53:50Z",
       "headSha": "d5340951f214b08d53cf8fa582e04dc43c2548cb",
-      "generatedAt": "2026-03-22T16:11:19.871Z",
-      "summary": "Banked weights plus Parallel Muon ditch DDP, batching Newton-Schulz across four banks with manual async communication for faster optimizer steps.",
+      "generatedAt": "2026-03-24T15:56:44.864Z",
+      "summary": "Parameter Banking reorganizes weights into a few 3D tensors, while Parallel Muon schedules DDP-free async comms for batched optimizer steps.",
       "tags": [
-        "optimizer",
         "muon",
+        "optimizer",
         "architecture"
       ],
       "flags": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-22T16:11:19.871Z",
+  "generatedAt": "2026-03-24T15:56:44.864Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 399,
     "title": "Record: Parallel Muon + Parameter Banking — 81.87ms/step, val_bpb 1.1247 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-22T15:55:18Z",
+    "updatedAt": "2026-03-24T15:53:50Z",
     "headSha": "d5340951f214b08d53cf8fa582e04dc43c2548cb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/399",
     "authorLogin": "abaybektursun"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Banked weights plus Parallel Muon ditch DDP, batching Newton-Schulz across four banks with manual async communication for faster optimizer steps.",
+    "summary": "Parameter Banking reorganizes weights into a few 3D tensors, while Parallel Muon schedules DDP-free async comms for batched optimizer steps.",
     "tags": [
-      "optimizer",
       "muon",
+      "optimizer",
       "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Parameter banking aggregating 66 linears into four tensors",
-      "Batched Newton-Schulz orthogonalization across each bank",
-      "Manual Parallel Muon reduce-scatter/all-gather scheduling"
+      "Batched Newton-Schulz updates over contiguous parameter banks",
+      "Parallel Muon flow with async reduce_scatter, local NS, and all_gather",
+      "DDP removed for banked params to preserve overlap during communication"
     ]
   },
   "compatibility": {
