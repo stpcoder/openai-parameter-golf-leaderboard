@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-24T00:19:45.167Z",
+  "generatedAt": "2026-03-24T01:20:17.634Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 592,
+      "title": "Submission: 12L Int5-MLP BigramHash10K EMA (1.1476 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-24T01:13:29Z",
+      "headSha": "30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda",
+      "generatedAt": "2026-03-24T01:20:07.260Z",
+      "summary": "Adds a 12th transformer layer via mixed Int5 MLP/Int6 attention quantization and larger BigramHash embeddings, backed by EMA/SWA and GPTQ-lite tuning.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-592.json"
+    },
     {
       "prNumber": 589,
       "title": "Record: Late Soft-Round QAT + Score-First Backward-Looking TTT — val_bpb 1.1178",
@@ -262,14 +286,15 @@
       "prNumber": 573,
       "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
       "status": "open",
-      "updatedAt": "2026-03-23T21:39:03Z",
+      "updatedAt": "2026-03-24T01:14:20Z",
       "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
-      "generatedAt": "2026-03-23T21:48:56.888Z",
-      "summary": "Three-pass streaming score-first legal TTT ensembles shifted trajectories so every token gets an adapted min-NLL while fixing RoPE cache clones.",
+      "generatedAt": "2026-03-24T01:20:17.546Z",
+      "summary": "Three-pass streaming score-first TTT scores each token before adaptation and takes per-token min NLL so every token can benefit from a late-pass prediction.",
       "tags": [
-        "sliding-window-eval",
+        "evaluation",
+        "training-schedule",
         "quantization",
-        "optimizer"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,

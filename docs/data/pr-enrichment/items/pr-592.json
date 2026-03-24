@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T01:20:07.260Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 592,
+    "title": "Submission: 12L Int5-MLP BigramHash10K EMA (1.1476 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-24T01:13:29Z",
+    "headSha": "30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/592",
+    "authorLogin": "Skytuhua"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds a 12th transformer layer via mixed Int5 MLP/Int6 attention quantization and larger BigramHash embeddings, backed by EMA/SWA and GPTQ-lite tuning.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed Int5 MLP + Int6 attention quantization with late QAT",
+      "BigramHash(10240) embeddings, SmearGate, XSA tail layers, partial RoPE",
+      "EMA(0.997)+SWA+GPTQ-lite clip search on Muon-trained stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

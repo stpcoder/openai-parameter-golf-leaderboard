@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-24T00:49:45.251Z",
-  "lastSeenUpdatedAt": "2026-03-24T00:03:08Z",
+  "generatedAt": "2026-03-24T01:20:00.291Z",
+  "lastSeenUpdatedAt": "2026-03-24T01:19:27Z",
   "prs": {
     "1": {
       "number": 1,
@@ -48853,7 +48853,7 @@
     },
     "573": {
       "number": 573,
-      "updatedAt": "2026-03-23T21:39:03Z",
+      "updatedAt": "2026-03-24T01:14:20Z",
       "pr": {
         "number": 573,
         "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
@@ -48864,7 +48864,7 @@
         "authorLogin": "Sarimsaljook",
         "authorName": null,
         "createdAt": "2026-03-23T20:39:48Z",
-        "updatedAt": "2026-03-23T21:39:03Z",
+        "updatedAt": "2026-03-24T01:14:20Z",
         "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
         "headRepo": "Sarimsaljook/parameter-golf"
       },
@@ -48927,7 +48927,7 @@
             "authorLogin": "Sarimsaljook",
             "authorName": null,
             "createdAt": "2026-03-23T20:39:48Z",
-            "updatedAt": "2026-03-23T21:39:03Z",
+            "updatedAt": "2026-03-24T01:14:20Z",
             "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
             "headRepo": "Sarimsaljook/parameter-golf"
           },
@@ -50341,6 +50341,116 @@
         "headRepo": null
       },
       "submissions": []
+    },
+    "591": {
+      "number": 591,
+      "updatedAt": "2026-03-24T01:19:27Z",
+      "pr": {
+        "number": 591,
+        "title": "(Nonrecord) Async Prefetching",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/591",
+        "authorLogin": "SirSaltySalmon",
+        "authorName": null,
+        "createdAt": "2026-03-24T00:52:28Z",
+        "updatedAt": "2026-03-24T01:19:27Z",
+        "headSha": "20e49506d15b2387da9a5b2a71d58d443c8aede8",
+        "headRepo": "SirSaltySalmon/parameter-golf"
+      },
+      "submissions": []
+    },
+    "592": {
+      "number": 592,
+      "updatedAt": "2026-03-24T01:13:29Z",
+      "pr": {
+        "number": 592,
+        "title": "Submission: 12L Int5-MLP BigramHash10K EMA (1.1476 BPB)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/592",
+        "authorLogin": "Skytuhua",
+        "authorName": null,
+        "createdAt": "2026-03-24T01:10:26Z",
+        "updatedAt": "2026-03-24T01:13:29Z",
+        "headSha": "30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda",
+        "headRepo": "Skytuhua/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-592-records-track_10min_16mb-2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1-1476-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476",
+            "folderPath": "records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476",
+            "submissionPath": "records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/train_gpt.py"
+          },
+          "submission": {
+            "author": "skytuhua",
+            "githubId": "skytuhua",
+            "name": "12L Int5-MLP BigramHash10K EMA GPTQ-lite",
+            "blurb": "12-layer GPT with mixed Int5/Int6 quantization, BigramHash(10240), EMA(0.997), GPTQ-lite clip search, late QAT, SmearGate, XSA last 4, partial RoPE, sliding window eval stride=64. Built on PR#414 SOTA stack.",
+            "date": "2026-03-23T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.14760365,
+            "valLoss": 1.93767556,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15497769,
+            "bytesCode": 85978,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 592,
+            "title": "Submission: 12L Int5-MLP BigramHash10K EMA (1.1476 BPB)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/592",
+            "authorLogin": "Skytuhua",
+            "authorName": null,
+            "createdAt": "2026-03-24T01:10:26Z",
+            "updatedAt": "2026-03-24T01:13:29Z",
+            "headSha": "30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda",
+            "headRepo": "Skytuhua/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda/records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda/records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda/records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda/records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/30bdc5d7bf129b3f7456176ac1febb3bfdcd1bda/records/track_10min_16mb/2026-03-23_12L_Int5MLP_BigramHash10K_EMA_1.1476",
+            "pr": "https://github.com/openai/parameter-golf/pull/592"
+          }
+        }
+      ]
     }
   }
 }
