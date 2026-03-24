@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-24T03:20:39.406Z",
-  "lastSeenUpdatedAt": "2026-03-24T03:19:49Z",
+  "generatedAt": "2026-03-24T03:50:36.913Z",
+  "lastSeenUpdatedAt": "2026-03-24T03:48:51Z",
   "prs": {
     "1": {
       "number": 1,
@@ -41494,7 +41494,7 @@
     },
     "490": {
       "number": 490,
-      "updatedAt": "2026-03-24T02:40:12Z",
+      "updatedAt": "2026-03-24T03:31:38Z",
       "pr": {
         "number": 490,
         "title": "Record: 11L VR + GA + LeakyReLU² + Legal Score-First TTT (val_bpb=pending)",
@@ -41505,8 +41505,8 @@
         "authorLogin": "amaljithkuttamath",
         "authorName": null,
         "createdAt": "2026-03-23T01:48:57Z",
-        "updatedAt": "2026-03-24T02:40:12Z",
-        "headSha": "a56d7f9f3c2ca7e2052be5b70057875a456ef5a4",
+        "updatedAt": "2026-03-24T03:31:38Z",
+        "headSha": "3c4c4bd3dfec3718e00b929ec25191e53d55598d",
         "headRepo": "amaljithkuttamath/parameter-golf"
       },
       "submissions": [
@@ -41568,16 +41568,16 @@
             "authorLogin": "amaljithkuttamath",
             "authorName": null,
             "createdAt": "2026-03-23T01:48:57Z",
-            "updatedAt": "2026-03-24T02:40:12Z",
-            "headSha": "a56d7f9f3c2ca7e2052be5b70057875a456ef5a4",
+            "updatedAt": "2026-03-24T03:31:38Z",
+            "headSha": "3c4c4bd3dfec3718e00b929ec25191e53d55598d",
             "headRepo": "amaljithkuttamath/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/a56d7f9f3c2ca7e2052be5b70057875a456ef5a4/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3c4c4bd3dfec3718e00b929ec25191e53d55598d/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/3c4c4bd3dfec3718e00b929ec25191e53d55598d/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/3c4c4bd3dfec3718e00b929ec25191e53d55598d/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/3c4c4bd3dfec3718e00b929ec25191e53d55598d/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/3c4c4bd3dfec3718e00b929ec25191e53d55598d/records/track_10min_16mb/2026-03-23_11L_VR_GA_AdamWTTT_1.0891",
             "pr": "https://github.com/openai/parameter-golf/pull/490"
           }
         }
@@ -48995,7 +48995,7 @@
     },
     "573": {
       "number": 573,
-      "updatedAt": "2026-03-24T01:14:20Z",
+      "updatedAt": "2026-03-24T03:48:51Z",
       "pr": {
         "number": 573,
         "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
@@ -49006,7 +49006,7 @@
         "authorLogin": "Sarimsaljook",
         "authorName": null,
         "createdAt": "2026-03-23T20:39:48Z",
-        "updatedAt": "2026-03-24T01:14:20Z",
+        "updatedAt": "2026-03-24T03:48:51Z",
         "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
         "headRepo": "Sarimsaljook/parameter-golf"
       },
@@ -49069,7 +49069,7 @@
             "authorLogin": "Sarimsaljook",
             "authorName": null,
             "createdAt": "2026-03-23T20:39:48Z",
-            "updatedAt": "2026-03-24T01:14:20Z",
+            "updatedAt": "2026-03-24T03:48:51Z",
             "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
             "headRepo": "Sarimsaljook/parameter-golf"
           },

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T03:21:03.076Z",
+  "generatedAt": "2026-03-24T03:50:50.150Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -333,23 +333,22 @@
       "prNumber": 573,
       "title": "Record: 11L XSA4 + Multi-Pass Streaming Score-First Legal TTT (3-seed mean val_bpb=1.0523) ",
       "status": "open",
-      "updatedAt": "2026-03-24T01:14:20Z",
+      "updatedAt": "2026-03-24T03:48:51Z",
       "headSha": "45a4408c7005a812af8a2a0cb4f99b26e533860a",
-      "generatedAt": "2026-03-24T01:20:17.546Z",
-      "summary": "Three-pass streaming score-first TTT scores each token before adaptation and takes per-token min NLL so every token can benefit from a late-pass prediction.",
+      "generatedAt": "2026-03-24T03:50:44.882Z",
+      "summary": "Multi-pass legal TTT runs three score-first streaming passes with shifted orders and per-token min scoring so every token sees adapted context.",
       "tags": [
-        "evaluation",
+        "val-only",
         "training-schedule",
-        "quantization",
-        "attention"
+        "sliding-window-eval"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-573.json"
     },
@@ -1725,14 +1724,15 @@
       "prNumber": 490,
       "title": "Record: 11L VR + GA + LeakyReLU² + Legal Score-First TTT (val_bpb=pending)",
       "status": "open",
-      "updatedAt": "2026-03-24T02:40:12Z",
-      "headSha": "a56d7f9f3c2ca7e2052be5b70057875a456ef5a4",
-      "generatedAt": "2026-03-24T02:50:34.271Z",
-      "summary": "Adds Value Residual, Gated Attention, and LeakyReLU² to the 11L stack with legal score-first TTT scoring each chunk before training.",
+      "updatedAt": "2026-03-24T03:31:38Z",
+      "headSha": "3c4c4bd3dfec3718e00b929ec25191e53d55598d",
+      "generatedAt": "2026-03-24T03:50:50.077Z",
+      "summary": "Adds value-residual + gated-attention blocks with LeakyReLU² MLPs while running legal score-first TTT on validation data.",
       "tags": [
         "val-only",
         "architecture",
-        "evaluation"
+        "attention",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
