@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T10:24:02.442Z",
+  "generatedAt": "2026-03-24T10:53:59.488Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -4563,17 +4563,17 @@
     },
     {
       "prNumber": 344,
-      "title": "Non-record: Autoresearch Heads4 + Step-based LR + Sliding Window (1xH100)",
+      "title": "Non-record: 11L Full SOTA Stack + Score-First TTT (val_bpb=1.1383, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-21T14:57:21Z",
-      "headSha": "e8aaaf1f198fbe064b86e30fafcef809c6a0e2b7",
-      "generatedAt": "2026-03-21T15:03:22.294Z",
-      "summary": "Automated autoresearch loop reruns the SOTA stack (10L, BigramHash, SmearGate) to find NUM_HEADS=4 head_dim=128, step-based LR, sliding-window eval tweaks.",
+      "updatedAt": "2026-03-24T10:34:16Z",
+      "headSha": "738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b",
+      "generatedAt": "2026-03-24T10:53:59.437Z",
+      "summary": "11-layer transformer pairs SmearGate hash embeddings with Value Residual/Gated Attention+XSA and a 3-epoch score-first TTT using per-layer LR groups.",
       "tags": [
         "architecture",
+        "attention",
         "training-schedule",
-        "evaluation",
-        "non-record"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

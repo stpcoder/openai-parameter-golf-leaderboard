@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-03-21T15:03:22.294Z",
+  "generatedAt": "2026-03-24T10:53:59.437Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 344,
-    "title": "Non-record: Autoresearch Heads4 + Step-based LR + Sliding Window (1xH100)",
+    "title": "Non-record: 11L Full SOTA Stack + Score-First TTT (val_bpb=1.1383, 1xH100)",
     "state": "open",
-    "updatedAt": "2026-03-21T14:57:21Z",
-    "headSha": "e8aaaf1f198fbe064b86e30fafcef809c6a0e2b7",
+    "updatedAt": "2026-03-24T10:34:16Z",
+    "headSha": "738f8ca8b5e14a788c4e4fc4d0a5caee2c138c7b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/344",
     "authorLogin": "aryanbhosale"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-21_AutoresearchHeads4_StepLR_SlidingWindow/README.md"
+      "records/track_non_record_16mb/2026-03-24_SOTA_11L_TTT/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Automated autoresearch loop reruns the SOTA stack (10L, BigramHash, SmearGate) to find NUM_HEADS=4 head_dim=128, step-based LR, sliding-window eval tweaks.",
+    "summary": "11-layer transformer pairs SmearGate hash embeddings with Value Residual/Gated Attention+XSA and a 3-epoch score-first TTT using per-layer LR groups.",
     "tags": [
       "architecture",
+      "attention",
       "training-schedule",
-      "evaluation",
-      "non-record"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Autoresearch loop tuning architecture and optimizer settings",
-      "Step-based warmdown schedule replacing wallclock-based LR decay",
-      "Sliding-window eval with expanded BigramHash and SmearGate stack"
+      "- SmearGate with Bigram/Trigram hash embeddings plus Value Residual & Gated Attention on every layer",
+      "- Score-first TTT with frozen embeddings and per-layer LR groups",
+      "- Late QAT via STE alongside Int6 GPTQ-lite quantization"
     ]
   },
   "compatibility": {
