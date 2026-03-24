@@ -1,8 +1,79 @@
 {
-  "generatedAt": "2026-03-24T19:26:31.763Z",
+  "generatedAt": "2026-03-24T20:27:14.568Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 644,
+      "title": "Non-record: 11L GEPA + 25k Steps + Pure Int6 + Legal TTT (val_bpb=1.0944)",
+      "status": "open",
+      "updatedAt": "2026-03-24T20:25:07Z",
+      "headSha": "a1fa11bd90a8b407df9363fd4ba75735a94f8453",
+      "generatedAt": "2026-03-24T20:26:49.147Z",
+      "summary": "11-layer GEPA trained 25k steps with a 13k-step warmdown, pure int6 GPTQ-lite compression, and legal score-first TTT for compact leaderboard-ready submission.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-644.json"
+    },
+    {
+      "prNumber": 643,
+      "title": "Non-record: Mac mini M4 16GB, no H100s, still golfing (val_bpb=1.5672)",
+      "status": "open",
+      "updatedAt": "2026-03-24T20:24:58Z",
+      "headSha": "80f42d379735c7467c531f0d4e7003d87b073f9b",
+      "generatedAt": "2026-03-24T20:26:53.521Z",
+      "summary": "Late EMA over projection matrices before the final int8+zlib roundtrip improves the compressed artifact quality for the verified MLX Mac mini M4 run.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-643.json"
+    },
+    {
+      "prNumber": 642,
+      "title": "Record: 11L + Score-Every-Epoch LoRA TTT 5ep (val_bpb=0.8186)",
+      "status": "open",
+      "updatedAt": "2026-03-24T20:21:24Z",
+      "headSha": "f7e12fdf338681a4d028eb98f08a3613ee0e0c00",
+      "generatedAt": "2026-03-24T20:27:00.845Z",
+      "summary": "Score-every-epoch LoRA TTT on PR#414’s 11L stack, using multi-scale ranks, bias tuning, cosine decay, and T=0.98 rescale.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-642.json"
+    },
     {
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
@@ -783,13 +854,13 @@
       "prNumber": 596,
       "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
       "status": "closed",
-      "updatedAt": "2026-03-24T19:21:05Z",
+      "updatedAt": "2026-03-24T20:00:20Z",
       "headSha": "9e4f467b3647c584b53282e3eb1b0ae4ec771927",
-      "generatedAt": "2026-03-24T19:26:31.672Z",
-      "summary": "INT6 11-layer Transformer runs 8-epoch cosine LoRA TTT with bias tuning and temperature rescaling to specialize per-document eval outputs.",
+      "generatedAt": "2026-03-24T20:27:05.590Z",
+      "summary": "11-layer INT6 quantized transformer uses extended cosine LR LoRA TTT, bias tuning, and temp rescale to specialize per-document scoring within 16MB limit.",
       "tags": [
-        "quantization",
         "architecture",
+        "quantization",
         "training-schedule",
         "evaluation"
       ],
@@ -924,17 +995,16 @@
     },
     {
       "prNumber": 586,
-      "title": "Record: 11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365)",
+      "title": "11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365, 3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-24T16:30:52Z",
-      "headSha": "82e33750f705e0702e378925d268b2a93dc37f91",
-      "generatedAt": "2026-03-24T16:56:03.132Z",
-      "summary": "Walsh-Hadamard rotates int6 weights to improve compression headroom, enabling VE128 plus cuDNN SDPA while a CPU probe steers config selection.",
+      "updatedAt": "2026-03-24T20:24:44Z",
+      "headSha": "224468130c895bb23302d8dc0677296454d84a53",
+      "generatedAt": "2026-03-24T20:27:11.153Z",
+      "summary": "Applying data-free Walsh-Hadamard rotation before int6 quant improves compression headroom to unlock VE128 shared embeddings on an 11-layer model.",
       "tags": [
         "quantization",
-        "architecture",
-        "training-schedule",
-        "non-record"
+        "compression",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3525,15 +3595,15 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-24T09:32:55Z",
-      "headSha": "d327cb8bec036696413b4ad1d0e977b1f540cbf2",
-      "generatedAt": "2026-03-24T09:53:47.761Z",
-      "summary": "Dual-branch compressed transformer uses FRO+AdamW split, radial token geometry, and ternary-bit projections with mixed int8/int6 export to stay under 16MB.",
+      "updatedAt": "2026-03-24T20:18:53Z",
+      "headSha": "a68bff4f2b4657c0e07dc6fce4b0a8f2670272e6",
+      "generatedAt": "2026-03-24T20:27:14.504Z",
+      "summary": "Compressed dual-branch transformer fuses BitNet ternary projections with radial token geometry and a bigram-hash branch trained with split FRO/AdamW and mixed int8/int6 export.",
       "tags": [
-        "optimizer",
         "architecture",
+        "optimizer",
         "quantization",
-        "tokenization"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,

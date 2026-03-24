@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T09:53:47.761Z",
+  "generatedAt": "2026-03-24T20:27:14.504Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
     "title": "Radial bitnet submission",
     "state": "open",
-    "updatedAt": "2026-03-24T09:32:55Z",
-    "headSha": "d327cb8bec036696413b4ad1d0e977b1f540cbf2",
+    "updatedAt": "2026-03-24T20:18:53Z",
+    "headSha": "a68bff4f2b4657c0e07dc6fce4b0a8f2670272e6",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Dual-branch compressed transformer uses FRO+AdamW split, radial token geometry, and ternary-bit projections with mixed int8/int6 export to stay under 16MB.",
+    "summary": "Compressed dual-branch transformer fuses BitNet ternary projections with radial token geometry and a bigram-hash branch trained with split FRO/AdamW and mixed int8/int6 export.",
     "tags": [
-      "optimizer",
       "architecture",
+      "optimizer",
       "quantization",
-      "tokenization"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dual-branch compressed transformer backbone",
-      "FRO optimizer on main weights with AdamW for fusion/radial branches",
-      "Radial token geometry plus ternary-bit projections with mixed int8/int6 export"
+      "Dual-branch compressed transformer fusion",
+      "Radial token and hashed bigram auxiliary branches",
+      "Split FRO/AdamW training with mixed int8/int6 export"
     ]
   },
   "compatibility": {

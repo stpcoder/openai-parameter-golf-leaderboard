@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-24T20:27:00.845Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 642,
+    "title": "Record: 11L + Score-Every-Epoch LoRA TTT 5ep (val_bpb=0.8186)",
+    "state": "open",
+    "updatedAt": "2026-03-24T20:21:24Z",
+    "headSha": "f7e12fdf338681a4d028eb98f08a3613ee0e0c00",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/642",
+    "authorLogin": "minh-stakc"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Score-every-epoch LoRA TTT on PR#414’s 11L stack, using multi-scale ranks, bias tuning, cosine decay, and T=0.98 rescale.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training stack with TTT adaptation, not restricted to explicit validation-shard training.",
+    "techniques": [
+      "Score-every-epoch LoRA TTT with per-block bias tuning",
+      "Multi-scale LoRA ranks (LM-head 16, Q/V 8) and cosine LR decay",
+      "Post-TTT temperature rescale to 0.98"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

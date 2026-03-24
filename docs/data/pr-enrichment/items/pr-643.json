@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T20:26:53.521Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 643,
+    "title": "Non-record: Mac mini M4 16GB, no H100s, still golfing (val_bpb=1.5672)",
+    "state": "open",
+    "updatedAt": "2026-03-24T20:24:58Z",
+    "headSha": "80f42d379735c7467c531f0d4e7003d87b073f9b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/643",
+    "authorLogin": "frido22"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_MLX_MacminiM4_16GB_LateProjectionEMA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Late EMA over projection matrices before the final int8+zlib roundtrip improves the compressed artifact quality for the verified MLX Mac mini M4 run.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Late EMA on projection matrices",
+      "Int8+zlib final roundtrip verification",
+      "MLX Mac mini M4 hardware-specific package"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

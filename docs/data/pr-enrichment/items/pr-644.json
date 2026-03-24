@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-24T20:26:49.147Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 644,
+    "title": "Non-record: 11L GEPA + 25k Steps + Pure Int6 + Legal TTT (val_bpb=1.0944)",
+    "state": "open",
+    "updatedAt": "2026-03-24T20:25:07Z",
+    "headSha": "a1fa11bd90a8b407df9363fd4ba75735a94f8453",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/644",
+    "authorLogin": "Christopher-Lee-McClendon"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_11L_GEPA_25kSteps_PureInt6_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer GEPA trained 25k steps with a 13k-step warmdown, pure int6 GPTQ-lite compression, and legal score-first TTT for compact leaderboard-ready submission.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Extended long warmdown after peak LR to squeeze more progress at near-zero LR",
+      "Pure int6 per-row GPTQ-lite clip search (15 candidates) plus zstd-22 compression for tiny artifact",
+      "Legal score-first TTT with SGD momentum on frozen prefix layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

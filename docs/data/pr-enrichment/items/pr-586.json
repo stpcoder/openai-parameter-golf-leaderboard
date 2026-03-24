@@ -1,37 +1,36 @@
 {
-  "generatedAt": "2026-03-24T16:56:03.132Z",
+  "generatedAt": "2026-03-24T20:27:11.153Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 586,
-    "title": "Record: 11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365)",
+    "title": "11L + Hadamard Rotation + VE128 + cuDNN SDPA (val_bpb: 1.1365, 3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-24T16:30:52Z",
-    "headSha": "82e33750f705e0702e378925d268b2a93dc37f91",
+    "updatedAt": "2026-03-24T20:24:44Z",
+    "headSha": "224468130c895bb23302d8dc0677296454d84a53",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/586",
     "authorLogin": "EaCognitive"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-24_Hadamard_VE128_QuIP-lite/README.md"
+      "records/track_10min_16mb/2026-03-24_11L_Hadamard_VE128_cuDNN_1.1365/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Walsh-Hadamard rotates int6 weights to improve compression headroom, enabling VE128 plus cuDNN SDPA while a CPU probe steers config selection.",
+    "summary": "Applying data-free Walsh-Hadamard rotation before int6 quant improves compression headroom to unlock VE128 shared embeddings on an 11-layer model.",
     "tags": [
       "quantization",
-      "architecture",
-      "training-schedule",
-      "non-record"
+      "compression",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Walsh-Hadamard rotation before int6 per-row quantization",
-      "CPU parameter probe to pre-screen configurations and reduce GPU search",
-      "cuDNN SDPA runtime with VE128 enabled by recovered artifact headroom"
+      "Hadamard rotation ahead of per-row int6 quantization",
+      "Compression headroom reuse to insert Shared Value Embeddings",
+      "cuDNN SDPA-backed 11-layer architecture"
     ]
   },
   "compatibility": {

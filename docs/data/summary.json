@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-24T19:56:22.810Z",
+  "generatedAt": "2026-03-24T20:26:40.693Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 496,
+    "submissions": 499,
     "official": 1,
-    "openPr": 392,
+    "openPr": 395,
     "mergedPr": 21,
     "closedPr": 82,
-    "prBacked": 496,
+    "prBacked": 499,
     "readmeListed": 20,
     "collectorErrors": 0
   },
@@ -91,7 +91,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-19_PaidPrefix_8xH100",
+      "id": "record-records-track_10min_16mb-2026-03-24_ScoreEveryEpoch_TTT_0-8186",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -103,23 +103,23 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-19_PaidPrefix_8xH100",
-        "folderPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100",
-        "submissionPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train_gpt.py"
+        "folderName": "2026-03-24_ScoreEveryEpoch_TTT_0.8186",
+        "folderPath": "records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186",
+        "submissionPath": "records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/train_gpt.py"
       },
       "submission": {
-        "author": "Spokane Way",
-        "githubId": "spokane-way",
-        "name": "Paid Prefix + Train-Only 7L 384d",
-        "blurb": "Two-part artifact: 8.75 MB lzma-compressed val target tokens (20.8% coverage, exact predictions) + 7.12 MB int8+zlib 7-layer 384d transformer trained exclusively on fineweb train data. Model never sees validation tokens before evaluation.",
-        "date": "2026-03-20T00:00:00Z"
+        "author": "mn.hoang",
+        "githubId": "minh-stakc",
+        "name": "11L + Score-Every-Epoch LoRA TTT 5ep (val_bpb=0.8186)",
+        "blurb": "Score-every-epoch multi-epoch LoRA TTT (5 epochs, LM rank-16, per-layer LR, bias tuning, T=0.98 temperature rescaling) on PR #414 base architecture. Pre-TTT: 1.1264 BPB. Post-TTT: 0.8186 BPB. Built on verified SOTA (PR #414) with FlashAttention 3 fallback for non-Hopper GPUs.",
+        "date": "2026-03-24T00:00:00Z"
       },
       "metrics": {
-        "valBpb": 1.02174288,
-        "valLoss": 1.72517006,
+        "valBpb": 0.8186,
+        "valLoss": 1.38211666,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
         "stepStop": null,
@@ -127,8 +127,8 @@
         "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15930371,
-        "bytesCode": 60315,
+        "bytesTotal": 17132081,
+        "bytesCode": null,
         "bytesModelInt8Zlib": null
       },
       "flags": {
@@ -139,26 +139,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 168,
-        "title": "SOTA Attempt: Paid prefix (val_bpb=1.0238)",
+        "number": 642,
+        "title": "Record: 11L + Score-Every-Epoch LoRA TTT 5ep (val_bpb=0.8186)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/168",
-        "authorLogin": "spokane-way",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/642",
+        "authorLogin": "minh-stakc",
         "authorName": null,
-        "createdAt": "2026-03-20T04:29:35Z",
-        "updatedAt": "2026-03-21T16:38:11Z",
-        "headSha": "83aee2852eb3375309580957f7d3ae6934488428",
-        "headRepo": "spokane-way/parameter-golf"
+        "createdAt": "2026-03-24T20:21:24Z",
+        "updatedAt": "2026-03-24T20:21:24Z",
+        "headSha": "f7e12fdf338681a4d028eb98f08a3613ee0e0c00",
+        "headRepo": "minh-stakc/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/83aee2852eb3375309580957f7d3ae6934488428/records/track_10min_16mb/2026-03-19_PaidPrefix_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/168",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f7e12fdf338681a4d028eb98f08a3613ee0e0c00/records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f7e12fdf338681a4d028eb98f08a3613ee0e0c00/records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f7e12fdf338681a4d028eb98f08a3613ee0e0c00/records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f7e12fdf338681a4d028eb98f08a3613ee0e0c00/records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f7e12fdf338681a4d028eb98f08a3613ee0e0c00/records/track_10min_16mb/2026-03-24_ScoreEveryEpoch_TTT_0.8186",
+        "pr": "https://github.com/openai/parameter-golf/pull/642",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

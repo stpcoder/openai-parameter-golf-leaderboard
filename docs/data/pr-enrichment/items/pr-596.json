@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-24T19:26:31.672Z",
+  "generatedAt": "2026-03-24T20:27:05.590Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 596,
     "title": "Record: DeepQuant V10b — 11L INT6 + 8ep LoRA TTT (val_bpb=0.6430)",
     "state": "closed",
-    "updatedAt": "2026-03-24T19:21:05Z",
+    "updatedAt": "2026-03-24T20:00:20Z",
     "headSha": "9e4f467b3647c584b53282e3eb1b0ae4ec771927",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/596",
     "authorLogin": "AriaAnima"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "INT6 11-layer Transformer runs 8-epoch cosine LoRA TTT with bias tuning and temperature rescaling to specialize per-document eval outputs.",
+    "summary": "11-layer INT6 quantized transformer uses extended cosine LR LoRA TTT, bias tuning, and temp rescale to specialize per-document scoring within 16MB limit.",
     "tags": [
-      "quantization",
       "architecture",
+      "quantization",
       "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "TTT happens during evaluation but the model is not trained exclusively on validation data.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "8-epoch per-document cosine LoRA TTT",
-      "bias tuning + temperature rescale for calibrated outputs",
-      "INT6 quantized 11-layer backbone with zigzag GPU balancing"
+      "INT6 + zstd compression with pre-pruning",
+      "8-epoch cosine LR LoRA TTT with bias tuning",
+      "Post-TTT temperature rescaling and time-capped base fallback"
     ]
   },
   "compatibility": {
