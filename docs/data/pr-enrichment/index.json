@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T08:53:04.130Z",
+  "generatedAt": "2026-03-24T09:53:47.827Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -2966,13 +2966,13 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-24T03:12:31Z",
-      "headSha": "2ab59bbbf196b347405f7eefa97d4945caf4218f",
-      "generatedAt": "2026-03-24T03:21:03.011Z",
-      "summary": "Dual-branch compressed transformer uses BitNet-style ternary projections, radial token branch, and FRO before mixed int8/int6 export.",
+      "updatedAt": "2026-03-24T09:32:55Z",
+      "headSha": "d327cb8bec036696413b4ad1d0e977b1f540cbf2",
+      "generatedAt": "2026-03-24T09:53:47.761Z",
+      "summary": "Dual-branch compressed transformer uses FRO+AdamW split, radial token geometry, and ternary-bit projections with mixed int8/int6 export to stay under 16MB.",
       "tags": [
-        "architecture",
         "optimizer",
+        "architecture",
         "quantization",
         "tokenization"
       ],

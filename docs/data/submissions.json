@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-24T09:23:16.141Z",
+  "generatedAt": "2026-03-24T09:53:36.915Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -29049,160 +29049,6 @@
       }
     },
     {
-      "id": "record-records-track_10min_16mb-2026-03-22_RadialBitNet",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-03-22_RadialBitNet",
-        "folderPath": "records/track_10min_16mb/2026-03-22_RadialBitNet",
-        "submissionPath": "records/track_10min_16mb/2026-03-22_RadialBitNet/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-22_RadialBitNet/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-22_RadialBitNet/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-22_RadialBitNet/train_gpt.py"
-      },
-      "submission": {
-        "author": "Christian Q. De Luca",
-        "githubId": "rthgit",
-        "name": null,
-        "blurb": null,
-        "date": "2026-03-22T16:31:21Z"
-      },
-      "metrics": {
-        "valBpb": null,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 435,
-        "title": "Radial bitnet submission",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
-        "authorLogin": "rthgit",
-        "authorName": null,
-        "createdAt": "2026-03-22T16:31:21Z",
-        "updatedAt": "2026-03-24T03:12:31Z",
-        "headSha": "2ab59bbbf196b347405f7eefa97d4945caf4218f",
-        "headRepo": "rthgit/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-22_RadialBitNet/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-22_RadialBitNet/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-22_RadialBitNet/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-22_RadialBitNet/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-22_RadialBitNet",
-        "pr": "https://github.com/openai/parameter-golf/pull/435",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_10min_16mb-2026-03-24_Radial_TokenBranch-2026-03-24_Radial_MixedBridge",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-03-24_Radial_MixedBridge",
-        "folderPath": "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge",
-        "submissionPath": "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/train_gpt.py"
-      },
-      "submission": {
-        "author": "Christian Q. De Luca",
-        "githubId": "rthgit",
-        "name": null,
-        "blurb": null,
-        "date": "2026-03-22T16:31:21Z"
-      },
-      "metrics": {
-        "valBpb": null,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 435,
-        "title": "Radial bitnet submission",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
-        "authorLogin": "rthgit",
-        "authorName": null,
-        "createdAt": "2026-03-22T16:31:21Z",
-        "updatedAt": "2026-03-24T03:12:31Z",
-        "headSha": "2ab59bbbf196b347405f7eefa97d4945caf4218f",
-        "headRepo": "rthgit/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge",
-        "pr": "https://github.com/openai/parameter-golf/pull/435",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
       "id": "record-records-track_10min_16mb-2026-03-24_Radial_TokenBranch",
       "source": "pull_request",
       "status": "open",
@@ -29260,16 +29106,16 @@
         "authorLogin": "rthgit",
         "authorName": null,
         "createdAt": "2026-03-22T16:31:21Z",
-        "updatedAt": "2026-03-24T03:12:31Z",
-        "headSha": "2ab59bbbf196b347405f7eefa97d4945caf4218f",
+        "updatedAt": "2026-03-24T09:32:55Z",
+        "headSha": "d327cb8bec036696413b4ad1d0e977b1f540cbf2",
         "headRepo": "rthgit/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/2ab59bbbf196b347405f7eefa97d4945caf4218f/records/track_10min_16mb/2026-03-24_Radial_TokenBranch",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d327cb8bec036696413b4ad1d0e977b1f540cbf2/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/d327cb8bec036696413b4ad1d0e977b1f540cbf2/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/d327cb8bec036696413b4ad1d0e977b1f540cbf2/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/d327cb8bec036696413b4ad1d0e977b1f540cbf2/records/track_10min_16mb/2026-03-24_Radial_TokenBranch/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/d327cb8bec036696413b4ad1d0e977b1f540cbf2/records/track_10min_16mb/2026-03-24_Radial_TokenBranch",
         "pr": "https://github.com/openai/parameter-golf/pull/435",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

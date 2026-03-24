@@ -1,39 +1,37 @@
 {
-  "generatedAt": "2026-03-24T03:21:03.011Z",
+  "generatedAt": "2026-03-24T09:53:47.761Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
     "title": "Radial bitnet submission",
     "state": "open",
-    "updatedAt": "2026-03-24T03:12:31Z",
-    "headSha": "2ab59bbbf196b347405f7eefa97d4945caf4218f",
+    "updatedAt": "2026-03-24T09:32:55Z",
+    "headSha": "d327cb8bec036696413b4ad1d0e977b1f540cbf2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
   },
   "inputs": {
-    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-22_RadialBitNet/README.md",
-      "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/2026-03-24_Radial_MixedBridge/README.md",
       "records/track_10min_16mb/2026-03-24_Radial_TokenBranch/README.md"
     ],
-    "submissionCount": 3
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Dual-branch compressed transformer uses BitNet-style ternary projections, radial token branch, and FRO before mixed int8/int6 export.",
+    "summary": "Dual-branch compressed transformer uses FRO+AdamW split, radial token geometry, and ternary-bit projections with mixed int8/int6 export to stay under 16MB.",
     "tags": [
-      "architecture",
       "optimizer",
+      "architecture",
       "quantization",
       "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "BitNet-style ternary projections",
-      "Radial token geometry branch",
-      "FRO optimizer with mixed int8/int6 export"
+      "Dual-branch compressed transformer backbone",
+      "FRO optimizer on main weights with AdamW for fusion/radial branches",
+      "Radial token geometry plus ternary-bit projections with mixed int8/int6 export"
     ]
   },
   "compatibility": {
