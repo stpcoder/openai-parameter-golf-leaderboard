@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-25T09:30:35.212Z",
+  "generatedAt": "2026-03-25T10:30:47.427Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -963,14 +963,15 @@
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-25T07:35:44Z",
-      "headSha": "b64318c143a9a76cd7694c0702e4dd14b278fefb",
-      "generatedAt": "2026-03-25T08:00:13.893Z",
-      "summary": "Combines XSA across all 11 layers with LeakyReLU(0.5)^2, value residuals, gated attention, and int6 sliding evaluation for a non-TTT stack.",
+      "updatedAt": "2026-03-25T10:05:30Z",
+      "headSha": "4755684087ea7d4401f1cd86e1d544411d5d3017",
+      "generatedAt": "2026-03-25T10:30:47.332Z",
+      "summary": "Applies XSA on every layer with LeakyReLU(0.5)^2 plus Value Residual/Gated Attention and int6 quantization for compressed evaluation.",
       "tags": [
         "architecture",
-        "attention",
-        "quantization"
+        "quantization",
+        "regularization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

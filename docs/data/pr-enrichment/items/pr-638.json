@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T08:00:13.893Z",
+  "generatedAt": "2026-03-25T10:30:47.332Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 638,
     "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
     "state": "open",
-    "updatedAt": "2026-03-25T07:35:44Z",
-    "headSha": "b64318c143a9a76cd7694c0702e4dd14b278fefb",
+    "updatedAt": "2026-03-25T10:05:30Z",
+    "headSha": "4755684087ea7d4401f1cd86e1d544411d5d3017",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/638",
     "authorLogin": "Asukabot0"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines XSA across all 11 layers with LeakyReLU(0.5)^2, value residuals, gated attention, and int6 sliding evaluation for a non-TTT stack.",
+    "summary": "Applies XSA on every layer with LeakyReLU(0.5)^2 plus Value Residual/Gated Attention and int6 quantization for compressed evaluation.",
     "tags": [
       "architecture",
-      "attention",
-      "quantization"
+      "quantization",
+      "regularization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "XSA on every layer of the 11L GQA encoder",
-      "LeakyReLU(0.5)^2 in the 3× MLPs to keep negative gradients alive",
-      "Value residual + gated attention before int6 per-row quantization"
+      "XSA on all 11 layers combined with Value Residual and Gated Attention gating",
+      "LeakyReLU(0.5)^2 activation with tuned warmdown across 7500 steps",
+      "Int6 per-row quantization with sliding-window evaluation"
     ]
   },
   "compatibility": {

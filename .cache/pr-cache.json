@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-25T10:00:43.888Z",
-  "lastSeenUpdatedAt": "2026-03-25T09:06:42Z",
+  "generatedAt": "2026-03-25T10:30:38.258Z",
+  "lastSeenUpdatedAt": "2026-03-25T10:25:18Z",
   "prs": {
     "1": {
       "number": 1,
@@ -53844,7 +53844,7 @@
     },
     "638": {
       "number": 638,
-      "updatedAt": "2026-03-25T07:35:44Z",
+      "updatedAt": "2026-03-25T10:05:30Z",
       "pr": {
         "number": 638,
         "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
@@ -53855,8 +53855,8 @@
         "authorLogin": "Asukabot0",
         "authorName": null,
         "createdAt": "2026-03-24T18:36:15Z",
-        "updatedAt": "2026-03-25T07:35:44Z",
-        "headSha": "b64318c143a9a76cd7694c0702e4dd14b278fefb",
+        "updatedAt": "2026-03-25T10:05:30Z",
+        "headSha": "4755684087ea7d4401f1cd86e1d544411d5d3017",
         "headRepo": "Asukabot0/parameter-golf"
       },
       "submissions": [
@@ -53918,16 +53918,16 @@
             "authorLogin": "Asukabot0",
             "authorName": null,
             "createdAt": "2026-03-24T18:36:15Z",
-            "updatedAt": "2026-03-25T07:35:44Z",
-            "headSha": "b64318c143a9a76cd7694c0702e4dd14b278fefb",
+            "updatedAt": "2026-03-25T10:05:30Z",
+            "headSha": "4755684087ea7d4401f1cd86e1d544411d5d3017",
             "headRepo": "Asukabot0/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b64318c143a9a76cd7694c0702e4dd14b278fefb/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/b64318c143a9a76cd7694c0702e4dd14b278fefb/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/b64318c143a9a76cd7694c0702e4dd14b278fefb/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/b64318c143a9a76cd7694c0702e4dd14b278fefb/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/b64318c143a9a76cd7694c0702e4dd14b278fefb/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4755684087ea7d4401f1cd86e1d544411d5d3017/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/4755684087ea7d4401f1cd86e1d544411d5d3017/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/4755684087ea7d4401f1cd86e1d544411d5d3017/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/4755684087ea7d4401f1cd86e1d544411d5d3017/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/4755684087ea7d4401f1cd86e1d544411d5d3017/records/track_10min_16mb/2026-03-25_XSA_all_LeakyReLU_VR_GA",
             "pr": "https://github.com/openai/parameter-golf/pull/638"
           }
         }
@@ -58578,6 +58578,25 @@
           }
         }
       ]
+    },
+    "699": {
+      "number": 699,
+      "updatedAt": "2026-03-25T10:25:18Z",
+      "pr": {
+        "number": 699,
+        "title": "11L EMA LeakyReLU2 Int6 XSA4 PartialRoPE submission",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/699",
+        "authorLogin": "RohanMulay1",
+        "authorName": null,
+        "createdAt": "2026-03-25T10:25:18Z",
+        "updatedAt": "2026-03-25T10:25:18Z",
+        "headSha": "bce1e45c41396c444c0ee76f89688a91b1f12b8a",
+        "headRepo": "RohanMulay1/parameter-golf"
+      },
+      "submissions": []
     }
   }
 }
