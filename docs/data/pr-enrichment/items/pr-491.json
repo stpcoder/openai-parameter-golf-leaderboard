@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-23T19:17:20.351Z",
+  "generatedAt": "2026-03-25T18:03:37.400Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 491,
     "title": "Value Residual + DenseFormer DWA + TTT",
     "state": "open",
-    "updatedAt": "2026-03-23T19:16:53Z",
-    "headSha": "89a7210bf837c05346cd685d0bd85f502781ccfa",
+    "updatedAt": "2026-03-25T17:32:37Z",
+    "headSha": "3e7afeaf3235657f58bfee86b4fc408661ed5573",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/491",
     "authorLogin": "ahmettrkck"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines first-layer value residual blending, DenseFormer depth-weighted skip averaging, and score-then-train test-time tuning atop the 10-layer Muon stack.",
+    "summary": "Blend first-layer value residuals, DenseFormer depth-weighted averaging, and test-time AdamW tuning on scored windows to better adapt evaluation behavior.",
     "tags": [
       "attention",
       "architecture",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Layer-wise value residual blending",
-      "DenseFormer depth-weighted averaging",
-      "Score-then-train test-time tuning"
+      "Value residual blending across layers",
+      "DenseFormer depth-weighted averaging replaces skips",
+      "Sliding-window test-time AdamW fine-tuning"
     ]
   },
   "compatibility": {

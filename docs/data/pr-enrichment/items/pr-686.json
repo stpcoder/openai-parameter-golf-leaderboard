@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T15:33:11.551Z",
+  "generatedAt": "2026-03-25T18:03:20.421Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 686,
     "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
-    "state": "open",
-    "updatedAt": "2026-03-25T15:28:40Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T17:36:35Z",
     "headSha": "3162c39ca919a9f8fc9057efc3380ed03aecd0d4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/686",
     "authorLogin": "msisovic"
@@ -19,19 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Dual depth recurrence reruns layers 4/5 with block scalars to mimic extra depth under budget while leveraging TTT and int6 compression.",
+    "summary": "Dual depth recurrence repeats layers 4 and 5 with learnable scalars, yielding 13 virtual layers from 11 while keeping the prior TTT/SWA pipeline.",
     "tags": [
       "architecture",
-      "training-schedule",
-      "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dual recurrence of layers 4 and 5 via learnable block scalars",
-      "Tied test-time training on recurrent blocks",
-      "MuON+SWA stack with int6+lzma compression"
+      "Dual depth recurrence on layers 4 and 5",
+      "Learnable block scalars modulate recurrent passes",
+      "Tied test-time training inherited from prior PR"
     ]
   },
   "compatibility": {

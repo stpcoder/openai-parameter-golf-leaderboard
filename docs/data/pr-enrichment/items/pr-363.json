@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T00:28:23.058Z",
+  "generatedAt": "2026-03-25T18:03:42.696Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 363,
     "title": "Non-record: Depth Recurrence in Parameter-Constrained Transformers — What Works, What Doesn't, and Why",
     "state": "open",
-    "updatedAt": "2026-03-25T00:07:25Z",
+    "updatedAt": "2026-03-25T17:49:59Z",
     "headSha": "46788638f485c0da9de9f8f26b844be8991163f1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/363",
     "authorLogin": "evangelinehelsinki"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent looped transformer shares a few blocks with per-cycle LoRA adapters, BigramHash, and noisy QAT to tame quantization error amplification under mixed-precision.",
+    "summary": "Looped transformer shares four core blocks cycled thrice, augments them with LoRA and BigramHash, and uses noisy QAT to prevent recurrence-driven quantization error.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "depth recurrence over shared core blocks with cycle-specific adapters",
-      "Noisy QAT pairing int8 for recycled weights to limit error amplification",
-      "BigramHash contextual embeddings balancing recurrence savings"
+      "Shared-core recurrence with per-cycle LoRA and BigramHash tail",
+      "Differentiable noise-based QAT to match int8 error in recycled weights",
+      "Controlled flat vs looped A/B studies across GPU tiers"
     ]
   },
   "compatibility": {

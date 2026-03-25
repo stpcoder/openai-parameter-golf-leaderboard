@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T18:03:05.436Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 751,
+    "title": "Single A100 QAT Performance Fix (fresh review cycle)",
+    "state": "open",
+    "updatedAt": "2026-03-25T17:56:58Z",
+    "headSha": "ef96f8aaa476a87a9c4577ad57b8e1660742c728",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/751",
+    "authorLogin": "Shuvam-Banerji-Seal"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-23_Single_A100_QAT_FastFix/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Refines CastedLinear QAT clip estimation via row-wise abs().amax and scales gradient accumulation to hit the single-A100 10min training loop cap.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "row-wise abs().amax clip estimator",
+      "single-A100 gradient accumulation tuning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

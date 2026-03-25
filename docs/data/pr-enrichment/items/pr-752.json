@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T18:03:00.612Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 752,
+    "title": "Record: Depth Recurrence + SGD TTT : 1.1182 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-25T17:51:33Z",
+    "headSha": "42a08be70c9514b67fc19f354c88484f0d758e07",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/752",
+    "authorLogin": "Naazimsnh02"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_DepthRecurrence_LoRATTT_ParallelMuon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines depth recurrence on layers 4-5 with score-first SGD TTT adaptation over 32K-token chunks atop PR#549’s LeakyReLU² + Parallel Muon stack.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence repeats layers 4 and 5 to emulate 13 virtual layers with zero extra params",
+      "Score-first SGD TTT adapts across sequential 32K-token chunks with momentum and cosine decay"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

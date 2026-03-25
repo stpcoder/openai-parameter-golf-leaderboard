@@ -1,36 +1,37 @@
 {
-  "generatedAt": "2026-03-25T00:58:18.898Z",
+  "generatedAt": "2026-03-25T18:03:29.656Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 657,
     "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1229 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-25T00:52:52Z",
-    "headSha": "c87f3e3df666af87de2a7915811019feec38420f",
+    "updatedAt": "2026-03-25T17:48:54Z",
+    "headSha": "863d48a45a237dab6d9ab0f0d7a6bdce65646d57",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/657",
     "authorLogin": "anthony-maio"
   },
   "inputs": {
-    "hash": "a36662e9918e38cdf05f74d9a75a167994a17c359f8664217fbee3daab8d3263",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
       "records/track_10min_16mb/2026-03-24_LeakyReLU2_VRL_LZMA/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Combines LeakyReLU(0.5)^2, VRL gating, and lzma compression atop PR #414's 11-layer U-Net-style model to pack full capacity under 16MB.",
+    "summary": "Pairs LeakyReLU(0.5)^2 MLPs with sigmoid-gated value residual learning across XSA layers and lzma-compressed GPTQ-lite weights to keep the model under 16MB.",
     "tags": [
       "architecture",
+      "attention",
       "quantization",
       "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU(0.5)^2 activation in the 3× MLP",
-      "Sigmoid-gated Value Residual Learning mixing layer-0 values into attention",
-      "lzma compression freeing headroom for full-size MLP and BigramHash"
+      "LeakyReLU(0.5)^2 MLP expansion",
+      "Sigmoid-gated VRL across XSA layers",
+      "lzma compression on GPTQ-lite int6 weights"
     ]
   },
   "compatibility": {

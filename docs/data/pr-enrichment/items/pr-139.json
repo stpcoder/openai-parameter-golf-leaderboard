@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T17:33:37.658Z",
+  "generatedAt": "2026-03-25T18:04:00.493Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 139,
     "title": "Non-record: BitNet b1.58 — 65M ternary params beat 4-hour baseline in 10 minutes (val_bpb=1.2029)",
     "state": "open",
-    "updatedAt": "2026-03-25T17:22:19Z",
+    "updatedAt": "2026-03-25T17:49:16Z",
     "headSha": "5eea63a4457c78018a954aadc07d582e534cb7e1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/139",
     "authorLogin": "ksang123"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "BitNet b1.58 trains a 12-layer Chinchilla-scaled transformer with ternary BitLinear weights and base-3 packing to fit 64.5M params in 15MB.",
+    "summary": "Ternary transformer uses BitLinear STE training with base-3 packing and fp16 scale simulation to fit 64.5M params in 15MB.",
     "tags": [
       "quantization",
       "architecture",
-      "optimizer",
-      "training-schedule"
+      "compression",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Ternary BitLinear layers with STE and fp16 scale simulation",
-      "Base-3 packing yielding 1.6 bits per parameter",
-      "Chinchilla-driven scaling with Muon optimizer and warmdown schedule"
+      "BitLinear STE ternary training",
+      "base-3 packing achieves 1.6 bits/param",
+      "fp16 scale simulation keeps roundtrip lossless"
     ]
   },
   "compatibility": {

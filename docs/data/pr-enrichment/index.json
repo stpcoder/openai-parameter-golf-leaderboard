@@ -1,19 +1,65 @@
 {
-  "generatedAt": "2026-03-25T17:33:37.680Z",
+  "generatedAt": "2026-03-25T18:04:00.512Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 752,
+      "title": "Record: Depth Recurrence + SGD TTT : 1.1182 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-25T17:51:33Z",
+      "headSha": "42a08be70c9514b67fc19f354c88484f0d758e07",
+      "generatedAt": "2026-03-25T18:03:00.612Z",
+      "summary": "Combines depth recurrence on layers 4-5 with score-first SGD TTT adaptation over 32K-token chunks atop PR#549’s LeakyReLU² + Parallel Muon stack.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-752.json"
+    },
+    {
+      "prNumber": 751,
+      "title": "Single A100 QAT Performance Fix (fresh review cycle)",
+      "status": "open",
+      "updatedAt": "2026-03-25T17:56:58Z",
+      "headSha": "ef96f8aaa476a87a9c4577ad57b8e1660742c728",
+      "generatedAt": "2026-03-25T18:03:05.436Z",
+      "summary": "Refines CastedLinear QAT clip estimation via row-wise abs().amax and scales gradient accumulation to hit the single-A100 10min training loop cap.",
+      "tags": [
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-751.json"
+    },
+    {
       "prNumber": 749,
       "title": "Add 11L 448x2 PairHash int8+zstd 10-minute submission record",
       "status": "open",
-      "updatedAt": "2026-03-25T17:31:50Z",
-      "headSha": "95108ff4ac9fdf0ade6966679dea8459f89f7937",
-      "generatedAt": "2026-03-25T17:32:54.580Z",
-      "summary": "11-layer 448-dim GQA uses PairHash embeddings and int8+zstd export to hit the 10-minute/16MB track while improving the reference path.",
+      "updatedAt": "2026-03-25T17:34:52Z",
+      "headSha": "4c530544c3fd6ce0a4dbfbc4023d05ec8e189d7a",
+      "generatedAt": "2026-03-25T18:03:10.492Z",
+      "summary": "11-layer 448-dim GQA adds PairHash embeddings and int8+zstd export to improve the 10min/16MB record within the cap.",
       "tags": [
-        "architecture",
         "quantization",
+        "architecture",
         "compression"
       ],
       "flags": {
@@ -350,29 +396,6 @@
       "file": "items/pr-726.json"
     },
     {
-      "prNumber": 725,
-      "title": "Submit 1x A100 QAT Fix - 1.5252 BPB (Non-Record) [v5]",
-      "status": "open",
-      "updatedAt": "2026-03-25T16:04:00Z",
-      "headSha": "acd7497b7d27e6731b3f677c32e7665e883b86eb",
-      "generatedAt": "2026-03-25T16:33:03.034Z",
-      "summary": "Refines modded-nanogpt QAT to fit a 1x A100 10-minute cap by replacing quantile clipping with w.abs().amax and shrinking accum/LR pacing.",
-      "tags": [
-        "quantization",
-        "training-schedule",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-725.json"
-    },
-    {
       "prNumber": 724,
       "title": "Record: 10L + 7-gram eval cache (mean val_bpb=1.0717)",
       "status": "open",
@@ -421,11 +444,11 @@
     {
       "prNumber": 721,
       "title": "Middle-Out Compression: 0.0000 bpb (Shannon Limit Broken)",
-      "status": "open",
-      "updatedAt": "2026-03-25T14:07:13Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T17:36:16Z",
       "headSha": "43549c47fc7bebc685fd11f332c20cf58d1fbec4",
-      "generatedAt": "2026-03-25T14:31:49.170Z",
-      "summary": "Middle-Out Autoregressive Compressor predicts outward from the center to encode sequences bidirectionally, rethinking entropy constraints for lossless compression.",
+      "generatedAt": "2026-03-25T18:03:14.975Z",
+      "summary": "Middle-Out Autoregressive Compressor compresses sequences by generating tokens simultaneously outward from the center for tip-to-tip efficiency.",
       "tags": [
         "compression",
         "architecture",
@@ -1007,15 +1030,13 @@
     {
       "prNumber": 686,
       "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
-      "status": "open",
-      "updatedAt": "2026-03-25T15:28:40Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T17:36:35Z",
       "headSha": "3162c39ca919a9f8fc9057efc3380ed03aecd0d4",
-      "generatedAt": "2026-03-25T15:33:11.551Z",
-      "summary": "Dual depth recurrence reruns layers 4/5 with block scalars to mimic extra depth under budget while leveraging TTT and int6 compression.",
+      "generatedAt": "2026-03-25T18:03:20.421Z",
+      "summary": "Dual depth recurrence repeats layers 4 and 5 with learnable scalars, yielding 13 virtual layers from 11 while keeping the prior TTT/SWA pipeline.",
       "tags": [
         "architecture",
-        "training-schedule",
-        "quantization",
         "evaluation"
       ],
       "flags": {
@@ -1430,13 +1451,14 @@
       "prNumber": 663,
       "title": "V18 Manifold-Guided Architecture — val_bpb 0.434",
       "status": "open",
-      "updatedAt": "2026-03-25T15:27:52Z",
-      "headSha": "1a6118bdb0f0608decfcc6dfed56571c318c0b27",
-      "generatedAt": "2026-03-25T15:33:16.554Z",
-      "summary": "Precompute a physics-simulated token manifold and run GNN-style sparsemax message passing over spectral coords so the model only navigates the graph.",
+      "updatedAt": "2026-03-25T17:48:56Z",
+      "headSha": "452c1f433294eeb7d850a77e401717c470c4d4d0",
+      "generatedAt": "2026-03-25T18:03:24.908Z",
+      "summary": "Precompute a physics-derived token manifold and run a sparsemax-hopped GNN to navigate the fixed geometry instead of learning both structure and traversal.",
       "tags": [
         "architecture",
         "attention",
+        "quantization",
         "training-schedule"
       ],
       "flags": {
@@ -1568,12 +1590,13 @@
       "prNumber": 657,
       "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1229 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-25T00:52:52Z",
-      "headSha": "c87f3e3df666af87de2a7915811019feec38420f",
-      "generatedAt": "2026-03-25T00:58:18.898Z",
-      "summary": "Combines LeakyReLU(0.5)^2, VRL gating, and lzma compression atop PR #414's 11-layer U-Net-style model to pack full capacity under 16MB.",
+      "updatedAt": "2026-03-25T17:48:54Z",
+      "headSha": "863d48a45a237dab6d9ab0f0d7a6bdce65646d57",
+      "generatedAt": "2026-03-25T18:03:29.656Z",
+      "summary": "Pairs LeakyReLU(0.5)^2 MLPs with sigmoid-gated value residual learning across XSA layers and lzma-compressed GPTQ-lite weights to keep the model under 16MB.",
       "tags": [
         "architecture",
+        "attention",
         "quantization",
         "compression"
       ],
@@ -4151,14 +4174,14 @@
       "prNumber": 491,
       "title": "Value Residual + DenseFormer DWA + TTT",
       "status": "open",
-      "updatedAt": "2026-03-23T19:16:53Z",
-      "headSha": "89a7210bf837c05346cd685d0bd85f502781ccfa",
-      "generatedAt": "2026-03-23T19:17:20.351Z",
-      "summary": "Combines first-layer value residual blending, DenseFormer depth-weighted skip averaging, and score-then-train test-time tuning atop the 10-layer Muon stack.",
+      "updatedAt": "2026-03-25T17:32:37Z",
+      "headSha": "3e7afeaf3235657f58bfee86b4fc408661ed5573",
+      "generatedAt": "2026-03-25T18:03:37.400Z",
+      "summary": "Blend first-layer value residuals, DenseFormer depth-weighted averaging, and test-time AdamW tuning on scored windows to better adapt evaluation behavior.",
       "tags": [
         "attention",
         "architecture",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -6427,14 +6450,13 @@
       "prNumber": 363,
       "title": "Non-record: Depth Recurrence in Parameter-Constrained Transformers — What Works, What Doesn't, and Why",
       "status": "open",
-      "updatedAt": "2026-03-25T00:07:25Z",
+      "updatedAt": "2026-03-25T17:49:59Z",
       "headSha": "46788638f485c0da9de9f8f26b844be8991163f1",
-      "generatedAt": "2026-03-25T00:28:23.058Z",
-      "summary": "Depth-recurrent looped transformer shares a few blocks with per-cycle LoRA adapters, BigramHash, and noisy QAT to tame quantization error amplification under mixed-precision.",
+      "generatedAt": "2026-03-25T18:03:42.696Z",
+      "summary": "Looped transformer shares four core blocks cycled thrice, augments them with LoRA and BigramHash, and uses noisy QAT to prevent recurrence-driven quantization error.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -9564,15 +9586,15 @@
     {
       "prNumber": 175,
       "title": "Record: TTT LoRA + SOTA Training (10L MuonWD FP16Emb OvertoneInit)",
-      "status": "open",
-      "updatedAt": "2026-03-20T05:45:58Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T17:44:35Z",
       "headSha": "5ac580926351fbc5e51c84170068214b9bcbe3f9",
-      "generatedAt": "2026-03-20T05:51:33.483Z",
-      "summary": "Stacks document-isolated LoRA test-time adaptation onto the 10L Muon WD + FP16 embed SOTA recipe, running chunked eval after standard sliding-window quantized scoring.",
+      "generatedAt": "2026-03-25T18:03:51.014Z",
+      "summary": "Combines the SOTA 10L MuonWD FP16 tied-embed training recipe with per-document LoRA TTT evaluation for adaptive inference.",
       "tags": [
-        "evaluation",
-        "architecture",
-        "attention"
+        "optimizer",
+        "attention",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -10220,15 +10242,15 @@
       "prNumber": 139,
       "title": "Non-record: BitNet b1.58 — 65M ternary params beat 4-hour baseline in 10 minutes (val_bpb=1.2029)",
       "status": "open",
-      "updatedAt": "2026-03-25T17:22:19Z",
+      "updatedAt": "2026-03-25T17:49:16Z",
       "headSha": "5eea63a4457c78018a954aadc07d582e534cb7e1",
-      "generatedAt": "2026-03-25T17:33:37.658Z",
-      "summary": "BitNet b1.58 trains a 12-layer Chinchilla-scaled transformer with ternary BitLinear weights and base-3 packing to fit 64.5M params in 15MB.",
+      "generatedAt": "2026-03-25T18:04:00.493Z",
+      "summary": "Ternary transformer uses BitLinear STE training with base-3 packing and fp16 scale simulation to fit 64.5M params in 15MB.",
       "tags": [
         "quantization",
         "architecture",
-        "optimizer",
-        "training-schedule"
+        "compression",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,

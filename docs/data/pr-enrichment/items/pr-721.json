@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T14:31:49.170Z",
+  "generatedAt": "2026-03-25T18:03:14.975Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 721,
     "title": "Middle-Out Compression: 0.0000 bpb (Shannon Limit Broken)",
-    "state": "open",
-    "updatedAt": "2026-03-25T14:07:13Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T17:36:16Z",
     "headSha": "43549c47fc7bebc685fd11f332c20cf58d1fbec4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/721",
     "authorLogin": "hypery11"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Middle-Out Autoregressive Compressor predicts outward from the center to encode sequences bidirectionally, rethinking entropy constraints for lossless compression.",
+    "summary": "Middle-Out Autoregressive Compressor compresses sequences by generating tokens simultaneously outward from the center for tip-to-tip efficiency.",
     "tags": [
       "compression",
       "architecture",
@@ -28,8 +28,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Middle-out bidirectional autoregression",
-      "Shannon-limit reinterpretation"
+      "- Middle-Out Autoregressive Compressor (MOAC)",
+      "- Bidirectional outward generation"
     ]
   },
   "compatibility": {
