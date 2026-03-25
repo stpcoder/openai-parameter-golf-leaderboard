@@ -1,8 +1,77 @@
 {
-  "generatedAt": "2026-03-25T11:01:20.710Z",
+  "generatedAt": "2026-03-25T12:01:59.610Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 703,
+      "title": "Record: PR549 + MiLe decay + 8-bit Muon + 1.04x LR + Cache+Backout — val_bpb 1.1176",
+      "status": "open",
+      "updatedAt": "2026-03-25T11:36:58Z",
+      "headSha": "ec3d8e7f826d6fece5662b4127149192e81cd608",
+      "generatedAt": "2026-03-25T12:01:20.723Z",
+      "summary": "Builds on PR549 by blending MiLe entropy-weighted decay, blockwise int8 Muon momentum, cache+backout residual correction, and a 1.04× LR lift.",
+      "tags": [
+        "optimizer",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-703.json"
+    },
+    {
+      "prNumber": 702,
+      "title": "Record: 1.0240 BPB — Multi-Order N-gram Backoff + Entropy-Adaptive Alpha (100% autonomous research via goldfish)",
+      "status": "open",
+      "updatedAt": "2026-03-25T11:56:53Z",
+      "headSha": "e165ee590d59a68aa4223c41e92c54dda2783419",
+      "generatedAt": "2026-03-25T12:01:31.868Z",
+      "summary": "Multi-order n-gram cache backs off through 2-5 grams and blends with entropy-weighted mixing during sliding eval atop the Soft-Round+GPTQ quantized LM.",
+      "tags": [
+        "evaluation",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-702.json"
+    },
+    {
+      "prNumber": 701,
+      "title": "Add classical 4-gram non-record submission",
+      "status": "open",
+      "updatedAt": "2026-03-25T11:33:13Z",
+      "headSha": "c911fa98008685a8f3ada62c75e630a9b69a9a82",
+      "generatedAt": "2026-03-25T12:01:38.795Z",
+      "summary": "Discounted hashed classical 4-gram with unigram/bigram backoff built from 10M tokens, packaged as a compressed artifact for full FineWeb validation.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-701.json"
+    },
     {
       "prNumber": 700,
       "title": "Record Submission: 1.0541 BPB - 5-expert Hedge Mixer + CROWN-Q + stride=64",
@@ -197,10 +266,10 @@
       "prNumber": 686,
       "title": "Record:  Depth Recurrence (layers 4 and 5 repeated): val_bpb 1.1182",
       "status": "open",
-      "updatedAt": "2026-03-25T06:05:12Z",
-      "headSha": "174142c39b029b55031e4a60c155f1124571711f",
-      "generatedAt": "2026-03-25T06:29:29.231Z",
-      "summary": "Dual depth recurrence replays layers 4 and 5 with learnable scalars to emulate 13 virtual layers from 11 real ones while staying under the 16MB budget with the existing TTT/optimizer stack.",
+      "updatedAt": "2026-03-25T11:59:52Z",
+      "headSha": "f5b9631ef32865ba3bf7f9c1a770242c90816fce",
+      "generatedAt": "2026-03-25T12:01:47.428Z",
+      "summary": "Depth recurrence replays layers 4 and 5 with per-block scalars to emulate 13 virtual layers while keeping the artifact under 16MB alongside inherited TTT/SWA stack.",
       "tags": [
         "architecture",
         "evaluation"
@@ -1056,13 +1125,12 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T10:45:13Z",
-      "headSha": "2cfaeff31315af94da8fa2e0b3cbefc71fd07569",
-      "generatedAt": "2026-03-25T11:01:14.098Z",
-      "summary": "11-layer 512d transformer pairs MLP 3.5x LeakyReLU with SmearGate, Bigram/Trigram Hash, Value-Residual ResFormer, Gated Attention, XSA, and partial RoPE.",
+      "updatedAt": "2026-03-25T11:33:51Z",
+      "headSha": "c73bd5f885fdd080e54c306da92e4bc209a40f77",
+      "generatedAt": "2026-03-25T12:01:52.904Z",
+      "summary": "11-layer transformer pairs a 3.5x LeakyReLU MLP+SmearGate/ValueRes/XSA stack with late Muon schedule and int6 GPTQ-lite quantization for public leaderboard runs.",
       "tags": [
         "architecture",
-        "attention",
         "quantization",
         "training-schedule"
       ],
@@ -1781,30 +1849,6 @@
         "valOnlyMatchesCollector": false
       },
       "file": "items/pr-595.json"
-    },
-    {
-      "prNumber": 593,
-      "title": "Record: Full GPTQ + LeakyReLU² + Parallel Muon + BigramHash 3072 (val_bpb 1.1163, 3-seed mean)",
-      "status": "closed",
-      "updatedAt": "2026-03-24T14:53:58Z",
-      "headSha": "7703e5edce103b810cf0dd048c72a95667820183",
-      "generatedAt": "2026-03-24T14:55:55.639Z",
-      "summary": "Combines Full Hessian GPTQ quantization, LeakyReLU² MLP, Parallel Muon optimizer, and wider BigramHash buckets with narrow embeddings.",
-      "tags": [
-        "quantization",
-        "optimizer",
-        "architecture",
-        "tokenization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-593.json"
     },
     {
       "prNumber": 592,
@@ -2938,29 +2982,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-518.json"
-    },
-    {
-      "prNumber": 517,
-      "title": "Record*: val_bpb=0.978 BPB — Goldfish ML Autonomous Research (100ep Cosine *leaky* TTT)",
-      "status": "closed",
-      "updatedAt": "2026-03-23T20:14:25Z",
-      "headSha": "5c2901a63a73adceae10f2a6f492d86427a6e4a8",
-      "generatedAt": "2026-03-23T20:18:19.840Z",
-      "summary": "Autonomous Goldfish ML agent ran cosine-annealing AdamW TTT for 100 epochs, orchestrating every experiment loop while maintaining provenance.",
-      "tags": [
-        "training-schedule",
-        "optimizer",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-517.json"
     },
     {
       "prNumber": 516,
@@ -4553,15 +4574,15 @@
       "prNumber": 430,
       "title": "Value Residual + Gated Attention + XSA + EMA + AdamW TTT — val_bpb pending H100",
       "status": "open",
-      "updatedAt": "2026-03-23T11:21:40Z",
-      "headSha": "d93fff7360b0c882bf06350f727193b38343de69",
-      "generatedAt": "2026-03-23T11:45:51.123Z",
-      "summary": "Stack swaps ReLU² for SwiGLU and layers in value-residual/gated attention, XSA, EMA, and AdamW test-time training before evaluation.",
+      "updatedAt": "2026-03-25T11:49:30Z",
+      "headSha": "87f0a746e24c0a55a8904bbb503c59a676cf70c6",
+      "generatedAt": "2026-03-25T12:01:59.550Z",
+      "summary": "Builds on a SwiGLU base with value residuals, gated attention, XSA, EMA, and AdamW test-time training on validation tokens for evaluation.",
       "tags": [
-        "val-only",
-        "architecture",
         "attention",
-        "training-schedule"
+        "architecture",
+        "training-schedule",
+        "val-only"
       ],
       "flags": {
         "usesValOnly": true,

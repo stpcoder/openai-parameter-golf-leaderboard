@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T12:01:31.868Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 702,
+    "title": "Record: 1.0240 BPB — Multi-Order N-gram Backoff + Entropy-Adaptive Alpha (100% autonomous research via goldfish)",
+    "state": "open",
+    "updatedAt": "2026-03-25T11:56:53Z",
+    "headSha": "e165ee590d59a68aa4223c41e92c54dda2783419",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/702",
+    "authorLogin": "lukacf"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_NgramBackoffEntropy_SoftRoundQAT_FullGPTQ_1.0244/README.md",
+      "records/track_10min_16mb/2026-03-23_CosineTTT_100ep_GoldfishML/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Multi-order n-gram cache backs off through 2-5 grams and blends with entropy-weighted mixing during sliding eval atop the Soft-Round+GPTQ quantized LM.",
+    "tags": [
+      "evaluation",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Multi-order n-gram backoff cache",
+      "Entropy-adaptive mixing weight",
+      "Soft-Round QAT + Full Hessian GPTQ quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

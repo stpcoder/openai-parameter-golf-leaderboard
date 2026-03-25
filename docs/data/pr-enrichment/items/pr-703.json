@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T12:01:20.723Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 703,
+    "title": "Record: PR549 + MiLe decay + 8-bit Muon + 1.04x LR + Cache+Backout — val_bpb 1.1176",
+    "state": "open",
+    "updatedAt": "2026-03-25T11:36:58Z",
+    "headSha": "ec3d8e7f826d6fece5662b4127149192e81cd608",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/703",
+    "authorLogin": "Gusanidas"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-23_FullGPTQ_LeakyReLU_ParallelMuon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Builds on PR549 by blending MiLe entropy-weighted decay, blockwise int8 Muon momentum, cache+backout residual correction, and a 1.04× LR lift.",
+    "tags": [
+      "optimizer",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MiLe warmdown loss emphasizing high-entropy tokens",
+      "Blockwise int8 Muon momentum with cache+backout residual correction",
+      "1.04×-wide learning rate scaling"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
