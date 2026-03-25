@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T05:29:23.047Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 680,
+    "title": "Add non-record 10min/16MB submission: Wavelet-Lite PR549 Parallel Muon (1.1483)",
+    "state": "open",
+    "updatedAt": "2026-03-25T05:15:58Z",
+    "headSha": "c7ff71b9def0771009ca50976be5aea2aabd3130",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/680",
+    "authorLogin": "bro4all"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Parallel Muon stack adds a tiny causal wavelet-lite mixer inside each block while trimming bigram vocab/TTT to stay under the 16MB 10min cap.",
+    "tags": [
+      "muon",
+      "architecture",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "causal wavelet-lite mixer per residual block",
+      "bigram vocab trim & TTT removal for size budget"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

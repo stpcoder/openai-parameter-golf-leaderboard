@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-25T04:58:55.427Z",
-  "lastSeenUpdatedAt": "2026-03-25T04:57:12Z",
+  "generatedAt": "2026-03-25T05:29:08.417Z",
+  "lastSeenUpdatedAt": "2026-03-25T05:28:44Z",
   "prs": {
     "1": {
       "number": 1,
@@ -51364,7 +51364,7 @@
     },
     "604": {
       "number": 604,
-      "updatedAt": "2026-03-25T01:07:16Z",
+      "updatedAt": "2026-03-25T05:27:18Z",
       "pr": {
         "number": 604,
         "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
@@ -51375,8 +51375,8 @@
         "authorLogin": "whitestone1121-web",
         "authorName": null,
         "createdAt": "2026-03-24T07:42:35Z",
-        "updatedAt": "2026-03-25T01:07:16Z",
-        "headSha": "2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a",
+        "updatedAt": "2026-03-25T05:27:18Z",
+        "headSha": "7390475cb734c2d5624524d4999bc0f61f144c0c",
         "headRepo": "whitestone1121-web/parameter-golf"
       },
       "submissions": [
@@ -51438,16 +51438,16 @@
             "authorLogin": "whitestone1121-web",
             "authorName": null,
             "createdAt": "2026-03-24T07:42:35Z",
-            "updatedAt": "2026-03-25T01:07:16Z",
-            "headSha": "2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a",
+            "updatedAt": "2026-03-25T05:27:18Z",
+            "headSha": "7390475cb734c2d5624524d4999bc0f61f144c0c",
             "headRepo": "whitestone1121-web/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a/records/alan_samaha_golf/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a/records/alan_samaha_golf/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a/records/alan_samaha_golf/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a/records/alan_samaha_golf/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a/records/alan_samaha_golf",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7390475cb734c2d5624524d4999bc0f61f144c0c/records/alan_samaha_golf/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/7390475cb734c2d5624524d4999bc0f61f144c0c/records/alan_samaha_golf/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/7390475cb734c2d5624524d4999bc0f61f144c0c/records/alan_samaha_golf/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/7390475cb734c2d5624524d4999bc0f61f144c0c/records/alan_samaha_golf/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/7390475cb734c2d5624524d4999bc0f61f144c0c/records/alan_samaha_golf",
             "pr": "https://github.com/openai/parameter-golf/pull/604"
           }
         }
@@ -53954,18 +53954,18 @@
     },
     "640": {
       "number": 640,
-      "updatedAt": "2026-03-24T20:12:19Z",
+      "updatedAt": "2026-03-25T05:22:40Z",
       "pr": {
         "number": 640,
         "title": "Record Submission: 1.1570 BPB - 73.7M Ternary U-Net + NeoMuon + 4x relu²MLP + Factored Tied Emb + Poly5 Softcap + YaRN2048 + 8192BPE + FP8QAT + Bitmask-LZMA + Stride-16 Sliding",
-        "state": "open",
+        "state": "closed",
         "draft": false,
-        "mergedAt": null,
+        "mergedAt": "2026-03-25T05:22:40Z",
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/640",
         "authorLogin": "CiprianFlorin-Ifrim",
         "authorName": null,
         "createdAt": "2026-03-24T19:01:27Z",
-        "updatedAt": "2026-03-24T20:12:19Z",
+        "updatedAt": "2026-03-25T05:22:40Z",
         "headSha": "71b6bd095d7032d623ddeed417ba351d91b9db48",
         "headRepo": "CiprianFlorin-Ifrim/openai-parameter-golf-challenge"
       },
@@ -53973,18 +53973,18 @@
     },
     "641": {
       "number": 641,
-      "updatedAt": "2026-03-24T20:21:01Z",
+      "updatedAt": "2026-03-25T05:14:11Z",
       "pr": {
         "number": 641,
         "title": "Notable Non-Record Submission: 1.1239 BPB - 106.2M Binary Asymmetric U-Net + NeoMuon + 4xrelu²MLP + Smear + Fact Tied Emb + Poly5 Softcap + YaRN2048 + 8192BPE + FP8 + Bit-packing LZMA + Stride-16 Eval - 2h",
-        "state": "open",
+        "state": "closed",
         "draft": false,
-        "mergedAt": null,
+        "mergedAt": "2026-03-25T05:14:11Z",
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/641",
         "authorLogin": "CiprianFlorin-Ifrim",
         "authorName": null,
         "createdAt": "2026-03-24T19:02:34Z",
-        "updatedAt": "2026-03-24T20:21:01Z",
+        "updatedAt": "2026-03-25T05:14:11Z",
         "headSha": "5b0266d23fdf53f36f6bc5da44aa6d7cb0d61f65",
         "headRepo": "CiprianFlorin-Ifrim/openai-parameter-golf-challenge"
       },
@@ -56993,6 +56993,298 @@
         "updatedAt": "2026-03-25T04:57:12Z",
         "headSha": "0e023b82f0a002b97381fd4943b71eceecadae14",
         "headRepo": "andrewmouldon/parameter-golf"
+      },
+      "submissions": []
+    },
+    "680": {
+      "number": 680,
+      "updatedAt": "2026-03-25T05:15:58Z",
+      "pr": {
+        "number": 680,
+        "title": "Add non-record 10min/16MB submission: Wavelet-Lite PR549 Parallel Muon (1.1483)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/680",
+        "authorLogin": "bro4all",
+        "authorName": null,
+        "createdAt": "2026-03-25T05:15:58Z",
+        "updatedAt": "2026-03-25T05:15:58Z",
+        "headSha": "c7ff71b9def0771009ca50976be5aea2aabd3130",
+        "headRepo": "bro4all/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-680-records-track_10min_16mb-2026-03-24_WaveletLite_PR549_ParallelMuon-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-24_WaveletLite_PR549_ParallelMuon",
+            "folderPath": "records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon",
+            "submissionPath": "records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/train_gpt.py"
+          },
+          "submission": {
+            "author": "Omar Habra",
+            "githubId": "bro4all",
+            "name": "Wavelet-Lite PR549 Parallel Muon",
+            "blurb": "PR549-derived Parallel Muon frontier stack plus a tiny causal wavelet-lite activation mixer, with BIGRAM_VOCAB_SIZE=1024 and no TTT in the final budgeted run. Exact saved int6 artifact roundtrip: val_bpb=1.1483 at 15.86 MB total.",
+            "date": "2026-03-24"
+          },
+          "metrics": {
+            "valBpb": 1.1482555,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15859711,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 680,
+            "title": "Add non-record 10min/16MB submission: Wavelet-Lite PR549 Parallel Muon (1.1483)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/680",
+            "authorLogin": "bro4all",
+            "authorName": null,
+            "createdAt": "2026-03-25T05:15:58Z",
+            "updatedAt": "2026-03-25T05:15:58Z",
+            "headSha": "c7ff71b9def0771009ca50976be5aea2aabd3130",
+            "headRepo": "bro4all/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c7ff71b9def0771009ca50976be5aea2aabd3130/records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/c7ff71b9def0771009ca50976be5aea2aabd3130/records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/c7ff71b9def0771009ca50976be5aea2aabd3130/records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/c7ff71b9def0771009ca50976be5aea2aabd3130/records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/c7ff71b9def0771009ca50976be5aea2aabd3130/records/track_10min_16mb/2026-03-24_WaveletLite_PR549_ParallelMuon",
+            "pr": "https://github.com/openai/parameter-golf/pull/680"
+          }
+        }
+      ]
+    },
+    "681": {
+      "number": 681,
+      "updatedAt": "2026-03-25T05:16:08Z",
+      "pr": {
+        "number": 681,
+        "title": "Non-record: BigramHash(4096) + Cosine EMA + LZMA-9",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/681",
+        "authorLogin": "Alfaxad",
+        "authorName": null,
+        "createdAt": "2026-03-25T05:16:08Z",
+        "updatedAt": "2026-03-25T05:16:08Z",
+        "headSha": "848b51c7e7704ebf4ec7ce6d6f3365397b067b87",
+        "headRepo": "Alfaxad/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-681-records-track_10min_16mb-2026-03-25_BigramHash4096_CosineEMA_LZMA9-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-25_BigramHash4096_CosineEMA_LZMA9",
+            "folderPath": "records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9",
+            "submissionPath": "records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/train_gpt.py"
+          },
+          "submission": {
+            "author": "Alfaxad",
+            "githubId": "Alfaxad",
+            "name": "BigramHash(4096) + Cosine EMA + Earlier QAT + LZMA-9",
+            "blurb": "Non-record submission (1xH100 only, 940 steps). Built on PR #549 stack with: BigramHash expanded 2048->4096, cosine EMA schedule (0.99->0.999), earlier late QAT (threshold 0.15->0.10), LZMA preset 6->9. Artifact 7.9MB (room for larger model). Developed using ShinkaEvolve (Sakana AI) evolutionary code optimization framework with GPT-5.4 and Gemini 3 Pro as mutation operators. 8xH100 evaluation pending.",
+            "date": "2026-03-25"
+          },
+          "metrics": {
+            "valBpb": 1.4775,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 7896113,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 681,
+            "title": "Non-record: BigramHash(4096) + Cosine EMA + LZMA-9",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/681",
+            "authorLogin": "Alfaxad",
+            "authorName": null,
+            "createdAt": "2026-03-25T05:16:08Z",
+            "updatedAt": "2026-03-25T05:16:08Z",
+            "headSha": "848b51c7e7704ebf4ec7ce6d6f3365397b067b87",
+            "headRepo": "Alfaxad/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/848b51c7e7704ebf4ec7ce6d6f3365397b067b87/records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/848b51c7e7704ebf4ec7ce6d6f3365397b067b87/records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/848b51c7e7704ebf4ec7ce6d6f3365397b067b87/records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/848b51c7e7704ebf4ec7ce6d6f3365397b067b87/records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/848b51c7e7704ebf4ec7ce6d6f3365397b067b87/records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9",
+            "pr": "https://github.com/openai/parameter-golf/pull/681"
+          }
+        }
+      ]
+    },
+    "682": {
+      "number": 682,
+      "updatedAt": "2026-03-25T05:24:49Z",
+      "pr": {
+        "number": 682,
+        "title": "[WIP] Non-record: Local Ablation Pipeline — EMA + Int6 + Partial RoPE (GTX 1650)",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/682",
+        "authorLogin": "gthgomez",
+        "authorName": null,
+        "createdAt": "2026-03-25T05:24:49Z",
+        "updatedAt": "2026-03-25T05:24:49Z",
+        "headSha": "d0dcb4c607fd0afbba0eb60e6566358ffa807750",
+        "headRepo": "gthgomez/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-682-records-track_non_record_16mb-2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "non-record",
+          "track": {
+            "path": "records/track_non_record_16mb",
+            "slug": "track_non_record_16mb",
+            "label": "Non-record / 16MB",
+            "official": false,
+            "category": "non-record"
+          },
+          "record": {
+            "folderName": "2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE",
+            "folderPath": "records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE",
+            "submissionPath": "records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/train_gpt.py"
+          },
+          "submission": {
+            "author": "gthgomez",
+            "githubId": "gthgomez",
+            "name": "Local Ablation Pipeline: GTX 1650 — EMA + Int6 + Partial RoPE + LN Scale + Weight Decay",
+            "blurb": "Dev-hardware (GTX 1650, 4 GB VRAM, SM 7.5) local ablation pipeline porting proven techniques from leaderboard entries #1 and #2. All features validated via 200-step medium-scale runs: EMA (decay sweep 0.97/0.997), int6 clip-search quantizer, partial RoPE (ROPE_DIMS=16), LN scale (1/sqrt(layer+1)), Muon/Adam decoupled weight decay, and MLP_MULT float support. Not a competition-scale submission — intended to validate code paths and stage the feature set for a future 8x H100 run.",
+            "date": "2026-03-25T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 2.52733178,
+            "valLoss": null,
+            "preQuantValBpb": 2.5274,
+            "preQuantValLoss": null,
+            "stepStop": 200,
+            "wallclockSeconds": 208.147,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 11083572,
+            "bytesCode": 55507,
+            "bytesModelInt8Zlib": 11028065
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 682,
+            "title": "[WIP] Non-record: Local Ablation Pipeline — EMA + Int6 + Partial RoPE (GTX 1650)",
+            "state": "open",
+            "draft": true,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/682",
+            "authorLogin": "gthgomez",
+            "authorName": null,
+            "createdAt": "2026-03-25T05:24:49Z",
+            "updatedAt": "2026-03-25T05:24:49Z",
+            "headSha": "d0dcb4c607fd0afbba0eb60e6566358ffa807750",
+            "headRepo": "gthgomez/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d0dcb4c607fd0afbba0eb60e6566358ffa807750/records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/d0dcb4c607fd0afbba0eb60e6566358ffa807750/records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/d0dcb4c607fd0afbba0eb60e6566358ffa807750/records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/d0dcb4c607fd0afbba0eb60e6566358ffa807750/records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/d0dcb4c607fd0afbba0eb60e6566358ffa807750/records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE",
+            "pr": "https://github.com/openai/parameter-golf/pull/682"
+          }
+        }
+      ]
+    },
+    "683": {
+      "number": 683,
+      "updatedAt": "2026-03-25T05:28:44Z",
+      "pr": {
+        "number": 683,
+        "title": "Add submission validation script",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/683",
+        "authorLogin": "mvanhorn",
+        "authorName": null,
+        "createdAt": "2026-03-25T05:28:44Z",
+        "updatedAt": "2026-03-25T05:28:44Z",
+        "headSha": "c309b22ab21a0bcead058511d52a688171c8fff3",
+        "headRepo": "mvanhorn/parameter-golf"
       },
       "submissions": []
     }

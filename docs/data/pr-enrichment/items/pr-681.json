@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T05:29:19.481Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 681,
+    "title": "Non-record: BigramHash(4096) + Cosine EMA + LZMA-9",
+    "state": "open",
+    "updatedAt": "2026-03-25T05:16:08Z",
+    "headSha": "848b51c7e7704ebf4ec7ce6d6f3365397b067b87",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/681",
+    "authorLogin": "Alfaxad"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_BigramHash4096_CosineEMA_LZMA9/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Expands BigramHash to 4096 while layering cosine EMA weight averaging, earlier late QAT, and LZMA-9 compression atop the PR #549 stack.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BigramHash size doubled to 4096",
+      "Cosine EMA schedule from 0.99 to 0.999",
+      "Earlier late QAT activation plus LZMA preset 9"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

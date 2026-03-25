@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-25T04:59:05.776Z",
+  "generatedAt": "2026-03-25T05:29:27.896Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 682,
+      "title": "[WIP] Non-record: Local Ablation Pipeline — EMA + Int6 + Partial RoPE (GTX 1650)",
+      "status": "open",
+      "updatedAt": "2026-03-25T05:24:49Z",
+      "headSha": "d0dcb4c607fd0afbba0eb60e6566358ffa807750",
+      "generatedAt": "2026-03-25T05:29:16.124Z",
+      "summary": "Local GTX 1650 pipeline ports EMA, int6 clip-search quant, partial RoPE, LN scaling, and decoupled weight decay to validate full-scale features before 8×H100 runs.",
+      "tags": [
+        "quantization",
+        "attention",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-682.json"
+    },
+    {
+      "prNumber": 681,
+      "title": "Non-record: BigramHash(4096) + Cosine EMA + LZMA-9",
+      "status": "open",
+      "updatedAt": "2026-03-25T05:16:08Z",
+      "headSha": "848b51c7e7704ebf4ec7ce6d6f3365397b067b87",
+      "generatedAt": "2026-03-25T05:29:19.481Z",
+      "summary": "Expands BigramHash to 4096 while layering cosine EMA weight averaging, earlier late QAT, and LZMA-9 compression atop the PR #549 stack.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-681.json"
+    },
+    {
+      "prNumber": 680,
+      "title": "Add non-record 10min/16MB submission: Wavelet-Lite PR549 Parallel Muon (1.1483)",
+      "status": "open",
+      "updatedAt": "2026-03-25T05:15:58Z",
+      "headSha": "c7ff71b9def0771009ca50976be5aea2aabd3130",
+      "generatedAt": "2026-03-25T05:29:23.047Z",
+      "summary": "Parallel Muon stack adds a tiny causal wavelet-lite mixer inside each block while trimming bigram vocab/TTT to stay under the 16MB 10min cap.",
+      "tags": [
+        "muon",
+        "architecture",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-680.json"
+    },
     {
       "prNumber": 678,
       "title": "Attention Warm-Start: Initializing Q/K from Bigram Co-occurrence SVD",
@@ -1245,15 +1315,15 @@
       "prNumber": 604,
       "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
       "status": "open",
-      "updatedAt": "2026-03-25T01:07:16Z",
-      "headSha": "2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a",
-      "generatedAt": "2026-03-25T01:28:33.378Z",
-      "summary": "Hybrid 14-layer model ups d to 352, mixes gated MLP recurrence with attention, adds value residual skip gates, GPTQ-lite INT8, and a schedule-free finish.",
+      "updatedAt": "2026-03-25T05:27:18Z",
+      "headSha": "7390475cb734c2d5624524d4999bc0f61f144c0c",
+      "generatedAt": "2026-03-25T05:29:27.803Z",
+      "summary": "Hybrid 14-layer LM interleaves GatedMLP recurrence with attention, ups d to 352, adds gated value residuals, GPTQ-lite INT8+zlib, Muon/EMA with schedule-free finish.",
       "tags": [
         "architecture",
-        "quantization",
         "optimizer",
-        "training-schedule"
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

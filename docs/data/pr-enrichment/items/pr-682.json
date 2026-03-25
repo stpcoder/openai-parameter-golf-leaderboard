@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T05:29:16.124Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 682,
+    "title": "[WIP] Non-record: Local Ablation Pipeline — EMA + Int6 + Partial RoPE (GTX 1650)",
+    "state": "open",
+    "updatedAt": "2026-03-25T05:24:49Z",
+    "headSha": "d0dcb4c607fd0afbba0eb60e6566358ffa807750",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/682",
+    "authorLogin": "gthgomez"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_LocalAblation_GTX1650_EMA_Int6_PartialRoPE/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Local GTX 1650 pipeline ports EMA, int6 clip-search quant, partial RoPE, LN scaling, and decoupled weight decay to validate full-scale features before 8×H100 runs.",
+    "tags": [
+      "quantization",
+      "attention",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "EMA plus partial RoPE and LN scale ablations",
+      "Int6 clip-search quantization with inline comparison",
+      "Muon/Adam decoupled weight decay toggles"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
