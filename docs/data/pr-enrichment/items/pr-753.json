@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T18:33:14.702Z",
+  "generatedAt": "2026-03-25T19:33:38.141Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 753,
     "title": "Podracing II: Electric Bugaloo — 0.9625 BPB (3-seed mean, all sub-0.964)",
     "state": "open",
-    "updatedAt": "2026-03-25T18:04:48Z",
-    "headSha": "ed062dfcc17d39f934d738765e2ceb31292fdb89",
+    "updatedAt": "2026-03-25T19:15:04Z",
+    "headSha": "8a5915085027019adec5f455bb660021b74fe672",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/753",
     "authorLogin": "newjordan"
   },
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval stacks multi-order (2-7) n-gram backoff with entropy-adaptive alpha to boost predictions without retraining.",
+    "summary": "Eval-time multi-order n-gram cache with entropy-adaptive alpha blends 2-7 order backoff into the Podracing GPTQ-lite base scoring.",
     "tags": [
       "evaluation",
-      "tokenization"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "score-first n-gram cache",
-      "multi-order backoff cascade",
-      "entropy-based alpha weighting"
+      "Multi-order score-first n-gram backoff cascade",
+      "Entropy-adaptive alpha driven by model entropy",
+      "Score-first cache atop GPTQ-lite base"
     ]
   },
   "compatibility": {

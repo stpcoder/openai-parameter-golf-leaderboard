@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T19:33:33.103Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 758,
+    "title": "Record: 11L XSA-all + 7-gram cache (mean val_bpb=1.0465)",
+    "state": "open",
+    "updatedAt": "2026-03-25T19:22:27Z",
+    "headSha": "5ed06ab2129f7f01329ba02c625c693da568a70d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/758",
+    "authorLogin": "hypery11"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_XSA_7gram/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer XSA-all transformer with gated attention, BigramHash, GPTQ-lite int6 quantization, and a deterministic 7-gram backward eval cache.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "XSA-all + gated attention with LeakyReLU(0.5)^2 and Value Residual",
+      "GPTQ-lite int6 + zstd-22 with EMA(0.997), Tight SWA, Late QAT",
+      "Deterministic 7-gram backward eval cache (alpha=0.40, 4M buckets)"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

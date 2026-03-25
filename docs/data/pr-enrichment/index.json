@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-25T19:03:34.123Z",
+  "generatedAt": "2026-03-25T19:33:42.849Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 759,
+      "title": "Submission Record Series: BatchOpt+MLP4+RoPE100k and 8L EMA Int6 Bigram65k on Single 20GB GPU (val_bpb 1.7810 → 1.3092)",
+      "status": "open",
+      "updatedAt": "2026-03-25T19:22:57Z",
+      "headSha": "744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f",
+      "generatedAt": "2026-03-25T19:33:29.033Z",
+      "summary": "Single-GPU 10min/16MB workflow first shrinks batches and widens FFNs with RoPE100k, then shifts to 8L+EMA plus int6 MLP and BigramHash65k with stride-64 eval.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-759.json"
+    },
+    {
+      "prNumber": 758,
+      "title": "Record: 11L XSA-all + 7-gram cache (mean val_bpb=1.0465)",
+      "status": "open",
+      "updatedAt": "2026-03-25T19:22:27Z",
+      "headSha": "5ed06ab2129f7f01329ba02c625c693da568a70d",
+      "generatedAt": "2026-03-25T19:33:33.103Z",
+      "summary": "11-layer XSA-all transformer with gated attention, BigramHash, GPTQ-lite int6 quantization, and a deterministic 7-gram backward eval cache.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-758.json"
+    },
     {
       "prNumber": 757,
       "title": "Record: Aggressive SGD TTT (3-seed mean val_bpb=1.1124)",
@@ -76,13 +124,13 @@
       "prNumber": 753,
       "title": "Podracing II: Electric Bugaloo — 0.9625 BPB (3-seed mean, all sub-0.964)",
       "status": "open",
-      "updatedAt": "2026-03-25T18:04:48Z",
-      "headSha": "ed062dfcc17d39f934d738765e2ceb31292fdb89",
-      "generatedAt": "2026-03-25T18:33:14.702Z",
-      "summary": "Eval stacks multi-order (2-7) n-gram backoff with entropy-adaptive alpha to boost predictions without retraining.",
+      "updatedAt": "2026-03-25T19:15:04Z",
+      "headSha": "8a5915085027019adec5f455bb660021b74fe672",
+      "generatedAt": "2026-03-25T19:33:38.141Z",
+      "summary": "Eval-time multi-order n-gram cache with entropy-adaptive alpha blends 2-7 order backoff into the Podracing GPTQ-lite base scoring.",
       "tags": [
         "evaluation",
-        "tokenization"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5691,29 +5739,6 @@
       "file": "items/pr-413.json"
     },
     {
-      "prNumber": 408,
-      "title": "First submission",
-      "status": "open",
-      "updatedAt": "2026-03-22T06:12:32Z",
-      "headSha": "47fc2d075bb3b4c3941ea5a156c1788f1131dea9",
-      "generatedAt": "2026-03-22T06:36:51.250Z",
-      "summary": "Halved batch tokens, doubled MLP width, tuned LRs/warmdown, and raised RoPE base to boost capacity while fitting 10min/16MB constraints.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "positional-encoding"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-408.json"
-    },
-    {
       "prNumber": 407,
       "title": "Add non-record 1xH200 fp16-embed baseline sweep submission",
       "status": "open",
@@ -9538,14 +9563,15 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-20T22:35:55Z",
-      "headSha": "089a2ea3762673f56af1014dccd69de901e1ff28",
-      "generatedAt": "2026-03-20T22:55:59.658Z",
-      "summary": "Adds closed-form Titans-style neural memory per block plus LoRA TTT, overtone init, quant tricks, and Muon WD for a 10-layer run.",
+      "updatedAt": "2026-03-25T19:14:59Z",
+      "headSha": "0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1",
+      "generatedAt": "2026-03-25T19:33:42.819Z",
+      "summary": "Adds Titans-style linearized neural memory per block with LoRA TTT eval, overtone init, and lightweight FP16/int6 layers for built-in test-time adaptation.",
       "tags": [
         "architecture",
-        "attention",
-        "quantization"
+        "evaluation",
+        "mixed-precision",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,

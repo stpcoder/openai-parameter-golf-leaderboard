@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T19:33:29.033Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 759,
+    "title": "Submission Record Series: BatchOpt+MLP4+RoPE100k and 8L EMA Int6 Bigram65k on Single 20GB GPU (val_bpb 1.7810 → 1.3092)",
+    "state": "open",
+    "updatedAt": "2026-03-25T19:22:57Z",
+    "headSha": "744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/759",
+    "authorLogin": "markste-in"
+  },
+  "inputs": {
+    "hash": "b671bb55739f4dd4e9ff453427d862aaf2b4f319009e28fbdb53eae78ec60522",
+    "readmePaths": [],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Single-GPU 10min/16MB workflow first shrinks batches and widens FFNs with RoPE100k, then shifts to 8L+EMA plus int6 MLP and BigramHash65k with stride-64 eval.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Staged single-GPU tuning with reduced batches, MLP4, and RoPE100k",
+      "8-layer+EMA pass with BigramHash65k vocab and int6-quantized MLP",
+      "Stride-64 sliding eval with 1% pruning before quantization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

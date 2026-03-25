@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-25T19:03:15.646Z",
-  "lastSeenUpdatedAt": "2026-03-25T19:01:53Z",
+  "generatedAt": "2026-03-25T19:33:21.947Z",
+  "lastSeenUpdatedAt": "2026-03-25T19:25:43Z",
   "prs": {
     "1": {
       "number": 1,
@@ -13707,7 +13707,7 @@
     },
     "182": {
       "number": 182,
-      "updatedAt": "2026-03-20T22:35:55Z",
+      "updatedAt": "2026-03-25T19:14:59Z",
       "pr": {
         "number": 182,
         "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
@@ -13718,8 +13718,8 @@
         "authorLogin": "mihir-s-05",
         "authorName": null,
         "createdAt": "2026-03-20T07:06:15Z",
-        "updatedAt": "2026-03-20T22:35:55Z",
-        "headSha": "089a2ea3762673f56af1014dccd69de901e1ff28",
+        "updatedAt": "2026-03-25T19:14:59Z",
+        "headSha": "0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1",
         "headRepo": "mihir-s-05/parameter-golf"
       },
       "submissions": [
@@ -13781,16 +13781,16 @@
             "authorLogin": "mihir-s-05",
             "authorName": null,
             "createdAt": "2026-03-20T07:06:15Z",
-            "updatedAt": "2026-03-20T22:35:55Z",
-            "headSha": "089a2ea3762673f56af1014dccd69de901e1ff28",
+            "updatedAt": "2026-03-25T19:14:59Z",
+            "headSha": "0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1",
             "headRepo": "mihir-s-05/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/089a2ea3762673f56af1014dccd69de901e1ff28/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/089a2ea3762673f56af1014dccd69de901e1ff28/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/089a2ea3762673f56af1014dccd69de901e1ff28/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/089a2ea3762673f56af1014dccd69de901e1ff28/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/089a2ea3762673f56af1014dccd69de901e1ff28/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/0c5a7f7d5b4c6e53a2251bfc783c5ed221f7bcb1/records/track_10min_16mb/2026-03-20_LinearizedNeuralMemory_TTT",
             "pr": "https://github.com/openai/parameter-golf/pull/182"
           }
         }
@@ -57263,18 +57263,18 @@
     },
     "679": {
       "number": 679,
-      "updatedAt": "2026-03-25T18:38:01Z",
+      "updatedAt": "2026-03-25T19:25:43Z",
       "pr": {
         "number": 679,
         "title": "Non-record: ASQU activation, Mixture of Convolutions, BankLinear",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/679",
         "authorLogin": "andrewmouldon",
         "authorName": null,
         "createdAt": "2026-03-25T04:54:36Z",
-        "updatedAt": "2026-03-25T18:38:01Z",
+        "updatedAt": "2026-03-25T19:25:43Z",
         "headSha": "ac794019a0f2fd2bd63cdcdffafea3d979b08565",
         "headRepo": "andrewmouldon/parameter-golf"
       },
@@ -63175,7 +63175,7 @@
     },
     "753": {
       "number": 753,
-      "updatedAt": "2026-03-25T18:04:48Z",
+      "updatedAt": "2026-03-25T19:15:04Z",
       "pr": {
         "number": 753,
         "title": "Podracing II: Electric Bugaloo — 0.9625 BPB (3-seed mean, all sub-0.964)",
@@ -63186,8 +63186,8 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-25T17:53:09Z",
-        "updatedAt": "2026-03-25T18:04:48Z",
-        "headSha": "ed062dfcc17d39f934d738765e2ceb31292fdb89",
+        "updatedAt": "2026-03-25T19:15:04Z",
+        "headSha": "8a5915085027019adec5f455bb660021b74fe672",
         "headRepo": "newjordan/parameter-golf-1"
       },
       "submissions": [
@@ -63249,16 +63249,16 @@
             "authorLogin": "newjordan",
             "authorName": null,
             "createdAt": "2026-03-25T17:53:09Z",
-            "updatedAt": "2026-03-25T18:04:48Z",
-            "headSha": "ed062dfcc17d39f934d738765e2ceb31292fdb89",
+            "updatedAt": "2026-03-25T19:15:04Z",
+            "headSha": "8a5915085027019adec5f455bb660021b74fe672",
             "headRepo": "newjordan/parameter-golf-1"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ed062dfcc17d39f934d738765e2ceb31292fdb89/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/ed062dfcc17d39f934d738765e2ceb31292fdb89/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/ed062dfcc17d39f934d738765e2ceb31292fdb89/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/ed062dfcc17d39f934d738765e2ceb31292fdb89/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/ed062dfcc17d39f934d738765e2ceb31292fdb89/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8a5915085027019adec5f455bb660021b74fe672/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/8a5915085027019adec5f455bb660021b74fe672/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/8a5915085027019adec5f455bb660021b74fe672/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/8a5915085027019adec5f455bb660021b74fe672/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/8a5915085027019adec5f455bb660021b74fe672/records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100",
             "pr": "https://github.com/openai/parameter-golf/pull/753"
           }
         }
@@ -63552,6 +63552,259 @@
             "script": "https://github.com/openai/parameter-golf/blob/777ed6762dd2ecc442170772776727eca9f74391/records/track_10min_16mb/2026-03-25_TTT_Aggressive_SGD/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/777ed6762dd2ecc442170772776727eca9f74391/records/track_10min_16mb/2026-03-25_TTT_Aggressive_SGD",
             "pr": "https://github.com/openai/parameter-golf/pull/757"
+          }
+        }
+      ]
+    },
+    "758": {
+      "number": 758,
+      "updatedAt": "2026-03-25T19:22:27Z",
+      "pr": {
+        "number": 758,
+        "title": "Record: 11L XSA-all + 7-gram cache (mean val_bpb=1.0465)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/758",
+        "authorLogin": "hypery11",
+        "authorName": null,
+        "createdAt": "2026-03-25T19:22:26Z",
+        "updatedAt": "2026-03-25T19:22:27Z",
+        "headSha": "5ed06ab2129f7f01329ba02c625c693da568a70d",
+        "headRepo": "hypery11/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-758-records-track_10min_16mb-2026-03-25_11L_XSA_7gram-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-25_11L_XSA_7gram",
+            "folderPath": "records/track_10min_16mb/2026-03-25_11L_XSA_7gram",
+            "submissionPath": "records/track_10min_16mb/2026-03-25_11L_XSA_7gram/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-25_11L_XSA_7gram/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-25_11L_XSA_7gram/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-25_11L_XSA_7gram/train_gpt.py"
+          },
+          "submission": {
+            "author": "hypery11",
+            "githubId": "hypery11",
+            "name": "11L XSA-all + 7-gram cache",
+            "blurb": "11 layers XSA-all, LeakyReLU(0.5)^2, VR, GA, 7-gram eval cache. Mean 1.0465 (std 0.0007) across 3 seeds.",
+            "date": "2026-03-25"
+          },
+          "metrics": {
+            "valBpb": null,
+            "valLoss": 1.0465,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 13991619,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 758,
+            "title": "Record: 11L XSA-all + 7-gram cache (mean val_bpb=1.0465)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/758",
+            "authorLogin": "hypery11",
+            "authorName": null,
+            "createdAt": "2026-03-25T19:22:26Z",
+            "updatedAt": "2026-03-25T19:22:27Z",
+            "headSha": "5ed06ab2129f7f01329ba02c625c693da568a70d",
+            "headRepo": "hypery11/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/5ed06ab2129f7f01329ba02c625c693da568a70d/records/track_10min_16mb/2026-03-25_11L_XSA_7gram/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/5ed06ab2129f7f01329ba02c625c693da568a70d/records/track_10min_16mb/2026-03-25_11L_XSA_7gram/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/5ed06ab2129f7f01329ba02c625c693da568a70d/records/track_10min_16mb/2026-03-25_11L_XSA_7gram/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/5ed06ab2129f7f01329ba02c625c693da568a70d/records/track_10min_16mb/2026-03-25_11L_XSA_7gram/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/5ed06ab2129f7f01329ba02c625c693da568a70d/records/track_10min_16mb/2026-03-25_11L_XSA_7gram",
+            "pr": "https://github.com/openai/parameter-golf/pull/758"
+          }
+        }
+      ]
+    },
+    "759": {
+      "number": 759,
+      "updatedAt": "2026-03-25T19:22:57Z",
+      "pr": {
+        "number": 759,
+        "title": "Submission Record Series: BatchOpt+MLP4+RoPE100k and 8L EMA Int6 Bigram65k on Single 20GB GPU (val_bpb 1.7810 → 1.3092)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/759",
+        "authorLogin": "markste-in",
+        "authorName": null,
+        "createdAt": "2026-03-25T19:22:57Z",
+        "updatedAt": "2026-03-25T19:22:57Z",
+        "headSha": "744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f",
+        "headRepo": "markste-in/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-759-records-track_10min_16mb-2026-03-22_BatchOpt_MLP4_RoPE100k-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-22_BatchOpt_MLP4_RoPE100k",
+            "folderPath": "records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k",
+            "submissionPath": "records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/train_gpt.py"
+          },
+          "submission": {
+            "author": "Tommy Markstein",
+            "githubId": "parameter-golf-autoresearch",
+            "name": "Batch Optimization + MLP4 + RoPE100k",
+            "blurb": "Optimized training through: (1) batch size reduction 196k→98k enabling more steps within 600s window (+13.7%), (2) MLP multiplier increase 2→4 for wider FFN layers (+0.47%), (3) learning rate tuning matrix/scalar 0.04→0.035 (-0.32%), (4) warmdown schedule optimization 800→600 iters (+0.31%), (5) RoPE base adjustment 10k→100k for better positional encoding (+0.13%). Total improvement: 16.9% from 1.781→1.478 bpb.",
+            "date": "2026-03-22T05:46:00Z"
+          },
+          "metrics": {
+            "valBpb": 1.47844472,
+            "valLoss": 2.49629198,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 8626187,
+            "bytesCode": 48069,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 759,
+            "title": "Submission Record Series: BatchOpt+MLP4+RoPE100k and 8L EMA Int6 Bigram65k on Single 20GB GPU (val_bpb 1.7810 → 1.3092)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/759",
+            "authorLogin": "markste-in",
+            "authorName": null,
+            "createdAt": "2026-03-25T19:22:57Z",
+            "updatedAt": "2026-03-25T19:22:57Z",
+            "headSha": "744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f",
+            "headRepo": "markste-in/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-22_BatchOpt_MLP4_RoPE100k",
+            "pr": "https://github.com/openai/parameter-golf/pull/759"
+          }
+        },
+        {
+          "id": "pr-759-records-track_10min_16mb-2026-03-23_8L_EMA_Int6_Bigram65k-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-23_8L_EMA_Int6_Bigram65k",
+            "folderPath": "records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k",
+            "submissionPath": "records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k/train_gpt.py"
+          },
+          "submission": {
+            "author": "Tommy Markstein",
+            "githubId": "parameter-golf-autoresearch",
+            "name": "8L EMA + Int6-MLP + BigramHash-65k + Sliding-64",
+            "blurb": "Full stack improvement across 41 experiments on the autoresearch/pgolf_mar22 branch. Key gains: (1) 8L architecture +0.007 bpb, (2) bigram_vocab 4096→65536 +0.015 bpb total, (3) eval_stride=64 free +0.007 bpb, (4) EMA decay=0.9 replacing uniform SWA +0.006 bpb, (5) warmdown extended to 3000 steps (~79% of training) +0.008 bpb, (6) int6 quantization for MLP (was int5) +0.0015 bpb, (7) 1% magnitude pruning before quantization +0.0009 bpb. Total improvement from session-2 baseline: 6.3% (1.3978→1.3092 bpb). Combined with session-1 gains: 26.5% from original 1.7810 baseline.",
+            "date": "2026-03-23"
+          },
+          "metrics": {
+            "valBpb": 1.30920628,
+            "valLoss": 2.2103,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": 15931671,
+            "bytesCode": 48069,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 759,
+            "title": "Submission Record Series: BatchOpt+MLP4+RoPE100k and 8L EMA Int6 Bigram65k on Single 20GB GPU (val_bpb 1.7810 → 1.3092)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/759",
+            "authorLogin": "markste-in",
+            "authorName": null,
+            "createdAt": "2026-03-25T19:22:57Z",
+            "updatedAt": "2026-03-25T19:22:57Z",
+            "headSha": "744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f",
+            "headRepo": "markste-in/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/744c6c32b9e76af55e04c20b0e8e2ea0fc2aa89f/records/track_10min_16mb/2026-03-23_8L_EMA_Int6_Bigram65k",
+            "pr": "https://github.com/openai/parameter-golf/pull/759"
           }
         }
       ]
