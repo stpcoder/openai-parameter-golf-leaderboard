@@ -1,32 +1,33 @@
 {
-  "generatedAt": "2026-03-25T00:28:19.802Z",
+  "generatedAt": "2026-03-25T00:58:13.508Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 659,
     "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
     "state": "open",
-    "updatedAt": "2026-03-25T00:00:05Z",
-    "headSha": "b6d1eca55ff6c3b866d63a5a0c6f1cd779328b54",
+    "updatedAt": "2026-03-25T00:41:36Z",
+    "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/659",
     "authorLogin": "deanbrr"
   },
   "inputs": {
-    "hash": "072662c123505c465dfcb1e80cbfb797fc5a748edd0e2a3564b0b095cec763f8",
-    "readmePaths": [],
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-24_5gram_LeakyReLU_ParallelMuon/README.md"
+    ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds online 5-gram eval cache with confidence-gated log-sum-exp mixing for backward-looking safety-gated predictions during sliding-window evaluation.",
+    "summary": "Sliding-window eval mixes base predictions with an online safety-gated 5-gram cache that updates from past tokens to capture repetition without retraining.",
     "tags": [
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "online 5-gram cache lookups",
-      "confidence-gated log-sum-exp mixing",
-      "strict backward-only safety gate"
+      "Online confidence-gated 5-gram cache mixing",
+      "Sliding-window eval with backward-only n-gram updates"
     ]
   },
   "compatibility": {

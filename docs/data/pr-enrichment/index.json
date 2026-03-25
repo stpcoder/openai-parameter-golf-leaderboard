@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-25T00:28:23.112Z",
+  "generatedAt": "2026-03-25T00:58:28.087Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 665,
+      "title": "Add LLMAdvisor submission: 1.14638 BPB (track_10min_16mb)",
+      "status": "open",
+      "updatedAt": "2026-03-25T00:57:10Z",
+      "headSha": "f4fd74efd7d5daab8d005fbad24a2ef1941f5484",
+      "generatedAt": "2026-03-25T00:58:04.247Z",
+      "summary": "Mixed int5 MLP/int6 attention quantization pairs with BigramHash+SmearGate embedding tweaks and denser SWA averaging on smaller batches.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-665.json"
+    },
+    {
+      "prNumber": 664,
+      "title": "Non-record: hybrid spiking Transformer (SNN)with a multi-step spiking MLP",
+      "status": "open",
+      "updatedAt": "2026-03-25T00:55:24Z",
+      "headSha": "d8a3cfb5bcfb9c276ecb40b17cc8e2e740ccfcff",
+      "generatedAt": "2026-03-25T00:58:09.297Z",
+      "summary": "Hybrid transformer keeps dense attention but swaps each FFN for a multi-step LIF spiking MLP trained with surrogate gradients.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-664.json"
+    },
     {
       "prNumber": 663,
       "title": "V18 Manifold-Guided Architecture — val_bpb 0.434",
@@ -101,10 +147,10 @@
       "prNumber": 659,
       "title": "Record: 5-gram Eval Cache + LeakyReLU² + Parallel Muon val_bpb: 1.0920 (3-seed mean, std 0.0007) | ~15.9 MB | 8×H100 SXM",
       "status": "open",
-      "updatedAt": "2026-03-25T00:00:05Z",
-      "headSha": "b6d1eca55ff6c3b866d63a5a0c6f1cd779328b54",
-      "generatedAt": "2026-03-25T00:28:19.802Z",
-      "summary": "Adds online 5-gram eval cache with confidence-gated log-sum-exp mixing for backward-looking safety-gated predictions during sliding-window evaluation.",
+      "updatedAt": "2026-03-25T00:41:36Z",
+      "headSha": "d9349d06fca5021e39ecb906d09516b2146f8114",
+      "generatedAt": "2026-03-25T00:58:13.508Z",
+      "summary": "Sliding-window eval mixes base predictions with an online safety-gated 5-gram cache that updates from past tokens to capture repetition without retraining.",
       "tags": [
         "evaluation"
       ],
@@ -145,10 +191,10 @@
       "prNumber": 657,
       "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1229 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-24T23:40:11Z",
-      "headSha": "90d9e24db8963309e6b671db4417a290a09c651f",
-      "generatedAt": "2026-03-24T23:57:54.877Z",
-      "summary": "Combines LeakyReLU(0.5)² MLPs, VRL gating, and lzma-compressed GPTQ-lite weights on an 11-layer XSA4 base to fit under 16MB.",
+      "updatedAt": "2026-03-25T00:52:52Z",
+      "headSha": "c87f3e3df666af87de2a7915811019feec38420f",
+      "generatedAt": "2026-03-25T00:58:18.898Z",
+      "summary": "Combines LeakyReLU(0.5)^2, VRL gating, and lzma compression atop PR #414's 11-layer U-Net-style model to pack full capacity under 16MB.",
       "tags": [
         "architecture",
         "quantization",
@@ -984,16 +1030,16 @@
     },
     {
       "prNumber": 604,
-      "title": "GolfStudent 14L: Hybrid GatedMLP+Attn, d=288, vocab=1024, Muon+EMA, INT8+zlib",
+      "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
       "status": "open",
-      "updatedAt": "2026-03-24T07:42:35Z",
-      "headSha": "233f7601a0e08febe8d63148667198beb60a059c",
-      "generatedAt": "2026-03-24T07:52:34.495Z",
-      "summary": "Hybrid 14-layer model alternates gated recurrence layers with Flash Attention, trained with Muon/EMA and quantized per-row INT8+zlib.",
+      "updatedAt": "2026-03-25T00:45:16Z",
+      "headSha": "2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a",
+      "generatedAt": "2026-03-25T00:58:23.631Z",
+      "summary": "14-layer GatedMLP/attention hybrid (d=352) adds value-residual skip gates, Muon+EMA, GPTQ-lite quantization, and a schedule-free final stage.",
       "tags": [
         "architecture",
-        "optimizer",
         "quantization",
+        "optimizer",
         "training-schedule"
       ],
       "flags": {
@@ -3566,30 +3612,6 @@
       "file": "items/pr-453.json"
     },
     {
-      "prNumber": 451,
-      "title": "Add LLMAdvisor submission: 1.14638 BPB (track_10min_16mb)",
-      "status": "open",
-      "updatedAt": "2026-03-22T18:19:48Z",
-      "headSha": "b6a7d2c43e2d3ca95f7ab25bce435783862010a4",
-      "generatedAt": "2026-03-22T18:41:29.934Z",
-      "summary": "Mixed int5/6 quantized 10-layer GQA with BigramHash+SmearGate, reduced batch to crank up steps, and denser SWA averaging.",
-      "tags": [
-        "quantization",
-        "architecture",
-        "training-schedule",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-451.json"
-    },
-    {
       "prNumber": 450,
       "title": "Record: 12L + Catalytic Residuals + BigramHash(10240) + SWA + Late QAT (val_bpb=1.1466, mean 3 seeds)",
       "status": "open",
@@ -5066,15 +5088,15 @@
     {
       "prNumber": 369,
       "title": "Submission: 11L NTK-RoPE + FA3 + Batch524K + XSA4 + EMA (val_bpb=1.1328)",
-      "status": "open",
-      "updatedAt": "2026-03-21T20:45:25Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T00:57:10Z",
       "headSha": "c36b705dc801f19a821698f6dc9e96c3d4a2d28f",
-      "generatedAt": "2026-03-21T21:05:11.371Z",
-      "summary": "11L transformer taps NTK-aware RoPE scaling, FlashAttention 3, EMA, XSA on upper layers, and adaptive pruning to hit many steps within the 16MB budget.",
+      "generatedAt": "2026-03-25T00:58:28.033Z",
+      "summary": "11L muP transformer pairs NTK-aware RoPE, FA3 speedups, XSA & EMA with adaptive pruning/quantization to squeeze within 16MB and 600s limits.",
       "tags": [
-        "architecture",
         "attention",
         "optimizer",
+        "architecture",
         "quantization"
       ],
       "flags": {

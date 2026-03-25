@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-21T21:05:11.371Z",
+  "generatedAt": "2026-03-25T00:58:28.033Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 369,
     "title": "Submission: 11L NTK-RoPE + FA3 + Batch524K + XSA4 + EMA (val_bpb=1.1328)",
-    "state": "open",
-    "updatedAt": "2026-03-21T20:45:25Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T00:57:10Z",
     "headSha": "c36b705dc801f19a821698f6dc9e96c3d4a2d28f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/369",
     "authorLogin": "signalrush"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L transformer taps NTK-aware RoPE scaling, FlashAttention 3, EMA, XSA on upper layers, and adaptive pruning to hit many steps within the 16MB budget.",
+    "summary": "11L muP transformer pairs NTK-aware RoPE, FA3 speedups, XSA & EMA with adaptive pruning/quantization to squeeze within 16MB and 600s limits.",
     "tags": [
-      "architecture",
       "attention",
       "optimizer",
+      "architecture",
       "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "NTK-aware RoPE auto-scaling beyond training length",
-      "FlashAttention 3 with Batch524K to boost steps in 600s",
-      "EMA plus adaptive pruning and XSA heads to fit the 16MB artifact limit"
+      "NTK-aware RoPE scaling",
+      "FlashAttention 3 + higher batch step rate",
+      "XSA final layers with EMA + pruning/quant"
     ]
   },
   "compatibility": {

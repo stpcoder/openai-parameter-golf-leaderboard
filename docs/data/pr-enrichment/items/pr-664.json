@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T00:58:09.297Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 664,
+    "title": "Non-record: hybrid spiking Transformer (SNN)with a multi-step spiking MLP",
+    "state": "open",
+    "updatedAt": "2026-03-25T00:55:24Z",
+    "headSha": "d8a3cfb5bcfb9c276ecb40b17cc8e2e740ccfcff",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/664",
+    "authorLogin": "tsbiosky"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-24_Hybrid_SNN_MLP/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid transformer keeps dense attention but swaps each FFN for a multi-step LIF spiking MLP trained with surrogate gradients.",
+    "tags": [
+      "architecture",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "multi-step LIF spiking FFN",
+      "surrogate-gradient spike-rate regularization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

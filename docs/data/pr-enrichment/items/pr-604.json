@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-24T07:52:34.495Z",
+  "generatedAt": "2026-03-25T00:58:23.631Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 604,
-    "title": "GolfStudent 14L: Hybrid GatedMLP+Attn, d=288, vocab=1024, Muon+EMA, INT8+zlib",
+    "title": "GolfStudent v2 14L: d=352, Value Residuals, GPTQ-lite, Schedule-Free, Muon+EMA",
     "state": "open",
-    "updatedAt": "2026-03-24T07:42:35Z",
-    "headSha": "233f7601a0e08febe8d63148667198beb60a059c",
+    "updatedAt": "2026-03-25T00:45:16Z",
+    "headSha": "2b2b9a679b3d76a08ba9678954cf5ad3d28dca3a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/604",
     "authorLogin": "whitestone1121-web"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid 14-layer model alternates gated recurrence layers with Flash Attention, trained with Muon/EMA and quantized per-row INT8+zlib.",
+    "summary": "14-layer GatedMLP/attention hybrid (d=352) adds value-residual skip gates, Muon+EMA, GPTQ-lite quantization, and a schedule-free final stage.",
     "tags": [
       "architecture",
-      "optimizer",
       "quantization",
+      "optimizer",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid GatedMLP + Flash attention mix",
-      "Muon optimizer with EMA and warmdown",
-      "Per-row INT8 quantization with zlib"
+      "14-layer hybrid of GatedMLP recurrence and sparse attention",
+      "Value-residual scalar skip gates with Muon optimizer and EMA",
+      "GPTQ-lite per-row INT8 quantization plus constant LR final 120s"
     ]
   },
   "compatibility": {

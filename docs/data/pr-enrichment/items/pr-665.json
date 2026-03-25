@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T00:58:04.247Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 665,
+    "title": "Add LLMAdvisor submission: 1.14638 BPB (track_10min_16mb)",
+    "state": "open",
+    "updatedAt": "2026-03-25T00:57:10Z",
+    "headSha": "f4fd74efd7d5daab8d005fbad24a2ef1941f5484",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/665",
+    "authorLogin": "harborglowvintage-oss"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_Int5Int6_BigramHash_SmearGate_SWA_LLMAdvisor/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixed int5 MLP/int6 attention quantization pairs with BigramHash+SmearGate embedding tweaks and denser SWA averaging on smaller batches.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int5 MLP / int6 attention quantization with FP16 embeddings",
+      "BigramHash(10240) pairs plus SmearGate gating for richer context",
+      "Denser SWA boost sampling during reduced-batch fast steps"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
