@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T06:59:42.579Z",
+  "generatedAt": "2026-03-25T11:01:01.303Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 688,
     "title": "Record: 5-expert Hedge Mixer + TTT (3-seed mean val_bpb=1.0745)",
     "state": "open",
-    "updatedAt": "2026-03-25T06:44:22Z",
-    "headSha": "9a1d2fdd71b32dc3c2fe8654a76c4398f1f0f8c0",
+    "updatedAt": "2026-03-25T10:41:37Z",
+    "headSha": "a366675fbcda83df0f634a8967d6f041b868a651",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/688",
     "authorLogin": "RoyiRa"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GPU Hedge logistic mixer blends neural, n-gram, and entropy experts during sliding-window TTT chunks before GPTQ quantization to refine predictions.",
+    "summary": "TTT run augments validation-only adaptation with a GPU Hedge mixer that blends neural logits with n-gram experts via online weight updates during chunked scoring.",
     "tags": [
-      "sliding-window-eval",
-      "training-schedule",
+      "val-only",
       "evaluation",
-      "regularization"
+      "training-schedule",
+      "optimizer"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Score-first TTT trains only on previously scored validation chunks with AdamW adaptation before reporting validation metrics.",
     "techniques": [
-      "GPU-vectorized Hedge logistic mixer over neural, unigram, bigram, trigram, and entropy experts",
-      "Score-first TTT with sliding-window eval chunks and AdamW adaptation of final blocks",
-      "GPTQ int5 quantization plus EMA calibration within the 600s budget"
+      "GPU-vectorized 5-expert Hedge mixer in log-prob space",
+      "Online Hedge weight updates per token during TTT",
+      "Chunked score-first AdamW adaptation on validation tokens"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }

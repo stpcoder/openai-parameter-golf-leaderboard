@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-25T10:30:47.427Z",
+  "generatedAt": "2026-03-25T11:01:20.710Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 700,
+      "title": "Record Submission: 1.0541 BPB - 5-expert Hedge Mixer + CROWN-Q + stride=64",
+      "status": "open",
+      "updatedAt": "2026-03-25T10:50:30Z",
+      "headSha": "57d1d2c8cc01f150830bc3d559b3d8189b424188",
+      "generatedAt": "2026-03-25T11:00:55.432Z",
+      "summary": "Combines a 5-expert Hedge mixer with warmdown CROWN-Q penalty and stride/TTT tweaks to favor quantization-friendly weights and faster eval.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-700.json"
+    },
     {
       "prNumber": 698,
       "title": "Add MergedTop3_v3 clean 8xH100 record-track submission",
@@ -150,23 +173,23 @@
       "prNumber": 688,
       "title": "Record: 5-expert Hedge Mixer + TTT (3-seed mean val_bpb=1.0745)",
       "status": "open",
-      "updatedAt": "2026-03-25T06:44:22Z",
-      "headSha": "9a1d2fdd71b32dc3c2fe8654a76c4398f1f0f8c0",
-      "generatedAt": "2026-03-25T06:59:42.579Z",
-      "summary": "GPU Hedge logistic mixer blends neural, n-gram, and entropy experts during sliding-window TTT chunks before GPTQ quantization to refine predictions.",
+      "updatedAt": "2026-03-25T10:41:37Z",
+      "headSha": "a366675fbcda83df0f634a8967d6f041b868a651",
+      "generatedAt": "2026-03-25T11:01:01.303Z",
+      "summary": "TTT run augments validation-only adaptation with a GPU Hedge mixer that blends neural logits with n-gram experts via online weight updates during chunked scoring.",
       "tags": [
-        "sliding-window-eval",
-        "training-schedule",
+        "val-only",
         "evaluation",
-        "regularization"
+        "training-schedule",
+        "optimizer"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-688.json"
     },
@@ -963,15 +986,14 @@
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-25T10:05:30Z",
-      "headSha": "4755684087ea7d4401f1cd86e1d544411d5d3017",
-      "generatedAt": "2026-03-25T10:30:47.332Z",
-      "summary": "Applies XSA on every layer with LeakyReLU(0.5)^2 plus Value Residual/Gated Attention and int6 quantization for compressed evaluation.",
+      "updatedAt": "2026-03-25T10:53:17Z",
+      "headSha": "b72167fc56f47f9fe0ffdf6d382d188faa5fa789",
+      "generatedAt": "2026-03-25T11:01:07.800Z",
+      "summary": "Uses XSA on all 11 layers plus LeakyReLU(0.5)^2, value-residual gated attention, and int6 per-row quant to push an 11L/512d GPT record.",
       "tags": [
         "architecture",
-        "quantization",
-        "regularization",
-        "evaluation"
+        "attention",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1034,15 +1056,15 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T08:47:03Z",
-      "headSha": "6c76d99ae8f97ff35f03f9f9a635f2080b9d0fd1",
-      "generatedAt": "2026-03-25T09:00:45.567Z",
-      "summary": "11-layer 512d transformer pairs MLP3.5x LeakyReLU(0.5)^2, SmearGate+hashing, value residual/gated attention, XSA, and partial RoPE with int6 GPTQ-lite.",
+      "updatedAt": "2026-03-25T10:45:13Z",
+      "headSha": "2cfaeff31315af94da8fa2e0b3cbefc71fd07569",
+      "generatedAt": "2026-03-25T11:01:14.098Z",
+      "summary": "11-layer 512d transformer pairs MLP 3.5x LeakyReLU with SmearGate, Bigram/Trigram Hash, Value-Residual ResFormer, Gated Attention, XSA, and partial RoPE.",
       "tags": [
         "architecture",
         "attention",
         "quantization",
-        "sliding-window-eval"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -5941,16 +5963,16 @@
     },
     {
       "prNumber": 347,
-      "title": "LongContext 4096 + Full SOTA Stack & QAT Int4 → 16 Layers",
+      "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-22T08:56:24Z",
-      "headSha": "538bfa611e4e17107d1c3af73ac246a80f06d7f2",
-      "generatedAt": "2026-03-22T10:08:44.227Z",
-      "summary": "Uses 4k-token training with full SOTA stack and int4 QAT nibble-packed 16-layer transformer to boost depth/context within 16MB.",
+      "updatedAt": "2026-03-25T10:42:10Z",
+      "headSha": "e4ee89f72e8ffac65b02be9ee164746705b8e267",
+      "generatedAt": "2026-03-25T11:01:20.658Z",
+      "summary": "Stacks PR#549’s full SOTA stack with 4,096-token context, nibble-packed 16 layers, and end-to-end int4 quantization-aware training on every bank weight.",
       "tags": [
         "architecture",
         "quantization",
-        "sliding-window-eval"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

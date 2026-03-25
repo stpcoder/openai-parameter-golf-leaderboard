@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-25T11:00:55.432Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 700,
+    "title": "Record Submission: 1.0541 BPB - 5-expert Hedge Mixer + CROWN-Q + stride=64",
+    "state": "open",
+    "updatedAt": "2026-03-25T10:50:30Z",
+    "headSha": "57d1d2c8cc01f150830bc3d559b3d8189b424188",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/700",
+    "authorLogin": "RoyiRa"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_HedgeMixer_CROWNQ_Stride64_1.0541/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines a 5-expert Hedge mixer with warmdown CROWN-Q penalty and stride/TTT tweaks to favor quantization-friendly weights and faster eval.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Warmdown CROWN-Q penalty to shrink quantization-sensitive weights",
+      "Stride=64 sliding window frees budget for a 4th TTT epoch",
+      "5-expert Hedge mixer over n-gram and entropy stats"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,37 +1,42 @@
 {
-  "generatedAt": "2026-03-22T10:08:44.227Z",
+  "generatedAt": "2026-03-25T11:01:20.658Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
-    "title": "LongContext 4096 + Full SOTA Stack & QAT Int4 → 16 Layers",
+    "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
     "state": "open",
-    "updatedAt": "2026-03-22T08:56:24Z",
-    "headSha": "538bfa611e4e17107d1c3af73ac246a80f06d7f2",
+    "updatedAt": "2026-03-25T10:42:10Z",
+    "headSha": "e4ee89f72e8ffac65b02be9ee164746705b8e267",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "91206a35b78630edd324560142af570e5c3e70b496d2b7f0a8971106a4fd6406",
     "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_LongContext4096_Int4_BankQAT/README.md",
+      "records/track_10min_16mb/2026-03-25_LongContext4096_Int6_QAT/README.md",
+      "records/track_10min_16mb/2026-03-24_LongContext4096_FullSOTA/README.md",
+      "records/track_10min_16mb/2026-03-24_LongContext4096_Int4_16L_FullSOTA/README.md",
+      "records/track_10min_16mb/2026-03-24_QAT_Int4_16L_FullSOTA/README.md",
       "records/track_10min_16mb/2026-03-21_LongContext4096_FullStack/README.md",
       "records/track_10min_16mb/2026-03-21_QAT_Int4_16L/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 7
   },
   "output": {
-    "summary": "Uses 4k-token training with full SOTA stack and int4 QAT nibble-packed 16-layer transformer to boost depth/context within 16MB.",
+    "summary": "Stacks PR#549’s full SOTA stack with 4,096-token context, nibble-packed 16 layers, and end-to-end int4 quantization-aware training on every bank weight.",
     "tags": [
       "architecture",
       "quantization",
-      "sliding-window-eval"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "4096-token training + stride-256 sliding eval with full SOTA stack",
-      "Int4 QAT nibble packing to host 16 layers within 16MB",
-      "Re-tuned Muon hyperparams for long-context and QAT stability"
+      "4096-token training/eval context on full SOTA stack",
+      "Int4 nibble-packed 16-layer model within 16MB",
+      "End-to-end QAT covering CastedLinear and bank weights"
     ]
   },
   "compatibility": {
