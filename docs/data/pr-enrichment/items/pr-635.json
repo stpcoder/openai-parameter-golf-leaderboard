@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T08:30:26.368Z",
+  "generatedAt": "2026-03-25T09:00:45.567Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 635,
     "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
     "state": "open",
-    "updatedAt": "2026-03-25T08:24:12Z",
-    "headSha": "d1dc0e6faa59a21785fd088fa0b91dced29a80eb",
+    "updatedAt": "2026-03-25T08:47:03Z",
+    "headSha": "6c76d99ae8f97ff35f03f9f9a635f2080b9d0fd1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/635",
     "authorLogin": "aryanbhosale"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer 512d transformer blends SmearGate, Value Residual, Gated+XSA attention with MLP3.5x LeakyReLU, late QAT, and Muon training.",
+    "summary": "11-layer 512d transformer pairs MLP3.5x LeakyReLU(0.5)^2, SmearGate+hashing, value residual/gated attention, XSA, and partial RoPE with int6 GPTQ-lite.",
     "tags": [
       "architecture",
       "attention",
-      "optimizer",
-      "quantization"
+      "quantization",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "- 11-layer 512d Transformer with MLP3.5x LeakyReLU and ResFormer value residuals",
-      "- Gated attention and XSA in every layer plus partial RoPE and U-Net skips",
-      "- Muon optimizer with late QAT and int6+GPTQ-lite quantization"
+      "MLP3.5x w/ LeakyReLU(0.5)^2 plus SmearGate, bigram/trigram hashing",
+      "Value residual blend, gated attention, and XSA across layers with partial RoPE",
+      "Int6 GPTQ-lite quantization followed by sliding-window stride-64 eval"
     ]
   },
   "compatibility": {

@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-25T08:30:26.463Z",
+  "generatedAt": "2026-03-25T09:00:45.663Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 698,
+      "title": "Add MergedTop3_v3 clean 8xH100 record-track submission",
+      "status": "open",
+      "updatedAt": "2026-03-25T08:56:32Z",
+      "headSha": "4d3c35edba6dffa2333343c0316a7988fede5dcc",
+      "generatedAt": "2026-03-25T09:00:29.887Z",
+      "summary": "Merged top-stack run uses an 11-layer SmearGate model with XSA on the final layers, mixed int6+zstd quantization, partial RoPE, sliding eval, and GPTQ-lite clip search.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "attention",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-698.json"
+    },
     {
       "prNumber": 696,
       "title": "Add non-record JEPA byte-level encoder-decoder submission",
@@ -102,15 +126,15 @@
       "prNumber": 691,
       "title": "PR #414 + 30-Epoch Cosine TTT (1.0988 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-25T07:08:32Z",
-      "headSha": "0a2a1ac5f76d71c698b46d397da057349a40af58",
-      "generatedAt": "2026-03-25T07:30:12.378Z",
-      "summary": "30-epoch cosine LR Test-Time Training adapts the PR #414 int6 stack on validation data before the sliding-window evaluation.",
+      "updatedAt": "2026-03-25T08:44:00Z",
+      "headSha": "787610be3db0453b2a12a5a99eebb78932f9d9e0",
+      "generatedAt": "2026-03-25T09:00:38.716Z",
+      "summary": "The PR applies 30-epoch cosine Test-Time Training on the PR #414 stack after GPTQ-lite int6 quantization, then evaluates via stride-64 sliding windows.",
       "tags": [
         "val-only",
-        "sliding-window-eval",
         "quantization",
-        "training-schedule"
+        "training-schedule",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": true,
@@ -1009,15 +1033,15 @@
       "prNumber": 635,
       "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
       "status": "open",
-      "updatedAt": "2026-03-25T08:24:12Z",
-      "headSha": "d1dc0e6faa59a21785fd088fa0b91dced29a80eb",
-      "generatedAt": "2026-03-25T08:30:26.368Z",
-      "summary": "11-layer 512d transformer blends SmearGate, Value Residual, Gated+XSA attention with MLP3.5x LeakyReLU, late QAT, and Muon training.",
+      "updatedAt": "2026-03-25T08:47:03Z",
+      "headSha": "6c76d99ae8f97ff35f03f9f9a635f2080b9d0fd1",
+      "generatedAt": "2026-03-25T09:00:45.567Z",
+      "summary": "11-layer 512d transformer pairs MLP3.5x LeakyReLU(0.5)^2, SmearGate+hashing, value residual/gated attention, XSA, and partial RoPE with int6 GPTQ-lite.",
       "tags": [
         "architecture",
         "attention",
-        "optimizer",
-        "quantization"
+        "quantization",
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2868,28 +2892,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-524.json"
-    },
-    {
-      "prNumber": 523,
-      "title": "Add RIOM v1 shared-depth recurrence non-record submission",
-      "status": "open",
-      "updatedAt": "2026-03-23T11:29:49Z",
-      "headSha": "ebe868ff8a1a5cc531cd790655aa2384e9be88b0",
-      "generatedAt": "2026-03-23T11:45:30.202Z",
-      "summary": "Shared-depth recurrence reuses 3 transformer blocks thrice with learned gates to keep the SP1024 pipeline unchanged while cutting parameters.",
-      "tags": [
-        "architecture",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-523.json"
     },
     {
       "prNumber": 518,

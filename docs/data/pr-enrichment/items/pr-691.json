@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T07:30:12.378Z",
+  "generatedAt": "2026-03-25T09:00:38.716Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 691,
     "title": "PR #414 + 30-Epoch Cosine TTT (1.0988 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-25T07:08:32Z",
-    "headSha": "0a2a1ac5f76d71c698b46d397da057349a40af58",
+    "updatedAt": "2026-03-25T08:44:00Z",
+    "headSha": "787610be3db0453b2a12a5a99eebb78932f9d9e0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/691",
     "authorLogin": "xexyz"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "30-epoch cosine LR Test-Time Training adapts the PR #414 int6 stack on validation data before the sliding-window evaluation.",
+    "summary": "The PR applies 30-epoch cosine Test-Time Training on the PR #414 stack after GPTQ-lite int6 quantization, then evaluates via stride-64 sliding windows.",
     "tags": [
       "val-only",
-      "sliding-window-eval",
       "quantization",
-      "training-schedule"
+      "training-schedule",
+      "sliding-window-eval"
     ],
     "usesValOnly": true,
-    "valOnlyReasoning": "Fine-tunes the quantized model on validation shards via Test-Time Training prior to the sliding-window eval.",
+    "valOnlyReasoning": "Performs Test-Time Training by fine-tuning on validation shards after quantization before final evaluation.",
     "techniques": [
-      "Cosine LR Test-Time Training on quantized stack",
-      "Per-layer LR multipliers during val-only fine-tuning"
+      "Cosine-scheduled TTT on validation data with per-layer LR groups",
+      "SmearGate+GQA architecture with GPTQ-lite int6+zstd-22 compression",
+      "Stride-64 sliding-window eval post fine-tuning"
     ]
   },
   "compatibility": {

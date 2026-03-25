@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-25T09:00:29.887Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 698,
+    "title": "Add MergedTop3_v3 clean 8xH100 record-track submission",
+    "state": "open",
+    "updatedAt": "2026-03-25T08:56:32Z",
+    "headSha": "4d3c35edba6dffa2333343c0316a7988fede5dcc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/698",
+    "authorLogin": "hesong0222-dev"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_MergedTop3_v3_clean_h100/README.md",
+      "records/track_non_record_16mb/2026-03-23_RIOM_v1_recur/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Merged top-stack run uses an 11-layer SmearGate model with XSA on the final layers, mixed int6+zstd quantization, partial RoPE, sliding eval, and GPTQ-lite clip search.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "attention",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed int6+zstd quantization with GPTQ-lite clip search",
+      "Partial RoPE plus layerwise LN scaling on the SmearGate stack",
+      "Sliding-window eval stride 64 over the XSA-enhanced top layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
