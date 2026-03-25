@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T23:35:31.864Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 783,
+    "title": "Non-record: PR703 + shard-order curriculum + GPTQ cache-backout (1.1171)",
+    "state": "open",
+    "updatedAt": "2026-03-25T23:26:35Z",
+    "headSha": "8b46c09972b3c64cce70768d981d8787ee1bcdc3",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/783",
+    "authorLogin": "petergpt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_PR703_Curriculum_Carryover_1.1171/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends the PR703 cache/backout GPTQ quantized branch with a score-ranked shard curriculum and tighter int6+LZMA packing to fit the 16MB cap.",
+    "tags": [
+      "quantization",
+      "training-schedule",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "score-ranked shard curriculum",
+      "PR703-style cache/backout GPTQ quantization",
+      "tighter final int6+LZMA packing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

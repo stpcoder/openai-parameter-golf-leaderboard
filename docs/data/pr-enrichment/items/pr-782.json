@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-25T23:35:37.531Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 782,
+    "title": "Podracing III: Cubric Lite — 0.9362 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-25T23:23:33Z",
+    "headSha": "67b952d7c73ba023e1345be18d7a175d185f0ce8",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/782",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_PodracerIII_cubric_lite_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Score-first 7-gram backoff U-Net eval learns per-order adaptive alphas, suppressing noisy low orders while boosting high ones for Cubric Lite.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "score-first multi-order n-gram cache",
+      "entropy-adaptive alpha with per-order multipliers",
+      "eval-time adaptation using already-scored tokens"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

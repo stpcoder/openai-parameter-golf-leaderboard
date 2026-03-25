@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-03-25T23:04:50.852Z",
+  "generatedAt": "2026-03-25T23:36:15.481Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 781,
-      "title": "Claude/train optimized model xc45 w",
+      "prNumber": 783,
+      "title": "Non-record: PR703 + shard-order curriculum + GPTQ cache-backout (1.1171)",
       "status": "open",
-      "updatedAt": "2026-03-25T23:02:59Z",
-      "headSha": "84905cc7ae92093b0e4aeb99ca05074c075196d2",
-      "generatedAt": "2026-03-25T23:04:44.153Z",
-      "summary": "Eval-time hybrid decoder blends neural logits with FST, cache, and match predictors via a GLN mixer that updates weights per entropy bin.",
+      "updatedAt": "2026-03-25T23:26:35Z",
+      "headSha": "8b46c09972b3c64cce70768d981d8787ee1bcdc3",
+      "generatedAt": "2026-03-25T23:35:31.864Z",
+      "summary": "Extends the PR703 cache/backout GPTQ quantized branch with a score-ranked shard curriculum and tighter int6+LZMA packing to fit the 16MB cap.",
       "tags": [
-        "evaluation",
-        "architecture",
+        "quantization",
+        "training-schedule",
         "compression",
         "non-record"
       ],
@@ -25,19 +25,64 @@
       "compatibility": {
         "valOnlyMatchesCollector": true
       },
-      "file": "items/pr-781.json"
+      "file": "items/pr-783.json"
+    },
+    {
+      "prNumber": 782,
+      "title": "Podracing III: Cubric Lite — 0.9362 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-25T23:23:33Z",
+      "headSha": "67b952d7c73ba023e1345be18d7a175d185f0ce8",
+      "generatedAt": "2026-03-25T23:35:37.531Z",
+      "summary": "Score-first 7-gram backoff U-Net eval learns per-order adaptive alphas, suppressing noisy low orders while boosting high ones for Cubric Lite.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-782.json"
+    },
+    {
+      "prNumber": 780,
+      "title": "Non-record WIP: OAG Neurosymbolic Hybrid — FST + N-gram Cache + Entropy-Adaptive Gating",
+      "status": "open",
+      "updatedAt": "2026-03-25T22:40:00Z",
+      "headSha": "d5bbc04bd7daccb3fd41dedde8ecd8291cd0202f",
+      "generatedAt": "2026-03-25T23:35:42.489Z",
+      "summary": "Combines neural transformer with ontology-driven FST and high-coverage n-gram cache, gating contributions by prediction entropy.",
+      "tags": [
+        "non-record",
+        "architecture",
+        "compression",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-780.json"
     },
     {
       "prNumber": 779,
       "title": "Record: BackoffNgramMixer + Drift-Free TTT (3-seed mean val_bpb=0.6683)",
       "status": "open",
-      "updatedAt": "2026-03-25T22:26:17Z",
+      "updatedAt": "2026-03-25T23:33:39Z",
       "headSha": "611612ee244acd290b7c30d952c8159816532e43",
-      "generatedAt": "2026-03-25T22:34:30.509Z",
-      "summary": "Mixes multi-order n-gram cache with entropy-adaptive weights plus drift-free Q-only TTT chunks for pure eval-time compression.",
+      "generatedAt": "2026-03-25T23:35:47.598Z",
+      "summary": "Eval-time BackoffNgramMixer mixes multi-order n-gram stats with the model via entropy-adaptive alpha while drift-free TTT tweaks (Q-only, low eta/lr) keep adaptation stable.",
       "tags": [
-        "evaluation",
-        "training-schedule"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -169,15 +214,14 @@
       "prNumber": 771,
       "title": "Record: AdamW TTT 30ep Cosine + Per-Layer LR (val_bpb: 1.0705)",
       "status": "open",
-      "updatedAt": "2026-03-25T21:31:38Z",
+      "updatedAt": "2026-03-25T23:25:11Z",
       "headSha": "e326535058b9a0ca5744dc37fde91404a2066abc",
-      "generatedAt": "2026-03-25T21:34:06.461Z",
-      "summary": "Adopts AdamW TTT with 30-epoch cosine decay and per-layer LR scaling to replace SGD-based adaptation on validation tokens.",
+      "generatedAt": "2026-03-25T23:35:53.851Z",
+      "summary": "Use AdamW 30-epoch cosine-decayed TTT with per-layer LR multipliers and all layers unfrozen to adapt the PR #549 base via validation-only training.",
       "tags": [
         "val-only",
         "optimizer",
-        "training-schedule",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": true,
@@ -3986,15 +4030,14 @@
     {
       "prNumber": 535,
       "title": "Record: 11L LeakyReLU² + Full GPTQ + QAT Alignment (val_bpb: 1.1204)",
-      "status": "open",
-      "updatedAt": "2026-03-23T14:53:58Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T23:33:52Z",
       "headSha": "501566fb62a66b48ad06b9140686170150adc1f0",
-      "generatedAt": "2026-03-23T15:17:05.158Z",
-      "summary": "Record uses LeakyReLU(0.5)² MLPs, Hessian-aware full GPTQ int6 quantization, and aligned STE/export quantile clipping in the 11L stack.",
+      "generatedAt": "2026-03-25T23:35:58.831Z",
+      "summary": "11L GPT uses LeakyReLU(0.5)² MLP plus Hessian-aware GPTQ and QAT/export quantile clipping to shrink the int6 gap.",
       "tags": [
         "architecture",
-        "quantization",
-        "training-schedule"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -4613,15 +4656,14 @@
     {
       "prNumber": 491,
       "title": "Value Residual + DenseFormer DWA + TTT",
-      "status": "open",
-      "updatedAt": "2026-03-25T22:12:44Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T23:24:48Z",
       "headSha": "26893df677a3f1e600dc0d35b1243ac3708f9a94",
-      "generatedAt": "2026-03-25T22:34:59.498Z",
-      "summary": "Combines ResFormer-style value residual blending, DenseFormer DWA mixing, and legal test-time training on scored validation windows.",
+      "generatedAt": "2026-03-25T23:36:05.215Z",
+      "summary": "Blends ResFormer value residuals with DenseFormer depth-weighted averaging and score-then-train test-time fine-tuning on validation windows.",
       "tags": [
         "val-only",
         "architecture",
-        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -6868,11 +6910,11 @@
     {
       "prNumber": 363,
       "title": "Non-record: Depth Recurrence in Parameter-Constrained Transformers — What Works, What Doesn't, and Why",
-      "status": "open",
-      "updatedAt": "2026-03-25T18:04:00Z",
+      "status": "closed",
+      "updatedAt": "2026-03-25T23:07:53Z",
       "headSha": "35c47bf31bd27edc1b5ff3c3c90766d716c9224d",
-      "generatedAt": "2026-03-25T18:33:29.631Z",
-      "summary": "Depth-recurrent Middle-Cycle looped transformers with noisy QAT reveal recurrence hurts due to quantization compounding and step overhead; 3x3 loops beat 2x5.",
+      "generatedAt": "2026-03-25T23:36:09.624Z",
+      "summary": "Depth-recurrent Middle-Cycle stack vs. flat baseline, showing Noisy QAT keeps quantization error from compounding across shared looped blocks.",
       "tags": [
         "architecture",
         "quantization",
@@ -9819,16 +9861,16 @@
     },
     {
       "prNumber": 187,
-      "title": "Record: Pre-Enrichment + Encoder Recurrence + XSA + SmearGate + BigramHash (val_bpb=1.1629)",
+      "title": "Record: EMA-GPU + 5-gram eval cache (val_bpb=1.0689)",
       "status": "open",
-      "updatedAt": "2026-03-21T07:05:01Z",
-      "headSha": "309411420609d9aa1aa9e7a3ffdf37abaf8c8522",
-      "generatedAt": "2026-03-21T07:30:09.010Z",
-      "summary": "Uses GELU pre-enrichment with SmearGate/BigramHash, encoder-only recurrence between U-Net encoders, and XSA on later layers to sharpen contextual signals before decoding.",
+      "updatedAt": "2026-03-25T23:26:16Z",
+      "headSha": "f3ace441b53f4981cfb58ea0d4c1671e83567070",
+      "generatedAt": "2026-03-25T23:36:15.454Z",
+      "summary": "GPU-resident EMA accelerates training while GELU pre-enrichment and XSA feed a transformer whose sliding eval is smoothed with a 5-gram score-first cache.",
       "tags": [
         "architecture",
         "attention",
-        "quantization"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

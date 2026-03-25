@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T18:33:29.631Z",
+  "generatedAt": "2026-03-25T23:36:09.624Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 363,
     "title": "Non-record: Depth Recurrence in Parameter-Constrained Transformers — What Works, What Doesn't, and Why",
-    "state": "open",
-    "updatedAt": "2026-03-25T18:04:00Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T23:07:53Z",
     "headSha": "35c47bf31bd27edc1b5ff3c3c90766d716c9224d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/363",
     "authorLogin": "evangelinehelsinki"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Depth-recurrent Middle-Cycle looped transformers with noisy QAT reveal recurrence hurts due to quantization compounding and step overhead; 3x3 loops beat 2x5.",
+    "summary": "Depth-recurrent Middle-Cycle stack vs. flat baseline, showing Noisy QAT keeps quantization error from compounding across shared looped blocks.",
     "tags": [
       "architecture",
       "quantization",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Noisy QAT matching int8 error on shared loop blocks",
-      "Middle-Cycle stem-core-tail layout emphasizing more unique blocks per loop",
-      "Controlled flat vs looped ablations to expose recurrence costs"
+      "Middle-Cycle stem/core/tail layout with repeated shared blocks",
+      "Noisy QAT matching int8 noise to tame recurrence quantization",
+      "Controlled flat vs. looped A/B to isolate depth recurrence costs"
     ]
   },
   "compatibility": {

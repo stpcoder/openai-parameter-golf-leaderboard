@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T22:34:30.509Z",
+  "generatedAt": "2026-03-25T23:35:47.598Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 779,
     "title": "Record: BackoffNgramMixer + Drift-Free TTT (3-seed mean val_bpb=0.6683)",
     "state": "open",
-    "updatedAt": "2026-03-25T22:26:17Z",
+    "updatedAt": "2026-03-25T23:33:39Z",
     "headSha": "611612ee244acd290b7c30d952c8159816532e43",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/779",
     "authorLogin": "deanbrr"
@@ -20,17 +20,17 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Mixes multi-order n-gram cache with entropy-adaptive weights plus drift-free Q-only TTT chunks for pure eval-time compression.",
+    "summary": "Eval-time BackoffNgramMixer mixes multi-order n-gram stats with the model via entropy-adaptive alpha while drift-free TTT tweaks (Q-only, low eta/lr) keep adaptation stable.",
     "tags": [
-      "evaluation",
-      "training-schedule"
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Not a validation-only training regime; standard eval mixing with TTT adaptation.",
     "techniques": [
-      "multi-order backward-looking n-gram backoff",
-      "entropy-adaptive mixing weight",
-      "drift-free Q-projection-only TTT schedule"
+      "Multi-order n-gram backoff eval cache",
+      "Entropy-adaptive mixing using model entropy",
+      "Drift-free TTT tuning (Q-only, reduced eta/lr)"
     ]
   },
   "compatibility": {

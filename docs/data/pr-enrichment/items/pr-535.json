@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T15:17:05.158Z",
+  "generatedAt": "2026-03-25T23:35:58.831Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 535,
     "title": "Record: 11L LeakyReLU² + Full GPTQ + QAT Alignment (val_bpb: 1.1204)",
-    "state": "open",
-    "updatedAt": "2026-03-23T14:53:58Z",
+    "state": "closed",
+    "updatedAt": "2026-03-25T23:33:52Z",
     "headSha": "501566fb62a66b48ad06b9140686170150adc1f0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/535",
     "authorLogin": "raahilshah"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Record uses LeakyReLU(0.5)² MLPs, Hessian-aware full GPTQ int6 quantization, and aligned STE/export quantile clipping in the 11L stack.",
+    "summary": "11L GPT uses LeakyReLU(0.5)² MLP plus Hessian-aware GPTQ and QAT/export quantile clipping to shrink the int6 gap.",
     "tags": [
       "architecture",
-      "quantization",
-      "training-schedule"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU(0.5)² MLP activation",
-      "Hessian-aware full GPTQ int6 calibration",
-      "Quantile(0.9995) STE/export clipping alignment"
+      "LeakyReLU(0.5)² MLP to maintain gradient flow",
+      "Hessian-aware GPTQ int6 with Cholesky error compensation",
+      "QAT/export STE quantile(0.9995) clipping alignment"
     ]
   },
   "compatibility": {
