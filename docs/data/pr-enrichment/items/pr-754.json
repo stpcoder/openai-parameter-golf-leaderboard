@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-25T18:33:09.678Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 754,
+    "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
+    "state": "open",
+    "updatedAt": "2026-03-25T18:15:53Z",
+    "headSha": "f47617350557fa7c4b209aaceee4351f7dca2c02",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/754",
+    "authorLogin": "aryanbhosale"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_ParallelMuon_MLP3x_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Parallel Muon banking + batched Newton-Schulz and LeakyReLU(0.5)² MLP3× feed a gated GQA stack before legal score-first TTT fine-tuning with sliding-window scoring.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "sliding-window-eval",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Parallel Muon parameter banking with batched Newton-Schulz solver",
+      "LeakyReLU(0.5)² MLP3× plus SmearGate/Gated Attention/GQA architecture",
+      "Legal score-first TTT with sliding-window scoring before SGD fine-tune"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

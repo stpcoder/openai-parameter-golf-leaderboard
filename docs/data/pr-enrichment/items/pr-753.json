@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-25T18:33:14.702Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 753,
+    "title": "Podracing II: Electric Bugaloo — 0.9625 BPB (3-seed mean, all sub-0.964)",
+    "state": "open",
+    "updatedAt": "2026-03-25T18:04:48Z",
+    "headSha": "ed062dfcc17d39f934d738765e2ceb31292fdb89",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/753",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Eval stacks multi-order (2-7) n-gram backoff with entropy-adaptive alpha to boost predictions without retraining.",
+    "tags": [
+      "evaluation",
+      "tokenization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "score-first n-gram cache",
+      "multi-order backoff cascade",
+      "entropy-based alpha weighting"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

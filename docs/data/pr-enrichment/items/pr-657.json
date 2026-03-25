@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T18:03:29.656Z",
+  "generatedAt": "2026-03-25T18:33:19.087Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 657,
     "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1229 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-25T17:48:54Z",
-    "headSha": "863d48a45a237dab6d9ab0f0d7a6bdce65646d57",
+    "updatedAt": "2026-03-25T18:13:49Z",
+    "headSha": "5e0e793cac9a8bec098018bd51cb466152b74522",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/657",
     "authorLogin": "anthony-maio"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pairs LeakyReLU(0.5)^2 MLPs with sigmoid-gated value residual learning across XSA layers and lzma-compressed GPTQ-lite weights to keep the model under 16MB.",
+    "summary": "Combines LeakyReLU(0.5)^2 MLP, VRL gating, GPTQ-lite int6, and lzma compression to pack a full 11L stack within 16MB.",
     "tags": [
       "architecture",
       "attention",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU(0.5)^2 MLP expansion",
-      "Sigmoid-gated VRL across XSA layers",
-      "lzma compression on GPTQ-lite int6 weights"
+      "LeakyReLU(0.5)^2 MLP activation",
+      "Value Residual Learning mixes layer0 value via sigmoid gated skips",
+      "GPTQ-lite int6 plus lzma compression to reclaim artifact headroom"
     ]
   },
   "compatibility": {

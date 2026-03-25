@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T18:03:42.696Z",
+  "generatedAt": "2026-03-25T18:33:29.631Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 363,
     "title": "Non-record: Depth Recurrence in Parameter-Constrained Transformers — What Works, What Doesn't, and Why",
     "state": "open",
-    "updatedAt": "2026-03-25T17:49:59Z",
-    "headSha": "46788638f485c0da9de9f8f26b844be8991163f1",
+    "updatedAt": "2026-03-25T18:04:00Z",
+    "headSha": "35c47bf31bd27edc1b5ff3c3c90766d716c9224d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/363",
     "authorLogin": "evangelinehelsinki"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Looped transformer shares four core blocks cycled thrice, augments them with LoRA and BigramHash, and uses noisy QAT to prevent recurrence-driven quantization error.",
+    "summary": "Depth-recurrent Middle-Cycle looped transformers with noisy QAT reveal recurrence hurts due to quantization compounding and step overhead; 3x3 loops beat 2x5.",
     "tags": [
       "architecture",
       "quantization",
+      "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared-core recurrence with per-cycle LoRA and BigramHash tail",
-      "Differentiable noise-based QAT to match int8 error in recycled weights",
-      "Controlled flat vs looped A/B studies across GPU tiers"
+      "Noisy QAT matching int8 error on shared loop blocks",
+      "Middle-Cycle stem-core-tail layout emphasizing more unique blocks per loop",
+      "Controlled flat vs looped ablations to expose recurrence costs"
     ]
   },
   "compatibility": {

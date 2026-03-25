@@ -1,8 +1,54 @@
 {
-  "generatedAt": "2026-03-25T18:04:00.512Z",
+  "generatedAt": "2026-03-25T18:33:34.264Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 754,
+      "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
+      "status": "open",
+      "updatedAt": "2026-03-25T18:15:53Z",
+      "headSha": "f47617350557fa7c4b209aaceee4351f7dca2c02",
+      "generatedAt": "2026-03-25T18:33:09.678Z",
+      "summary": "Parallel Muon banking + batched Newton-Schulz and LeakyReLU(0.5)² MLP3× feed a gated GQA stack before legal score-first TTT fine-tuning with sliding-window scoring.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "sliding-window-eval",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-754.json"
+    },
+    {
+      "prNumber": 753,
+      "title": "Podracing II: Electric Bugaloo — 0.9625 BPB (3-seed mean, all sub-0.964)",
+      "status": "open",
+      "updatedAt": "2026-03-25T18:04:48Z",
+      "headSha": "ed062dfcc17d39f934d738765e2ceb31292fdb89",
+      "generatedAt": "2026-03-25T18:33:14.702Z",
+      "summary": "Eval stacks multi-order (2-7) n-gram backoff with entropy-adaptive alpha to boost predictions without retraining.",
+      "tags": [
+        "evaluation",
+        "tokenization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-753.json"
+    },
     {
       "prNumber": 752,
       "title": "Record: Depth Recurrence + SGD TTT : 1.1182 BPB",
@@ -1590,10 +1636,10 @@
       "prNumber": 657,
       "title": "Record: 11L LeakyReLU² + VRL + lzma — val_bpb 1.1229 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-25T17:48:54Z",
-      "headSha": "863d48a45a237dab6d9ab0f0d7a6bdce65646d57",
-      "generatedAt": "2026-03-25T18:03:29.656Z",
-      "summary": "Pairs LeakyReLU(0.5)^2 MLPs with sigmoid-gated value residual learning across XSA layers and lzma-compressed GPTQ-lite weights to keep the model under 16MB.",
+      "updatedAt": "2026-03-25T18:13:49Z",
+      "headSha": "5e0e793cac9a8bec098018bd51cb466152b74522",
+      "generatedAt": "2026-03-25T18:33:19.087Z",
+      "summary": "Combines LeakyReLU(0.5)^2 MLP, VRL gating, GPTQ-lite int6, and lzma compression to pack a full 11L stack within 16MB.",
       "tags": [
         "architecture",
         "attention",
@@ -1822,14 +1868,15 @@
       "prNumber": 638,
       "title": "Record: 11L XSA-all + LeakyReLU(0.5)² + VR + GA (val_bpb=1.1164, pending 3-seed)",
       "status": "open",
-      "updatedAt": "2026-03-25T13:29:46Z",
-      "headSha": "7d65721d4a1c72ecd29c5c73cfd20018e1577e98",
-      "generatedAt": "2026-03-25T13:32:53.751Z",
-      "summary": "11-layer GQA stack adds XSA everywhere, LeakyReLU(0.5)^2, value-residual gated attention, and int6 quantization for compact non-TTT record runs.",
+      "updatedAt": "2026-03-25T18:31:11Z",
+      "headSha": "a96341a9eabb5406cc7908c357e8ad13f9994688",
+      "generatedAt": "2026-03-25T18:33:23.973Z",
+      "summary": "11-layer GQA stack applies XSA in every layer with LeakyReLU(0.5)^2 plus Value Residual and Gated Attention before int6 compression.",
       "tags": [
         "architecture",
+        "attention",
         "quantization",
-        "optimizer"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1887,29 +1934,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-636.json"
-    },
-    {
-      "prNumber": 635,
-      "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100 SXM)",
-      "status": "open",
-      "updatedAt": "2026-03-25T16:39:13Z",
-      "headSha": "726a3ce849b0d5641ebe6b880377908bb58436a9",
-      "generatedAt": "2026-03-25T17:03:25.514Z",
-      "summary": "11-layer 512d model blends MLP3.5x LeakyReLU² with SmearGate, gated attention/value residual, XSA, and late STE-based int6+GPTQ-lite quantization.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-635.json"
     },
     {
       "prNumber": 634,
@@ -6450,13 +6474,14 @@
       "prNumber": 363,
       "title": "Non-record: Depth Recurrence in Parameter-Constrained Transformers — What Works, What Doesn't, and Why",
       "status": "open",
-      "updatedAt": "2026-03-25T17:49:59Z",
-      "headSha": "46788638f485c0da9de9f8f26b844be8991163f1",
-      "generatedAt": "2026-03-25T18:03:42.696Z",
-      "summary": "Looped transformer shares four core blocks cycled thrice, augments them with LoRA and BigramHash, and uses noisy QAT to prevent recurrence-driven quantization error.",
+      "updatedAt": "2026-03-25T18:04:00Z",
+      "headSha": "35c47bf31bd27edc1b5ff3c3c90766d716c9224d",
+      "generatedAt": "2026-03-25T18:33:29.631Z",
+      "summary": "Depth-recurrent Middle-Cycle looped transformers with noisy QAT reveal recurrence hurts due to quantization compounding and step overhead; 3x3 loops beat 2x5.",
       "tags": [
         "architecture",
         "quantization",
+        "evaluation",
         "non-record"
       ],
       "flags": {
@@ -6723,6 +6748,30 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-346.json"
+    },
+    {
+      "prNumber": 344,
+      "title": "Non-record: 11L MLP3.5x LeakyReLU(0.5)^2 + Full SOTA Stack (mean val_bpb=1.1330, 8xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-24T17:41:21Z",
+      "headSha": "56ac1b395f4364f1ebb7fe5f2f125e536e5193d3",
+      "generatedAt": "2026-03-25T18:33:34.215Z",
+      "summary": "11-layer 512d model combines 3.5x LeakyReLU MLP, SmearGate/Bigram+Trigram hashing, Value-residual Gated/XSA with Partial RoPE, plus late QAT and int6 GPTQ-lite.",
+      "tags": [
+        "architecture",
+        "attention",
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-344.json"
     },
     {
       "prNumber": 342,
