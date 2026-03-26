@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-26T09:38:15.467Z",
+  "generatedAt": "2026-03-26T10:08:33.526Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 836,
+      "title": "Full-Training QAT: 1.1219 bpb",
+      "status": "open",
+      "updatedAt": "2026-03-26T10:04:30Z",
+      "headSha": "1a1d8101d6f40d9c2dcaaadcb44120def68d0f92",
+      "generatedAt": "2026-03-26T10:08:15.058Z",
+      "summary": "Full-training QAT with int6 fake quant noise from step one on LeakyReLU_LegalTTT_ParallelMuon so the model trains under quantization throughout.",
+      "tags": [
+        "quantization",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-836.json"
+    },
     {
       "prNumber": 835,
       "title": "Progressive Depth Training — val_bpb 1.1980",
@@ -1300,13 +1322,13 @@
       "prNumber": 764,
       "title": "Record: Curriculum Learning + LeakyReLU(0.9)² + 7-gram Backoff (val_bpb=0.9633)",
       "status": "open",
-      "updatedAt": "2026-03-25T20:26:04Z",
-      "headSha": "36e9649dd5c8dd0f092a5080aa154e89437bb5bc",
-      "generatedAt": "2026-03-25T20:33:57.166Z",
-      "summary": "Hardest-first perplexity-based shard ordering, steeper LeakyReLU(0.9)² activation, and backward-looking 7-gram eval cache atop the Podracing II stack.",
+      "updatedAt": "2026-03-26T10:04:15Z",
+      "headSha": "519eec39fb729490d279d6a7fa46d644f2b248ef",
+      "generatedAt": "2026-03-26T10:08:20.261Z",
+      "summary": "Curriculum shard ordering by perplexity plus tuned LeakyReLU(0.9)² on the Podracing II stack, paired with a 7-gram backoff eval cache.",
       "tags": [
         "training-schedule",
-        "architecture",
+        "regularization",
         "evaluation"
       ],
       "flags": {
@@ -7956,14 +7978,14 @@
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-26T09:34:20Z",
-      "headSha": "0b6146d1c5f0770ec68a5441edba2c28a7ec6fbb",
-      "generatedAt": "2026-03-26T09:38:15.416Z",
-      "summary": "Extends the PR#549 stack with 4096-token training/eval and dynamic NTK RoPE, while enabling bank-aware int4/int6 QAT to pack 16 layers in 16MB.",
+      "updatedAt": "2026-03-26T10:06:13Z",
+      "headSha": "b371be9fa77efaac742207513bf336badb27652e",
+      "generatedAt": "2026-03-26T10:08:33.474Z",
+      "summary": "Builds on PR#549 by training with 4096 context while applying full int4/6 QAT (bank included) to fit 16 layers under 16MB.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule"
+        "sliding-window-eval"
       ],
       "flags": {
         "usesValOnly": false,

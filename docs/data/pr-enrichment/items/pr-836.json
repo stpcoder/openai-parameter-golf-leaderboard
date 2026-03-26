@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T10:08:15.058Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 836,
+    "title": "Full-Training QAT: 1.1219 bpb",
+    "state": "open",
+    "updatedAt": "2026-03-26T10:04:30Z",
+    "headSha": "1a1d8101d6f40d9c2dcaaadcb44120def68d0f92",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/836",
+    "authorLogin": "autocode-rayes"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_FullQAT_FA3_11L_1.1219/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Full-training QAT with int6 fake quant noise from step one on LeakyReLU_LegalTTT_ParallelMuon so the model trains under quantization throughout.",
+    "tags": [
+      "quantization",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "int6 fake quantization from step 1",
+      "QAT_ENABLED=1 with LATE_QAT_THRESHOLD=1.0",
+      "LeakyReLU_LegalTTT_ParallelMuon architecture reuse"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

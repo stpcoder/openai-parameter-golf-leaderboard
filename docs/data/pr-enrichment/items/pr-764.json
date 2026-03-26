@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T20:33:57.166Z",
+  "generatedAt": "2026-03-26T10:08:20.261Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 764,
     "title": "Record: Curriculum Learning + LeakyReLU(0.9)² + 7-gram Backoff (val_bpb=0.9633)",
     "state": "open",
-    "updatedAt": "2026-03-25T20:26:04Z",
-    "headSha": "36e9649dd5c8dd0f092a5080aa154e89437bb5bc",
+    "updatedAt": "2026-03-26T10:04:15Z",
+    "headSha": "519eec39fb729490d279d6a7fa46d644f2b248ef",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/764",
     "authorLogin": "ndokutovich"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hardest-first perplexity-based shard ordering, steeper LeakyReLU(0.9)² activation, and backward-looking 7-gram eval cache atop the Podracing II stack.",
+    "summary": "Curriculum shard ordering by perplexity plus tuned LeakyReLU(0.9)² on the Podracing II stack, paired with a 7-gram backoff eval cache.",
     "tags": [
       "training-schedule",
-      "architecture",
+      "regularization",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Standard training with sliding-window eval; not a val-only regime.",
     "techniques": [
-      "perplexity-ranked shard curriculum",
-      "LeakyReLU(0.9)² activation sweep",
-      "7-gram backoff eval cache"
+      "hardest-first shard ordering",
+      "LeakyReLU(0.9)² slope tuning",
+      "7-gram backoff cache evaluation"
     ]
   },
   "compatibility": {
