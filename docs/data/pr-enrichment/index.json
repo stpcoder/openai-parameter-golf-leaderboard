@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-26T10:38:56.499Z",
+  "generatedAt": "2026-03-26T11:09:06.148Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 840,
+      "title": "Record: 0.2873 BPB — Fine-Grained N-gram Cache (65K chunks)",
+      "status": "open",
+      "updatedAt": "2026-03-26T11:03:07Z",
+      "headSha": "f1da25d4abf3e309822099110c62d14b033ed093",
+      "generatedAt": "2026-03-26T11:08:50.277Z",
+      "summary": "Eval-time N-gram cache refreshes every 65K tokens so multi-order stats update frequently, letting a score-first cache boost predictions without retraining.",
+      "tags": [
+        "evaluation",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-840.json"
+    },
+    {
+      "prNumber": 838,
+      "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT — val_bpb 1.1215 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-26T10:49:25Z",
+      "headSha": "b9b4808f6b4ff0e12d22b64cf9dd402a55507583",
+      "generatedAt": "2026-03-26T11:08:58.499Z",
+      "summary": "11-layer 512d transformer pairs Parallel Muon parameter banking with LN-scaled layers, LeakyReLU² MLP, and legal score-first TTT training.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-838.json"
+    },
     {
       "prNumber": 836,
       "title": "Full-Training QAT: 1.1219 bpb",
@@ -1526,29 +1571,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-755.json"
-    },
-    {
-      "prNumber": 754,
-      "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1215)",
-      "status": "open",
-      "updatedAt": "2026-03-26T10:32:51Z",
-      "headSha": "f7d9e9245b09ab5aac63458abe7b400d9987aa51",
-      "generatedAt": "2026-03-26T10:38:36.880Z",
-      "summary": "Parallel Muon parameter banking with depth-scaled LN and LeakyReLU² MLP3× feeds legal score-first TTT using sliding-window scoring before SGD.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "quantization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-754.json"
     },
     {
       "prNumber": 751,
@@ -7977,13 +7999,13 @@
       "prNumber": 347,
       "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
       "status": "open",
-      "updatedAt": "2026-03-26T10:22:59Z",
-      "headSha": "3c7309738145a46e465af38674bebbd2b82bb63f",
-      "generatedAt": "2026-03-26T10:38:56.447Z",
-      "summary": "Extends the PR#549 SOTA stack to 4096 context and 16 layers while pairing nibble-packed int4 depth and int6/int4 QAT (incl. bank weights) for the 16MB record.",
+      "updatedAt": "2026-03-26T11:04:04Z",
+      "headSha": "8ccc5d2a112b4e5420792f236fb44685038abde9",
+      "generatedAt": "2026-03-26T11:09:06.097Z",
+      "summary": "Extends PR #549 stack to 4096-context, 16-layer int4 models with bank-wide QAT and consistent GPTQ export.",
       "tags": [
-        "architecture",
         "quantization",
+        "architecture",
         "training-schedule"
       ],
       "flags": {

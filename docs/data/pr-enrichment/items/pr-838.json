@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T11:08:58.499Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 838,
+    "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT — val_bpb 1.1215 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-26T10:49:25Z",
+    "headSha": "b9b4808f6b4ff0e12d22b64cf9dd402a55507583",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/838",
+    "authorLogin": "aryanbhosale"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_11L_ParallelMuon_MLP3x_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer 512d transformer pairs Parallel Muon parameter banking with LN-scaled layers, LeakyReLU² MLP, and legal score-first TTT training.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Parallel Muon banking with batched Newton-Schulz",
+      "LN scale with LeakyReLU² MLP 3x",
+      "Legal score-first TTT with SGD fine-tuning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

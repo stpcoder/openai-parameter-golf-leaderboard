@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T11:08:50.277Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 840,
+    "title": "Record: 0.2873 BPB — Fine-Grained N-gram Cache (65K chunks)",
+    "state": "open",
+    "updatedAt": "2026-03-26T11:03:07Z",
+    "headSha": "f1da25d4abf3e309822099110c62d14b033ed093",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/840",
+    "authorLogin": "quietsmile"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_NgramChunk65K_LeakyReLU09_GPTQ5/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Eval-time N-gram cache refreshes every 65K tokens so multi-order stats update frequently, letting a score-first cache boost predictions without retraining.",
+    "tags": [
+      "evaluation",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Smaller score-first chunks trigger more frequent cache rewrites",
+      "Entropy-adaptive order 2-9 backoff with per-order multipliers",
+      "GPTQ-int5, LeakyReLU(0.9)², and multi-query attention architecture"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

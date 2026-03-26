@@ -1,21 +1,20 @@
 {
-  "generatedAt": "2026-03-26T10:38:56.447Z",
+  "generatedAt": "2026-03-26T11:09:06.097Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
     "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
     "state": "open",
-    "updatedAt": "2026-03-26T10:22:59Z",
-    "headSha": "3c7309738145a46e465af38674bebbd2b82bb63f",
+    "updatedAt": "2026-03-26T11:04:04Z",
+    "headSha": "8ccc5d2a112b4e5420792f236fb44685038abde9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
   },
   "inputs": {
-    "hash": "46ae9d5c638acb54f25e34c2f1e9d9878a9d54c1ded759bea20e8f187edaf212",
+    "hash": "0b1d87128e22dc6f06252ac5fe0239197cad107af0ef9c123d24be680ff456a1",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-26_Int6_QAT_2048/README.md",
-      "records/track_10min_16mb/2026-03-26_Int6_QAT_2048_LateBank/README.md",
+      "records/track_10min_16mb/2026-03-26_BankQAT_2048train_4096eval/README.md",
       "records/track_10min_16mb/2026-03-25_LongContext4096_Int4_BankQAT/README.md",
       "records/track_10min_16mb/2026-03-25_LongContext4096_Int6_QAT/README.md",
       "records/track_10min_16mb/2026-03-24_LongContext4096_FullSOTA/README.md",
@@ -24,21 +23,21 @@
       "records/track_10min_16mb/2026-03-21_LongContext4096_FullStack/README.md",
       "records/track_10min_16mb/2026-03-21_QAT_Int4_16L/README.md"
     ],
-    "submissionCount": 9
+    "submissionCount": 8
   },
   "output": {
-    "summary": "Extends the PR#549 SOTA stack to 4096 context and 16 layers while pairing nibble-packed int4 depth and int6/int4 QAT (incl. bank weights) for the 16MB record.",
+    "summary": "Extends PR #549 stack to 4096-context, 16-layer int4 models with bank-wide QAT and consistent GPTQ export.",
     "tags": [
-      "architecture",
       "quantization",
+      "architecture",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "NTK-scaled Partial RoPE plus sliding eval for 4096 context training",
-      "Nibble-packed int4 layers with late STE QAT matching export precision",
-      "Full-model bank QAT and early int6 QAT to harden weights before GPTQ-lite export"
+      "4096-token training and sliding-window evaluation",
+      "Full-model int4 QAT plus GPTQ-lite export",
+      "Depth boost to 16 layers via nibble packing"
     ]
   },
   "compatibility": {
