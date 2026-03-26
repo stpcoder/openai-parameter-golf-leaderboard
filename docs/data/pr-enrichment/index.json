@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-26T08:08:10.576Z",
+  "generatedAt": "2026-03-26T08:38:10.224Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 835,
+      "title": "Progressive Depth Training — val_bpb 1.1980",
+      "status": "open",
+      "updatedAt": "2026-03-26T08:26:21Z",
+      "headSha": "c0ce492f9efc3f2960efd5b5564cd6b1433f5216",
+      "generatedAt": "2026-03-26T08:37:53.039Z",
+      "summary": "Shared-weight recurrence uses a 2→3→4 repeat schedule with Cross-Repeat Skip plus XSA/LeakyReLU² to grow effective depth during training.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-835.json"
+    },
     {
       "prNumber": 832,
       "title": "Non-record: Byte-level transformer + JEPA auxiliary loss (val_bpb: 1.1903)",
@@ -51,14 +75,15 @@
     },
     {
       "prNumber": 830,
-      "title": "LeakyMixer: 11L leaky_relu(0.5)^2 + backoff n-gram mixer",
+      "title": "Non-record: LeakyMixer: 11L leaky_relu(0.5)^2 + backoff n-gram mixer",
       "status": "open",
-      "updatedAt": "2026-03-26T07:55:54Z",
+      "updatedAt": "2026-03-26T08:22:30Z",
       "headSha": "64da311ceb52e24a49a5d4647ebc3e44f950316e",
-      "generatedAt": "2026-03-26T08:07:43.655Z",
-      "summary": "11-layer leaky_relu(0.5)^2 MLPs with longer warmdown mix neural logits with an eval-time C backoff n-gram cache via entropy-adaptive alpha.",
+      "generatedAt": "2026-03-26T08:38:00.138Z",
+      "summary": "11-layer leaky_relu(0.5)^2 transformer with longer warmdown plus entropy-adaptive backoff n-gram mixer during eval.",
       "tags": [
         "architecture",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -946,30 +971,6 @@
       "file": "items/pr-785.json"
     },
     {
-      "prNumber": 784,
-      "title": "Non-record: Depth Recurrence + XSA + LeakyReLU² (val_bpb 1.2065)",
-      "status": "open",
-      "updatedAt": "2026-03-25T23:48:01Z",
-      "headSha": "697f820632b8682a927a1c37957498b0ae64dd4b",
-      "generatedAt": "2026-03-26T00:05:30.926Z",
-      "summary": "Depth recurrence with Cross-Repeat Skip, XSA on final layers, LeakyReLU(0.5)², and GPTQ-lite/zstd post-processing for a compact non-record entry.",
-      "tags": [
-        "architecture",
-        "attention",
-        "quantization",
-        "compression"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-784.json"
-    },
-    {
       "prNumber": 783,
       "title": "Non-record: PR703 + shard-order curriculum + GPTQ cache-backout (1.1171)",
       "status": "open",
@@ -1507,23 +1508,22 @@
       "prNumber": 754,
       "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
       "status": "open",
-      "updatedAt": "2026-03-26T07:51:54Z",
-      "headSha": "a82f3b63aa09473545cb3e741364fdc2c4b1c2ae",
-      "generatedAt": "2026-03-26T08:08:10.465Z",
-      "summary": "11-layer model couples Parallel Muon banking, LeakyReLU² MLP3x, and legal score-first TTT SGD fine-tuning under inference-mode token scoring.",
+      "updatedAt": "2026-03-26T08:26:25Z",
+      "headSha": "daaad1f6faa5ee75f4de30bdce145465398304f5",
+      "generatedAt": "2026-03-26T08:38:10.112Z",
+      "summary": "Parallel Muon banking with LeakyReLU² MLP and legal score-first TTT on an 11-layer model.",
       "tags": [
-        "val-only",
         "architecture",
-        "optimizer",
-        "training-schedule"
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-754.json"
     },

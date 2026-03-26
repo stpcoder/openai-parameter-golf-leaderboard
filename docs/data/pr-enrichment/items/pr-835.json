@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-03-26T08:37:53.039Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 835,
+    "title": "Progressive Depth Training — val_bpb 1.1980",
+    "state": "open",
+    "updatedAt": "2026-03-26T08:26:21Z",
+    "headSha": "c0ce492f9efc3f2960efd5b5564cd6b1433f5216",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/835",
+    "authorLogin": "iverbovoy"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_ProgressiveDepth/README.md",
+      "records/track_non_record_16mb/2026-03-26_DepthRecurrence_XSA_LeakyReLU/README.md",
+      "records/track_10min_16mb/2026-03-20_DepthRecurrence_CrossRepeatSkip/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Shared-weight recurrence uses a 2→3→4 repeat schedule with Cross-Repeat Skip plus XSA/LeakyReLU² to grow effective depth during training.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Shared-weight recurrence w/ Cross-Repeat Skip",
+      "Progressive depth schedule (2→3→4 repeats)",
+      "XSA + LeakyReLU² with SWA at full depth"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

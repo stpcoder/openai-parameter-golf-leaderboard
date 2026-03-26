@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T08:08:10.465Z",
+  "generatedAt": "2026-03-26T08:38:10.112Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 754,
     "title": "Non-Record: 11L Parallel Muon + LeakyReLU² MLP3x + Legal TTT (val_bpb 1.1253)",
     "state": "open",
-    "updatedAt": "2026-03-26T07:51:54Z",
-    "headSha": "a82f3b63aa09473545cb3e741364fdc2c4b1c2ae",
+    "updatedAt": "2026-03-26T08:26:25Z",
+    "headSha": "daaad1f6faa5ee75f4de30bdce145465398304f5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/754",
     "authorLogin": "aryanbhosale"
   },
@@ -19,25 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer model couples Parallel Muon banking, LeakyReLU² MLP3x, and legal score-first TTT SGD fine-tuning under inference-mode token scoring.",
+    "summary": "Parallel Muon banking with LeakyReLU² MLP and legal score-first TTT on an 11-layer model.",
     "tags": [
-      "val-only",
       "architecture",
-      "optimizer",
-      "training-schedule"
+      "training-schedule",
+      "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Legal score-first TTT trains on validation chunks via SGD after sliding-window scoring before weight updates.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Parallel Muon banking with batched Newton-Schulz",
-      "LeakyReLU² MLP3x with gated attention/U-Net skips",
-      "Legal score-first TTT SGD (lr 0.002, momentum 0.9)"
+      "Parallel Muon banking with batched Newton-Schulz optimizer",
+      "LeakyReLU(0.5)² MLP3× with gating/BigramHash features",
+      "Legal score-first TTT via sliding-window eval before SGD"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

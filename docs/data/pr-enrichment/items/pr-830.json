@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T08:07:43.655Z",
+  "generatedAt": "2026-03-26T08:38:00.138Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 830,
-    "title": "LeakyMixer: 11L leaky_relu(0.5)^2 + backoff n-gram mixer",
+    "title": "Non-record: LeakyMixer: 11L leaky_relu(0.5)^2 + backoff n-gram mixer",
     "state": "open",
-    "updatedAt": "2026-03-26T07:55:54Z",
+    "updatedAt": "2026-03-26T08:22:30Z",
     "headSha": "64da311ceb52e24a49a5d4647ebc3e44f950316e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/830",
     "authorLogin": "zlxi02"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer leaky_relu(0.5)^2 MLPs with longer warmdown mix neural logits with an eval-time C backoff n-gram cache via entropy-adaptive alpha.",
+    "summary": "11-layer leaky_relu(0.5)^2 transformer with longer warmdown plus entropy-adaptive backoff n-gram mixer during eval.",
     "tags": [
       "architecture",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Standard training run with eval-time mixer; no validation-only training.",
     "techniques": [
-      "11-layer leaky_relu(0.5)^2 MLP with extended warmdown",
-      "Eval-time C n-gram cache mixed via entropy-adaptive alpha",
-      "Backward-looking n-gram mixer respecting TTT rules"
+      "11-layer leaky_relu(0.5)^2 MLP with 3500-step warmdown",
+      "eval-time entropy-adaptive backoff n-gram mixing",
+      "C-based n-gram cache built during validation scoring"
     ]
   },
   "compatibility": {
