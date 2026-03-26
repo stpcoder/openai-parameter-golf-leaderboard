@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-25T19:03:29.271Z",
+  "generatedAt": "2026-03-26T18:41:59.754Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 755,
     "title": "Gravity Tokenizer: 1.0321 BPB via ablation leverage vocabulary optimization",
     "state": "open",
-    "updatedAt": "2026-03-25T18:44:05Z",
-    "headSha": "f6c66ae1ffa3562689cc751e372b60c2cd522c57",
+    "updatedAt": "2026-03-26T18:17:37Z",
+    "headSha": "06749a127e11317556b61f20c5b9fa161d7d1686",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/755",
     "authorLogin": "dcrow85"
   },
@@ -19,16 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Retokenizes FineWeb using ablation-leverage scoring to replace most BPE merges so vocabulary choice alone drives the quality gain.",
+    "summary": "Replaces 659 of 765 BPE merges by scoring tokens via GPT-2 ablation leverage while keeping the 1024-token budget to boost per-token predictions.",
     "tags": [
       "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Ablation leverage scoring for merge selection",
-      "GPT-2 reference model measures downstream loss impact",
-      "Retokenize FineWeb with the curated 1024-token vocabulary"
+      "Ablation leverage scoring with GPT-2 reference",
+      "Rank merge candidates by downstream loss impact",
+      "Build vocab from top 765 scored tokens"
     ]
   },
   "compatibility": {

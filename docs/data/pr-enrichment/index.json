@@ -1,8 +1,76 @@
 {
-  "generatedAt": "2026-03-26T18:12:47.803Z",
+  "generatedAt": "2026-03-26T18:42:15.316Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 883,
+      "title": "Order-13 N-gram Oracle + Score-First TTT (0.0308 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-26T18:35:47Z",
+      "headSha": "bc38a28bb8eb7f2837223b855d74e59df41c0467",
+      "generatedAt": "2026-03-26T18:41:40.122Z",
+      "summary": "Pre-fill order-13 n-gram oracle tables and blend them with neural logits, then run score-first test-time training during validation.",
+      "tags": [
+        "val-only",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": false
+      },
+      "file": "items/pr-883.json"
+    },
+    {
+      "prNumber": 882,
+      "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
+      "status": "open",
+      "updatedAt": "2026-03-26T18:25:54Z",
+      "headSha": "da24d769d95d5e8802bddc642cc4b726afe924e9",
+      "generatedAt": "2026-03-26T18:41:44.626Z",
+      "summary": "Builds on PR414 stack by swapping relu^2 for LeakyReLU(0.5)^2 and adding TrigramHash attention buckets for richer local context.",
+      "tags": [
+        "attention",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-882.json"
+    },
+    {
+      "prNumber": 881,
+      "title": "Record: WaterLOO — Full-Rescore N-gram Cache with Self-Exclusion (val_bpb 0.0990)",
+      "status": "open",
+      "updatedAt": "2026-03-26T18:38:29Z",
+      "headSha": "c996cee3c4777a8ff8f25563713d60c2aca3e0e5",
+      "generatedAt": "2026-03-26T18:41:54.966Z",
+      "summary": "Two-pass eval builds a global order-2-12 n-gram cache and rescoring the entire validation stream with leave-one-out self-exclusion before matching.",
+      "tags": [
+        "evaluation",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-881.json"
+    },
     {
       "prNumber": 880,
       "title": "Record: PhraseCache + OrderAdaptive N-gram + RegimeTracker — val_bpb 0.1003 (3-seed mean)",
@@ -2153,10 +2221,10 @@
       "prNumber": 755,
       "title": "Gravity Tokenizer: 1.0321 BPB via ablation leverage vocabulary optimization",
       "status": "open",
-      "updatedAt": "2026-03-25T18:44:05Z",
-      "headSha": "f6c66ae1ffa3562689cc751e372b60c2cd522c57",
-      "generatedAt": "2026-03-25T19:03:29.271Z",
-      "summary": "Retokenizes FineWeb using ablation-leverage scoring to replace most BPE merges so vocabulary choice alone drives the quality gain.",
+      "updatedAt": "2026-03-26T18:17:37Z",
+      "headSha": "06749a127e11317556b61f20c5b9fa161d7d1686",
+      "generatedAt": "2026-03-26T18:41:59.754Z",
+      "summary": "Replaces 659 of 765 BPE merges by scoring tokens via GPT-2 ablation leverage while keeping the 1024-token budget to boost per-token predictions.",
       "tags": [
         "tokenization"
       ],
@@ -3311,15 +3379,15 @@
       "prNumber": 675,
       "title": "Non-record: LeakyReLU² + LAWA + Ramping WD + Val Training (val_bpb=1.2302, 1xH100)",
       "status": "open",
-      "updatedAt": "2026-03-26T18:08:45Z",
-      "headSha": "65b5ee4dfb43c63481e698d2a03e8a7ce21416fd",
-      "generatedAt": "2026-03-26T18:12:23.469Z",
-      "summary": "10-layer model with LeakyReLU², LAWA averaging, ramped WD, lzma compression, and val-set training to boost quality on 1xH100.",
+      "updatedAt": "2026-03-26T18:24:03Z",
+      "headSha": "01d2780a67d6e583f8a1ed50ab8fa14901040098",
+      "generatedAt": "2026-03-26T18:42:04.636Z",
+      "summary": "Stacked 10-layer model using LAWA averaging, LeakyReLU(0.5)², ramping WD, and lzma compression while training on the validation shard.",
       "tags": [
         "val-only",
         "training-schedule",
-        "regularization",
-        "compression"
+        "compression",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": true,
@@ -4154,14 +4222,13 @@
       "prNumber": 619,
       "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
       "status": "open",
-      "updatedAt": "2026-03-26T18:02:49Z",
-      "headSha": "ef4e06002b758dae775c465de9c8555af7056f8c",
-      "generatedAt": "2026-03-26T18:12:38.708Z",
-      "summary": "10-layer model uses mixed int5/int6 quantization with EMA-exported weights and final-fraction QAT plus BigramHash tokenization.",
+      "updatedAt": "2026-03-26T18:13:40Z",
+      "headSha": "d784df342a1b9d90bf73d2555cf54eaa9d53891e",
+      "generatedAt": "2026-03-26T18:42:15.221Z",
+      "summary": "10-layer bigram model pairs mixed int5/int6 quantization with EMA exports and late QAT to hit the 16MB non-record size budget.",
       "tags": [
         "quantization",
-        "mixed-precision",
-        "tokenization",
+        "training-schedule",
         "non-record"
       ],
       "flags": {

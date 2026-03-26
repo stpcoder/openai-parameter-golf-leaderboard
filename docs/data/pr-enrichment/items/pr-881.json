@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T18:41:54.966Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 881,
+    "title": "Record: WaterLOO — Full-Rescore N-gram Cache with Self-Exclusion (val_bpb 0.0990)",
+    "state": "open",
+    "updatedAt": "2026-03-26T18:38:29Z",
+    "headSha": "c996cee3c4777a8ff8f25563713d60c2aca3e0e5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/881",
+    "authorLogin": "simon-marcus"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_WaterLOO_FullRescore_SelfExclusion_0.0990/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Two-pass eval builds a global order-2-12 n-gram cache and rescoring the entire validation stream with leave-one-out self-exclusion before matching.",
+    "tags": [
+      "evaluation",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "full-stream two-pass cache rescore",
+      "leave-one-out n-gram scoring",
+      "vectorized cache build via np.bincount"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

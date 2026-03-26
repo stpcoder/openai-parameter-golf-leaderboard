@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-26T18:41:44.626Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 882,
+    "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
+    "state": "open",
+    "updatedAt": "2026-03-26T18:25:54Z",
+    "headSha": "da24d769d95d5e8802bddc642cc4b726afe924e9",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/882",
+    "authorLogin": "IshiPareek"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Builds on PR414 stack by swapping relu^2 for LeakyReLU(0.5)^2 and adding TrigramHash attention buckets for richer local context.",
+    "tags": [
+      "attention",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "LeakyReLU(0.5)^2 MLP activation",
+      "TrigramHash buckets before attention"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

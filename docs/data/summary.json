@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-26T18:11:33.934Z",
+  "generatedAt": "2026-03-26T18:41:28.302Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 681,
+    "submissions": 684,
     "official": 1,
-    "openPr": 550,
+    "openPr": 553,
     "mergedPr": 22,
     "closedPr": 108,
-    "prBacked": 681,
+    "prBacked": 684,
     "readmeListed": 20,
     "collectorErrors": 0
   },
@@ -91,7 +91,7 @@
       }
     },
     "openPrMainTrack": {
-      "id": "record-records-track_10min_16mb-2026-03-26_FullRescore_NgramCache_0-0935",
+      "id": "record-records-track_10min_16mb-2026-03-26_OrderN_TTT_NgramOracle",
       "source": "pull_request",
       "status": "open",
       "category": "main-track",
@@ -103,32 +103,32 @@
         "category": "main-track"
       },
       "record": {
-        "folderName": "2026-03-26_FullRescore_NgramCache_0.0935",
-        "folderPath": "records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935",
-        "submissionPath": "records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935/train_gpt.py"
+        "folderName": "2026-03-26_OrderN_TTT_NgramOracle",
+        "folderPath": "records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle",
+        "submissionPath": "records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle/train_gpt.py"
       },
       "submission": {
-        "author": "Simon Marcus",
-        "githubId": "simon-marcus",
-        "name": "BROADSIDE: Full-Rescore N-gram Cache",
-        "blurb": "Two-pass n-gram eval that scores ALL tokens against the complete cache, not just early chunks. Decoupled architecture: neural logits pre-computed and stored, then n-gram blending done as a separate vectorized pass. Order 2-12, 4M buckets, entropy-adaptive alpha.",
+        "author": "THUQiXuan",
+        "githubId": "THUQiXuan",
+        "name": "Order-13 N-gram Oracle + Score-First TTT",
+        "blurb": "Pre-fill order-13 n-gram tables from all 8B training tokens, then use score-first test-time training on val data. BackoffNgramMixer combines neural + per-order n-gram experts with learned mixture weights adapted during eval.",
         "date": "2026-03-26"
       },
       "metrics": {
-        "valBpb": 0.0934761,
-        "valLoss": 0.15783006,
-        "preQuantValBpb": 1.1212,
+        "valBpb": 0.0308307,
+        "valLoss": 0.05205634,
+        "preQuantValBpb": null,
         "preQuantValLoss": null,
-        "stepStop": 7156,
-        "wallclockSeconds": 600,
-        "evalTimeSeconds": 158
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
       },
       "artifact": {
-        "bytesTotal": 15966189,
-        "bytesCode": 113333,
+        "bytesTotal": 3660136,
+        "bytesCode": 98181,
         "bytesModelInt8Zlib": null
       },
       "flags": {
@@ -139,26 +139,26 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 870,
-        "title": "Record: BROADSIDE — Full-Rescore N-gram Cache (val_bpb 0.0935)",
+        "number": 883,
+        "title": "Order-13 N-gram Oracle + Score-First TTT (0.0308 BPB)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/870",
-        "authorLogin": "simon-marcus",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/883",
+        "authorLogin": "THUQiXuan",
         "authorName": null,
-        "createdAt": "2026-03-26T17:05:21Z",
-        "updatedAt": "2026-03-26T17:07:34Z",
-        "headSha": "21b493b8d57fc5eb87e8fa7f91cfc05d57dae449",
-        "headRepo": "simon-marcus/parameter-golf-fork"
+        "createdAt": "2026-03-26T18:35:47Z",
+        "updatedAt": "2026-03-26T18:35:47Z",
+        "headSha": "bc38a28bb8eb7f2837223b855d74e59df41c0467",
+        "headRepo": "THUQiXuan/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/21b493b8d57fc5eb87e8fa7f91cfc05d57dae449/records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/21b493b8d57fc5eb87e8fa7f91cfc05d57dae449/records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/21b493b8d57fc5eb87e8fa7f91cfc05d57dae449/records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/21b493b8d57fc5eb87e8fa7f91cfc05d57dae449/records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/21b493b8d57fc5eb87e8fa7f91cfc05d57dae449/records/track_10min_16mb/2026-03-26_FullRescore_NgramCache_0.0935",
-        "pr": "https://github.com/openai/parameter-golf/pull/870",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/bc38a28bb8eb7f2837223b855d74e59df41c0467/records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/bc38a28bb8eb7f2837223b855d74e59df41c0467/records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/bc38a28bb8eb7f2837223b855d74e59df41c0467/records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/bc38a28bb8eb7f2837223b855d74e59df41c0467/records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/bc38a28bb8eb7f2837223b855d74e59df41c0467/records/track_10min_16mb/2026-03-26_OrderN_TTT_NgramOracle",
+        "pr": "https://github.com/openai/parameter-golf/pull/883",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
