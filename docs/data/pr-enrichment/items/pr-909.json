@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-26T23:43:08.115Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 909,
+    "title": "Record: 11-gram Eval Cache + Hedge Mixer (val_bpb: 0.8609)",
+    "state": "open",
+    "updatedAt": "2026-03-26T23:16:37Z",
+    "headSha": "dd9251272656ff9d06b383fe38ad392317ac81a1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/909",
+    "authorLogin": "sunnypatneedi"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_sunnypatneedi_moonshot/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds a multi-order entropy-adaptive n-gram eval cache plus Hedge mixer to the 11L GQA+XSA base, freeing time from TTT for sliding-window scoring.",
+    "tags": [
+      "evaluation",
+      "attention",
+      "architecture",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Multi-order entropy-aware n-gram cache",
+      "Hedge multiplicative-weights ensemble",
+      "Sliding-window eval without TTT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

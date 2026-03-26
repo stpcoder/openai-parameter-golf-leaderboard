@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T18:41:40.122Z",
+  "generatedAt": "2026-03-26T23:44:38.613Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 883,
     "title": "Order-13 N-gram Oracle + Score-First TTT (0.0308 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-26T18:35:47Z",
+    "updatedAt": "2026-03-26T23:26:39Z",
     "headSha": "bc38a28bb8eb7f2837223b855d74e59df41c0467",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/883",
     "authorLogin": "THUQiXuan"
@@ -19,24 +19,23 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pre-fill order-13 n-gram oracle tables and blend them with neural logits, then run score-first test-time training during validation.",
+    "summary": "Pre-fill order-2..13 n-gram frequency tables from the 8B token corpus and blend them via a BackoffNgramMixer while using score-first test-time training updates.",
     "tags": [
-      "val-only",
       "architecture",
       "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Score-first test-time training adapts weights on validation chunks before reporting metrics.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Order-13 n-gram oracle pre-filled from training data",
-      "BackoffNgramMixer combines neural and n-gram experts",
-      "Score-first test-time training on validation chunks"
+      "Score-first test-time training with phased scoring before weight updates",
+      "BackoffNgramMixer mixes neural logits with order-2..13 pretrained n-gram experts",
+      "Training-time n-gram oracle prefill for immediate validation coverage"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

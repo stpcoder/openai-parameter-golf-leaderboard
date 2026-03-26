@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T23:44:10.586Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 904,
+    "title": "Non-record: Diffusion-Noised Teacher AR Hybrid (val_bpb=1.2734, 8xH100)",
+    "state": "open",
+    "updatedAt": "2026-03-26T22:29:55Z",
+    "headSha": "8828d3a1a433968bc73505aa6c0d8deee0407c55",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/904",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_DiffusionNoisedTeacher_AR/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Standard AR transformer is trained with diffusion-inspired noised inputs, blending clean and corrupted losses while ramping noise to build robust representations.",
+    "tags": [
+      "regularization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Interpolated clean and noisy autoregressive loss",
+      "Progressively increase corruption ratio from 5% to 35%",
+      "Apply mask and random replacements to corrupted prefix tokens"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

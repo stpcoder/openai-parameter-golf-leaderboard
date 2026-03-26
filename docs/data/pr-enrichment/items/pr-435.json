@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T19:13:20.460Z",
+  "generatedAt": "2026-03-26T23:45:01.131Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 435,
     "title": "Radial bitnet submission",
     "state": "open",
-    "updatedAt": "2026-03-26T18:57:31Z",
-    "headSha": "b539789bc547b34f8aa7e9319f27b9d73294b2d0",
+    "updatedAt": "2026-03-26T23:27:34Z",
+    "headSha": "c930854526880488b11435d55ba6c0dd6a6f8cf5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/435",
     "authorLogin": "rthgit"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Dual-branch transformer marries an FRO Stable-optimized core with radial token geometry and disciplined bigram-hash branches plus BitNet-style quantization for 16MB/10m.",
+    "summary": "Combines FRO Stable optimizer, radial token geometry, and disciplined bigram hash fusion with H100-tuned precision for the 16MB Parameter Golf run.",
     "tags": [
-      "architecture",
       "optimizer",
-      "quantization",
-      "tokenization"
+      "architecture",
+      "tokenization",
+      "mixed-precision"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Dual-branch fusion of transformer core and radial analytic token branch",
-      "FRO Stable optimizer tuned for high-rate, short-horizon training",
-      "BitNet-style ternary core with int8/int6 export plus disciplined bigram hash"
+      "FRO Stable optimizer with analytic LR schedule",
+      "Radial token geometry plus disciplined bigram hash branches",
+      "H100-tuned bfloat16/TF32 throughput with GPU EMA"
     ]
   },
   "compatibility": {

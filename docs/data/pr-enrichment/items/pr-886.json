@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T22:12:51.987Z",
+  "generatedAt": "2026-03-26T23:44:32.523Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
     "title": "RFC: A framework for deciding the n-gram question",
     "state": "open",
-    "updatedAt": "2026-03-26T22:11:08Z",
-    "headSha": "1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9",
+    "updatedAt": "2026-03-26T23:19:49Z",
+    "headSha": "b564a7f61ae3e6a670183ab8d94a4e10793a38bc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval-time n-gram caching mixes collided buckets to satisfy min-count thresholds, unlocking BPB gains while exposing 272MB eval-state growth and prompting policy fixes.",
+    "summary": "Eval-time n-gram cache mixes hash-collision-skewed counts with the base LM, highlighting how auxiliary state blows past the 16MB artifact limit.",
     "tags": [
       "evaluation",
       "non-record"
@@ -27,9 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "eval-time n-gram cache using collisions to cross min-count thresholds",
-      "all-reduce syncing of per-GPU hash table deltas",
-      "policy proposals capping eval-time state and per-token overhead"
+      "Strict-causal n-gram cache mixing hashed counts with LM logits",
+      "Collision-driven min_count threshold analysis for hash tables",
+      "Proposed caps on auxiliary eval-time state and per-token overhead"
     ]
   },
   "compatibility": {

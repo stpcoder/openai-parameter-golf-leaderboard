@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T06:36:41.779Z",
+  "generatedAt": "2026-03-26T23:44:50.055Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 818,
     "title": "[record] add HWNODE record - 0.5527",
     "state": "open",
-    "updatedAt": "2026-03-26T06:28:59Z",
+    "updatedAt": "2026-03-26T23:09:17Z",
     "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/818",
     "authorLogin": "lucamignatti"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "HWNODE wraps a linear Neural ODE between Hammerstein-Wiener projections and uses a truncated Taylor series to emulate multiple layers from shared weights.",
+    "summary": "HWNODE replaces MLPs with a Hammerstein-Wiener linearized ODE whose Taylor terms create virtual layers while spectral norm keeps the dynamics stable.",
     "tags": [
       "architecture",
-      "regularization"
+      "regularization",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hammerstein-Wiener Neural ODE sharing weights for dynamic layer generation",
-      "Taylor-expanded matrix exponential truncated at order 2 for fast continuous depth",
-      "Spectral normalization to stabilize generated layers"
+      "Hammerstein-Wiener Neural ODE replaces standard MLP blocks",
+      "Taylor-series expansion of the linear ODE core generates virtual depth",
+      "Spectral normalization keeps the continuous bottleneck dynamics bounded"
     ]
   },
   "compatibility": {

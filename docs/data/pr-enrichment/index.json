@@ -1,8 +1,171 @@
 {
-  "generatedAt": "2026-03-26T22:12:57.769Z",
+  "generatedAt": "2026-03-26T23:45:01.196Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 911,
+      "title": "Ternary Reasoner — 12L/768d Capsule-Feedback Universal Transformer",
+      "status": "open",
+      "updatedAt": "2026-03-26T23:29:05Z",
+      "headSha": "0af076b075fc98ba10446d763f6f0fe61884a42f",
+      "generatedAt": "2026-03-26T23:42:59.025Z",
+      "summary": "Ternary Reasoner packs ~87M params into ~12MB via a ternary U-Net that iteratively backward-corrects with recurrent capsules, XSA, and eval caching/TTT tricks.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-911.json"
+    },
+    {
+      "prNumber": 910,
+      "title": "2L QAT Int4-MLP + Int6-Attn",
+      "status": "open",
+      "updatedAt": "2026-03-26T23:28:31Z",
+      "headSha": "8dd90897ab7b5bde0c7e84a68271dcfdc6bde3cf",
+      "generatedAt": "2026-03-26T23:43:03.552Z",
+      "summary": "Mixed-precision QAT (int4 MLP, int6 attention) frees bytes for a 12th layer while halving sliding-window stride for denser eval context.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-910.json"
+    },
+    {
+      "prNumber": 909,
+      "title": "Record: 11-gram Eval Cache + Hedge Mixer (val_bpb: 0.8609)",
+      "status": "open",
+      "updatedAt": "2026-03-26T23:16:37Z",
+      "headSha": "dd9251272656ff9d06b383fe38ad392317ac81a1",
+      "generatedAt": "2026-03-26T23:43:08.115Z",
+      "summary": "Adds a multi-order entropy-adaptive n-gram eval cache plus Hedge mixer to the 11L GQA+XSA base, freeing time from TTT for sliding-window scoring.",
+      "tags": [
+        "evaluation",
+        "attention",
+        "architecture",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-909.json"
+    },
+    {
+      "prNumber": 907,
+      "title": "Record: Two-Pass Order-12 Shared N-gram Tables — val_bpb 0.0960 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-26T23:22:26Z",
+      "headSha": "63287ce01259a53a3b1f0cb4e0d1bfcdb2233f12",
+      "generatedAt": "2026-03-26T23:43:58.428Z",
+      "summary": "11L int6 transformer uses shared order-2-12 n-gram tables and two-pass rescoring so every rank builds the full cache before final scoring.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-907.json"
+    },
+    {
+      "prNumber": 905,
+      "title": "Non-record: Prefix-Conditioned Suffix Diffusion — True Discrete Diffusion (diffusion_pll_bpb=1.8587)",
+      "status": "open",
+      "updatedAt": "2026-03-26T22:30:54Z",
+      "headSha": "bc8b5e76cc68d9b4790f1177c05b85c285890746",
+      "generatedAt": "2026-03-26T23:44:04.317Z",
+      "summary": "Prototype true discrete diffusion that denoises suffixes conditioned on clean prefixes via timestep/role embeddings and absorbing-mask corruption for an approximate PLL eval.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-905.json"
+    },
+    {
+      "prNumber": 904,
+      "title": "Non-record: Diffusion-Noised Teacher AR Hybrid (val_bpb=1.2734, 8xH100)",
+      "status": "open",
+      "updatedAt": "2026-03-26T22:29:55Z",
+      "headSha": "8828d3a1a433968bc73505aa6c0d8deee0407c55",
+      "generatedAt": "2026-03-26T23:44:10.586Z",
+      "summary": "Standard AR transformer is trained with diffusion-inspired noised inputs, blending clean and corrupted losses while ramping noise to build robust representations.",
+      "tags": [
+        "regularization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-904.json"
+    },
+    {
+      "prNumber": 902,
+      "title": "Add classical doc-copy 16.3M lzma submission",
+      "status": "open",
+      "updatedAt": "2026-03-26T23:33:08Z",
+      "headSha": "b3685af3e8d3b204561fb73165e6d386a391f2ca",
+      "generatedAt": "2026-03-26T23:44:16.716Z",
+      "summary": "Classical artifact runs a doc-local copy expert atop a discounted hashed 4-gram backoff while packing 10-bit followers with LZMA compression to fit under 16MB.",
+      "tags": [
+        "architecture",
+        "compression",
+        "non-record",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-902.json"
+    },
     {
       "prNumber": 900,
       "title": "Record: Two-Level Dirichlet Posterior Mixing — 0.11968 BPB",
@@ -26,15 +189,14 @@
     },
     {
       "prNumber": 898,
-      "title": "Non-record: Frequency-Weighted Embedding Quantization (1.1231 BPB)",
+      "title": "Frequency-Weighted Embedding Quantization (1.1231 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-26T21:54:45Z",
+      "updatedAt": "2026-03-26T22:57:44Z",
       "headSha": "554a6ab86eadbaf8d917dd99ee8163bde97783e8",
-      "generatedAt": "2026-03-26T22:12:38.867Z",
-      "summary": "Frequency-weighted embedding quantization keeps top tokens at int8 while rare ones drop to int6, concentrating precision where most text lies.",
+      "generatedAt": "2026-03-26T23:44:21.133Z",
+      "summary": "Frequency-weighted mixed int6/int8 quantization keeps top-100 tokens at int8 precision while rare embeddings stay int6 to favor frequent token accuracy.",
       "tags": [
-        "quantization",
-        "non-record"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -50,10 +212,10 @@
       "prNumber": 896,
       "title": "[Non-Record] JEPA Self-Distillation with EMA Target Encoder for Autoregressive LM (val_bpb: 1.19) | Current Noisy/Negative Result",
       "status": "open",
-      "updatedAt": "2026-03-26T21:40:51Z",
+      "updatedAt": "2026-03-26T23:34:07Z",
       "headSha": "78006f176c7cf5f36d8ebd665a761b1457d4a90d",
-      "generatedAt": "2026-03-26T21:42:26.236Z",
-      "summary": "JEPA self-distillation on a causal LM via EMA target encoder plus predictor MLP with VICReg-stabilized loss, keeping only the context encoder for inference.",
+      "generatedAt": "2026-03-26T23:44:26.518Z",
+      "summary": "Adds JEPA-style EMA target encoder self-distillation on top of a causal transformer to forecast next-token latents but shows no gain over vanilla CE.",
       "tags": [
         "architecture",
         "regularization",
@@ -208,37 +370,13 @@
       "file": "items/pr-888.json"
     },
     {
-      "prNumber": 887,
-      "title": "Record: N-gram Backoff + VRL + LeakyReLU² — val_bpb 0.9642 (3-seed mean)",
-      "status": "closed",
-      "updatedAt": "2026-03-26T19:14:39Z",
-      "headSha": "10556aebcc62c4ddc97ce750b25a23ab9739305b",
-      "generatedAt": "2026-03-26T19:43:48.614Z",
-      "summary": "Combine multi-order n-gram backoff with entropy-adaptive alpha on a LeakyReLU²+VRL base to improve scored outputs before GPTQ-lite int6 compression.",
-      "tags": [
-        "architecture",
-        "evaluation",
-        "quantization",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-887.json"
-    },
-    {
       "prNumber": 886,
       "title": "RFC: A framework for deciding the n-gram question",
       "status": "open",
-      "updatedAt": "2026-03-26T22:11:08Z",
-      "headSha": "1f91dfe7c3701910c7ce43d66a6eb7fa8d97edc9",
-      "generatedAt": "2026-03-26T22:12:51.987Z",
-      "summary": "Eval-time n-gram caching mixes collided buckets to satisfy min-count thresholds, unlocking BPB gains while exposing 272MB eval-state growth and prompting policy fixes.",
+      "updatedAt": "2026-03-26T23:19:49Z",
+      "headSha": "b564a7f61ae3e6a670183ab8d94a4e10793a38bc",
+      "generatedAt": "2026-03-26T23:44:32.523Z",
+      "summary": "Eval-time n-gram cache mixes hash-collision-skewed counts with the base LM, highlighting how auxiliary state blows past the 16MB artifact limit.",
       "tags": [
         "evaluation",
         "non-record"
@@ -305,22 +443,21 @@
       "prNumber": 883,
       "title": "Order-13 N-gram Oracle + Score-First TTT (0.0308 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-26T18:35:47Z",
+      "updatedAt": "2026-03-26T23:26:39Z",
       "headSha": "bc38a28bb8eb7f2837223b855d74e59df41c0467",
-      "generatedAt": "2026-03-26T18:41:40.122Z",
-      "summary": "Pre-fill order-13 n-gram oracle tables and blend them with neural logits, then run score-first test-time training during validation.",
+      "generatedAt": "2026-03-26T23:44:38.613Z",
+      "summary": "Pre-fill order-2..13 n-gram frequency tables from the 8B token corpus and blend them via a BackoffNgramMixer while using score-first test-time training updates.",
       "tags": [
-        "val-only",
         "architecture",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-883.json"
     },
@@ -622,15 +759,14 @@
       "prNumber": 861,
       "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
       "status": "open",
-      "updatedAt": "2026-03-26T15:58:39Z",
-      "headSha": "3d6acb16bc0d90080df1dd378b004f44f5f8755a",
-      "generatedAt": "2026-03-26T16:10:16.882Z",
-      "summary": "11-layer U-Net blends Int5 per-row QAT with pruning, bigram hash embeddings, and score-first TTT on MLPs plus XSA to pack under 16MB.",
+      "updatedAt": "2026-03-26T22:15:36Z",
+      "headSha": "b68b95d747142db1bae098b9d56dd2262f36cd8c",
+      "generatedAt": "2026-03-26T23:44:45.238Z",
+      "summary": "U-Net stack pairs per-row int5 QAT plus pruning and bigram hash/XSA tweaks with score-first TTT on MLP params for compact 16MB entries.",
       "tags": [
         "quantization",
-        "training-schedule",
-        "attention",
-        "architecture"
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1295,13 +1431,14 @@
       "prNumber": 818,
       "title": "[record] add HWNODE record - 0.5527",
       "status": "open",
-      "updatedAt": "2026-03-26T06:28:59Z",
+      "updatedAt": "2026-03-26T23:09:17Z",
       "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
-      "generatedAt": "2026-03-26T06:36:41.779Z",
-      "summary": "HWNODE wraps a linear Neural ODE between Hammerstein-Wiener projections and uses a truncated Taylor series to emulate multiple layers from shared weights.",
+      "generatedAt": "2026-03-26T23:44:50.055Z",
+      "summary": "HWNODE replaces MLPs with a Hammerstein-Wiener linearized ODE whose Taylor terms create virtual layers while spectral norm keeps the dynamics stable.",
       "tags": [
         "architecture",
-        "regularization"
+        "regularization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -3233,12 +3370,13 @@
       "prNumber": 701,
       "title": "Add classical 4-gram non-record submission",
       "status": "open",
-      "updatedAt": "2026-03-26T14:12:01Z",
-      "headSha": "c911fa98008685a8f3ada62c75e630a9b69a9a82",
-      "generatedAt": "2026-03-26T14:42:52.300Z",
-      "summary": "Classical discounted hashed 4-gram built from 10M tokens, stored under 16MB, and evaluated exactly on the FineWeb validation split from the saved artifact.",
+      "updatedAt": "2026-03-26T22:13:52Z",
+      "headSha": "7f9940ec94621e997ff17b56fd8e5405213a9d9b",
+      "generatedAt": "2026-03-26T23:44:55.455Z",
+      "summary": "Discounted hashed 4-gram with unigram/bigram backoff built from 10M tokens, packaged under 16MB and replayed for exact FineWeb validation.",
       "tags": [
         "non-record",
+        "compression",
         "evaluation"
       ],
       "flags": {
@@ -7452,15 +7590,15 @@
       "prNumber": 435,
       "title": "Radial bitnet submission",
       "status": "open",
-      "updatedAt": "2026-03-26T18:57:31Z",
-      "headSha": "b539789bc547b34f8aa7e9319f27b9d73294b2d0",
-      "generatedAt": "2026-03-26T19:13:20.460Z",
-      "summary": "Dual-branch transformer marries an FRO Stable-optimized core with radial token geometry and disciplined bigram-hash branches plus BitNet-style quantization for 16MB/10m.",
+      "updatedAt": "2026-03-26T23:27:34Z",
+      "headSha": "c930854526880488b11435d55ba6c0dd6a6f8cf5",
+      "generatedAt": "2026-03-26T23:45:01.131Z",
+      "summary": "Combines FRO Stable optimizer, radial token geometry, and disciplined bigram hash fusion with H100-tuned precision for the 16MB Parameter Golf run.",
       "tags": [
-        "architecture",
         "optimizer",
-        "quantization",
-        "tokenization"
+        "architecture",
+        "tokenization",
+        "mixed-precision"
       ],
       "flags": {
         "usesValOnly": false,

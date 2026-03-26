@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T23:44:04.317Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 905,
+    "title": "Non-record: Prefix-Conditioned Suffix Diffusion — True Discrete Diffusion (diffusion_pll_bpb=1.8587)",
+    "state": "open",
+    "updatedAt": "2026-03-26T22:30:54Z",
+    "headSha": "bc8b5e76cc68d9b4790f1177c05b85c285890746",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/905",
+    "authorLogin": "anthony-maio"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-26_PrefixConditionedSuffixDiffusion/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Prototype true discrete diffusion that denoises suffixes conditioned on clean prefixes via timestep/role embeddings and absorbing-mask corruption for an approximate PLL eval.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Prefix-conditioned absorbing-mask suffix denoising",
+      "Timestep and prefix/suffix role embeddings",
+      "Approximate prefix-conditioned PLL evaluation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

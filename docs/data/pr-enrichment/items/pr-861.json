@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T16:10:16.882Z",
+  "generatedAt": "2026-03-26T23:44:45.238Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 861,
     "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
     "state": "open",
-    "updatedAt": "2026-03-26T15:58:39Z",
-    "headSha": "3d6acb16bc0d90080df1dd378b004f44f5f8755a",
+    "updatedAt": "2026-03-26T22:15:36Z",
+    "headSha": "b68b95d747142db1bae098b9d56dd2262f36cd8c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/861",
     "authorLogin": "JoeProAI"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer U-Net blends Int5 per-row QAT with pruning, bigram hash embeddings, and score-first TTT on MLPs plus XSA to pack under 16MB.",
+    "summary": "U-Net stack pairs per-row int5 QAT plus pruning and bigram hash/XSA tweaks with score-first TTT on MLP params for compact 16MB entries.",
     "tags": [
       "quantization",
-      "training-schedule",
-      "attention",
-      "architecture"
+      "architecture",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int5 per-row QAT with 15% pre-pruning",
-      "Score-first TTT on MLP projections",
-      "U-Net with XSA layers plus bigram hash tokens"
+      "Int5 per-row QAT with 15% pruning and extended warmdown",
+      "Bigram hash embeddings with full-layer cross-layer shared attention in 11-layer U-Net",
+      "Score-first AdamW test-time training on MLP params"
     ]
   },
   "compatibility": {

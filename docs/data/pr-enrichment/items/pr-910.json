@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-26T23:43:03.552Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 910,
+    "title": "2L QAT Int4-MLP + Int6-Attn",
+    "state": "open",
+    "updatedAt": "2026-03-26T23:28:31Z",
+    "headSha": "8dd90897ab7b5bde0c7e84a68271dcfdc6bde3cf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/910",
+    "authorLogin": "Meirzhan05"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_QAT_Int4MLP_12L/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Mixed-precision QAT (int4 MLP, int6 attention) frees bytes for a 12th layer while halving sliding-window stride for denser eval context.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Mixed-precision STE QAT on banked MLP and attention weights",
+      "Int4 MLP compression funds an extra transformer layer",
+      "Sliding-window eval stride reduced to 32"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
