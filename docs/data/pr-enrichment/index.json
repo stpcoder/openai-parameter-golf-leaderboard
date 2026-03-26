@@ -1,8 +1,53 @@
 {
-  "generatedAt": "2026-03-26T02:06:24.911Z",
+  "generatedAt": "2026-03-26T02:36:13.733Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 800,
+      "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
+      "status": "open",
+      "updatedAt": "2026-03-26T02:31:39Z",
+      "headSha": "77a9267af960b12d8f21250a3bc8f4921b25c225",
+      "generatedAt": "2026-03-26T02:36:01.594Z",
+      "summary": "Chunked shared n-gram tables give every GPU the full 62M-token context while Cubric per-order adaptive alpha reweights orders 2-7.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-800.json"
+    },
+    {
+      "prNumber": 799,
+      "title": "Non-record Submission: SwiGLU 3x + Dynamic Wallclock Cosine",
+      "status": "open",
+      "updatedAt": "2026-03-26T02:30:44Z",
+      "headSha": "76c31cbb394bcf67a0072ce0331ea48000c73555",
+      "generatedAt": "2026-03-26T02:36:09.508Z",
+      "summary": "Use SwiGLU 3× MLP to exhaust 16MB, extend context, and rely on a wallclock cosine decay while omitting SWA to lock the deepest minimum.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-799.json"
+    },
     {
       "prNumber": 798,
       "title": "Record: Order-Adaptive Entropy Gating + BackoffNgramMixer (val_bpb=0.5466)",
@@ -326,27 +371,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-783.json"
-    },
-    {
-      "prNumber": 782,
-      "title": "Podracing III: Cubric Lite — 0.9362 BPB",
-      "status": "open",
-      "updatedAt": "2026-03-25T23:23:33Z",
-      "headSha": "67b952d7c73ba023e1345be18d7a175d185f0ce8",
-      "generatedAt": "2026-03-25T23:35:37.531Z",
-      "summary": "Score-first 7-gram backoff U-Net eval learns per-order adaptive alphas, suppressing noisy low orders while boosting high ones for Cubric Lite.",
-      "tags": [
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-782.json"
     },
     {
       "prNumber": 781,
@@ -883,27 +907,6 @@
       "file": "items/pr-754.json"
     },
     {
-      "prNumber": 753,
-      "title": "Podracing II: Electric Bugaloo — 0.9625 BPB (3-seed mean, all sub-0.964)",
-      "status": "open",
-      "updatedAt": "2026-03-25T19:43:44Z",
-      "headSha": "8a5915085027019adec5f455bb660021b74fe672",
-      "generatedAt": "2026-03-25T20:03:50.644Z",
-      "summary": "Eval stacks 2-7-order n-gram backoff with entropy-adaptive alpha to mix cached counts and model output without touching training.",
-      "tags": [
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-753.json"
-    },
-    {
       "prNumber": 752,
       "title": "Record: Depth Recurrence + SGD TTT : 1.1182 BPB",
       "status": "open",
@@ -1208,12 +1211,13 @@
       "prNumber": 728,
       "title": "Record: Val-Calibrated GPTQ + XSA-all + BigramHash 3072×112 — val_bpb 1.1142 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-26T01:40:27Z",
+      "updatedAt": "2026-03-26T02:26:06Z",
       "headSha": "713bb3fcd9017ba01d104723b3f873201976bab8",
-      "generatedAt": "2026-03-26T02:06:24.800Z",
-      "summary": "Applies full Hessian GPTQ calibrated on validation shards within a BigramHash 3072×112 XSA-all stack to avoid eval-time train data access.",
+      "generatedAt": "2026-03-26T02:36:13.629Z",
+      "summary": "XSA-all 11L stack with Full Hessian GPTQ calibrated on validation tokens and widened BigramHash (3072×112) keeps quantization legal while boosting quality.",
       "tags": [
         "quantization",
+        "attention",
         "architecture",
         "optimizer"
       ],
@@ -3516,29 +3520,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-580.json"
-    },
-    {
-      "prNumber": 579,
-      "title": "The Frugendorff: Recursive Weight Sharing Research — Cadence Laws + Challenges (1.1325 BPB)",
-      "status": "open",
-      "updatedAt": "2026-03-24T23:05:02Z",
-      "headSha": "d0c4271d9134cfbacb008d7a66899cec228c964d",
-      "generatedAt": "2026-03-24T23:27:52.997Z",
-      "summary": "Recursive weight sharing fuses flat and crawler loops so few unique blocks support MLP4x depth while GPTQ-aware cadence tweaks tame reuse-induced quantization/EMA issues.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-579.json"
     },
     {
       "prNumber": 578,
@@ -6476,30 +6457,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-403.json"
-    },
-    {
-      "prNumber": 401,
-      "title": "Record: 11L + EMA + Tight SWA + QAT0.15 + VE128 + Partial RoPE + LN Scale (val_bpb: 1.1243)",
-      "status": "closed",
-      "updatedAt": "2026-03-23T18:40:44Z",
-      "headSha": "16db94f0fe1eecd86a4085858a7e02b7b7fee17d",
-      "generatedAt": "2026-03-23T18:47:52.065Z",
-      "summary": "Stacks EMA-fed tight SWA with earlier late QAT on an 11L U-Net GPT using Partial RoPE, VE128, and LN scaling for low-quantization bpb.",
-      "tags": [
-        "architecture",
-        "quantization",
-        "optimizer",
-        "training-schedule"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-401.json"
     },
     {
       "prNumber": 399,

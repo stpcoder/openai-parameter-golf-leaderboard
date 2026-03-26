@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-03-26T02:36:01.594Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 800,
+    "title": "Record: X-WING — Shared N-gram Tables + Cubric (val_bpb=0.5644)",
+    "state": "open",
+    "updatedAt": "2026-03-26T02:31:39Z",
+    "headSha": "77a9267af960b12d8f21250a3bc8f4921b25c225",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/800",
+    "authorLogin": "newjordan"
+  },
+  "inputs": {
+    "hash": "9fc9fa9c8df429319712fb0ce803d1845895c93d5efca0571205b4d8990484d0",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26_XWING_shared_tables_cubric_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-25_PodracerIII_cubric_lite_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-25_PodracingII_backoff7gram_8xH100/README.md",
+      "records/track_10min_16mb/2026-03-23_SwiGLU_F1_VRL_LeakyReLU_1.1208/README.md",
+      "records/track_10min_16mb/2026-03-22_SpongeBath_TTT8_Stride32/README.md",
+      "records/track_10min_16mb/2026-03-23_Frugendorff_Squared_6x2_640d_MLP4/README.md"
+    ],
+    "submissionCount": 6
+  },
+  "output": {
+    "summary": "Chunked shared n-gram tables give every GPU the full 62M-token context while Cubric per-order adaptive alpha reweights orders 2-7.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Chunk-based shared n-gram tables synchronize hash updates so every rank sees the complete validation corpus before scoring.",
+      "Cubric per-order adaptive alpha suppresses noisy orders 2-3 while boosting reliable orders 5-7 in the n-gram ensemble."
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
