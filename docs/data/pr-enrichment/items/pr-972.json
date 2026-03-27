@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T18:47:33.812Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 972,
+    "title": "Normalized N-gram + Bayesian First-Match (val_bpb 0.3922)",
+    "state": "open",
+    "updatedAt": "2026-03-27T18:47:03Z",
+    "headSha": "d55045ef7728b4b7a38198f8fd6429c9ffb2ac61",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/972",
+    "authorLogin": "Idan3011"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines full-vocab normalized n-gram scoring with Bayesian first-match smoothing, two-phase shared cache, and XSA-enhanced 10L transformer pre-enrichment.",
+    "tags": [
+      "evaluation",
+      "attention",
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Full-vocab 1024-token normalized n-gram scoring with beta=2 neural prior mixing",
+      "Two-phase shared cache with first-match backoff across orders 11→2",
+      "XSA on last layers plus GELU pre-enrichment in 10L 512d backbone"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

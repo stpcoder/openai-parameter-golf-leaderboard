@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-27T18:47:38.556Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 970,
+    "title": "Non-record: GatedDeltaNet SSM via fla library — 1.2907 bpb, 15.79MB",
+    "state": "open",
+    "updatedAt": "2026-03-27T18:23:24Z",
+    "headSha": "d10e4713ffa798318dea67e0466481c2b9cedefb",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/970",
+    "authorLogin": "dnldsz"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Replaces attention with chunk-parallel Gated DeltaNet SSM using fla Triton kernels, Muon+Adam routing, and U-Net skips in a 16MB int8+zlib artifact.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "optimizer",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Chunk-parallel Gated DeltaNet recurrence via fla Triton kernels",
+      "Muon for 2D weights + Adam for delta-rule params",
+      "U-Net skips with BigramHash embeddings and polynomial softcap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

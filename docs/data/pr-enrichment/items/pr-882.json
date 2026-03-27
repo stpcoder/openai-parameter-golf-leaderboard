@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T17:17:06.083Z",
+  "generatedAt": "2026-03-27T18:47:42.461Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 882,
     "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
     "state": "open",
-    "updatedAt": "2026-03-27T17:04:51Z",
-    "headSha": "206ceb978b04a46d4a743edcb78d9edcf2282e14",
+    "updatedAt": "2026-03-27T18:25:50Z",
+    "headSha": "95277a642fd04e87e19a3b56b089772bd1cc3eed",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/882",
     "authorLogin": "IshiPareek"
   },
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "MLP activation switched to LeakyReLU(0.5)^2 while attention inputs use TrigramHash grouping 3-token buckets for richer local context.",
+    "summary": "Stacked on PR414, replaces MLP relu^2 with LeakyReLU(0.5)^2 and hashes token trigrams into 8192 buckets before attention.",
     "tags": [
-      "regularization",
+      "architecture",
       "attention",
-      "tokenization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU(0.5)^2 MLP activation to avoid neuron death",
-      "TrigramHash 3-token buckets before attention for denser local context"
+      "LeakyReLU(0.5)^2 in MLP",
+      "8192-bucket TrigramHash before attention"
     ]
   },
   "compatibility": {

@@ -1,8 +1,78 @@
 {
-  "generatedAt": "2026-03-27T18:17:16.571Z",
+  "generatedAt": "2026-03-27T18:47:42.592Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 973,
+      "title": "Non-record: BESE Novel Tokenizer — 38-Token Structured Alphabet + BPE, 288 Vocab, 12.9MB",
+      "status": "open",
+      "updatedAt": "2026-03-27T18:46:12Z",
+      "headSha": "37a8ee106e06733102d3a8fbcb4edfe6008a6809",
+      "generatedAt": "2026-03-27T18:47:29.454Z",
+      "summary": "BESE swaps the default 1,024-token BPE for a 38-token structured alphabet plus 250 BPE merges, cutting vocab size to reclaim embedding budget for extra depth.",
+      "tags": [
+        "tokenization",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-973.json"
+    },
+    {
+      "prNumber": 972,
+      "title": "Normalized N-gram + Bayesian First-Match (val_bpb 0.3922)",
+      "status": "open",
+      "updatedAt": "2026-03-27T18:47:03Z",
+      "headSha": "d55045ef7728b4b7a38198f8fd6429c9ffb2ac61",
+      "generatedAt": "2026-03-27T18:47:33.812Z",
+      "summary": "Combines full-vocab normalized n-gram scoring with Bayesian first-match smoothing, two-phase shared cache, and XSA-enhanced 10L transformer pre-enrichment.",
+      "tags": [
+        "evaluation",
+        "attention",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-972.json"
+    },
+    {
+      "prNumber": 970,
+      "title": "Non-record: GatedDeltaNet SSM via fla library — 1.2907 bpb, 15.79MB",
+      "status": "open",
+      "updatedAt": "2026-03-27T18:23:24Z",
+      "headSha": "d10e4713ffa798318dea67e0466481c2b9cedefb",
+      "generatedAt": "2026-03-27T18:47:38.556Z",
+      "summary": "Replaces attention with chunk-parallel Gated DeltaNet SSM using fla Triton kernels, Muon+Adam routing, and U-Net skips in a 16MB int8+zlib artifact.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-970.json"
+    },
     {
       "prNumber": 968,
       "title": "Record: Order-20 Dirichlet Posterior + Phrase Cache — 0.11545 BPB (3-seed)",
@@ -1459,14 +1529,13 @@
       "prNumber": 882,
       "title": "Non-record: LeakyReLU(0.5)^2 + TrigramHash on PR414 stack (1.3762 bpb, 1xA100)",
       "status": "open",
-      "updatedAt": "2026-03-27T17:04:51Z",
-      "headSha": "206ceb978b04a46d4a743edcb78d9edcf2282e14",
-      "generatedAt": "2026-03-27T17:17:06.083Z",
-      "summary": "MLP activation switched to LeakyReLU(0.5)^2 while attention inputs use TrigramHash grouping 3-token buckets for richer local context.",
+      "updatedAt": "2026-03-27T18:25:50Z",
+      "headSha": "95277a642fd04e87e19a3b56b089772bd1cc3eed",
+      "generatedAt": "2026-03-27T18:47:42.461Z",
+      "summary": "Stacked on PR414, replaces MLP relu^2 with LeakyReLU(0.5)^2 and hashes token trigrams into 8192 buckets before attention.",
       "tags": [
-        "regularization",
+        "architecture",
         "attention",
-        "tokenization",
         "non-record"
       ],
       "flags": {

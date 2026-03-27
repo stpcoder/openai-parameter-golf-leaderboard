@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T18:47:29.454Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 973,
+    "title": "Non-record: BESE Novel Tokenizer — 38-Token Structured Alphabet + BPE, 288 Vocab, 12.9MB",
+    "state": "open",
+    "updatedAt": "2026-03-27T18:46:12Z",
+    "headSha": "37a8ee106e06733102d3a8fbcb4edfe6008a6809",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/973",
+    "authorLogin": "mrbese"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "BESE swaps the default 1,024-token BPE for a 38-token structured alphabet plus 250 BPE merges, cutting vocab size to reclaim embedding budget for extra depth.",
+    "tags": [
+      "tokenization",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "structured alphabet front layer",
+      "compact BPE merge stage",
+      "byte-accurate BPB accounting"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

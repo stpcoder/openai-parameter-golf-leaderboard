@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T18:17:01.348Z",
+  "generatedAt": "2026-03-27T18:47:23.814Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -2382,6 +2382,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/0444ef13e132a596356801dc7fa1da5bca7f1269/records/track_10min_16mb/2026-03-26_ComplementaryNgram65K_Int5GPTQ_LoRATTT/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/0444ef13e132a596356801dc7fa1da5bca7f1269/records/track_10min_16mb/2026-03-26_ComplementaryNgram65K_Int5GPTQ_LoRATTT",
         "pr": "https://github.com/openai/parameter-golf/pull/850",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0-3922",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922",
+        "folderPath": "records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922",
+        "submissionPath": "records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/train_gpt.py"
+      },
+      "submission": {
+        "author": "Idanr",
+        "githubId": "idan3011",
+        "name": "Normalized N-gram + Bayesian First-Match + Pre-Enrichment + XSA",
+        "blurb": "Full-vocab 1024-token normalized n-gram scoring + Bayesian first-match-wins (beta=2.0) + fixed 0.5 blend. Multi-order backoff (2-11). Two-phase shared cache. EMA on GPU (64.7ms/step). 10L 512d.",
+        "date": "2026-03-27T15:30:00Z"
+      },
+      "metrics": {
+        "valBpb": 0.39220592,
+        "valLoss": 1.93793804,
+        "preQuantValBpb": 1.1646,
+        "preQuantValLoss": 1.9663,
+        "stepStop": 9268,
+        "wallclockSeconds": 600.031,
+        "evalTimeSeconds": 193.472
+      },
+      "artifact": {
+        "bytesTotal": 14942971,
+        "bytesCode": 64223,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 972,
+        "title": "Normalized N-gram + Bayesian First-Match (val_bpb 0.3922)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/972",
+        "authorLogin": "Idan3011",
+        "authorName": null,
+        "createdAt": "2026-03-27T18:35:45Z",
+        "updatedAt": "2026-03-27T18:47:03Z",
+        "headSha": "d55045ef7728b4b7a38198f8fd6429c9ffb2ac61",
+        "headRepo": "Idan3011/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d55045ef7728b4b7a38198f8fd6429c9ffb2ac61/records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/d55045ef7728b4b7a38198f8fd6429c9ffb2ac61/records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/d55045ef7728b4b7a38198f8fd6429c9ffb2ac61/records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/d55045ef7728b4b7a38198f8fd6429c9ffb2ac61/records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/d55045ef7728b4b7a38198f8fd6429c9ffb2ac61/records/track_10min_16mb/2026-03-27_Normalized_Ngram_Bayesian_FirstMatch_0.3922",
+        "pr": "https://github.com/openai/parameter-golf/pull/972",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -32358,6 +32435,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-28_GatedDeltaNet_FLA_12L_384d",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-28_GatedDeltaNet_FLA_12L_384d",
+        "folderPath": "records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d",
+        "submissionPath": "records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/train_gpt.py"
+      },
+      "submission": {
+        "author": "Daniel D'Souza",
+        "githubId": "dnldsz",
+        "name": "GatedDeltaNet SSM — fla library, 12L 384d",
+        "blurb": "Gated DeltaNet selective state space model using flash-linear-attention Triton kernels. Delta-rule state update replaces attention. 12 layers, 384d, Muon optimizer, bigram embeddings, z-loss.",
+        "date": "2026-03-28T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.2907,
+        "valLoss": 2.1793,
+        "preQuantValBpb": 1.2781,
+        "preQuantValLoss": 2.1581,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15790644,
+        "bytesCode": 53144,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 970,
+        "title": "Non-record: GatedDeltaNet SSM via fla library — 1.2907 bpb, 15.79MB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/970",
+        "authorLogin": "dnldsz",
+        "authorName": null,
+        "createdAt": "2026-03-27T18:23:24Z",
+        "updatedAt": "2026-03-27T18:23:24Z",
+        "headSha": "d10e4713ffa798318dea67e0466481c2b9cedefb",
+        "headRepo": "dnldsz/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8ce5236326ec1accf4e12b39c087d9b190f1d42d/records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8ce5236326ec1accf4e12b39c087d9b190f1d42d/records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8ce5236326ec1accf4e12b39c087d9b190f1d42d/records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8ce5236326ec1accf4e12b39c087d9b190f1d42d/records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8ce5236326ec1accf4e12b39c087d9b190f1d42d/records/track_non_record_16mb/2026-03-28_GatedDeltaNet_FLA_12L_384d",
+        "pr": "https://github.com/openai/parameter-golf/pull/970",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-20_CTMTailQAT_Proxy1xH100_KHUCHAN",
       "source": "pull_request",
       "status": "open",
@@ -34571,16 +34725,16 @@
         "authorLogin": "IshiPareek",
         "authorName": null,
         "createdAt": "2026-03-26T18:25:54Z",
-        "updatedAt": "2026-03-27T17:04:51Z",
-        "headSha": "206ceb978b04a46d4a743edcb78d9edcf2282e14",
+        "updatedAt": "2026-03-27T18:25:50Z",
+        "headSha": "95277a642fd04e87e19a3b56b089772bd1cc3eed",
         "headRepo": "IshiPareek/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/206ceb978b04a46d4a743edcb78d9edcf2282e14/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/95277a642fd04e87e19a3b56b089772bd1cc3eed/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/95277a642fd04e87e19a3b56b089772bd1cc3eed/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/95277a642fd04e87e19a3b56b089772bd1cc3eed/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/95277a642fd04e87e19a3b56b089772bd1cc3eed/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/95277a642fd04e87e19a3b56b089772bd1cc3eed/records/track_non_record_16mb/2026-03-25_LeakyReLU_TrigramHash",
         "pr": "https://github.com/openai/parameter-golf/pull/882",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -40593,6 +40747,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/bc8b5e76cc68d9b4790f1177c05b85c285890746/records/track_non_record_16mb/2026-03-26_PrefixConditionedSuffixDiffusion/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/bc8b5e76cc68d9b4790f1177c05b85c285890746/records/track_non_record_16mb/2026-03-26_PrefixConditionedSuffixDiffusion",
         "pr": "https://github.com/openai/parameter-golf/pull/905",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab",
+        "folderPath": "records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab",
+        "submissionPath": "records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/train_gpt.py"
+      },
+      "submission": {
+        "author": "Omer Bese",
+        "githubId": "mrbese",
+        "name": "BESE: Base-Efficient Subword Encoding — Novel 38-Token Structured Alphabet + BPE",
+        "blurb": "Novel two-layer tokenizer: 38-token linguistically structured alphabet (frequency-optimized single/group encodings, bigram-analyzed context disambiguation, case-insensitive) + 250 BPE merges = 288 vocab. Saves ~295KB of embedding parameters vs 1024-vocab baseline, enough for 2-3 extra transformer layers. Tokenizer verified byte-accurate (100/100 docs). High BPB due to 80x data starvation (12.6M vs 1B tokens), not tokenizer flaw — train loss drops normally (5.69->1.22). Full-data run pending.",
+        "date": "2026-03-27"
+      },
+      "metrics": {
+        "valBpb": 3.9143,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 12900000,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 973,
+        "title": "Non-record: BESE Novel Tokenizer — 38-Token Structured Alphabet + BPE, 288 Vocab, 12.9MB",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/973",
+        "authorLogin": "mrbese",
+        "authorName": null,
+        "createdAt": "2026-03-27T18:37:15Z",
+        "updatedAt": "2026-03-27T18:46:12Z",
+        "headSha": "37a8ee106e06733102d3a8fbcb4edfe6008a6809",
+        "headRepo": "mrbese/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/37a8ee106e06733102d3a8fbcb4edfe6008a6809/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/37a8ee106e06733102d3a8fbcb4edfe6008a6809/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/37a8ee106e06733102d3a8fbcb4edfe6008a6809/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/37a8ee106e06733102d3a8fbcb4edfe6008a6809/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/37a8ee106e06733102d3a8fbcb4edfe6008a6809/records/track_non_record_16mb/2026-03-27_BESE_NovelTokenizer_38Base_250BPE_288Vocab",
+        "pr": "https://github.com/openai/parameter-golf/pull/973",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
