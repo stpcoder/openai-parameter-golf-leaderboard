@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T05:14:19.506Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 933,
+    "title": "Record: CacheMoney — 0.0804 BPB (3-seed mean, std 0.00003)",
+    "state": "open",
+    "updatedAt": "2026-03-27T04:51:24Z",
+    "headSha": "5d3c5757e514f2bbfd9f93a7ae61c7cc37472ef7",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/933",
+    "authorLogin": "haikosys"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_CacheMoney_Full_6L256d/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Tiny 4.2M FP16 model supplies probabilities while two-pass n-gram/phrase cache with leave-one-out scoring and online alpha calibration drives the blend.",
+    "tags": [
+      "mixed-precision",
+      "optimizer",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- tiny 4.2M FP16 model as the neural probability source",
+      "- two-pass full-rescore n-gram and phrase cache with leave-one-out scoring",
+      "- short grid search for aggressive online alpha calibration"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

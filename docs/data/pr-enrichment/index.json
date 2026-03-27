@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-27T04:44:28.229Z",
+  "generatedAt": "2026-03-27T05:14:55.689Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 934,
+      "title": "WIP: 1.1xxx BPB - MDL-T Stack (LeakyReLU² + EMA + GPTQ-lite + LateQAT + warmdown3500 + int6+zstd-22)",
+      "status": "open",
+      "updatedAt": "2026-03-27T05:12:06Z",
+      "headSha": "16076d50a7b11005b5f3a933f9d3bc431e9001b5",
+      "generatedAt": "2026-03-27T05:14:10.128Z",
+      "summary": "Combines MDL-T regularizer pulling weights to int6 grid with LeakyReLU², EMA smoothing, GPTQ-lite clip search, and late int6 QAT for compression-aware training.",
+      "tags": [
+        "quantization",
+        "regularization",
+        "training-schedule",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-934.json"
+    },
+    {
+      "prNumber": 933,
+      "title": "Record: CacheMoney — 0.0804 BPB (3-seed mean, std 0.00003)",
+      "status": "open",
+      "updatedAt": "2026-03-27T04:51:24Z",
+      "headSha": "5d3c5757e514f2bbfd9f93a7ae61c7cc37472ef7",
+      "generatedAt": "2026-03-27T05:14:19.506Z",
+      "summary": "Tiny 4.2M FP16 model supplies probabilities while two-pass n-gram/phrase cache with leave-one-out scoring and online alpha calibration drives the blend.",
+      "tags": [
+        "mixed-precision",
+        "optimizer",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-933.json"
+    },
     {
       "prNumber": 932,
       "title": "Non-record: CoDA-GQA Differential Attention — First Differential Attention Submission (val_bpb=1.1580)",
@@ -53,15 +100,14 @@
       "prNumber": 930,
       "title": "Non-record: Entropy-regularized QAT (WIP, pending compute)",
       "status": "open",
-      "updatedAt": "2026-03-27T04:19:42Z",
-      "headSha": "58fce58e8c3539b9a21de62815815fa247e9c196",
-      "generatedAt": "2026-03-27T04:43:50.618Z",
-      "summary": "Adds entropy penalty on quantized weight symbols during late-stage QAT to improve compressibility-aware training.",
+      "updatedAt": "2026-03-27T05:11:31Z",
+      "headSha": "ecd1e233b73c86ee1302dd77b7581757775297df",
+      "generatedAt": "2026-03-27T05:14:29.234Z",
+      "summary": "Late-stage QAT adds a configurable entropy penalty on int6 weight symbols with LeakyReLU tweaks plus legal score-first sliding-window eval.",
       "tags": [
         "quantization",
-        "training-schedule",
-        "compression",
-        "regularization"
+        "regularization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -171,23 +217,22 @@
       "prNumber": 925,
       "title": "Record: Frozen N-gram Oracle (Order-16) + Score-First TTT (0.02807 BPB)",
       "status": "open",
-      "updatedAt": "2026-03-27T02:45:21Z",
+      "updatedAt": "2026-03-27T04:54:26Z",
       "headSha": "7cab60aad4a14de6b9a024d82d0d08a4a1756501",
-      "generatedAt": "2026-03-27T03:13:32.557Z",
-      "summary": "Order-16 frozen n-gram oracle mixes with the neural expert via a learned gate, plus complementary weights and score-first TTT per-chunk training.",
+      "generatedAt": "2026-03-27T05:14:34.715Z",
+      "summary": "Frozen order-16 n-gram oracle with learned alpha mixer and complement-weighted loss, coupled with score-first TTT updates per 32K chunk.",
       "tags": [
-        "val-only",
         "architecture",
         "evaluation",
-        "training-schedule"
+        "regularization"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-925.json"
     },
@@ -380,10 +425,10 @@
       "prNumber": 913,
       "title": "Record: Cache Is All You Need — val_bpb 0.0887, 622KB artifact (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-27T04:19:39Z",
+      "updatedAt": "2026-03-27T04:54:23Z",
       "headSha": "64c9d07a00e618ebd4f74ee9b2e2d6f2a7ef4f58",
-      "generatedAt": "2026-03-27T04:44:05.125Z",
-      "summary": "Eval-time n-gram and long-phrase caches adaptively blend with base GPT logits via sliding-window scoring for compact inference.",
+      "generatedAt": "2026-03-27T05:14:41.654Z",
+      "summary": "Eval-only n-gram and phrase caching with adaptive blending augments the tiny GPT baseline scoring to leverage longer contexts for BPB gains.",
       "tags": [
         "evaluation"
       ],
@@ -1177,13 +1222,14 @@
       "prNumber": 859,
       "title": "Non Record: 0.1582 BPB — Learned Mixer Head + No TTT + Matrix LR 0.03",
       "status": "open",
-      "updatedAt": "2026-03-27T04:20:50Z",
-      "headSha": "66fd46de9971434a742e65683b81400539697f0f",
-      "generatedAt": "2026-03-27T04:44:21.717Z",
-      "summary": "Higher MATRIX_LR plus a learned mixer head with a frozen n-gram oracle removes TTT while keeping neural gating for per-token expert mixing.",
+      "updatedAt": "2026-03-27T05:08:22Z",
+      "headSha": "d688b1b7ae8483333dcfd44db67743e0b4e3f3c9",
+      "generatedAt": "2026-03-27T05:14:45.969Z",
+      "summary": "Learned mixer head now trained with a higher matrix LR so it outperforms the prior PR without any TTT while staying within artifact/size limits.",
       "tags": [
         "architecture",
-        "optimizer"
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1614,14 +1660,13 @@
       "prNumber": 828,
       "title": "Record: 0.9076 BPB — 10L + N-gram Backoff + Matrix LR 0.03",
       "status": "open",
-      "updatedAt": "2026-03-26T14:24:44Z",
-      "headSha": "3054956edded5ed9624d793371bacb8f1abe0dd8",
-      "generatedAt": "2026-03-26T14:41:24.969Z",
-      "summary": "10L GQA with mixed int quantization and multi-order n-gram backoff, raising the Muon matrix lr to 0.03 after systematic screening.",
+      "updatedAt": "2026-03-27T04:56:49Z",
+      "headSha": "34c1781c54b1ccc310ecfd3c18c357f142c1ab27",
+      "generatedAt": "2026-03-27T05:14:49.882Z",
+      "summary": "10-layer GQA/LeakyReLU stack tunes matrix LR to 0.03 and leverages multi-order n-gram backoff with entropy-adaptive mixing for evaluation.",
       "tags": [
         "architecture",
-        "quantization",
-        "optimizer",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
@@ -12084,14 +12129,14 @@
       "prNumber": 182,
       "title": "Non-record: Linearized Neural Memory + TTT (val_bpb=1.1844)",
       "status": "open",
-      "updatedAt": "2026-03-27T04:02:21Z",
-      "headSha": "0b4d311abb0cfd31fc2e4f960f7a16f9bb61bccf",
-      "generatedAt": "2026-03-27T04:13:59.507Z",
-      "summary": "Linearized Titans-style memory per block via causal linear attention plus LoRA TTT and FP16/int6 tricks for compact evaluation.",
+      "updatedAt": "2026-03-27T05:11:33Z",
+      "headSha": "1c7542315aa1e967742f53641229dd3c142b759c",
+      "generatedAt": "2026-03-27T05:14:55.665Z",
+      "summary": "Linearized Titans-style neural memory per block with LoRA TTT, Muon weight decay, and int6/FP16 mixing for a compact 10-layer model.",
       "tags": [
         "architecture",
-        "attention",
-        "quantization"
+        "quantization",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,

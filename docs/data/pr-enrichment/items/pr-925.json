@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T03:13:32.557Z",
+  "generatedAt": "2026-03-27T05:14:34.715Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 925,
     "title": "Record: Frozen N-gram Oracle (Order-16) + Score-First TTT (0.02807 BPB)",
     "state": "open",
-    "updatedAt": "2026-03-27T02:45:21Z",
+    "updatedAt": "2026-03-27T04:54:26Z",
     "headSha": "7cab60aad4a14de6b9a024d82d0d08a4a1756501",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/925",
     "authorLogin": "THUQiXuan"
@@ -19,25 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Order-16 frozen n-gram oracle mixes with the neural expert via a learned gate, plus complementary weights and score-first TTT per-chunk training.",
+    "summary": "Frozen order-16 n-gram oracle with learned alpha mixer and complement-weighted loss, coupled with score-first TTT updates per 32K chunk.",
     "tags": [
-      "val-only",
       "architecture",
       "evaluation",
-      "training-schedule"
+      "regularization"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Score-first TTT evaluates by scoring each 32K-token validation chunk, updates the oracle, then trains on that chunk, so eval includes val-shard training.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Order-16 BackoffNgramMixer prefilled from 8B tokens",
-      "alpha head mixing neural logits with 15 n-gram experts",
-      "complementary loss weight and score-first TTT per validation chunk"
+      "GPU-native order-16 n-gram oracle with alpha mixer",
+      "Complement-weighted CE loss to prioritize hard tokens",
+      "Score-first TTT loop per 32K chunk with oracle updates"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

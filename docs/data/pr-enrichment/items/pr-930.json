@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T04:43:50.618Z",
+  "generatedAt": "2026-03-27T05:14:29.234Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 930,
     "title": "Non-record: Entropy-regularized QAT (WIP, pending compute)",
     "state": "open",
-    "updatedAt": "2026-03-27T04:19:42Z",
-    "headSha": "58fce58e8c3539b9a21de62815815fa247e9c196",
+    "updatedAt": "2026-03-27T05:11:31Z",
+    "headSha": "ecd1e233b73c86ee1302dd77b7581757775297df",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/930",
     "authorLogin": "lamb356"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds entropy penalty on quantized weight symbols during late-stage QAT to improve compressibility-aware training.",
+    "summary": "Late-stage QAT adds a configurable entropy penalty on int6 weight symbols with LeakyReLU tweaks plus legal score-first sliding-window eval.",
     "tags": [
       "quantization",
-      "training-schedule",
-      "compression",
-      "regularization"
+      "regularization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "int6 weight entropy penalty",
-      "late QAT gating via LR scale",
-      "LeakyReLU(0.5) activation change"
+      "Entropy-penalized int6 weight symbols during late QAT",
+      "LeakyReLU(0.5) activation retained from prior record",
+      "Legal score-first sliding-window evaluation via TTT"
     ]
   },
   "compatibility": {
