@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-27T07:14:59.049Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 938,
+    "title": "[non-record] 1xH100 screening: compression + eval strategy",
+    "state": "open",
+    "updatedAt": "2026-03-27T06:59:02Z",
+    "headSha": "b17c9bad62869932c66d36931de71f8ee0bc3e19",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/938",
+    "authorLogin": "numb3r33"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_1xH100_screening_eval_compression/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "1xH100 screen logs analyze how compression and quantization-friendly schedule tweaks affect pre/post-quant quality before choosing 8xH100 candidates.",
+    "tags": [
+      "compression",
+      "evaluation",
+      "quantization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "log-backed screening matrix",
+      "prioritize sliding-window eval",
+      "compression-aware training focus"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

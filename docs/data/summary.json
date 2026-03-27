@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-03-27T06:44:37.171Z",
+  "generatedAt": "2026-03-27T07:14:50.647Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "counts": {
-    "submissions": 719,
+    "submissions": 722,
     "official": 1,
-    "openPr": 589,
+    "openPr": 591,
     "mergedPr": 22,
-    "closedPr": 107,
-    "prBacked": 719,
+    "closedPr": 108,
+    "prBacked": 722,
     "readmeListed": 20,
     "collectorErrors": 0
   },

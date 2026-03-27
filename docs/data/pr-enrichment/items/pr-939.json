@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-27T07:14:56.035Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 939,
+    "title": "Non-record: GatedDeltaNet, 32K Context, Document-Boundary State Reset",
+    "state": "open",
+    "updatedAt": "2026-03-27T07:11:44Z",
+    "headSha": "d1ae3912eba86f2711a5f3861cbb28c54bb43360",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/939",
+    "authorLogin": "brian386"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_GatedDeltaNet_DocReset_7L_512d_SP1024/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "GatedDeltaNet’s linear recurrent attention plus document-boundary state resets lets a slimmed-down model hit 32k context while staying within the byte cap.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GatedDeltaNet recurrent attention",
+      "Document-boundary state reset",
+      "Reduced depth/MLP for byte cap"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T19:44:13.033Z",
+  "generatedAt": "2026-03-27T07:15:29.639Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 619,
     "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
     "state": "open",
-    "updatedAt": "2026-03-26T19:38:06Z",
-    "headSha": "9f0fbf2750ef8a470253c919ae1da151c54069a8",
+    "updatedAt": "2026-03-27T07:13:08Z",
+    "headSha": "e6a8be47853e40d46e8b2877530a8898634fb698",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/619",
     "authorLogin": "zeal175"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer GPT run mixes int5 MLP/int6 attention quantization with EMA-weight export and late QAT plus bigram hashing.",
+    "summary": "10-layer GPT with BigramHash uses block-wise mixed int5/int6 quant, EMA-export weights, and late QAT to target the 16MB non-record cap.",
     "tags": [
       "quantization",
+      "architecture",
       "regularization",
-      "tokenization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5/int6 quantization per sub-layer with final-phase QAT",
-      "EMA-exported weights for stable quantized checkpointing",
-      "Bigram hashing embedding augmentation"
+      "Block-wise mixed int5/int6 quantization",
+      "EMA-export weights with late QAT",
+      "BigramHash vocab tuning"
     ]
   },
   "compatibility": {
