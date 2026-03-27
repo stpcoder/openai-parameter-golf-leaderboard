@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T22:12:34.401Z",
+  "generatedAt": "2026-03-27T00:43:46.616Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 900,
-    "title": "Record: Two-Level Dirichlet Posterior Mixing — 0.11968 BPB",
+    "title": "Record: Two-Level Dirichlet Posterior Mixing — 0.11807 BPB",
     "state": "open",
-    "updatedAt": "2026-03-26T22:07:10Z",
-    "headSha": "1e7af66af5a76ef0e235f2ead2558eea8ee5d33c",
+    "updatedAt": "2026-03-27T00:40:25Z",
+    "headSha": "3a9cd5c5d14d54ee462807ca527686181f39af9e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/900",
     "authorLogin": "Robby955"
   },
@@ -19,16 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hierarchical Dirichlet smoothing uses the neural LM as base measure, recursively backing off 2–15-grams into a phrase suffix cache for two-level Bayesian mixing.",
+    "summary": "Hierarchical Dirichlet smoothing layers a neural base measure with 2–15-gram backoff and phrase suffix caches, passing each posterior as the next prior.",
     "tags": [
-      "regularization"
+      "regularization",
+      "architecture"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
       "Dirichlet posterior mixing across n-gram orders",
-      "Phrase suffix cache with Dirichlet combination",
-      "Neural LM as base measure for hierarchical Bayesian smoothing"
+      "Neural LM serves as hierarchical base measure",
+      "Phrase suffix cache regularized by tuned concentration"
     ]
   },
   "compatibility": {

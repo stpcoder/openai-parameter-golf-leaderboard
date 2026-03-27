@@ -1,16 +1,39 @@
 {
-  "generatedAt": "2026-03-27T00:13:47.655Z",
+  "generatedAt": "2026-03-27T00:43:57.471Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 914,
+      "title": "[Non-Record] Hymba-LongContext: 32K context training via hybrid SSM + SWA (1.1873 BPB)",
+      "status": "open",
+      "updatedAt": "2026-03-27T00:26:13Z",
+      "headSha": "269bebb25c2f3ae31826a63ea2ad181a61152462",
+      "generatedAt": "2026-03-27T00:43:35.860Z",
+      "summary": "Hybrid Hymba blocks run Mamba SSM alongside sliding-window attention, keeping per-token cost flat for 32K context and enabling score-first TTT adaptation.",
+      "tags": [
+        "architecture",
+        "attention",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-914.json"
+    },
+    {
       "prNumber": 913,
       "title": "Record: Cache Is All You Need — val_bpb 0.0887, 622KB artifact (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-27T00:12:28Z",
+      "updatedAt": "2026-03-27T00:13:33Z",
       "headSha": "64c9d07a00e618ebd4f74ee9b2e2d6f2a7ef4f58",
-      "generatedAt": "2026-03-27T00:13:21.572Z",
-      "summary": "Tiny GPT baseline enhanced with online, entropy-weighted n-gram then phrase caches for eval-time compression of repeated contexts.",
+      "generatedAt": "2026-03-27T00:43:40.543Z",
+      "summary": "Adds compact eval-time n-gram and long-phrase caches with adaptive entropy-weighted blending on top of a tiny GPT baseline for stronger scoring.",
       "tags": [
         "evaluation"
       ],
@@ -210,14 +233,15 @@
     },
     {
       "prNumber": 900,
-      "title": "Record: Two-Level Dirichlet Posterior Mixing — 0.11968 BPB",
+      "title": "Record: Two-Level Dirichlet Posterior Mixing — 0.11807 BPB",
       "status": "open",
-      "updatedAt": "2026-03-26T22:07:10Z",
-      "headSha": "1e7af66af5a76ef0e235f2ead2558eea8ee5d33c",
-      "generatedAt": "2026-03-26T22:12:34.401Z",
-      "summary": "Hierarchical Dirichlet smoothing uses the neural LM as base measure, recursively backing off 2–15-grams into a phrase suffix cache for two-level Bayesian mixing.",
+      "updatedAt": "2026-03-27T00:40:25Z",
+      "headSha": "3a9cd5c5d14d54ee462807ca527686181f39af9e",
+      "generatedAt": "2026-03-27T00:43:46.616Z",
+      "summary": "Hierarchical Dirichlet smoothing layers a neural base measure with 2–15-gram backoff and phrase suffix caches, passing each posterior as the next prior.",
       "tags": [
-        "regularization"
+        "regularization",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -415,10 +439,10 @@
       "prNumber": 886,
       "title": "RFC: A framework for deciding the n-gram question",
       "status": "open",
-      "updatedAt": "2026-03-26T23:19:49Z",
+      "updatedAt": "2026-03-27T00:15:29Z",
       "headSha": "b564a7f61ae3e6a670183ab8d94a4e10793a38bc",
-      "generatedAt": "2026-03-26T23:44:32.523Z",
-      "summary": "Eval-time n-gram cache mixes hash-collision-skewed counts with the base LM, highlighting how auxiliary state blows past the 16MB artifact limit.",
+      "generatedAt": "2026-03-27T00:43:51.002Z",
+      "summary": "Strictly causal eval-time n-gram caching mixes hash-collided counts with model logits while proposing auxiliary-state and latency caps to curb eval growth.",
       "tags": [
         "evaluation",
         "non-record"
@@ -1450,10 +1474,10 @@
       "prNumber": 818,
       "title": "[record] add HWNODE record - 0.5527",
       "status": "open",
-      "updatedAt": "2026-03-26T23:58:27Z",
+      "updatedAt": "2026-03-27T00:29:37Z",
       "headSha": "54e7686674675775fe43e372d9bf6d5c1e428dab",
-      "generatedAt": "2026-03-27T00:13:47.534Z",
-      "summary": "Wraps a spectral-normalized linear ODE core in Hammerstein-Wiener nonlinearities to Taylor-expand shared weights into virtual layers.",
+      "generatedAt": "2026-03-27T00:43:57.341Z",
+      "summary": "Replaces MLPs with weight-shared Hammerstein-Wiener Neural ODE blocks that reuse a spectral-normalized linear core and Taylor expansion for virtual depth.",
       "tags": [
         "architecture",
         "regularization"

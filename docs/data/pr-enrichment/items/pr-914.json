@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-27T00:43:35.860Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 914,
+    "title": "[Non-Record] Hymba-LongContext: 32K context training via hybrid SSM + SWA (1.1873 BPB)",
+    "state": "open",
+    "updatedAt": "2026-03-27T00:26:13Z",
+    "headSha": "269bebb25c2f3ae31826a63ea2ad181a61152462",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/914",
+    "authorLogin": "mkenney2"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-26-hymba_long_context_32k/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid Hymba blocks run Mamba SSM alongside sliding-window attention, keeping per-token cost flat for 32K context and enabling score-first TTT adaptation.",
+    "tags": [
+      "architecture",
+      "attention",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Hybrid Hymba block merges Mamba SSM + SWA per layer",
+      "Score-first TTT refines the quantized model on validation chunks"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

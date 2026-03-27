@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T23:44:32.523Z",
+  "generatedAt": "2026-03-27T00:43:51.002Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 886,
     "title": "RFC: A framework for deciding the n-gram question",
     "state": "open",
-    "updatedAt": "2026-03-26T23:19:49Z",
+    "updatedAt": "2026-03-27T00:15:29Z",
     "headSha": "b564a7f61ae3e6a670183ab8d94a4e10793a38bc",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/886",
     "authorLogin": "abaybektursun"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval-time n-gram cache mixes hash-collision-skewed counts with the base LM, highlighting how auxiliary state blows past the 16MB artifact limit.",
+    "summary": "Strictly causal eval-time n-gram caching mixes hash-collided counts with model logits while proposing auxiliary-state and latency caps to curb eval growth.",
     "tags": [
       "evaluation",
       "non-record"
@@ -27,9 +27,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Strict-causal n-gram cache mixing hashed counts with LM logits",
-      "Collision-driven min_count threshold analysis for hash tables",
-      "Proposed caps on auxiliary eval-time state and per-token overhead"
+      "causal eval-time n-gram caches",
+      "hash collision counts trigger min_count threshold",
+      "auxiliary-state and per-token-latency cap proposal"
     ]
   },
   "compatibility": {
