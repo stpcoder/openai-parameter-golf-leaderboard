@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-27T13:15:59.277Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 952,
+    "title": "Ultimate: GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
+    "state": "open",
+    "updatedAt": "2026-03-27T13:11:46Z",
+    "headSha": "7fc776c3e40f8fc7c6f253b4d9051f59f8e8ed2d",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/952",
+    "authorLogin": "FlashyFlash3011"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_GPTQLite_QAT_MaxLZMA_LegalTTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Enables GatedAttention/ValueResidual, full-step int6 QAT, and lzma-9 compression to restore BigramHash 2048 atop the GPTQLite stack.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "compression",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-head sigmoid gates with ValueResidual mixing",
+      "Full-training-phase int6 fake quantization",
+      "lzma-9 savings used to expand BigramHash vocab"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

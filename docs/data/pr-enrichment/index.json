@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-27T12:45:53.893Z",
+  "generatedAt": "2026-03-27T13:15:59.421Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 952,
+      "title": "Ultimate: GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
+      "status": "open",
+      "updatedAt": "2026-03-27T13:11:46Z",
+      "headSha": "7fc776c3e40f8fc7c6f253b4d9051f59f8e8ed2d",
+      "generatedAt": "2026-03-27T13:15:59.277Z",
+      "summary": "Enables GatedAttention/ValueResidual, full-step int6 QAT, and lzma-9 compression to restore BigramHash 2048 atop the GPTQLite stack.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "compression",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-952.json"
+    },
     {
       "prNumber": 951,
       "title": "16L XSA-all + INT4 MLP QAT + GPTQ + EMA + Partial RoPE + 30ep Cosine TTT",
@@ -9712,29 +9736,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-348.json"
-    },
-    {
-      "prNumber": 347,
-      "title": "LongContext 4096 + Full SOTA Stack + QAT Int4/Int6 → 16 Layers",
-      "status": "open",
-      "updatedAt": "2026-03-27T12:09:07Z",
-      "headSha": "435519487d312b85d319825bc30e8f09ac054f67",
-      "generatedAt": "2026-03-27T12:16:11.456Z",
-      "summary": "Extends PR#549's full SOTA stack to 4k-context training with int4/int6 QAT across bank weights and nibble-packed 16-layer variants.",
-      "tags": [
-        "quantization",
-        "training-schedule",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-347.json"
     },
     {
       "prNumber": 346,
