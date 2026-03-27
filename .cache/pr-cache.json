@@ -1,8 +1,8 @@
 {
   "version": 1,
   "sourceRepo": "openai/parameter-golf",
-  "generatedAt": "2026-03-27T08:44:48.919Z",
-  "lastSeenUpdatedAt": "2026-03-27T08:39:46Z",
+  "generatedAt": "2026-03-27T09:14:51.290Z",
+  "lastSeenUpdatedAt": "2026-03-27T09:10:18Z",
   "prs": {
     "1": {
       "number": 1,
@@ -78132,10 +78132,10 @@
     },
     "902": {
       "number": 902,
-      "updatedAt": "2026-03-26T23:33:08Z",
+      "updatedAt": "2026-03-27T09:10:18Z",
       "pr": {
         "number": 902,
-        "title": "Add classical doc-copy 16.3M lzma submission",
+        "title": "Add classical doc-copy 16.3M skip-gate submission",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -78143,13 +78143,13 @@
         "authorLogin": "Muhtasham",
         "authorName": null,
         "createdAt": "2026-03-26T22:16:19Z",
-        "updatedAt": "2026-03-26T23:33:08Z",
-        "headSha": "b3685af3e8d3b204561fb73165e6d386a391f2ca",
+        "updatedAt": "2026-03-27T09:10:18Z",
+        "headSha": "e9af2934ccf2495dd2773158b5e2f6f15445b87a",
         "headRepo": "Muhtasham/parameter-golf"
       },
       "submissions": [
         {
-          "id": "pr-902-records-track_non_record_16mb-2026-03-27_classical_doccopy_16p3m_lzma_eval-submission-json",
+          "id": "pr-902-records-track_non_record_16mb-2026-03-27_classical_doccopy_16p3m_skipgate_eval-submission-json",
           "source": "pull_request",
           "status": "open",
           "category": "non-record",
@@ -78161,33 +78161,33 @@
             "category": "non-record"
           },
           "record": {
-            "folderName": "2026-03-27_classical_doccopy_16p3m_lzma_eval",
-            "folderPath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval",
-            "submissionPath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/submission.json",
-            "readmePath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/README.md",
-            "trainLogPath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/train.log",
-            "scriptPath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/train_gpt.py"
+            "folderName": "2026-03-27_classical_doccopy_16p3m_skipgate_eval",
+            "folderPath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval",
+            "submissionPath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/submission.json",
+            "readmePath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/README.md",
+            "trainLogPath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/train.log",
+            "scriptPath": "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/train_gpt.py"
           },
           "submission": {
             "author": "muhtasham",
             "githubId": "Muhtasham",
-            "name": "Classical Doc-Copy 16.3M LZMA Artifact",
-            "blurb": "Non-record classical submission: a 16.3M-token artifact using a document-local copy expert over discounted hashed 4-gram backoff. Packed 10-bit n-gram token storage plus lzma state compression keeps the rebuilt artifact at 15,638,788 bytes, code at 66,221 bytes, and full validation reaches 1.81114207 bpb in 280.19s on the official FineWeb split.",
+            "name": "Classical Doc-Copy 16.3M Skip-Gate Artifact",
+            "blurb": "Non-record classical submission: a 16.3M-token artifact using document-local copy plus sparse skip-copy experts over discounted hashed 4-gram backoff. Packed 10-bit n-gram token storage plus lzma state compression keeps the rebuilt artifact at 15,645,820 bytes, code at 51,122 bytes, and full validation reaches 1.79538936 bpb in 471.76s on the official FineWeb split.",
             "date": "2026-03-27T00:00:00Z"
           },
           "metrics": {
-            "valBpb": 1.81114207,
+            "valBpb": 1.79538936,
             "valLoss": null,
             "preQuantValBpb": null,
             "preQuantValLoss": null,
             "stepStop": null,
-            "wallclockSeconds": 87.13,
+            "wallclockSeconds": 95.78,
             "evalTimeSeconds": null
           },
           "artifact": {
-            "bytesTotal": 15705009,
-            "bytesCode": 66221,
-            "bytesModelInt8Zlib": 15638788
+            "bytesTotal": 15696942,
+            "bytesCode": 51122,
+            "bytesModelInt8Zlib": 15645820
           },
           "flags": {
             "usesValOnly": false
@@ -78198,7 +78198,7 @@
           },
           "pr": {
             "number": 902,
-            "title": "Add classical doc-copy 16.3M lzma submission",
+            "title": "Add classical doc-copy 16.3M skip-gate submission",
             "state": "open",
             "draft": false,
             "mergedAt": null,
@@ -78206,16 +78206,16 @@
             "authorLogin": "Muhtasham",
             "authorName": null,
             "createdAt": "2026-03-26T22:16:19Z",
-            "updatedAt": "2026-03-26T23:33:08Z",
-            "headSha": "b3685af3e8d3b204561fb73165e6d386a391f2ca",
+            "updatedAt": "2026-03-27T09:10:18Z",
+            "headSha": "e9af2934ccf2495dd2773158b5e2f6f15445b87a",
             "headRepo": "Muhtasham/parameter-golf"
           },
           "links": {
-            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b3685af3e8d3b204561fb73165e6d386a391f2ca/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/submission.json",
-            "readme": "https://github.com/openai/parameter-golf/blob/b3685af3e8d3b204561fb73165e6d386a391f2ca/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/README.md",
-            "trainLog": "https://github.com/openai/parameter-golf/blob/b3685af3e8d3b204561fb73165e6d386a391f2ca/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/train.log",
-            "script": "https://github.com/openai/parameter-golf/blob/b3685af3e8d3b204561fb73165e6d386a391f2ca/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/train_gpt.py",
-            "folder": "https://github.com/openai/parameter-golf/tree/b3685af3e8d3b204561fb73165e6d386a391f2ca/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval",
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e9af2934ccf2495dd2773158b5e2f6f15445b87a/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/e9af2934ccf2495dd2773158b5e2f6f15445b87a/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/e9af2934ccf2495dd2773158b5e2f6f15445b87a/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/e9af2934ccf2495dd2773158b5e2f6f15445b87a/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/e9af2934ccf2495dd2773158b5e2f6f15445b87a/records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval",
             "pr": "https://github.com/openai/parameter-golf/pull/902"
           }
         }
@@ -81618,6 +81618,350 @@
             "script": "https://github.com/openai/parameter-golf/blob/83e01a91ab06df5655950c5c51e5015c4081e7a4/records/track_10min_16mb/2026-03-27_LeakyReLU2_EMA_QAT_BigramHash20K_MLP35x/train_gpt.py",
             "folder": "https://github.com/openai/parameter-golf/tree/83e01a91ab06df5655950c5c51e5015c4081e7a4/records/track_10min_16mb/2026-03-27_LeakyReLU2_EMA_QAT_BigramHash20K_MLP35x",
             "pr": "https://github.com/openai/parameter-golf/pull/941"
+          }
+        }
+      ]
+    },
+    "943": {
+      "number": 943,
+      "updatedAt": "2026-03-27T09:03:45Z",
+      "pr": {
+        "number": 943,
+        "title": "Record: Compliance-First Packed Causal Memory + Dirichlet Mixing — val_bpb 0.01654407 (3-seed mean)",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/943",
+        "authorLogin": "aamodbhatt",
+        "authorName": null,
+        "createdAt": "2026-03-27T09:02:05Z",
+        "updatedAt": "2026-03-27T09:03:45Z",
+        "headSha": "58c04cf8e611c4eea031971a88b562cb0ba52f16",
+        "headRepo": "aamodbhatt/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-943-records-track_10min_16mb-2026-03-26_FastPush_FullRescore_8xH100-submission-json",
+          "source": "pull_request",
+          "status": "closed",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-26_FastPush_FullRescore_8xH100",
+            "folderPath": "records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100",
+            "submissionPath": "records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/train_gpt.py"
+          },
+          "submission": {
+            "author": "Aamod Bhatt",
+            "githubId": "aamodbhatt",
+            "name": "Fast Full-Rescore N-gram (3-seed)",
+            "blurb": "Score-first full-rescore N-gram evaluation: pass1 stores token stats, cache is built once, pass2 rescoring is applied to all chunks without second neural forward. Includes optional self-exclude and count-confidence controls. 3-seed mean val_bpb 0.09420444.",
+            "date": "2026-03-26"
+          },
+          "metrics": {
+            "valBpb": 0.09420444,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 943,
+            "title": "Record: Compliance-First Packed Causal Memory + Dirichlet Mixing — val_bpb 0.01654407 (3-seed mean)",
+            "state": "closed",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/943",
+            "authorLogin": "aamodbhatt",
+            "authorName": null,
+            "createdAt": "2026-03-27T09:02:05Z",
+            "updatedAt": "2026-03-27T09:03:45Z",
+            "headSha": "58c04cf8e611c4eea031971a88b562cb0ba52f16",
+            "headRepo": "aamodbhatt/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-26_FastPush_FullRescore_8xH100",
+            "pr": "https://github.com/openai/parameter-golf/pull/943"
+          }
+        },
+        {
+          "id": "pr-943-records-track_10min_16mb-2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100-submission-json",
+          "source": "pull_request",
+          "status": "closed",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+            "folderPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+            "submissionPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train_gpt.py"
+          },
+          "submission": {
+            "author": "Aamod Bhatt",
+            "githubId": "aamodbhatt",
+            "name": "Compliance-First Packed Causal Memory + Dirichlet Mixing (3-seed)",
+            "blurb": "Single-pass causal score-first evaluation with packed n-gram memory and Dirichlet-normalized multi-order mixing. Includes explicit compliance guards for time/size/ordering. 3-seed mean score-first val_bpb 0.01654407.",
+            "date": "2026-03-27"
+          },
+          "metrics": {
+            "valBpb": 0.01654407,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 943,
+            "title": "Record: Compliance-First Packed Causal Memory + Dirichlet Mixing — val_bpb 0.01654407 (3-seed mean)",
+            "state": "closed",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/943",
+            "authorLogin": "aamodbhatt",
+            "authorName": null,
+            "createdAt": "2026-03-27T09:02:05Z",
+            "updatedAt": "2026-03-27T09:03:45Z",
+            "headSha": "58c04cf8e611c4eea031971a88b562cb0ba52f16",
+            "headRepo": "aamodbhatt/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/58c04cf8e611c4eea031971a88b562cb0ba52f16/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+            "pr": "https://github.com/openai/parameter-golf/pull/943"
+          }
+        }
+      ]
+    },
+    "944": {
+      "number": 944,
+      "updatedAt": "2026-03-27T09:04:24Z",
+      "pr": {
+        "number": 944,
+        "title": "Record: Compliance-First Packed Causal Memory + Dirichlet Mixing — val_bpb 0.01654407 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/944",
+        "authorLogin": "aamodbhatt",
+        "authorName": null,
+        "createdAt": "2026-03-27T09:03:29Z",
+        "updatedAt": "2026-03-27T09:04:24Z",
+        "headSha": "2c6b8082d30626563556fe8f68475a19b888cacd",
+        "headRepo": "aamodbhatt/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-944-records-track_10min_16mb-2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+            "folderPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+            "submissionPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train_gpt.py"
+          },
+          "submission": {
+            "author": "Aamod Bhatt",
+            "githubId": "aamodbhatt",
+            "name": "Compliance-First Packed Causal Memory + Dirichlet Mixing (3-seed)",
+            "blurb": "Single-pass causal score-first evaluation with packed n-gram memory and Dirichlet-normalized multi-order mixing. Includes explicit compliance guards for time/size/ordering. 3-seed mean score-first val_bpb 0.01654407.",
+            "date": "2026-03-27"
+          },
+          "metrics": {
+            "valBpb": 0.01654407,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 944,
+            "title": "Record: Compliance-First Packed Causal Memory + Dirichlet Mixing — val_bpb 0.01654407 (3-seed mean)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/944",
+            "authorLogin": "aamodbhatt",
+            "authorName": null,
+            "createdAt": "2026-03-27T09:03:29Z",
+            "updatedAt": "2026-03-27T09:04:24Z",
+            "headSha": "2c6b8082d30626563556fe8f68475a19b888cacd",
+            "headRepo": "aamodbhatt/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2c6b8082d30626563556fe8f68475a19b888cacd/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/2c6b8082d30626563556fe8f68475a19b888cacd/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/2c6b8082d30626563556fe8f68475a19b888cacd/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/2c6b8082d30626563556fe8f68475a19b888cacd/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/2c6b8082d30626563556fe8f68475a19b888cacd/records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100",
+            "pr": "https://github.com/openai/parameter-golf/pull/944"
+          }
+        }
+      ]
+    },
+    "945": {
+      "number": 945,
+      "updatedAt": "2026-03-27T09:04:20Z",
+      "pr": {
+        "number": 945,
+        "title": "Record: Order-16 Frozen N-gram Oracle + Learned Gate + TTT — val_bpb 0.0274 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/945",
+        "authorLogin": "TimPietrusky",
+        "authorName": null,
+        "createdAt": "2026-03-27T09:04:20Z",
+        "updatedAt": "2026-03-27T09:04:20Z",
+        "headSha": "06ff423a038e0bf11a12d66fa69a0a72de5c1cbc",
+        "headRepo": "TimPietrusky/parameter-golf"
+      },
+      "submissions": [
+        {
+          "id": "pr-945-records-track_10min_16mb-2026-03-27_Order16_FrozenOracle_TTT_0-0274-submission-json",
+          "source": "pull_request",
+          "status": "open",
+          "category": "main-track",
+          "track": {
+            "path": "records/track_10min_16mb",
+            "slug": "track_10min_16mb",
+            "label": "10 Minute / 16MB",
+            "official": true,
+            "category": "main-track"
+          },
+          "record": {
+            "folderName": "2026-03-27_Order16_FrozenOracle_TTT_0.0274",
+            "folderPath": "records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274",
+            "submissionPath": "records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/submission.json",
+            "readmePath": "records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/README.md",
+            "trainLogPath": "records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/train.log",
+            "scriptPath": "records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/train_gpt.py"
+          },
+          "submission": {
+            "author": "Tim Pietrusky",
+            "githubId": "TimPietrusky",
+            "name": "Order-16 Frozen N-gram Oracle + Learned Gate + Complementary Training + TTT",
+            "blurb": "Order-16 n-gram oracle pre-filled from training data with learned per-token per-order mixing gate, complementary training (downweight easy tokens), and score-first TTT with adaptive temperature. Based on PR #925 architecture with NGRAM_MAX_ORDER=16.",
+            "date": "2026-03-27T00:00:00Z"
+          },
+          "metrics": {
+            "valBpb": 0.02742,
+            "valLoss": null,
+            "preQuantValBpb": null,
+            "preQuantValLoss": null,
+            "stepStop": null,
+            "wallclockSeconds": null,
+            "evalTimeSeconds": null
+          },
+          "artifact": {
+            "bytesTotal": null,
+            "bytesCode": null,
+            "bytesModelInt8Zlib": null
+          },
+          "flags": {
+            "usesValOnly": false
+          },
+          "detection": {
+            "valOnlyConfidence": "none",
+            "valOnlyMatches": []
+          },
+          "pr": {
+            "number": 945,
+            "title": "Record: Order-16 Frozen N-gram Oracle + Learned Gate + TTT — val_bpb 0.0274 (3-seed mean)",
+            "state": "open",
+            "draft": false,
+            "mergedAt": null,
+            "htmlUrl": "https://github.com/openai/parameter-golf/pull/945",
+            "authorLogin": "TimPietrusky",
+            "authorName": null,
+            "createdAt": "2026-03-27T09:04:20Z",
+            "updatedAt": "2026-03-27T09:04:20Z",
+            "headSha": "06ff423a038e0bf11a12d66fa69a0a72de5c1cbc",
+            "headRepo": "TimPietrusky/parameter-golf"
+          },
+          "links": {
+            "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/06ff423a038e0bf11a12d66fa69a0a72de5c1cbc/records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/submission.json",
+            "readme": "https://github.com/openai/parameter-golf/blob/06ff423a038e0bf11a12d66fa69a0a72de5c1cbc/records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/README.md",
+            "trainLog": "https://github.com/openai/parameter-golf/blob/06ff423a038e0bf11a12d66fa69a0a72de5c1cbc/records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/train.log",
+            "script": "https://github.com/openai/parameter-golf/blob/06ff423a038e0bf11a12d66fa69a0a72de5c1cbc/records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/train_gpt.py",
+            "folder": "https://github.com/openai/parameter-golf/tree/06ff423a038e0bf11a12d66fa69a0a72de5c1cbc/records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274",
+            "pr": "https://github.com/openai/parameter-golf/pull/945"
           }
         }
       ]

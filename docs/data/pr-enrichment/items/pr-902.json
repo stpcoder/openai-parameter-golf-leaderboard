@@ -1,37 +1,36 @@
 {
-  "generatedAt": "2026-03-26T23:44:16.716Z",
+  "generatedAt": "2026-03-27T09:15:15.005Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 902,
-    "title": "Add classical doc-copy 16.3M lzma submission",
+    "title": "Add classical doc-copy 16.3M skip-gate submission",
     "state": "open",
-    "updatedAt": "2026-03-26T23:33:08Z",
-    "headSha": "b3685af3e8d3b204561fb73165e6d386a391f2ca",
+    "updatedAt": "2026-03-27T09:10:18Z",
+    "headSha": "e9af2934ccf2495dd2773158b5e2f6f15445b87a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/902",
     "authorLogin": "Muhtasham"
   },
   "inputs": {
     "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_lzma_eval/README.md"
+      "records/track_non_record_16mb/2026-03-27_classical_doccopy_16p3m_skipgate_eval/README.md"
     ],
     "submissionCount": 1
   },
   "output": {
-    "summary": "Classical artifact runs a doc-local copy expert atop a discounted hashed 4-gram backoff while packing 10-bit followers with LZMA compression to fit under 16MB.",
+    "summary": "Classical discounted hashed 4-gram backoff uses document-local copy plus sparse skip-copy experts blended with an instantaneous gate.",
     "tags": [
       "architecture",
       "compression",
-      "non-record",
-      "evaluation"
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Document-local copy expert over discounted hashed 4-gram backoff",
-      "Packed 10-bit follower storage with LZMA artifact compression",
-      "Artifact rebuilt and exact eval via saved state"
+      "discounted hashed 4-gram backoff chain",
+      "doc-local copy plus sparse skip-copy experts",
+      "instantaneous gated expert blend"
     ]
   },
   "compatibility": {

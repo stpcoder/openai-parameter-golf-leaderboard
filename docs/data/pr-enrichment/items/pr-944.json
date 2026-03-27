@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-27T09:15:08.978Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 944,
+    "title": "Record: Compliance-First Packed Causal Memory + Dirichlet Mixing — val_bpb 0.01654407 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-27T09:04:24Z",
+    "headSha": "2c6b8082d30626563556fe8f68475a19b888cacd",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/944",
+    "authorLogin": "aamodbhatt"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_ComplianceFirst_PCM_Dirichlet_Phrase_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Packed causal n-gram memory plus Dirichlet-normalized multi-order mixing powers the compliance-first score-first evaluation stack.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Packed causal n-gram memory loaded at evaluation start for strict ordering",
+      "Dirichlet-normalized multi-order mixing with count-confidence gating",
+      "Compliance-first score-first causal evaluation stack respecting runtime/size caps"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

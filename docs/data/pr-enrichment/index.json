@@ -1,8 +1,52 @@
 {
-  "generatedAt": "2026-03-27T08:45:04.926Z",
+  "generatedAt": "2026-03-27T09:15:15.141Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 945,
+      "title": "Record: Order-16 Frozen N-gram Oracle + Learned Gate + TTT — val_bpb 0.0274 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T09:04:20Z",
+      "headSha": "06ff423a038e0bf11a12d66fa69a0a72de5c1cbc",
+      "generatedAt": "2026-03-27T09:15:00.480Z",
+      "summary": "Frozen order-16 n-gram oracle blended by a learned gate, complementary training, and score-first TTT on a compact 11-layer backbone.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-945.json"
+    },
+    {
+      "prNumber": 944,
+      "title": "Record: Compliance-First Packed Causal Memory + Dirichlet Mixing — val_bpb 0.01654407 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-27T09:04:24Z",
+      "headSha": "2c6b8082d30626563556fe8f68475a19b888cacd",
+      "generatedAt": "2026-03-27T09:15:08.978Z",
+      "summary": "Packed causal n-gram memory plus Dirichlet-normalized multi-order mixing powers the compliance-first score-first evaluation stack.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-944.json"
+    },
     {
       "prNumber": 941,
       "title": "submission: LeakyReLU² + EMA + BigramHash(20480) + MLP3.5x",
@@ -725,17 +769,16 @@
     },
     {
       "prNumber": 902,
-      "title": "Add classical doc-copy 16.3M lzma submission",
+      "title": "Add classical doc-copy 16.3M skip-gate submission",
       "status": "open",
-      "updatedAt": "2026-03-26T23:33:08Z",
-      "headSha": "b3685af3e8d3b204561fb73165e6d386a391f2ca",
-      "generatedAt": "2026-03-26T23:44:16.716Z",
-      "summary": "Classical artifact runs a doc-local copy expert atop a discounted hashed 4-gram backoff while packing 10-bit followers with LZMA compression to fit under 16MB.",
+      "updatedAt": "2026-03-27T09:10:18Z",
+      "headSha": "e9af2934ccf2495dd2773158b5e2f6f15445b87a",
+      "generatedAt": "2026-03-27T09:15:15.005Z",
+      "summary": "Classical discounted hashed 4-gram backoff uses document-local copy plus sparse skip-copy experts blended with an instantaneous gate.",
       "tags": [
         "architecture",
         "compression",
-        "non-record",
-        "evaluation"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,

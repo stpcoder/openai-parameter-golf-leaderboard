@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-27T09:15:00.480Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 945,
+    "title": "Record: Order-16 Frozen N-gram Oracle + Learned Gate + TTT — val_bpb 0.0274 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-27T09:04:20Z",
+    "headSha": "06ff423a038e0bf11a12d66fa69a0a72de5c1cbc",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/945",
+    "authorLogin": "TimPietrusky"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-27_Order16_FrozenOracle_TTT_0.0274/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Frozen order-16 n-gram oracle blended by a learned gate, complementary training, and score-first TTT on a compact 11-layer backbone.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Learned multi-expert gating over oracle orders",
+      "Complementary training to focus neural model",
+      "Score-first TTT with adaptive temperature"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
