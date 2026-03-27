@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T06:14:33.101Z",
+  "generatedAt": "2026-03-27T06:44:37.171Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -292,7 +292,7 @@
         "authorLogin": "AnirudhRahul",
         "authorName": null,
         "createdAt": "2026-03-27T04:21:54Z",
-        "updatedAt": "2026-03-27T04:36:00Z",
+        "updatedAt": "2026-03-27T06:40:59Z",
         "headSha": "5e6c5de2aebbe7bf6b9a93e95b08d0c8ab80669d",
         "headRepo": "AnirudhRahul/parameter-golf"
       },
@@ -11801,7 +11801,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-25_11L_ParallelMuon_MLP3x_TTT",
       "source": "pull_request",
-      "status": "closed",
+      "status": "open",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -11849,15 +11849,15 @@
       "pr": {
         "number": 838,
         "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT — val_bpb 1.1215 (3-seed mean)",
-        "state": "closed",
+        "state": "open",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/838",
         "authorLogin": "aryanbhosale",
         "authorName": null,
         "createdAt": "2026-03-26T10:49:25Z",
-        "updatedAt": "2026-03-26T16:27:24Z",
-        "headSha": "5687f3ca15f7437f45821af8cac7e5d2210fe68d",
+        "updatedAt": "2026-03-27T06:31:50Z",
+        "headSha": "26045f3ac998bf848a4dfaa7eb00848bda1a75b8",
         "headRepo": "aryanbhosale/parameter-golf"
       },
       "links": {

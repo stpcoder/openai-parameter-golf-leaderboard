@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-26T16:41:25.505Z",
+  "generatedAt": "2026-03-27T06:44:49.393Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 838,
     "title": "Non-Record: 11L Parallel Muon + LN Scale + LeakyReLU² MLP3x + Legal TTT — val_bpb 1.1215 (3-seed mean)",
-    "state": "closed",
-    "updatedAt": "2026-03-26T16:27:24Z",
-    "headSha": "5687f3ca15f7437f45821af8cac7e5d2210fe68d",
+    "state": "open",
+    "updatedAt": "2026-03-27T06:31:50Z",
+    "headSha": "26045f3ac998bf848a4dfaa7eb00848bda1a75b8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/838",
     "authorLogin": "aryanbhosale"
   },
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Parallel Muon parameter banking pairs depth-scaled LN with LeakyReLU² MLP3x and legal score-first TTT adaptation before GPTQ-lite quantization.",
+    "summary": "Parallel Muon banking with LN-scale layers and LeakyReLU² MLP3x feed a legal score-first TTT workflow that scores sliding-window chunks before SGD fine-tuning.",
     "tags": [
-      "val-only",
       "muon",
-      "architecture",
-      "training-schedule"
+      "quantization",
+      "sliding-window-eval",
+      "optimizer"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "Legal score-first TTT runs SGD adaptation on each validation chunk before scoring, so those weight updates occur solely on the validation shards.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Parallel Muon banking with batched Newton-Schulz synchronization",
-      "Depth-aware LN Scale plus LeakyReLU² MLP3x within gated/XSA attention blocks",
-      "Legal score-first TTT SGD adaptation per 32K chunk prior to GPTQ-lite quantization"
+      "Parameter banking with batched Newton-Schulz optimizer",
+      "Depth-scaled LN plus LeakyReLU(0.5)² MLP3x",
+      "Score-first sliding-window TTT prior to SGD updates"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
