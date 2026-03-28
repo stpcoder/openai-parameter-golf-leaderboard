@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T10:21:32.310Z",
+  "generatedAt": "2026-03-28T10:52:01.128Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1013,
     "title": "Non-record: S4D-Lin SSM Hybrid — Fixing Why Mamba Failed in Parameter…",
     "state": "open",
-    "updatedAt": "2026-03-28T10:16:41Z",
+    "updatedAt": "2026-03-28T10:27:13Z",
     "headSha": "dafde7df4176e836ee936969bc91037ec6142044",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1013",
     "authorLogin": "himanshudongre"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid model swaps Mamba SSM scans for S4D-Lin causal conv1d layers so state-space blocks match transformer throughput before upper attention.",
+    "summary": "Hybrid model replaces the first two layers with S4D-Lin SSM blocks realized via grouped causal F.conv1d, matching transformer throughput without custom kernels.",
     "tags": [
       "architecture",
-      "non-record",
-      "evaluation"
+      "attention",
+      "quantization",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "S4D-Lin causal conv1d SSM block",
-      "Lower-layer SSM plus upper attention hybrid",
-      "Torch.compile-friendly pure PyTorch ops"
+      "S4D-Lin diagonal SSM via grouped causal conv1d",
+      "Hybrid lower-layer SSM with upper-layer attention stack",
+      "Full GPTQ int5 export for compressed evaluation"
     ]
   },
   "compatibility": {

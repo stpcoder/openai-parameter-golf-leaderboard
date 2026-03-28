@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T13:46:37.315Z",
+  "generatedAt": "2026-03-28T10:52:21.936Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
     "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
     "state": "open",
-    "updatedAt": "2026-03-27T13:15:34Z",
-    "headSha": "7fc776c3e40f8fc7c6f253b4d9051f59f8e8ed2d",
+    "updatedAt": "2026-03-28T10:33:33Z",
+    "headSha": "6351d76789ce7bb84df78bd30350ee3f272e11d2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines gated attention/value residual with full-step int6 QAT plus lzma-9 compression to fit a 2048 BigramHash into the 16MB GPTQLite build.",
+    "summary": "Adds gated attention/value residual mixing with full-step QAT, using lzma-9 to restore BigramHash 2048 atop the Parameter Banking + Parallel Muon base.",
     "tags": [
       "architecture",
       "quantization",
-      "compression"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "N/A",
     "techniques": [
-      "GatedAttention with per-head sigmoid gating",
-      "ValueResidual mixing layer-0 value across layers",
-      "Full-step int6 QAT + lzma-9 enabling larger BigramHash"
+      "Gated per-head sigmoid attention gating",
+      "ValueResidual layer-0 value mixing",
+      "Full-run int6 QAT with lzma-9 compression"
     ]
   },
   "compatibility": {

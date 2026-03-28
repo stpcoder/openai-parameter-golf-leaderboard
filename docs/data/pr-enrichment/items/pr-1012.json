@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T10:21:46.483Z",
+  "generatedAt": "2026-03-28T10:52:09.413Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1012,
     "title": "Non-record: JEPA-LM — When Synthetic Success Doesn't Transfer to Real…",
     "state": "open",
-    "updatedAt": "2026-03-28T10:17:14Z",
+    "updatedAt": "2026-03-28T10:27:39Z",
     "headSha": "7f92855470f44c0a9689ea618ccbaed14b2b5cb0",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1012",
     "authorLogin": "himanshudongre"
@@ -19,18 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Uses JEPA EMA target encoder and predictor auxiliary loss in LM training, but representation prediction gains collapse on real text despite synthetic promise.",
+    "summary": "Adds JEPA auxiliary training with EMA target encoder and predictor to augment standard LM loss and probe dense representation signals across data regimes.",
     "tags": [
       "architecture",
-      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "JEPA auxiliary loss with EMA target encoder",
-      "Predictor head for representation prediction alongside CE",
-      "Validation comparison of synthetic Markov vs. real English text"
+      "JEPA EMA target encoder auxiliary loss",
+      "Predictor learns dense representation targets during LM training",
+      "Training-only target encoder discarded at export"
     ]
   },
   "compatibility": {

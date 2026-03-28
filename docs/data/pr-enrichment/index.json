@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T10:21:50.602Z",
+  "generatedAt": "2026-03-28T10:52:21.988Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,14 +7,15 @@
       "prNumber": 1013,
       "title": "Non-record: S4D-Lin SSM Hybrid — Fixing Why Mamba Failed in Parameter…",
       "status": "open",
-      "updatedAt": "2026-03-28T10:16:41Z",
+      "updatedAt": "2026-03-28T10:27:13Z",
       "headSha": "dafde7df4176e836ee936969bc91037ec6142044",
-      "generatedAt": "2026-03-28T10:21:32.310Z",
-      "summary": "Hybrid model swaps Mamba SSM scans for S4D-Lin causal conv1d layers so state-space blocks match transformer throughput before upper attention.",
+      "generatedAt": "2026-03-28T10:52:01.128Z",
+      "summary": "Hybrid model replaces the first two layers with S4D-Lin SSM blocks realized via grouped causal F.conv1d, matching transformer throughput without custom kernels.",
       "tags": [
         "architecture",
-        "non-record",
-        "evaluation"
+        "attention",
+        "quantization",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -30,13 +31,12 @@
       "prNumber": 1012,
       "title": "Non-record: JEPA-LM — When Synthetic Success Doesn't Transfer to Real…",
       "status": "open",
-      "updatedAt": "2026-03-28T10:17:14Z",
+      "updatedAt": "2026-03-28T10:27:39Z",
       "headSha": "7f92855470f44c0a9689ea618ccbaed14b2b5cb0",
-      "generatedAt": "2026-03-28T10:21:46.483Z",
-      "summary": "Uses JEPA EMA target encoder and predictor auxiliary loss in LM training, but representation prediction gains collapse on real text despite synthetic promise.",
+      "generatedAt": "2026-03-28T10:52:09.413Z",
+      "summary": "Adds JEPA auxiliary training with EMA target encoder and predictor to augment standard LM loss and probe dense representation signals across data regimes.",
       "tags": [
         "architecture",
-        "regularization",
         "non-record"
       ],
       "flags": {
@@ -6299,14 +6299,14 @@
       "prNumber": 619,
       "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
       "status": "open",
-      "updatedAt": "2026-03-27T17:27:35Z",
-      "headSha": "90f7aca8d0a7a57c35d9c2b9baea0f6ba92a6cd2",
-      "generatedAt": "2026-03-27T17:47:35.113Z",
-      "summary": "10-layer GPT pairs module-specific int5/int6 quantization with EMA-exported weights and late-stage QAT atop BigramHash tokens for 16MB compliance.",
+      "updatedAt": "2026-03-28T10:40:43Z",
+      "headSha": "53a56294fffdf664554c4cad29145f663a41fe81",
+      "generatedAt": "2026-03-28T10:52:15.405Z",
+      "summary": "10-layer GPT+BigramHash with 3x MLP, mixed int5/int6 quant, EMA export weights, and 15% final-fraction QAT before int8 serialization.",
       "tags": [
         "quantization",
         "architecture",
-        "regularization",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -10690,14 +10690,15 @@
       "prNumber": 347,
       "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
       "status": "open",
-      "updatedAt": "2026-03-27T13:15:34Z",
-      "headSha": "7fc776c3e40f8fc7c6f253b4d9051f59f8e8ed2d",
-      "generatedAt": "2026-03-27T13:46:37.315Z",
-      "summary": "Combines gated attention/value residual with full-step int6 QAT plus lzma-9 compression to fit a 2048 BigramHash into the 16MB GPTQLite build.",
+      "updatedAt": "2026-03-28T10:33:33Z",
+      "headSha": "6351d76789ce7bb84df78bd30350ee3f272e11d2",
+      "generatedAt": "2026-03-28T10:52:21.936Z",
+      "summary": "Adds gated attention/value residual mixing with full-step QAT, using lzma-9 to restore BigramHash 2048 atop the Parameter Banking + Parallel Muon base.",
       "tags": [
         "architecture",
         "quantization",
-        "compression"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
