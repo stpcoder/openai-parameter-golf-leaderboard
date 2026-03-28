@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T02:50:08.786Z",
+  "generatedAt": "2026-03-28T04:50:24.938Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 911,
     "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
     "state": "open",
-    "updatedAt": "2026-03-28T02:43:40Z",
+    "updatedAt": "2026-03-28T04:26:20Z",
     "headSha": "5619522dacbc7e6716567ea9e7bf60a562475e7d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/911",
     "authorLogin": "Akhilesh-Gogikar"
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Ternary U-Net pairs Koopman-driven capsule iterations, adaptive halting, and cross-window memory with Hadamard feedback to squeeze reasoning into ~12MB.",
+    "summary": "Ternary U-Net iterates with Koopman-driven capsule predictions, Hadamard-gated feedback, and sliding-window carry to squeeze reasoning from limited bytes.",
     "tags": [
-      "quantization",
       "architecture",
-      "sliding-window-eval"
+      "quantization",
+      "optimizer",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Koopman capsule dynamics with low-rank prediction",
-      "Adaptive halting plus cross-window capsule carry",
-      "Ternary packing with GPTQ-lite export"
+      "Koopman capsule prediction loop",
+      "Hadamard-gated iterative correction",
+      "Ternary U-Net with TurboQuant export"
     ]
   },
   "compatibility": {

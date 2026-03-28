@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T04:20:29.085Z",
+  "generatedAt": "2026-03-28T04:50:25.065Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -1646,14 +1646,15 @@
       "prNumber": 911,
       "title": "KoopCaps-HRM Ternary Reasoner — Koopman Capsule Dynamics + Adaptive Halting",
       "status": "open",
-      "updatedAt": "2026-03-28T02:43:40Z",
+      "updatedAt": "2026-03-28T04:26:20Z",
       "headSha": "5619522dacbc7e6716567ea9e7bf60a562475e7d",
-      "generatedAt": "2026-03-28T02:50:08.786Z",
-      "summary": "Ternary U-Net pairs Koopman-driven capsule iterations, adaptive halting, and cross-window memory with Hadamard feedback to squeeze reasoning into ~12MB.",
+      "generatedAt": "2026-03-28T04:50:24.938Z",
+      "summary": "Ternary U-Net iterates with Koopman-driven capsule predictions, Hadamard-gated feedback, and sliding-window carry to squeeze reasoning from limited bytes.",
       "tags": [
-        "quantization",
         "architecture",
-        "sliding-window-eval"
+        "quantization",
+        "optimizer",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
