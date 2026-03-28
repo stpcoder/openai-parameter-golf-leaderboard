@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T14:53:11.942Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1025,
+    "title": "non-record: MASA  low-rank shared attention + SwiGLU, 1.3579 BPB",
+    "state": "open",
+    "updatedAt": "2026-03-28T14:51:29Z",
+    "headSha": "2d02d157b44414e070483da0b30826ebec239e6a",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1025",
+    "authorLogin": "Zagot-byte"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-28_MASA_LowRank/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Shared low-rank MASA bases with SwiGLU MLPs and warmdown fix reduce attention params across this 11-layer tiny transformer.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "MASA low-rank shared attention bases with per-layer mix coefficients",
+      "SwiGLU MLP replacing ReLU² for smaller hidden projection",
+      "Warmdown LR decay starting at final 20% of iterations"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

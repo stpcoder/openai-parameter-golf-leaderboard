@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-28T14:23:17.617Z",
+  "generatedAt": "2026-03-28T14:53:25.517Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1025,
+      "title": "non-record: MASA  low-rank shared attention + SwiGLU, 1.3579 BPB",
+      "status": "open",
+      "updatedAt": "2026-03-28T14:51:29Z",
+      "headSha": "2d02d157b44414e070483da0b30826ebec239e6a",
+      "generatedAt": "2026-03-28T14:53:11.942Z",
+      "summary": "Shared low-rank MASA bases with SwiGLU MLPs and warmdown fix reduce attention params across this 11-layer tiny transformer.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1025.json"
+    },
     {
       "prNumber": 1023,
       "title": "Phase 1: Three Optimization Variants",
@@ -683,14 +707,14 @@
       "prNumber": 986,
       "title": "Record: Packed N-gram + Two-Pass   Dirichlet CTW — val_bpb 0.0830 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-28T13:12:05Z",
+      "updatedAt": "2026-03-28T14:24:03Z",
       "headSha": "1c70fa129218ea7107a314c465c74588a1af7b9f",
-      "generatedAt": "2026-03-28T13:22:56.463Z",
-      "summary": "Packed order-2-13 n-gram artifact with two-pass rescore and hierarchical Dirichlet CTW mixing lets a warmed cache shoulder most probability work.",
+      "generatedAt": "2026-03-28T14:53:18.291Z",
+      "summary": "Prebuilt packed n-gram artifact, two-pass sliding-window eval, and hierarchical Dirichlet CTW mixing keep scoring dominated by cached statistics.",
       "tags": [
+        "architecture",
         "compression",
-        "evaluation",
-        "architecture"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -8816,14 +8840,14 @@
       "prNumber": 468,
       "title": "[track_10min_16mb] utkuaydiin 10L Muon — 15.46 MB",
       "status": "open",
-      "updatedAt": "2026-03-22T22:47:54Z",
-      "headSha": "4efe439325462000f51e675bfc2a8c412752e8ae",
-      "generatedAt": "2026-03-22T23:13:14.448Z",
-      "summary": "10-layer Muon model pairs BigramHash/SmearGate with Muon+AdamW+SWA and Int5/Int6 PTQ for a 15MB run on FineWeb data.",
+      "updatedAt": "2026-03-28T14:35:48Z",
+      "headSha": "84a2f386320245f46f129d99fe93c07d44f837ee",
+      "generatedAt": "2026-03-28T14:53:25.444Z",
+      "summary": "10-layer 448-dim Muon model with BigramHash+SmearGate, Muon+AdamW hybrid with SWA, global pruning and mixed Int5/Int6 PTQ.",
       "tags": [
-        "muon",
-        "quantization",
         "architecture",
+        "optimizer",
+        "quantization",
         "training-schedule"
       ],
       "flags": {
