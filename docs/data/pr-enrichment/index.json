@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-03-28T20:54:55.739Z",
+  "generatedAt": "2026-03-28T21:25:13.991Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1037,
+      "title": "Record: Muon TTT + Entropy-Adaptive Epochs — val_bpb 1.1179 (3-seed mean)",
+      "status": "closed",
+      "updatedAt": "2026-03-28T21:00:11Z",
+      "headSha": "180e457d886c4abbc56d8414846a4d9c42ee4f10",
+      "generatedAt": "2026-03-28T21:25:02.934Z",
+      "summary": "Combines Muon-style legal test-time training with entropy-adaptive epochs on an 11L GQA model plus GPTQ quantization and pruning.",
+      "tags": [
+        "muon",
+        "optimizer",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1037.json"
+    },
     {
       "prNumber": 1036,
       "title": "Non-record: AutoResearch Batch Optimization — 1.1974 bpb (1× RTX 4090)",
@@ -2739,10 +2763,10 @@
       "prNumber": 875,
       "title": "New Record: Pure Neural GDN 1.0226 BPB (shalyhinpavel)",
       "status": "open",
-      "updatedAt": "2026-03-28T08:01:24Z",
+      "updatedAt": "2026-03-28T21:08:51Z",
       "headSha": "90d5115e4071a2538e05dafeb6e97c9490d0afe8",
-      "generatedAt": "2026-03-28T08:21:43.790Z",
-      "summary": "Gated DeltaNet layers, FastLoader, and a dynamic batch curriculum paired with fused AdamW keep this pure neural build within the 16MB/10min regime while pushing zero-shot BPB.",
+      "generatedAt": "2026-03-28T21:25:07.929Z",
+      "summary": "Uses a Gated DeltaNet stack with a final attention layer, FastLoader, and a dynamic batch+chunk curriculum to push pure-neural zero-shot BPB to 1.0226.",
       "tags": [
         "architecture",
         "training-schedule",
@@ -2940,13 +2964,13 @@
       "prNumber": 861,
       "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
       "status": "open",
-      "updatedAt": "2026-03-27T07:34:37Z",
+      "updatedAt": "2026-03-28T21:12:45Z",
       "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
-      "generatedAt": "2026-03-27T07:44:59.476Z",
-      "summary": "11L U-Net GPT couples Int5 per-row QAT with score-first TTT on MLP params plus bigram hash embeddings and XSA layers for compact compression.",
+      "generatedAt": "2026-03-28T21:25:13.867Z",
+      "summary": "11L U-Net pairs Muon+AdamW with Int5 QAT/pruning and score-first TTT plus bigram hashing to squeeze under 16MB.",
       "tags": [
         "quantization",
-        "attention",
+        "optimizer",
         "architecture",
         "training-schedule"
       ],

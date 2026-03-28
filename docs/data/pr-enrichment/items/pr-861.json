@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-27T07:44:59.476Z",
+  "generatedAt": "2026-03-28T21:25:13.867Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 861,
     "title": "Non-record: 11L Int5 QAT + Score-First TTT — val_bpb 1.1326 (15.51 MB)",
     "state": "open",
-    "updatedAt": "2026-03-27T07:34:37Z",
+    "updatedAt": "2026-03-28T21:12:45Z",
     "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/861",
     "authorLogin": "JoeProAI"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11L U-Net GPT couples Int5 per-row QAT with score-first TTT on MLP params plus bigram hash embeddings and XSA layers for compact compression.",
+    "summary": "11L U-Net pairs Muon+AdamW with Int5 QAT/pruning and score-first TTT plus bigram hashing to squeeze under 16MB.",
     "tags": [
       "quantization",
-      "attention",
+      "optimizer",
       "architecture",
       "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Int5 per-row QAT with pruning and warmdown",
-      "Score-first TTT adapting MLP params via AdamW",
-      "Bigram hash embeddings plus XSA across the U-Net"
+      "Int5 per-row QAT with pre-quant pruning and extended warmdown",
+      "Score-first TTT on MLP params using AdamW",
+      "Bigram hash embeddings plus cross-layer shared attention in U-Net"
     ]
   },
   "compatibility": {

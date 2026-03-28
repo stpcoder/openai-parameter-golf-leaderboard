@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T20:54:45.965Z",
+  "generatedAt": "2026-03-28T21:24:57.161Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -6309,7 +6309,7 @@
         "authorLogin": "shalyhinpavel",
         "authorName": null,
         "createdAt": "2026-03-26T17:45:18Z",
-        "updatedAt": "2026-03-28T08:01:24Z",
+        "updatedAt": "2026-03-28T21:08:51Z",
         "headSha": "90d5115e4071a2538e05dafeb6e97c9490d0afe8",
         "headRepo": "shalyhinpavel/parameter-golf"
       },
@@ -15401,7 +15401,7 @@
         "authorLogin": "JoeProAI",
         "authorName": null,
         "createdAt": "2026-03-26T15:58:39Z",
-        "updatedAt": "2026-03-27T07:34:37Z",
+        "updatedAt": "2026-03-28T21:12:45Z",
         "headSha": "28d45d26f58981b4e4c94acf8748cc38e1d3a93a",
         "headRepo": "JoeProAI/parameter-golf"
       },
@@ -44600,6 +44600,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/381ece0b8f6f876cdea2b10e3e411d12d9ea8010/records/track_10min_16mb/2026-03-XX_DepthRecurrence_eb1386",
         "pr": "https://github.com/openai/parameter-golf/pull/449",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-28_MuonTTT_EntropyAdaptive_1-1179",
+      "source": "pull_request",
+      "status": "closed",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_MuonTTT_EntropyAdaptive_1.1179",
+        "folderPath": "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/train_gpt.py"
+      },
+      "submission": {
+        "author": "TimPietruskyRunPod",
+        "githubId": "TimPietruskyRunPod",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-28T20:59:23Z"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": 595
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1037,
+        "title": "Record: Muon TTT + Entropy-Adaptive Epochs — val_bpb 1.1179 (3-seed mean)",
+        "state": "closed",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1037",
+        "authorLogin": "TimPietruskyRunPod",
+        "authorName": null,
+        "createdAt": "2026-03-28T20:59:23Z",
+        "updatedAt": "2026-03-28T21:00:11Z",
+        "headSha": "180e457d886c4abbc56d8414846a4d9c42ee4f10",
+        "headRepo": "TimPietruskyRunPod/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/180e457d886c4abbc56d8414846a4d9c42ee4f10/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/180e457d886c4abbc56d8414846a4d9c42ee4f10/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/180e457d886c4abbc56d8414846a4d9c42ee4f10/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/180e457d886c4abbc56d8414846a4d9c42ee4f10/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/180e457d886c4abbc56d8414846a4d9c42ee4f10/records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179",
+        "pr": "https://github.com/openai/parameter-golf/pull/1037",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

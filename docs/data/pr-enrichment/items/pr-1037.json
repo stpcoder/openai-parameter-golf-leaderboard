@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-28T21:25:02.934Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1037,
+    "title": "Record: Muon TTT + Entropy-Adaptive Epochs — val_bpb 1.1179 (3-seed mean)",
+    "state": "closed",
+    "updatedAt": "2026-03-28T21:00:11Z",
+    "headSha": "180e457d886c4abbc56d8414846a4d9c42ee4f10",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1037",
+    "authorLogin": "TimPietruskyRunPod"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_MuonTTT_EntropyAdaptive_1.1179/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines Muon-style legal test-time training with entropy-adaptive epochs on an 11L GQA model plus GPTQ quantization and pruning.",
+    "tags": [
+      "muon",
+      "optimizer",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Muon TTT with Newton-Schulz orthogonalized updates",
+      "Entropy-adaptive epochs guided by chunk NLL",
+      "Int6 GPTQ+LZMA with CROWN-Q warmdown and 4% pruning"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

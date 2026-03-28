@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T08:21:43.790Z",
+  "generatedAt": "2026-03-28T21:25:07.929Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 875,
     "title": "New Record: Pure Neural GDN 1.0226 BPB (shalyhinpavel)",
     "state": "open",
-    "updatedAt": "2026-03-28T08:01:24Z",
+    "updatedAt": "2026-03-28T21:08:51Z",
     "headSha": "90d5115e4071a2538e05dafeb6e97c9490d0afe8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/875",
     "authorLogin": "shalyhinpavel"
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Gated DeltaNet layers, FastLoader, and a dynamic batch curriculum paired with fused AdamW keep this pure neural build within the 16MB/10min regime while pushing zero-shot BPB.",
+    "summary": "Uses a Gated DeltaNet stack with a final attention layer, FastLoader, and a dynamic batch+chunk curriculum to push pure-neural zero-shot BPB to 1.0226.",
     "tags": [
       "architecture",
       "training-schedule",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Gated DeltaNet stack with final attention to compactly model token dynamics",
-      "FastLoader prefetching plus batch-size curriculum to sustain GPU throughput",
-      "Fused AdamW with TF32 enabled for stable, high-rate updates"
+      "Gated DeltaNet layers capped by a final attention head",
+      "Time-aware global batch/chunk curriculum for rapid convergence",
+      "FastLoader with pinned, non-blocking prefetching"
     ]
   },
   "compatibility": {
