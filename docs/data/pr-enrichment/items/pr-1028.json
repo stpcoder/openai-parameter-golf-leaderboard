@@ -1,26 +1,25 @@
 {
-  "generatedAt": "2026-03-28T23:25:55.916Z",
+  "generatedAt": "2026-03-28T23:56:02.086Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1028,
     "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
     "state": "open",
-    "updatedAt": "2026-03-28T23:12:50Z",
-    "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
+    "updatedAt": "2026-03-28T23:53:01Z",
+    "headSha": "37df3009ba811f4cfc35a815057d7b7df925b5a2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1028",
     "authorLogin": "newjordan"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-26_XWING_Cubric3D_complementary_8xH100/README.md",
       "records/track_10min_16mb/2026-03-27_Medusa_FLA_DeltaNet_NaiveInt6_8xH100/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Medusa embeds canonical 4-head DeltaNet chunk updates inside a 4-flat+1-crawler Frugendorff loop stack with loop-aware GPTQ and late-start EMA.",
+    "summary": "Medusa layers FLA DeltaNet chunk_delta_rule across a 4-loop Frugendorff crawler, adds loop-aware two-phase GPTQ and late-start EMA to tame stability issues.",
     "tags": [
       "architecture",
       "quantization",
@@ -29,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "DeltaNet chunk_delta_rule inside Frugendorff 4-flat+1-crawler loops",
-      "Loop-aware two-phase GPTQ calibrating flat then crawler Hessians",
-      "Late-start EMA reinitialized at warmdown onset with SWA cadence"
+      "DeltaNet chunk_delta_rule inside crawler loops",
+      "Loop-aware two-phase GPTQ for flat vs crawler layers",
+      "Late-start EMA reset at warmdown onset"
     ]
   },
   "compatibility": {

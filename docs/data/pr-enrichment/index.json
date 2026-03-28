@@ -1,16 +1,40 @@
 {
-  "generatedAt": "2026-03-28T23:25:59.837Z",
+  "generatedAt": "2026-03-28T23:56:09.121Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1045,
+      "title": "[Non-Record] XSA-all-layers + VRL + bigram3072 + lzma9 — 1.1509 bpb, AdamW TTT findings",
+      "status": "open",
+      "updatedAt": "2026-03-28T23:53:51Z",
+      "headSha": "6a63de5ea8c97194652864996642318a8b28a45a",
+      "generatedAt": "2026-03-28T23:55:53.856Z",
+      "summary": "11-layer d512 stack uses cross-attention on every layer, VRL, bigram3072, int6 QAT with lzma9, and finds AdamW TTT lr0.002 regresses.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1045.json"
+    },
+    {
       "prNumber": 1044,
       "title": "H-Net: First Learned Byte-Level Tokenization (README Wishlist) -- 1.90 BPB, 22M params",
       "status": "open",
-      "updatedAt": "2026-03-28T23:22:19Z",
-      "headSha": "c3aef4c3939ace46a77253de158f0aa05f9c977a",
-      "generatedAt": "2026-03-28T23:25:41.269Z",
-      "summary": "Dynamic byte chunking gate segments raw bytes, feeding compressed chunks through a transformer with pure-PyTorch depthwise conv encoder/decoder.",
+      "updatedAt": "2026-03-28T23:37:59Z",
+      "headSha": "fa73971aa0107a1bc92e07f130fa4c475bf026cf",
+      "generatedAt": "2026-03-28T23:55:58.476Z",
+      "summary": "Tiny H-Net sidesteps BPE by learning byte chunk boundaries via cosine-gated STE chunking and processing compressed chunks with a compact transformer.",
       "tags": [
         "tokenization",
         "architecture",
@@ -353,10 +377,10 @@
       "prNumber": 1028,
       "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
       "status": "open",
-      "updatedAt": "2026-03-28T23:12:50Z",
-      "headSha": "5f731b386f760ece37b4d4f0fb15cc7332c73b73",
-      "generatedAt": "2026-03-28T23:25:55.916Z",
-      "summary": "Medusa embeds canonical 4-head DeltaNet chunk updates inside a 4-flat+1-crawler Frugendorff loop stack with loop-aware GPTQ and late-start EMA.",
+      "updatedAt": "2026-03-28T23:53:01Z",
+      "headSha": "37df3009ba811f4cfc35a815057d7b7df925b5a2",
+      "generatedAt": "2026-03-28T23:56:02.086Z",
+      "summary": "Medusa layers FLA DeltaNet chunk_delta_rule across a 4-loop Frugendorff crawler, adds loop-aware two-phase GPTQ and late-start EMA to tame stability issues.",
       "tags": [
         "architecture",
         "quantization",
@@ -1051,6 +1075,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-992.json"
+    },
+    {
+      "prNumber": 990,
+      "title": "ClownCar: Frugendorff compression baseline + canonical DeltaNet integration",
+      "status": "open",
+      "updatedAt": "2026-03-28T13:33:49Z",
+      "headSha": "90741b4c55ca0a0d0f79056dec29da64d7636491",
+      "generatedAt": "2026-03-28T23:56:08.976Z",
+      "summary": "ClownCar loops a Frugendorff crawler block 4× to trade depth for width while wiring in canonical DeltaNet kernels for a compact 13M transformer.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-990.json"
     },
     {
       "prNumber": 989,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-28T13:53:01.937Z",
+  "generatedAt": "2026-03-28T23:56:08.976Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "ClownCar reuses a shared Frugendorff crawler with DeltaNet kernels and int8-aware tweaks to trade depth for width in a compression-focused tiny model.",
+    "summary": "ClownCar loops a Frugendorff crawler block 4× to trade depth for width while wiring in canonical DeltaNet kernels for a compact 13M transformer.",
     "tags": [
       "architecture",
       "quantization",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Weight-shared Frugendorff crawler looping with loop-conditioned flow instructions",
-      "Canonical DeltaNet kernels replacing Python chunks",
-      "Int8-aware crawler quant mode for shared-weight resilience"
+      "Shared Frugendorff crawler block executed across four loops with state-conditioned flow instructions",
+      "Canonical DeltaNet + chunk_delta_rule kernels to cut Python loop overhead",
+      "Crawler-specific INT8 mode to stabilize shared weights during post-processing"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T23:25:41.269Z",
+  "generatedAt": "2026-03-28T23:55:58.476Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1044,
     "title": "H-Net: First Learned Byte-Level Tokenization (README Wishlist) -- 1.90 BPB, 22M params",
     "state": "open",
-    "updatedAt": "2026-03-28T23:22:19Z",
-    "headSha": "c3aef4c3939ace46a77253de158f0aa05f9c977a",
+    "updatedAt": "2026-03-28T23:37:59Z",
+    "headSha": "fa73971aa0107a1bc92e07f130fa4c475bf026cf",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1044",
     "authorLogin": "greqone"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Dynamic byte chunking gate segments raw bytes, feeding compressed chunks through a transformer with pure-PyTorch depthwise conv encoder/decoder.",
+    "summary": "Tiny H-Net sidesteps BPE by learning byte chunk boundaries via cosine-gated STE chunking and processing compressed chunks with a compact transformer.",
     "tags": [
       "tokenization",
       "architecture",
@@ -27,11 +27,11 @@
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Standard training plus validation evaluation; no val-only training regime.",
     "techniques": [
-      "Byte-level dynamic chunking via cosine similarity + STE gate",
-      "ChunkLayer/DeChunkLayer vectorized with cumsum scattering",
-      "Depthwise causal Conv1d encoder/decoder replacing SSM"
+      "Byte-level cosine-sim chunk gate with STE",
+      "Depthwise causal conv encoder/decoder in place of SSM",
+      "Vectorized chunk/dechunk with EMA expansion"
     ]
   },
   "compatibility": {
