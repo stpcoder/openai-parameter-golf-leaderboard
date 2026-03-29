@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T11:59:01.232Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1070,
+    "title": "Non-record: Aweb Ultimate — 1.1190 BPB (10min 8×H100, independent PR #549 reproduction)",
+    "state": "open",
+    "updatedAt": "2026-03-29T11:31:02Z",
+    "headSha": "ba57dd8d712b551b494190b3aacd17ab40af17ca",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1070",
+    "authorLogin": "manfromnowhere143"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-29_AwebUltimate_1.1190/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Recreates SOTA stack: 11L 512d LeakyReLU² net with late XSA, partial RoPE, LN scale, EMA+SWA, Parallel Muon, GPTQ-lite quant, and Legal Score-First TTT.",
+    "tags": [
+      "architecture",
+      "attention",
+      "optimizer",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- 11L 512d LeakyReLU² transformer with late-layer XSA, partial RoPE, and LN scaling",
+      "- Parallel Muon optimizer with EMA/SWA and Legal Score-First TTT training",
+      "- GPTQ-lite int6/int8 quantization plus compression for compact artifact"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

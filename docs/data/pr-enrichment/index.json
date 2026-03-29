@@ -1,8 +1,102 @@
 {
-  "generatedAt": "2026-03-29T11:28:38.179Z",
+  "generatedAt": "2026-03-29T11:59:01.396Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1073,
+      "title": "Non-record: Deep Supervision on M4 MacBook",
+      "status": "open",
+      "updatedAt": "2026-03-29T11:56:39Z",
+      "headSha": "fc4bed02669b61cf06b3d2ad59734f9b946998a2",
+      "generatedAt": "2026-03-29T11:58:32.818Z",
+      "summary": "Adds deep supervision loss at the U-Net encoder-decoder boundary and studies its weight/batch-size interaction, finding 0.03 regularizes small batches.",
+      "tags": [
+        "architecture",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1073.json"
+    },
+    {
+      "prNumber": 1072,
+      "title": "Record: Fused LeakyReLU² + Online GPTQ + Parallel Muon — val_bpb 1.117 (1-seed)",
+      "status": "open",
+      "updatedAt": "2026-03-29T11:34:17Z",
+      "headSha": "0561eb8d0dbddbcfa97e871f52032eeeb9ec1d93",
+      "generatedAt": "2026-03-29T11:58:38.972Z",
+      "summary": "Fuses Triton LeakyReLU² MLP kernel, online Hessian GPTQ, and selective ±1 pruning with Parallel Muon to hit the 16MB budget.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1072.json"
+    },
+    {
+      "prNumber": 1071,
+      "title": "Non-record: Reproduction of SOTA #1 (SmearGate+BigramHash+Int6+SWA) on RunPod 8xH100",
+      "status": "open",
+      "updatedAt": "2026-03-29T11:31:05Z",
+      "headSha": "7f3ecabc747152a25ba526f447c23770010356e0",
+      "generatedAt": "2026-03-29T11:58:44.507Z",
+      "summary": "Reproduced Int6 MLP3x SmearGate+BigramHash+Muon+SWA config on 8xH100, mirroring the original SOTA architecture and quantization pipeline.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1071.json"
+    },
+    {
+      "prNumber": 1070,
+      "title": "Non-record: Aweb Ultimate — 1.1190 BPB (10min 8×H100, independent PR #549 reproduction)",
+      "status": "open",
+      "updatedAt": "2026-03-29T11:31:02Z",
+      "headSha": "ba57dd8d712b551b494190b3aacd17ab40af17ca",
+      "generatedAt": "2026-03-29T11:59:01.232Z",
+      "summary": "Recreates SOTA stack: 11L 512d LeakyReLU² net with late XSA, partial RoPE, LN scale, EMA+SWA, Parallel Muon, GPTQ-lite quant, and Legal Score-First TTT.",
+      "tags": [
+        "architecture",
+        "attention",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1070.json"
+    },
     {
       "prNumber": 1067,
       "title": "BSM (Bounded State Manifold) - A box intersection non-transformer architecture, 1.4242 val BPB",

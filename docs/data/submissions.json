@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T11:28:22.444Z",
+  "generatedAt": "2026-03-29T11:58:25.764Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10647,6 +10647,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon",
+        "folderPath": "records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/train_gpt.py"
+      },
+      "submission": {
+        "author": "Vilhelm Toivonen",
+        "githubId": "vimeto",
+        "name": "Fused LeakyReLU² + Online GPTQ + Parallel Muon",
+        "blurb": "11L/512d with fused Triton LeakyReLU(0.5)² MLP kernel (70ms/step → 33% more training steps), online Hessian GPTQ during training, Parallel Muon with parameter banking, XSA on all layers, INT6+LZMA with selective ±1 pruning. No TTT.",
+        "date": "2026-03-29"
+      },
+      "metrics": {
+        "valBpb": 1.117,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15948723,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1072,
+        "title": "Record: Fused LeakyReLU² + Online GPTQ + Parallel Muon — val_bpb 1.117 (1-seed)",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1072",
+        "authorLogin": "vimeto",
+        "authorName": null,
+        "createdAt": "2026-03-29T11:34:17Z",
+        "updatedAt": "2026-03-29T11:34:17Z",
+        "headSha": "0561eb8d0dbddbcfa97e871f52032eeeb9ec1d93",
+        "headRepo": "vimeto/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0561eb8d0dbddbcfa97e871f52032eeeb9ec1d93/records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/0561eb8d0dbddbcfa97e871f52032eeeb9ec1d93/records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/0561eb8d0dbddbcfa97e871f52032eeeb9ec1d93/records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/0561eb8d0dbddbcfa97e871f52032eeeb9ec1d93/records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/0561eb8d0dbddbcfa97e871f52032eeeb9ec1d93/records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon",
+        "pr": "https://github.com/openai/parameter-golf/pull/1072",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-25_PR703_Curriculum_Carryover_1-1171",
       "source": "pull_request",
       "status": "open",
@@ -12158,17 +12235,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 181,
-        "title": "1.1190 BPB — 11L LeakyReLU² XSA4 PartialRoPE LNScale EMA ParallelMuon TTT",
+        "number": 1070,
+        "title": "Non-record: Aweb Ultimate — 1.1190 BPB (10min 8×H100, independent PR #549 reproduction)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1070",
         "authorLogin": "manfromnowhere143",
         "authorName": null,
-        "createdAt": "2026-03-20T06:55:29Z",
-        "updatedAt": "2026-03-29T11:27:46Z",
-        "headSha": "fd61c130250c01264bec672fc6707542c38c2ee7",
+        "createdAt": "2026-03-29T11:31:02Z",
+        "updatedAt": "2026-03-29T11:31:02Z",
+        "headSha": "ba57dd8d712b551b494190b3aacd17ab40af17ca",
         "headRepo": "manfromnowhere143/parameter-golf"
       },
       "links": {
@@ -12177,7 +12254,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/fd61c130250c01264bec672fc6707542c38c2ee7/records/track_non_record_16mb/2026-03-29_AwebUltimate_1.1190/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/fd61c130250c01264bec672fc6707542c38c2ee7/records/track_non_record_16mb/2026-03-29_AwebUltimate_1.1190/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/fd61c130250c01264bec672fc6707542c38c2ee7/records/track_non_record_16mb/2026-03-29_AwebUltimate_1.1190",
-        "pr": "https://github.com/openai/parameter-golf/pull/181",
+        "pr": "https://github.com/openai/parameter-golf/pull/1070",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -19570,6 +19647,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/2f25412ebb4fc7163d6d13b1b8aa04eb8a1ee163/records/track_10min_16mb/2026-03-26_ProgressiveDepth_HedgeMixer",
         "pr": "https://github.com/openai/parameter-golf/pull/895",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA",
+        "folderPath": "records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA",
+        "submissionPath": "records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/train_gpt.py"
+      },
+      "submission": {
+        "author": "Abhay Anand",
+        "githubId": "AbhayAnandUCSD",
+        "name": "Reproduction of SOTA #1: Int6 MLP3x SmearGate BigramHash MuonWD SWA",
+        "blurb": "Non-record reproduction of the March 20 SOTA submission on RunPod 8xH100 SXM. Verified reproducibility of SmearGate + BigramHash + int6 QAT + 3x MLP + Muon WD + SWA approach. Achieved 1.1455 val_bpb matching published 1.1458.",
+        "date": "2026-03-29T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.14550307,
+        "valLoss": 1.93412882,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": 7365,
+        "wallclockSeconds": 600,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15884914,
+        "bytesCode": 52243,
+        "bytesModelInt8Zlib": 15832671
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1071,
+        "title": "Non-record: Reproduction of SOTA #1 (SmearGate+BigramHash+Int6+SWA) on RunPod 8xH100",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1071",
+        "authorLogin": "AbhayAnandUCSD",
+        "authorName": null,
+        "createdAt": "2026-03-29T11:31:05Z",
+        "updatedAt": "2026-03-29T11:31:05Z",
+        "headSha": "7f3ecabc747152a25ba526f447c23770010356e0",
+        "headRepo": "AbhayAnandUCSD/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/7f3ecabc747152a25ba526f447c23770010356e0/records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/7f3ecabc747152a25ba526f447c23770010356e0/records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/7f3ecabc747152a25ba526f447c23770010356e0/records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/7f3ecabc747152a25ba526f447c23770010356e0/records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/7f3ecabc747152a25ba526f447c23770010356e0/records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1071",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -42516,6 +42670,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/b2bcd556fea04e49b01a43f0644bcbc1143fc451/records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_7x512_KV2_500steps/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/b2bcd556fea04e49b01a43f0644bcbc1143fc451/records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_7x512_KV2_500steps",
         "pr": "https://github.com/openai/parameter-golf/pull/240",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+        "folderPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+        "submissionPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train_gpt.py"
+      },
+      "submission": {
+        "author": "Rana Usman",
+        "githubId": "ranausmanai",
+        "name": "Deep Supervision + Batch Scaling (M4 MacBook)",
+        "blurb": "Non-record M4 MacBook submission: 16 experiments exploring deep supervision at the U-Net encoder-decoder boundary. Found optimal weight=0.03 gives -0.05 BPB at small batch, but effect disappears at large batch sizes. Novel technique not explored by other competitors.",
+        "date": "2026-03-29T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.6668,
+        "valLoss": 2.8143,
+        "preQuantValBpb": 1.6611,
+        "preQuantValLoss": 2.8047,
+        "stepStop": 300,
+        "wallclockSeconds": 4315,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 9815427,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": 9815427
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1073,
+        "title": "Non-record: Deep Supervision on M4 MacBook",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1073",
+        "authorLogin": "ranausmanai",
+        "authorName": null,
+        "createdAt": "2026-03-29T11:50:49Z",
+        "updatedAt": "2026-03-29T11:56:39Z",
+        "headSha": "fc4bed02669b61cf06b3d2ad59734f9b946998a2",
+        "headRepo": "ranausmanai/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/fc4bed02669b61cf06b3d2ad59734f9b946998a2/records/track_non_record_16mb/2026-03-29_DeepSupervision_BatchScaling_M4MacBook",
+        "pr": "https://github.com/openai/parameter-golf/pull/1073",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

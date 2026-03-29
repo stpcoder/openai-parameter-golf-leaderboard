@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T11:58:38.972Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1072,
+    "title": "Record: Fused LeakyReLU² + Online GPTQ + Parallel Muon — val_bpb 1.117 (1-seed)",
+    "state": "open",
+    "updatedAt": "2026-03-29T11:34:17Z",
+    "headSha": "0561eb8d0dbddbcfa97e871f52032eeeb9ec1d93",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1072",
+    "authorLogin": "vimeto"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_FusedLeakyReLU_OnlineGPTQ_ParallelMuon/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Fuses Triton LeakyReLU² MLP kernel, online Hessian GPTQ, and selective ±1 pruning with Parallel Muon to hit the 16MB budget.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Normal training plus sliding-window evaluation; no val-only training.",
+    "techniques": [
+      "Fused Triton LeakyReLU² MLP kernel for 33% faster steps",
+      "Online Hessian GPTQ accumulation every 25 steps",
+      "Selective ±1 pruning post-INT6 for artifact sizing"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

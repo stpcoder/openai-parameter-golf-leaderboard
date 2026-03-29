@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T11:58:44.507Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1071,
+    "title": "Non-record: Reproduction of SOTA #1 (SmearGate+BigramHash+Int6+SWA) on RunPod 8xH100",
+    "state": "open",
+    "updatedAt": "2026-03-29T11:31:05Z",
+    "headSha": "7f3ecabc747152a25ba526f447c23770010356e0",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1071",
+    "authorLogin": "AbhayAnandUCSD"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-29_ReproSOTA1_SmearGate_BigramHash_Int6_SWA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Reproduced Int6 MLP3x SmearGate+BigramHash+Muon+SWA config on 8xH100, mirroring the original SOTA architecture and quantization pipeline.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SmearGate + BigramHash embeddings with 3x MLP and GQA heads",
+      "Int6 per-row quantization paired with zstd-22 compression",
+      "Muon optimizer with WD 0.04 and SWA averaging during warmdown"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
