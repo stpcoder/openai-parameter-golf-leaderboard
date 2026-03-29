@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T20:01:06.882Z",
+  "generatedAt": "2026-03-29T20:31:04.939Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -2913,7 +2913,7 @@
         "authorLogin": "michaelwinczuk",
         "authorName": null,
         "createdAt": "2026-03-29T19:53:40Z",
-        "updatedAt": "2026-03-29T19:58:07Z",
+        "updatedAt": "2026-03-29T20:02:36Z",
         "headSha": "6f5e8076af09635ae79c1a9546b4fe68241bada5",
         "headRepo": "michaelwinczuk/parameter-golf"
       },
@@ -47669,16 +47669,16 @@
         "authorLogin": "MichaelMcCulloch",
         "authorName": null,
         "createdAt": "2026-03-29T18:22:17Z",
-        "updatedAt": "2026-03-29T19:46:57Z",
-        "headSha": "a2df0f1eef53cf693507eb39814b5727ac051ced",
+        "updatedAt": "2026-03-29T20:14:29Z",
+        "headSha": "f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5",
         "headRepo": "MichaelMcCulloch/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a2df0f1eef53cf693507eb39814b5727ac051ced/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/a2df0f1eef53cf693507eb39814b5727ac051ced/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/a2df0f1eef53cf693507eb39814b5727ac051ced/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/a2df0f1eef53cf693507eb39814b5727ac051ced/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/a2df0f1eef53cf693507eb39814b5727ac051ced/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant",
         "pr": "https://github.com/openai/parameter-golf/pull/1091",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -48670,16 +48670,16 @@
         "authorLogin": "mikeapedia",
         "authorName": null,
         "createdAt": "2026-03-29T18:10:07Z",
-        "updatedAt": "2026-03-29T18:10:07Z",
-        "headSha": "4f04effff036c937afe458a910b349530fca81c1",
+        "updatedAt": "2026-03-29T20:01:21Z",
+        "headSha": "ccf677b1f1f64baf6ceda30a3d74961e30ba82bb",
         "headRepo": "mikeapedia/parameter-golf-1"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4f04effff036c937afe458a910b349530fca81c1/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/4f04effff036c937afe458a910b349530fca81c1/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/4f04effff036c937afe458a910b349530fca81c1/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/4f04effff036c937afe458a910b349530fca81c1/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/4f04effff036c937afe458a910b349530fca81c1/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ccf677b1f1f64baf6ceda30a3d74961e30ba82bb/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ccf677b1f1f64baf6ceda30a3d74961e30ba82bb/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ccf677b1f1f64baf6ceda30a3d74961e30ba82bb/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ccf677b1f1f64baf6ceda30a3d74961e30ba82bb/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ccf677b1f1f64baf6ceda30a3d74961e30ba82bb/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
         "pr": "https://github.com/openai/parameter-golf/pull/1089",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

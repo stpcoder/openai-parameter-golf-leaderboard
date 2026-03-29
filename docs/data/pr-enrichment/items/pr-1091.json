@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T20:01:16.790Z",
+  "generatedAt": "2026-03-29T20:31:18.022Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1091,
     "title": "The Kitchen Sink",
     "state": "open",
-    "updatedAt": "2026-03-29T19:46:57Z",
-    "headSha": "a2df0f1eef53cf693507eb39814b5727ac051ced",
+    "updatedAt": "2026-03-29T20:14:29Z",
+    "headSha": "f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1091",
     "authorLogin": "MichaelMcCulloch"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Unified train_gpt.py toggles 26 env-variable options for hybrid architecture choices, quantization/compression, and TTT+cache eval augmentations.",
+    "summary": "Unified env-gated script layering architecture tweaks, training regularizers, quant/compression, and eval-time TTT/kNN/TurboQuant augmentations.",
     "tags": [
       "architecture",
-      "training-schedule",
       "quantization",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Hybrid activation/norm/MLP/attention toggles",
-      "Quantization/compression pipeline with QAT, GPTQ, OptRot, pruning",
-      "Eval-time TTT with n-gram, kNN, TurboQuant augmentations"
+      "Env-configured arch/training/quant stack",
+      "Quant-aware training + compression toggles",
+      "Eval-time TTT+kNN+TurboQuant suite"
     ]
   },
   "compatibility": {

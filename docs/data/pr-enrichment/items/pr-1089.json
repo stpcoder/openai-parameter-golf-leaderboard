@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T18:31:13.432Z",
+  "generatedAt": "2026-03-29T20:31:22.339Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1089,
     "title": "Record Submission: 1.1086 BPB - Turbo-Muon + EngramLite + ParamBanking (11L 512d)",
     "state": "open",
-    "updatedAt": "2026-03-29T18:10:07Z",
-    "headSha": "4f04effff036c937afe458a910b349530fca81c1",
+    "updatedAt": "2026-03-29T20:01:21Z",
+    "headSha": "ccf677b1f1f64baf6ceda30a3d74961e30ba82bb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1089",
     "authorLogin": "mikeapedia"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GPT blends Turbo-Muon optimizer, EngramLite hash embeddings, parameter banking, gated U-Net skips, ValueEmbedding, SmearGate, and GPTQ mixed precision.",
+    "summary": "Pairs Turbo-Muon optimizer tweaks with EngramLite hash embeddings, parameter banking, U-Net skips, value reinjection, and GPTQ mixed-precision compression.",
     "tags": [
       "optimizer",
       "architecture",
-      "tokenization",
-      "compression"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Turbo-Muon optimizer with AOL preconditioning, Polar Express coefficients, and row_col normalization",
-      "Parameter banking enabling batched Newton-Schulz with gated U-Net skips, ValueEmbedding, and SmearGate",
-      "GPTQ mixed-precision int6/int7 with Hessian-driven bit allocation and late QAT"
+      "Turbo-Muon with AOL/Polar Express plus row_col normalization",
+      "EngramLite hash embeddings, ValueEmbedding, and U-Net style skips over parameter-banked weights",
+      "GPTQ int6/int7 quantization with late QAT and Brotli-byte-shuffled compression"
     ]
   },
   "compatibility": {
