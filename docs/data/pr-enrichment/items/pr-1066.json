@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T09:58:02.825Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1066,
+    "title": "Add competitive 8xH100 run package (1.1259 bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-29T09:52:01Z",
+    "headSha": "2ea5c34ca7028f2023a11b224b68958a9d2510d4",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1066",
+    "authorLogin": "adityakm24"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "11-layer SOTA-derived stack with GQA/XSA+Partial RoPE, Muon+AdamW+EMA mix, and int6+lzma quant plus legal score-first TTT on 8xH100.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GQA+XSA w/ Partial RoPE, SmearGate, BigramHash",
+      "Muon+AdamW optimizer stack with EMA and late QAT",
+      "Legal score-first TTT paired with sliding-window eval"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-29T09:28:01.822Z",
+  "generatedAt": "2026-03-29T09:58:10.584Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1066,
+      "title": "Add competitive 8xH100 run package (1.1259 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-29T09:52:01Z",
+      "headSha": "2ea5c34ca7028f2023a11b224b68958a9d2510d4",
+      "generatedAt": "2026-03-29T09:58:02.825Z",
+      "summary": "11-layer SOTA-derived stack with GQA/XSA+Partial RoPE, Muon+AdamW+EMA mix, and int6+lzma quant plus legal score-first TTT on 8xH100.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1066.json"
+    },
+    {
+      "prNumber": 1065,
+      "title": "[Non-Record] Competitive Baseline: 10L GQA + Mixed Int6/Int8 + SWA + Seq4096 (val_bpb=1.1536)",
+      "status": "open",
+      "updatedAt": "2026-03-29T09:34:52Z",
+      "headSha": "ae0dc0dcfb25c2b14c4a7a737730d96814b06fc6",
+      "generatedAt": "2026-03-29T09:58:10.353Z",
+      "summary": "10-layer GQA Transformer uses mixed int6/int8 quantization, Muon+AdamW, SWA, and seq len 4096 to stay under 16MB.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "muon",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1065.json"
+    },
     {
       "prNumber": 1063,
       "title": "Add Compiled LeakyReLU2 + Slide64 Eval non-record submission",

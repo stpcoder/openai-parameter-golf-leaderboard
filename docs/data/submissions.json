@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T09:27:56.816Z",
+  "generatedAt": "2026-03-29T09:57:56.618Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -14959,6 +14959,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-29_Competitive_8xH100_Run3_TTT_1-1259",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_Competitive_8xH100_Run3_TTT_1.1259",
+        "folderPath": "records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/train_gpt.py"
+      },
+      "submission": {
+        "author": "adityam2",
+        "githubId": "adityam2",
+        "name": "Competitive 8xH100 Run3 TTT 1.1259",
+        "blurb": "SOTA-derived 11-layer competitive run on 8xH100 with LeakyReLU^2, XSA, EMA, GPTQ-lite int6+lzma compression, and legal score-first TTT; final metric uses legal_ttt_exact under the 16,000,000-byte cap.",
+        "date": "2026-03-29T08:34:14Z"
+      },
+      "metrics": {
+        "valBpb": 1.12587738,
+        "valLoss": 1.90099177,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15943528,
+        "bytesCode": 90684,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1066,
+        "title": "Add competitive 8xH100 run package (1.1259 bpb)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1066",
+        "authorLogin": "adityakm24",
+        "authorName": null,
+        "createdAt": "2026-03-29T09:52:01Z",
+        "updatedAt": "2026-03-29T09:52:01Z",
+        "headSha": "2ea5c34ca7028f2023a11b224b68958a9d2510d4",
+        "headRepo": "adityakm24/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2ea5c34ca7028f2023a11b224b68958a9d2510d4/records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/2ea5c34ca7028f2023a11b224b68958a9d2510d4/records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/2ea5c34ca7028f2023a11b224b68958a9d2510d4/records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/2ea5c34ca7028f2023a11b224b68958a9d2510d4/records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/2ea5c34ca7028f2023a11b224b68958a9d2510d4/records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run3_TTT_1.1259",
+        "pr": "https://github.com/openai/parameter-golf/pull/1066",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-28_PP12_PosteriorPackets_on_SOTA",
       "source": "pull_request",
       "status": "open",
@@ -21880,6 +21957,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/f5e802ba4cf4f9577d430c84b4e669c84af08330/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/f5e802ba4cf4f9577d430c84b4e669c84af08330/records/track_non_record_16mb/2026-03-22_DepthRecurrence_AggressiveTTT_10L",
         "pr": "https://github.com/openai/parameter-golf/pull/456",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-22_competitive_baseline",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-22_competitive_baseline",
+        "folderPath": "records/track_10min_16mb/2026-03-22_competitive_baseline",
+        "submissionPath": "records/track_10min_16mb/2026-03-22_competitive_baseline/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-22_competitive_baseline/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-22_competitive_baseline/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-22_competitive_baseline/train_gpt.py"
+      },
+      "submission": {
+        "author": "Rithun KP",
+        "githubId": "rithunkp",
+        "name": "Competitive Baseline: 10L GQA + Mixed Int6/Int8 + SWA + Seq4096",
+        "blurb": "10-layer Transformer with Group Query Attention (8Q/4KV), mixed quantization (int6 for block weights, int8 for embeddings) with zstandard compression, 3x MLP expansion (hidden=1536), Stochastic Weight Averaging (ratio=0.4), Muon optimizer with decoupled weight decay (WD=0.04), AdamW for scalars/embeddings, seq_len=4096 for extended context, tied embeddings, trained on 8xH100 SXM in 600 seconds.",
+        "date": "2026-03-22T09:25:00Z"
+      },
+      "metrics": {
+        "valBpb": 1.15361,
+        "valLoss": 1.94782,
+        "preQuantValBpb": 1.1687,
+        "preQuantValLoss": 1.9732,
+        "stepStop": 7184,
+        "wallclockSeconds": 599.82,
+        "evalTimeSeconds": 148.37
+      },
+      "artifact": {
+        "bytesTotal": 15742891,
+        "bytesCode": 49479,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1065,
+        "title": "[Non-Record] Competitive Baseline: 10L GQA + Mixed Int6/Int8 + SWA + Seq4096 (val_bpb=1.1536)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1065",
+        "authorLogin": "rithunkp",
+        "authorName": null,
+        "createdAt": "2026-03-29T09:34:52Z",
+        "updatedAt": "2026-03-29T09:34:52Z",
+        "headSha": "ae0dc0dcfb25c2b14c4a7a737730d96814b06fc6",
+        "headRepo": "rithunkp/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ae0dc0dcfb25c2b14c4a7a737730d96814b06fc6/records/track_10min_16mb/2026-03-22_competitive_baseline/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ae0dc0dcfb25c2b14c4a7a737730d96814b06fc6/records/track_10min_16mb/2026-03-22_competitive_baseline/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ae0dc0dcfb25c2b14c4a7a737730d96814b06fc6/records/track_10min_16mb/2026-03-22_competitive_baseline/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ae0dc0dcfb25c2b14c4a7a737730d96814b06fc6/records/track_10min_16mb/2026-03-22_competitive_baseline/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ae0dc0dcfb25c2b14c4a7a737730d96814b06fc6/records/track_10min_16mb/2026-03-22_competitive_baseline",
+        "pr": "https://github.com/openai/parameter-golf/pull/1065",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

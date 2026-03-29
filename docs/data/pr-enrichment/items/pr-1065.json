@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T09:58:10.353Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1065,
+    "title": "[Non-Record] Competitive Baseline: 10L GQA + Mixed Int6/Int8 + SWA + Seq4096 (val_bpb=1.1536)",
+    "state": "open",
+    "updatedAt": "2026-03-29T09:34:52Z",
+    "headSha": "ae0dc0dcfb25c2b14c4a7a737730d96814b06fc6",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1065",
+    "authorLogin": "rithunkp"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-22_competitive_baseline/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "10-layer GQA Transformer uses mixed int6/int8 quantization, Muon+AdamW, SWA, and seq len 4096 to stay under 16MB.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "muon",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "10-layer GQA with 4 KV heads",
+      "Mixed int6/int8 weights plus zstd compression",
+      "Muon+AdamW with SWA over seq_len 4096"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
