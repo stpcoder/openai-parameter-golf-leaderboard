@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-29T20:31:22.505Z",
+  "generatedAt": "2026-03-29T21:01:35.175Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1095,
+      "title": "Record: Seed-Regenerated Random Model + Incremental N-gram Cache — val_bpb 0.0905",
+      "status": "open",
+      "updatedAt": "2026-03-29T20:45:47Z",
+      "headSha": "38c5e7d5c3aaf3ed9bb05d205fa96c027530bad4",
+      "generatedAt": "2026-03-29T21:01:23.948Z",
+      "summary": "Frozen orthogonal seed-regenerated transformer weights store only LoRA adapters while an INT16 incremental n-gram cache blends at eval.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1095.json"
+    },
     {
       "prNumber": 1094,
       "title": "Record: 0.4027 BPB — Swarm-Designed Causal BackoffNgramMixer (3-seed mean, std 0.0015)",
@@ -54,10 +77,10 @@
       "prNumber": 1091,
       "title": "The Kitchen Sink",
       "status": "open",
-      "updatedAt": "2026-03-29T20:14:29Z",
-      "headSha": "f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5",
-      "generatedAt": "2026-03-29T20:31:18.022Z",
-      "summary": "Unified env-gated script layering architecture tweaks, training regularizers, quant/compression, and eval-time TTT/kNN/TurboQuant augmentations.",
+      "updatedAt": "2026-03-29T20:45:12Z",
+      "headSha": "81410f9d8368801a4da08bfc80869e70ed18ba53",
+      "generatedAt": "2026-03-29T21:01:28.216Z",
+      "summary": "Single train_gpt pipeline toggles 26 techniques across architecture, training, quantization, and eval-time enhancements for parameter golf.",
       "tags": [
         "architecture",
         "quantization",
@@ -1517,13 +1540,12 @@
       "prNumber": 1007,
       "title": "Submission/hybrid rwkv token shift",
       "status": "open",
-      "updatedAt": "2026-03-28T06:26:55Z",
+      "updatedAt": "2026-03-29T20:49:08Z",
       "headSha": "9d1a09cd58230ec874c30559a29582debcb7779d",
-      "generatedAt": "2026-03-28T06:50:59.768Z",
-      "summary": "Hybrid stack uses RWKV-inspired per-dim token shifts for 8 of 11 layers, with three short-window/full attention layers to preserve long-range context.",
+      "generatedAt": "2026-03-29T21:01:35.029Z",
+      "summary": "Hybrid transformer uses 8 RWKV-inspired token-shift layers plus 3 short-window attention layers so learned interpolation handles local mixing instead of full attention.",
       "tags": [
         "architecture",
-        "attention",
         "quantization",
         "non-record"
       ],

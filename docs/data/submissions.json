@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T20:31:04.939Z",
+  "generatedAt": "2026-03-29T21:01:19.374Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -1076,6 +1076,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/920692d672dea8425c281836182ac4000f6c6e43/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/920692d672dea8425c281836182ac4000f6c6e43/records/track_10min_16mb/2026-03-27_11L_Int5GPTQ_Order12_NgramPhrase_65K",
         "pr": "https://github.com/openai/parameter-golf/pull/961",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_SeedRegen_IncrementalNgram",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_SeedRegen_IncrementalNgram",
+        "folderPath": "records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram/train_gpt.py"
+      },
+      "submission": {
+        "author": "Vilhelm Toivonen",
+        "githubId": "vimeto",
+        "name": "Seed-Regenerated Random Model + Incremental N-gram Cache",
+        "blurb": "5L 512d model with ALL weight matrices as seeded orthogonal random projections (0 bytes in artifact) + rank-64 LoRA adapters (3.9 MB). The remaining 11 MB holds an incrementally-built INT16 n-gram cache (orders 2-7, 31B counts from 8-GPU all-reduce). The neural model achieves 1.50 BPB; entropy-adaptive blending with the n-gram cache yields 0.0905 BPB. No eval-time adaptation — the cache is frozen after training.",
+        "date": "2026-03-29"
+      },
+      "metrics": {
+        "valBpb": 0.0905,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15093968,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1095,
+        "title": "Record: Seed-Regenerated Random Model + Incremental N-gram Cache — val_bpb 0.0905",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1095",
+        "authorLogin": "vimeto",
+        "authorName": null,
+        "createdAt": "2026-03-29T20:38:46Z",
+        "updatedAt": "2026-03-29T20:45:47Z",
+        "headSha": "38c5e7d5c3aaf3ed9bb05d205fa96c027530bad4",
+        "headRepo": "vimeto/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/38c5e7d5c3aaf3ed9bb05d205fa96c027530bad4/records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/38c5e7d5c3aaf3ed9bb05d205fa96c027530bad4/records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/38c5e7d5c3aaf3ed9bb05d205fa96c027530bad4/records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/38c5e7d5c3aaf3ed9bb05d205fa96c027530bad4/records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/38c5e7d5c3aaf3ed9bb05d205fa96c027530bad4/records/track_10min_16mb/2026-03-29_SeedRegen_IncrementalNgram",
+        "pr": "https://github.com/openai/parameter-golf/pull/1095",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -35030,13 +35107,13 @@
         "number": 1007,
         "title": "Submission/hybrid rwkv token shift",
         "state": "open",
-        "draft": false,
+        "draft": true,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1007",
         "authorLogin": "dillon-blake",
         "authorName": null,
         "createdAt": "2026-03-28T06:26:55Z",
-        "updatedAt": "2026-03-28T06:26:55Z",
+        "updatedAt": "2026-03-29T20:49:08Z",
         "headSha": "9d1a09cd58230ec874c30559a29582debcb7779d",
         "headRepo": "dillon-blake/parameter-golf"
       },
@@ -47669,16 +47746,16 @@
         "authorLogin": "MichaelMcCulloch",
         "authorName": null,
         "createdAt": "2026-03-29T18:22:17Z",
-        "updatedAt": "2026-03-29T20:14:29Z",
-        "headSha": "f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5",
+        "updatedAt": "2026-03-29T20:45:12Z",
+        "headSha": "81410f9d8368801a4da08bfc80869e70ed18ba53",
         "headRepo": "MichaelMcCulloch/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/81410f9d8368801a4da08bfc80869e70ed18ba53/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/81410f9d8368801a4da08bfc80869e70ed18ba53/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/81410f9d8368801a4da08bfc80869e70ed18ba53/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/81410f9d8368801a4da08bfc80869e70ed18ba53/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/81410f9d8368801a4da08bfc80869e70ed18ba53/records/track_10min_16mb/2026-03-29_FullStack_TTT_Ngram_KNN_TurboQuant",
         "pr": "https://github.com/openai/parameter-golf/pull/1091",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

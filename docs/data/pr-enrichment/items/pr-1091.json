@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T20:31:18.022Z",
+  "generatedAt": "2026-03-29T21:01:28.216Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1091,
     "title": "The Kitchen Sink",
     "state": "open",
-    "updatedAt": "2026-03-29T20:14:29Z",
-    "headSha": "f2e136ac4c459ea5f9066da0d1ad7aeade19a0d5",
+    "updatedAt": "2026-03-29T20:45:12Z",
+    "headSha": "81410f9d8368801a4da08bfc80869e70ed18ba53",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1091",
     "authorLogin": "MichaelMcCulloch"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Unified env-gated script layering architecture tweaks, training regularizers, quant/compression, and eval-time TTT/kNN/TurboQuant augmentations.",
+    "summary": "Single train_gpt pipeline toggles 26 techniques across architecture, training, quantization, and eval-time enhancements for parameter golf.",
     "tags": [
       "architecture",
       "quantization",
@@ -29,9 +29,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Env-configured arch/training/quant stack",
-      "Quant-aware training + compression toggles",
-      "Eval-time TTT+kNN+TurboQuant suite"
+      "Env-gated mix of architectural, training, and compression boosts",
+      "Eval-time TTT plus kNN/N-gram/TurboQuant augmentation",
+      "Modular ablation-ready feature toggles"
     ]
   },
   "compatibility": {
