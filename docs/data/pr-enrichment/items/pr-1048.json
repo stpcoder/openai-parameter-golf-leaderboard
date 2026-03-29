@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T01:26:21.448Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1048,
+    "title": "Non-record: Compression moonshots — 8 negative/marginal findings (Procrustes, SWA smoothness, selective fp16, pruning+zstd)",
+    "state": "open",
+    "updatedAt": "2026-03-29T00:59:25Z",
+    "headSha": "e55a3b410a21fa4f1710f9c9f76b28e29d9aec09",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1048",
+    "authorLogin": "mrdavtan"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-21_11L_XSA_EMA_TTT/README.md",
+      "records/track_10min_16mb/2026-03-20_Int6_3xMLP/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "Checkpoint analyses catalog compression failures—from Procrustes transport and fp16 embedding choices to SWA smoothness—to highlight codec limits around int6+zstd.",
+    "tags": [
+      "compression",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Rotational Procrustes transport evaluation vs codec entropy",
+      "Selective fp16 embedding atop int6+zstd plus GPTQ-lite quant tweaks",
+      "SWA/EMA smoothness and pruning+zstd artifact interactions"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

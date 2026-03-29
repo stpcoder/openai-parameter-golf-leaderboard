@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T00:55:58.478Z",
+  "generatedAt": "2026-03-29T01:26:26.324Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1047,
-    "title": "Medusa: Unstable S2 — DeltaNet Crawler, Legal (0.8822 BPB mean)",
+    "title": "(0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
     "state": "open",
-    "updatedAt": "2026-03-29T00:55:02Z",
-    "headSha": "37975042e506dc2f20cd663c9e450ecf381f17a2",
+    "updatedAt": "2026-03-29T01:07:20Z",
+    "headSha": "99d34869c2ced0dd13b353f075765cac14246961",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1047",
     "authorLogin": "newjordan"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "DeltaNet crawler with Frugendorff loops uses loop-aware GPTQ int6 calibration within 600s by cutting training 30s short.",
+    "summary": "Medusa uses a 4-flat + crawler-loop DeltaNet with chunk_delta_rule and loop-aware GPTQ plus GPTQ_RESERVE_MS to stay inside the 600s budget for int6 quantization.",
     "tags": [
       "architecture",
       "quantization",
       "training-schedule"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not a val-only training regime; GPTQ calibration still uses training loop.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Frugendorff crawler stacking 4 flat + 1 crawler ×4 loops with DeltaNet heads",
-      "Loop-aware 2-phase GPTQ int6+zstd calibrated inside the 600s cap via GPTQ_RESERVE_MS=30000",
-      "Late-start EMA (step 4400, decay 0.99)"
+      "Loop-aware GPTQ with GPTQ_RESERVE_MS to finish calibration within the time cap",
+      "4 flat layers plus crawler loops using DeltaNet chunk_delta_rule",
+      "Int6+zstd compression paired with late-start EMA scheduling"
     ]
   },
   "compatibility": {

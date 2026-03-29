@@ -1,16 +1,39 @@
 {
-  "generatedAt": "2026-03-29T00:56:09.692Z",
+  "generatedAt": "2026-03-29T01:26:45.184Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
-      "prNumber": 1047,
-      "title": "Medusa: Unstable S2 — DeltaNet Crawler, Legal (0.8822 BPB mean)",
+      "prNumber": 1048,
+      "title": "Non-record: Compression moonshots — 8 negative/marginal findings (Procrustes, SWA smoothness, selective fp16, pruning+zstd)",
       "status": "open",
-      "updatedAt": "2026-03-29T00:55:02Z",
-      "headSha": "37975042e506dc2f20cd663c9e450ecf381f17a2",
-      "generatedAt": "2026-03-29T00:55:58.478Z",
-      "summary": "DeltaNet crawler with Frugendorff loops uses loop-aware GPTQ int6 calibration within 600s by cutting training 30s short.",
+      "updatedAt": "2026-03-29T00:59:25Z",
+      "headSha": "e55a3b410a21fa4f1710f9c9f76b28e29d9aec09",
+      "generatedAt": "2026-03-29T01:26:21.448Z",
+      "summary": "Checkpoint analyses catalog compression failures—from Procrustes transport and fp16 embedding choices to SWA smoothness—to highlight codec limits around int6+zstd.",
+      "tags": [
+        "compression",
+        "quantization",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1048.json"
+    },
+    {
+      "prNumber": 1047,
+      "title": "(0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
+      "status": "open",
+      "updatedAt": "2026-03-29T01:07:20Z",
+      "headSha": "99d34869c2ced0dd13b353f075765cac14246961",
+      "generatedAt": "2026-03-29T01:26:26.324Z",
+      "summary": "Medusa uses a 4-flat + crawler-loop DeltaNet with chunk_delta_rule and loop-aware GPTQ plus GPTQ_RESERVE_MS to stay inside the 600s budget for int6 quantization.",
       "tags": [
         "architecture",
         "quantization",
@@ -30,14 +53,14 @@
       "prNumber": 1046,
       "title": "Record: 11L Adaptive Markov + Int6 Mixed Quant (1.2174 bpb)",
       "status": "open",
-      "updatedAt": "2026-03-29T00:33:22Z",
-      "headSha": "d561d88117873f44ea98d696ac47c2441d463313",
-      "generatedAt": "2026-03-29T00:56:04.417Z",
-      "summary": "An 11-layer GPT mixes transformer logits with an adaptive unigram Markov gate plus mixed int6/int8 quantization and a 786K-token batch for throughput.",
+      "updatedAt": "2026-03-29T01:23:15Z",
+      "headSha": "b2265d5e46189cd2cf360026b9e0abe18de9ee46",
+      "generatedAt": "2026-03-29T01:26:30.257Z",
+      "summary": "Hybrid 11-layer GPT mixes transformer logits with an adaptive per-position Markov gate while applying per-row int6/int8 quantization and large 786K token batches.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -400,14 +423,14 @@
       "prNumber": 1029,
       "title": "Non-record: Knowledge Distillation - A Negative Result (val_bpb=1.152)",
       "status": "open",
-      "updatedAt": "2026-03-28T19:59:53Z",
-      "headSha": "a2ec171a62b79e482dec2410058a84d576f2b1d9",
-      "generatedAt": "2026-03-28T20:24:45.657Z",
-      "summary": "Cached top-32 teacher logits to run soft KL distillation with alpha/temp sweeps, probing whether added per-step overhead ever beats cached-hard-label training.",
+      "updatedAt": "2026-03-29T01:10:23Z",
+      "headSha": "0d3c2d7f1a280498b9403795b937c5d562bfa13e",
+      "generatedAt": "2026-03-29T01:26:35.508Z",
+      "summary": "Cached top-32 logits from a 105M teacher to replay hard/soft distillation and show the overhead cancels any gain within the 10-minute budget.",
       "tags": [
-        "regularization",
+        "non-record",
         "evaluation",
-        "non-record"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -423,13 +446,13 @@
       "prNumber": 1028,
       "title": "Medusa: Unstable — DeltaNet Crawler 0.8104 BPB 10mb file size(best seed), mean 0.9984, Frugendorff continuation",
       "status": "open",
-      "updatedAt": "2026-03-29T00:40:53Z",
+      "updatedAt": "2026-03-29T00:57:29Z",
       "headSha": "37df3009ba811f4cfc35a815057d7b7df925b5a2",
-      "generatedAt": "2026-03-29T00:56:09.539Z",
-      "summary": "Medusa weaves DeltaNet chunk_delta_rule heads through Frugendorff crawler loops, using loop-aware GPTQ quantization and a late-start EMA during warmdown.",
+      "generatedAt": "2026-03-29T01:26:40.223Z",
+      "summary": "Medusa layers DeltaNet heads into a Frugendorff crawler with loop-aware two-phase GPTQ plus late-start EMA for int6+zstd compression.",
       "tags": [
-        "quantization",
         "architecture",
+        "quantization",
         "training-schedule"
       ],
       "flags": {
@@ -798,15 +821,15 @@
       "prNumber": 1006,
       "title": "1.1085 BPB: JEPA + AdamW TTT + Full GPTQ + FA3 + LZMA",
       "status": "open",
-      "updatedAt": "2026-03-28T19:03:51Z",
+      "updatedAt": "2026-03-29T01:13:02Z",
       "headSha": "8ab5217009ea9e20f2f858f9aef5f0bd8c16c4c0",
-      "generatedAt": "2026-03-28T19:24:23.550Z",
-      "summary": "JEPA auxiliary loss plus pre-quant AdamW TTT before full Hessian GPTQ quantization, boosted by FA3, LZMA, and full-layer XSA.",
+      "generatedAt": "2026-03-29T01:26:45.035Z",
+      "summary": "JEPA auxiliary future-state loss, pre-quantization AdamW TTT, full Hessian GPTQ, FA3 speedups, LZMA compression, and XSA-on-all-layers squeeze more steps into 10min/16MB.",
       "tags": [
-        "architecture",
+        "regularization",
+        "optimizer",
         "quantization",
-        "attention",
-        "training-schedule"
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -10864,30 +10887,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-372.json"
-    },
-    {
-      "prNumber": 371,
-      "title": "Record: 11L XSA + EMA + TTT + Partial RoPE + LN Scale — val_bpb=1.1401",
-      "status": "closed",
-      "updatedAt": "2026-03-21T20:53:32Z",
-      "headSha": "7c3e33a7a41ebcc78176b0d04ac07a4890e97c2c",
-      "generatedAt": "2026-03-23T17:48:43.479Z",
-      "summary": "11-layer XSA + EMA base adds U-Net skips, partial RoPE/LN scaling, SmearGate/BigramHash, TTT, and late int6 QAT for sliding-window eval.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "quantization",
-        "sliding-window-eval"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-371.json"
     },
     {
       "prNumber": 370,

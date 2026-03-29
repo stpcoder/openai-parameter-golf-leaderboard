@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T00:56:04.417Z",
+  "generatedAt": "2026-03-29T01:26:30.257Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1046,
     "title": "Record: 11L Adaptive Markov + Int6 Mixed Quant (1.2174 bpb)",
     "state": "open",
-    "updatedAt": "2026-03-29T00:33:22Z",
-    "headSha": "d561d88117873f44ea98d696ac47c2441d463313",
+    "updatedAt": "2026-03-29T01:23:15Z",
+    "headSha": "b2265d5e46189cd2cf360026b9e0abe18de9ee46",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1046",
     "authorLogin": "Jayteare"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "An 11-layer GPT mixes transformer logits with an adaptive unigram Markov gate plus mixed int6/int8 quantization and a 786K-token batch for throughput.",
+    "summary": "Hybrid 11-layer GPT mixes transformer logits with an adaptive per-position Markov gate while applying per-row int6/int8 quantization and large 786K token batches.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "adaptive Markov gate mixing",
-      "mixed int6/int8 per-row quantization",
-      "786K-token batch for higher throughput"
+      "Adaptive per-position Markov mixing gate",
+      "Per-row int6 quantization for MLP/attention with int8 embeddings/Markov table",
+      "786K-token batch to boost throughput"
     ]
   },
   "compatibility": {
