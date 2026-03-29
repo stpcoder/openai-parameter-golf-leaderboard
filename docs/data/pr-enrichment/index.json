@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-03-29T17:30:41.181Z",
+  "generatedAt": "2026-03-29T18:01:17.074Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1087,
+      "title": "Record: 1.1407 BPB — LeakyReLU^2 + Delayed QAT + Score-First TTT",
+      "status": "open",
+      "updatedAt": "2026-03-29T17:56:50Z",
+      "headSha": "7b889cb618923855943bd411877badfddc72fe48",
+      "generatedAt": "2026-03-29T18:00:57.813Z",
+      "summary": "Delayed QAT after step 5500 plus GPTQ-lite clipping, LeakyReLU² with Partial RoPE/LN scale, and chunkwise score-first TTT via SGD.",
+      "tags": [
+        "quantization",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1087.json"
+    },
     {
       "prNumber": 1085,
       "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
@@ -31,13 +54,13 @@
       "prNumber": 1084,
       "title": "Non-Record: SLOT Eval-Time Augmentation on PR #549 SOTA Stack",
       "status": "open",
-      "updatedAt": "2026-03-29T16:31:32Z",
-      "headSha": "142ca2afe5f3338864da5cda76834404d369811f",
-      "generatedAt": "2026-03-29T17:00:37.676Z",
-      "summary": "Eval-time SLOT optimizes a 512-d delta on TTT hidden states inside the scoring loop to refine logits just before BPB scoring.",
+      "updatedAt": "2026-03-29T17:47:04Z",
+      "headSha": "44a59d4af48f36743ab3785f1cc08e607cb454d2",
+      "generatedAt": "2026-03-29T18:01:03.066Z",
+      "summary": "Adds SLOT eval-time δ tuning on TTT-adapted hidden states to refine logits per batch before scoring.",
       "tags": [
-        "non-record",
-        "evaluation"
+        "evaluation",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -51,12 +74,12 @@
     },
     {
       "prNumber": 1083,
-      "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB (3-seed mean)",
+      "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
       "status": "open",
-      "updatedAt": "2026-03-29T16:57:26Z",
+      "updatedAt": "2026-03-29T17:36:42Z",
       "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
-      "generatedAt": "2026-03-29T17:00:43.456Z",
-      "summary": "Pairs a Frugendorff ClownCar crawler (4 flat + crawler loops with loop-aware GPTQ and late EMA) with X-Wing’s shared 3D Cubric n-gram oracle and complementary training.",
+      "generatedAt": "2026-03-29T18:01:09.756Z",
+      "summary": "ClownCar crawler (4 flat+looped crawler) with loop-aware GPTQ/int6 compression feeds a shared 3D Cubric ngram oracle that uses complementary training corrections.",
       "tags": [
         "architecture",
         "quantization",
@@ -11753,10 +11776,10 @@
       "prNumber": 347,
       "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
       "status": "open",
-      "updatedAt": "2026-03-29T16:05:55Z",
-      "headSha": "9db1393ba0f77385455420f4b3a481bb1b9a57b1",
-      "generatedAt": "2026-03-29T16:30:37.126Z",
-      "summary": "Combines GatedAttention+ValueResidual with end-to-end int6 QAT plus lzma-9 savings to restore a larger BigramHash in GPTQLite.",
+      "updatedAt": "2026-03-29T17:40:44Z",
+      "headSha": "6b3441b40ce47a739ae901738ce23bc2c10256c5",
+      "generatedAt": "2026-03-29T18:01:17.019Z",
+      "summary": "GPTQLite stacks GatedAttention/value residual gating with full-run QAT and lzma-9 to restore a 2048 bigram hash within the 16MB budget.",
       "tags": [
         "quantization",
         "architecture",

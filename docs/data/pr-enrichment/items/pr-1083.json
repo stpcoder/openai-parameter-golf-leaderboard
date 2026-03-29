@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-29T17:00:43.456Z",
+  "generatedAt": "2026-03-29T18:01:09.756Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1083,
-    "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB (3-seed mean)",
+    "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
     "state": "open",
-    "updatedAt": "2026-03-29T16:57:26Z",
+    "updatedAt": "2026-03-29T17:36:42Z",
     "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
     "authorLogin": "newjordan"
@@ -21,18 +21,18 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Pairs a Frugendorff ClownCar crawler (4 flat + crawler loops with loop-aware GPTQ and late EMA) with X-Wing’s shared 3D Cubric n-gram oracle and complementary training.",
+    "summary": "ClownCar crawler (4 flat+looped crawler) with loop-aware GPTQ/int6 compression feeds a shared 3D Cubric ngram oracle that uses complementary training corrections.",
     "tags": [
       "architecture",
       "quantization",
       "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not a validation-only training regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Frugendorff ClownCar crawler with loop-aware GPTQ calibration and delayed EMA",
-      "Shared 3D Cubric multipliers over entropy/count bins for adaptive n-gram blending",
-      "Complementary training that downweights bigram-predictable tokens"
+      "loop-aware GPTQ+int6 compression on ClownCar crawler",
+      "shared 3D Cubric ngram tables with entropy/count-aware multipliers",
+      "complementary training downweights bigram-predictable tokens"
     ]
   },
   "compatibility": {
