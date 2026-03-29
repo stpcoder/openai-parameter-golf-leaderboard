@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T23:02:42.396Z",
+  "generatedAt": "2026-03-29T23:32:15.435Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -102,10 +102,10 @@
       "prNumber": 1097,
       "title": "Parameter golf jepa",
       "status": "open",
-      "updatedAt": "2026-03-29T22:52:01Z",
+      "updatedAt": "2026-03-29T23:18:41Z",
       "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
-      "generatedAt": "2026-03-29T23:02:08.868Z",
-      "summary": "Reinterprets the U-Net transformer as a JEPA with a 256-d latent predictor plus SIGReg regularization for text compression.",
+      "generatedAt": "2026-03-29T23:32:09.862Z",
+      "summary": "Recasts the U-Net LM as JEPA with a 256-d latent predictor plus SIGReg to shape encoder representations for text compression without inference overhead.",
       "tags": [
         "architecture",
         "regularization"
@@ -2306,12 +2306,14 @@
       "prNumber": 974,
       "title": "Non-record: Random Linear Map Adapter Projections — 1.21MB artifact (val_bpb=1.6542)",
       "status": "open",
-      "updatedAt": "2026-03-27T19:04:07Z",
-      "headSha": "be8e5b938d2b3f04bb4f78355d8e718f8fa315c0",
-      "generatedAt": "2026-03-27T19:18:02.823Z",
-      "summary": "Replacing key projections with seed-regenerated frozen random maps plus tiny LoRA-style adapters to keep most weights implicit.",
+      "updatedAt": "2026-03-29T23:16:01Z",
+      "headSha": "6087af53d7558cccdd768556ae4544f7305f44df",
+      "generatedAt": "2026-03-29T23:32:15.292Z",
+      "summary": "Random seeded Rademacher projections replace most attention weights with learned LoRA adapters reconstructing matrices for a tiny artifact budget.",
       "tags": [
         "architecture",
+        "compression",
+        "regularization",
         "non-record"
       ],
       "flags": {

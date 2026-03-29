@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-27T19:18:02.823Z",
+  "generatedAt": "2026-03-29T23:32:15.292Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 974,
     "title": "Non-record: Random Linear Map Adapter Projections — 1.21MB artifact (val_bpb=1.6542)",
     "state": "open",
-    "updatedAt": "2026-03-27T19:04:07Z",
-    "headSha": "be8e5b938d2b3f04bb4f78355d8e718f8fa315c0",
+    "updatedAt": "2026-03-29T23:16:01Z",
+    "headSha": "6087af53d7558cccdd768556ae4544f7305f44df",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/974",
     "authorLogin": "anthony-maio"
   },
@@ -19,16 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Replacing key projections with seed-regenerated frozen random maps plus tiny LoRA-style adapters to keep most weights implicit.",
+    "summary": "Random seeded Rademacher projections replace most attention weights with learned LoRA adapters reconstructing matrices for a tiny artifact budget.",
     "tags": [
       "architecture",
+      "compression",
+      "regularization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "seeded frozen random projections",
-      "LoRA-style adapter bottlenecks"
+      "Seeded frozen Rademacher attention projections",
+      "Low-rank LoRA adapters plus scale per layer",
+      "Preserve learned MLP weights while randomizing attention"
     ]
   },
   "compatibility": {

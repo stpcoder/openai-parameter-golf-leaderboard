@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T23:01:58.369Z",
+  "generatedAt": "2026-03-29T23:32:02.168Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -36981,6 +36981,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-27_RandomMapAdapterProjections_V1",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-27_RandomMapAdapterProjections_V1",
+        "folderPath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1",
+        "submissionPath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/train_gpt.py"
+      },
+      "submission": {
+        "author": "Anthony Maio",
+        "githubId": "anthony-maio",
+        "name": "RandomMapAdapterProjections_V2b",
+        "blurb": "Random Linear Map Adapters: seed-regenerated frozen Rademacher projections in attention + learned rank-128 LoRA adapters. 11.6MB artifact. Answers the challenge request for learning adapters on random linear maps. Structurally related to VeRA (ICLR 2024). Includes ablations across rank (8 vs 128), MLP vs attention-only, and torch.compile. Best variant disables MLP random maps and uses high adapter rank.",
+        "date": "2026-03-27T18:51:06Z"
+      },
+      "metrics": {
+        "valBpb": 1.2615,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 11640674,
+        "bytesCode": 68859,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 974,
+        "title": "Non-record: Random Linear Map Adapter Projections — 1.21MB artifact (val_bpb=1.6542)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/974",
+        "authorLogin": "anthony-maio",
+        "authorName": null,
+        "createdAt": "2026-03-27T18:51:06Z",
+        "updatedAt": "2026-03-29T23:16:01Z",
+        "headSha": "6087af53d7558cccdd768556ae4544f7305f44df",
+        "headRepo": "anthony-maio/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6087af53d7558cccdd768556ae4544f7305f44df/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/6087af53d7558cccdd768556ae4544f7305f44df/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/6087af53d7558cccdd768556ae4544f7305f44df/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/6087af53d7558cccdd768556ae4544f7305f44df/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/6087af53d7558cccdd768556ae4544f7305f44df/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1",
+        "pr": "https://github.com/openai/parameter-golf/pull/974",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-25_JEPA_BytePatch_INT6_LZMA_TTT",
       "source": "pull_request",
       "status": "open",
@@ -38886,7 +38963,7 @@
         "authorLogin": "danielxmed",
         "authorName": null,
         "createdAt": "2026-03-29T21:23:41Z",
-        "updatedAt": "2026-03-29T22:52:01Z",
+        "updatedAt": "2026-03-29T23:18:41Z",
         "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
         "headRepo": "danielxmed/parameter-golf"
       },
@@ -43902,83 +43979,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/f5027810bdfbb59e4488e5e0da55791e3ee9c7a1/records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_8x512_KV4_500steps/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/f5027810bdfbb59e4488e5e0da55791e3ee9c7a1/records/track_non_record_16mb/2026-03-20_RTX4070_SP1024_8x512_KV4_500steps",
         "pr": "https://github.com/openai/parameter-golf/pull/248",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-03-27_RandomMapAdapterProjections_V1",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-27_RandomMapAdapterProjections_V1",
-        "folderPath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1",
-        "submissionPath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/train_gpt.py"
-      },
-      "submission": {
-        "author": "Anthony Maio",
-        "githubId": "anthony-maio",
-        "name": "RandomMapAdapterProjections_V1",
-        "blurb": "Random Linear Map Adapters: seed-regenerated random bases + rank-32 LoRA adapters. 1.21MB artifact (14.79MB headroom under 16MB cap). First random-map submission in competition. V1 baseline — higher rank and MLP relaxation are clear next steps.",
-        "date": "2026-03-27T18:51:06Z"
-      },
-      "metrics": {
-        "valBpb": 1.6542,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 1207916,
-        "bytesCode": 66044,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 974,
-        "title": "Non-record: Random Linear Map Adapter Projections — 1.21MB artifact (val_bpb=1.6542)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/974",
-        "authorLogin": "anthony-maio",
-        "authorName": null,
-        "createdAt": "2026-03-27T18:51:06Z",
-        "updatedAt": "2026-03-27T19:04:07Z",
-        "headSha": "be8e5b938d2b3f04bb4f78355d8e718f8fa315c0",
-        "headRepo": "anthony-maio/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/be8e5b938d2b3f04bb4f78355d8e718f8fa315c0/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/be8e5b938d2b3f04bb4f78355d8e718f8fa315c0/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/be8e5b938d2b3f04bb4f78355d8e718f8fa315c0/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/be8e5b938d2b3f04bb4f78355d8e718f8fa315c0/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/be8e5b938d2b3f04bb4f78355d8e718f8fa315c0/records/track_non_record_16mb/2026-03-27_RandomMapAdapterProjections_V1",
-        "pr": "https://github.com/openai/parameter-golf/pull/974",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
