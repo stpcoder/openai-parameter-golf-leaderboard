@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T03:56:46.234Z",
+  "generatedAt": "2026-03-29T04:27:03.116Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -3104,14 +3104,13 @@
       "prNumber": 874,
       "title": "Non-record: Random Linear Maps + Learned Adapters (val_bpb=1.607, 1.92MB artifact)",
       "status": "open",
-      "updatedAt": "2026-03-29T01:46:42Z",
+      "updatedAt": "2026-03-29T04:19:13Z",
       "headSha": "204a5d3e16e8a1dd8fe58d9b7192e7ff39647360",
-      "generatedAt": "2026-03-29T01:56:51.681Z",
-      "summary": "Most linear projections use seed-regenerated random matrices plus tiny learned adapters so only ~2.2M params need storing in the artifact.",
+      "generatedAt": "2026-03-29T04:27:02.988Z",
+      "summary": "Random linear bases from a seed power each projection while rank-16 LoRA adapters learn the offsets, keeping most weights noise to shrink the artifact.",
       "tags": [
         "architecture",
         "compression",
-        "attention",
         "non-record"
       ],
       "flags": {
