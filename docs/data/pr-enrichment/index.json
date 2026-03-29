@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-29T01:56:59.131Z",
+  "generatedAt": "2026-03-29T02:26:37.504Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1050,
+      "title": "Add Stack Integration + Legal TTT submission package",
+      "status": "open",
+      "updatedAt": "2026-03-29T02:05:00Z",
+      "headSha": "ef4d3f3ae3ee04a8cf7fab85c9937cfb45f43a36",
+      "generatedAt": "2026-03-29T02:26:30.187Z",
+      "summary": "Packages byte-identical Stack Integration + Legal TTT + Parallel Muon training script with audited 3-seed logs and a clear review run contract.",
+      "tags": [
+        "muon",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1050.json"
+    },
     {
       "prNumber": 1049,
       "title": "Add record draft: LeakyReLU2 on EMA+GPTQ-lite 10min/16MB stack",
@@ -1050,16 +1072,17 @@
     },
     {
       "prNumber": 996,
-      "title": "Pre-Enrichment + EMA-GPU + SmearGate + XSA4 (val_bpb=1.1478, …",
+      "title": "Pre-Enrichment + EMA-GPU + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
       "status": "open",
-      "updatedAt": "2026-03-28T00:55:14Z",
+      "updatedAt": "2026-03-29T02:23:38Z",
       "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
-      "generatedAt": "2026-03-28T01:19:34.771Z",
-      "summary": "10-layer GQA model uses GELU pre-enrichment, SmearGate+BigramHash, XSA on last layers, and GPU-held EMA to speed training plus sliding-window scoring.",
+      "generatedAt": "2026-03-29T02:26:37.366Z",
+      "summary": "GELU pre‑enrichment + SmearGate/BigramHash feed a 10L 512d GQA core with XSA4, while GPU EMA and sliding-window eval pair with int6 QAT for fast training.",
       "tags": [
         "architecture",
-        "quantization",
-        "evaluation"
+        "attention",
+        "training-schedule",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T01:56:24.111Z",
+  "generatedAt": "2026-03-29T02:26:22.716Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -12033,6 +12033,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-03-28_StackIntegration_LegalTTT_ParallelMuon",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-28_StackIntegration_LegalTTT_ParallelMuon",
+        "folderPath": "records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon",
+        "submissionPath": "records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon/train_gpt.py"
+      },
+      "submission": {
+        "author": "abaybektursun",
+        "githubId": "abaybektursun",
+        "name": "Stack Integration + Legal TTT + Parallel Muon",
+        "blurb": "Promoted 2026-03-28 submission folder for the byte-identical 2026-03-23 Stack Integration + Legal TTT + Parallel Muon script. Audited inherited three-seed legal_ttt evidence: mean val_bpb 1.119367 (std 0.000464), conservative max total submission size 15990006 bytes under the 16,000,000-byte cap. The separate S04 random-map adapter folder remains non-record work and is not part of this submission evidence.",
+        "date": "2026-03-28"
+      },
+      "metrics": {
+        "valBpb": 1.1193666666666668,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15990006,
+        "bytesCode": 91356,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1050,
+        "title": "Add Stack Integration + Legal TTT submission package",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1050",
+        "authorLogin": "Taleef7",
+        "authorName": null,
+        "createdAt": "2026-03-29T02:02:06Z",
+        "updatedAt": "2026-03-29T02:05:00Z",
+        "headSha": "ef4d3f3ae3ee04a8cf7fab85c9937cfb45f43a36",
+        "headRepo": "Taleef7/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/ef4d3f3ae3ee04a8cf7fab85c9937cfb45f43a36/records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/ef4d3f3ae3ee04a8cf7fab85c9937cfb45f43a36/records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/ef4d3f3ae3ee04a8cf7fab85c9937cfb45f43a36/records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/ef4d3f3ae3ee04a8cf7fab85c9937cfb45f43a36/records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/ef4d3f3ae3ee04a8cf7fab85c9937cfb45f43a36/records/track_10min_16mb/2026-03-28_StackIntegration_LegalTTT_ParallelMuon",
+        "pr": "https://github.com/openai/parameter-golf/pull/1050",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-24_Maestro_SolarProtocol_Joeavaib",
       "source": "pull_request",
       "status": "open",
@@ -19782,7 +19859,7 @@
       },
       "pr": {
         "number": 996,
-        "title": "Pre-Enrichment + EMA-GPU + SmearGate + XSA4 (val_bpb=1.1478, …",
+        "title": "Pre-Enrichment + EMA-GPU + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -19790,7 +19867,7 @@
         "authorLogin": "Idan3011",
         "authorName": null,
         "createdAt": "2026-03-28T00:53:22Z",
-        "updatedAt": "2026-03-28T00:55:14Z",
+        "updatedAt": "2026-03-29T02:23:38Z",
         "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
         "headRepo": "Idan3011/parameter-golf"
       },
