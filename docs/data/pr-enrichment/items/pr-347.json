@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T11:52:08.627Z",
+  "generatedAt": "2026-03-29T16:30:37.126Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 347,
     "title": "GatedAttn + ValueResidual + Full QAT + lzma-9 + BigramHash(2048)",
     "state": "open",
-    "updatedAt": "2026-03-28T11:43:02Z",
-    "headSha": "3dd38f2b5a5c55bb2d829655e45a27ee8572c8ec",
+    "updatedAt": "2026-03-29T16:05:55Z",
+    "headSha": "9db1393ba0f77385455420f4b3a481bb1b9a57b1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/347",
     "authorLogin": "FlashyFlash3011"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GPTQLite keeps LeakyReLU² base while adding GatedAttention/ValueResidual, full-step int6 QAT, lzma-9 compression, and restored 2048 BigramHash.",
+    "summary": "Combines GatedAttention+ValueResidual with end-to-end int6 QAT plus lzma-9 savings to restore a larger BigramHash in GPTQLite.",
     "tags": [
-      "attention",
-      "architecture",
       "quantization",
+      "architecture",
       "compression"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not val-only training.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Per-head gated attention with ValueResidual mixing",
-      "CastedLinear int6 QAT active from step one",
-      "lzma-9 frees budget to restore 2048 BigramHash"
+      "- GatedAttention per-head sigmoid gating initialized near identity",
+      "- ValueResidual injects layer-0 value across all layers",
+      "- Full-run int6 QAT plus lzma-9 compression to afford bigger BigramHash"
     ]
   },
   "compatibility": {
