@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-29T07:27:48.851Z",
+  "generatedAt": "2026-03-29T07:58:10.247Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -53,13 +53,13 @@
       "prNumber": 1060,
       "title": "Record: 1.1123 BPB — Coprime-Stride Loader + Full GPTQ + XSA-all (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-29T06:30:28Z",
-      "headSha": "a274d9eac381c3a03e3c4b951896d682b145886b",
-      "generatedAt": "2026-03-29T06:57:53.283Z",
-      "summary": "Combines coprime-stride multi-shard loading, Full Hessian GPTQ, XSA on every layer, and a larger BigramHash with sliding-only evaluation.",
+      "updatedAt": "2026-03-29T07:33:22Z",
+      "headSha": "fcf51c98c7aef05dc83cedc0128220594ed3051d",
+      "generatedAt": "2026-03-29T07:58:00.668Z",
+      "summary": "Stacks coprime-stride multi-shard batching with full Hessian GPTQ, XSA on all 11 layers, and an expanded BigramHash to stabilize sliding-window eval.",
       "tags": [
         "quantization",
-        "attention",
+        "architecture",
         "tokenization",
         "evaluation"
       ],
@@ -259,10 +259,10 @@
       "prNumber": 1047,
       "title": "(0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
       "status": "open",
-      "updatedAt": "2026-03-29T03:41:48Z",
+      "updatedAt": "2026-03-29T07:44:04Z",
       "headSha": "99d34869c2ced0dd13b353f075765cac14246961",
-      "generatedAt": "2026-03-29T03:56:46.078Z",
-      "summary": "DeltaNet crawler loops with loop-aware GPTQ calibration reuse the Medusa_Unstable topology while GPTQ_RESERVE_MS=30000 keeps the 600s budget.",
+      "generatedAt": "2026-03-29T07:58:05.179Z",
+      "summary": "Medusa Unstable S2 pairs DeltaNet crawler loops with chunk_delta_rule and loop-aware GPTQ, stopping 30s early so calibration fits the 600s budget.",
       "tags": [
         "architecture",
         "quantization",
@@ -929,13 +929,11 @@
       "prNumber": 1011,
       "title": "Anubhav ctw submission",
       "status": "open",
-      "updatedAt": "2026-03-28T09:22:54Z",
-      "headSha": "1059c8eb8c115fe1589dfced90b848f31065b2a7",
-      "generatedAt": "2026-03-28T09:51:31.015Z",
-      "summary": "Combines the SOTA 11-layer GPTQ stack with CTW-based sliding-window eval mixing to merge Bayesian suffix-tree probabilities with neural logits.",
+      "updatedAt": "2026-03-29T07:57:22Z",
+      "headSha": "dbf25a40840c4ac71fc8d88cc855d6987caa7a54",
+      "generatedAt": "2026-03-29T07:58:10.098Z",
+      "summary": "Integrates Context Tree Weighting directly into the TTT scoring loop, log-linearly mixing CTW probabilities with neural logits during evaluation.",
       "tags": [
-        "architecture",
-        "quantization",
         "evaluation",
         "non-record"
       ],
