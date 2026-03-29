@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-29T20:01:12.948Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1094,
+    "title": "Record: 0.4027 BPB — Swarm-Designed Causal BackoffNgramMixer (3-seed mean, std 0.0015)",
+    "state": "open",
+    "updatedAt": "2026-03-29T19:58:07Z",
+    "headSha": "6f5e8076af09635ae79c1a9546b4fe68241bada5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1094",
+    "authorLogin": "michaelwinczuk"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_SwarmDesigned_CausalBackoffNgramMixer_0.4027/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Swarm-selected 11L transformer blends entropy-driven neural and 2–10 order BackoffNgramMixer probabilities while causal chunk eval lets every rank build full n-gram stats.",
+    "tags": [
+      "architecture",
+      "evaluation",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Entropy-adaptive mixture of neural logits with BackoffNgramMixer orders 2‑10",
+      "Strict causal chunk scoring that updates n-gram counts only after scoring each chunk",
+      "Parallel Muon + LeakyReLU² base with KG-informed initialization"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
