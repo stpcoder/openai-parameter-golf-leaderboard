@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T22:01:52.169Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1098,
+    "title": "Add run_17 8xH100 submission (1.118685, <16MB)",
+    "state": "open",
+    "updatedAt": "2026-03-29T21:35:42Z",
+    "headSha": "69c42df0fc2d5ca6116575713d6a3e61ca7e2a45",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1098",
+    "authorLogin": "adityakm24"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_Competitive_8xH100_Run17_TTT_1.1159/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Parameter-banked 11-layer GPT uses GQA/XSA4 mix, partial RoPE+hash embeddings, and int6+LZMA quantization with sliding-window legal score-first TTT.",
+    "tags": [
+      "quantization",
+      "sliding-window-eval",
+      "optimizer",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Parameter-banking GPT stack with GQA, XSA4, Partial RoPE, SmearGate",
+      "Bigram/Trigram hash embeddings plus ValueResidual enrich tokens",
+      "int6+LZMA quantization with sliding-window eval driving legal score-first TTT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

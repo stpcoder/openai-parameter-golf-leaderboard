@@ -1,16 +1,87 @@
 {
-  "generatedAt": "2026-03-29T21:31:53.123Z",
+  "generatedAt": "2026-03-29T22:02:10.318Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1100,
+      "title": "Non-record: LLaDA-MDLM Diffusion — val_var_bpb 1.1465 (first diffusion to beat AR baseline)",
+      "status": "open",
+      "updatedAt": "2026-03-29T21:47:50Z",
+      "headSha": "927e8a2d4f1323bb5b09a6b39ea65a9c94b2b922",
+      "generatedAt": "2026-03-29T22:01:42.658Z",
+      "summary": "Bidirectional 11L transformer trained as MDLM masked diffusion with adaLN timesteps, frozen logits, and discrete absorbing-mask ELBO evaluation to oust the AR baseline.",
+      "tags": [
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1100.json"
+    },
+    {
+      "prNumber": 1099,
+      "title": "Record: Coprime-Stride Loader + Full GPTQ + XSA-all — val_bpb 1.1136 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-29T21:41:26Z",
+      "headSha": "cf068e95456bc8a8f1af2c217e07d4d98a74b9cf",
+      "generatedAt": "2026-03-29T22:01:46.553Z",
+      "summary": "Leveraged coprime-stride loader, full Hessian GPTQ with XSA on all layers, and trimmed GPTQ reserve (plus FA3/FA2 fallback) to reclaim extra steps.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1099.json"
+    },
+    {
+      "prNumber": 1098,
+      "title": "Add run_17 8xH100 submission (1.118685, <16MB)",
+      "status": "open",
+      "updatedAt": "2026-03-29T21:35:42Z",
+      "headSha": "69c42df0fc2d5ca6116575713d6a3e61ca7e2a45",
+      "generatedAt": "2026-03-29T22:01:52.169Z",
+      "summary": "Parameter-banked 11-layer GPT uses GQA/XSA4 mix, partial RoPE+hash embeddings, and int6+LZMA quantization with sliding-window legal score-first TTT.",
+      "tags": [
+        "quantization",
+        "sliding-window-eval",
+        "optimizer",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1098.json"
+    },
+    {
       "prNumber": 1097,
       "title": "Parameter golf jepa",
       "status": "open",
-      "updatedAt": "2026-03-29T21:23:41Z",
+      "updatedAt": "2026-03-29T21:52:18Z",
       "headSha": "5bed757868cf5b8508d09074ad42dd12e96abdaa",
-      "generatedAt": "2026-03-29T21:31:35.838Z",
-      "summary": "Recasts the U-Net transformer as a JEPA-based encoder with a 256-D latent predictor and SIGReg anti-collapse regularizer for text compression.",
+      "generatedAt": "2026-03-29T22:01:57.505Z",
+      "summary": "Recast U-Net as JEPA for text compression with a 256-d latent predictor and SIGReg, keeping JEPA components train-only for zero eval cost.",
       "tags": [
         "architecture",
         "regularization",
@@ -171,10 +242,10 @@
       "prNumber": 1089,
       "title": "Record Submission: 1.1086 BPB - Turbo-Muon + EngramLite + ParamBanking (11L 512d)",
       "status": "open",
-      "updatedAt": "2026-03-29T20:01:21Z",
-      "headSha": "ccf677b1f1f64baf6ceda30a3d74961e30ba82bb",
-      "generatedAt": "2026-03-29T20:31:22.339Z",
-      "summary": "Pairs Turbo-Muon optimizer tweaks with EngramLite hash embeddings, parameter banking, U-Net skips, value reinjection, and GPTQ mixed-precision compression.",
+      "updatedAt": "2026-03-29T21:46:44Z",
+      "headSha": "7a465c4989424eb5297bcca7c39dd5a3e85d3615",
+      "generatedAt": "2026-03-29T22:02:04.586Z",
+      "summary": "11-layer GPT couples Turbo-Muon/parameter banking, EngramLite hash embeddings, U-Net skips, and GPTQ mixed-precision compression within the 16MB budget.",
       "tags": [
         "optimizer",
         "architecture",
@@ -5734,10 +5805,10 @@
       "prNumber": 755,
       "title": "Gravity Tokenizer: 1.0321 BPB via ablation leverage vocabulary optimization",
       "status": "open",
-      "updatedAt": "2026-03-26T18:17:37Z",
+      "updatedAt": "2026-03-29T21:39:58Z",
       "headSha": "06749a127e11317556b61f20c5b9fa161d7d1686",
-      "generatedAt": "2026-03-26T18:41:59.754Z",
-      "summary": "Replaces 659 of 765 BPE merges by scoring tokens via GPT-2 ablation leverage while keeping the 1024-token budget to boost per-token predictions.",
+      "generatedAt": "2026-03-29T22:02:10.205Z",
+      "summary": "Replaces most BPE merges with ablation-leverage scored tokens using GPT-2 loss deltas while keeping the vanilla transformer unchanged.",
       "tags": [
         "tokenization"
       ],

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-26T18:41:59.754Z",
+  "generatedAt": "2026-03-29T22:02:10.205Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 755,
     "title": "Gravity Tokenizer: 1.0321 BPB via ablation leverage vocabulary optimization",
     "state": "open",
-    "updatedAt": "2026-03-26T18:17:37Z",
+    "updatedAt": "2026-03-29T21:39:58Z",
     "headSha": "06749a127e11317556b61f20c5b9fa161d7d1686",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/755",
     "authorLogin": "dcrow85"
@@ -19,16 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Replaces 659 of 765 BPE merges by scoring tokens via GPT-2 ablation leverage while keeping the 1024-token budget to boost per-token predictions.",
+    "summary": "Replaces most BPE merges with ablation-leverage scored tokens using GPT-2 loss deltas while keeping the vanilla transformer unchanged.",
     "tags": [
       "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Ablation leverage scoring with GPT-2 reference",
-      "Rank merge candidates by downstream loss impact",
-      "Build vocab from top 765 scored tokens"
+      "Ablation-leverage scoring for merge token selection",
+      "GPT-2 reference model to measure downstream loss deltas",
+      "Rebuilt vocabulary while keeping baseline transformer untouched"
     ]
   },
   "compatibility": {

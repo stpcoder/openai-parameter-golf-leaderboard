@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-29T22:01:46.553Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1099,
+    "title": "Record: Coprime-Stride Loader + Full GPTQ + XSA-all — val_bpb 1.1136 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-29T21:41:26Z",
+    "headSha": "cf068e95456bc8a8f1af2c217e07d4d98a74b9cf",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1099",
+    "authorLogin": "Bortlesboat"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_V16_CoprimeSWA_EMA_1.1136/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Leveraged coprime-stride loader, full Hessian GPTQ with XSA on all layers, and trimmed GPTQ reserve (plus FA3/FA2 fallback) to reclaim extra steps.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "attention",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training regime with validation used only for final evaluation.",
+    "techniques": [
+      "Coprime-stride multi-shard data pipeline",
+      "Full Hessian GPTQ + XSA on every layer",
+      "Reduced GPTQ reserve and FA3/FA2 fallback"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

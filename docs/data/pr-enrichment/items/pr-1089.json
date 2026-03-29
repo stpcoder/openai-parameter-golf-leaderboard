@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T20:31:22.339Z",
+  "generatedAt": "2026-03-29T22:02:04.586Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1089,
     "title": "Record Submission: 1.1086 BPB - Turbo-Muon + EngramLite + ParamBanking (11L 512d)",
     "state": "open",
-    "updatedAt": "2026-03-29T20:01:21Z",
-    "headSha": "ccf677b1f1f64baf6ceda30a3d74961e30ba82bb",
+    "updatedAt": "2026-03-29T21:46:44Z",
+    "headSha": "7a465c4989424eb5297bcca7c39dd5a3e85d3615",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1089",
     "authorLogin": "mikeapedia"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pairs Turbo-Muon optimizer tweaks with EngramLite hash embeddings, parameter banking, U-Net skips, value reinjection, and GPTQ mixed-precision compression.",
+    "summary": "11-layer GPT couples Turbo-Muon/parameter banking, EngramLite hash embeddings, U-Net skips, and GPTQ mixed-precision compression within the 16MB budget.",
     "tags": [
       "optimizer",
       "architecture",
@@ -28,9 +28,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Turbo-Muon with AOL/Polar Express plus row_col normalization",
-      "EngramLite hash embeddings, ValueEmbedding, and U-Net style skips over parameter-banked weights",
-      "GPTQ int6/int7 quantization with late QAT and Brotli-byte-shuffled compression"
+      "Turbo-Muon optimizer with AOL preconditioning and banked row_col Newton-Schulz",
+      "EngramLite hash embeddings plus U-Net skips and ValueEmbedding to preserve token context",
+      "GPTQ int6/int7 mixed precision with Hessian-guided bit allocation and late QAT"
     ]
   },
   "compatibility": {
