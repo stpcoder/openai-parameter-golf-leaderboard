@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-29T13:28:58.482Z",
+  "generatedAt": "2026-03-29T13:59:28.082Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1047,
     "title": "(0.8822 BPB mean) Medusa: Unstable S2 — DeltaNet Crawler, Legal  10mb. .77bpb single seed.",
     "state": "open",
-    "updatedAt": "2026-03-29T13:26:03Z",
+    "updatedAt": "2026-03-29T13:56:18Z",
     "headSha": "99d34869c2ced0dd13b353f075765cac14246961",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1047",
     "authorLogin": "newjordan"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Medusa pairs a DeltaNet crawler loop topology with loop-aware GPTQ and a GPTQ_RESERVE timing cap to keep int6 calibration within the 600s budget.",
+    "summary": "Medusa Unstable S2 reruns the DeltaNet crawler with loop-aware GPTQ and GPTQ_RESERVE_MS timing so calibration finishes within the 600s budget.",
     "tags": [
       "architecture",
-      "quantization",
-      "training-schedule"
+      "training-schedule",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "DeltaNet crawler loops with chunk_delta_rule",
-      "Loop-aware GPTQ using GPTQ_RESERVE_MS",
-      "Late-start EMA (step 4400, decay 0.99)"
+      "DeltaNet crawler with chunk_delta_rule loops",
+      "Loop-aware 2-phase GPTQ gated by GPTQ_RESERVE_MS",
+      "Late-start EMA (step 4400) scheduling"
     ]
   },
   "compatibility": {

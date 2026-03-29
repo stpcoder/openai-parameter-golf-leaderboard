@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T08:58:04.224Z",
+  "generatedAt": "2026-03-29T13:59:22.991Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1060,
     "title": "Record: 1.1122 BPB — Coprime-Stride Loader + Full GPTQ + XSA-all (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-29T08:34:00Z",
-    "headSha": "d61f5e17f8e075292d24faba8fe2bf7b4bf5eb28",
+    "updatedAt": "2026-03-29T13:31:29Z",
+    "headSha": "87c1e24d6ebe0a4478d7d0c3a8fc5f52bf313a4e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1060",
     "authorLogin": "dexhunter"
   },
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines coprime-stride multi-shard loading with full Hessian GPTQ quantization and XSA across all 11 layers plus an expanded BigramHash projection.",
+    "summary": "Combines coprime-stride multi-shard loading, full Hessian GPTQ quantization, and XSA on every layer for stronger sliding-window eval.",
     "tags": [
-      "architecture",
       "quantization",
-      "tokenization",
-      "attention"
+      "attention",
+      "sliding-window-eval"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Coprime-stride multi-shard data loader",
-      "Full Hessian GPTQ with Cholesky compensation",
-      "XSA on every layer with larger BigramHash"
+      "coprime-stride multi-shard loader",
+      "Full Hessian GPTQ with Cholesky error compensation",
+      "XSA applied across all layers"
     ]
   },
   "compatibility": {

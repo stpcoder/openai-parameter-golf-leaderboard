@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-03-29T13:59:12.306Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1077,
+    "title": "Sota 11 l submission",
+    "state": "open",
+    "updatedAt": "2026-03-29T13:47:55Z",
+    "headSha": "2d74ef7401bf5cbe073b49976dfce5baf863aa61",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1077",
+    "authorLogin": "malc3om"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-29_SOTA_11L_XSA_EMA_TTT/README.md",
+      "records/track_10min_16mb/2026-03-22_Int6_MLP3x_SmearGate_BigramHash_MuonWD_SWA/README.md",
+      "records/track_10min_16mb/2026-03-22_10L_Int5MLP_Bigram_SWA_Prune/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "11-layer U-Net transformer stacks LeakyReLU², partial RoPE, XSA, VE128, dual EMA+SWA averaging, and late INT6 QAT with legal test-time training.",
+    "tags": [
+      "architecture",
+      "attention",
+      "quantization",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "11-layer U-Net with partial RoPE/XSA",
+      "Late INT6 QAT + GPTQ-lite export",
+      "EMA+SWA plus legal backward-looking TTT"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
