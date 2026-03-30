@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-03-30T08:04:29.567Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1126,
+    "title": "review: Rerun of PR #1089",
+    "state": "open",
+    "updatedAt": "2026-03-30T08:02:49Z",
+    "headSha": "3a7a47806853394e1027467811d454f93e5c6f4e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1126",
+    "authorLogin": "AnirudhRahul"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Rerun the PR #1089 head via train_gpt.py to log seed-42 metrics and document the slower execution/environment compared to the published bundle.",
+    "tags": [
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Rerun the PR #1089 head through executable train_gpt.py",
+      "Capture raw seed-42 metrics/logs alongside environment details",
+      "Compare rerun timing vs bundled published run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

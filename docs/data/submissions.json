@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T07:34:21.523Z",
+  "generatedAt": "2026-03-30T08:04:22.281Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -50201,18 +50201,18 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1089,
-        "title": "Record Submission: 1.1091 BPB - Turbo-Muon + EngramLite + ParamBanking + XSA (11L 512d)",
+        "number": 1126,
+        "title": "review: Rerun of PR #1089",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1089",
-        "authorLogin": "mikeapedia",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1126",
+        "authorLogin": "AnirudhRahul",
         "authorName": null,
-        "createdAt": "2026-03-29T18:10:07Z",
-        "updatedAt": "2026-03-30T01:17:51Z",
-        "headSha": "215193e3e3f31569c445d6e45020d22e74d05daf",
-        "headRepo": "mikeapedia/parameter-golf-1"
+        "createdAt": "2026-03-30T08:01:55Z",
+        "updatedAt": "2026-03-30T08:02:49Z",
+        "headSha": "3a7a47806853394e1027467811d454f93e5c6f4e",
+        "headRepo": "AnirudhRahul/parameter-golf"
       },
       "links": {
         "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/215193e3e3f31569c445d6e45020d22e74d05daf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
@@ -50220,7 +50220,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/215193e3e3f31569c445d6e45020d22e74d05daf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/215193e3e3f31569c445d6e45020d22e74d05daf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/215193e3e3f31569c445d6e45020d22e74d05daf/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
-        "pr": "https://github.com/openai/parameter-golf/pull/1089",
+        "pr": "https://github.com/openai/parameter-golf/pull/1126",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

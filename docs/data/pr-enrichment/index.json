@@ -1,8 +1,29 @@
 {
-  "generatedAt": "2026-03-30T07:34:27.840Z",
+  "generatedAt": "2026-03-30T08:04:29.740Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1126,
+      "title": "review: Rerun of PR #1089",
+      "status": "open",
+      "updatedAt": "2026-03-30T08:02:49Z",
+      "headSha": "3a7a47806853394e1027467811d454f93e5c6f4e",
+      "generatedAt": "2026-03-30T08:04:29.567Z",
+      "summary": "Rerun the PR #1089 head via train_gpt.py to log seed-42 metrics and document the slower execution/environment compared to the published bundle.",
+      "tags": [
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1126.json"
+    },
     {
       "prNumber": 1123,
       "title": "Non-Record Submission: 1.1986 BPB — HybridQuantGPT v6.1 rANS + Legal TTT",
@@ -585,30 +606,6 @@
         "valOnlyMatchesCollector": false
       },
       "file": "items/pr-1090.json"
-    },
-    {
-      "prNumber": 1089,
-      "title": "Record Submission: 1.1091 BPB - Turbo-Muon + EngramLite + ParamBanking + XSA (11L 512d)",
-      "status": "open",
-      "updatedAt": "2026-03-30T01:17:51Z",
-      "headSha": "215193e3e3f31569c445d6e45020d22e74d05daf",
-      "generatedAt": "2026-03-30T01:32:33.230Z",
-      "summary": "11L GPT packs Turbo-Muon optimizer, EngramLite hash embeddings, Parameter Banking, gated skips/ValueEmbedding, SmearGate, XSA, and GPTQ mixed precision.",
-      "tags": [
-        "optimizer",
-        "architecture",
-        "attention",
-        "compression"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1089.json"
     },
     {
       "prNumber": 1088,
