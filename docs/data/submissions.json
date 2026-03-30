@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T21:37:56.941Z",
+  "generatedAt": "2026-03-30T22:08:03.571Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -38193,7 +38193,7 @@
         "authorLogin": "serdardoesml",
         "authorName": null,
         "createdAt": "2026-03-29T18:09:25Z",
-        "updatedAt": "2026-03-29T18:09:25Z",
+        "updatedAt": "2026-03-30T21:56:51Z",
         "headSha": "e2ae49483e66807be0c52a2126bcef2bd062de2a",
         "headRepo": "serdardoesml/parameter-golf"
       },
@@ -46375,6 +46375,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-30_ConnectomeJEPA",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-30_ConnectomeJEPA",
+        "folderPath": "records/track_non_record_16mb/2026-03-30_ConnectomeJEPA",
+        "submissionPath": "records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/train_gpt.py"
+      },
+      "submission": {
+        "author": "Eric B.",
+        "githubId": "ericdatum",
+        "name": "Connectome-JEPA",
+        "blurb": null,
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.7942,
+        "valLoss": 3.0294,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1152,
+        "title": "Non-record: Connectome-JEPA — Sparse I/O Bottleneck (val_bpb 1.7942 ± 0.003, 1.97MB artifact, first JEPA submission)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1152",
+        "authorLogin": "ericdatum",
+        "authorName": null,
+        "createdAt": "2026-03-30T21:47:53Z",
+        "updatedAt": "2026-03-30T21:47:53Z",
+        "headSha": "160ff86c87ed75c5082576c6d8795798b8fa3503",
+        "headRepo": "ericdatum/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/160ff86c87ed75c5082576c6d8795798b8fa3503/records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/160ff86c87ed75c5082576c6d8795798b8fa3503/records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/160ff86c87ed75c5082576c6d8795798b8fa3503/records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/160ff86c87ed75c5082576c6d8795798b8fa3503/records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/160ff86c87ed75c5082576c6d8795798b8fa3503/records/track_non_record_16mb/2026-03-30_ConnectomeJEPA",
+        "pr": "https://github.com/openai/parameter-golf/pull/1152",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-27_classical_doccopy_16p3m_skipgate_eval",
       "source": "pull_request",
       "status": "open",
@@ -47655,17 +47732,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 1149,
-        "title": "Add non-record submission: faithful KV-cache quantization backends on 1x RTX 3090",
+        "number": 1154,
+        "title": "Non-record: Polar STE QAT for structural weights",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1149",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1154",
         "authorLogin": "LucasErcolano",
         "authorName": null,
-        "createdAt": "2026-03-30T20:10:39Z",
-        "updatedAt": "2026-03-30T20:10:39Z",
-        "headSha": "bbd566bc45411f3dcedd0518e2cdf45192ff8b49",
+        "createdAt": "2026-03-30T21:54:03Z",
+        "updatedAt": "2026-03-30T21:54:03Z",
+        "headSha": "ba91df0c4ada35df6ae5e7c8a9c1bb44cceba00e",
         "headRepo": "LucasErcolano/parameter-golf"
       },
       "links": {
@@ -47674,7 +47751,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/bbd566bc45411f3dcedd0518e2cdf45192ff8b49/records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/bbd566bc45411f3dcedd0518e2cdf45192ff8b49/records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/bbd566bc45411f3dcedd0518e2cdf45192ff8b49/records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090",
-        "pr": "https://github.com/openai/parameter-golf/pull/1149",
+        "pr": "https://github.com/openai/parameter-golf/pull/1154",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-30T21:38:02.637Z",
+  "generatedAt": "2026-03-30T22:08:19.954Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1154,
+      "title": "Non-record: Polar STE QAT for structural weights",
+      "status": "open",
+      "updatedAt": "2026-03-30T21:54:03Z",
+      "headSha": "ba91df0c4ada35df6ae5e7c8a9c1bb44cceba00e",
+      "generatedAt": "2026-03-30T22:08:09.836Z",
+      "summary": "Adds Polar STE QAT for structural weights plus matching polar export helpers and roundtrip validation dequantization.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1154.json"
+    },
+    {
+      "prNumber": 1152,
+      "title": "Non-record: Connectome-JEPA — Sparse I/O Bottleneck (val_bpb 1.7942 ± 0.003, 1.97MB artifact, first JEPA submission)",
+      "status": "open",
+      "updatedAt": "2026-03-30T21:47:53Z",
+      "headSha": "160ff86c87ed75c5082576c6d8795798b8fa3503",
+      "generatedAt": "2026-03-30T22:08:15.055Z",
+      "summary": "Routes tokens through connectome-derived sparse hops with gated skips and cross-position attention while combining JEPA and SigREG losses for compact language modeling.",
+      "tags": [
+        "architecture",
+        "attention",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1152.json"
+    },
     {
       "prNumber": 1150,
       "title": "Legal TTT (SGD, 3-epoch) + SLOT (lr=0.003, steps=5) on PR #549 base -- val_bpb: 1.11512 (3-seed mean, beats merged SOTA 1.1194)",
@@ -24,29 +72,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1150.json"
-    },
-    {
-      "prNumber": 1149,
-      "title": "Add non-record submission: faithful KV-cache quantization backends on 1x RTX 3090",
-      "status": "open",
-      "updatedAt": "2026-03-30T20:10:39Z",
-      "headSha": "bbd566bc45411f3dcedd0518e2cdf45192ff8b49",
-      "generatedAt": "2026-03-30T20:38:02.394Z",
-      "summary": "Adds a teacher-forced autoregressive KV-cache evaluator with per-layer updates and QJL/Polar/Turbo-inspired quantization backends on the baseline Parameter Golf model.",
-      "tags": [
-        "evaluation",
-        "quantization",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1149.json"
     },
     {
       "prNumber": 1148,
@@ -1028,10 +1053,10 @@
       "prNumber": 1088,
       "title": "Non-Record Universal Transformer submission. (2x Attention layers, 3 Layer MLP, depth scheduling)",
       "status": "open",
-      "updatedAt": "2026-03-29T18:09:25Z",
+      "updatedAt": "2026-03-30T21:56:51Z",
       "headSha": "e2ae49483e66807be0c52a2126bcef2bd062de2a",
-      "generatedAt": "2026-03-29T18:31:17.908Z",
-      "summary": "Shared Universal Transformer block stacks two attention sublayers before a 3-layer MLP with depth biases plus a compile-time depth schedule for efficient training.",
+      "generatedAt": "2026-03-30T22:08:19.796Z",
+      "summary": "Shared Universal Transformer blocks use two attention layers before a 3-layer MLP with biasful pre-norms and a compiled depth schedule for efficient training.",
       "tags": [
         "architecture",
         "attention",

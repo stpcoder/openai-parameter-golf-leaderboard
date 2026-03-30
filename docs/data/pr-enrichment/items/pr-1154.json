@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-30T22:08:09.836Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1154,
+    "title": "Non-record: Polar STE QAT for structural weights",
+    "state": "open",
+    "updatedAt": "2026-03-30T21:54:03Z",
+    "headSha": "ba91df0c4ada35df6ae5e7c8a9c1bb44cceba00e",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1154",
+    "authorLogin": "LucasErcolano"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_KVCache_QJL_Polar_Turbo_1x3090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds Polar STE QAT for structural weights plus matching polar export helpers and roundtrip validation dequantization.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Polar STE QAT for structural tensors",
+      "Shared polar row encode/decode path for QAT and export",
+      "Validation path includes polar dequantization roundtrip"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

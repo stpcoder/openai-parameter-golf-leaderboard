@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-30T22:08:15.055Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1152,
+    "title": "Non-record: Connectome-JEPA — Sparse I/O Bottleneck (val_bpb 1.7942 ± 0.003, 1.97MB artifact, first JEPA submission)",
+    "state": "open",
+    "updatedAt": "2026-03-30T21:47:53Z",
+    "headSha": "160ff86c87ed75c5082576c6d8795798b8fa3503",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1152",
+    "authorLogin": "ericdatum"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-30_ConnectomeJEPA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Routes tokens through connectome-derived sparse hops with gated skips and cross-position attention while combining JEPA and SigREG losses for compact language modeling.",
+    "tags": [
+      "architecture",
+      "attention",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Connectome-derived sparse masked linear hops with gated re-injection",
+      "Cross-position causal attention layers for sequence modeling",
+      "JEPA latent prediction plus SigREG regularization added to CE loss"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
