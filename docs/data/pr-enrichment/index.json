@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-03-30T09:04:46.902Z",
+  "generatedAt": "2026-03-30T10:05:23.807Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1129,
+      "title": "Record: CROWN-Q + GPTQ + Legal TTT — val_bpb 1.1174 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-30T09:54:20Z",
+      "headSha": "3c407db13044aa26a64b6f33573a5d48cef12552",
+      "generatedAt": "2026-03-30T10:05:02.926Z",
+      "summary": "Combines CROWN-Q penalty, full Cholesky GPTQ, and score-first AdamW TTT with sqrt cooldown on an 11L GQA model.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1129.json"
+    },
+    {
+      "prNumber": 1128,
+      "title": "Record: SLOT + LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1154 (3-seed mean) val_bpb = 1.1154 (3-seed mean, std 0.0002) | ~15.9 MB | 8×H100 SXM",
+      "status": "open",
+      "updatedAt": "2026-03-30T09:43:36Z",
+      "headSha": "fa81682e390dffb301ad941dff097f11f15edbde",
+      "generatedAt": "2026-03-30T10:05:09.641Z",
+      "summary": "Stacks per-batch SLOT delta optimization on top of score-first TTT to fine-tune the hidden-to-logit mapping during eval.",
+      "tags": [
+        "evaluation",
+        "optimizer",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1128.json"
+    },
     {
       "prNumber": 1127,
       "title": "Record: 11L XSA4 + EMA + LoRA TTT + Partial RoPE + dim480 — val_bpb 1.13112 (3-seed)",
@@ -423,10 +470,10 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-03-30T06:36:00Z",
+      "updatedAt": "2026-03-30T10:02:08Z",
       "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
-      "generatedAt": "2026-03-30T07:04:15.830Z",
-      "summary": "1-stage H-Net trained with dynamic chunking on byte260 vs sp1024, showing byte-level whitespace-aligned boundaries via multi-GPU DDP.",
+      "generatedAt": "2026-03-30T10:05:15.742Z",
+      "summary": "1-stage H-Net learns byte-level dynamic chunking aligned with whitespace via its encoder/main/decoder layout and ablated RLW/OL/LR settings.",
       "tags": [
         "architecture",
         "tokenization",
@@ -700,29 +747,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1085.json"
-    },
-    {
-      "prNumber": 1084,
-      "title": "Non-Record: SLOT Eval-Time Augmentation on PR #549 SOTA Stack val_bpb = 1.1185 (3-seed mean, std 0.0003) | ~15.9 MB | 8×H100 SXM",
-      "status": "open",
-      "updatedAt": "2026-03-30T08:11:30Z",
-      "headSha": "1a99ad2270f856731ebcf8dc95770f805b002861",
-      "generatedAt": "2026-03-30T08:35:02.837Z",
-      "summary": "SLOT inserts a lightweight per-batch delta optimizer between hidden states and logits inside the TTT loop to fine-tune evaluations on the PR #549 stack.",
-      "tags": [
-        "non-record",
-        "evaluation",
-        "architecture"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1084.json"
     },
     {
       "prNumber": 1081,
@@ -1059,14 +1083,14 @@
       "prNumber": 1061,
       "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
       "status": "open",
-      "updatedAt": "2026-03-30T06:46:24Z",
-      "headSha": "ff0135d66b7fdaed35f0359bf89782fb38a67360",
-      "generatedAt": "2026-03-30T07:04:19.021Z",
-      "summary": "Processes tokens through FFT-implemented damped harmonic oscillator impulse responses before feeding physics-enriched states to attention layers for long-range text modeling.",
+      "updatedAt": "2026-03-30T09:55:16Z",
+      "headSha": "54ba8cfc2bf3a0bda2bbf4264263b780f82fef27",
+      "generatedAt": "2026-03-30T10:05:20.166Z",
+      "summary": "Damped harmonic oscillators deliver causal context via FFT convolution, then attention layers operate on physics-enriched states for text and waveform signals.",
       "tags": [
         "architecture",
         "attention",
-        "optimizer"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1402,13 +1426,12 @@
       "prNumber": 1042,
       "title": "Record: Adaptive Precision Embedding Quantization (4-seed mean val_bpb=1.1217)",
       "status": "open",
-      "updatedAt": "2026-03-28T23:06:05Z",
-      "headSha": "fa15c5938fd14e8ecd8b11690c130a3b44abfc4a",
-      "generatedAt": "2026-03-28T23:25:50.567Z",
-      "summary": "Adaptive embedding quantization uses int8 for the top 100 tokens and int6 for the rest to keep frequent tokens precise while compressing the vocabulary.",
+      "updatedAt": "2026-03-30T09:58:06Z",
+      "headSha": "4a66e132c31d7c0208ef85f37aef81d9b7b945e1",
+      "generatedAt": "2026-03-30T10:05:23.654Z",
+      "summary": "Adaptive precision quantizes embeddings by keeping the top 100 tokens at int8 while the remaining tokens stay at int6 to reduce frequent-token error accumulation.",
       "tags": [
-        "quantization",
-        "compression"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,

@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-03-30T10:05:02.926Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1129,
+    "title": "Record: CROWN-Q + GPTQ + Legal TTT — val_bpb 1.1174 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-30T09:54:20Z",
+    "headSha": "3c407db13044aa26a64b6f33573a5d48cef12552",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1129",
+    "authorLogin": "EthanYangTW"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_V38_SqrtCooldown_3seed/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines CROWN-Q penalty, full Cholesky GPTQ, and score-first AdamW TTT with sqrt cooldown on an 11L GQA model.",
+    "tags": [
+      "quantization",
+      "optimizer",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "CROWN-Q curvature-weighted quant penalty during warmdown",
+      "Full Cholesky GPTQ with act-order training-data calibration",
+      "Score-first AdamW TTT plus sqrt cooldown to hold LR higher later"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

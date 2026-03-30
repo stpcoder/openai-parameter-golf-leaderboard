@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-03-30T10:05:09.641Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1128,
+    "title": "Record: SLOT + LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1154 (3-seed mean) val_bpb = 1.1154 (3-seed mean, std 0.0002) | ~15.9 MB | 8×H100 SXM",
+    "state": "open",
+    "updatedAt": "2026-03-30T09:43:36Z",
+    "headSha": "fa81682e390dffb301ad941dff097f11f15edbde",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1128",
+    "authorLogin": "AnubhavBharadwaaj"
+  },
+  "inputs": {
+    "hash": "c4f8d017d13e812b0ad5a78b677f8350df1124736cd3f84c8d4e37f273206c70",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/README.md",
+      "records/track_non_record_16mb/2026-03-29_SLOT_on_LeakyReLU_TTT_ParallelMuon/README.md",
+      "records/track_non_record_16mb/2026-03-29_CTW_on_LeakyReLU_TTT_ParallelMuon/README.md"
+    ],
+    "submissionCount": 3
+  },
+  "output": {
+    "summary": "Stacks per-batch SLOT delta optimization on top of score-first TTT to fine-tune the hidden-to-logit mapping during eval.",
+    "tags": [
+      "evaluation",
+      "optimizer",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SLOT delta tuned per batch between hidden states and logits",
+      "Score-first TTT adapts all weights chunk-wise while SLOT tweaks last-layer mapping",
+      "AdamW on a 512-d delta inside scoring phase"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

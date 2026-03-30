@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T07:04:19.021Z",
+  "generatedAt": "2026-03-30T10:05:20.166Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1061,
     "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
     "state": "open",
-    "updatedAt": "2026-03-30T06:46:24Z",
-    "headSha": "ff0135d66b7fdaed35f0359bf89782fb38a67360",
+    "updatedAt": "2026-03-30T09:55:16Z",
+    "headSha": "54ba8cfc2bf3a0bda2bbf4264263b780f82fef27",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1061",
     "authorLogin": "rolandnsharp"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Processes tokens through FFT-implemented damped harmonic oscillator impulse responses before feeding physics-enriched states to attention layers for long-range text modeling.",
+    "summary": "Damped harmonic oscillators deliver causal context via FFT convolution, then attention layers operate on physics-enriched states for text and waveform signals.",
     "tags": [
       "architecture",
       "attention",
-      "optimizer"
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "physics-inspired oscillator convolution",
-      "FFT-based causal impulse response",
-      "dual optimizer mix"
+      "Physics-driven oscillator impulse convolution for causal context",
+      "FFT-based parallel causal convolution",
+      "Attention over oscillator states"
     ]
   },
   "compatibility": {
