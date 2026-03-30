@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-30T01:02:17.624Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1107,
+    "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
+    "state": "open",
+    "updatedAt": "2026-03-30T00:55:11Z",
+    "headSha": "f30e99441bb477132d5e0b233526924472eb7882",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1107",
+    "authorLogin": "mradassaad"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-29_Mamba3Hybrid_QAT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hybrid model runs Mamba-3 SISO SSD blocks with one attention layer, tuning QAT coverage and hardware-aware warmdown for INT6 compression.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "attention",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "Standard training/eval regime; not explicitly val-only.",
+    "techniques": [
+      "Mamba-3 SISO SSD + single attention hybrid",
+      "Extend QAT to SSD projections via CastedLinear swap",
+      "Scale warmdown iters to hardware step latency"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-30T00:32:22.826Z",
+  "generatedAt": "2026-03-30T01:02:34.778Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1107,
+      "title": "Mamba-3 SSD + Attention Hybrid with QAT (1.5633 bpb)",
+      "status": "open",
+      "updatedAt": "2026-03-30T00:55:11Z",
+      "headSha": "f30e99441bb477132d5e0b233526924472eb7882",
+      "generatedAt": "2026-03-30T01:02:17.624Z",
+      "summary": "Hybrid model runs Mamba-3 SISO SSD blocks with one attention layer, tuning QAT coverage and hardware-aware warmdown for INT6 compression.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1107.json"
+    },
+    {
+      "prNumber": 1106,
+      "title": "Non-record: MDLM Diffusion — val_var_bpb 1.1465 (first diffusion to beat AR baseline)",
+      "status": "open",
+      "updatedAt": "2026-03-30T00:41:22Z",
+      "headSha": "ed08ba8b60154fa2a062127097b5302337467eb5",
+      "generatedAt": "2026-03-30T01:02:22.755Z",
+      "summary": "11-layer MDLM diffusion uses log-linear noise, adaLN conditioning, frozen logits, and discrete absorbing-mask ELBO evaluation to surpass the autoregressive baseline.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1106.json"
+    },
     {
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
@@ -50,30 +98,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1101.json"
-    },
-    {
-      "prNumber": 1100,
-      "title": "Non-record: LLaDA-MDLM Diffusion — val_var_bpb 1.1465 (first diffusion to beat AR baseline)",
-      "status": "closed",
-      "updatedAt": "2026-03-30T00:23:02Z",
-      "headSha": "927e8a2d4f1323bb5b09a6b39ea65a9c94b2b922",
-      "generatedAt": "2026-03-30T00:32:16.911Z",
-      "summary": "MDLM masked diffusion runs an 11L bidirectional Transformer with log-linear noise, adaLN timesteps, and frozen visible logits evaluated by discrete ELBO.",
-      "tags": [
-        "architecture",
-        "training-schedule",
-        "evaluation",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1100.json"
     },
     {
       "prNumber": 1099,
@@ -194,17 +218,16 @@
     },
     {
       "prNumber": 1094,
-      "title": "Record: 0.4027 BPB — Swarm-Designed Causal BackoffNgramMixer (3-seed mean, std 0.0015)",
+      "title": "Record: 0.3958 BPB — Causal BackoffNgramMixer (3-seed, std 0.0011)",
       "status": "open",
-      "updatedAt": "2026-03-29T20:02:36Z",
-      "headSha": "6f5e8076af09635ae79c1a9546b4fe68241bada5",
-      "generatedAt": "2026-03-29T20:31:13.234Z",
-      "summary": "Swarm-designed 11L transformer pairs Parallel Muon with a causal BackoffNgramMixer to score sequential chunks and build robust high-order n-gram stats.",
+      "updatedAt": "2026-03-30T00:57:29Z",
+      "headSha": "0befb078f89158751309ae9c66b6a3bd99ad92a3",
+      "generatedAt": "2026-03-30T01:02:27.563Z",
+      "summary": "11L LeakyReLU² transformer mixes causal BackoffNgramMixer with entropy-adaptive alpha via batched sliding-window eval that incrementally updates n-grams.",
       "tags": [
         "architecture",
         "evaluation",
-        "optimizer",
-        "quantization"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -409,10 +432,10 @@
       "prNumber": 1083,
       "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
       "status": "open",
-      "updatedAt": "2026-03-29T23:56:40Z",
+      "updatedAt": "2026-03-30T00:58:37Z",
       "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
-      "generatedAt": "2026-03-30T00:02:27.533Z",
-      "summary": "ClownCar crawler (flat+crawler loops) pairs with shared 3D Cubric adaptive ngram oracle, complementary training, and loop-aware GPTQ quantization.",
+      "generatedAt": "2026-03-30T01:02:34.621Z",
+      "summary": "Pairs a Frugendorff ClownCar crawler with shared 3D Cubric n-gram oracle plus complementary training/entropy-based alpha to exploit oracle corrections before int6 quantization.",
       "tags": [
         "architecture",
         "quantization",
