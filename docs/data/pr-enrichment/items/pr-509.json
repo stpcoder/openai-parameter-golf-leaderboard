@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-23T06:44:43.740Z",
+  "generatedAt": "2026-03-30T16:37:17.764Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 509,
     "title": "Non-record: Cosine TTT 30ep on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
-    "state": "open",
-    "updatedAt": "2026-03-23T06:19:00Z",
+    "state": "closed",
+    "updatedAt": "2026-03-30T16:26:15Z",
     "headSha": "fb12909efab66df9a3bcaff33cb4dfac5142a28a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/509",
     "authorLogin": "andrewbaggio1"
@@ -19,25 +19,25 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Extends the SwiGLU+U-Net stack with 30-epoch cosine test-time training to deepen validation adaptation.",
+    "summary": "Extends the SwiGLU+U-Net stack with 30-epoch cosine-decayed TTT to better adapt sliding-window validation tokens.",
     "tags": [
-      "architecture",
+      "sliding-window-eval",
       "training-schedule",
-      "val-only",
+      "architecture",
       "non-record"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TTT applies 30 epochs of training directly on validation shards between base training and evaluation.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "30-epoch cosine test-time training",
-      "SwiGLU + U-Net gated-skip backbone",
-      "Late int6 QAT with SmearGate quantization"
+      "30-epoch cosine-decay test-time training",
+      "SwiGLU + gated U-Net encoder-decoder stack",
+      "Late INT6 quantization with partial RoPE"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

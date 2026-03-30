@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T16:06:47.473Z",
+  "generatedAt": "2026-03-30T16:36:52.596Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -6408,7 +6408,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-25_CosineTTT_NgramCache_8xH100",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -6456,14 +6456,14 @@
       "pr": {
         "number": 741,
         "title": "Record: Cosine TTT + Multi-Order N-gram Cache (3-seed mean val_bpb=0.9850)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/741",
         "authorLogin": "andrewbaggio1",
         "authorName": null,
         "createdAt": "2026-03-25T16:35:12Z",
-        "updatedAt": "2026-03-25T16:46:56Z",
+        "updatedAt": "2026-03-30T16:26:10Z",
         "headSha": "30ba8e4100bd32bf11bd0a41a1f88f9371003733",
         "headRepo": "andrewbaggio1/parameter-golf"
       },
@@ -11881,7 +11881,7 @@
     {
       "id": "record-records-track_non_record_16mb-2026-03-24_CosineTTT30ep_SwiGLU_1xH100",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "non-record",
       "track": {
         "path": "records/track_non_record_16mb",
@@ -11929,14 +11929,14 @@
       "pr": {
         "number": 661,
         "title": "Non-record: 30ep Cosine TTT on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/661",
         "authorLogin": "andrewbaggio1",
         "authorName": null,
         "createdAt": "2026-03-25T00:08:43Z",
-        "updatedAt": "2026-03-25T00:08:43Z",
+        "updatedAt": "2026-03-30T16:26:13Z",
         "headSha": "04738a3caa13b9de016049bd3fa3a6fac9b0fa47",
         "headRepo": "andrewbaggio1/parameter-golf"
       },
@@ -11958,7 +11958,7 @@
     {
       "id": "record-records-track_non_record_16mb-2026-03-23_CosineTTT30ep_SwiGLU_1xH100",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "non-record",
       "track": {
         "path": "records/track_non_record_16mb",
@@ -12006,14 +12006,14 @@
       "pr": {
         "number": 509,
         "title": "Non-record: Cosine TTT 30ep on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/509",
         "authorLogin": "andrewbaggio1",
         "authorName": null,
         "createdAt": "2026-03-23T06:19:00Z",
-        "updatedAt": "2026-03-23T06:19:00Z",
+        "updatedAt": "2026-03-30T16:26:15Z",
         "headSha": "fb12909efab66df9a3bcaff33cb4dfac5142a28a",
         "headRepo": "andrewbaggio1/parameter-golf"
       },
@@ -12783,16 +12783,16 @@
         "authorLogin": "Adam-Jacuch",
         "authorName": null,
         "createdAt": "2026-03-27T17:07:03Z",
-        "updatedAt": "2026-03-30T15:43:31Z",
-        "headSha": "008ad4374c9cb8ae9db366a523e1d2fb4ede11c3",
+        "updatedAt": "2026-03-30T16:13:56Z",
+        "headSha": "a91415ab39f2865e667f467a9e9a5e6acdb29eec",
         "headRepo": "Adam-Jacuch/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/008ad4374c9cb8ae9db366a523e1d2fb4ede11c3/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/008ad4374c9cb8ae9db366a523e1d2fb4ede11c3/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/008ad4374c9cb8ae9db366a523e1d2fb4ede11c3/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/008ad4374c9cb8ae9db366a523e1d2fb4ede11c3/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/008ad4374c9cb8ae9db366a523e1d2fb4ede11c3/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a91415ab39f2865e667f467a9e9a5e6acdb29eec/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/a91415ab39f2865e667f467a9e9a5e6acdb29eec/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/a91415ab39f2865e667f467a9e9a5e6acdb29eec/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/a91415ab39f2865e667f467a9e9a5e6acdb29eec/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/a91415ab39f2865e667f467a9e9a5e6acdb29eec/records/track_10min_16mb/2026-03-27_11L_KGIIR_Fused_Adam",
         "pr": "https://github.com/openai/parameter-golf/pull/965",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

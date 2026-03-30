@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T16:06:59.299Z",
+  "generatedAt": "2026-03-30T16:37:17.841Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -2836,10 +2836,10 @@
       "prNumber": 965,
       "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
       "status": "open",
-      "updatedAt": "2026-03-30T15:43:31Z",
-      "headSha": "008ad4374c9cb8ae9db366a523e1d2fb4ede11c3",
-      "generatedAt": "2026-03-30T16:06:59.160Z",
-      "summary": "Augments the Bektursun baseline with gated 4-tap Kinematic IIR trajectory mixing to capture local momentum so attention can focus on broader global reasoning.",
+      "updatedAt": "2026-03-30T16:13:56Z",
+      "headSha": "a91415ab39f2865e667f467a9e9a5e6acdb29eec",
+      "generatedAt": "2026-03-30T16:36:59.263Z",
+      "summary": "Adds a fused gated causal 4-tap mixer before Q/K/V to mix recent hidden states and ease short-range dependencies for low-budget attention.",
       "tags": [
         "architecture",
         "attention"
@@ -6428,15 +6428,16 @@
     {
       "prNumber": 741,
       "title": "Record: Cosine TTT + Multi-Order N-gram Cache (3-seed mean val_bpb=0.9850)",
-      "status": "open",
-      "updatedAt": "2026-03-25T16:46:56Z",
+      "status": "closed",
+      "updatedAt": "2026-03-30T16:26:10Z",
       "headSha": "30ba8e4100bd32bf11bd0a41a1f88f9371003733",
-      "generatedAt": "2026-03-25T17:03:00.061Z",
-      "summary": "Single-pass cosine LR TTT adaptation followed by sliding-window multi-order n-gram cache with entropy-adaptive interpolation.",
+      "generatedAt": "2026-03-30T16:37:06.941Z",
+      "summary": "Combine per-layer cosine-LR TTT recovery with sliding-window multi-order n-gram cache using entropy-adaptive interpolation for final scoring.",
       "tags": [
         "val-only",
         "training-schedule",
-        "sliding-window-eval"
+        "sliding-window-eval",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": true,
@@ -7667,14 +7668,14 @@
     {
       "prNumber": 661,
       "title": "Non-record: 30ep Cosine TTT on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
-      "status": "open",
-      "updatedAt": "2026-03-25T00:08:43Z",
+      "status": "closed",
+      "updatedAt": "2026-03-30T16:26:13Z",
       "headSha": "04738a3caa13b9de016049bd3fa3a6fac9b0fa47",
-      "generatedAt": "2026-03-25T00:28:11.126Z",
-      "summary": "PR increases cosine TTT to 30 epochs on the PR462 SwiGLU + U-Net stack with BigramHash, EMA, and compression.",
+      "generatedAt": "2026-03-30T16:37:11.999Z",
+      "summary": "SwiGLU+U-Net stack runs 30-epoch cosine TTT to refine pre-quantized weights before int6 compression.",
       "tags": [
-        "training-schedule",
         "architecture",
+        "training-schedule",
         "quantization",
         "non-record"
       ],
@@ -9921,24 +9922,24 @@
     {
       "prNumber": 509,
       "title": "Non-record: Cosine TTT 30ep on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
-      "status": "open",
-      "updatedAt": "2026-03-23T06:19:00Z",
+      "status": "closed",
+      "updatedAt": "2026-03-30T16:26:15Z",
       "headSha": "fb12909efab66df9a3bcaff33cb4dfac5142a28a",
-      "generatedAt": "2026-03-23T06:44:43.740Z",
-      "summary": "Extends the SwiGLU+U-Net stack with 30-epoch cosine test-time training to deepen validation adaptation.",
+      "generatedAt": "2026-03-30T16:37:17.764Z",
+      "summary": "Extends the SwiGLU+U-Net stack with 30-epoch cosine-decayed TTT to better adapt sliding-window validation tokens.",
       "tags": [
-        "architecture",
+        "sliding-window-eval",
         "training-schedule",
-        "val-only",
+        "architecture",
         "non-record"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-509.json"
     },

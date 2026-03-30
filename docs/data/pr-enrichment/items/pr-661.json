@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-25T00:28:11.126Z",
+  "generatedAt": "2026-03-30T16:37:11.999Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 661,
     "title": "Non-record: 30ep Cosine TTT on SwiGLU + U-Net (1xH100, val_bpb=1.1175)",
-    "state": "open",
-    "updatedAt": "2026-03-25T00:08:43Z",
+    "state": "closed",
+    "updatedAt": "2026-03-30T16:26:13Z",
     "headSha": "04738a3caa13b9de016049bd3fa3a6fac9b0fa47",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/661",
     "authorLogin": "andrewbaggio1"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "PR increases cosine TTT to 30 epochs on the PR462 SwiGLU + U-Net stack with BigramHash, EMA, and compression.",
+    "summary": "SwiGLU+U-Net stack runs 30-epoch cosine TTT to refine pre-quantized weights before int6 compression.",
     "tags": [
-      "training-schedule",
       "architecture",
+      "training-schedule",
       "quantization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SwiGLU + U-Net backbone with BigramHash, SmearGate, and EMA",
-      "Cosine TTT schedule extended to 30 epochs",
-      "Late QAT with Int6+zstd compression"
+      "SwiGLU + U-Net with gated skips",
+      "extended 30-epoch cosine TTT tuning",
+      "Late QAT plus int6+zstd compression"
     ]
   },
   "compatibility": {
