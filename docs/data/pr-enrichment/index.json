@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T15:36:58.013Z",
+  "generatedAt": "2026-03-30T16:06:59.299Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -214,15 +214,15 @@
       "prNumber": 1122,
       "title": "Record: EngramLite + Gated Skips + Full GPTQ + FA3 — val_bpb 1.1146 (1-seed, 2 pending)",
       "status": "open",
-      "updatedAt": "2026-03-30T15:31:57Z",
-      "headSha": "7a90577632ed6b1944c55802abc74f80891c4fed",
-      "generatedAt": "2026-03-30T15:36:57.846Z",
-      "summary": "Combines EngramLite multi-head ngram hashing, sigmoid-gated U-Net skips, Turbo-Muon steps, and FA3/XSA layers with full Hessian GPTQ for compact sliding eval.",
+      "updatedAt": "2026-03-30T15:36:56Z",
+      "headSha": "6914cee06e39bb7141de2de42a5fe92e95ee3122",
+      "generatedAt": "2026-03-30T16:06:54.832Z",
+      "summary": "Combines EngramLite gated hash embeddings, Turbo-Muon optimizer tweaks, and Full Hessian GPTQ with FlashAttention3 on an 11-layer SWA model.",
       "tags": [
         "architecture",
-        "attention",
-        "compression",
-        "optimizer"
+        "optimizer",
+        "quantization",
+        "attention"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2836,10 +2836,10 @@
       "prNumber": 965,
       "title": "Architectural Record: 1.11837 BPB via KGIIR Trajectory Mixing",
       "status": "open",
-      "updatedAt": "2026-03-30T03:07:07Z",
-      "headSha": "8d680e58e3f75a610cd95a16e4b1c2d408c05eac",
-      "generatedAt": "2026-03-30T03:33:07.669Z",
-      "summary": "KGIIR trajectory mixing adds a momentum-gated 4-tap IIR filter alongside shifts so attention heads focus on global reasoning while keeping 88ms steps.",
+      "updatedAt": "2026-03-30T15:43:31Z",
+      "headSha": "008ad4374c9cb8ae9db366a523e1d2fb4ede11c3",
+      "generatedAt": "2026-03-30T16:06:59.160Z",
+      "summary": "Augments the Bektursun baseline with gated 4-tap Kinematic IIR trajectory mixing to capture local momentum so attention can focus on broader global reasoning.",
       "tags": [
         "architecture",
         "attention"
