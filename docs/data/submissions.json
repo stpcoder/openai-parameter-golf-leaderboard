@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T02:02:22.165Z",
+  "generatedAt": "2026-03-30T02:32:37.726Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -138,7 +138,7 @@
         "authorLogin": "sofiabod",
         "authorName": null,
         "createdAt": "2026-03-29T13:33:02Z",
-        "updatedAt": "2026-03-29T14:52:32Z",
+        "updatedAt": "2026-03-30T02:09:23Z",
         "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
         "headRepo": "sofiabod/parameter-golf"
       },
@@ -2990,7 +2990,7 @@
         "authorLogin": "michaelwinczuk",
         "authorName": null,
         "createdAt": "2026-03-29T19:53:40Z",
-        "updatedAt": "2026-03-30T01:04:35Z",
+        "updatedAt": "2026-03-30T02:08:19Z",
         "headSha": "0befb078f89158751309ae9c66b6a3bd99ad92a3",
         "headRepo": "michaelwinczuk/parameter-golf"
       },
@@ -3375,7 +3375,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-30T00:58:37Z",
+        "updatedAt": "2026-03-30T02:08:55Z",
         "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -3529,7 +3529,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-30T00:58:37Z",
+        "updatedAt": "2026-03-30T02:08:55Z",
         "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -6540,7 +6540,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-29T15:59:30Z",
-        "updatedAt": "2026-03-30T00:58:37Z",
+        "updatedAt": "2026-03-30T02:08:55Z",
         "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -21553,7 +21553,7 @@
       },
       "pr": {
         "number": 996,
-        "title": "Pre-Enrichment + EMA-GPU + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
+        "title": "Pre-Enrichment + EMA + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -21561,7 +21561,7 @@
         "authorLogin": "Idan3011",
         "authorName": null,
         "createdAt": "2026-03-28T00:53:22Z",
-        "updatedAt": "2026-03-29T16:36:19Z",
+        "updatedAt": "2026-03-30T02:21:07Z",
         "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
         "headRepo": "Idan3011/parameter-golf"
       },
@@ -40503,7 +40503,7 @@
         "authorLogin": "DariusFeher",
         "authorName": null,
         "createdAt": "2026-03-29T23:52:12Z",
-        "updatedAt": "2026-03-30T01:33:38Z",
+        "updatedAt": "2026-03-30T02:31:31Z",
         "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
         "headRepo": "DariusFeher/parameter-golf"
       },

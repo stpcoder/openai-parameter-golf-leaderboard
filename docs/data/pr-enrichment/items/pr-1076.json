@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-29T14:59:38.456Z",
+  "generatedAt": "2026-03-30T02:33:13.510Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1076,
     "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0109 (3-seed mean, NEW SOTA)",
     "state": "closed",
-    "updatedAt": "2026-03-29T14:52:32Z",
+    "updatedAt": "2026-03-30T02:09:23Z",
     "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1076",
     "authorLogin": "sofiabod"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Packed multi-order causal n-gram cache plus Dirichlet posterior backoff drives score-first single-pass eval within a 40M-token budget.",
+    "summary": "Packed causal 2-12 order n-gram cache blended with Dirichlet posterior backoff within a single-pass score-first eval for efficient autoregression.",
     "tags": [
-      "sliding-window-eval",
       "architecture",
-      "compression",
-      "evaluation"
+      "evaluation",
+      "regularization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "N/A",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Packed multi-order n-gram hash tables in 32K buckets per order",
-      "Dirichlet posterior backoff mixing with count-confidence gating",
-      "Score-first single-pass eval with sliding-window stride 64"
+      "packed XOR-hash cache across orders 2-12",
+      "Dirichlet posterior backoff with count-confidence gating",
+      "single-pass score-first sliding-window evaluation"
     ]
   },
   "compatibility": {

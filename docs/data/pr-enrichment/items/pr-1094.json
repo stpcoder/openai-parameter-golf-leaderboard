@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T01:32:26.879Z",
+  "generatedAt": "2026-03-30T02:32:57.082Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1094,
     "title": "Record: 0.3958 BPB — Causal BackoffNgramMixer (3-seed, std 0.0011)",
     "state": "open",
-    "updatedAt": "2026-03-30T01:04:35Z",
+    "updatedAt": "2026-03-30T02:08:19Z",
     "headSha": "0befb078f89158751309ae9c66b6a3bd99ad92a3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1094",
     "authorLogin": "michaelwinczuk"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Causal BackoffNgramMixer blends neural logits with hashed orders 2–10 via an entropy-adaptive alpha while batched sliding-window eval incrementally updates n-gram counts.",
+    "summary": "Blends an 11L Parallel Muon transformer with entropy-weighted BackoffNgramMixer and causal batched sliding-window eval that incrementally updates n-gram counts.",
     "tags": [
-      "evaluation",
       "architecture",
-      "training-schedule"
+      "evaluation",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Causal BackoffNgramMixer orders 2–10 with entropy-adaptive alpha",
-      "Batched sliding-window eval with incremental n-gram updates",
-      "Swarm-designed architecture with KG-conditioned embedding init"
+      "11-layer Parallel Muon transformer with LeakyReLU²",
+      "Entropy-adaptive BackoffNgramMixer orders 2–10 with full-vocab mixture",
+      "Causal batched sliding-window eval with incremental n-gram updates"
     ]
   },
   "compatibility": {

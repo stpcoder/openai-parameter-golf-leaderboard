@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T02:02:29.425Z",
+  "generatedAt": "2026-03-30T02:33:20.844Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -55,15 +55,15 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-03-30T01:33:38Z",
+      "updatedAt": "2026-03-30T02:31:31Z",
       "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
-      "generatedAt": "2026-03-30T02:02:29.252Z",
-      "summary": "A 9-layer single-stage H-Net learns whitespace-aligned chunks from raw byte260 via RLW-tuned routing, comparing byte vs sp1024 chunking on a multi-GPU DDP path.",
+      "generatedAt": "2026-03-30T02:32:49.541Z",
+      "summary": "Byte-level 1-stage H-Net pairs tuned ratio loss and deeper outer layers to learn whitespace-aligned boundaries via dynamic chunking on raw bytes.",
       "tags": [
         "architecture",
         "tokenization",
-        "evaluation",
-        "non-record"
+        "regularization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -220,14 +220,14 @@
       "prNumber": 1094,
       "title": "Record: 0.3958 BPB — Causal BackoffNgramMixer (3-seed, std 0.0011)",
       "status": "open",
-      "updatedAt": "2026-03-30T01:04:35Z",
+      "updatedAt": "2026-03-30T02:08:19Z",
       "headSha": "0befb078f89158751309ae9c66b6a3bd99ad92a3",
-      "generatedAt": "2026-03-30T01:32:26.879Z",
-      "summary": "Causal BackoffNgramMixer blends neural logits with hashed orders 2–10 via an entropy-adaptive alpha while batched sliding-window eval incrementally updates n-gram counts.",
+      "generatedAt": "2026-03-30T02:32:57.082Z",
+      "summary": "Blends an 11L Parallel Muon transformer with entropy-weighted BackoffNgramMixer and causal batched sliding-window eval that incrementally updates n-gram counts.",
       "tags": [
-        "evaluation",
         "architecture",
-        "training-schedule"
+        "evaluation",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -432,14 +432,14 @@
       "prNumber": 1083,
       "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
       "status": "open",
-      "updatedAt": "2026-03-30T00:58:37Z",
+      "updatedAt": "2026-03-30T02:08:55Z",
       "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
-      "generatedAt": "2026-03-30T01:02:34.621Z",
-      "summary": "Pairs a Frugendorff ClownCar crawler with shared 3D Cubric n-gram oracle plus complementary training/entropy-based alpha to exploit oracle corrections before int6 quantization.",
+      "generatedAt": "2026-03-30T02:33:08.728Z",
+      "summary": "Pairs Frugendorff ClownCar crawler with shared-table X-WING ngram oracle (3D Cubric + complementary training) plus loop-aware GPTQ quantization.",
       "tags": [
         "architecture",
-        "quantization",
-        "evaluation"
+        "evaluation",
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -526,15 +526,14 @@
       "prNumber": 1076,
       "title": "Record: Packed Causal N-gram + Dirichlet Backoff — val_bpb 0.0109 (3-seed mean, NEW SOTA)",
       "status": "closed",
-      "updatedAt": "2026-03-29T14:52:32Z",
+      "updatedAt": "2026-03-30T02:09:23Z",
       "headSha": "1ee75c98330bccacee1fe897b2c0dbc6adbec018",
-      "generatedAt": "2026-03-29T14:59:38.456Z",
-      "summary": "Packed multi-order causal n-gram cache plus Dirichlet posterior backoff drives score-first single-pass eval within a 40M-token budget.",
+      "generatedAt": "2026-03-30T02:33:13.510Z",
+      "summary": "Packed causal 2-12 order n-gram cache blended with Dirichlet posterior backoff within a single-pass score-first eval for efficient autoregression.",
       "tags": [
-        "sliding-window-eval",
         "architecture",
-        "compression",
-        "evaluation"
+        "evaluation",
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1962,17 +1961,17 @@
     },
     {
       "prNumber": 996,
-      "title": "Pre-Enrichment + EMA-GPU + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
+      "title": "Pre-Enrichment + EMA + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
       "status": "open",
-      "updatedAt": "2026-03-29T16:36:19Z",
+      "updatedAt": "2026-03-30T02:21:07Z",
       "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
-      "generatedAt": "2026-03-29T17:00:48.952Z",
-      "summary": "GPU-resident EMA plus GELU pre-enrichment, SmearGate/BigramHash front-end, and XSA4 layers drive the int6-QAT model with sliding-window eval for faster updates.",
+      "generatedAt": "2026-03-30T02:33:20.696Z",
+      "summary": "Keeps EMA on GPU and extends the embedding stream with GELU pre-enrichment, SmearGate/BigramHash, and XSA4 plus sliding-window eval for faster quantized training.",
       "tags": [
         "architecture",
-        "optimizer",
-        "evaluation",
-        "quantization"
+        "quantization",
+        "training-schedule",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

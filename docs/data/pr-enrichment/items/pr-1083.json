@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T01:02:34.621Z",
+  "generatedAt": "2026-03-30T02:33:08.728Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1083,
     "title": "Bandit: ClownCar Crawler x Cubric Ngram9 — 0.4961 BPB, 9.9mb",
     "state": "open",
-    "updatedAt": "2026-03-30T00:58:37Z",
+    "updatedAt": "2026-03-30T02:08:55Z",
     "headSha": "4efa746c3596aba503b77ad4c5c5181aafab04bd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1083",
     "authorLogin": "newjordan"
@@ -21,18 +21,18 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Pairs a Frugendorff ClownCar crawler with shared 3D Cubric n-gram oracle plus complementary training/entropy-based alpha to exploit oracle corrections before int6 quantization.",
+    "summary": "Pairs Frugendorff ClownCar crawler with shared-table X-WING ngram oracle (3D Cubric + complementary training) plus loop-aware GPTQ quantization.",
     "tags": [
       "architecture",
-      "quantization",
-      "evaluation"
+      "evaluation",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Frugendorff ClownCar crawler (4 flat + crawler loops) with loop-aware GPTQ and late-start EMA",
-      "Shared 3D Cubric oracle over orders 2-9 with entropy-adaptive alpha and complementary training",
-      "GPTQ int6 quantization with zstd packing under 10MB"
+      "Frugendorff ClownCar crawler (4 flat + looped crawler blocks, inst_dim=32 FLOW)",
+      "Shared X-WING tables with 3D Cubric multipliers + complementary training",
+      "Loop-aware GPTQ int6 calibration and late-start EMA for quantized crawler"
     ]
   },
   "compatibility": {

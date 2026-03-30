@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-29T17:00:48.952Z",
+  "generatedAt": "2026-03-30T02:33:20.696Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 996,
-    "title": "Pre-Enrichment + EMA-GPU + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
+    "title": "Pre-Enrichment + EMA + SmearGate + XSA4 (val_bpb=1.1470(mean), …",
     "state": "open",
-    "updatedAt": "2026-03-29T16:36:19Z",
+    "updatedAt": "2026-03-30T02:21:07Z",
     "headSha": "efa0dd17bae1c097e23e2212aca0364d0f51d073",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/996",
     "authorLogin": "Idan3011"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "GPU-resident EMA plus GELU pre-enrichment, SmearGate/BigramHash front-end, and XSA4 layers drive the int6-QAT model with sliding-window eval for faster updates.",
+    "summary": "Keeps EMA on GPU and extends the embedding stream with GELU pre-enrichment, SmearGate/BigramHash, and XSA4 plus sliding-window eval for faster quantized training.",
     "tags": [
       "architecture",
-      "optimizer",
-      "evaluation",
-      "quantization"
+      "quantization",
+      "training-schedule",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "GPU-resident EMA state to cut per-step time",
-      "GELU pre-enrichment with SmearGate and BigramHash before RMSNorm",
-      "XSA on final layers paired with sliding-window stride-64 eval"
+      "GPU-resident EMA for ~37% faster steps",
+      "GELU pre-enrichment with SmearGate and BigramHash before transformer blocks",
+      "XSA on final layers paired with stride-64 sliding-window scoring"
     ]
   },
   "compatibility": {
