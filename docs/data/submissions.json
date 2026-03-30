@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T10:04:54.708Z",
+  "generatedAt": "2026-03-30T10:35:37.471Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -11089,16 +11089,16 @@
         "authorLogin": "AnubhavBharadwaaj",
         "authorName": null,
         "createdAt": "2026-03-30T09:43:20Z",
-        "updatedAt": "2026-03-30T09:43:36Z",
-        "headSha": "fa81682e390dffb301ad941dff097f11f15edbde",
+        "updatedAt": "2026-03-30T10:05:36Z",
+        "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
         "headRepo": "AnubhavBharadwaaj/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fa81682e390dffb301ad941dff097f11f15edbde/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/fa81682e390dffb301ad941dff097f11f15edbde/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/fa81682e390dffb301ad941dff097f11f15edbde/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/fa81682e390dffb301ad941dff097f11f15edbde/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/fa81682e390dffb301ad941dff097f11f15edbde/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/0331ed13253a0b3bda6787f18aef3dea3422555b/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/0331ed13253a0b3bda6787f18aef3dea3422555b/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/0331ed13253a0b3bda6787f18aef3dea3422555b/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/0331ed13253a0b3bda6787f18aef3dea3422555b/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/0331ed13253a0b3bda6787f18aef3dea3422555b/records/track_10min_16mb/2026-03-30_SLOT_Record_LeakyReLU_TTT_ParallelMuon",
         "pr": "https://github.com/openai/parameter-golf/pull/1128",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -12783,8 +12783,8 @@
         "authorLogin": "AnubhavBharadwaaj",
         "authorName": null,
         "createdAt": "2026-03-30T09:43:20Z",
-        "updatedAt": "2026-03-30T09:43:36Z",
-        "headSha": "fa81682e390dffb301ad941dff097f11f15edbde",
+        "updatedAt": "2026-03-30T10:05:36Z",
+        "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
         "headRepo": "AnubhavBharadwaaj/parameter-golf"
       },
       "links": {
@@ -14015,8 +14015,8 @@
         "authorLogin": "AnubhavBharadwaaj",
         "authorName": null,
         "createdAt": "2026-03-30T09:43:20Z",
-        "updatedAt": "2026-03-30T09:43:36Z",
-        "headSha": "fa81682e390dffb301ad941dff097f11f15edbde",
+        "updatedAt": "2026-03-30T10:05:36Z",
+        "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
         "headRepo": "AnubhavBharadwaaj/parameter-golf"
       },
       "links": {
@@ -39810,7 +39810,7 @@
         "authorLogin": "rolandnsharp",
         "authorName": null,
         "createdAt": "2026-03-29T06:23:37Z",
-        "updatedAt": "2026-03-30T09:55:16Z",
+        "updatedAt": "2026-03-30T10:25:52Z",
         "headSha": "54ba8cfc2bf3a0bda2bbf4264263b780f82fef27",
         "headRepo": "rolandnsharp/parameter-golf"
       },
@@ -41196,7 +41196,7 @@
         "authorLogin": "DariusFeher",
         "authorName": null,
         "createdAt": "2026-03-29T23:52:12Z",
-        "updatedAt": "2026-03-30T10:02:08Z",
+        "updatedAt": "2026-03-30T10:17:38Z",
         "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
         "headRepo": "DariusFeher/parameter-golf"
       },

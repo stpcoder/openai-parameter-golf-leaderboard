@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-30T10:05:09.641Z",
+  "generatedAt": "2026-03-30T10:35:51.273Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1128,
     "title": "Record: SLOT + LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1154 (3-seed mean) val_bpb = 1.1154 (3-seed mean, std 0.0002) | ~15.9 MB | 8×H100 SXM",
     "state": "open",
-    "updatedAt": "2026-03-30T09:43:36Z",
-    "headSha": "fa81682e390dffb301ad941dff097f11f15edbde",
+    "updatedAt": "2026-03-30T10:05:36Z",
+    "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1128",
     "authorLogin": "AnubhavBharadwaaj"
   },
@@ -21,19 +21,18 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "Stacks per-batch SLOT delta optimization on top of score-first TTT to fine-tune the hidden-to-logit mapping during eval.",
+    "summary": "Inserted SLOT’s per-batch delta tuning between hidden→logit steps during legal score-first TTT on the Parallel Muon stack.",
     "tags": [
       "evaluation",
       "optimizer",
-      "architecture",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SLOT delta tuned per batch between hidden states and logits",
-      "Score-first TTT adapts all weights chunk-wise while SLOT tweaks last-layer mapping",
-      "AdamW on a 512-d delta inside scoring phase"
+      "SLOT per-batch δ optimization in the TTT scoring loop",
+      "AdamW updates on a broadcast [1,1,512] delta to adjust logits",
+      "Score-first legal eval-time adaptation stacked atop Parallel Muon"
     ]
   },
   "compatibility": {

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T10:05:15.742Z",
+  "generatedAt": "2026-03-30T10:35:56.039Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1104,
     "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
     "state": "open",
-    "updatedAt": "2026-03-30T10:02:08Z",
+    "updatedAt": "2026-03-30T10:17:38Z",
     "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1104",
     "authorLogin": "DariusFeher"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "1-stage H-Net learns byte-level dynamic chunking aligned with whitespace via its encoder/main/decoder layout and ablated RLW/OL/LR settings.",
+    "summary": "Byte-level H-Net uses dynamic chunking to learn whitespace-aligned boundaries from raw bytes while matching subword behavior and running padded multi-GPU DDP on 8×H100.",
     "tags": [
-      "architecture",
       "tokenization",
+      "architecture",
       "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "E-M-D H-Net with learned routing chunk/dechunk interface",
-      "Byte260 vs sp1024 ablations on chunk targets, outer layers, ratio loss, and LR diff",
-      "Multi-GPU DDP training with padded chunk sequences and boundary metrics"
+      "- byte-level dynamic chunking with ratio loss and deeper chunk/dechunk layers",
+      "- matched byte260 vs sp1024 ablations using whitespace agreement and chunk-size CV metrics",
+      "- padded chunk sequences for working 8×H100 DDP training"
     ]
   },
   "compatibility": {

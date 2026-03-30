@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-30T10:05:20.166Z",
+  "generatedAt": "2026-03-30T10:36:02.349Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1061,
     "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
     "state": "open",
-    "updatedAt": "2026-03-30T09:55:16Z",
+    "updatedAt": "2026-03-30T10:25:52Z",
     "headSha": "54ba8cfc2bf3a0bda2bbf4264263b780f82fef27",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1061",
     "authorLogin": "rolandnsharp"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Damped harmonic oscillators deliver causal context via FFT convolution, then attention layers operate on physics-enriched states for text and waveform signals.",
+    "summary": "Causal Oscillator LM encodes causal context with damped harmonic oscillators via FFT before attention, keeping physics-critical parameters at higher precision.",
     "tags": [
       "architecture",
       "attention",
-      "compression"
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Physics-driven oscillator impulse convolution for causal context",
-      "FFT-based parallel causal convolution",
-      "Attention over oscillator states"
+      "Physics-based oscillator impulse responses for context",
+      "FFT-driven causal convolutions prior to attention",
+      "Float16 physics parameters with int8 attention precision split"
     ]
   },
   "compatibility": {

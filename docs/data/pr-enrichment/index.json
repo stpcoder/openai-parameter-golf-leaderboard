@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-30T10:05:23.807Z",
+  "generatedAt": "2026-03-30T10:36:02.503Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -30,14 +30,13 @@
       "prNumber": 1128,
       "title": "Record: SLOT + LeakyReLU² + Legal Score-First TTT + Parallel Muon — val_bpb 1.1154 (3-seed mean) val_bpb = 1.1154 (3-seed mean, std 0.0002) | ~15.9 MB | 8×H100 SXM",
       "status": "open",
-      "updatedAt": "2026-03-30T09:43:36Z",
-      "headSha": "fa81682e390dffb301ad941dff097f11f15edbde",
-      "generatedAt": "2026-03-30T10:05:09.641Z",
-      "summary": "Stacks per-batch SLOT delta optimization on top of score-first TTT to fine-tune the hidden-to-logit mapping during eval.",
+      "updatedAt": "2026-03-30T10:05:36Z",
+      "headSha": "0331ed13253a0b3bda6787f18aef3dea3422555b",
+      "generatedAt": "2026-03-30T10:35:51.273Z",
+      "summary": "Inserted SLOT’s per-batch delta tuning between hidden→logit steps during legal score-first TTT on the Parallel Muon stack.",
       "tags": [
         "evaluation",
         "optimizer",
-        "architecture",
         "non-record"
       ],
       "flags": {
@@ -470,13 +469,13 @@
       "prNumber": 1104,
       "title": "[Non-record] 1-Stage Byte-level H-Net at 17.5M: Dynamic Chunking Learns Word Boundaries (39x-91x fewer params than H-Net paper)",
       "status": "open",
-      "updatedAt": "2026-03-30T10:02:08Z",
+      "updatedAt": "2026-03-30T10:17:38Z",
       "headSha": "dea0514e52ed3139f37b37eea80b7fceec76d1d1",
-      "generatedAt": "2026-03-30T10:05:15.742Z",
-      "summary": "1-stage H-Net learns byte-level dynamic chunking aligned with whitespace via its encoder/main/decoder layout and ablated RLW/OL/LR settings.",
+      "generatedAt": "2026-03-30T10:35:56.039Z",
+      "summary": "Byte-level H-Net uses dynamic chunking to learn whitespace-aligned boundaries from raw bytes while matching subword behavior and running padded multi-GPU DDP on 8×H100.",
       "tags": [
-        "architecture",
         "tokenization",
+        "architecture",
         "evaluation",
         "non-record"
       ],
@@ -1083,14 +1082,14 @@
       "prNumber": 1061,
       "title": "Causal Oscillator LM: physics-native architecture (BPB 1.34)",
       "status": "open",
-      "updatedAt": "2026-03-30T09:55:16Z",
+      "updatedAt": "2026-03-30T10:25:52Z",
       "headSha": "54ba8cfc2bf3a0bda2bbf4264263b780f82fef27",
-      "generatedAt": "2026-03-30T10:05:20.166Z",
-      "summary": "Damped harmonic oscillators deliver causal context via FFT convolution, then attention layers operate on physics-enriched states for text and waveform signals.",
+      "generatedAt": "2026-03-30T10:36:02.349Z",
+      "summary": "Causal Oscillator LM encodes causal context with damped harmonic oscillators via FFT before attention, keeping physics-critical parameters at higher precision.",
       "tags": [
         "architecture",
         "attention",
-        "compression"
+        "quantization"
       ],
       "flags": {
         "usesValOnly": false,
