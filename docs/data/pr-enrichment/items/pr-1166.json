@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T04:10:41.984Z",
+  "generatedAt": "2026-03-31T11:42:58.379Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1166,
     "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347 (README request)",
     "state": "open",
-    "updatedAt": "2026-03-31T04:08:31Z",
+    "updatedAt": "2026-03-31T11:34:29Z",
     "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1166",
     "authorLogin": "Christopher-Lee-McClendon"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer GPT blends end-to-end TTT-Linear per-head adaptation with a tiny latent-flow FlowRefiner before logits, keeping the ensemble under 16 MB by quantized output compression.",
+    "summary": "10-layer transformer pairs E2E TTT-Linear refinement with one-step latent FlowRefiner inspired by FLOWR plus int6/int8 quantization to stay within 16MB.",
     "tags": [
       "architecture",
-      "attention",
       "quantization",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "E2E TTT-Linear inner-loop per-head SGD on learned projections",
-      "1-step latent FlowRefiner with Euler-style vector field update",
-      "Mixed int6/int8 per-row quantization plus lzma-6 compression"
+      "Per-head E2E TTT-Linear inner-loop SGD during train+eval",
+      "One-step latent FlowRefiner with Euler-style update",
+      "Mixed int6/int8 per-row quantization and lzma compression"
     ]
   },
   "compatibility": {

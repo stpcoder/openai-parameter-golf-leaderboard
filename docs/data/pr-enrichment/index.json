@@ -1,8 +1,56 @@
 {
-  "generatedAt": "2026-03-31T11:12:27.436Z",
+  "generatedAt": "2026-03-31T11:43:03.624Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1180,
+      "title": "SR-CM-P2Loss: 1.0577 bpb (~15.06MB)",
+      "status": "open",
+      "updatedAt": "2026-03-31T11:32:19Z",
+      "headSha": "827b05787c397d51b93381260cf3f5b80bc95c8c",
+      "generatedAt": "2026-03-31T11:42:34.746Z",
+      "summary": "Combines difficulty-aware P2 loss with wallclock-aware warmdown, residual mixing, and compression-first training (conv token mixer + int6 QAT) for a compact GPT.",
+      "tags": [
+        "training-schedule",
+        "optimizer",
+        "quantization",
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1180.json"
+    },
+    {
+      "prNumber": 1179,
+      "title": "Record: Split-LR + BigramHash(2816x160) + Full GPTQ + Brotli — val_bpb 1.1105 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-03-31T11:17:43Z",
+      "headSha": "6772e6ae8a761241a88187903a74e44dc5d92a56",
+      "generatedAt": "2026-03-31T11:42:40.641Z",
+      "summary": "Split-LR with wider BigramHash, sigmoid-gated U-Net skips, and soft-round QAT, paired with Brotli byte-shuffle plus minified code to fit 16MB.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "compression",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1179.json"
+    },
     {
       "prNumber": 1176,
       "title": "Record: QK-Gain 4.0 + XSA-11 + Muon-TTT + SLOT — val_bpb 1.0962 (3-seed mean)",
@@ -77,15 +125,15 @@
       "prNumber": 1172,
       "title": "Record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T09:12:19Z",
+      "updatedAt": "2026-03-31T11:23:33Z",
       "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
-      "generatedAt": "2026-03-31T09:42:06.025Z",
-      "summary": "Pair Full GPTQ + soft-round QAT quantization with eval-time SLOT deltas, sigmoid-gated skips, split Muon LR, and compact Brotli packaging.",
+      "generatedAt": "2026-03-31T11:42:45.071Z",
+      "summary": "Combines eval-time SLOT delta tuning with split Muon learning rates, sigmoid-gated skips, and soft-round QAT before GPTQ compression.",
       "tags": [
-        "quantization",
         "evaluation",
         "optimizer",
-        "compression"
+        "quantization",
+        "architecture"
       ],
       "flags": {
         "usesValOnly": false,
@@ -101,15 +149,15 @@
       "prNumber": 1170,
       "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (single seed)",
       "status": "open",
-      "updatedAt": "2026-03-31T04:52:31Z",
+      "updatedAt": "2026-03-31T11:36:49Z",
       "headSha": "a8177a2e5d720b538059d544328ec59a3587d19c",
-      "generatedAt": "2026-03-31T05:11:27.408Z",
-      "summary": "NativeFlowMatcher’s OT-CFM velocity net learns gated hidden-state corrections within an 11L transformer while combining sliding-window eval with legal score-first TTT.",
+      "generatedAt": "2026-03-31T11:42:50.211Z",
+      "summary": "Adds a gated NativeFlowMatcher OT-CFM velocity net atop an 11L transformer and applies legal score-first TTT for residual refinement at eval.",
       "tags": [
         "architecture",
+        "training-schedule",
         "quantization",
-        "evaluation",
-        "non-record"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -171,13 +219,12 @@
       "prNumber": 1166,
       "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347 (README request)",
       "status": "open",
-      "updatedAt": "2026-03-31T04:08:31Z",
+      "updatedAt": "2026-03-31T11:34:29Z",
       "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
-      "generatedAt": "2026-03-31T04:10:41.984Z",
-      "summary": "10-layer GPT blends end-to-end TTT-Linear per-head adaptation with a tiny latent-flow FlowRefiner before logits, keeping the ensemble under 16 MB by quantized output compression.",
+      "generatedAt": "2026-03-31T11:42:58.379Z",
+      "summary": "10-layer transformer pairs E2E TTT-Linear refinement with one-step latent FlowRefiner inspired by FLOWR plus int6/int8 quantization to stay within 16MB.",
       "tags": [
         "architecture",
-        "attention",
         "quantization",
         "non-record"
       ],
@@ -11949,13 +11996,12 @@
       "prNumber": 425,
       "title": "Codex/runpod 2026 03 20 checkpoint",
       "status": "open",
-      "updatedAt": "2026-03-31T09:02:58Z",
-      "headSha": "093600ce3b8fa7766c4488364f5a052f1f25fb3d",
-      "generatedAt": "2026-03-31T09:12:17.131Z",
-      "summary": "Runpod ablation splits eval lengths while using ATTN_TWICE_ALPHA=0.05 and LoRA-TTT tuning on single H100 to balance roundtrip/TTT scores in 600s.",
+      "updatedAt": "2026-03-31T11:30:37Z",
+      "headSha": "bab64e4b3ed8580fc352926a4bf8982798a0d34a",
+      "generatedAt": "2026-03-31T11:43:03.561Z",
+      "summary": "Single H100 run used twice-pass attention (ATTN_TWICE_ALPHA=0.05) and split eval lengths (2048 vs 1024) to balance roundtrip and TTT scoring before bigger tests.",
       "tags": [
         "attention",
-        "optimizer",
         "evaluation",
         "non-record"
       ],

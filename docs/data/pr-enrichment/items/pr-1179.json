@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-03-31T11:42:40.641Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1179,
+    "title": "Record: Split-LR + BigramHash(2816x160) + Full GPTQ + Brotli — val_bpb 1.1105 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-03-31T11:17:43Z",
+    "headSha": "6772e6ae8a761241a88187903a74e44dc5d92a56",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1179",
+    "authorLogin": "dexhunter"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-31_SplitLR_Dim160_FullGPTQ_Brotli/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Split-LR with wider BigramHash, sigmoid-gated U-Net skips, and soft-round QAT, paired with Brotli byte-shuffle plus minified code to fit 16MB.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "compression",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Split-LR (early 0.025 / late 0.030) with bank split 5",
+      "BigramHash 2816×160 plus sigmoid-gated U-Net skip blending",
+      "Soft-round QAT alpha ramp + Brotli-11 byte-shuffle and minified code"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-31T09:12:17.131Z",
+  "generatedAt": "2026-03-31T11:43:03.561Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 425,
     "title": "Codex/runpod 2026 03 20 checkpoint",
     "state": "open",
-    "updatedAt": "2026-03-31T09:02:58Z",
-    "headSha": "093600ce3b8fa7766c4488364f5a052f1f25fb3d",
+    "updatedAt": "2026-03-31T11:30:37Z",
+    "headSha": "bab64e4b3ed8580fc352926a4bf8982798a0d34a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/425",
     "authorLogin": "DeividasMat"
   },
@@ -20,19 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "Runpod ablation splits eval lengths while using ATTN_TWICE_ALPHA=0.05 and LoRA-TTT tuning on single H100 to balance roundtrip/TTT scores in 600s.",
+    "summary": "Single H100 run used twice-pass attention (ATTN_TWICE_ALPHA=0.05) and split eval lengths (2048 vs 1024) to balance roundtrip and TTT scoring before bigger tests.",
     "tags": [
       "attention",
-      "optimizer",
       "evaluation",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Split eval lengths (2048 roundtrip, 1024 TTT)",
-      "ATTN_TWICE_ALPHA=0.05 low-frequency attention boost",
-      "LoRA-TTT rank-8 tuning with chunked eval"
+      "ATTN_TWICE_ALPHA=0.05 twice-pass attention",
+      "Separate EVAL_SEQ_LEN=2048 and TTT_EVAL_SEQ_LEN=1024 evaluations",
+      "LoRA-TTT tuning in quick one-shard ablation"
     ]
   },
   "compatibility": {

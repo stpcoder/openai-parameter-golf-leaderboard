@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T05:11:27.408Z",
+  "generatedAt": "2026-03-31T11:42:50.211Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1170,
     "title": "Non-record: 11L NativeFlowMatcher + Legal TTT — val_bpb 1.1199 (single seed)",
     "state": "open",
-    "updatedAt": "2026-03-31T04:52:31Z",
+    "updatedAt": "2026-03-31T11:36:49Z",
     "headSha": "a8177a2e5d720b538059d544328ec59a3587d19c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1170",
     "authorLogin": "Christopher-Lee-McClendon"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "NativeFlowMatcher’s OT-CFM velocity net learns gated hidden-state corrections within an 11L transformer while combining sliding-window eval with legal score-first TTT.",
+    "summary": "Adds a gated NativeFlowMatcher OT-CFM velocity net atop an 11L transformer and applies legal score-first TTT for residual refinement at eval.",
     "tags": [
       "architecture",
+      "training-schedule",
       "quantization",
-      "evaluation",
-      "non-record"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Gated OT-CFM velocity net trained alongside AR loss",
-      "Legal score-first test-time training on sliding-window eval",
-      "Mixed int6/int5 quantization with zstd compression for 16MB artifact"
+      "NativeFlowMatcher OT-CFM velocity correction",
+      "Legal score-first TTT residual refinement",
+      "Mixed int6/int5 quantization with zstd compression"
     ]
   },
   "compatibility": {
