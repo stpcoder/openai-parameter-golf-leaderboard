@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-03-31T18:45:11.768Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1186,
+    "title": "Non-record: Negative Results — Architecture, TTT Variants, Quantization, and N-gram Cache Illegality",
+    "state": "open",
+    "updatedAt": "2026-03-31T18:15:05Z",
+    "headSha": "d5ee794f99400296c1f0f0165ce6d3e1fc1488b1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1186",
+    "authorLogin": "andrewbaggio1"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-03-25_CosineTTT_NgramCache_8xH100/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Uses cosine-decay AdamW TTT adaptation then sliding-window multi-order n-gram cache with entropy-weighted interpolation on the LeakyReLU stack.",
+    "tags": [
+      "training-schedule",
+      "evaluation"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Cosine LR TTT adaptation with per-layer AdamW groups",
+      "Sliding-window eval with hashed multi-order n-gram backoff",
+      "Entropy-adaptive mixing of model and cache probabilities"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

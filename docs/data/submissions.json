@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T18:14:50.091Z",
+  "generatedAt": "2026-03-31T18:44:55.987Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -6562,7 +6562,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-25_CosineTTT_NgramCache_8xH100",
       "source": "pull_request",
-      "status": "closed",
+      "status": "open",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -6608,17 +6608,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 741,
-        "title": "Record: Cosine TTT + Multi-Order N-gram Cache (3-seed mean val_bpb=0.9850)",
-        "state": "closed",
+        "number": 1186,
+        "title": "Non-record: Negative Results — Architecture, TTT Variants, Quantization, and N-gram Cache Illegality",
+        "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/741",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1186",
         "authorLogin": "andrewbaggio1",
         "authorName": null,
-        "createdAt": "2026-03-25T16:35:12Z",
-        "updatedAt": "2026-03-30T16:26:10Z",
-        "headSha": "30ba8e4100bd32bf11bd0a41a1f88f9371003733",
+        "createdAt": "2026-03-31T18:15:05Z",
+        "updatedAt": "2026-03-31T18:15:05Z",
+        "headSha": "d5ee794f99400296c1f0f0165ce6d3e1fc1488b1",
         "headRepo": "andrewbaggio1/parameter-golf"
       },
       "links": {
@@ -6627,7 +6627,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/30ba8e4100bd32bf11bd0a41a1f88f9371003733/records/track_10min_16mb/2026-03-25_CosineTTT_NgramCache_8xH100/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/30ba8e4100bd32bf11bd0a41a1f88f9371003733/records/track_10min_16mb/2026-03-25_CosineTTT_NgramCache_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/30ba8e4100bd32bf11bd0a41a1f88f9371003733/records/track_10min_16mb/2026-03-25_CosineTTT_NgramCache_8xH100",
-        "pr": "https://github.com/openai/parameter-golf/pull/741",
+        "pr": "https://github.com/openai/parameter-golf/pull/1186",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

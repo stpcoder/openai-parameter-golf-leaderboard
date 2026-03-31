@@ -1,8 +1,30 @@
 {
-  "generatedAt": "2026-03-31T18:14:56.377Z",
+  "generatedAt": "2026-03-31T18:45:11.945Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1186,
+      "title": "Non-record: Negative Results — Architecture, TTT Variants, Quantization, and N-gram Cache Illegality",
+      "status": "open",
+      "updatedAt": "2026-03-31T18:15:05Z",
+      "headSha": "d5ee794f99400296c1f0f0165ce6d3e1fc1488b1",
+      "generatedAt": "2026-03-31T18:45:11.768Z",
+      "summary": "Uses cosine-decay AdamW TTT adaptation then sliding-window multi-order n-gram cache with entropy-weighted interpolation on the LeakyReLU stack.",
+      "tags": [
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1186.json"
+    },
     {
       "prNumber": 1185,
       "title": "[10min_16mb] 0.9641 BPB: LeakyReLU² + Score-First TTT + N-gram Backoff Cache",
@@ -7146,30 +7168,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-742.json"
-    },
-    {
-      "prNumber": 741,
-      "title": "Record: Cosine TTT + Multi-Order N-gram Cache (3-seed mean val_bpb=0.9850)",
-      "status": "closed",
-      "updatedAt": "2026-03-30T16:26:10Z",
-      "headSha": "30ba8e4100bd32bf11bd0a41a1f88f9371003733",
-      "generatedAt": "2026-03-30T16:37:06.941Z",
-      "summary": "Combine per-layer cosine-LR TTT recovery with sliding-window multi-order n-gram cache using entropy-adaptive interpolation for final scoring.",
-      "tags": [
-        "val-only",
-        "training-schedule",
-        "sliding-window-eval",
-        "evaluation"
-      ],
-      "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": false
-      },
-      "file": "items/pr-741.json"
     },
     {
       "prNumber": 739,
