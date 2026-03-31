@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T10:42:18.140Z",
+  "generatedAt": "2026-03-31T11:12:19.668Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -10025,83 +10025,6 @@
       }
     },
     {
-      "id": "record-records-track_10min_16mb-2026-03-29_FusedMLP_Brotli_Memmap",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-03-29_FusedMLP_Brotli_Memmap",
-        "folderPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
-        "submissionPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py"
-      },
-      "submission": {
-        "author": "Abay Bektursun",
-        "githubId": "abaybektursun",
-        "name": "Fused MLP (Triton+CUTLASS EVT) + MLP 3.5x + Mixed int5/int6 + SLOT + Brotli",
-        "blurb": "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels, pre-computed activation gradient, MLP 3.5x (1792 hidden dim, motivated by SVD analysis showing 94.4% MLP utilization), Hessian-based mixed int5/int6 quantization (motivated by per-matrix quant sensitivity showing MLP = 80% of damage), Brotli-11 compression, LR floor 0.05, SLOT eval-time adaptation (512-dim delta, AdamW lr=0.003, 5 steps), memmap multi-shard pipeline. AR self-gen GPTQ. 3-seed mean (314/999/1337): 1.1088 BPB / 1.8722 nats. Delta vs merged PR 1019 SOTA: -0.00836 nats. Welch's t=-9.98, p<0.01.",
-        "date": "2026-03-30"
-      },
-      "metrics": {
-        "valBpb": 1.10884123,
-        "valLoss": 1.87222702,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 14526779,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1105,
-        "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + SLOT + Brotli — 1.1088 BPB (3-seed mean)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
-        "authorLogin": "abaybektursun",
-        "authorName": null,
-        "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-03-31T10:33:30Z",
-        "headSha": "a50289416cddfa58dab6a65fd55142217d0e00f5",
-        "headRepo": "abaybektursun/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/a50289416cddfa58dab6a65fd55142217d0e00f5/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/a50289416cddfa58dab6a65fd55142217d0e00f5/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/a50289416cddfa58dab6a65fd55142217d0e00f5/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/a50289416cddfa58dab6a65fd55142217d0e00f5/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/a50289416cddfa58dab6a65fd55142217d0e00f5/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
-        "pr": "https://github.com/openai/parameter-golf/pull/1105",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
       "id": "record-records-track_10min_16mb-2026-03-30_Rascal_8xH100",
       "source": "pull_request",
       "status": "open",
@@ -10869,6 +10792,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/777ed6762dd2ecc442170772776727eca9f74391/records/track_10min_16mb/2026-03-25_TTT_Aggressive_SGD/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/777ed6762dd2ecc442170772776727eca9f74391/records/track_10min_16mb/2026-03-25_TTT_Aggressive_SGD",
         "pr": "https://github.com/openai/parameter-golf/pull/757",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-29_FusedMLP_Brotli_Memmap",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-29_FusedMLP_Brotli_Memmap",
+        "folderPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
+        "submissionPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py"
+      },
+      "submission": {
+        "author": "Abay Bektursun",
+        "githubId": "abaybektursun",
+        "name": "Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli",
+        "blurb": "Fused Triton TMA forward + CUTLASS EVT backward MLP kernels, pre-computed activation gradient, MLP 3.5x (1792 hidden dim, motivated by SVD analysis showing 94.4% MLP utilization), Hessian-based mixed int5/int6 quantization (motivated by per-matrix quant sensitivity showing MLP = 80% of damage), Brotli-11 compression, LR floor 0.05, memmap multi-shard pipeline. AR self-gen GPTQ. 3-seed mean (314/999/1337): 1.1125 BPB / 1.8784 nats. Delta vs prior leaderboard SOTA: -0.0116 nats. Welch's t=-17.63, p<0.01.",
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.11252336,
+        "valLoss": 1.87844412,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 14525480,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1105,
+        "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
+        "authorLogin": "abaybektursun",
+        "authorName": null,
+        "createdAt": "2026-03-30T00:03:19Z",
+        "updatedAt": "2026-03-31T11:08:26Z",
+        "headSha": "920cea57be16c068be5560fc3404f603543d03b8",
+        "headRepo": "abaybektursun/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/920cea57be16c068be5560fc3404f603543d03b8/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/920cea57be16c068be5560fc3404f603543d03b8/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/920cea57be16c068be5560fc3404f603543d03b8/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/920cea57be16c068be5560fc3404f603543d03b8/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/920cea57be16c068be5560fc3404f603543d03b8/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
+        "pr": "https://github.com/openai/parameter-golf/pull/1105",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
