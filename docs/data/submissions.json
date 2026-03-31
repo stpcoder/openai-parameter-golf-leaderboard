@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T04:10:36.049Z",
+  "generatedAt": "2026-03-31T04:40:40.236Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -52371,11 +52371,11 @@
         "headRepo": "AnirudhRahul/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/c1342b47df6d5b52a1f33c723ff821ab93f91bbc/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
         "pr": "https://github.com/openai/parameter-golf/pull/1126",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
