@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-31T11:42:58.379Z",
+  "generatedAt": "2026-03-31T21:45:50.813Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1166,
-    "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347 (README request)",
+    "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1335 ± 0.0010 (4-seed mean)",
     "state": "open",
-    "updatedAt": "2026-03-31T11:34:29Z",
-    "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
+    "updatedAt": "2026-03-31T21:25:57Z",
+    "headSha": "4b23b4a61fcaf5ab53a29f770ebe50c3280fcc7e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1166",
     "authorLogin": "Christopher-Lee-McClendon"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "10-layer transformer pairs E2E TTT-Linear refinement with one-step latent FlowRefiner inspired by FLOWR plus int6/int8 quantization to stay within 16MB.",
+    "summary": "Compact 10-layer GQA transformer adds E2E TTT-Linear refinement plus a tiny flow-inspired hidden-state refiner with late QAT/EMA.",
     "tags": [
       "architecture",
       "quantization",
+      "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-head E2E TTT-Linear inner-loop SGD during train+eval",
-      "One-step latent FlowRefiner with Euler-style update",
-      "Mixed int6/int8 per-row quantization and lzma compression"
+      "E2E TTT-Linear per-head SGD refinement",
+      "1-step FlowRefiner on hidden states",
+      "Late QAT+EMA/SWA with mixed int6/int8 quantization"
     ]
   },
   "compatibility": {

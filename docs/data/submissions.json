@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T21:15:52.037Z",
+  "generatedAt": "2026-03-31T21:45:37.438Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -19040,6 +19040,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-03-30_10L_E2E_TTT_FlowRefiner",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-03-30_10L_E2E_TTT_FlowRefiner",
+        "folderPath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner",
+        "submissionPath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train_gpt.py"
+      },
+      "submission": {
+        "author": "Christopher-Lee-McClendon",
+        "githubId": "Christopher-Lee-McClendon",
+        "name": null,
+        "blurb": null,
+        "date": "2026-03-30"
+      },
+      "metrics": {
+        "valBpb": 1.13353331,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1166,
+        "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1335 ± 0.0010 (4-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1166",
+        "authorLogin": "Christopher-Lee-McClendon",
+        "authorName": null,
+        "createdAt": "2026-03-31T03:03:12Z",
+        "updatedAt": "2026-03-31T21:25:57Z",
+        "headSha": "4b23b4a61fcaf5ab53a29f770ebe50c3280fcc7e",
+        "headRepo": "Christopher-Lee-McClendon/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/4b23b4a61fcaf5ab53a29f770ebe50c3280fcc7e/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/4b23b4a61fcaf5ab53a29f770ebe50c3280fcc7e/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/4b23b4a61fcaf5ab53a29f770ebe50c3280fcc7e/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/4b23b4a61fcaf5ab53a29f770ebe50c3280fcc7e/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/4b23b4a61fcaf5ab53a29f770ebe50c3280fcc7e/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner",
+        "pr": "https://github.com/openai/parameter-golf/pull/1166",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_10min_16mb-2026-03-28_JoeProAI_11L_Int5_TTT_1-1336_seed2025",
       "source": "pull_request",
       "status": "closed",
@@ -19108,83 +19185,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/95682eb993f5760850ec240236b14556831325fc/records/track_10min_16mb/2026-03-28_JoeProAI_11L_Int5_TTT_1.1336_seed2025/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/95682eb993f5760850ec240236b14556831325fc/records/track_10min_16mb/2026-03-28_JoeProAI_11L_Int5_TTT_1.1336_seed2025",
         "pr": "https://github.com/openai/parameter-golf/pull/1040",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_non_record_16mb-2026-03-30_10L_E2E_TTT_FlowRefiner",
-      "source": "pull_request",
-      "status": "open",
-      "category": "non-record",
-      "track": {
-        "path": "records/track_non_record_16mb",
-        "slug": "track_non_record_16mb",
-        "label": "Non-record / 16MB",
-        "official": false,
-        "category": "non-record"
-      },
-      "record": {
-        "folderName": "2026-03-30_10L_E2E_TTT_FlowRefiner",
-        "folderPath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner",
-        "submissionPath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/submission.json",
-        "readmePath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/README.md",
-        "trainLogPath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train.log",
-        "scriptPath": "records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train_gpt.py"
-      },
-      "submission": {
-        "author": "Christopher-Lee-McClendon",
-        "githubId": "Christopher-Lee-McClendon",
-        "name": null,
-        "blurb": null,
-        "date": "2026-03-30"
-      },
-      "metrics": {
-        "valBpb": 1.13472408,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": null,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1166,
-        "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347 (README request)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1166",
-        "authorLogin": "Christopher-Lee-McClendon",
-        "authorName": null,
-        "createdAt": "2026-03-31T03:03:12Z",
-        "updatedAt": "2026-03-31T11:34:29Z",
-        "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
-        "headRepo": "Christopher-Lee-McClendon/parameter-golf"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/fdb829f7946d676df6dd2f1eb86888d49cba394a/records/track_non_record_16mb/2026-03-30_10L_E2E_TTT_FlowRefiner",
-        "pr": "https://github.com/openai/parameter-golf/pull/1166",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -47224,7 +47224,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-27_TrigramHash_ValueResidual_BankQAT_GradQuant_MTP_AdamTTT",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -47272,15 +47272,15 @@
       "pr": {
         "number": 1201,
         "title": "records: add 2026-03-27 TrigramHash run, harden quantization safety, and clean docs",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1201",
         "authorLogin": "Mister2005",
         "authorName": null,
         "createdAt": "2026-03-31T21:13:20Z",
-        "updatedAt": "2026-03-31T21:13:34Z",
-        "headSha": "59818afb4c7b44d1103530ae6923f12c5e48e699",
+        "updatedAt": "2026-03-31T21:32:27Z",
+        "headSha": "8274cbfc37be74c1f81d08ed0a7723de9e3e50af",
         "headRepo": "Mister2005/parameter-golf"
       },
       "links": {

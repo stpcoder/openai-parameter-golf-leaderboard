@@ -1,20 +1,21 @@
 {
-  "generatedAt": "2026-03-31T21:16:13.772Z",
+  "generatedAt": "2026-03-31T21:45:50.984Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
       "prNumber": 1201,
       "title": "records: add 2026-03-27 TrigramHash run, harden quantization safety, and clean docs",
-      "status": "open",
-      "updatedAt": "2026-03-31T21:13:34Z",
-      "headSha": "59818afb4c7b44d1103530ae6923f12c5e48e699",
-      "generatedAt": "2026-03-31T21:16:00.286Z",
-      "summary": "Combines TrigramHash embeddings with value-residual attention, bank-level QAT+GradQuant tiers, MTP heads, and Adam-mode TTT with calibration/warmdown care.",
+      "status": "closed",
+      "updatedAt": "2026-03-31T21:32:27Z",
+      "headSha": "8274cbfc37be74c1f81d08ed0a7723de9e3e50af",
+      "generatedAt": "2026-03-31T21:45:45.181Z",
+      "summary": "Combines TrigramHash embeddings, value-residual attention, bank-level QAT with GradQuant, MTP heads, and Adam TTT for fast 16MB track submissions.",
       "tags": [
         "quantization",
+        "attention",
         "architecture",
-        "training-schedule"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -636,15 +637,16 @@
     },
     {
       "prNumber": 1166,
-      "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1347 (README request)",
+      "title": "Non-record: 10L E2E TTT-Linear + FlowRefiner — val_bpb 1.1335 ± 0.0010 (4-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T11:34:29Z",
-      "headSha": "fdb829f7946d676df6dd2f1eb86888d49cba394a",
-      "generatedAt": "2026-03-31T11:42:58.379Z",
-      "summary": "10-layer transformer pairs E2E TTT-Linear refinement with one-step latent FlowRefiner inspired by FLOWR plus int6/int8 quantization to stay within 16MB.",
+      "updatedAt": "2026-03-31T21:25:57Z",
+      "headSha": "4b23b4a61fcaf5ab53a29f770ebe50c3280fcc7e",
+      "generatedAt": "2026-03-31T21:45:50.813Z",
+      "summary": "Compact 10-layer GQA transformer adds E2E TTT-Linear refinement plus a tiny flow-inspired hidden-state refiner with late QAT/EMA.",
       "tags": [
         "architecture",
         "quantization",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
