@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T05:41:34.206Z",
+  "generatedAt": "2026-03-31T06:11:32.843Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -582,11 +582,11 @@
     {
       "prNumber": 1134,
       "title": "Vihaan gelu submission 2026 03 30",
-      "status": "open",
-      "updatedAt": "2026-03-30T14:52:27Z",
+      "status": "closed",
+      "updatedAt": "2026-03-31T06:08:27Z",
       "headSha": "6cbb2436e46b2bbc4ada3c93d2b390d37b50a499",
-      "generatedAt": "2026-03-30T15:07:02.868Z",
-      "summary": "Baseline GPT uses GELU instead of ReLU² in MLPs to test smoother activation behavior on the existing 9-layer, 512-dim model.",
+      "generatedAt": "2026-03-31T06:11:32.679Z",
+      "summary": "Baseline 9-layer GPT replaces ReLU² with GELU in MLP layers to explore smoother activations within the standard Muon optimizer workflow.",
       "tags": [
         "architecture"
       ],

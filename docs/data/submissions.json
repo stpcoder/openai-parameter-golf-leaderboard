@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T05:41:27.016Z",
+  "generatedAt": "2026-03-31T06:11:25.595Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -48456,7 +48456,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-03-30_GELU_MLP",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -48504,14 +48504,14 @@
       "pr": {
         "number": 1134,
         "title": "Vihaan gelu submission 2026 03 30",
-        "state": "open",
-        "draft": false,
+        "state": "closed",
+        "draft": true,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1134",
         "authorLogin": "WinterBlossom0",
         "authorName": null,
         "createdAt": "2026-03-30T14:52:27Z",
-        "updatedAt": "2026-03-30T14:52:27Z",
+        "updatedAt": "2026-03-31T06:08:27Z",
         "headSha": "6cbb2436e46b2bbc4ada3c93d2b390d37b50a499",
         "headRepo": "WinterBlossom0/parameter-golf"
       },
