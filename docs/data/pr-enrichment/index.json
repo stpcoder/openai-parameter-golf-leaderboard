@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T06:49:39.135Z",
+  "generatedAt": "2026-04-01T07:19:47.098Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -3472,14 +3472,14 @@
       "prNumber": 1004,
       "title": "Non-record: 33.6M Int5 GPTQ + Legal s_0-only TTT (val_bpb=1.1182)",
       "status": "open",
-      "updatedAt": "2026-03-28T05:36:42Z",
-      "headSha": "363b63503eb51db08bca879fc8d98a8dce4b98bc",
-      "generatedAt": "2026-03-28T05:51:07.447Z",
-      "summary": "33.6M int5 GPTQ model uses score-first s_0 TTT without re-eval/calibration plus tighter pruning to meet artifact and runtime budgets.",
+      "updatedAt": "2026-04-01T07:03:51Z",
+      "headSha": "221032556238c552c83e16ffa208bc8267606e2e",
+      "generatedAt": "2026-04-01T07:19:46.954Z",
+      "summary": "Int5 GPTQ on a 33.6M/11L model with tighter pruning simply reports cumulative s_0 from score-first TTT without any post-retraining re-eval.",
       "tags": [
-        "architecture",
         "quantization",
-        "evaluation"
+        "architecture",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

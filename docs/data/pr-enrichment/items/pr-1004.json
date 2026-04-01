@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T05:51:07.447Z",
+  "generatedAt": "2026-04-01T07:19:46.954Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1004,
     "title": "Non-record: 33.6M Int5 GPTQ + Legal s_0-only TTT (val_bpb=1.1182)",
     "state": "open",
-    "updatedAt": "2026-03-28T05:36:42Z",
-    "headSha": "363b63503eb51db08bca879fc8d98a8dce4b98bc",
+    "updatedAt": "2026-04-01T07:03:51Z",
+    "headSha": "221032556238c552c83e16ffa208bc8267606e2e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1004",
     "authorLogin": "ibarrajo"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "33.6M int5 GPTQ model uses score-first s_0 TTT without re-eval/calibration plus tighter pruning to meet artifact and runtime budgets.",
+    "summary": "Int5 GPTQ on a 33.6M/11L model with tighter pruning simply reports cumulative s_0 from score-first TTT without any post-retraining re-eval.",
     "tags": [
-      "architecture",
       "quantization",
-      "evaluation"
+      "architecture",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "score-first s_0 TTT with no post-training re-eval",
-      "int5 GPTQ + 5% pruning to keep artifact <16MB",
-      "runtime assertion checks for budgets"
+      "Int5 GPTQ on 33.6M/11L with 5% pruning",
+      "Score-first TTT reporting cumulative s_0 pre-training",
+      "No post-TTT calibration or re-scoring"
     ]
   },
   "compatibility": {
