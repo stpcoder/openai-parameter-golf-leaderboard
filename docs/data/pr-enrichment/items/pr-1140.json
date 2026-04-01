@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-31T17:15:13.356Z",
+  "generatedAt": "2026-04-01T03:49:14.924Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1140,
     "title": "Crawler —  8.8MB -1.1874 BPB (3-seed mean, 8xH100, 600s)",
     "state": "open",
-    "updatedAt": "2026-03-31T17:07:39Z",
+    "updatedAt": "2026-04-01T03:29:32Z",
     "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1140",
     "authorLogin": "newjordan"
@@ -24,7 +24,7 @@
     "submissionCount": 6
   },
   "output": {
-    "summary": "Micro Crawler pairs 4 flat XSA layers with a shared crawler block run over three causal horizons, iteratively refining fuzzy reps with int8 QAT.",
+    "summary": "Micro Crawler reuses a single crawler block over three looped causal horizons to iteratively refine inputs while QAT'd int8 MLPs keep the model ~9MB.",
     "tags": [
       "architecture",
       "quantization"
@@ -32,8 +32,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Shared crawler loop applied across three causal horizons",
-      "Int8 QAT with naive int6 + zstd compression"
+      "Three-loop shared crawler block covering cascaded causal horizons",
+      "QAT-enabled int8 MLP with naive int6 quantization plus zstd compression"
     ]
   },
   "compatibility": {

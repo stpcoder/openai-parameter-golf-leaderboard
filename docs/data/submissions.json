@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T03:18:48.744Z",
+  "generatedAt": "2026-04-01T03:49:02.717Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3452,7 +3452,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T17:07:39Z",
+        "updatedAt": "2026-04-01T03:29:32Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -3606,7 +3606,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T17:07:39Z",
+        "updatedAt": "2026-04-01T03:29:32Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -6771,7 +6771,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T17:07:39Z",
+        "updatedAt": "2026-04-01T03:29:32Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -10159,16 +10159,16 @@
         "authorLogin": "abaybektursun",
         "authorName": null,
         "createdAt": "2026-03-30T00:03:19Z",
-        "updatedAt": "2026-04-01T03:11:00Z",
-        "headSha": "f7a6655d17b1234a3488045bb1a7ebc850040469",
+        "updatedAt": "2026-04-01T03:40:36Z",
+        "headSha": "2d58d1926406df8183bea4c08e6a8df5acd92132",
         "headRepo": "abaybektursun/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f7a6655d17b1234a3488045bb1a7ebc850040469/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/f7a6655d17b1234a3488045bb1a7ebc850040469/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/f7a6655d17b1234a3488045bb1a7ebc850040469/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/f7a6655d17b1234a3488045bb1a7ebc850040469/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/f7a6655d17b1234a3488045bb1a7ebc850040469/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2d58d1926406df8183bea4c08e6a8df5acd92132/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/2d58d1926406df8183bea4c08e6a8df5acd92132/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/2d58d1926406df8183bea4c08e6a8df5acd92132/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/2d58d1926406df8183bea4c08e6a8df5acd92132/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/2d58d1926406df8183bea4c08e6a8df5acd92132/records/track_10min_16mb/2026-03-29_FusedMLP_Brotli_Memmap",
         "pr": "https://github.com/openai/parameter-golf/pull/1105",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -10467,7 +10467,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T17:07:39Z",
+        "updatedAt": "2026-04-01T03:29:32Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -32418,7 +32418,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T17:07:39Z",
+        "updatedAt": "2026-04-01T03:29:32Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },
@@ -54527,11 +54527,11 @@
         "headRepo": "AnirudhRahul/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/00bf9372b2ee0b79c1c03b7fdba611a95a800e08/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8ad2f1a23a1591648574e377eab8dc5321cfb6d2/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8ad2f1a23a1591648574e377eab8dc5321cfb6d2/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8ad2f1a23a1591648574e377eab8dc5321cfb6d2/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8ad2f1a23a1591648574e377eab8dc5321cfb6d2/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8ad2f1a23a1591648574e377eab8dc5321cfb6d2/records/track_10min_16mb/2026-03-28_TurboMuon_EngramLite_ParamBanking",
         "pr": "https://github.com/openai/parameter-golf/pull/1126",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -58218,7 +58218,7 @@
         "authorLogin": "newjordan",
         "authorName": null,
         "createdAt": "2026-03-30T17:18:30Z",
-        "updatedAt": "2026-03-31T17:07:39Z",
+        "updatedAt": "2026-04-01T03:29:32Z",
         "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
         "headRepo": "newjordan/parameter-golf-1"
       },

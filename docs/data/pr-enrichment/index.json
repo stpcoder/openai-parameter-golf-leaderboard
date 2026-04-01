@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T03:19:22.746Z",
+  "generatedAt": "2026-04-01T03:49:21.729Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -1170,10 +1170,10 @@
       "prNumber": 1140,
       "title": "Crawler —  8.8MB -1.1874 BPB (3-seed mean, 8xH100, 600s)",
       "status": "open",
-      "updatedAt": "2026-03-31T17:07:39Z",
+      "updatedAt": "2026-04-01T03:29:32Z",
       "headSha": "11949489d4de7d8fa9b5cbd4dba71f6e4f7baf88",
-      "generatedAt": "2026-03-31T17:15:13.356Z",
-      "summary": "Micro Crawler pairs 4 flat XSA layers with a shared crawler block run over three causal horizons, iteratively refining fuzzy reps with int8 QAT.",
+      "generatedAt": "2026-04-01T03:49:14.924Z",
+      "summary": "Micro Crawler reuses a single crawler block over three looped causal horizons to iteratively refine inputs while QAT'd int8 MLPs keep the model ~9MB.",
       "tags": [
         "architecture",
         "quantization"
@@ -1750,10 +1750,10 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T03:11:00Z",
-      "headSha": "f7a6655d17b1234a3488045bb1a7ebc850040469",
-      "generatedAt": "2026-04-01T03:19:09.179Z",
-      "summary": "Fuses Triton+CUTLASS MLP kernels, widens the MLP, and uses Hessian-guided mixed int5/int6 quantization with Brotli compression to hit the 16MB target.",
+      "updatedAt": "2026-04-01T03:40:36Z",
+      "headSha": "2d58d1926406df8183bea4c08e6a8df5acd92132",
+      "generatedAt": "2026-04-01T03:49:21.569Z",
+      "summary": "Fuses Triton TMA forward and CUTLASS EVT backward MLP kernels, widens MLP to 3.5×, and uses Hessian-guided int5/int6 quantization with Brotli compression.",
       "tags": [
         "architecture",
         "quantization",
