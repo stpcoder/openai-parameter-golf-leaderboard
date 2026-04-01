@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T01:48:36.874Z",
+  "generatedAt": "2026-04-01T02:18:27.767Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1184,
     "title": "Record: Scylla + Full GPTQ + XSA-all + FA3 — val_bpb 0.9485 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-01T01:31:39Z",
+    "updatedAt": "2026-04-01T01:58:21Z",
     "headSha": "4cbc43f290f4cf4efde795163b3e8db9f86dfaf8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1184",
     "authorLogin": "icryo"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines the Scylla tokenizer with the PR #1060 stack to run full Hessian GPTQ, XSA on every layer, and FA3 attention for a modern quantized LM build.",
+    "summary": "Pairs the Scylla tokenizer with the PR #1060 stack—Full Hessian GPTQ, XSA-all, FlashAttention 3—for a tightly quantized GPT run.",
     "tags": [
       "tokenization",
       "quantization",
-      "attention",
-      "architecture"
+      "attention"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Full Hessian GPTQ with Cholesky compensation",
-      "XSA on all 11 layers paired with FlashAttention 3",
-      "Coprime-stride multi-shard loader with 998-token Scylla tokenizer retokenization"
+      "Scylla tokenizer retokenizing FineWeb with 998-token vocab",
+      "Full Hessian GPTQ (Cholesky compensation) with coprime-stride loader",
+      "XSA on every layer backed by FlashAttention 3"
     ]
   },
   "compatibility": {
