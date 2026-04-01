@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T23:26:16.578Z",
+  "generatedAt": "2026-04-01T23:56:27.239Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -48300,6 +48300,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-04-01_WhirlpoolV5b_LorentzianTransformer",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-01_WhirlpoolV5b_LorentzianTransformer",
+        "folderPath": "records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer",
+        "submissionPath": "records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/train_gpt.py"
+      },
+      "submission": {
+        "author": "tmancino",
+        "githubId": "tmancino",
+        "name": "Whirlpool v5b — Lorentzian Transformer with Flash Lorentz Attention",
+        "blurb": "First non-Euclidean, Lorentzian geometry transformer in the competition. Replaces dot-product attention with Minkowski inner product on the hyperboloid manifold, using a custom Flash Lorentz Attention Triton kernel. Tri-block architecture with 8 curvature-progressive orbits through 3 shared blocks (23.9M stored, 62M effective params). d=768, 12H GQA 6:1, 5x MLP with fused LeakyReLU(0.5)². Parallel eval: 8 GPUs each run a different TTT hyperparameter, best reported. 1-seed: 1.5918.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 1.5918,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 12208264,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1239,
+        "title": "[Non-Record] Whirlpool v5b — Non-Euclidean Lorentzian Attention on the Hyperboloid Manifold",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1239",
+        "authorLogin": "tmancino",
+        "authorName": null,
+        "createdAt": "2026-04-01T23:55:33Z",
+        "updatedAt": "2026-04-01T23:55:33Z",
+        "headSha": "3780f0e47ee6d83d1b082a5828efa70b18c41994",
+        "headRepo": "tmancino/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3780f0e47ee6d83d1b082a5828efa70b18c41994/records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/3780f0e47ee6d83d1b082a5828efa70b18c41994/records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/3780f0e47ee6d83d1b082a5828efa70b18c41994/records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/3780f0e47ee6d83d1b082a5828efa70b18c41994/records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/3780f0e47ee6d83d1b082a5828efa70b18c41994/records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer",
+        "pr": "https://github.com/openai/parameter-golf/pull/1239",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-31_HybridSparseDiffusion_2h_8xH100",
       "source": "pull_request",
       "status": "open",
@@ -54388,6 +54465,160 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-04-01_ApproachE_SLOT_QKGain",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_ApproachE_SLOT_QKGain",
+        "folderPath": "records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/train_gpt.py"
+      },
+      "submission": {
+        "author": "elninja",
+        "githubId": "elninja",
+        "name": "Approach E: SLOT + QK-Gain + Int5 GPTQ + Score-First TTT",
+        "blurb": "SLOT eval-time delta optimization (lr=0.005, 8 AdamW steps per batch) + QK-Gain init=4.0 + Int5 GPTQ quantization + score-first TTT (3 epochs, AdamW) + sliding window eval (stride=64). Built on Approach B (33.6M params, 11L, XSA-all, VE, BigramHash).",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": 0,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 0,
+        "bytesCode": 0,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1236,
+        "title": "Non-record: SLOT eval-time delta optimization + QK-Gain (val_bpb=1.1179)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1236",
+        "authorLogin": "ibarrajo",
+        "authorName": null,
+        "createdAt": "2026-04-01T23:54:36Z",
+        "updatedAt": "2026-04-01T23:54:36Z",
+        "headSha": "e1e32e03c762c472cd0c56246c4b07249d112b44",
+        "headRepo": "ibarrajo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e1e32e03c762c472cd0c56246c4b07249d112b44/records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e1e32e03c762c472cd0c56246c4b07249d112b44/records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e1e32e03c762c472cd0c56246c4b07249d112b44/records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e1e32e03c762c472cd0c56246c4b07249d112b44/records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e1e32e03c762c472cd0c56246c4b07249d112b44/records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain",
+        "pr": "https://github.com/openai/parameter-golf/pull/1236",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-01_ApproachF_FusedTriton",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-01_ApproachF_FusedTriton",
+        "folderPath": "records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton",
+        "submissionPath": "records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/train_gpt.py"
+      },
+      "submission": {
+        "author": "Alex Ibarra",
+        "githubId": "elninja",
+        "name": "Approach F: Fused Triton MLP Activation Kernel",
+        "blurb": "Fused Triton kernel for relu(x).square() activation eliminates intermediate HBM write in MLP forward+backward across 11 layers. Combined with Int5 GPTQ, 33.6M params, U-Net skips, XSA, BigramHash, SmearGate, value embeddings, SWA, EMA, and score-first TTT.",
+        "date": "2026-04-01"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1237,
+        "title": "Non-record: Fused Triton relu^2 kernel — negative result (val_bpb=1.1198)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1237",
+        "authorLogin": "ibarrajo",
+        "authorName": null,
+        "createdAt": "2026-04-01T23:54:43Z",
+        "updatedAt": "2026-04-01T23:54:43Z",
+        "headSha": "d3f8e84958db3ba4683864da61aabde8812af667",
+        "headRepo": "ibarrajo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d3f8e84958db3ba4683864da61aabde8812af667/records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/d3f8e84958db3ba4683864da61aabde8812af667/records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/d3f8e84958db3ba4683864da61aabde8812af667/records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/d3f8e84958db3ba4683864da61aabde8812af667/records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/d3f8e84958db3ba4683864da61aabde8812af667/records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton",
+        "pr": "https://github.com/openai/parameter-golf/pull/1237",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-31_UniversalTransformer_4h",
       "source": "pull_request",
       "status": "open",
@@ -54764,6 +54995,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/1cfb222f236144d0b33500829f5e3418db2c8135/records/track_non_record_16mb/2026-03-31_CustomTokenizer_SplitDigits_WebSymbols/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/1cfb222f236144d0b33500829f5e3418db2c8135/records/track_non_record_16mb/2026-03-31_CustomTokenizer_SplitDigits_WebSymbols",
         "pr": "https://github.com/openai/parameter-golf/pull/1210",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-03-31_ApproachD_TurboQuant_MixedPrecision",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-03-31_ApproachD_TurboQuant_MixedPrecision",
+        "folderPath": "records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision",
+        "submissionPath": "records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision/train_gpt.py"
+      },
+      "submission": {
+        "author": "ibarrajo",
+        "githubId": "ibarrajo",
+        "name": "TurboQuant-Guided Mixed Precision (V@int3, QK@int5, boundary@int5)",
+        "blurb": "Mixed precision quantization guided by TurboQuant+ findings: V/O projections and MLP at int3 in middle layers, Q/K at int5 everywhere, boundary layers (first 2 + last 2) at int5. Per-tensor QAT alignment. Based on ICLR 2026 findings that V compression is free and all quality loss comes from K compression.",
+        "date": "2026-03-31"
+      },
+      "metrics": {
+        "valBpb": 0,
+        "valLoss": 0,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 0,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1238,
+        "title": "Non-record: TurboQuant mixed-precision int4/int5 (val_bpb=1.1521)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1238",
+        "authorLogin": "ibarrajo",
+        "authorName": null,
+        "createdAt": "2026-04-01T23:54:53Z",
+        "updatedAt": "2026-04-01T23:54:53Z",
+        "headSha": "6c583859b3271a177b364e055fb28861f5f4e4ae",
+        "headRepo": "ibarrajo/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/6c583859b3271a177b364e055fb28861f5f4e4ae/records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/6c583859b3271a177b364e055fb28861f5f4e4ae/records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/6c583859b3271a177b364e055fb28861f5f4e4ae/records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/6c583859b3271a177b364e055fb28861f5f4e4ae/records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/6c583859b3271a177b364e055fb28861f5f4e4ae/records/track_10min_16mb/2026-03-31_ApproachD_TurboQuant_MixedPrecision",
+        "pr": "https://github.com/openai/parameter-golf/pull/1238",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

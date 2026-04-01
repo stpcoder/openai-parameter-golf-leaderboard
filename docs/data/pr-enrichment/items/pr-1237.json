@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-04-01T23:56:44.854Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1237,
+    "title": "Non-record: Fused Triton relu^2 kernel — negative result (val_bpb=1.1198)",
+    "state": "open",
+    "updatedAt": "2026-04-01T23:54:43Z",
+    "headSha": "d3f8e84958db3ba4683864da61aabde8812af667",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1237",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_ApproachF_FusedTriton/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Custom Triton kernel fuses relu² MLP activations to avoid intermediate HBM writes while falling back to torch.compile when fusion already covers it.",
+    "tags": [
+      "architecture"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Fused Triton relu² kernel to eliminate intermediate hidden tensor writes",
+      "Torch.compile fallback preserves correctness when Triton adds no gain"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

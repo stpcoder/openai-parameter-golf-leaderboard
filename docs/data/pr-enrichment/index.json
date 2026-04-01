@@ -1,8 +1,99 @@
 {
-  "generatedAt": "2026-04-01T22:56:02.555Z",
+  "generatedAt": "2026-04-01T23:56:52.752Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1239,
+      "title": "[Non-Record] Whirlpool v5b — Non-Euclidean Lorentzian Attention on the Hyperboloid Manifold",
+      "status": "open",
+      "updatedAt": "2026-04-01T23:55:33Z",
+      "headSha": "3780f0e47ee6d83d1b082a5828efa70b18c41994",
+      "generatedAt": "2026-04-01T23:56:34.596Z",
+      "summary": "Hyperboloid Lorentzian attention with a custom Triton kernel and curvature-progressive shared blocks for depth.",
+      "tags": [
+        "attention",
+        "architecture",
+        "training-schedule",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1239.json"
+    },
+    {
+      "prNumber": 1238,
+      "title": "Non-record: TurboQuant mixed-precision int4/int5 (val_bpb=1.1521)",
+      "status": "open",
+      "updatedAt": "2026-04-01T23:54:53Z",
+      "headSha": "6c583859b3271a177b364e055fb28861f5f4e4ae",
+      "generatedAt": "2026-04-01T23:56:38.717Z",
+      "summary": "Role-aware TurboQuant mixed-precision quantization keeps Q/K at int5 while dropping V/O/MLP mid layers to int4 to shrink weights without new architecture.",
+      "tags": [
+        "quantization",
+        "mixed-precision",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1238.json"
+    },
+    {
+      "prNumber": 1237,
+      "title": "Non-record: Fused Triton relu^2 kernel — negative result (val_bpb=1.1198)",
+      "status": "open",
+      "updatedAt": "2026-04-01T23:54:43Z",
+      "headSha": "d3f8e84958db3ba4683864da61aabde8812af667",
+      "generatedAt": "2026-04-01T23:56:44.854Z",
+      "summary": "Custom Triton kernel fuses relu² MLP activations to avoid intermediate HBM writes while falling back to torch.compile when fusion already covers it.",
+      "tags": [
+        "architecture"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1237.json"
+    },
+    {
+      "prNumber": 1236,
+      "title": "Non-record: SLOT eval-time delta optimization + QK-Gain (val_bpb=1.1179)",
+      "status": "open",
+      "updatedAt": "2026-04-01T23:54:36Z",
+      "headSha": "e1e32e03c762c472cd0c56246c4b07249d112b44",
+      "generatedAt": "2026-04-01T23:56:52.562Z",
+      "summary": "Applies SLOT eval-time logit-delta tuning on Approach B's Int5 GPTQ base while documenting a higher QK-Gain scaling variant.",
+      "tags": [
+        "evaluation",
+        "quantization",
+        "attention"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1236.json"
+    },
     {
       "prNumber": 1235,
       "title": "Non-record: 21L PRP experiment",

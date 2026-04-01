@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T23:56:34.596Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1239,
+    "title": "[Non-Record] Whirlpool v5b — Non-Euclidean Lorentzian Attention on the Hyperboloid Manifold",
+    "state": "open",
+    "updatedAt": "2026-04-01T23:55:33Z",
+    "headSha": "3780f0e47ee6d83d1b082a5828efa70b18c41994",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1239",
+    "authorLogin": "tmancino"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-01_WhirlpoolV5b_LorentzianTransformer/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Hyperboloid Lorentzian attention with a custom Triton kernel and curvature-progressive shared blocks for depth.",
+    "tags": [
+      "attention",
+      "architecture",
+      "training-schedule",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Minkowski inner-product attention on the hyperboloid via a fused Flash Lorentz kernel",
+      "- Shared 3-block architecture run through 8 curvature-progressive orbits for depth with few stored params",
+      "- Scale clamping plus extended warmup to stabilize non-Euclidean training"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

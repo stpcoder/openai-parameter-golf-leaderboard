@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-01T23:56:52.562Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1236,
+    "title": "Non-record: SLOT eval-time delta optimization + QK-Gain (val_bpb=1.1179)",
+    "state": "open",
+    "updatedAt": "2026-04-01T23:54:36Z",
+    "headSha": "e1e32e03c762c472cd0c56246c4b07249d112b44",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1236",
+    "authorLogin": "ibarrajo"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-01_ApproachE_SLOT_QKGain/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Applies SLOT eval-time logit-delta tuning on Approach B's Int5 GPTQ base while documenting a higher QK-Gain scaling variant.",
+    "tags": [
+      "evaluation",
+      "quantization",
+      "attention"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SLOT eval-time logit delta tuning",
+      "Approach B Int5 GPTQ base",
+      "QK/G scaling documentation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
