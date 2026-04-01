@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-01T12:22:12.538Z",
+  "generatedAt": "2026-04-01T12:52:39.078Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,15 +7,15 @@
       "prNumber": 1218,
       "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T12:13:25Z",
+      "updatedAt": "2026-04-01T12:40:17Z",
       "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
-      "generatedAt": "2026-04-01T12:21:57.940Z",
-      "summary": "Larger 4096-token vocab, wider MLP, and stronger weight decay combine with a simplified XSA-only backbone, coprime loader, and GPTQ+compression pipeline.",
+      "generatedAt": "2026-04-01T12:52:09.319Z",
+      "summary": "Larger vocab with wider MLPs, higher WD, and simplified Muon+DDP stack plus coprime data loading and GPTQ/Hessian-aware quantization.",
       "tags": [
         "architecture",
-        "quantization",
         "tokenization",
-        "regularization"
+        "quantization",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -31,13 +31,13 @@
       "prNumber": 1217,
       "title": "Record: MuonEq-R + Context-Only SLOT + QK_GAIN=5.0 — val_bpb 1.1027 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T12:11:58Z",
+      "updatedAt": "2026-04-01T12:24:13Z",
       "headSha": "1b462047cba314e27afefd29c42463bb8ad06985",
-      "generatedAt": "2026-04-01T12:22:05.675Z",
-      "summary": "Row-normalized MuonEq-R, QK_GAIN=5, and causal context-only SLOT refine sliding-window eval delta tuning.",
+      "generatedAt": "2026-04-01T12:52:14.747Z",
+      "summary": "Combine MuonEq-R orthogonalization, QK_GAIN=5.0 scaling, and causal context-only SLOT for sliding evaluation.",
       "tags": [
-        "muon",
         "optimizer",
+        "attention",
         "evaluation"
       ],
       "flags": {
@@ -776,14 +776,14 @@
       "prNumber": 1179,
       "title": "Record: Split-LR + BigramHash(2816x160) + Full GPTQ + Brotli — val_bpb 1.1105 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-01T00:30:48Z",
+      "updatedAt": "2026-04-01T12:30:40Z",
       "headSha": "6772e6ae8a761241a88187903a74e44dc5d92a56",
-      "generatedAt": "2026-04-01T00:47:51.498Z",
-      "summary": "Split-LR with wider BigramHash, sigmoid-gated U-Net skips, and soft-round QAT feed full Hessian GPTQ with Brotli/minified artifact packaging.",
+      "generatedAt": "2026-04-01T12:52:27.123Z",
+      "summary": "Combines split early/late LRs, widened BigramHash, sigmoid-gated U-Net skips, and soft-round GPTQ with Brotli/minified packaging.",
       "tags": [
-        "optimizer",
         "architecture",
         "quantization",
+        "training-schedule",
         "compression"
       ],
       "flags": {
@@ -8693,10 +8693,10 @@
       "prNumber": 673,
       "title": "Add submission snapshots for grant-backed runs",
       "status": "open",
-      "updatedAt": "2026-03-25T03:47:16Z",
+      "updatedAt": "2026-04-01T12:49:23Z",
       "headSha": "4e465ee7c8c8c3adbfa9c2db9631bdd15b68a791",
-      "generatedAt": "2026-03-25T03:58:45.193Z",
-      "summary": "Adds snapshots: MLX val-only sliding-window pipeline plus two pending 10-minute int6/QAT stacks (MLP sizing, SWA/Bigram/SmearGate) awaiting H100 logs.",
+      "generatedAt": "2026-04-01T12:52:38.975Z",
+      "summary": "Val-only training on the validation shard with sliding-window eval validates the MLX pipeline while snapshots record planned QAT Int6/SWA/BigramHash/SmearGate/MuonWD stacks.",
       "tags": [
         "val-only",
         "sliding-window-eval",

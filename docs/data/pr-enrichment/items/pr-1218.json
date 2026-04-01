@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-01T12:21:57.940Z",
+  "generatedAt": "2026-04-01T12:52:09.319Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1218,
     "title": "Record: 4096-Vocab + 4.0-MLP-mult + 0.085-WD + Simplifications — val_bpb 1.09785 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-01T12:13:25Z",
+    "updatedAt": "2026-04-01T12:40:17Z",
     "headSha": "4421a8d90c6e653bf36e2cbc59c08691d82f46af",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1218",
     "authorLogin": "clarkkev"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Larger 4096-token vocab, wider MLP, and stronger weight decay combine with a simplified XSA-only backbone, coprime loader, and GPTQ+compression pipeline.",
+    "summary": "Larger vocab with wider MLPs, higher WD, and simplified Muon+DDP stack plus coprime data loading and GPTQ/Hessian-aware quantization.",
     "tags": [
       "architecture",
-      "quantization",
       "tokenization",
-      "regularization"
+      "quantization",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "High-WD wider MLP with XSA layers only",
-      "Coprime-stride data loader for diverse minibatches",
-      "GPTQ Hessian quant + byte-shuffle/Brotli compression"
+      "- XSA everywhere with coprime-stride loader",
+      "- 4K vocab + pretokenized data to pack context",
+      "- Higher WD + GPTQ Hessian-aware quantization"
     ]
   },
   "compatibility": {
