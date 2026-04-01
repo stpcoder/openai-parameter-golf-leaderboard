@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-01T14:22:48.742Z",
+  "generatedAt": "2026-04-01T14:52:45.651Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1105,
     "title": "Record: Fused MLP (Triton+CUTLASS EVT) + Fast Causal N-Gram Tilt & Subword Certainty— 1.1052 BPB (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-01T13:58:28Z",
-    "headSha": "d381a51b26b3ccb063b11618e06ef203459b3fce",
+    "updatedAt": "2026-04-01T14:51:21Z",
+    "headSha": "30c83c773b8629e45f09a17fefcf33afef6df08b",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1105",
     "authorLogin": "abaybektursun"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines Triton/CUTLASS-fused MLP kernels, Hessian-guided mixed int5/int6 quant to unlock a 3.5× MLP, and GPU causal n-gram tilt plus Brotli.",
+    "summary": "Fuses Triton TMA + CUTLASS EVT MLP kernels, widens MLP to 3.5×, and uses Hessian-guided int5/int6 quant with Brotli to stay under 16MB.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation",
-      "compression"
+      "compression",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Fused Triton TMA forward + CUTLASS EVT backward MLP kernel with precomputed act grad",
-      "Hessian-ranked mixed int5/int6 quant enabling wider 3.5× MLP capacity",
-      "GPU-side causal n-gram tilt/subword certainty acting as sparse auxiliary memory"
+      "Fused Triton TMA forward and CUTLASS EVT backward MLP kernels",
+      "MLP 3.5× expansion with Hessian-guided mixed int5/int6 quant",
+      "Fast causal n-gram tilt plus Brotli-11 headroom for eval"
     ]
   },
   "compatibility": {
