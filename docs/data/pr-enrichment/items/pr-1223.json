@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T16:54:06.583Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1223,
+    "title": "Non-record: Entropy-aware Int5-odd BTT-MLP with materialized eval",
+    "state": "open",
+    "updatedAt": "2026-04-01T16:44:04Z",
+    "headSha": "c6c9326b29910b13c3a05c2c4b6d08acc5fde962",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1223",
+    "authorLogin": "LucasErcolano"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-31_EntropyAware_Int5Odd_BTTMLP_3060/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Combines entropy-aware int5_odd quantization with TT/BTT-structured MLPs and eval-time materialization for fast dense validation.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- Entropy-aware int5_odd training aligned to the exported artifact",
+      "- TT/BTT-inspired StructuredLinear for MLP layers while keeping attention dense",
+      "- Eval-time materialization contracting the structured MLP into dense weights"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

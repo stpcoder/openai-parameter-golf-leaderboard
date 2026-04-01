@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-01T15:53:47.020Z",
+  "generatedAt": "2026-04-01T16:54:17.722Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1223,
+      "title": "Non-record: Entropy-aware Int5-odd BTT-MLP with materialized eval",
+      "status": "open",
+      "updatedAt": "2026-04-01T16:44:04Z",
+      "headSha": "c6c9326b29910b13c3a05c2c4b6d08acc5fde962",
+      "generatedAt": "2026-04-01T16:54:06.583Z",
+      "summary": "Combines entropy-aware int5_odd quantization with TT/BTT-structured MLPs and eval-time materialization for fast dense validation.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1223.json"
+    },
     {
       "prNumber": 1221,
       "title": "Non-record: Oscillatory Recurrence at Layer 0 (1.1915 BPB, 3-seed)",
@@ -125,15 +149,15 @@
       "prNumber": 1215,
       "title": "12L rANS + LeakyReLU(0.95)² + Soft XSA (1.1601 BPB, non_record_16mb)",
       "status": "open",
-      "updatedAt": "2026-04-01T08:33:57Z",
-      "headSha": "b53f5fb35b1ec2abb9389cd95b3969f4e75255ec",
-      "generatedAt": "2026-04-01T08:50:59.604Z",
-      "summary": "Adds per-tensor adaptive rANS quantization to squeeze a 12L Soft XSA model with LeakyReLU² and pruning into the 16MB budget.",
+      "updatedAt": "2026-04-01T16:36:13Z",
+      "headSha": "c8fbe8378d2451157448a7356625e6150aebe0b2",
+      "generatedAt": "2026-04-01T16:54:11.483Z",
+      "summary": "12-layer model blends learned per-head Soft XSA, LeakyReLU(0.95)², and per-tensor rANS plus pruning to fit the 16MB budget.",
       "tags": [
-        "compression",
         "architecture",
         "attention",
-        "regularization"
+        "compression",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -1194,13 +1218,14 @@
       "prNumber": 1154,
       "title": "Non-record: Polar STE QAT for structural weights",
       "status": "open",
-      "updatedAt": "2026-03-31T02:03:47Z",
-      "headSha": "8979432f5ba7931266d7aab5206b594017acfb1b",
-      "generatedAt": "2026-03-31T02:09:58.610Z",
-      "summary": "Adds Polar STE QAT for structural weights, shared polar export helpers, and a distributed-safe KV-cache evaluation path for the non-record submission.",
+      "updatedAt": "2026-04-01T16:42:14Z",
+      "headSha": "97f028fcc4a9d761e7df74aad0d8495cc233ecd7",
+      "generatedAt": "2026-04-01T16:54:17.552Z",
+      "summary": "Adds Polar STE QAT for structural weights, polar row encode/decode export, and distributed KV eval safeguards atop the existing stack.",
       "tags": [
         "quantization",
         "evaluation",
+        "compression",
         "non-record"
       ],
       "flags": {

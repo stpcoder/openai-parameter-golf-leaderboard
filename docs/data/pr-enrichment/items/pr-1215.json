@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-01T08:50:59.604Z",
+  "generatedAt": "2026-04-01T16:54:11.483Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1215,
     "title": "12L rANS + LeakyReLU(0.95)² + Soft XSA (1.1601 BPB, non_record_16mb)",
     "state": "open",
-    "updatedAt": "2026-04-01T08:33:57Z",
-    "headSha": "b53f5fb35b1ec2abb9389cd95b3969f4e75255ec",
+    "updatedAt": "2026-04-01T16:36:13Z",
+    "headSha": "c8fbe8378d2451157448a7356625e6150aebe0b2",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1215",
     "authorLogin": "turbo-indubitable"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Adds per-tensor adaptive rANS quantization to squeeze a 12L Soft XSA model with LeakyReLU² and pruning into the 16MB budget.",
+    "summary": "12-layer model blends learned per-head Soft XSA, LeakyReLU(0.95)², and per-tensor rANS plus pruning to fit the 16MB budget.",
     "tags": [
-      "compression",
       "architecture",
       "attention",
-      "regularization"
+      "compression",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-tensor adaptive rANS quantization with int5/int6 roundtrip",
-      "Soft XSA across all layers with learned per-head alpha and LeakyReLU(0.95)²",
-      "10% magnitude pruning plus safety-valve artifact budget control"
+      "position-tiled Triton kernel for per-layer Soft XSA",
+      "LeakyReLU(0.95)² activations with learned scaling",
+      "per-tensor adaptive rANS plus 10% magnitude pruning"
     ]
   },
   "compatibility": {
