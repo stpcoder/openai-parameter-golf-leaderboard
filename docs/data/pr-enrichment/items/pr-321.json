@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-27T04:13:55.284Z",
+  "generatedAt": "2026-04-01T03:19:22.699Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -12,27 +12,25 @@
     "authorLogin": "andreanjos"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-27_MLP3x_LeakyReLU_QAT_Int6_SlideEval/README.md",
       "records/track_10min_16mb/2026-03-21_OptimizerTuning_SlideEval64/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "Optimizer warmdown/muon tuning with seq2048 training feeds sliding-window stride-64 evaluation on baseline plus int8+zlib quantization.",
+    "summary": "Retunes muon+Adam hyperparams, trains with 2048-step context, and evaluates via stride-64 sliding windows on the unchanged 9x512 ReLU² model.",
     "tags": [
       "optimizer",
-      "training-schedule",
       "evaluation",
-      "quantization"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "warmdown/muon optimizer tuning",
-      "seq2048 training",
-      "sliding-window stride-64 eval with int8+zlib quantization"
+      "muon optimizer tweaks: warmdown 10k, grad clip 1, beta2 0.99, scalar lr 0.02",
+      "train at 2048 tokens with the baseline 9x512 ReLU² layout",
+      "stride-64 sliding-window eval scoring last tokens"
     ]
   },
   "compatibility": {

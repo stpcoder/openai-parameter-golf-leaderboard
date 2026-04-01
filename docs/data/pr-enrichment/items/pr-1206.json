@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-01T03:18:55.763Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1206,
+    "title": "Non-record: Universal Transformer (4h unlimited compute track)",
+    "state": "open",
+    "updatedAt": "2026-04-01T02:51:17Z",
+    "headSha": "a19c08b4ddd40e55bfe5640594fece868edb2a52",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1206",
+    "authorLogin": "oneKn8"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-31_UniversalTransformer_4h/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Universal Transformer reuses a single 1024d block for 24 iterations with learned step embeddings to increase effective depth while staying within ~10M params.",
+    "tags": [
+      "architecture",
+      "depth-width",
+      "attention",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "shared 1024d block iterated 24×",
+      "learned per-step residual embeddings",
+      "LeakyReLU(0.5)^2 activation"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

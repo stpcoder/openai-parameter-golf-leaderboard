@@ -1,38 +1,37 @@
 {
-  "generatedAt": "2026-03-27T04:44:00.354Z",
+  "generatedAt": "2026-04-01T03:19:17.133Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 929,
     "title": "Add record: 9L MLP3x LeakyReLU(0.5)² QAT Int6+zstd (val_bpb=1.1653)",
     "state": "open",
-    "updatedAt": "2026-03-27T04:19:25Z",
-    "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
+    "updatedAt": "2026-04-01T02:54:57Z",
+    "headSha": "bae43c659226406dbd071e63d3fd73746fb27160",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/929",
     "authorLogin": "andreanjos"
   },
   "inputs": {
-    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
     "readmePaths": [
-      "records/track_10min_16mb/2026-03-27_MLP3x_LeakyReLU_QAT_Int6_SlideEval/README.md",
-      "records/track_10min_16mb/2026-03-21_OptimizerTuning_SlideEval64/README.md"
+      "records/track_10min_16mb/2026-03-27_MLP3x_LeakyReLU_QAT_Int6_SlideEval/README.md"
     ],
-    "submissionCount": 2
+    "submissionCount": 1
   },
   "output": {
-    "summary": "MLP3x 9-layer with LeakyReLU(0.5)^2, Int6 QAT+zstd-22, FP16 embedding passthrough, sliding-window stride-64 eval, seq2048 training, and tuned optimizer.",
+    "summary": "9-layer 512d model pairs 3x MLP with LeakyReLU(0.5)^2 plus per-row Int6 QAT and zstd compression, evaluated with a sliding window stride of 64.",
     "tags": [
       "architecture",
       "quantization",
-      "evaluation",
-      "training-schedule"
+      "compression",
+      "evaluation"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Standard training with quant-aware evaluation; no val-only training regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "Int6 QAT with zstd-22 compression",
-      "Sliding-window stride-64 evaluation",
-      "Seq2048 training plus optimizer tuning"
+      "3x MLP expansion + LeakyReLU(0.5)^2 activation",
+      "Int6 QAT with zstd-22 per-row compression",
+      "Sliding-window evaluation stride=64 with FP16 embedding passthrough"
     ]
   },
   "compatibility": {

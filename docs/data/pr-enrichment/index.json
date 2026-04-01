@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-01T02:49:31.390Z",
+  "generatedAt": "2026-04-01T03:19:22.746Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1206,
+      "title": "Non-record: Universal Transformer (4h unlimited compute track)",
+      "status": "open",
+      "updatedAt": "2026-04-01T02:51:17Z",
+      "headSha": "a19c08b4ddd40e55bfe5640594fece868edb2a52",
+      "generatedAt": "2026-04-01T03:18:55.763Z",
+      "summary": "Universal Transformer reuses a single 1024d block for 24 iterations with learned step embeddings to increase effective depth while staying within ~10M params.",
+      "tags": [
+        "architecture",
+        "depth-width",
+        "attention",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1206.json"
+    },
     {
       "prNumber": 1205,
       "title": "Non-record: Turbo-Muon + EngramLite(10240) + VE(8,9,10) — val_bpb 1.1431",
@@ -1726,10 +1750,10 @@
       "prNumber": 1105,
       "title": "Record: Fused MLP (Triton+CUTLASS EVT) + MLP 3.5× + Mixed int5/int6 + Brotli — 1.1125 BPB (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-03-31T19:03:20Z",
-      "headSha": "920cea57be16c068be5560fc3404f603543d03b8",
-      "generatedAt": "2026-03-31T19:15:24.811Z",
-      "summary": "Fuse Triton TMA/CUTLASS EVT MLP kernels, widen MLP to 3.5×, and pair Hessian-ranked mixed int5/int6 GPTQ with Brotli compression.",
+      "updatedAt": "2026-04-01T03:11:00Z",
+      "headSha": "f7a6655d17b1234a3488045bb1a7ebc850040469",
+      "generatedAt": "2026-04-01T03:19:09.179Z",
+      "summary": "Fuses Triton+CUTLASS MLP kernels, widens the MLP, and uses Hessian-guided mixed int5/int6 quantization with Brotli compression to hit the 16MB target.",
       "tags": [
         "architecture",
         "quantization",
@@ -4648,15 +4672,15 @@
       "prNumber": 929,
       "title": "Add record: 9L MLP3x LeakyReLU(0.5)² QAT Int6+zstd (val_bpb=1.1653)",
       "status": "open",
-      "updatedAt": "2026-03-27T04:19:25Z",
-      "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
-      "generatedAt": "2026-03-27T04:44:00.354Z",
-      "summary": "MLP3x 9-layer with LeakyReLU(0.5)^2, Int6 QAT+zstd-22, FP16 embedding passthrough, sliding-window stride-64 eval, seq2048 training, and tuned optimizer.",
+      "updatedAt": "2026-04-01T02:54:57Z",
+      "headSha": "bae43c659226406dbd071e63d3fd73746fb27160",
+      "generatedAt": "2026-04-01T03:19:17.133Z",
+      "summary": "9-layer 512d model pairs 3x MLP with LeakyReLU(0.5)^2 plus per-row Int6 QAT and zstd compression, evaluated with a sliding window stride of 64.",
       "tags": [
         "architecture",
         "quantization",
-        "evaluation",
-        "training-schedule"
+        "compression",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -14104,6 +14128,29 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-322.json"
+    },
+    {
+      "prNumber": 321,
+      "title": "Add record: Optimizer Tuning + Sliding Window Eval (val_bpb=1.1864)",
+      "status": "open",
+      "updatedAt": "2026-03-27T03:55:20Z",
+      "headSha": "c2fb71404e962c6f99186f38f3e86bfc33b9c62e",
+      "generatedAt": "2026-04-01T03:19:22.699Z",
+      "summary": "Retunes muon+Adam hyperparams, trains with 2048-step context, and evaluates via stride-64 sliding windows on the unchanged 9x512 ReLU² model.",
+      "tags": [
+        "optimizer",
+        "evaluation",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-321.json"
     },
     {
       "prNumber": 320,
