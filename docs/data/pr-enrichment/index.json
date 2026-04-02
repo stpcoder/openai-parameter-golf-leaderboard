@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T23:06:04.882Z",
+  "generatedAt": "2026-04-02T23:36:19.969Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -149,10 +149,10 @@
       "prNumber": 1262,
       "title": "Starter kit: align submission schema and path safety",
       "status": "open",
-      "updatedAt": "2026-04-02T22:59:00Z",
-      "headSha": "e5db1182030ea481c6cfd5c07294f906249382a2",
-      "generatedAt": "2026-04-02T23:05:54.341Z",
-      "summary": "Normalized submission schema, track naming, CLI options, and added path-safety guard in prepare_submission for safer PR-ready outputs.",
+      "updatedAt": "2026-04-02T23:31:27Z",
+      "headSha": "c15023ec345bf7b3a622a52d71eea6eb7d567873",
+      "generatedAt": "2026-04-02T23:36:06.553Z",
+      "summary": "Starter kit normalizes submission schema/track names, adjusts prepare_submission to 10min/non_record 16MB options, and adds run-name/path-safety guards.",
       "tags": [
         "non-record"
       ],
@@ -473,13 +473,13 @@
       "status": "open",
       "updatedAt": "2026-04-02T23:05:34Z",
       "headSha": "d56080caf3f1e3ef155d0e5b810b3ce95e584561",
-      "generatedAt": "2026-04-02T23:05:58.749Z",
-      "summary": "Hybrid Hymba8 runs parallel Mamba SSM and 1024-window sliding attention with longer warmdown, untied embeddings, and int8 quantization to hit 32K context in 10m.",
+      "generatedAt": "2026-04-02T23:36:11.497Z",
+      "summary": "Hymba-8L pairs Mamba SSM with sliding-window attention to train 32K-context models within 10 minutes while tuning depth, regularization, quant, and TTT.",
       "tags": [
         "architecture",
         "attention",
-        "training-schedule",
-        "quantization"
+        "quantization",
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,
@@ -17497,10 +17497,10 @@
       "prNumber": 181,
       "title": "1.1190 BPB — 11L LeakyReLU² XSA4 PartialRoPE LNScale EMA ParallelMuon TTT",
       "status": "open",
-      "updatedAt": "2026-03-29T12:05:01Z",
-      "headSha": "a40338e458f8c8d2afd3dd8dee88d75102e65f94",
-      "generatedAt": "2026-03-29T12:29:03.277Z",
-      "summary": "11L LeakyReLU² Transformer with Partial RoPE, XSA4, LNScale, Parallel Muon optimizer, GPTQ-lite int6/int8 quant, and Legal Score-First TTT.",
+      "updatedAt": "2026-04-02T23:16:51Z",
+      "headSha": "16d2f2f5c723934f8b5817d6d448f7f688da561d",
+      "generatedAt": "2026-04-02T23:36:19.946Z",
+      "summary": "11-layer 512d model pairs LeakyReLU² MLP with XSA on final layers, Partial RoPE, U-Net skips, and Parallel Muon optimizer before GPTQ-lite quant and Legal TTT.",
       "tags": [
         "architecture",
         "attention",

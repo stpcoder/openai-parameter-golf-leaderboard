@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-29T12:29:03.277Z",
+  "generatedAt": "2026-04-02T23:36:19.946Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 181,
     "title": "1.1190 BPB — 11L LeakyReLU² XSA4 PartialRoPE LNScale EMA ParallelMuon TTT",
     "state": "open",
-    "updatedAt": "2026-03-29T12:05:01Z",
-    "headSha": "a40338e458f8c8d2afd3dd8dee88d75102e65f94",
+    "updatedAt": "2026-04-02T23:16:51Z",
+    "headSha": "16d2f2f5c723934f8b5817d6d448f7f688da561d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/181",
     "authorLogin": "manfromnowhere143"
   },
@@ -24,7 +24,7 @@
     "submissionCount": 6
   },
   "output": {
-    "summary": "11L LeakyReLU² Transformer with Partial RoPE, XSA4, LNScale, Parallel Muon optimizer, GPTQ-lite int6/int8 quant, and Legal Score-First TTT.",
+    "summary": "11-layer 512d model pairs LeakyReLU² MLP with XSA on final layers, Partial RoPE, U-Net skips, and Parallel Muon optimizer before GPTQ-lite quant and Legal TTT.",
     "tags": [
       "architecture",
       "attention",
@@ -34,9 +34,9 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU² MLP with Partial RoPE and XSA4 cross-layer attention",
-      "Parallel Muon optimizer paired with EMA+SWA weight averaging",
-      "GPTQ-lite int6/int8 quantization plus Legal Score-First TTT evaluation"
+      "LeakyReLU² + XSA4 partial RoPE stack",
+      "Parallel Muon with EMA/SWA averaging",
+      "GPTQ-lite int6/int8 quant + legal Score-First TTT"
     ]
   },
   "compatibility": {

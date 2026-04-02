@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T23:05:58.749Z",
+  "generatedAt": "2026-04-02T23:36:11.497Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hybrid Hymba8 runs parallel Mamba SSM and 1024-window sliding attention with longer warmdown, untied embeddings, and int8 quantization to hit 32K context in 10m.",
+    "summary": "Hymba-8L pairs Mamba SSM with sliding-window attention to train 32K-context models within 10 minutes while tuning depth, regularization, quant, and TTT.",
     "tags": [
       "architecture",
       "attention",
-      "training-schedule",
-      "quantization"
+      "quantization",
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "parallel Mamba SSM + SWA-1024 per layer",
-      "long cosine warmdown with WD=0.15 and untied embeddings",
-      "score-first TTT (25 epochs) + int8+zstd-22 artifacts"
+      "Hybrid block combining Mamba SSM recurrence with SWA-1024 local attention",
+      "Untied embeddings plus high weight decay to stabilize int8 under 16MB",
+      "Score-first TTT (25 epochs, no freeze) after 600s training"
     ]
   },
   "compatibility": {
