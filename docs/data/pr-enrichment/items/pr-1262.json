@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-04-02T20:04:55.593Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1262,
+    "title": "Starter kit: align submission schema and path safety",
+    "state": "open",
+    "updatedAt": "2026-04-02T19:46:52Z",
+    "headSha": "975919583d4399e230e54ca56b4411b2b0e4c345",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1262",
+    "authorLogin": "SID-6921"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Aligns submission schema and track names with repo conventions while sanitizing run names and guarding against path traversal in the starter kit.",
+    "tags": [
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Normalized submission schema and track naming",
+      "Sanitized run-name inputs with path-traversal guard",
+      "Updated starter docs/examples to normalized track values"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

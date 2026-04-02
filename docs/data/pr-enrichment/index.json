@@ -1,8 +1,29 @@
 {
-  "generatedAt": "2026-04-02T19:34:24.661Z",
+  "generatedAt": "2026-04-02T20:04:55.776Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1262,
+      "title": "Starter kit: align submission schema and path safety",
+      "status": "open",
+      "updatedAt": "2026-04-02T19:46:52Z",
+      "headSha": "975919583d4399e230e54ca56b4411b2b0e4c345",
+      "generatedAt": "2026-04-02T20:04:55.593Z",
+      "summary": "Aligns submission schema and track names with repo conventions while sanitizing run names and guarding against path traversal in the starter kit.",
+      "tags": [
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1262.json"
+    },
     {
       "prNumber": 1261,
       "title": "Add non-record 1xH100 budget seq2048 run (val_bpb 1.3029)",

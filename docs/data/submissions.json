@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T19:34:17.760Z",
+  "generatedAt": "2026-04-02T20:04:47.796Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -54066,6 +54066,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/23b27bb5b2c1deb2c97ccac31ec2fb70a74da1fb/records/track_non_record_16mb/2026-03-25_ANE_v1/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/23b27bb5b2c1deb2c97ccac31ec2fb70a74da1fb/records/track_non_record_16mb/2026-03-25_ANE_v1",
         "pr": "https://github.com/openai/parameter-golf/pull/801",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-02_StockBaseline_A40_17M",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-02_StockBaseline_A40_17M",
+        "folderPath": "records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M",
+        "submissionPath": "records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train_gpt.py"
+      },
+      "submission": {
+        "author": "SID",
+        "githubId": "SID-6921",
+        "name": "Stock Baseline GPT 17M sp1024 A40",
+        "blurb": "Stock unmodified baseline run using sp_bpe_1024 tokenizer (vocab=1024) on a single A40 GPU. 17M parameter model (~17M params), 30 training steps with 2M token batches (~600s wall-clock budget). Final int8+zlib roundtrip val_bpb: 3.2686, submission size 5.3MB well under the 16MB cap.",
+        "date": "2026-04-02T00:00:00Z"
+      },
+      "metrics": {
+        "valBpb": 3.2686433,
+        "valLoss": 5.51896729,
+        "preQuantValBpb": 3.2734,
+        "preQuantValLoss": 5.5269,
+        "stepStop": 30,
+        "wallclockSeconds": 166,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 5596364,
+        "bytesCode": 47686,
+        "bytesModelInt8Zlib": 5548678
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1262,
+        "title": "Starter kit: align submission schema and path safety",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1262",
+        "authorLogin": "SID-6921",
+        "authorName": null,
+        "createdAt": "2026-04-02T18:48:45Z",
+        "updatedAt": "2026-04-02T19:46:52Z",
+        "headSha": "975919583d4399e230e54ca56b4411b2b0e4c345",
+        "headRepo": "SID-6921/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/975919583d4399e230e54ca56b4411b2b0e4c345/records/track_non_record_16mb/2026-04-02_StockBaseline_A40_17M",
+        "pr": "https://github.com/openai/parameter-golf/pull/1262",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
