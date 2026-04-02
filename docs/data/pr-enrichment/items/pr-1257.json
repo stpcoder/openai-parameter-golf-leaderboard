@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-02T15:33:35.518Z",
+  "generatedAt": "2026-04-02T17:04:00.620Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1257,
     "title": "Add: 11L Complement Training + TTT + No-JEPA submission (val_bpb 1.0855)",
     "state": "open",
-    "updatedAt": "2026-04-02T15:18:43Z",
+    "updatedAt": "2026-04-02T16:55:13Z",
     "headSha": "58dbb07087909448fee6bee758bef025c93505cd",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1257",
     "authorLogin": "BoxiYu"
@@ -19,25 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Combines complement loss weighting to focus on hard tokens with TTT adaptation and disables JEPA during 8xA100 training.",
+    "summary": "Complement training downweights bigram-predictable tokens while Test-Time Training and JEPA removal sharpen transformer focus during 16MB runs.",
     "tags": [
-      "val-only",
-      "training-schedule",
       "regularization",
+      "training-schedule",
       "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TTT adapts the model by training on validation tokens before evaluation.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "complement loss weighting to downweight bigram-predicted tokens",
-      "test-time training adapts all blocks with AdamW",
-      "disables JEPA module to simplify inference"
+      "Complement loss reweight via bigram predictor",
+      "Test-time training with AdamW adaptation",
+      "Disable JEPA auxiliary module"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }

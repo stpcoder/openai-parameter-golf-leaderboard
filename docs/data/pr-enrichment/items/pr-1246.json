@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-02T16:03:37.275Z",
+  "generatedAt": "2026-04-02T17:04:05.946Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1246,
     "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
     "state": "open",
-    "updatedAt": "2026-04-02T15:49:24Z",
-    "headSha": "489839262f86ac29d4c76f19263f5b01483ce002",
+    "updatedAt": "2026-04-02T16:45:08Z",
+    "headSha": "ab62ee3c45fa7f35325f0d1b12f62bbae71db600",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
     "authorLogin": "deborahnelson8788726"
   },
@@ -20,19 +20,18 @@
     "submissionCount": 2
   },
   "output": {
-    "summary": "BitNet b1.58 ternary QAT from step 0 packs a relu² U-Net GPT (Partial RoPE, NeoMuon, Z-loss) into base-3 encoding to squeeze ~72M params under 16MB.",
+    "summary": "BitNet b1.58 ternary QAT transformer packs {-1,0,+1} weights in base-3, pairs relu² MLP4x U-Net skips with Partial RoPE, and uses NeoMuon+EMA.",
     "tags": [
       "quantization",
       "architecture",
-      "optimizer",
-      "compression"
+      "optimizer"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "BitNet b1.58 ternary QAT with base-3 packing",
-      "NeoMuon optimizer with EMA/Z-loss for ternary STE",
-      "Partial RoPE plus relu² MLP4× expansions"
+      "BitNet b1.58 ternary QAT with absmean scaling and base-3 packing",
+      "relu² MLP4x with U-Net skips and Partial RoPE",
+      "NeoMuon steps, EMA, and Z-loss for stable ternary training"
     ]
   },
   "compatibility": {

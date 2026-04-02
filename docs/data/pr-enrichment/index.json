@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T16:34:15.733Z",
+  "generatedAt": "2026-04-02T17:04:06.128Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -52,23 +52,22 @@
       "prNumber": 1257,
       "title": "Add: 11L Complement Training + TTT + No-JEPA submission (val_bpb 1.0855)",
       "status": "open",
-      "updatedAt": "2026-04-02T15:18:43Z",
+      "updatedAt": "2026-04-02T16:55:13Z",
       "headSha": "58dbb07087909448fee6bee758bef025c93505cd",
-      "generatedAt": "2026-04-02T15:33:35.518Z",
-      "summary": "Combines complement loss weighting to focus on hard tokens with TTT adaptation and disables JEPA during 8xA100 training.",
+      "generatedAt": "2026-04-02T17:04:00.620Z",
+      "summary": "Complement training downweights bigram-predictable tokens while Test-Time Training and JEPA removal sharpen transformer focus during 16MB runs.",
       "tags": [
-        "val-only",
-        "training-schedule",
         "regularization",
+        "training-schedule",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1257.json"
     },
@@ -240,15 +239,14 @@
       "prNumber": 1246,
       "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
       "status": "open",
-      "updatedAt": "2026-04-02T15:49:24Z",
-      "headSha": "489839262f86ac29d4c76f19263f5b01483ce002",
-      "generatedAt": "2026-04-02T16:03:37.275Z",
-      "summary": "BitNet b1.58 ternary QAT from step 0 packs a relu² U-Net GPT (Partial RoPE, NeoMuon, Z-loss) into base-3 encoding to squeeze ~72M params under 16MB.",
+      "updatedAt": "2026-04-02T16:45:08Z",
+      "headSha": "ab62ee3c45fa7f35325f0d1b12f62bbae71db600",
+      "generatedAt": "2026-04-02T17:04:05.946Z",
+      "summary": "BitNet b1.58 ternary QAT transformer packs {-1,0,+1} weights in base-3, pairs relu² MLP4x U-Net skips with Partial RoPE, and uses NeoMuon+EMA.",
       "tags": [
         "quantization",
         "architecture",
-        "optimizer",
-        "compression"
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
