@@ -1,21 +1,67 @@
 {
-  "generatedAt": "2026-04-03T07:38:48.004Z",
+  "generatedAt": "2026-04-03T08:08:45.097Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1291,
+      "title": "Record: Vocab4096 + MLP4.0x + SLOT - val_bpb 1.0925 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T07:54:53Z",
+      "headSha": "e48c8d2bffcc6caa52be918513d11e6a5ae1de38",
+      "generatedAt": "2026-04-03T08:08:32.293Z",
+      "summary": "11L GQA+MLP4x transformer with vocab4096 applies int6 Hessian GPTQ and sliding-window eval plus SLOT per-batch delta tuning for final scoring.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "evaluation",
+        "sliding-window-eval"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1291.json"
+    },
+    {
+      "prNumber": 1290,
+      "title": "Record: Depth Recurrence + MuonEq-R + AR Self-Gen GPTQ — val_bpb 1.1104 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T07:52:51Z",
+      "headSha": "92381d7b65306ff6be017d05df4ae6f590113439",
+      "generatedAt": "2026-04-03T08:08:37.167Z",
+      "summary": "Repeats layers 4 and 5 after warmup to create virtual depth while MuonEq-R plus AR self-generated GPTQ quantizes the PR#1019 stack.",
+      "tags": [
+        "architecture",
+        "optimizer",
+        "quantization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1290.json"
+    },
+    {
       "prNumber": 1289,
       "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T07:37:15Z",
+      "updatedAt": "2026-04-03T08:07:25Z",
       "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
-      "generatedAt": "2026-04-03T07:38:22.867Z",
-      "summary": "Combines Scylla retokenization with parallel residual lanes, depth recurrence, legal TTT, and mixed INT5/6 per-layer quantization on a LeakyReLU² base.",
+      "generatedAt": "2026-04-03T08:08:44.899Z",
+      "summary": "Applies sensitivity-driven INT5/INT6 quantization with learnable lane merging to unify Scylla retokenization, parallel residuals, depth recurrence, and legal TTT.",
       "tags": [
-        "tokenization",
-        "architecture",
         "quantization",
-        "training-schedule"
+        "architecture",
+        "tokenization"
       ],
       "flags": {
         "usesValOnly": false,

@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-04-03T08:08:32.293Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1291,
+    "title": "Record: Vocab4096 + MLP4.0x + SLOT - val_bpb 1.0925 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-03T07:54:53Z",
+    "headSha": "e48c8d2bffcc6caa52be918513d11e6a5ae1de38",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1291",
+    "authorLogin": "dentity007"
+  },
+  "inputs": {
+    "hash": "333c1651a7101d4267d971ebe25bd793307b61c975586544bbd6b9a9c3a8cf24",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_Vocab4096_MLPMult4_SLOT_1.0925/README.md",
+      "records/track_non_record_16mb/2026-03-31_MambaSSMHybrid/README.md"
+    ],
+    "submissionCount": 2
+  },
+  "output": {
+    "summary": "11L GQA+MLP4x transformer with vocab4096 applies int6 Hessian GPTQ and sliding-window eval plus SLOT per-batch delta tuning for final scoring.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "evaluation",
+      "sliding-window-eval"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Int6 Hessian GPTQ with Brotli-compressed artifacts",
+      "SLOT per-batch delta tuning after sliding-window eval",
+      "11L 8H/4KV GQA + MLP4x transformer w/ vocab4096"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

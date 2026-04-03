@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-03T08:08:37.167Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1290,
+    "title": "Record: Depth Recurrence + MuonEq-R + AR Self-Gen GPTQ — val_bpb 1.1104 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-03T07:52:51Z",
+    "headSha": "92381d7b65306ff6be017d05df4ae6f590113439",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1290",
+    "authorLogin": "aryanbhosale"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-03_DepthRecurrence_MuonEqR_GPTQ/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Repeats layers 4 and 5 after warmup to create virtual depth while MuonEq-R plus AR self-generated GPTQ quantizes the PR#1019 stack.",
+    "tags": [
+      "architecture",
+      "optimizer",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Depth recurrence reuses layers 4&5 with zero extra parameters",
+      "MuonEq-R row-normalizes updates before Newton-Schulz orthogonalization",
+      "AR self-generated Full Hessian GPTQ calibration on the base stack"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
