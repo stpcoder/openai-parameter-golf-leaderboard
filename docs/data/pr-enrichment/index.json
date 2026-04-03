@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T13:40:09.553Z",
+  "generatedAt": "2026-04-03T14:09:50.206Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -7,15 +7,15 @@
       "prNumber": 1302,
       "title": "Record: Split-LR + N-gram Agreement + Full GPTQ — val_bpb 1.1079 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T13:34:01Z",
-      "headSha": "3273d7f9160aaf12e29ea0f53a3250073b84e7d3",
-      "generatedAt": "2026-04-03T13:39:50.144Z",
-      "summary": "Split-LR for early/late layers, Soft-round QAT, and full Hessian GPTQ int6 pair with online n-gram agreement boosting.",
+      "updatedAt": "2026-04-03T13:46:57Z",
+      "headSha": "8d1eb2335a59b3771eed68f8e0990d2026e89590",
+      "generatedAt": "2026-04-03T14:09:50.013Z",
+      "summary": "Split LR training with wider BigramHash, soft-round QAT, and full Hessian GPTQ plus online n-gram agreement evaluation boosting.",
       "tags": [
+        "architecture",
         "training-schedule",
         "quantization",
-        "evaluation",
-        "architecture"
+        "evaluation"
       ],
       "flags": {
         "usesValOnly": false,

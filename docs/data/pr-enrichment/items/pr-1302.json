@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-03T13:39:50.144Z",
+  "generatedAt": "2026-04-03T14:09:50.013Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1302,
     "title": "Record: Split-LR + N-gram Agreement + Full GPTQ — val_bpb 1.1079 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-03T13:34:01Z",
-    "headSha": "3273d7f9160aaf12e29ea0f53a3250073b84e7d3",
+    "updatedAt": "2026-04-03T13:46:57Z",
+    "headSha": "8d1eb2335a59b3771eed68f8e0990d2026e89590",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1302",
     "authorLogin": "vlivashkin"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Split-LR for early/late layers, Soft-round QAT, and full Hessian GPTQ int6 pair with online n-gram agreement boosting.",
+    "summary": "Split LR training with wider BigramHash, soft-round QAT, and full Hessian GPTQ plus online n-gram agreement evaluation boosting.",
     "tags": [
+      "architecture",
       "training-schedule",
       "quantization",
-      "evaluation",
-      "architecture"
+      "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Split-LR schedule with BigramHash and gated U-Net",
-      "Soft-round QAT + Full Hessian GPTQ int6 compression",
-      "Online n-gram agreement with exponential tilting"
+      "Split-LR with different early/late learning rates",
+      "Soft-round QAT feeding full Hessian GPTQ int6 compression",
+      "Online causal n-gram agreement boosting on eval"
     ]
   },
   "compatibility": {

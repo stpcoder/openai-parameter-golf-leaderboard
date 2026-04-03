@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T13:39:41.483Z",
+  "generatedAt": "2026-04-03T14:09:44.091Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -11950,6 +11950,83 @@
       }
     },
     {
+      "id": "record-records-track_10min_16mb-2026-04-03_SplitLR_NgramAgreement_FullGPTQ",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-03_SplitLR_NgramAgreement_FullGPTQ",
+        "folderPath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ",
+        "submissionPath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/train_gpt.py"
+      },
+      "submission": {
+        "author": "vlivashkin",
+        "githubId": "vlivashkin",
+        "name": null,
+        "blurb": "Split-LR + BigramHash(2816x160) + Full Hessian GPTQ + Soft-round QAT + Brotli + Online N-gram Agreement Eval",
+        "date": "2026-04-03"
+      },
+      "metrics": {
+        "valBpb": 1.1078,
+        "valLoss": 1.87521,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15857705,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1302,
+        "title": "Record: Split-LR + N-gram Agreement + Full GPTQ — val_bpb 1.1079 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1302",
+        "authorLogin": "vlivashkin",
+        "authorName": null,
+        "createdAt": "2026-04-03T13:32:32Z",
+        "updatedAt": "2026-04-03T13:46:57Z",
+        "headSha": "8d1eb2335a59b3771eed68f8e0990d2026e89590",
+        "headRepo": "vlivashkin/parameter-golf-1"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/8d1eb2335a59b3771eed68f8e0990d2026e89590/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/8d1eb2335a59b3771eed68f8e0990d2026e89590/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/8d1eb2335a59b3771eed68f8e0990d2026e89590/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/8d1eb2335a59b3771eed68f8e0990d2026e89590/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/8d1eb2335a59b3771eed68f8e0990d2026e89590/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ",
+        "pr": "https://github.com/openai/parameter-golf/pull/1302",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-24_11L_GEPA_12kSteps_PureInt6_LegalTTT",
       "source": "pull_request",
       "status": "open",
@@ -12018,83 +12095,6 @@
         "script": "https://github.com/openai/parameter-golf/blob/3bf3fefe03bf8681f8a8c6c5f69aa561b967d411/records/track_non_record_16mb/2026-03-24_11L_GEPA_12kSteps_PureInt6_LegalTTT/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/3bf3fefe03bf8681f8a8c6c5f69aa561b967d411/records/track_non_record_16mb/2026-03-24_11L_GEPA_12kSteps_PureInt6_LegalTTT",
         "pr": "https://github.com/openai/parameter-golf/pull/612",
-        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
-      },
-      "provenance": {
-        "onMain": false,
-        "hasPullRequest": true,
-        "listedInReadme": false
-      }
-    },
-    {
-      "id": "record-records-track_10min_16mb-2026-04-03_SplitLR_NgramAgreement_FullGPTQ",
-      "source": "pull_request",
-      "status": "open",
-      "category": "main-track",
-      "track": {
-        "path": "records/track_10min_16mb",
-        "slug": "track_10min_16mb",
-        "label": "10 Minute / 16MB",
-        "official": true,
-        "category": "main-track"
-      },
-      "record": {
-        "folderName": "2026-04-03_SplitLR_NgramAgreement_FullGPTQ",
-        "folderPath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ",
-        "submissionPath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/submission.json",
-        "readmePath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/README.md",
-        "trainLogPath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/train.log",
-        "scriptPath": "records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/train_gpt.py"
-      },
-      "submission": {
-        "author": "vlivashkin",
-        "githubId": "vlivashkin",
-        "name": null,
-        "blurb": "Split-LR + BigramHash(2816x160) + Full Hessian GPTQ + Soft-round QAT + Brotli + Online N-gram Agreement Eval",
-        "date": "2026-04-03T13:32:32Z"
-      },
-      "metrics": {
-        "valBpb": 1.1079,
-        "valLoss": null,
-        "preQuantValBpb": null,
-        "preQuantValLoss": null,
-        "stepStop": null,
-        "wallclockSeconds": null,
-        "evalTimeSeconds": null
-      },
-      "artifact": {
-        "bytesTotal": 15855695,
-        "bytesCode": null,
-        "bytesModelInt8Zlib": null
-      },
-      "flags": {
-        "usesValOnly": false
-      },
-      "detection": {
-        "valOnlyConfidence": "none",
-        "valOnlyMatches": []
-      },
-      "pr": {
-        "number": 1302,
-        "title": "Record: Split-LR + N-gram Agreement + Full GPTQ — val_bpb 1.1079 (3-seed mean)",
-        "state": "open",
-        "draft": false,
-        "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1302",
-        "authorLogin": "vlivashkin",
-        "authorName": null,
-        "createdAt": "2026-04-03T13:32:32Z",
-        "updatedAt": "2026-04-03T13:34:01Z",
-        "headSha": "3273d7f9160aaf12e29ea0f53a3250073b84e7d3",
-        "headRepo": "vlivashkin/parameter-golf-1"
-      },
-      "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3273d7f9160aaf12e29ea0f53a3250073b84e7d3/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/3273d7f9160aaf12e29ea0f53a3250073b84e7d3/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/3273d7f9160aaf12e29ea0f53a3250073b84e7d3/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/3273d7f9160aaf12e29ea0f53a3250073b84e7d3/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/3273d7f9160aaf12e29ea0f53a3250073b84e7d3/records/track_10min_16mb/2026-04-03_SplitLR_NgramAgreement_FullGPTQ",
-        "pr": "https://github.com/openai/parameter-golf/pull/1302",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
