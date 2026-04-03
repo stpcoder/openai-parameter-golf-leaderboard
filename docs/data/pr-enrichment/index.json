@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-03T11:39:09.811Z",
+  "generatedAt": "2026-04-03T12:09:35.306Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1297,
+      "title": "Record: Polar Express NS + SLOT + MuonEq-R + XSA-all — 1.1043 BPB (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-03T12:01:18Z",
+      "headSha": "2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff",
+      "generatedAt": "2026-04-03T12:09:35.118Z",
+      "summary": "Combines Polar Express Newton-Schulz Muon orthogonalization with eval-time SLOT delta tuning, MuonEq-R row normalization, and XSA on every layer.",
+      "tags": [
+        "optimizer",
+        "attention",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1297.json"
+    },
     {
       "prNumber": 1296,
       "title": "Record: SP4096 + Depth Recurrence + MuonEq-R + Full GPTQ — val_bpb 1.0940 (3-seed mean)",

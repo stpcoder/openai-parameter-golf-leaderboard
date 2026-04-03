@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T11:38:57.182Z",
+  "generatedAt": "2026-04-03T12:09:28.576Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -11556,6 +11556,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/9e7d33fdddb73493f643239e91eb9e1ba91bbe34/records/track_10min_16mb/2026-04-03_Slot_Machine_8xH100/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/9e7d33fdddb73493f643239e91eb9e1ba91bbe34/records/track_10min_16mb/2026-04-03_Slot_Machine_8xH100",
         "pr": "https://github.com/openai/parameter-golf/pull/1282",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-02_PolarExpress_SLOT_XSAall",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-02_PolarExpress_SLOT_XSAall",
+        "folderPath": "records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall",
+        "submissionPath": "records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/train_gpt.py"
+      },
+      "submission": {
+        "author": "Omri Gotlieb",
+        "githubId": "Omrigotlieb",
+        "name": "Polar Express NS + SLOT + MuonEq-R + XSA-all",
+        "blurb": "On PR #549 stack: Polar Express NS (4 steps, arXiv:2505.16932), SLOT eval-time delta (8 AdamW steps), MuonEq-R row-norm, XSA all 11 layers. 3-seed mean 1.1043 (1337=1.1052, 42=1.1042, 2025=1.1035). BigramHash 1536x112.",
+        "date": "2026-04-03"
+      },
+      "metrics": {
+        "valBpb": 1.1043,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15824588,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1297,
+        "title": "Record: Polar Express NS + SLOT + MuonEq-R + XSA-all — 1.1043 BPB (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1297",
+        "authorLogin": "Omrigotlieb",
+        "authorName": null,
+        "createdAt": "2026-04-03T12:01:18Z",
+        "updatedAt": "2026-04-03T12:01:18Z",
+        "headSha": "2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff",
+        "headRepo": "Omrigotlieb/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff/records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff/records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff/records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff/records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/2fe8f5d95e361eb675209ec2dc7e6db5e186b3ff/records/track_10min_16mb/2026-04-02_PolarExpress_SLOT_XSAall",
+        "pr": "https://github.com/openai/parameter-golf/pull/1297",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
