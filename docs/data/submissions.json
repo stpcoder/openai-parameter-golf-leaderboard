@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T14:39:59.639Z",
+  "generatedAt": "2026-04-03T15:10:01.862Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -56544,6 +56544,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-04-03_DeepFloor",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-03_DeepFloor",
+        "folderPath": "records/track_non_record_16mb/2026-04-03_DeepFloor",
+        "submissionPath": "records/track_non_record_16mb/2026-04-03_DeepFloor/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-03_DeepFloor/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-03_DeepFloor/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-03_DeepFloor/train_gpt.py"
+      },
+      "submission": {
+        "author": "Kenneth Malloy",
+        "githubId": "KenMalloy",
+        "name": "DeepFloor",
+        "blurb": "DeepFloor recurrent multi-view submission with adaptive floor or fused cross-token recurrence, high-precision runtime state, and stability-controlled low-bit artifact accounting.",
+        "date": "2026-04-03T13:45:10Z"
+      },
+      "metrics": {
+        "valBpb": 7.922142788006486,
+        "valLoss": 5.4912109375,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": 0.46419291698839515,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 56477,
+        "bytesCode": 48029,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1304,
+        "title": "Add DeepFloor non-record submission candidate",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1304",
+        "authorLogin": "KenMalloy",
+        "authorName": null,
+        "createdAt": "2026-04-03T14:55:35Z",
+        "updatedAt": "2026-04-03T14:55:35Z",
+        "headSha": "deebb7d0fbe6b1b9f3490518efe686b7dc160d51",
+        "headRepo": "KenMalloy/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/deebb7d0fbe6b1b9f3490518efe686b7dc160d51/records/track_non_record_16mb/2026-04-03_DeepFloor/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/deebb7d0fbe6b1b9f3490518efe686b7dc160d51/records/track_non_record_16mb/2026-04-03_DeepFloor/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/deebb7d0fbe6b1b9f3490518efe686b7dc160d51/records/track_non_record_16mb/2026-04-03_DeepFloor/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/deebb7d0fbe6b1b9f3490518efe686b7dc160d51/records/track_non_record_16mb/2026-04-03_DeepFloor/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/deebb7d0fbe6b1b9f3490518efe686b7dc160d51/records/track_non_record_16mb/2026-04-03_DeepFloor",
+        "pr": "https://github.com/openai/parameter-golf/pull/1304",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-hypergpt-yassienshaalan-20260403_063554",
       "source": "pull_request",
       "status": "open",
@@ -57448,16 +57525,16 @@
         "authorLogin": "anthony-maio",
         "authorName": null,
         "createdAt": "2026-04-03T14:38:28Z",
-        "updatedAt": "2026-04-03T14:38:31Z",
-        "headSha": "1100a2ed0be9e1c5947abe16765af8c7a1ced8a4",
+        "updatedAt": "2026-04-03T14:58:18Z",
+        "headSha": "50b08ef1e2c0c3dbc80300b161f0256c232853b5",
         "headRepo": "anthony-maio/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/1100a2ed0be9e1c5947abe16765af8c7a1ced8a4/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/1100a2ed0be9e1c5947abe16765af8c7a1ced8a4/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/1100a2ed0be9e1c5947abe16765af8c7a1ced8a4/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/1100a2ed0be9e1c5947abe16765af8c7a1ced8a4/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/1100a2ed0be9e1c5947abe16765af8c7a1ced8a4/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/50b08ef1e2c0c3dbc80300b161f0256c232853b5/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/50b08ef1e2c0c3dbc80300b161f0256c232853b5/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/50b08ef1e2c0c3dbc80300b161f0256c232853b5/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/50b08ef1e2c0c3dbc80300b161f0256c232853b5/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/50b08ef1e2c0c3dbc80300b161f0256c232853b5/records/track_10min_16mb/2026-04-02_SLOT_QKGain4_XSA11_TTT",
         "pr": "https://github.com/openai/parameter-golf/pull/1303",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

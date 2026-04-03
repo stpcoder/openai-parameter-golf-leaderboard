@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-03T15:10:11.683Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1304,
+    "title": "Add DeepFloor non-record submission candidate",
+    "state": "open",
+    "updatedAt": "2026-04-03T14:55:35Z",
+    "headSha": "deebb7d0fbe6b1b9f3490518efe686b7dc160d51",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1304",
+    "authorLogin": "KenMalloy"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-03_DeepFloor/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "DeepFloor packages a frozen recurrent multi-view LM with repeated QKV+O loops, floor/fused cross-token recurrence, and explicit stability controls.",
+    "tags": [
+      "architecture",
+      "attention",
+      "regularization",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- repeated QKV+O recurrent blocks with multi-view floor or fused cross-token recurrence",
+      "- explicit stability stack: contraction targets, decay, TBPTT chunks, Jacobian penalty, periodic normalization",
+      "- frozen submission snapshot so verification runs from a self-contained record folder"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

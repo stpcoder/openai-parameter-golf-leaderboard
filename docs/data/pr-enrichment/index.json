@@ -1,19 +1,43 @@
 {
-  "generatedAt": "2026-04-03T14:40:29.653Z",
+  "generatedAt": "2026-04-03T15:10:17.811Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
     {
+      "prNumber": 1304,
+      "title": "Add DeepFloor non-record submission candidate",
+      "status": "open",
+      "updatedAt": "2026-04-03T14:55:35Z",
+      "headSha": "deebb7d0fbe6b1b9f3490518efe686b7dc160d51",
+      "generatedAt": "2026-04-03T15:10:11.683Z",
+      "summary": "DeepFloor packages a frozen recurrent multi-view LM with repeated QKV+O loops, floor/fused cross-token recurrence, and explicit stability controls.",
+      "tags": [
+        "architecture",
+        "attention",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1304.json"
+    },
+    {
       "prNumber": 1303,
       "title": "Record: SLOT + QK-Gain 4.0 + XSA-11 — val_bpb 0.9462 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T14:38:31Z",
-      "headSha": "1100a2ed0be9e1c5947abe16765af8c7a1ced8a4",
-      "generatedAt": "2026-04-03T14:40:08.217Z",
-      "summary": "Adds SLOT per-sample delta/logit bias tuning atop a VRL+LeakyReLU base with QK-Gain 4.0 and XSA on every layer for eval-time refinement.",
+      "updatedAt": "2026-04-03T14:58:18Z",
+      "headSha": "50b08ef1e2c0c3dbc80300b161f0256c232853b5",
+      "generatedAt": "2026-04-03T15:10:17.618Z",
+      "summary": "11-layer VRL + LeakyReLU2 base augments XSA everywhere plus QK-Gain scaling and eval-time SLOT per-sample delta/logit tuning.",
       "tags": [
-        "attention",
         "architecture",
+        "attention",
         "evaluation"
       ],
       "flags": {
