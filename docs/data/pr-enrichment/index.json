@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T09:48:45.479Z",
+  "generatedAt": "2026-04-04T10:18:31.351Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -172,23 +172,22 @@
       "prNumber": 1329,
       "title": "Record: Per-Sample SLOT + TTT + LR=0.024 + Stride=96 — val_bpb 0.63614 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T07:35:11Z",
+      "updatedAt": "2026-04-04T10:17:27Z",
       "headSha": "0c7bd5ee4f099cafc8c9ccbb170820a4656f0881",
-      "generatedAt": "2026-04-04T07:46:37.700Z",
-      "summary": "Per-sample SLOT fits sequence-specific hidden/logit deltas with LR0.024+stride96 and a frozen-block TTT stage before evaluation.",
+      "generatedAt": "2026-04-04T10:18:31.159Z",
+      "summary": "Combines TTT with per-sample SLOT deltas, higher LR, and stride=96 evaluation to fit the budget while capturing sequence-level patterns.",
       "tags": [
-        "val-only",
         "optimizer",
         "training-schedule",
         "evaluation"
       ],
       "flags": {
-        "usesValOnly": true,
-        "usesValOnlyAi": true,
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": false
+        "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1329.json"
     },

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T07:46:37.700Z",
+  "generatedAt": "2026-04-04T10:18:31.159Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1329,
     "title": "Record: Per-Sample SLOT + TTT + LR=0.024 + Stride=96 — val_bpb 0.63614 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-04T07:35:11Z",
+    "updatedAt": "2026-04-04T10:17:27Z",
     "headSha": "0c7bd5ee4f099cafc8c9ccbb170820a4656f0881",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1329",
     "authorLogin": "renqianluo"
@@ -19,25 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Per-sample SLOT fits sequence-specific hidden/logit deltas with LR0.024+stride96 and a frozen-block TTT stage before evaluation.",
+    "summary": "Combines TTT with per-sample SLOT deltas, higher LR, and stride=96 evaluation to fit the budget while capturing sequence-level patterns.",
     "tags": [
-      "val-only",
       "optimizer",
       "training-schedule",
       "evaluation"
     ],
-    "usesValOnly": true,
-    "valOnlyReasoning": "TTT and per-sample SLOT optimizations are performed directly on the validation/eval sequences, so the training steps occur on the validation shard.",
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
     "techniques": [
-      "Per-sequence hidden-state delta + logit bias via 24-step AdamW",
-      "Higher LR (0.024) + stride=96 to maximize steps under the budget",
-      "TTT AdamW 1ep with first 10/11 blocks frozen to adjust base state before SLOT"
+      "Per-sequence hidden-state delta + logit bias fitted on scored tokens",
+      "Higher LR (0.024) AdamW steps for better 24-step convergence",
+      "Stride=96 evaluation to reduce windows and enable longer SLOT tuning"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": true,
-    "finalUsesValOnly": true,
-    "valOnlyMatchesCollector": false
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
   }
 }
