@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-03T13:39:54.044Z",
+  "generatedAt": "2026-04-04T12:20:09.221Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1301,
-    "title": "Non-record: Selective Freeze on Random Linear Maps — Why Freezing Gate+Up Beats Full Freeze + LoRA",
+    "title": "Non-Record: Learning Adapters on Random Linear Maps — Selective Freeze, Progressive Freeze, and 7 Architecture Variants (H100 + A40 Validated)",
     "state": "open",
-    "updatedAt": "2026-04-03T13:26:52Z",
-    "headSha": "3dfd64cc584ab71b163083fff184cde242eb0c6f",
+    "updatedAt": "2026-04-04T12:13:50Z",
+    "headSha": "fa3736385423a6baec1232f1db132d4d33ed7b12",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1301",
     "authorLogin": "himanshudongre"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Selective freezing of gate+up MLP projections on random linear maps keeps attention learning while shrinking artifacts, surpassing full freeze+LoRA.",
+    "summary": "Selective freezing of deterministic random gate+up MLP layers lets progressive-freeze training fit larger models within 16MB, with optional low-rank corrections.",
     "tags": [
       "architecture",
-      "regularization",
       "compression",
+      "training-schedule",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Freeze only gate+up MLP projections while learning attention and down outputs to retain relational learning",
-      "Treat frozen random projections as structural regularizer inspired by Johnson-Lindenstrauss to save artifact bytes"
+      "Deterministic frozen gate+up weights regenerated from seeds for zero-artifact capacity",
+      "Progressive freeze schedule trains full model then freezes MLP gate+up layers mid-run",
+      "Low-rank corrections add small learned parallel terms to frozen MLPs"
     ]
   },
   "compatibility": {

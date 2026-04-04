@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T12:19:32.820Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1342,
+    "title": "Submission/mamba ssm byte260",
+    "state": "open",
+    "updatedAt": "2026-04-04T12:15:20Z",
+    "headSha": "ce161bf111bd161f3f652af16297fb01482f02b2",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1342",
+    "authorLogin": "nicholasbailey87"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-02_MambaSSM_Byte260/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "12-layer Mamba-2 SSD SSM uses the Achilles’ Heel residual bypass and byte-level vocab to cut embedding cost while training with Muon/AdamW.",
+    "tags": [
+      "architecture",
+      "tokenization",
+      "muon",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Residual bypass around Conv1d per Achilles’ Heel fix",
+      "Byte-level vocab=260 to shrink embedding footprint",
+      "Muon optimizer on matrix params with AdamW elsewhere"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

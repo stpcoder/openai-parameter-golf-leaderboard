@@ -1,8 +1,103 @@
 {
-  "generatedAt": "2026-04-04T11:49:10.042Z",
+  "generatedAt": "2026-04-04T12:20:24.686Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1342,
+      "title": "Submission/mamba ssm byte260",
+      "status": "open",
+      "updatedAt": "2026-04-04T12:15:20Z",
+      "headSha": "ce161bf111bd161f3f652af16297fb01482f02b2",
+      "generatedAt": "2026-04-04T12:19:32.820Z",
+      "summary": "12-layer Mamba-2 SSD SSM uses the Achilles’ Heel residual bypass and byte-level vocab to cut embedding cost while training with Muon/AdamW.",
+      "tags": [
+        "architecture",
+        "tokenization",
+        "muon",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1342.json"
+    },
+    {
+      "prNumber": 1341,
+      "title": "Non-Record: TTT and GPTQ Are Fundamentally Incompatible — Quantized Weight Structure Defeats Test-Time Adaptation",
+      "status": "open",
+      "updatedAt": "2026-04-04T12:13:27Z",
+      "headSha": "f37f873f65e5af407a48309fdc994df4298342d5",
+      "generatedAt": "2026-04-04T12:19:37.760Z",
+      "summary": "Gradient-based TTT shatters GPTQ’s compensatory weight structure, so GPTQ-quantized models resist adaptation even via LoRA/SGD updates.",
+      "tags": [
+        "quantization",
+        "evaluation",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1341.json"
+    },
+    {
+      "prNumber": 1340,
+      "title": "feat: 12L/768D SOTA record for 10min_16mb track (INT6/LZMA + BigramHash)",
+      "status": "open",
+      "updatedAt": "2026-04-04T12:04:12Z",
+      "headSha": "f25ec0b2c0aac89a97b00ee13b5a7f0de364854c",
+      "generatedAt": "2026-04-04T12:19:48.292Z",
+      "summary": "12-layer 768d Transformer uses BigramHash+U-Net skips, Muon-optimized INT6 weights, and LZMA to fit 16MB track.",
+      "tags": [
+        "architecture",
+        "quantization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1340.json"
+    },
+    {
+      "prNumber": 1339,
+      "title": "Record: SP2048 + 3-Layer Recurrence + SWA + BigramHash + Legal TTT — val_bpb 1.0955 (3-seed mean)",
+      "status": "open",
+      "updatedAt": "2026-04-04T11:56:48Z",
+      "headSha": "319ce31983709523b796877852112137543b4225",
+      "generatedAt": "2026-04-04T12:19:54.045Z",
+      "summary": "SP2048 BPE model adds 3-layer depth recurrence, SWA, BigramHash logits, MuonEq tuning, and legal score-first TTT before GPTQ int6 compression.",
+      "tags": [
+        "architecture",
+        "training-schedule",
+        "tokenization",
+        "compression"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1339.json"
+    },
     {
       "prNumber": 1337,
       "title": " [Non-Record] LegendreGPT: Legendre polynomial depth parameterization",
@@ -217,13 +312,13 @@
       "prNumber": 1326,
       "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + MuonEq-R + Legal TTT — val_bpb 1.0896 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T06:33:15Z",
+      "updatedAt": "2026-04-04T12:14:29Z",
       "headSha": "5bc39abb0222a86a1ad59d6c74b507f7ab294457",
-      "generatedAt": "2026-04-04T06:46:30.113Z",
-      "summary": "Depth recurrence in layers 4-5 plus parallel residuals from layer 7 pair with MuonEq-R/QK-Gain and legal score-first TTT on SP4096.",
+      "generatedAt": "2026-04-04T12:19:57.491Z",
+      "summary": "Combines SP4096 modeling with depth recurrence, parallel residuals, MuonEq-R, QK-Gain, and legal score-first TTT plus GPTQ int6 compression.",
       "tags": [
         "architecture",
-        "attention",
+        "muon",
         "evaluation"
       ],
       "flags": {
@@ -724,16 +819,16 @@
     },
     {
       "prNumber": 1301,
-      "title": "Non-record: Selective Freeze on Random Linear Maps — Why Freezing Gate+Up Beats Full Freeze + LoRA",
+      "title": "Non-Record: Learning Adapters on Random Linear Maps — Selective Freeze, Progressive Freeze, and 7 Architecture Variants (H100 + A40 Validated)",
       "status": "open",
-      "updatedAt": "2026-04-03T13:26:52Z",
-      "headSha": "3dfd64cc584ab71b163083fff184cde242eb0c6f",
-      "generatedAt": "2026-04-03T13:39:54.044Z",
-      "summary": "Selective freezing of gate+up MLP projections on random linear maps keeps attention learning while shrinking artifacts, surpassing full freeze+LoRA.",
+      "updatedAt": "2026-04-04T12:13:50Z",
+      "headSha": "fa3736385423a6baec1232f1db132d4d33ed7b12",
+      "generatedAt": "2026-04-04T12:20:09.221Z",
+      "summary": "Selective freezing of deterministic random gate+up MLP layers lets progressive-freeze training fit larger models within 16MB, with optional low-rank corrections.",
       "tags": [
         "architecture",
-        "regularization",
         "compression",
+        "training-schedule",
         "non-record"
       ],
       "flags": {
@@ -821,13 +916,13 @@
       "prNumber": 1295,
       "title": "[Submission] Random LinearMaps + LoRA Adapters",
       "status": "open",
-      "updatedAt": "2026-04-03T14:28:03Z",
+      "updatedAt": "2026-04-04T12:15:02Z",
       "headSha": "77cec218435a8e89988eeb01687d85ae7434cfc8",
-      "generatedAt": "2026-04-03T14:40:19.679Z",
-      "summary": "Train LoRA adapters on a frozen, seed-generated random backbone, storing only adapters plus seed and compressing them for 16MB submissions.",
+      "generatedAt": "2026-04-04T12:20:13.678Z",
+      "summary": "Train LoRA adapters on a deterministic frozen random 12-layer backbone, storing only adapters plus the seed while regenerating the rest at load time.",
       "tags": [
         "architecture",
-        "quantization",
+        "optimizer",
         "muon"
       ],
       "flags": {
@@ -11866,15 +11961,15 @@
       "prNumber": 601,
       "title": "Non-record: VR + GA + Late QAT + Full GPTQ — 1.1418 BPB, 15.7 MB",
       "status": "open",
-      "updatedAt": "2026-03-24T06:32:12Z",
+      "updatedAt": "2026-04-04T12:15:12Z",
       "headSha": "4357cbcbabd907918cbaa2629a50b43c5f6a1c1c",
-      "generatedAt": "2026-03-24T06:52:12.624Z",
-      "summary": "11-layer GPT adds Value Residual+Gated Attention shortcuts, late-stage QAT, and Full GPTQ+Int5 post-training quantization to shrink to 15.7MB.",
+      "generatedAt": "2026-04-04T12:20:18.847Z",
+      "summary": "11-layer GPT pairs Value Residual plus gated attention and late QAT with a Full GPTQ+Int5 quantization pipeline for sub-16MB artifacts.",
       "tags": [
-        "architecture",
         "attention",
         "quantization",
-        "training-schedule"
+        "architecture",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,
@@ -12564,14 +12659,15 @@
       "prNumber": 559,
       "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
       "status": "open",
-      "updatedAt": "2026-04-04T11:40:56Z",
-      "headSha": "5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2",
-      "generatedAt": "2026-04-04T11:49:09.962Z",
-      "summary": "Loops over 7 unique layers for 14-depth recurrence and 1.58-bit ternary MLPs with Muon/AdamW+SWA to shrink the quant gap.",
+      "updatedAt": "2026-04-04T11:56:44Z",
+      "headSha": "177f2572efba4f9dd3bc6f25c1d9578f9e2bd318",
+      "generatedAt": "2026-04-04T12:20:24.606Z",
+      "summary": "Looped 7-layer stack twice for depth recurrence while switching to ternary 1.58-bit STE-quantized MLPs late, paired with SmearGate/BigramHash gating.",
       "tags": [
         "architecture",
         "quantization",
-        "muon"
+        "optimizer",
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,

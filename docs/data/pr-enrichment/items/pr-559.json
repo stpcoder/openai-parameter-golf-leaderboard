@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T11:49:09.962Z",
+  "generatedAt": "2026-04-04T12:20:24.606Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 559,
     "title": "Non-record: TernaryRecurrentGPT - ternary 1.58-bit MLP + depth recurrence (1xL4 val_bpb=1.5348)",
     "state": "open",
-    "updatedAt": "2026-04-04T11:40:56Z",
-    "headSha": "5448ed0ce054c13ad2f11cdbd3e47a041ec72cb2",
+    "updatedAt": "2026-04-04T11:56:44Z",
+    "headSha": "177f2572efba4f9dd3bc6f25c1d9578f9e2bd318",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/559",
     "authorLogin": "Parswanadh"
   },
@@ -19,18 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Loops over 7 unique layers for 14-depth recurrence and 1.58-bit ternary MLPs with Muon/AdamW+SWA to shrink the quant gap.",
+    "summary": "Looped 7-layer stack twice for depth recurrence while switching to ternary 1.58-bit STE-quantized MLPs late, paired with SmearGate/BigramHash gating.",
     "tags": [
       "architecture",
       "quantization",
-      "muon"
+      "optimizer",
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "1.58-bit STE QAT ternary MLPs enabled late in training",
-      "Depth recurrence via two loops over 7 unique layers for extra depth",
-      "Muon matrix optimizer with AdamW scalars and SWA from 40%"
+      "Depth recurrence via 7 unique layers ×2 loops",
+      "Late-stage ternary 1.58-bit STE QAT on MLP weights",
+      "Muon+AdamW with SWA, SmearGate, and BigramHash gating"
     ]
   },
   "compatibility": {

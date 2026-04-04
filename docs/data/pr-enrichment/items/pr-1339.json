@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T12:19:54.045Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1339,
+    "title": "Record: SP2048 + 3-Layer Recurrence + SWA + BigramHash + Legal TTT — val_bpb 1.0955 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-04T11:56:48Z",
+    "headSha": "319ce31983709523b796877852112137543b4225",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1339",
+    "authorLogin": "bigbag"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_SP2048_3LayerRecur_SWA_BigramHash_TTT/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "SP2048 BPE model adds 3-layer depth recurrence, SWA, BigramHash logits, MuonEq tuning, and legal score-first TTT before GPTQ int6 compression.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "tokenization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "3-layer depth recurrence with parallel residual start layer",
+      "SWA from 75% plus MuonEq-R and QK-gain tuning",
+      "BigramHash logits paired with legal score-first TTT and GPTQ int6+Brotli"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

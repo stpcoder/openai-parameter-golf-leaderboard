@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T12:19:48.292Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1340,
+    "title": "feat: 12L/768D SOTA record for 10min_16mb track (INT6/LZMA + BigramHash)",
+    "state": "open",
+    "updatedAt": "2026-04-04T12:04:12Z",
+    "headSha": "f25ec0b2c0aac89a97b00ee13b5a7f0de364854c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1340",
+    "authorLogin": "Rugved1817"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_12L_768D_INT6_BigramHash_LZMA/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "12-layer 768d Transformer uses BigramHash+U-Net skips, Muon-optimized INT6 weights, and LZMA to fit 16MB track.",
+    "tags": [
+      "architecture",
+      "quantization",
+      "compression"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "BigramHash token embeddings for cheap local context",
+      "U-Net style residual skips with scalar mixing",
+      "Muon-optimized INT6 weights packed via LZMA"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

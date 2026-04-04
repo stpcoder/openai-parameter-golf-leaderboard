@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T14:40:19.679Z",
+  "generatedAt": "2026-04-04T12:20:13.678Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1295,
     "title": "[Submission] Random LinearMaps + LoRA Adapters",
     "state": "open",
-    "updatedAt": "2026-04-03T14:28:03Z",
+    "updatedAt": "2026-04-04T12:15:02Z",
     "headSha": "77cec218435a8e89988eeb01687d85ae7434cfc8",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1295",
     "authorLogin": "austinluk"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Train LoRA adapters on a frozen, seed-generated random backbone, storing only adapters plus seed and compressing them for 16MB submissions.",
+    "summary": "Train LoRA adapters on a deterministic frozen random 12-layer backbone, storing only adapters plus the seed while regenerating the rest at load time.",
     "tags": [
       "architecture",
-      "quantization",
+      "optimizer",
       "muon"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Freezes a large random backbone regenerated from seed, training only rank-16 LoRA adapters plus embeddings/norms",
-      "Serializes only trainable adapters and seed, applying int8+zlib compression to meet artifact limits",
-      "Splits optimizers with Muon for adapters and Adam for embeddings/control parameters"
+      "Frozen random backbone regenerated from seed",
+      "LoRA adapters with low-rank adapters and Muon/Adam split",
+      "Serialize only adapters via int8+zlib compression"
     ]
   },
   "compatibility": {

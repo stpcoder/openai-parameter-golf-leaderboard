@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T12:19:37.760Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1341,
+    "title": "Non-Record: TTT and GPTQ Are Fundamentally Incompatible — Quantized Weight Structure Defeats Test-Time Adaptation",
+    "state": "open",
+    "updatedAt": "2026-04-04T12:13:27Z",
+    "headSha": "f37f873f65e5af407a48309fdc994df4298342d5",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1341",
+    "authorLogin": "himanshudongre"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-04_TTT_GPTQ_Incompatibility/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Gradient-based TTT shatters GPTQ’s compensatory weight structure, so GPTQ-quantized models resist adaptation even via LoRA/SGD updates.",
+    "tags": [
+      "quantization",
+      "evaluation",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "- analyzes GPTQ compensation structure versus SGD/LoRA updates",
+      "- outlines quantization-aware or structured TTT and higher-rank LoRA directions"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
