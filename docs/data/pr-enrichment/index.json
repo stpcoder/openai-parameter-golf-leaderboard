@@ -1,8 +1,55 @@
 {
-  "generatedAt": "2026-04-04T20:22:35.961Z",
+  "generatedAt": "2026-04-04T20:52:38.431Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1359,
+      "title": "Record: 0.4188 BPB mixed quant ngram",
+      "status": "open",
+      "updatedAt": "2026-04-04T20:51:41Z",
+      "headSha": "e33abde6cad8290f79113f0438c326bcdf7ae30c",
+      "generatedAt": "2026-04-04T20:52:29.894Z",
+      "summary": "Mixed int5/int6 quantized 11-layer GQA transformer with complementary training and entropy-adaptive causal backoff n-gram mixing fits under 16MB.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "training-schedule",
+        "evaluation"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1359.json"
+    },
+    {
+      "prNumber": 1358,
+      "title": "Submission: Static-Unified Flash-Nitro (SUFN) 10-minute Baseline",
+      "status": "open",
+      "updatedAt": "2026-04-04T20:50:33Z",
+      "headSha": "57d7f809e5392e2250f1b74c857491b6f3047795",
+      "generatedAt": "2026-04-04T20:52:38.223Z",
+      "summary": "SUFN keeps modded-nanogpt on a static 1024 graph with native causal Flash attention and robust distributed token loading to avoid recompile stalls.",
+      "tags": [
+        "architecture",
+        "attention",
+        "training-schedule"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1358.json"
+    },
     {
       "prNumber": 1356,
       "title": "Multi-Cube Face Letter Assignment (Non-Record Submission)",

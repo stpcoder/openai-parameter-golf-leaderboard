@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T20:22:29.170Z",
+  "generatedAt": "2026-04-04T20:52:18.607Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3078,6 +3078,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/0befb078f89158751309ae9c66b6a3bd99ad92a3/records/track_10min_16mb/2026-03-29_SwarmDesigned_CausalBackoffNgramMixer_0.4027/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/0befb078f89158751309ae9c66b6a3bd99ad92a3/records/track_10min_16mb/2026-03-29_SwarmDesigned_CausalBackoffNgramMixer_0.4027",
         "pr": "https://github.com/openai/parameter-golf/pull/1094",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-04_LucasErcolano_MixedQuantNgram",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-04_LucasErcolano_MixedQuantNgram",
+        "folderPath": "records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram",
+        "submissionPath": "records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/train_gpt.py"
+      },
+      "submission": {
+        "author": "LucasErcolano",
+        "githubId": "LucasErcolano",
+        "name": "Lucas Ercolano",
+        "blurb": null,
+        "date": "2026-04-04T20:51:41Z"
+      },
+      "metrics": {
+        "valBpb": 0.418816,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1359,
+        "title": "Record: 0.4188 BPB mixed quant ngram",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1359",
+        "authorLogin": "LucasErcolano",
+        "authorName": null,
+        "createdAt": "2026-04-04T20:51:41Z",
+        "updatedAt": "2026-04-04T20:51:41Z",
+        "headSha": "e33abde6cad8290f79113f0438c326bcdf7ae30c",
+        "headRepo": "LucasErcolano/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram",
+        "pr": "https://github.com/openai/parameter-golf/pull/1359",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -57434,17 +57511,17 @@
         "valOnlyMatches": []
       },
       "pr": {
-        "number": 619,
-        "title": "non-record 16MB A100 SXM run (10L mixed int5/int6 + EMA + QAT)",
+        "number": 1358,
+        "title": "Submission: Static-Unified Flash-Nitro (SUFN) 10-minute Baseline",
         "state": "open",
         "draft": false,
         "mergedAt": null,
-        "htmlUrl": "https://github.com/openai/parameter-golf/pull/619",
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1358",
         "authorLogin": "zeal175",
         "authorName": null,
-        "createdAt": "2026-03-24T13:38:05Z",
-        "updatedAt": "2026-04-04T16:30:18Z",
-        "headSha": "4a952afbe7852fd2ec461e11ad2bb5ba461ef04d",
+        "createdAt": "2026-04-04T20:50:33Z",
+        "updatedAt": "2026-04-04T20:50:33Z",
+        "headSha": "57d7f809e5392e2250f1b74c857491b6f3047795",
         "headRepo": "zeal175/parameter-golf"
       },
       "links": {
@@ -57453,7 +57530,7 @@
         "trainLog": "https://github.com/openai/parameter-golf/blob/4a952afbe7852fd2ec461e11ad2bb5ba461ef04d/records/track_10min_16mb/2026-04-04_Static-Unified_Flash-Nitro/train.log",
         "script": "https://github.com/openai/parameter-golf/blob/4a952afbe7852fd2ec461e11ad2bb5ba461ef04d/records/track_10min_16mb/2026-04-04_Static-Unified_Flash-Nitro/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/4a952afbe7852fd2ec461e11ad2bb5ba461ef04d/records/track_10min_16mb/2026-04-04_Static-Unified_Flash-Nitro",
-        "pr": "https://github.com/openai/parameter-golf/pull/619",
+        "pr": "https://github.com/openai/parameter-golf/pull/1358",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

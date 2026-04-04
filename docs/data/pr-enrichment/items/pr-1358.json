@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T20:52:38.223Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1358,
+    "title": "Submission: Static-Unified Flash-Nitro (SUFN) 10-minute Baseline",
+    "state": "open",
+    "updatedAt": "2026-04-04T20:50:33Z",
+    "headSha": "57d7f809e5392e2250f1b74c857491b6f3047795",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1358",
+    "authorLogin": "zeal175"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-04_Static-Unified_Flash-Nitro/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "SUFN keeps modded-nanogpt on a static 1024 graph with native causal Flash attention and robust distributed token loading to avoid recompile stalls.",
+    "tags": [
+      "architecture",
+      "attention",
+      "training-schedule"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Static 1024-sequence graph removes recompilation stalls",
+      "Native is_causal Flash Attention via F.scaled_dot_product_attention",
+      "DistributedTokenLoader rounding keeps multi-GPU phases stable"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
