@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T13:50:35.256Z",
+  "generatedAt": "2026-04-04T14:21:11.817Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1085,
     "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
     "state": "open",
-    "updatedAt": "2026-04-04T13:43:24Z",
-    "headSha": "383417e3b7a483c5be51e33c479e60d330e1c6ab",
+    "updatedAt": "2026-04-04T14:08:07Z",
+    "headSha": "d1b6a3eb98d685c17cf796f26595d383beeebcd3",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1085",
     "authorLogin": "adityasasidhar"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer GPT uses GQA with partial RoPE, 3x MLP, sliding eval, and late QAT/LR warmdown to tolerate aggressive Int6 quantization.",
+    "summary": "Single-H100 11-layer GQA+MLP3 model pairs partial RoPE/XSA with late QAT to tune int6 attention/MLP weights before mixed-bit export.",
     "tags": [
-      "architecture",
       "quantization",
+      "architecture",
       "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Grouped query attention with partial RoPE",
-      "Late 40% QAT plus LR warmdown",
-      "Int6 quantization with zlib-compressed export"
+      "Grouped Query Attention with partial RoPE and XSA",
+      "Late QAT over final 40% for int6 attention/MLP tensors",
+      "Muon+AdamW with LR warmdown and sliding-window validation"
     ]
   },
   "compatibility": {

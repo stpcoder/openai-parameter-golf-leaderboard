@@ -1,8 +1,102 @@
 {
-  "generatedAt": "2026-04-04T13:50:39.987Z",
+  "generatedAt": "2026-04-04T14:21:11.970Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1347,
+      "title": "Add non-record submission for 15L ternary MLP-only 20k",
+      "status": "open",
+      "updatedAt": "2026-04-04T14:13:33Z",
+      "headSha": "d6100758fc6794ce7f067a6f033e480dc0e5e68c",
+      "generatedAt": "2026-04-04T14:20:39.794Z",
+      "summary": "Pure ternary MLP-only 15-layer model trained 20k steps to illustrate aggressive quantization under the 16MB cap for the non-record track.",
+      "tags": [
+        "quantization",
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1347.json"
+    },
+    {
+      "prNumber": 1346,
+      "title": "Add non-record submission for 15L hybrid tail seq1536 20k",
+      "status": "open",
+      "updatedAt": "2026-04-04T14:13:10Z",
+      "headSha": "7bd20abd9e0abd60f6ce83919ad3113269276784",
+      "generatedAt": "2026-04-04T14:20:48.161Z",
+      "summary": "15-layer ternary MLP keeps most blocks ternary while promoting the tail MLP to 5 bits and training at seq1536 for 20k steps.",
+      "tags": [
+        "quantization",
+        "mixed-precision",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1346.json"
+    },
+    {
+      "prNumber": 1345,
+      "title": "Add non-record submission for full80 recurrence seq1536 20k",
+      "status": "open",
+      "updatedAt": "2026-04-04T14:09:30Z",
+      "headSha": "9492bc8bb1c81eec147f934067fa105a3da5b5ce",
+      "generatedAt": "2026-04-04T14:20:53.776Z",
+      "summary": "Extends the full80 mixed-lowbit architecture with fixed middle-block recurrence, step-aware recurrence embeddings, and export-rescue tweaks for the 16MB non-record track.",
+      "tags": [
+        "architecture",
+        "compression",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1345.json"
+    },
+    {
+      "prNumber": 1344,
+      "title": "Record: SP4096 + Polar Express + MuonEq-R + Depth Recurrence — 1.0923 BPB (3-seed)",
+      "status": "open",
+      "updatedAt": "2026-04-04T13:52:33Z",
+      "headSha": "1c0a0d54dc9305d4eb2033e794a7e6665f9e2ace",
+      "generatedAt": "2026-04-04T14:21:01.003Z",
+      "summary": "SP4096 base adds Polar Express NS with MuonEq-R row-norm, depth recurrence in layers 3-5, and WD/MLR tuning for compression-friendly quantization.",
+      "tags": [
+        "muon",
+        "architecture",
+        "regularization"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1344.json"
+    },
     {
       "prNumber": 1342,
       "title": "Submission/mamba ssm byte260",
@@ -192,29 +286,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-1333.json"
-    },
-    {
-      "prNumber": 1332,
-      "title": "Record: SP4096 + Polar Express NS + MuonEq-R + WD=0.090 — 1.0959 BPB (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-04-04T08:20:17Z",
-      "headSha": "22eb98c634430271aee2bbad446c5f98a87dd82d",
-      "generatedAt": "2026-04-04T08:47:56.795Z",
-      "summary": "Extends SP4096 with 4-step Polar Express NS, MuonEq-R row-normalized gradients, higher WD, and XSA across layers for quant-friendly compression.",
-      "tags": [
-        "quantization",
-        "muon",
-        "regularization"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-1332.json"
     },
     {
       "prNumber": 1331,
@@ -868,11 +939,11 @@
     {
       "prNumber": 1298,
       "title": "Record: Polar Express NS + SLOT + MuonEq-R + XSA-all — 1.1043 BPB (3-seed mean)",
-      "status": "open",
-      "updatedAt": "2026-04-03T12:10:12Z",
+      "status": "closed",
+      "updatedAt": "2026-04-04T14:08:01Z",
       "headSha": "31a0826757aa089e7c75dda02a3eefe27a0c69e4",
-      "generatedAt": "2026-04-03T12:39:42.695Z",
-      "summary": "Combines Polar Express Newton-Schulz, MuonEq-R orthogonalization, eval-time SLOT delta tuning, and XSA on all layers over the PR#549 stack.",
+      "generatedAt": "2026-04-04T14:21:08.277Z",
+      "summary": "Polar Express Newton-Schulz with MuonEq-R conditioning plus eval-time SLOT delta tuning across XSA-all layers to shrink BPB.",
       "tags": [
         "muon",
         "attention",
@@ -4407,13 +4478,13 @@
       "prNumber": 1085,
       "title": "Non-record:11L GQA + MLP 3 + Partial RoPE + Int6 Attn/MLP + QAT40 ",
       "status": "open",
-      "updatedAt": "2026-04-04T13:43:24Z",
-      "headSha": "383417e3b7a483c5be51e33c479e60d330e1c6ab",
-      "generatedAt": "2026-04-04T13:50:35.256Z",
-      "summary": "11-layer GPT uses GQA with partial RoPE, 3x MLP, sliding eval, and late QAT/LR warmdown to tolerate aggressive Int6 quantization.",
+      "updatedAt": "2026-04-04T14:08:07Z",
+      "headSha": "d1b6a3eb98d685c17cf796f26595d383beeebcd3",
+      "generatedAt": "2026-04-04T14:21:11.817Z",
+      "summary": "Single-H100 11-layer GQA+MLP3 model pairs partial RoPE/XSA with late QAT to tune int6 attention/MLP weights before mixed-bit export.",
       "tags": [
-        "architecture",
         "quantization",
+        "architecture",
         "training-schedule",
         "evaluation"
       ],

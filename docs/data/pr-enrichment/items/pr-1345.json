@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-04T14:20:53.776Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1345,
+    "title": "Add non-record submission for full80 recurrence seq1536 20k",
+    "state": "open",
+    "updatedAt": "2026-04-04T14:09:30Z",
+    "headSha": "9492bc8bb1c81eec147f934067fa105a3da5b5ce",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1345",
+    "authorLogin": "shasank0001"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-04_Full80_Recurrence_StepEmbed_Seq1536_20k/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Extends the full80 mixed-lowbit architecture with fixed middle-block recurrence, step-aware recurrence embeddings, and export-rescue tweaks for the 16MB non-record track.",
+    "tags": [
+      "architecture",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "fixed middle-block recurrence continuation with TRAIN_SEQ_LEN=1536",
+      "learned step-aware recurrence embeddings to reintroduce depth signal",
+      "export-rescue via BIGRAM_EXPORT_BITS=4 and MAG_PRUNE_PCT=0.033"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T14:20:39.794Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1347,
+    "title": "Add non-record submission for 15L ternary MLP-only 20k",
+    "state": "open",
+    "updatedAt": "2026-04-04T14:13:33Z",
+    "headSha": "d6100758fc6794ce7f067a6f033e480dc0e5e68c",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1347",
+    "authorLogin": "shasank0001"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-03-27_15L_Ternary_MLPOnly_20k/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Pure ternary MLP-only 15-layer model trained 20k steps to illustrate aggressive quantization under the 16MB cap for the non-record track.",
+    "tags": [
+      "quantization",
+      "architecture",
+      "compression",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "pure ternary MLP quantization",
+      "no attention ternary branch",
+      "under-cap export with reduced bigram bits"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

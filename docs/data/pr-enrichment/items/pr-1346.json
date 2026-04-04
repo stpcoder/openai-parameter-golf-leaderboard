@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T14:20:48.161Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1346,
+    "title": "Add non-record submission for 15L hybrid tail seq1536 20k",
+    "state": "open",
+    "updatedAt": "2026-04-04T14:13:10Z",
+    "headSha": "7bd20abd9e0abd60f6ce83919ad3113269276784",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1346",
+    "authorLogin": "shasank0001"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-03_15L_HybridTail_Seq1536_20k_1x5090/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "15-layer ternary MLP keeps most blocks ternary while promoting the tail MLP to 5 bits and training at seq1536 for 20k steps.",
+    "tags": [
+      "quantization",
+      "mixed-precision",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Ternary MLP path with selective tail-block precision promotion",
+      "Extended TRAIN_SEQ_LEN=1536 on compact 15-layer layout",
+      "20k-step single-RTX5090 non-record run"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
