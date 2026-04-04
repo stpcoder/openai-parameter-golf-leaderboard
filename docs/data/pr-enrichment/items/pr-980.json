@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-28T09:21:49.762Z",
+  "generatedAt": "2026-04-04T04:45:49.487Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 980,
     "title": "Record: LOGOS-44 Z=0 - Toroidal CDMA Field Decoder (44-pass iterative routing)",
     "state": "open",
-    "updatedAt": "2026-03-28T08:28:00Z",
-    "headSha": "e748a9c915b91c52f02fc4c88b1b9500c9943ace",
+    "updatedAt": "2026-04-04T04:41:21Z",
+    "headSha": "a79e8ba27a3df4966d0b0e43a0b0a5c78e2ffad4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/980",
     "authorLogin": "slowomir33-arch"
   },
@@ -19,7 +19,7 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "LOGOS-44 reuses one toroidal CDMA routing block for 44 passes with gated field decoding and sinusoidal depth modulation to trade params for compute depth.",
+    "summary": "Shared block routed 44 times with toroidal bottleneck, 128-channel CDMA field, and coherence gating for depth-efficient micro-LLM.",
     "tags": [
       "architecture",
       "optimizer",
@@ -28,8 +28,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "shared 44-pass iterative routing",
-      "toroidal CDMA field decoding with coherence gate",
+      "44-pass shared block routing for depth",
+      "Toroidal bottleneck plus CDMA field for non-local memory",
       "Muon optimizer with int8+zlib compression"
     ]
   },
