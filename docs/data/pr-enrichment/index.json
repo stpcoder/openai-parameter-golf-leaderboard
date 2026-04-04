@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T00:44:17.042Z",
+  "generatedAt": "2026-04-04T01:14:09.267Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -777,23 +777,24 @@
     },
     {
       "prNumber": 1278,
-      "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
+      "title": "Record: SLOT-24 + Partial Depth Recurrence — val_bpb     0.8648 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-04T00:42:23Z",
-      "headSha": "7caef4a10ca925b597eb390d31263b3c537a7c43",
-      "generatedAt": "2026-04-04T00:44:12.178Z",
-      "summary": "Weight-shared depth recurrence with learned iteration conditioning reuses few unique transformer blocks to reach >20 effective layers under 16MB.",
+      "updatedAt": "2026-04-04T00:54:13Z",
+      "headSha": "96d1dadc53870ff308a2c2eb6272e7a060535c6a",
+      "generatedAt": "2026-04-04T01:14:03.376Z",
+      "summary": "SLOT-24 fine-tunes per-sample hidden deltas/logit bias on an XSA-11 base stacked with partial depth recurrence and per-iteration conditioning.",
       "tags": [
+        "val-only",
         "architecture",
-        "compression"
+        "training-schedule"
       ],
       "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
+        "usesValOnly": true,
+        "usesValOnlyAi": true,
         "usesValOnlyCollector": false
       },
       "compatibility": {
-        "valOnlyMatchesCollector": true
+        "valOnlyMatchesCollector": false
       },
       "file": "items/pr-1278.json"
     },
@@ -848,12 +849,13 @@
       "prNumber": 1275,
       "title": "Non-record: Asymmetric 1/10 Split — 1.1492 pre-quant BPB on 8xH100 (one-line change)",
       "status": "open",
-      "updatedAt": "2026-04-04T00:36:38Z",
+      "updatedAt": "2026-04-04T00:56:00Z",
       "headSha": "1a40bded844bdaea22a692952d79406e8b26044e",
-      "generatedAt": "2026-04-04T00:44:16.855Z",
-      "summary": "Hourglass now dedicates almost all layers to the decoder (encoder_layers=1), boosting BPB across configs without extra compute.",
+      "generatedAt": "2026-04-04T01:14:09.085Z",
+      "summary": "Shifting the hourglass U-Net to one encoder layer and the rest decoder boosts autoregressive capacity without extra compute.",
       "tags": [
         "architecture",
+        "attention",
         "non-record"
       ],
       "flags": {

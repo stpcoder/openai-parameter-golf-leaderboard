@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T00:44:16.855Z",
+  "generatedAt": "2026-04-04T01:14:09.085Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1275,
     "title": "Non-record: Asymmetric 1/10 Split — 1.1492 pre-quant BPB on 8xH100 (one-line change)",
     "state": "open",
-    "updatedAt": "2026-04-04T00:36:38Z",
+    "updatedAt": "2026-04-04T00:56:00Z",
     "headSha": "1a40bded844bdaea22a692952d79406e8b26044e",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1275",
     "authorLogin": "ranausmanai"
@@ -19,17 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Hourglass now dedicates almost all layers to the decoder (encoder_layers=1), boosting BPB across configs without extra compute.",
+    "summary": "Shifting the hourglass U-Net to one encoder layer and the rest decoder boosts autoregressive capacity without extra compute.",
     "tags": [
       "architecture",
+      "attention",
       "non-record"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "valOnlyReasoning": "Full-training regime; not confined to validation-only data.",
     "techniques": [
-      "Decoder-heavy hourglass split",
-      "Validated across desktop and 8xH100 runs",
-      "Zero-parameter one-line change"
+      "Hourglass encoder-decoder split rebalanced",
+      "Decoder-heavy capacity for autoregression",
+      "Zero-cost architecture tweak"
     ]
   },
   "compatibility": {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T00:44:12.178Z",
+  "generatedAt": "2026-04-04T01:14:03.376Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1278,
-    "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
+    "title": "Record: SLOT-24 + Partial Depth Recurrence — val_bpb     0.8648 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-04T00:42:23Z",
-    "headSha": "7caef4a10ca925b597eb390d31263b3c537a7c43",
+    "updatedAt": "2026-04-04T00:54:13Z",
+    "headSha": "96d1dadc53870ff308a2c2eb6272e7a060535c6a",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1278",
     "authorLogin": "GitGeeks"
   },
@@ -19,23 +19,24 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Weight-shared depth recurrence with learned iteration conditioning reuses few unique transformer blocks to reach >20 effective layers under 16MB.",
+    "summary": "SLOT-24 fine-tunes per-sample hidden deltas/logit bias on an XSA-11 base stacked with partial depth recurrence and per-iteration conditioning.",
     "tags": [
+      "val-only",
       "architecture",
-      "compression"
+      "training-schedule"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "SLOT-24 optimizes per-sample deltas/logit bias on the validation shard with frozen model weights.",
     "techniques": [
-      "Weight-shared recurrence with iteration embeddings and sigmoid gating",
-      "Partial depth recurrence to simulate deeper networks within strict budgets",
-      "Compatible GPTQ int6 quantization across repeated layers"
+      "Partial depth recurrence (layers 4,5) with iter_embed/iter_gate conditioning",
+      "SLOT-24 per-sample hidden delta and logit-bias optimization",
+      "XSA-11 backbone with QK-Gain, VRL, BigramHash enhancements"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }
