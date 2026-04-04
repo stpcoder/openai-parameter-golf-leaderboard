@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-04-04T21:22:54.351Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1360,
+    "title": "Non-record: Gaussian per-token loss reweighting — what goes wrong and why (+0.014 bpb)",
+    "state": "open",
+    "updatedAt": "2026-04-04T21:14:33Z",
+    "headSha": "3870e25f804127453bd7d4f1b94665dbd3394788",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1360",
+    "authorLogin": "JulianTang2027"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Adds Gaussian per-token loss weighting around the batch mean on PR #180 and shows the reshaped objective hurts the actual bpb despite better weighted val loss.",
+    "tags": [
+      "regularization",
+      "evaluation",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Gaussian z-score-based per-token weighting to emphasize mid-loss tokens",
+      "Diagnosis contrasting weighted training metric with unweighted sliding-window bpb"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}

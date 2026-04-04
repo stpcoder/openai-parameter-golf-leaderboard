@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T16:21:04.059Z",
+  "generatedAt": "2026-04-04T21:23:10.699Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1333,
     "title": "Record: SP4096 + Depth Recurrence + Parallel Residuals + Causal SLOT-16 — val_bpb 1.0766 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-04T16:06:26Z",
+    "updatedAt": "2026-04-04T20:58:31Z",
     "headSha": "7ed3f08e61281dbab846f6215fbf5005e8a8379d",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1333",
     "authorLogin": "aryanbhosale"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SP4096 model uses depth recurrence, parallel residuals, MuonEq-R/QK-gain with GPTQ int6 compression and causal SLOT delta adaptation on context-only tokens.",
+    "summary": "SP4096 training mixes depth recurrence, parallel residuals, MuonEq-R, and GPTQ int6 compression while evaluating with causal SLOT delta tuning on context-only tokens.",
     "tags": [
       "architecture",
-      "muon",
       "quantization",
+      "muon",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "SP4096 vocab with depth recurrence and parallel residuals",
-      "MuonEq-R + QK-gain paired with int6 GPTQ compression",
-      "Per-batch causal SLOT delta optimization on context-only tokens"
+      "Depth recurrence layers combined with parallel residuals",
+      "MuonEq-R training plus GPTQ int6 compression",
+      "Causal SLOT per-batch delta optimization on context-only tokens"
     ]
   },
   "compatibility": {

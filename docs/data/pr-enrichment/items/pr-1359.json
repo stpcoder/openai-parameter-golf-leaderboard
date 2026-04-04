@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-04T20:52:29.894Z",
+  "generatedAt": "2026-04-04T21:22:59.538Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1359,
     "title": "Record: 0.4188 BPB mixed quant ngram",
-    "state": "open",
-    "updatedAt": "2026-04-04T20:51:41Z",
-    "headSha": "e33abde6cad8290f79113f0438c326bcdf7ae30c",
+    "state": "closed",
+    "updatedAt": "2026-04-04T21:16:34Z",
+    "headSha": "db46fb7bb711911753df79d4cf19548456624e46",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1359",
     "authorLogin": "LucasErcolano"
   },
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Mixed int5/int6 quantized 11-layer GQA transformer with complementary training and entropy-adaptive causal backoff n-gram mixing fits under 16MB.",
+    "summary": "Combines int5/int6 quantized 11-layer GQA with complementary loss and a score-first causal backoff n-gram mixer that syncs before cache updates.",
     "tags": [
       "quantization",
+      "mixed-precision",
       "architecture",
-      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Mixed int5/int6 quantization with dynamic QAT",
-      "Complementary loss weighting for n-gram-hard tokens",
-      "Score-first causal backoff n-gram mixer with DDP sync"
+      "int5/int6 mixed quantization",
+      "complementary token-focused loss",
+      "score-first causal n-gram mixer with DDP sync"
     ]
   },
   "compatibility": {

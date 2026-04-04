@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T20:52:18.607Z",
+  "generatedAt": "2026-04-04T21:22:43.812Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -3089,7 +3089,7 @@
     {
       "id": "record-records-track_10min_16mb-2026-04-04_LucasErcolano_MixedQuantNgram",
       "source": "pull_request",
-      "status": "open",
+      "status": "closed",
       "category": "main-track",
       "track": {
         "path": "records/track_10min_16mb",
@@ -3114,7 +3114,7 @@
         "date": "2026-04-04T20:51:41Z"
       },
       "metrics": {
-        "valBpb": 0.418816,
+        "valBpb": 0.418817,
         "valLoss": null,
         "preQuantValBpb": null,
         "preQuantValLoss": null,
@@ -3137,23 +3137,23 @@
       "pr": {
         "number": 1359,
         "title": "Record: 0.4188 BPB mixed quant ngram",
-        "state": "open",
+        "state": "closed",
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1359",
         "authorLogin": "LucasErcolano",
         "authorName": null,
         "createdAt": "2026-04-04T20:51:41Z",
-        "updatedAt": "2026-04-04T20:51:41Z",
-        "headSha": "e33abde6cad8290f79113f0438c326bcdf7ae30c",
+        "updatedAt": "2026-04-04T21:16:34Z",
+        "headSha": "db46fb7bb711911753df79d4cf19548456624e46",
         "headRepo": "LucasErcolano/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/e33abde6cad8290f79113f0438c326bcdf7ae30c/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/db46fb7bb711911753df79d4cf19548456624e46/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/db46fb7bb711911753df79d4cf19548456624e46/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/db46fb7bb711911753df79d4cf19548456624e46/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/db46fb7bb711911753df79d4cf19548456624e46/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/db46fb7bb711911753df79d4cf19548456624e46/records/track_10min_16mb/2026-04-04_LucasErcolano_MixedQuantNgram",
         "pr": "https://github.com/openai/parameter-golf/pull/1359",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
@@ -9235,7 +9235,7 @@
         "authorLogin": "aryanbhosale",
         "authorName": null,
         "createdAt": "2026-04-04T09:12:52Z",
-        "updatedAt": "2026-04-04T16:06:26Z",
+        "updatedAt": "2026-04-04T20:58:31Z",
         "headSha": "7ed3f08e61281dbab846f6215fbf5005e8a8379d",
         "headRepo": "aryanbhosale/parameter-golf"
       },
@@ -57520,7 +57520,7 @@
         "authorLogin": "zeal175",
         "authorName": null,
         "createdAt": "2026-04-04T20:50:33Z",
-        "updatedAt": "2026-04-04T20:50:33Z",
+        "updatedAt": "2026-04-04T20:54:20Z",
         "headSha": "57d7f809e5392e2250f1b74c857491b6f3047795",
         "headRepo": "zeal175/parameter-golf"
       },
@@ -60308,6 +60308,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/f25ec0b2c0aac89a97b00ee13b5a7f0de364854c/records/track_10min_16mb/2026-04-04_12L_768D_INT6_BigramHash_LZMA/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/f25ec0b2c0aac89a97b00ee13b5a7f0de364854c/records/track_10min_16mb/2026-04-04_12L_768D_INT6_BigramHash_LZMA",
         "pr": "https://github.com/openai/parameter-golf/pull/1340",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-04_GaussianTokenWeighting_NegativeResult",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-04_GaussianTokenWeighting_NegativeResult",
+        "folderPath": "records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult",
+        "submissionPath": "records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/train_gpt.py"
+      },
+      "submission": {
+        "author": "Julian Tang",
+        "githubId": "JulianTang2027",
+        "name": "Gaussian Per-Token Loss Reweighting: A Negative Result",
+        "blurb": "Tests whether Gaussian per-token loss reweighting (focus training on tokens whose loss is near the batch mean) helps in the 16MB/10min setting. Single-hyperparameter addition (TOKEN_WEIGHT_SIGMA=2.0) to PR #180. Training-time weighted val_loss looks much better (1.0182 vs 1.1542 at step 6500), but final unweighted sliding-window BPB regresses by +0.0143 (1.1585 vs 1.1442). The weighted-loss improvement is an artifact of optimizing a different objective than the metric measures — a concrete cautionary tale for anyone tempted by per-token loss shaping.",
+        "date": "2026-04-04"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1360,
+        "title": "Non-record: Gaussian per-token loss reweighting — what goes wrong and why (+0.014 bpb)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1360",
+        "authorLogin": "JulianTang2027",
+        "authorName": null,
+        "createdAt": "2026-04-04T21:14:33Z",
+        "updatedAt": "2026-04-04T21:14:33Z",
+        "headSha": "3870e25f804127453bd7d4f1b94665dbd3394788",
+        "headRepo": "JulianTang2027/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/3870e25f804127453bd7d4f1b94665dbd3394788/records/track_non_record_16mb/2026-04-04_GaussianTokenWeighting_NegativeResult",
+        "pr": "https://github.com/openai/parameter-golf/pull/1360",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

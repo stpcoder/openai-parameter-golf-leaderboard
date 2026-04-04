@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-04T20:52:38.223Z",
+  "generatedAt": "2026-04-04T21:23:04.264Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1358,
     "title": "Submission: Static-Unified Flash-Nitro (SUFN) 10-minute Baseline",
     "state": "open",
-    "updatedAt": "2026-04-04T20:50:33Z",
+    "updatedAt": "2026-04-04T20:54:20Z",
     "headSha": "57d7f809e5392e2250f1b74c857491b6f3047795",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1358",
     "authorLogin": "zeal175"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "SUFN keeps modded-nanogpt on a static 1024 graph with native causal Flash attention and robust distributed token loading to avoid recompile stalls.",
+    "summary": "Locks modded-nanogpt to a static 1024-sequence graph, uses native is_causal Flash attention, and stabilizes distributed token loading to avoid recompilation stalls.",
     "tags": [
       "architecture",
       "attention",
-      "training-schedule"
+      "tokenization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Static 1024-sequence graph removes recompilation stalls",
-      "Native is_causal Flash Attention via F.scaled_dot_product_attention",
-      "DistributedTokenLoader rounding keeps multi-GPU phases stable"
+      "static 1024-sequence graph avoids recompilation stalls",
+      "native is_causal Flash attention for efficient SDPA",
+      "distributed token loader rounds shards for stability"
     ]
   },
   "compatibility": {
