@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-03T19:42:14.241Z",
+  "generatedAt": "2026-04-04T00:44:05.415Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1311,
     "title": "Non-record: 11L LeakyReLU² + EMA + LZMA Int6 (val_bpb: 1.1303, 2-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-03T19:23:20Z",
+    "updatedAt": "2026-04-04T00:34:18Z",
     "headSha": "8da4520e2057253e314c4eb3b20a7f411c09f778",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1311",
     "authorLogin": "htrung1105"
@@ -19,19 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "11-layer Transformer uses LeakyReLU(0.5)² MLP, U-Net skips, and GPTQ-lite int6 + LZMA with T=0.90 eval.",
+    "summary": "11-layer 512d Transformer with LeakyReLU(0.5)² MLP, BigramHash skips, GPTQ-lite int6, LZMA compression, EMA/SWA, and T=0.9 evaluation.",
     "tags": [
-      "architecture",
       "quantization",
+      "architecture",
       "compression",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "LeakyReLU² MLP with U-Net skip and partial RoPE",
-      "GPTQ-lite int6 quantization paired with LZMA extreme compression",
-      "Temperature-scaled (T=0.90) sliding-window evaluation"
+      "LeakyReLU(0.5)² MLP with U-Net skips and BigramHash",
+      "GPTQ-lite int6 with EMA/SWA-driven selection",
+      "LZMA compression paired with temperature-scaled eval"
     ]
   },
   "compatibility": {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-04T00:13:53.819Z",
+  "generatedAt": "2026-04-04T00:44:17.042Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -77,10 +77,10 @@
       "prNumber": 1313,
       "title": "Record: SLOT-24 Aggressive — val_bpb 0.8637 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T20:08:13Z",
-      "headSha": "dcda6e6d3342897b9ccc9e381d4674ac54355158",
-      "generatedAt": "2026-04-03T20:11:54.836Z",
-      "summary": "Aggressive SLOT-24 eval with frozen weights using larger LR/min, stride, and per-sample delta/logit bias tuning.",
+      "updatedAt": "2026-04-04T00:26:38Z",
+      "headSha": "03ac49cdcacaab22183d0d4c7fb171bcc059fada",
+      "generatedAt": "2026-04-04T00:44:00.882Z",
+      "summary": "Aggressive SLOT-24 evaluation tweaks freeze weights while optimizing per-window delta/logit bias via 24-step AdamW with stride-96 scoring to sharpen BPB.",
       "tags": [
         "evaluation"
       ],
@@ -122,13 +122,13 @@
       "prNumber": 1311,
       "title": "Non-record: 11L LeakyReLU² + EMA + LZMA Int6 (val_bpb: 1.1303, 2-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-03T19:23:20Z",
+      "updatedAt": "2026-04-04T00:34:18Z",
       "headSha": "8da4520e2057253e314c4eb3b20a7f411c09f778",
-      "generatedAt": "2026-04-03T19:42:14.241Z",
-      "summary": "11-layer Transformer uses LeakyReLU(0.5)² MLP, U-Net skips, and GPTQ-lite int6 + LZMA with T=0.90 eval.",
+      "generatedAt": "2026-04-04T00:44:05.415Z",
+      "summary": "11-layer 512d Transformer with LeakyReLU(0.5)² MLP, BigramHash skips, GPTQ-lite int6, LZMA compression, EMA/SWA, and T=0.9 evaluation.",
       "tags": [
-        "architecture",
         "quantization",
+        "architecture",
         "compression",
         "evaluation"
       ],
@@ -779,13 +779,13 @@
       "prNumber": 1278,
       "title": "WIP: Depth Recurrence — val_bpb 3.2134 (beats baseline by 0.014 BPB at 2.8x fewer params)",
       "status": "open",
-      "updatedAt": "2026-04-03T22:06:59Z",
-      "headSha": "b04959c9be3bcc6906330cce8feb65beb1713e3c",
-      "generatedAt": "2026-04-03T22:13:05.625Z",
-      "summary": "Weight-shared transformer blocks iterate multiple times with learned iteration conditioning and U-Net skips to reach 20+ effective layers under 16MB.",
+      "updatedAt": "2026-04-04T00:42:23Z",
+      "headSha": "7caef4a10ca925b597eb390d31263b3c537a7c43",
+      "generatedAt": "2026-04-04T00:44:12.178Z",
+      "summary": "Weight-shared depth recurrence with learned iteration conditioning reuses few unique transformer blocks to reach >20 effective layers under 16MB.",
       "tags": [
         "architecture",
-        "training-schedule"
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -848,14 +848,13 @@
       "prNumber": 1275,
       "title": "Non-record: Asymmetric 1/10 Split — 1.1492 pre-quant BPB on 8xH100 (one-line change)",
       "status": "open",
-      "updatedAt": "2026-04-03T00:53:59Z",
+      "updatedAt": "2026-04-04T00:36:38Z",
       "headSha": "1a40bded844bdaea22a692952d79406e8b26044e",
-      "generatedAt": "2026-04-03T01:06:29.543Z",
-      "summary": "Setting num_encoder_layers=1 shifts almost all depth to the decoder, improving BPB without added compute on the hourglass model.",
+      "generatedAt": "2026-04-04T00:44:16.855Z",
+      "summary": "Hourglass now dedicates almost all layers to the decoder (encoder_layers=1), boosting BPB across configs without extra compute.",
       "tags": [
-        "non-record",
         "architecture",
-        "evaluation"
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,

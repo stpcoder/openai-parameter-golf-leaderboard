@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-03T20:11:54.836Z",
+  "generatedAt": "2026-04-04T00:44:00.882Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1313,
     "title": "Record: SLOT-24 Aggressive — val_bpb 0.8637 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-03T20:08:13Z",
-    "headSha": "dcda6e6d3342897b9ccc9e381d4674ac54355158",
+    "updatedAt": "2026-04-04T00:26:38Z",
+    "headSha": "03ac49cdcacaab22183d0d4c7fb171bcc059fada",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1313",
     "authorLogin": "anthony-maio"
   },
@@ -19,16 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Aggressive SLOT-24 eval with frozen weights using larger LR/min, stride, and per-sample delta/logit bias tuning.",
+    "summary": "Aggressive SLOT-24 evaluation tweaks freeze weights while optimizing per-window delta/logit bias via 24-step AdamW with stride-96 scoring to sharpen BPB.",
     "tags": [
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Per-sample SLOT-24 delta + logit bias tuning",
-      "Cosine AdamW on frozen model with scored-position masking",
-      "Stride 96, 24-step eval sweep for lr/lr_min"
+      "Per-window hidden delta + logit bias tuning with frozen model",
+      "24-step AdamW cosine schedule (0.012→0.001) for SLOT dynamics",
+      "Stride-96 scored-position masking during SLOT evaluation"
     ]
   },
   "compatibility": {
