@@ -1,24 +1,17 @@
 {
-  "generatedAt": "2026-04-04T22:22:49.318Z",
+  "generatedAt": "2026-04-04T22:52:59.450Z",
   "sourceRepo": "openai/parameter-golf",
   "siteRoot": null,
   "tokenConfigured": true,
   "skipped": [],
-  "errors": [
-    {
-      "stage": "pull-request-file",
-      "pr": 1354,
-      "filename": "records/track_10min_16mb/2026-03-31_VarLenAttn/submission.json",
-      "message": "Unexpected end of JSON input"
-    }
-  ],
+  "errors": [],
   "incremental": {
     "mode": "incremental",
-    "cutoffUpdatedAt": "2026-04-04T21:49:37Z",
+    "cutoffUpdatedAt": "2026-04-04T22:21:50Z",
     "pagesScanned": 2,
     "prsScanned": 200,
-    "prsRefreshed": 2,
-    "prsReused": 198,
+    "prsRefreshed": 0,
+    "prsReused": 200,
     "stoppedEarly": true,
     "refreshFailures": 0,
     "cacheEntries": 1303,
