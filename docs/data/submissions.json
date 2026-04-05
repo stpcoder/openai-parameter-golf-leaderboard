@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T14:57:59.066Z",
+  "generatedAt": "2026-04-05T15:27:46.332Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -61221,16 +61221,16 @@
         "authorLogin": "ranausmanai",
         "authorName": null,
         "createdAt": "2026-04-05T12:37:07Z",
-        "updatedAt": "2026-04-05T12:44:38Z",
-        "headSha": "78321759c3ebee8296ac399a2dc589e05df661cb",
+        "updatedAt": "2026-04-05T15:02:56Z",
+        "headSha": "b0863f68319fd85ef6add4db34b2b7f3781e394f",
         "headRepo": "ranausmanai/parameter-golf"
       },
       "links": {
-        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/78321759c3ebee8296ac399a2dc589e05df661cb/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/submission.json",
-        "readme": "https://github.com/openai/parameter-golf/blob/78321759c3ebee8296ac399a2dc589e05df661cb/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/README.md",
-        "trainLog": "https://github.com/openai/parameter-golf/blob/78321759c3ebee8296ac399a2dc589e05df661cb/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train.log",
-        "script": "https://github.com/openai/parameter-golf/blob/78321759c3ebee8296ac399a2dc589e05df661cb/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train_gpt.py",
-        "folder": "https://github.com/openai/parameter-golf/tree/78321759c3ebee8296ac399a2dc589e05df661cb/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling",
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/b0863f68319fd85ef6add4db34b2b7f3781e394f/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/b0863f68319fd85ef6add4db34b2b7f3781e394f/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/b0863f68319fd85ef6add4db34b2b7f3781e394f/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/b0863f68319fd85ef6add4db34b2b7f3781e394f/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/b0863f68319fd85ef6add4db34b2b7f3781e394f/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling",
         "pr": "https://github.com/openai/parameter-golf/pull/1380",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },

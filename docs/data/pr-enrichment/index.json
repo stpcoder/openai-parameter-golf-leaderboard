@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T14:58:10.626Z",
+  "generatedAt": "2026-04-05T15:27:53.921Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
@@ -76,10 +76,10 @@
       "prNumber": 1380,
       "title": "Non-record: Focal Loss for LM Pretraining — 1.1567 int8 BPB on RTX 4000 Ada (3-line change)",
       "status": "open",
-      "updatedAt": "2026-04-05T12:44:38Z",
-      "headSha": "78321759c3ebee8296ac399a2dc589e05df661cb",
-      "generatedAt": "2026-04-05T12:57:50.220Z",
-      "summary": "Applies focal loss to LM pretraining and couples it with cosine LR plus a 1/10 encoder-decoder split to focus capacity on hard-to-predict tokens.",
+      "updatedAt": "2026-04-05T15:02:56Z",
+      "headSha": "b0863f68319fd85ef6add4db34b2b7f3781e394f",
+      "generatedAt": "2026-04-05T15:27:53.712Z",
+      "summary": "Focal loss reweights cross-entropy, paired with a cosine LR schedule and 1/10 encoder split, to prioritize hard tokens in LM pretraining.",
       "tags": [
         "regularization",
         "training-schedule",
