@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-05T16:59:15.599Z",
+  "generatedAt": "2026-04-05T17:28:58.313Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1350,
     "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
     "state": "closed",
-    "updatedAt": "2026-04-05T16:56:49Z",
+    "updatedAt": "2026-04-05T17:17:55Z",
     "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1350",
     "authorLogin": "resouer"
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Eval-time L-BFGS optimizes causal logit-space SLOT deltas (focal loss, warm-start) with pre-quant AdamW TTT and coprime-shard tweaks for compliant sliding eval.",
+    "summary": "L-BFGS causal SLOT logit optimization with focal loss/warm-start keeps predictions causal, paired with AdamW pre-quant TTT and coprime-shard loader tweaks.",
     "tags": [
       "optimizer",
       "evaluation",
-      "quantization"
+      "training-schedule"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Causal logit-space SLOT optimized by L-BFGS using focal loss on already-scored context positions",
-      "Pre-quant AdamW TTT on FP EMA weights before GPTQ quantization",
-      "Coprime-stride multi-shard loader plus tuned config (QK_GAIN=5.0, WARMDOWN=4000, damp=0.005)"
+      "L-BFGS logit-space SLOT optimizing only already-scored context positions",
+      "AdamW pre-quant TTT on EMA weights before GPTQ",
+      "Coprime-stride weighted shard loader plus QK_GAIN/WARMDOWN/GPTQ damp tweaks"
     ]
   },
   "compatibility": {

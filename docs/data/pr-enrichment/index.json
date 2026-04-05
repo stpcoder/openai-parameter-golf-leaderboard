@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-05T16:59:31.731Z",
+  "generatedAt": "2026-04-05T17:29:09.698Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1385,
+      "title": "Non-record: Compressor-Aware Training (CAT), differentiable compression proxies for LZ-family compressors",
+      "status": "open",
+      "updatedAt": "2026-04-05T17:22:22Z",
+      "headSha": "de6b01af4fe4456edf8e2d48be9b1b3c98212865",
+      "generatedAt": "2026-04-05T17:28:45.974Z",
+      "summary": "Adds differentiable LZ77 dictionary-matching and entropy proxies so training encourages weights that compress better under int8+zlib serialization.",
+      "tags": [
+        "compression",
+        "regularization",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1385.json"
+    },
     {
       "prNumber": 1384,
       "title": "Progressive Depth + Hedge Mixer — val_bpb 1.1441 (3-seed mean)",
@@ -604,13 +627,15 @@
       "prNumber": 1351,
       "title": "Record: Discriminative TTT — val_bpb 1.0807 (3-seed mean)",
       "status": "closed",
-      "updatedAt": "2026-04-05T16:57:15Z",
+      "updatedAt": "2026-04-05T17:18:20Z",
       "headSha": "dbb4448d1fb7ddb68731bd884af5895de554107f",
-      "generatedAt": "2026-04-05T16:59:09.324Z",
-      "summary": "Pre-quant AdamW TTT uses discriminative per-block LR scaling (0.3× to 1.0×) with coprime loader tweaks before GPTQ quantization.",
+      "generatedAt": "2026-04-05T17:28:51.451Z",
+      "summary": "Per-block adaptive LR scaling during pre-quant AdamW TTT plus coprime shard sampling and GPTQ tweaks for fixed-predictor eval.",
       "tags": [
         "training-schedule",
-        "optimizer"
+        "optimizer",
+        "quantization",
+        "compression"
       ],
       "flags": {
         "usesValOnly": false,
@@ -626,14 +651,14 @@
       "prNumber": 1350,
       "title": "Record: L-BFGS Causal SLOT — val_bpb 1.0046 (3-seed mean)",
       "status": "closed",
-      "updatedAt": "2026-04-05T16:56:49Z",
+      "updatedAt": "2026-04-05T17:17:55Z",
       "headSha": "4ede046aac47273388f3b4d02de228292faa8a50",
-      "generatedAt": "2026-04-05T16:59:15.599Z",
-      "summary": "Eval-time L-BFGS optimizes causal logit-space SLOT deltas (focal loss, warm-start) with pre-quant AdamW TTT and coprime-shard tweaks for compliant sliding eval.",
+      "generatedAt": "2026-04-05T17:28:58.313Z",
+      "summary": "L-BFGS causal SLOT logit optimization with focal loss/warm-start keeps predictions causal, paired with AdamW pre-quant TTT and coprime-shard loader tweaks.",
       "tags": [
         "optimizer",
         "evaluation",
-        "quantization"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2513,14 +2538,14 @@
       "prNumber": 1246,
       "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
       "status": "open",
-      "updatedAt": "2026-04-05T13:27:58Z",
-      "headSha": "24bdadacbebd55330f07749bfcd0bf54517a486a",
-      "generatedAt": "2026-04-05T13:57:55.127Z",
-      "summary": "Trinity-inspired BitNet ternary QAT widens the MLP stack with Partial RoPE and NeoMuon plus EMA/SWA to fit 16MB under Base-3 packing.",
+      "updatedAt": "2026-04-05T17:25:39Z",
+      "headSha": "787c76f9b34b40309e058ca2686a3623b736fa2c",
+      "generatedAt": "2026-04-05T17:29:02.956Z",
+      "summary": "Ternary QAT with BitNet-inspired packing plus int6 GPTQ roundtrip and Trinity-guided wider MLP width to boost quality per byte.",
       "tags": [
         "quantization",
         "architecture",
-        "training-schedule"
+        "regularization"
       ],
       "flags": {
         "usesValOnly": false,
@@ -8334,11 +8359,11 @@
     {
       "prNumber": 895,
       "title": "Non-record: 4-Hour Progressive Depth — val_bpb 1.0889",
-      "status": "closed",
-      "updatedAt": "2026-04-05T14:49:55Z",
+      "status": "open",
+      "updatedAt": "2026-04-05T17:01:36Z",
       "headSha": "0b56a4df28d37bd5fe53d4cd52ecdc9c15b4f764",
-      "generatedAt": "2026-04-05T14:58:10.503Z",
-      "summary": "Progressive depth recurrence ramps three shared blocks from 2→5 repeats while large-scale SWA pairs with Hedge Mixer evaluation for the scaling study.",
+      "generatedAt": "2026-04-05T17:29:09.569Z",
+      "summary": "Progressively increasing repeats on 3 shared blocks explores depth-recurrence scaling over 4h, with SWA checkpoints feeding a Hedge Mixer eval.",
       "tags": [
         "architecture",
         "training-schedule",

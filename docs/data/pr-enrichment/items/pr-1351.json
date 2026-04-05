@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-05T16:59:09.324Z",
+  "generatedAt": "2026-04-05T17:28:51.451Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1351,
     "title": "Record: Discriminative TTT — val_bpb 1.0807 (3-seed mean)",
     "state": "closed",
-    "updatedAt": "2026-04-05T16:57:15Z",
+    "updatedAt": "2026-04-05T17:18:20Z",
     "headSha": "dbb4448d1fb7ddb68731bd884af5895de554107f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1351",
     "authorLogin": "resouer"
@@ -19,17 +19,19 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Pre-quant AdamW TTT uses discriminative per-block LR scaling (0.3× to 1.0×) with coprime loader tweaks before GPTQ quantization.",
+    "summary": "Per-block adaptive LR scaling during pre-quant AdamW TTT plus coprime shard sampling and GPTQ tweaks for fixed-predictor eval.",
     "tags": [
       "training-schedule",
-      "optimizer"
+      "optimizer",
+      "quantization",
+      "compression"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Discriminative TTT: linear LR scale from early to late blocks",
-      "Coprime-stride shard sampling for training data",
-      "Config tweaks (QK_GAIN=5.0, WARMDOWN=4000, GPTQ damp=0.005)"
+      "Per-block LR scaling (0.3x→1.0x) in discriminative pre-quant TTT",
+      "Weighted coprime-stride shard sampling",
+      "GPTQ tuning (QK_GAIN=5.0, WARMDOWN=4000, damp=0.005)"
     ]
   },
   "compatibility": {

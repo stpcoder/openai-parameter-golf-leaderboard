@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-05T13:57:55.127Z",
+  "generatedAt": "2026-04-05T17:29:02.956Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1246,
     "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
     "state": "open",
-    "updatedAt": "2026-04-05T13:27:58Z",
-    "headSha": "24bdadacbebd55330f07749bfcd0bf54517a486a",
+    "updatedAt": "2026-04-05T17:25:39Z",
+    "headSha": "787c76f9b34b40309e058ca2686a3623b736fa2c",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
     "authorLogin": "deborahnelson8788726"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Trinity-inspired BitNet ternary QAT widens the MLP stack with Partial RoPE and NeoMuon plus EMA/SWA to fit 16MB under Base-3 packing.",
+    "summary": "Ternary QAT with BitNet-inspired packing plus int6 GPTQ roundtrip and Trinity-guided wider MLP width to boost quality per byte.",
     "tags": [
       "quantization",
       "architecture",
-      "training-schedule"
+      "regularization"
     ],
     "usesValOnly": false,
-    "valOnlyReasoning": "Not a validation-only training regime.",
+    "valOnlyReasoning": "",
     "techniques": [
-      "BitNet ternary QAT with Base-3 ternary packing",
-      "Wider MLP4x stack paired with Partial RoPE and NeoMuon",
-      "EMA/SWA plus Z-loss for stability under compressed regime"
+      "BitNet ternary QAT with ±1 pruning and int6 GPTQ roundtrip",
+      "MLP width bloated per Trinity redundancy analysis for better byte efficiency",
+      "EMA/SWA, NeoMuon stack, Partial RoPE, and Z-loss regularization"
     ]
   },
   "compatibility": {
