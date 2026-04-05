@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T19:29:18.140Z",
+  "generatedAt": "2026-04-05T19:59:37.169Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -39961,12 +39961,12 @@
         "draft": false,
         "mergedAt": null,
         "htmlUrl": "https://github.com/openai/parameter-golf/pull/1335",
-        "authorLogin": "WeijieChen2017",
+        "authorLogin": "wchen-ai",
         "authorName": null,
         "createdAt": "2026-04-04T09:33:04Z",
         "updatedAt": "2026-04-04T09:33:04Z",
         "headSha": "d7b59e6dcfc7eb1bda1aaae380674b9c1113cd22",
-        "headRepo": "WeijieChen2017/parameter-golf"
+        "headRepo": "wchen-ai/parameter-golf"
       },
       "links": {
         "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/d7b59e6dcfc7eb1bda1aaae380674b9c1113cd22/records/track_non_record_16mb/2026-04-01_VQ_Weight_Compression/submission.json",
@@ -61463,6 +61463,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/1a6be007d6631e8c2c00cc730d12ae207774d4e6/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/1a6be007d6631e8c2c00cc730d12ae207774d4e6/records/track_non_record_16mb/2026-04-05_FocalLoss_CosineLR_LanguageModeling",
         "pr": "https://github.com/openai/parameter-golf/pull/1380",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_non_record_16mb-2026-04-05_StackB_GPTQLite_DepthRecurrence",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-05_StackB_GPTQLite_DepthRecurrence",
+        "folderPath": "records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence",
+        "submissionPath": "records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/train_gpt.py"
+      },
+      "submission": {
+        "author": "Rome-1",
+        "githubId": "Rome-1",
+        "name": "Stack B + GPTQ-lite (Fixed Scale Clamp) + Depth Recurrence + 6-bit Packing",
+        "blurb": "Stack B foundation (11L/512d/4096vocab/4xMLP) with three quantization contributions: (1) fix for GPTQ-lite scale clamp bug that wastes 90% of dynamic range, (2) 6-bit packing (4 int6 values -> 3 bytes = 25% payload reduction), (3) forced int8 for depth-recurrence shared layers where quantization error amplifies through reuse. Non-record: no 8xH100 run yet, validated on 1xH100 NVL (717 steps, undertrained).",
+        "date": "2026-04-05"
+      },
+      "metrics": {
+        "valBpb": null,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1389,
+        "title": "Non-record: GPTQ-lite Scale Clamp Fix + 6-bit Packing + Depth Recurrence on Stack B",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1389",
+        "authorLogin": "Rome-1",
+        "authorName": null,
+        "createdAt": "2026-04-05T19:44:55Z",
+        "updatedAt": "2026-04-05T19:44:55Z",
+        "headSha": "494de5b14673e7e08cba594a55b1d0c9890c4af1",
+        "headRepo": "Rome-1/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/494de5b14673e7e08cba594a55b1d0c9890c4af1/records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/494de5b14673e7e08cba594a55b1d0c9890c4af1/records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/494de5b14673e7e08cba594a55b1d0c9890c4af1/records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/494de5b14673e7e08cba594a55b1d0c9890c4af1/records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/494de5b14673e7e08cba594a55b1d0c9890c4af1/records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence",
+        "pr": "https://github.com/openai/parameter-golf/pull/1389",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {

@@ -1,8 +1,32 @@
 {
-  "generatedAt": "2026-04-05T18:29:19.741Z",
+  "generatedAt": "2026-04-05T19:59:44.386Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1389,
+      "title": "Non-record: GPTQ-lite Scale Clamp Fix + 6-bit Packing + Depth Recurrence on Stack B",
+      "status": "open",
+      "updatedAt": "2026-04-05T19:44:55Z",
+      "headSha": "494de5b14673e7e08cba594a55b1d0c9890c4af1",
+      "generatedAt": "2026-04-05T19:59:44.181Z",
+      "summary": "Stack B backbone with mixed int6/int8 GPTQ-lite quantization featuring a scale-clamp fix, 6-bit packing, and int8 depth-recurrence layers.",
+      "tags": [
+        "quantization",
+        "compression",
+        "architecture",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1389.json"
+    },
     {
       "prNumber": 1387,
       "title": "Non-record submission: Depth-Recurrent U-Net Transformer",

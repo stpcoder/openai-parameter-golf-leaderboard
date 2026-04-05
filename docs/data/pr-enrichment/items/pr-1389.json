@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-05T19:59:44.181Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1389,
+    "title": "Non-record: GPTQ-lite Scale Clamp Fix + 6-bit Packing + Depth Recurrence on Stack B",
+    "state": "open",
+    "updatedAt": "2026-04-05T19:44:55Z",
+    "headSha": "494de5b14673e7e08cba594a55b1d0c9890c4af1",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1389",
+    "authorLogin": "Rome-1"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_non_record_16mb/2026-04-05_StackB_GPTQLite_DepthRecurrence/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Stack B backbone with mixed int6/int8 GPTQ-lite quantization featuring a scale-clamp fix, 6-bit packing, and int8 depth-recurrence layers.",
+    "tags": [
+      "quantization",
+      "compression",
+      "architecture",
+      "non-record"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "GPTQ-lite int6 scale clamp minimum fix",
+      "4→3 byte 6-bit packing for int6 tensors",
+      "Force int8 for depth-recurrence shared layers"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
