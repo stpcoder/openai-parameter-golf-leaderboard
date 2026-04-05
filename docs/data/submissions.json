@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T08:56:43.932Z",
+  "generatedAt": "2026-04-05T09:26:46.809Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -4618,6 +4618,83 @@
         "script": "https://github.com/openai/parameter-golf/blob/3ada155b7c9d84e66b80bd088d282197858c16f6/records/track_10min_16mb/2026-03-24_KLoRA_MinNLL_FA3/train_gpt.py",
         "folder": "https://github.com/openai/parameter-golf/tree/3ada155b7c9d84e66b80bd088d282197858c16f6/records/track_10min_16mb/2026-03-24_KLoRA_MinNLL_FA3",
         "pr": "https://github.com/openai/parameter-golf/pull/614",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
+      "id": "record-records-track_10min_16mb-2026-04-05_SLOT24_PreQuantTTT_0-7094",
+      "source": "pull_request",
+      "status": "open",
+      "category": "main-track",
+      "track": {
+        "path": "records/track_10min_16mb",
+        "slug": "track_10min_16mb",
+        "label": "10 Minute / 16MB",
+        "official": true,
+        "category": "main-track"
+      },
+      "record": {
+        "folderName": "2026-04-05_SLOT24_PreQuantTTT_0.7094",
+        "folderPath": "records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094",
+        "submissionPath": "records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/submission.json",
+        "readmePath": "records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/README.md",
+        "trainLogPath": "records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/train.log",
+        "scriptPath": "records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/train_gpt.py"
+      },
+      "submission": {
+        "author": "stukenov",
+        "githubId": "stukenov",
+        "name": null,
+        "blurb": null,
+        "date": "2026-04-05T09:02:14Z"
+      },
+      "metrics": {
+        "valBpb": 0.7094,
+        "valLoss": null,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": 580
+      },
+      "artifact": {
+        "bytesTotal": null,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1376,
+        "title": "Record: SLOT-24 + Pre-quant TTT — val_bpb 0.7094 (3-seed mean)",
+        "state": "open",
+        "draft": false,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1376",
+        "authorLogin": "stukenov",
+        "authorName": null,
+        "createdAt": "2026-04-05T09:02:14Z",
+        "updatedAt": "2026-04-05T09:02:14Z",
+        "headSha": "504ea84829ff44aa0ded23f8d91f55d95968ec5b",
+        "headRepo": "stukenov/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/504ea84829ff44aa0ded23f8d91f55d95968ec5b/records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/504ea84829ff44aa0ded23f8d91f55d95968ec5b/records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/504ea84829ff44aa0ded23f8d91f55d95968ec5b/records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/504ea84829ff44aa0ded23f8d91f55d95968ec5b/records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/504ea84829ff44aa0ded23f8d91f55d95968ec5b/records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094",
+        "pr": "https://github.com/openai/parameter-golf/pull/1376",
         "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
       },
       "provenance": {
@@ -12461,7 +12538,7 @@
       },
       "pr": {
         "number": 1172,
-        "title": "Record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
+        "title": "Non-record: SLOT + Split-LR + Full GPTQ + XSA-all — val_bpb 1.1015 (3-seed mean)",
         "state": "open",
         "draft": false,
         "mergedAt": null,
@@ -12469,7 +12546,7 @@
         "authorLogin": "dexhunter",
         "authorName": null,
         "createdAt": "2026-03-31T06:22:04Z",
-        "updatedAt": "2026-03-31T14:01:37Z",
+        "updatedAt": "2026-04-05T09:21:38Z",
         "headSha": "99b080be7ee758616038526f297e9e4f8680734c",
         "headRepo": "dexhunter/parameter-golf"
       },

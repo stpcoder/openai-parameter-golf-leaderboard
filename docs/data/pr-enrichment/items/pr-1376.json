@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-05T09:26:53.654Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1376,
+    "title": "Record: SLOT-24 + Pre-quant TTT — val_bpb 0.7094 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-05T09:02:14Z",
+    "headSha": "504ea84829ff44aa0ded23f8d91f55d95968ec5b",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1376",
+    "authorLogin": "stukenov"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-05_SLOT24_PreQuantTTT_0.7094/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Frozen GPT weights get per-sample SLOT-24 adapters plus pre-quant AdamW TTT before int6 GPTQ, building on QK-Gain/XSA architectural tweaks.",
+    "tags": [
+      "training-schedule",
+      "quantization",
+      "optimizer"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "Per-sample SLOT-24 delta+logit bias with stride 96 and 24-step AdamW",
+      "Pre-quant AdamW TTT on EMA weights prior to GPTQ",
+      "Full Hessian GPTQ int6 with QK-Gain 4.0 and XSA-all enhancements"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
