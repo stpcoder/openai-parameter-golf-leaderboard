@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-06T11:33:24.367Z",
+  "generatedAt": "2026-04-06T12:03:39.705Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1414,
+      "title": "Non-record: Discriminative TTT + SLOT-24, 3-seed verified (8xH100 SXM)",
+      "status": "open",
+      "updatedAt": "2026-04-06T11:47:39Z",
+      "headSha": "f76e6945116e7b4fbc88495325ec165d1edc9800",
+      "generatedAt": "2026-04-06T12:03:28.599Z",
+      "summary": "Combines discriminative per-block TTT LR scaling before quantization with SLOT-24 eval-time delta optimization to probe whether SLOT dominates base-model gains.",
+      "tags": [
+        "training-schedule",
+        "evaluation",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1414.json"
+    },
     {
       "prNumber": 1413,
       "title": "Record: SP8192 + QK-Gain 5 + Legal Score-First TTT — val_bpb 1.08279 (3-seed mean)",
@@ -171,15 +194,15 @@
       "prNumber": 1405,
       "title": "Record: Scylla + GPTQ + BH3072 — val_bpb 1.0856 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T08:02:38Z",
+      "updatedAt": "2026-04-06T11:48:43Z",
       "headSha": "b965076d78d8b81a891fdf99cd0a0aea18895381",
-      "generatedAt": "2026-04-06T08:33:49.904Z",
-      "summary": "Combines Scylla 998-token TokenMonster tokenization with AR self-gen GPTQ int6 and a VRL/BigramHash 3072x112-rich 11-layer architecture to keep the artifact compact.",
+      "generatedAt": "2026-04-06T12:03:33.577Z",
+      "summary": "Combines Scylla 998-vocab tokenization with AR self-gen GPTQ int6 calibration, BigramHash 3072x112, VRL, XSA-11, and EMA/SWA + Late QAT under 16MB.",
       "tags": [
         "tokenization",
         "quantization",
         "architecture",
-        "compression"
+        "training-schedule"
       ],
       "flags": {
         "usesValOnly": false,
@@ -2289,14 +2312,15 @@
       "prNumber": 1289,
       "title": "Record: PROTEUS v1.6 — Scylla + Parallel Residuals + Depth Recurrence + Legal TTT — val_bpb 1.0819 (3-seed mean)",
       "status": "open",
-      "updatedAt": "2026-04-06T08:02:33Z",
+      "updatedAt": "2026-04-06T11:48:34Z",
       "headSha": "302f714bebadaf8727f448690f0e138bf3da9b8f",
-      "generatedAt": "2026-04-06T08:34:48.137Z",
-      "summary": "PROTEUS v1.6 pairs sensitivity-driven INT5/INT6 quantization with learnable mixing on parallel residual lanes and Scylla retokenization.",
+      "generatedAt": "2026-04-06T12:03:39.519Z",
+      "summary": "Integrates Scylla retokenization with parallel residuals/depth recurrence, legal TTT, sensitivity-driven mixed INT5/INT6 quantization, and learnable lane mixing.",
       "tags": [
         "quantization",
         "architecture",
-        "tokenization"
+        "tokenization",
+        "optimizer"
       ],
       "flags": {
         "usesValOnly": false,
@@ -7486,29 +7510,6 @@
         "valOnlyMatchesCollector": true
       },
       "file": "items/pr-978.json"
-    },
-    {
-      "prNumber": 975,
-      "title": "Non-record: QNA + SQWA compression thesis (8xH100 SXM)",
-      "status": "open",
-      "updatedAt": "2026-03-27T18:54:04Z",
-      "headSha": "fe607e10da1153321fe110b83f634a69a71df8ac",
-      "generatedAt": "2026-03-27T19:17:57.639Z",
-      "summary": "Targets the int6 artifact by training with LR-scaled quantization noise and averaging quantized-dequantized EMA snapshots to live in a quant-friendly subspace.",
-      "tags": [
-        "quantization",
-        "training-schedule",
-        "non-record"
-      ],
-      "flags": {
-        "usesValOnly": false,
-        "usesValOnlyAi": false,
-        "usesValOnlyCollector": false
-      },
-      "compatibility": {
-        "valOnlyMatchesCollector": true
-      },
-      "file": "items/pr-975.json"
     },
     {
       "prNumber": 974,
