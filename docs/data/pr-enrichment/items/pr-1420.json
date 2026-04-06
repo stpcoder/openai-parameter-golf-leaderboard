@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-06T19:35:54.764Z",
+  "generatedAt": "2026-04-06T20:05:49.086Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1420,
     "title": "Record: Triple Loop + Fused Kernels + Parallel Residuals + N-gram Tilt; val_bpb 1.08014 (5-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-06T19:33:38Z",
-    "headSha": "635dd75de72f86ec71c73a8abdc22ff60216a363",
+    "updatedAt": "2026-04-06T19:38:54Z",
+    "headSha": "accb40bb8ea6086645136e1bea23cf709f22f5d9",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1420",
     "authorLogin": "abaybektursun"
   },
@@ -19,18 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Triple-loop depth recurrence, surgical Triton/CUTLASS fused MLP kernels, GPT-J parallel residuals, and causal eval-time n-gram tilt.",
+    "summary": "Triple-loop recurrence with earlier activation plus fused Triton/CUTLASS MLP kernels, GPT-J parallel residuals, and causal eval-time n-gram tilt.",
     "tags": [
       "architecture",
-      "attention",
+      "training-schedule",
       "evaluation"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Triple-loop recurrence with earlier activation warmup",
-      "Surgical Triton TMA + CUTLASS EVT fusion for the LeakyReLU MLP",
-      "GPT-J parallel residuals plus causal eval-time n-gram tilt"
+      "Triple-loop recurrence plus GPT-J parallel residual stack",
+      "Surgical Triton TMA + CUTLASS EVT fused MLP kernels to cut backward overhead",
+      "Causal eval-time n-gram tilt via prefix-only hints"
     ]
   },
   "compatibility": {

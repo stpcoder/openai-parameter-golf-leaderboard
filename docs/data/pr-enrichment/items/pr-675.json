@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-06T19:06:32.417Z",
+  "generatedAt": "2026-04-06T20:06:08.571Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 675,
     "title": "Record: L-BFGS SLOT — val_bpb 0.5793 (3-seed mean)",
     "state": "open",
-    "updatedAt": "2026-04-06T18:55:16Z",
-    "headSha": "e056825c3a6981ced672838534d93dc673b47e28",
+    "updatedAt": "2026-04-06T19:41:48Z",
+    "headSha": "8bd119f5972bc996217d1e911ef8504d9b09dccb",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/675",
     "authorLogin": "ChideraIbe123"
   },
@@ -21,7 +21,7 @@
     "submissionCount": 3
   },
   "output": {
-    "summary": "SLOT swaps AdamW for an 8-step L-BFGS (history=10, strong Wolfe) to leverage curvature in the tiny 1,536-parameter per-sample update.",
+    "summary": "SLOT swaps AdamW for 8-step L-BFGS quasi-Newton updates on the 1,536-param per-sample problem with strong Wolfe line search.",
     "tags": [
       "optimizer",
       "non-record"
@@ -29,9 +29,8 @@
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Second-order L-BFGS on SLOT deltas",
-      "Strong-Wolfe line search with history_size=10",
-      "8 outer steps for curvature-rich updates"
+      "L-BFGS + strong Wolfe line search",
+      "Curvature-aware updates for 1,536-param SLOT per sample"
     ]
   },
   "compatibility": {
