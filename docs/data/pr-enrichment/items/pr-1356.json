@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-05T16:59:05.204Z",
+  "generatedAt": "2026-04-06T13:34:03.853Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1356,
     "title": "Multi-Cube Face Letter Assignment (Non-Record Submission)",
     "state": "open",
-    "updatedAt": "2026-04-05T16:52:37Z",
-    "headSha": "bbbbfdd9d690e2d0809e00c0f4f7013c021d6b46",
+    "updatedAt": "2026-04-06T13:06:16Z",
+    "headSha": "f3303ad7fcc4ac38ea7a295ecd1fb961b8bf4c3f",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1356",
     "authorLogin": "teslaeco"
   },
@@ -19,16 +19,16 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Prototype enforces global constraint-aware letter assignment across six cubes to treat the puzzle as a single structured reasoning system.",
+    "summary": "Prototype enforces global letter-to-cube consistency for multi-cube face assignment via constraint-aware reasoning instead of independent face predictions.",
     "tags": [
+      "architecture",
       "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Constraint-aware assignment of 18 letters across six cubes",
-      "Treating all visible faces as one structured system",
-      "Exploring structured reasoning under tight capacity limits"
+      "constraint-aware letter-to-cube grouping",
+      "global consistency enforcement across cubes"
     ]
   },
   "compatibility": {

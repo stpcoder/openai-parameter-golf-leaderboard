@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-06T12:34:11.294Z",
+  "generatedAt": "2026-04-06T13:34:11.199Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1246,
     "title": "Record: Trinity Ternary GPT — val_bpb 0.9650 (ternary roundtrip)",
     "state": "open",
-    "updatedAt": "2026-04-06T12:18:48Z",
-    "headSha": "c7b75aa858907b6a56b27854e28383d3e79f645d",
+    "updatedAt": "2026-04-06T13:16:47Z",
+    "headSha": "bd5df06af7dcc6d72674aaff25c23e01afa0e680",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1246",
     "authorLogin": "deborahnelson8788726"
   },
@@ -19,22 +19,23 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Ternary BitNet QAT GPT with Partial RoPE and NeoMuon, plus per-sample SLOT v2 delta/logit-bias tuning during eval to keep the 16MB artifact size.",
+    "summary": "Trinity ternary GPT pairs BitNet ternary QAT on a NeoMuon 10L/768d base with per-sample SLOT v2 delta+logit tuning using frozen hidden states.",
     "tags": [
+      "val-only",
       "quantization",
       "evaluation"
     ],
-    "usesValOnly": false,
-    "valOnlyReasoning": "",
+    "usesValOnly": true,
+    "valOnlyReasoning": "Per-sample SLOT v2 optimizes temporary delta/logit params on each validation sample before scoring, so the only training occurs on validation tokens at eval time.",
     "techniques": [
-      "BitNet ternary QAT GPT backbone with Partial RoPE & NeoMuon",
-      "Per-sample SLOT v2 delta/logit-bias tuning during eval"
+      "Ternary BitNet QAT on NeoMuon GPT",
+      "Per-sample SLOT v2 delta+logit tuning after frozen forward pass"
     ]
   },
   "compatibility": {
     "collectorUsesValOnly": false,
-    "aiUsesValOnly": false,
-    "finalUsesValOnly": false,
-    "valOnlyMatchesCollector": true
+    "aiUsesValOnly": true,
+    "finalUsesValOnly": true,
+    "valOnlyMatchesCollector": false
   }
 }
