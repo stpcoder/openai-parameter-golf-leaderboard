@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-06T08:34:27.998Z",
+  "generatedAt": "2026-04-06T15:04:32.945Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1396,
     "title": "Record: Combined 3-Layer Recurrence + Parallel Residuals + Polar Express + Brotli — val_bpb 1.1067 (3-seed mean)",
     "state": "closed",
-    "updatedAt": "2026-04-06T04:17:20Z",
+    "updatedAt": "2026-04-06T14:46:33Z",
     "headSha": "805dfc14483e889f386262bf3c618a7bb58bd848",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1396",
     "authorLogin": "erichroepke"
@@ -19,19 +19,18 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Merges 3-layer depth recurrence with parallel residual start plus Polar Express NS prep and Brotli compression for a clean quantized stack.",
+    "summary": "Stacked 3-layer recurrence with parallel residuals plus Polar Express/GPTQ compression layers to pair Brotli byte-shuffle and QK-Gain tuning.",
     "tags": [
       "architecture",
-      "quantization",
-      "regularization",
-      "compression"
+      "compression",
+      "quantization"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "3-layer depth recurrence replay with layer7 parallel residuals",
-      "Polar Express Newton-Schulz steps preceded by MuonEq-R normalization",
-      "Brotli + byte-shuffle compression with GPTQ int6"
+      "3-layer depth recurrence merged with parallel residuals",
+      "Polar Express Newton-Schulz with MuonEq-R normalization",
+      "Brotli + byte-shuffle compressor alongside QK-Gain 5.0"
     ]
   },
   "compatibility": {

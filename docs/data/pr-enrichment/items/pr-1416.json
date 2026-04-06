@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-04-06T15:04:29.290Z",
+  "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
+  "model": "gpt-5.1-codex-mini",
+  "pr": {
+    "number": 1416,
+    "title": "Record: SP8192 + Pre-Quant TTT — val_bpb 1.07948 (3-seed mean)",
+    "state": "open",
+    "updatedAt": "2026-04-06T14:46:25Z",
+    "headSha": "bf03f501f0e322be0c59ca122e8aeb7834fc0d89",
+    "htmlUrl": "https://github.com/openai/parameter-golf/pull/1416",
+    "authorLogin": "erichroepke"
+  },
+  "inputs": {
+    "hash": "0bb5690a2afcdecc4c65637c61da65621bc92bfea1c1e4857140b879f69a6341",
+    "readmePaths": [
+      "records/track_10min_16mb/2026-04-06_SP8192_PreQuantTTT_SDClip_SkipGates/README.md"
+    ],
+    "submissionCount": 1
+  },
+  "output": {
+    "summary": "Runs SP8192 skip-gated recurrence with pre-quant AdamW TTT before SDClip+GPTQ, so the adapted full-precision weights quantize cleanly.",
+    "tags": [
+      "architecture",
+      "training-schedule",
+      "quantization"
+    ],
+    "usesValOnly": false,
+    "valOnlyReasoning": "",
+    "techniques": [
+      "SP8192 tokenizer with skip-gated depth recurrence base",
+      "Pre-quant AdamW TTT fine-tunes on validation data before quantization",
+      "SDClip+GPTQ compresses the adapted weights with std-based clipping"
+    ]
+  },
+  "compatibility": {
+    "collectorUsesValOnly": false,
+    "aiUsesValOnly": false,
+    "finalUsesValOnly": false,
+    "valOnlyMatchesCollector": true
+  }
+}
