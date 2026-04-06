@@ -1,8 +1,31 @@
 {
-  "generatedAt": "2026-04-06T15:34:44.191Z",
+  "generatedAt": "2026-04-06T16:04:58.865Z",
   "sourceRepo": "openai/parameter-golf",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "entries": [
+    {
+      "prNumber": 1417,
+      "title": "Mixed INT5/INT6 QAT from step 1 (1.3039 bpb)",
+      "status": "open",
+      "updatedAt": "2026-04-06T15:41:06Z",
+      "headSha": "f0919ae911b64e5d2d4ee5863a945ae85958b144",
+      "generatedAt": "2026-04-06T16:04:54.784Z",
+      "summary": "Mixed INT5/INT6 quantization-aware training from step one so weights learn low-entropy distributions while compressing via zstd.",
+      "tags": [
+        "quantization",
+        "optimizer",
+        "non-record"
+      ],
+      "flags": {
+        "usesValOnly": false,
+        "usesValOnlyAi": false,
+        "usesValOnlyCollector": false
+      },
+      "compatibility": {
+        "valOnlyMatchesCollector": true
+      },
+      "file": "items/pr-1417.json"
+    },
     {
       "prNumber": 1416,
       "title": "Record: SP8192 + Pre-Quant TTT — val_bpb 1.07948 (3-seed mean)",
@@ -6592,13 +6615,14 @@
       "prNumber": 1034,
       "title": "Non-record: knowledge distillation teacher-student submission",
       "status": "open",
-      "updatedAt": "2026-03-28T18:43:36Z",
+      "updatedAt": "2026-04-06T15:41:10Z",
       "headSha": "0d128ece74847be9b49a77538b7afb678ceabbd4",
-      "generatedAt": "2026-03-28T18:54:11.625Z",
-      "summary": "Distills a 12L/768 teacher into a 6L/384 student via temperature-scaled KL+CE so only the small student needs to fit the 16MB cap.",
+      "generatedAt": "2026-04-06T16:04:58.721Z",
+      "summary": "Teacher-student distillation pairs a 12L/768d teacher on CE with a 6L/384d student learning via alpha*CE+(1-alpha)*KL on softened logits.",
       "tags": [
-        "non-record",
-        "regularization"
+        "architecture",
+        "training-schedule",
+        "non-record"
       ],
       "flags": {
         "usesValOnly": false,

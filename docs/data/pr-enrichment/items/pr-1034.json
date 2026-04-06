@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-28T18:54:11.625Z",
+  "generatedAt": "2026-04-06T16:04:58.721Z",
   "promptVersion": "2026-03-20-pr-enrichment-v2-approach-first",
   "model": "gpt-5.1-codex-mini",
   "pr": {
     "number": 1034,
     "title": "Non-record: knowledge distillation teacher-student submission",
     "state": "open",
-    "updatedAt": "2026-03-28T18:43:36Z",
+    "updatedAt": "2026-04-06T15:41:10Z",
     "headSha": "0d128ece74847be9b49a77538b7afb678ceabbd4",
     "htmlUrl": "https://github.com/openai/parameter-golf/pull/1034",
     "authorLogin": "Jeneesh1014"
@@ -19,17 +19,17 @@
     "submissionCount": 1
   },
   "output": {
-    "summary": "Distills a 12L/768 teacher into a 6L/384 student via temperature-scaled KL+CE so only the small student needs to fit the 16MB cap.",
+    "summary": "Teacher-student distillation pairs a 12L/768d teacher on CE with a 6L/384d student learning via alpha*CE+(1-alpha)*KL on softened logits.",
     "tags": [
-      "non-record",
-      "regularization"
+      "architecture",
+      "training-schedule",
+      "non-record"
     ],
     "usesValOnly": false,
     "valOnlyReasoning": "",
     "techniques": [
-      "Teacher trains on standard cross-entropy while student mixes alpha·CE with (1−alpha)·KL",
-      "Temperature scaling softens teacher logits for richer targets",
-      "Only the distilled student is exported to satisfy the 16MB submission limit"
+      "teacher trains with CE",
+      "student blends CE and KL with temperature"
     ]
   },
   "compatibility": {

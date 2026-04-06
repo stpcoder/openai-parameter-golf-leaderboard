@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-06T15:34:28.306Z",
+  "generatedAt": "2026-04-06T16:04:48.213Z",
   "sourceRepo": "openai/parameter-golf",
   "sourceRoot": "https://github.com/openai/parameter-golf",
   "submissions": [
@@ -48993,6 +48993,83 @@
       }
     },
     {
+      "id": "record-records-track_non_record_16mb-2026-04-06_MixedINT5INT6_QAT_From_Step1",
+      "source": "pull_request",
+      "status": "open",
+      "category": "non-record",
+      "track": {
+        "path": "records/track_non_record_16mb",
+        "slug": "track_non_record_16mb",
+        "label": "Non-record / 16MB",
+        "official": false,
+        "category": "non-record"
+      },
+      "record": {
+        "folderName": "2026-04-06_MixedINT5INT6_QAT_From_Step1",
+        "folderPath": "records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1",
+        "submissionPath": "records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1/submission.json",
+        "readmePath": "records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1/README.md",
+        "trainLogPath": "records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1/train.log",
+        "scriptPath": "records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1/train_gpt.py"
+      },
+      "submission": {
+        "author": "Denis",
+        "githubId": "BruhTheMomentum",
+        "name": "Mixed INT5/INT6 QAT From Step 1",
+        "blurb": null,
+        "date": "2026-04-06"
+      },
+      "metrics": {
+        "valBpb": 1.3039,
+        "valLoss": 2.2016,
+        "preQuantValBpb": null,
+        "preQuantValLoss": null,
+        "stepStop": null,
+        "wallclockSeconds": null,
+        "evalTimeSeconds": null
+      },
+      "artifact": {
+        "bytesTotal": 15459421,
+        "bytesCode": null,
+        "bytesModelInt8Zlib": null
+      },
+      "flags": {
+        "usesValOnly": false
+      },
+      "detection": {
+        "valOnlyConfidence": "none",
+        "valOnlyMatches": []
+      },
+      "pr": {
+        "number": 1417,
+        "title": "Mixed INT5/INT6 QAT from step 1 (1.3039 bpb)",
+        "state": "open",
+        "draft": true,
+        "mergedAt": null,
+        "htmlUrl": "https://github.com/openai/parameter-golf/pull/1417",
+        "authorLogin": "BruhTheMomentum",
+        "authorName": null,
+        "createdAt": "2026-04-06T15:41:06Z",
+        "updatedAt": "2026-04-06T15:41:06Z",
+        "headSha": "f0919ae911b64e5d2d4ee5863a945ae85958b144",
+        "headRepo": "BruhTheMomentum/parameter-golf"
+      },
+      "links": {
+        "submissionJson": "https://raw.githubusercontent.com/openai/parameter-golf/f0919ae911b64e5d2d4ee5863a945ae85958b144/records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1/submission.json",
+        "readme": "https://github.com/openai/parameter-golf/blob/f0919ae911b64e5d2d4ee5863a945ae85958b144/records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1/README.md",
+        "trainLog": "https://github.com/openai/parameter-golf/blob/f0919ae911b64e5d2d4ee5863a945ae85958b144/records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1/train.log",
+        "script": "https://github.com/openai/parameter-golf/blob/f0919ae911b64e5d2d4ee5863a945ae85958b144/records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1/train_gpt.py",
+        "folder": "https://github.com/openai/parameter-golf/tree/f0919ae911b64e5d2d4ee5863a945ae85958b144/records/track_non_record_16mb/2026-04-06_MixedINT5INT6_QAT_From_Step1",
+        "pr": "https://github.com/openai/parameter-golf/pull/1417",
+        "officialLeaderboard": "https://github.com/openai/parameter-golf#leaderboard"
+      },
+      "provenance": {
+        "onMain": false,
+        "hasPullRequest": true,
+        "listedInReadme": false
+      }
+    },
+    {
       "id": "record-records-track_non_record_16mb-2026-03-31_5L_MLP4_EMA097_Optuna_GH200proxy",
       "source": "pull_request",
       "status": "open",
@@ -57674,7 +57751,7 @@
         "authorLogin": "Jeneesh1014",
         "authorName": null,
         "createdAt": "2026-03-28T18:43:36Z",
-        "updatedAt": "2026-03-28T18:43:36Z",
+        "updatedAt": "2026-04-06T15:41:10Z",
         "headSha": "0d128ece74847be9b49a77538b7afb678ceabbd4",
         "headRepo": "Jeneesh1014/parameter-golf"
       },
